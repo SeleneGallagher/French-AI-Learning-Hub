@@ -1,0 +1,380 @@
+/* ==================== 配色系统 - 基于 #002654 深蓝 ==================== */
+:root {
+    /* 主色系 - 深蓝及其变体 */
+    --primary-900: #001a3d;  /* 最深 */
+    --primary-800: #002654;  /* 导航栏主色 */
+    --primary-700: #003d7a;
+    --primary-600: #0054a0;
+    --primary-500: #006bc6;
+    --primary-400: #3382d1;
+    --primary-300: #6699dc;
+    --primary-200: #99b0e7;
+    --primary-100: #ccd7f3;
+    --primary-50: #e6ecf9;   /* 最浅 */
+    
+    /* 辅助色 - 温暖珊瑚色（与深蓝形成优雅对比） */
+    --accent-600: #d97757;
+    --accent-500: #e68a6b;
+    --accent-400: #eb9d7f;
+    --accent-300: #f0b093;
+    --accent-200: #f5c3a7;
+    --accent-100: #fad6bb;
+    --accent-50: #fce9d5;
+    
+    /* 中性色 - 灰色系 */
+    --gray-900: #1a1a1a;
+    --gray-800: #2d2d2d;
+    --gray-700: #404040;
+    --gray-600: #525252;
+    --gray-500: #737373;
+    --gray-400: #a3a3a3;
+    --gray-300: #d4d4d4;
+    --gray-200: #e5e5e5;
+    --gray-100: #f5f5f5;
+    --gray-50: #fafafa;
+    
+    /* 功能色 - 基于主色系和辅助色调整，更协调统一 */
+    --success: #0d9488;  /* 青绿色，与深蓝系协调 */
+    --warning: var(--accent-600);  /* 使用辅助色珊瑚色 */
+    --error: #c2410c;  /* 深橙红色，与珊瑚色系协调 */
+    --info: var(--primary-600);  /* 使用主色系 */
+}
+
+/* ==================== 全局样式 ==================== */
+
+/* 导航链接激活状态 */
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--accent-500) !important;
+}
+
+/* 模块显示/隐藏 */
+.module {
+    display: block;
+}
+
+.module.hidden {
+    display: none;
+}
+
+/* 滚动条样式 - 使用主色 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-300);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-500);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* ==================== 词典模块样式 ==================== */
+
+/* 搜索建议样式 */
+#dict-suggestions {
+    background: white;
+    border: 1px solid var(--gray-200);
+}
+
+#dict-suggestions .suggestion-item:hover {
+    background-color: var(--primary-50);
+}
+
+/* 词典卡片样式 */
+.word-card {
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid var(--gray-200);
+}
+
+.word-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 38, 84, 0.12);
+    transform: translateY(-2px);
+}
+
+/* 收藏按钮 */
+.favorite-btn {
+    transition: color 0.2s, transform 0.2s;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+/* 快捷按钮激活状态 */
+.toggle-btn.active {
+    background-color: var(--primary-50);
+    border-color: var(--primary-500);
+    color: var(--primary-700);
+}
+
+#dict-vocab-btn.active {
+    background-color: var(--primary-700);
+    color: white;
+}
+
+/* 熟练度切换按钮 */
+.quality-toggle {
+    transition: all 0.15s ease;
+}
+
+.quality-toggle:hover {
+    transform: scale(1.1);
+}
+
+.quality-toggle[data-quality="0"]:hover {
+    background-color: var(--error) !important;
+    color: white !important;
+}
+
+.quality-toggle[data-quality="1"]:hover {
+    background-color: var(--warning) !important;
+    color: white !important;
+}
+
+.quality-toggle[data-quality="2"]:hover {
+    background-color: var(--success) !important;
+    color: white !important;
+}
+
+/* 已学列表项 */
+.learned-item {
+    border: 1px solid var(--gray-200);
+    transition: all 0.2s;
+}
+
+.learned-item:hover {
+    border-color: var(--primary-300);
+    background-color: var(--primary-50);
+}
+
+.remove-learned-btn:hover {
+    background-color: var(--error) !important;
+    color: white !important;
+}
+
+/* 收藏夹删除按钮 */
+.remove-favorite-btn:hover {
+    color: var(--error) !important;
+}
+
+/* 历史记录和收藏夹列表项hover */
+.history-item:hover,
+.favorite-item:hover {
+    border-color: var(--primary-300) !important;
+    background-color: var(--primary-50) !important;
+}
+
+/* ==================== 按钮样式统一 ==================== */
+
+/* 主按钮 - 深蓝 */
+.btn-primary {
+    background-color: var(--primary-700);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-800);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 38, 84, 0.2);
+}
+
+/* 次要按钮 - 边框样式 */
+.btn-secondary {
+    background-color: white;
+    color: var(--gray-700);
+    border: 1px solid var(--gray-300);
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--gray-50);
+    border-color: var(--primary-300);
+    color: var(--primary-700);
+    transform: translateY(-1px);
+}
+
+/* 灰色按钮 */
+button[style*="background-color: var(--gray-500)"]:hover {
+    background-color: var(--gray-600) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 清空按钮hover */
+button[style*="color: var(--error)"]:hover {
+    color: var(--error) !important;
+    opacity: 0.8;
+}
+
+/* 评分按钮 */
+.vocab-quality-btn {
+    transition: all 0.2s;
+}
+
+.vocab-quality-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vocab-quality-btn[data-quality="0"]:hover {
+    background-color: var(--error) !important;
+    color: white !important;
+    border-color: var(--error) !important;
+}
+
+.vocab-quality-btn[data-quality="1"]:hover {
+    background-color: var(--gray-500) !important;
+    color: white !important;
+    border-color: var(--gray-500) !important;
+}
+
+.vocab-quality-btn[data-quality="2"]:hover {
+    background-color: var(--primary-600) !important;
+    color: white !important;
+    border-color: var(--primary-600) !important;
+}
+
+.vocab-quality-btn:active {
+    transform: scale(0.98);
+}
+
+/* 强调按钮 - 珊瑚色 */
+.btn-accent {
+    background-color: var(--accent-500);
+    color: white;
+    border: none;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-600);
+}
+
+/* 危险按钮 */
+.btn-danger {
+    background-color: var(--error);
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+}
+
+/* ==================== 卡片样式 ==================== */
+
+.card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 38, 84, 0.1);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-700) 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+/* ==================== 输入框样式 ==================== */
+
+input[type="text"],
+input[type="search"],
+textarea {
+    border: 1px solid var(--gray-300);
+    transition: all 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px var(--primary-50);
+    outline: none;
+}
+
+/* ==================== 统计卡片 ==================== */
+
+.stat-card {
+    background: white;
+    border-top: 4px solid;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.primary {
+    border-top-color: var(--primary-600);
+}
+
+.stat-card.neutral {
+    border-top-color: var(--gray-400);
+}
+
+.stat-card.accent {
+    border-top-color: var(--accent-500);
+}
+
+/* ==================== 按钮hover效果 ==================== */
+
+/* 复习生疏按钮hover */
+button[style*="border: 2px solid var(--accent-500)"]:hover {
+    background-color: var(--accent-50) !important;
+    border-color: var(--accent-600) !important;
+    color: var(--accent-600) !important;
+}
+
+/* 已学列表按钮hover */
+button[style*="border: 1px solid var(--gray-300)"][style*="color: var(--gray-700)"]:hover {
+    background-color: var(--gray-50) !important;
+    border-color: var(--primary-300) !important;
+    color: var(--primary-700) !important;
+}
+
+/* ==================== 响应式调整 ==================== */
+@media (max-width: 768px) {
+    #dict-search-input {
+        font-size: 16px;
+        padding: 12px 16px 12px 44px;
+    }
+    
+    .word-card h2 {
+        font-size: 1.75rem;
+    }
+}

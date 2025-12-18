@@ -1,0 +1,41 @@
+# 配置文件（包含敏感信息）
+config.js
+.env
+.env.local
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日志文件
+*.log
+/var/log/french-ai-update.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.python-version
+venv/
+env/
+
+# 部署相关
+.vercel
+.netlify
+
+# 环境变量
+.env
+.env.local
+
+# 词典导入临时文件
+dictionary/
+*.csv
+

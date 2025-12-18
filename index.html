@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French AI Learning Hub - 法语AI学习中心</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇫🇷</text></svg>">
+    <!-- Tailwind CSS - 使用CDN版本（开发环境） -->
+    <!-- 生产环境建议使用: npm install -D tailwindcss 然后构建 -->
+    <script>
+        // 在加载Tailwind之前拦截console输出
+        (function() {
+            'use strict';
+            const originalWarn = console.warn;
+            const originalError = console.error;
+            const originalLog = console.log;
+            
+            // 过滤函数
+            function shouldFilter(message) {
+                if (!message || typeof message !== 'string') return false;
+                return message.includes('cdn.tailwindcss.com') || 
+                       message.includes('should not be used in production') ||
+                       message.includes('Tailwind CSS');
+            }
+            
+            console.warn = function(...args) {
+                if (args.length > 0) {
+                    const message = String(args[0] || '');
+                    if (shouldFilter(message)) {
+                        return; // 忽略Tailwind CDN警告
+                    }
+                }
+                originalWarn.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                if (args.length > 0) {
+                    const message = String(args[0] || '');
+                    if (shouldFilter(message)) {
+                        return; // 忽略Tailwind CDN错误
+                    }
+                }
+                originalError.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                if (args.length > 0) {
+                    const message = String(args[0] || '');
+                    if (shouldFilter(message)) {
+                        return; // 忽略Tailwind CDN日志
+                    }
+                }
+                originalLog.apply(console, args);
+            };
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+        <!-- 左侧导航栏 - 法国深蓝 -->
+        <nav class="w-64 text-white flex flex-col shadow-lg" style="background: linear-gradient(180deg, #002654 0%, #001a3d 100%);">
+            <div class="p-6 border-b border-white/10">
+                <h1 class="text-xl font-bold flex items-center gap-2">
+                    <span class="text-2xl">🇫🇷</span>
+                    <span>French AI</span>
+                </h1>
+                <p class="text-sm text-blue-200 mt-1">法语AI学习中心</p>
+            </div>
+            <ul class="flex-1 py-4 space-y-1">
+                <li>
+                    <a href="#news" class="nav-link block px-6 py-3 hover:bg-white/10 transition-colors border-l-4 border-transparent hover:border-red-500" data-module="news">
+                        📰 实时新闻资讯
+                    </a>
+                </li>
+                <li>
+                    <a href="#movies" class="nav-link block px-6 py-3 hover:bg-white/10 transition-colors border-l-4 border-transparent hover:border-red-500" data-module="movies">
+                        🎬 热门影视推荐
+                    </a>
+                </li>
+                <li>
+                    <a href="#dictionary" class="nav-link block px-6 py-3 hover:bg-white/10 transition-colors border-l-4 border-transparent hover:border-red-500" data-module="dictionary">
+                        📖 法语词典
+                    </a>
+                </li>
+                <li>
+                    <a href="#expressions" class="nav-link block px-6 py-3 hover:bg-white/10 transition-colors border-l-4 border-transparent hover:border-red-500" data-module="expressions">
+                        💬 语用积累
+                    </a>
+                </li>
+                <li>
+                    <a href="#ai-assistant" class="nav-link block px-6 py-3 hover:bg-white/10 transition-colors border-l-4 border-transparent hover:border-red-500" data-module="ai-assistant">
+                        🤖 AI助手
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link block px-6 py-3 hover:bg-white/10 transition-colors border-l-4 border-transparent hover:border-red-500" data-module="about">
+                        ℹ️ 关于
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 右侧主内容区 -->
+        <main class="flex-1 overflow-y-auto">
+            <!-- 实时新闻资讯模块 -->
+            <section id="news" class="module hidden p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">📰 实时新闻资讯</h2>
+                <div id="news-loading" class="text-center py-8">
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                    <p class="mt-2 text-gray-600">正在加载新闻...</p>
+                </div>
+                <div id="news-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"></div>
+                <div id="news-list" class="space-y-6"></div>
+            </section>
+
+            <!-- 热门影视推荐模块 -->
+            <section id="movies" class="module hidden p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">🎬 热门影视推荐</h2>
+                <div id="movies-loading" class="text-center py-8">
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                    <p class="mt-2 text-gray-600">正在加载影视数据...</p>
+                </div>
+                <div id="movies-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"></div>
+                <div id="movies-grid" class="grid gap-4" style="grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));"></div>
+            </section>
+
+            <!-- 法语词典模块 -->
+            <section id="dictionary" class="module hidden p-8">
+                <h2 class="text-3xl font-bold mb-6" style="color: var(--gray-800);">📖 法语词典</h2>
+                
+                <!-- 搜索栏 -->
+                <div class="mb-6 card p-6">
+                    <div class="flex gap-4">
+                        <div class="flex-1 relative">
+                            <input type="text" id="dict-search-input" 
+                                   placeholder="输入法语单词搜索..." 
+                                   autocomplete="off"
+                                   class="w-full px-4 py-2 rounded transition-all"
+                                   style="border: 1px solid var(--gray-300);">
+                            <!-- 搜索建议下拉框 -->
+                            <div id="dict-suggestions" class="hidden absolute left-0 right-0 top-full mt-1 rounded shadow-lg max-h-64 overflow-y-auto z-30" style="background: white; border: 1px solid var(--gray-200);"></div>
+                        </div>
+                        <button id="dict-search-btn" class="px-6 py-2 rounded transition-all btn-primary" style="background-color: var(--primary-700); color: white;">
+                            搜索
+                        </button>
+                        <button id="dict-random-btn" class="px-6 py-2 rounded transition-all" style="background-color: var(--gray-500); color: white;">
+                            随机
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-4" style="border-top: 1px solid var(--gray-200);">
+                        <span class="text-sm" style="color: var(--gray-600);">共 <span id="dict-total-count" class="font-semibold" style="color: var(--primary-700);">0</span> 词</span>
+                        <div class="flex items-center gap-2">
+                            <button id="dict-history-btn" class="toggle-btn flex items-center gap-1 px-3 py-1.5 text-sm rounded transition-colors btn-secondary" data-panel="history">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                历史
+                            </button>
+                            <button id="dict-favorites-btn" class="toggle-btn flex items-center gap-1 px-3 py-1.5 text-sm rounded transition-colors btn-secondary" data-panel="favorites">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                                收藏 <span id="dict-favorites-count" class="text-xs" style="color: var(--gray-400);">0</span>
+                            </button>
+                            <button id="dict-vocab-btn" class="toggle-btn flex items-center gap-1 px-3 py-1.5 text-sm rounded transition-colors btn-primary" data-panel="vocab">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                                </svg>
+                                背单词
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 主内容区 -->
+                <div id="dict-content">
+                    <!-- 欢迎界面 -->
+                    <div id="dict-welcome" class="text-center py-12">
+                        <div class="text-6xl mb-4">📚</div>
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--gray-700);">公共法语学习词典</h3>
+                        <p class="mb-6" style="color: var(--gray-500);">专为法语学习者打造，收录5000+常用词汇</p>
+                        <button id="dict-start-btn" class="px-6 py-2 rounded transition-all btn-primary" style="background-color: var(--primary-700); color: white;">
+                            开始探索
+                        </button>
+                    </div>
+                    
+                    <!-- 搜索结果 -->
+                    <div id="dict-results" class="hidden space-y-4"></div>
+                    
+                    <!-- 历史记录面板 -->
+                    <div id="dict-history-panel" class="hidden card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold" style="color: var(--gray-700);">📜 历史记录</h3>
+                            <button id="dict-clear-history-btn" class="text-sm transition-colors" style="color: var(--error);">
+                                清空历史
+                            </button>
+                        </div>
+                        <div id="dict-history-list" class="space-y-2"></div>
+                    </div>
+                    
+                    <!-- 收藏夹面板 -->
+                    <div id="dict-favorites-panel" class="hidden card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold" style="color: var(--gray-700);">❤️ 我的收藏</h3>
+                            <button id="dict-clear-favorites-btn" class="text-sm transition-colors" style="color: var(--error);">
+                                清空收藏
+                            </button>
+                        </div>
+                        <div id="dict-favorites-list" class="space-y-3"></div>
+                    </div>
+                    
+                    <!-- 背单词面板 -->
+                    <div id="dict-vocab-panel" class="hidden">
+                        <!-- 学习统计 -->
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <div class="stat-card primary">
+                                <div class="text-sm mb-1" style="color: var(--gray-600);">词典总数</div>
+                                <div id="vocab-total-count" class="text-2xl font-bold" style="color: var(--primary-700);">0</div>
+                            </div>
+                            <div class="stat-card neutral">
+                                <div class="text-sm mb-1" style="color: var(--gray-600);">已学习</div>
+                                <div id="vocab-learned-count" class="text-2xl font-bold" style="color: var(--gray-700);">0</div>
+                            </div>
+                            <div class="stat-card accent">
+                                <div class="text-sm mb-1" style="color: var(--gray-600);">熟练掌握</div>
+                                <div id="vocab-mastered-count" class="text-2xl font-bold" style="color: var(--accent-600);">0</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 操作按钮 -->
+                        <div class="flex gap-3 mb-4">
+                            <button id="vocab-next-btn" class="flex-1 py-2 rounded transition-colors" style="background-color: var(--primary-700); color: white;">
+                                下一个单词
+                            </button>
+                            <button id="vocab-weak-btn" class="px-4 py-2 rounded transition-colors" style="border: 2px solid var(--accent-500); color: var(--accent-600); background: white;">
+                                复习生疏
+                            </button>
+                            <button id="vocab-list-btn" class="px-4 py-2 rounded transition-colors" style="border: 1px solid var(--gray-300); color: var(--gray-700); background: white;">
+                                已学列表
+                            </button>
+                        </div>
+                        
+                        <!-- 单词卡片 -->
+                        <div id="vocab-card-area">
+                            <div id="vocab-card" class="hidden card p-8 text-center" style="border-left: 4px solid var(--primary-600);">
+                                <div id="vocab-word" class="text-4xl font-bold mb-2 cursor-pointer transition-colors" style="color: var(--primary-700);"></div>
+                                <p class="text-sm mb-6" style="color: var(--gray-400);">点击单词查看释义</p>
+                                
+                                <div id="vocab-detail" class="hidden">
+                                    <div id="vocab-definition" class="text-left p-4 rounded-lg mb-6" style="background-color: var(--primary-50); border-left: 2px solid var(--primary-400);"></div>
+                                    
+                                    <div class="flex justify-center gap-3">
+                                        <button class="vocab-quality-btn px-5 py-2 rounded transition-colors" style="border: 2px solid var(--error); color: var(--error); background: white;" data-quality="0">
+                                            😕 生疏
+                                        </button>
+                                        <button class="vocab-quality-btn px-5 py-2 rounded transition-colors" style="border: 2px solid var(--gray-400); color: var(--gray-600); background: white;" data-quality="1">
+                                            🤔 模糊
+                                        </button>
+                                        <button class="vocab-quality-btn px-5 py-2 rounded transition-colors" style="border: 2px solid var(--primary-500); color: var(--primary-700); background: white;" data-quality="2">
+                                            😊 熟练
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="vocab-empty" class="text-center py-8" style="color: var(--gray-500);">
+                                <p>点击"下一个单词"开始学习</p>
+                            </div>
+                            
+                            <!-- 已学列表 -->
+                            <div id="vocab-learned-list" class="hidden space-y-2"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 加载状态 -->
+                    <div id="dict-loading" class="hidden text-center py-8">
+                        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2" style="border-color: var(--primary-600);"></div>
+                        <p class="mt-2" style="color: var(--gray-600);">正在加载词典...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 语用积累模块 -->
+            <section id="expressions" class="module hidden p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">💬 语用积累</h2>
+                <div class="mb-6 bg-white p-6 rounded-lg shadow">
+                    <div class="flex gap-4">
+                        <input type="text" id="expression-input" placeholder="输入想学习的场景，如：在咖啡馆礼貌地续杯" 
+                               class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button id="generate-expression-btn" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
+                            生成
+                        </button>
+                    </div>
+                </div>
+                <div id="expressions-loading" class="hidden text-center py-4">
+                    <div class="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+                    <p class="mt-2 text-gray-600">AI正在生成...</p>
+                </div>
+                <div class="mb-4 flex justify-end gap-2">
+                    <button id="clear-expressions-btn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors text-sm">
+                        清除所有记录
+                    </button>
+                    <button id="view-favorites-btn" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition-colors text-sm flex items-center gap-1">
+                        <span>⭐</span>
+                        <span>收藏夹</span>
+                    </button>
+                </div>
+                <div id="expressions-list" class="space-y-4"></div>
+                
+                <!-- 收藏夹内容区域（内嵌显示，不使用弹窗） -->
+                <div id="favorites-section" class="hidden">
+                    <div id="favorites-list" class="space-y-4"></div>
+                </div>
+            </section>
+
+            <!-- AI助手模块 -->
+            <section id="ai-assistant" class="module hidden p-8 flex flex-col h-full">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-3xl font-bold text-gray-800">🤖 AI助手</h2>
+                    <button id="chat-clear-btn" class="text-sm text-gray-600 hover:text-gray-800 px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                        清除对话
+                    </button>
+                </div>
+                <div id="chat-container" class="flex-1 bg-white rounded-lg shadow-lg p-6 mb-4 overflow-y-auto" style="max-height: calc(100vh - 250px);">
+                    <div id="chat-messages" class="space-y-4">
+                        <div class="bg-blue-50 p-4 rounded-lg welcome-message">
+                            <p class="text-gray-700">👋 你好！我是你的法语学习AI助手，可以帮你解答任何关于法语学习的问题。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <input type="text" id="chat-input" placeholder="输入你的问题..." 
+                           class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button id="chat-send-btn" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
+                        发送
+                    </button>
+                </div>
+            </section>
+
+            <!-- 登录/注册模块 -->
+            <section id="login" class="module hidden p-8">
+                <div class="max-w-md mx-auto">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">登录 / 注册</h2>
+                    
+                    <!-- 登录表单 -->
+                    <div id="login-form" class="space-y-4">
+                        <div id="login-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"></div>
+                        <input type="text" id="login-username" placeholder="用户名" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="password" id="login-password" placeholder="密码" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button id="login-btn" class="w-full bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
+                            登录
+                        </button>
+                        <button id="show-register-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm">
+                            没有账号？注册
+                        </button>
+                    </div>
+                    
+                    <!-- 注册表单 -->
+                    <div id="register-form" class="hidden space-y-4">
+                        <div id="register-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"></div>
+                        <input type="text" id="register-username" placeholder="用户名" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="password" id="register-password" placeholder="密码" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" id="register-code" placeholder="注册码" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button id="register-btn" class="w-full bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition-colors">
+                            注册
+                        </button>
+                        <button id="show-login-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm">
+                            已有账号？登录
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 关于模块 -->
+            <section id="about" class="module hidden p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">ℹ️ 关于</h2>
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-bold mb-4">项目简介</h3>
+                        <p class="text-gray-700 mb-4">
+                            French AI Learning Hub 是一个功能丰富的法语学习平台，集成了新闻阅读、影视推荐、词典查询、语用积累和AI助手等功能。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-bold mb-4">使用的网络资源</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">📰 新闻模块</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                                    <li>France 24: https://www.france24.com/fr/rss</li>
+                                    <li>Le Monde: https://www.lemonde.fr/rss/une.xml</li>
+                                    <li>RFI: https://www.rfi.fr/fr/rss</li>
+                                    <li>franceinfo: https://www.franceinfo.fr/rss</li>
+                                    <li>20 Minutes: https://www.20minutes.fr/rss/une.xml</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">🎬 影视模块</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                                    <li>TMDB API: https://www.themoviedb.org/</li>
+                                    <li>用于获取法语电影和剧集信息、海报、评分等</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">🤖 AI服务</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                                    <li>DeepSeek API: https://platform.deepseek.com/</li>
+                                    <li>用于新闻关键词提取和语用表达生成</li>
+                                    <li>Coze API: https://www.coze.cn/</li>
+                                    <li>用于AI助手对话功能，提供流式响应</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">📚 词典数据</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                                    <li>French-Dictionary: https://github.com/hbenbel/French-Dictionary</li>
+                                    <li>基于Wiktionary的完整法语词典</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-bold mb-4">技术栈</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                            <li>前端: JavaScript (ES6+), Tailwind CSS</li>
+                            <li>后端: Vercel Serverless Functions (Python)</li>
+                            <li>数据库: Supabase PostgreSQL</li>
+                            <li>认证: JWT Token</li>
+                            <li>部署: Vercel + Supabase</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 脚本加载 -->
+    <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
+
