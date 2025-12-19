@@ -8,11 +8,15 @@ from lib.utils import json_response
 
 def handler(request):
     """代理DeepSeek API调用"""
+    # 获取请求方法（兼容不同的 request 对象格式）
+    method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
+    method = method.upper()
+    
     # 处理 CORS 预检请求
-    if request.method == 'OPTIONS':
+    if method == 'OPTIONS':
         return json_response({}, 200)
     
-    if request.method != 'POST':
+    if method != 'POST':
         return json_response({'success': False, 'message': 'Method not allowed'}, 405)
     
     try:
