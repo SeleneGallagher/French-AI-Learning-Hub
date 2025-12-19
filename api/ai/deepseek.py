@@ -16,10 +16,12 @@ def handler(request):
         if hasattr(request, 'body'):
             if isinstance(request.body, str):
                 data = json.loads(request.body)
-            else:
+            elif isinstance(request.body, dict):
                 data = request.body
+            else:
+                data = json.loads(request.body) if request.body else {}
         else:
-            # Flask格式
+            # Flask格式或其他
             data = request.get_json() if hasattr(request, 'get_json') else {}
         
         prompt = data.get('prompt', '')
