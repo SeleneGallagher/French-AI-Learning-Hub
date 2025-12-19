@@ -506,53 +506,6 @@
 
     <!-- 脚本加载 -->
     <script type="module" src="scripts/app.js"></script>
-    <script>
-        // 移动端菜单控制
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileCloseBtn = document.getElementById('mobile-close-btn');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('mobile-overlay');
-        
-        function openMenu() {
-            sidebar.classList.remove('-translate-x-full');
-            overlay.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeMenu() {
-            sidebar.classList.add('-translate-x-full');
-            overlay.classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-        
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', openMenu);
-        }
-        
-        if (mobileCloseBtn) {
-            mobileCloseBtn.addEventListener('click', closeMenu);
-        }
-        
-        if (overlay) {
-            overlay.addEventListener('click', closeMenu);
-        }
-        
-        // 点击导航链接后关闭菜单
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    closeMenu();
-                }
-            });
-        });
-        
-        // 窗口大小改变时，如果大于768px自动关闭菜单
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) {
-                closeMenu();
-            }
-        });
-    </script>
     
     <!-- 移动端底部导航栏 -->
     <nav id="mobile-nav" class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 shadow-2xl z-50 safe-area-inset-bottom">
