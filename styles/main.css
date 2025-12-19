@@ -371,7 +371,18 @@ button[style*="border: 1px solid var(--gray-300)"][style*="color: var(--gray-700
 
 /* 移动端底部导航栏样式 */
 #mobile-nav {
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+#mobile-nav .mobile-nav-item {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+#mobile-nav .mobile-nav-item:hover {
+    transform: translateY(-2px);
 }
 
 #mobile-nav .mobile-nav-item.active,
@@ -380,12 +391,29 @@ button[style*="border: 1px solid var(--gray-300)"][style*="color: var(--gray-700
     font-weight: 600;
 }
 
+#mobile-nav .mobile-nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: #0054a0;
+    border-radius: 0 0 3px 3px;
+}
+
 /* 移动端基础样式 (小于768px) */
 @media (max-width: 768px) {
     /* 主内容区在移动端全宽 */
     main {
         width: 100%;
-        padding-bottom: 5rem; /* 为底部导航栏留出空间 */
+        padding-bottom: 5.5rem; /* 为底部导航栏留出空间 */
+    }
+    
+    /* 底部导航栏高度 */
+    #mobile-nav {
+        height: 4.5rem;
     }
     
     /* 导航链接在移动端加大点击区域 */

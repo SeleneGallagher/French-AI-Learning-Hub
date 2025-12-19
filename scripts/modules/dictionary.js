@@ -77,10 +77,10 @@ async function loadDictionary() {
     
     try {
         // 优先尝试加载新的 French Dictionary
-        let response = await fetch('public/data/dicts/french_dict.json');
+        let response = await fetch('/public/data/dicts/french_dict.json');
         if (!response.ok) {
             // 如果新词典不存在，静默回退到旧词典（不显示404错误）
-            response = await fetch('public/data/dicts/gonggong.json');
+            response = await fetch('/public/data/dicts/gonggong.json');
         }
         
         if (response.ok) {

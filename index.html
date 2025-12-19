@@ -58,16 +58,6 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg-gray-50">
-    <!-- 移动端菜单按钮 -->
-    <button id="mobile-menu-btn" class="md:hidden fixed top-4 left-4 z-50 bg-blue-800 text-white p-2 rounded-lg shadow-lg">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-    </button>
-    
-    <!-- 移动端遮罩层 -->
-    <div id="mobile-overlay" class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
-    
     <div class="flex h-screen overflow-hidden">
         <!-- 左侧导航栏 - 法国深蓝 -->
         <nav id="sidebar" class="fixed md:static w-64 text-white flex flex-col shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 h-full" style="background: linear-gradient(180deg, #002654 0%, #001a3d 100%);">
@@ -565,27 +555,31 @@
     </script>
     
     <!-- 移动端底部导航栏 -->
-    <nav id="mobile-nav" class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
-        <div class="flex justify-around items-center h-16">
-            <a href="#welcome" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="welcome">
-                <span class="text-xl mb-1">🏠</span>
-                <span class="text-xs">首页</span>
+    <nav id="mobile-nav" class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 shadow-2xl z-50 safe-area-inset-bottom">
+        <div class="flex justify-around items-center h-18 px-2 pb-2">
+            <a href="#welcome" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="welcome">
+                <span class="text-2xl mb-1">🏠</span>
+                <span class="text-xs font-medium">首页</span>
             </a>
-            <a href="#news" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="news">
-                <span class="text-xl mb-1">📰</span>
-                <span class="text-xs">新闻</span>
+            <a href="#news" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="news">
+                <span class="text-2xl mb-1">📰</span>
+                <span class="text-xs font-medium">新闻</span>
             </a>
-            <a href="#movies" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="movies">
-                <span class="text-xl mb-1">🎬</span>
-                <span class="text-xs">影视</span>
+            <a href="#movies" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="movies">
+                <span class="text-2xl mb-1">🎬</span>
+                <span class="text-xs font-medium">影视</span>
             </a>
-            <a href="#dictionary" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="dictionary">
-                <span class="text-xl mb-1">📖</span>
-                <span class="text-xs">词典</span>
+            <a href="#dictionary" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="dictionary">
+                <span class="text-2xl mb-1">📖</span>
+                <span class="text-xs font-medium">词典</span>
             </a>
-            <a href="#login" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="login">
-                <span class="text-xl mb-1">🔑</span>
-                <span class="text-xs">我的</span>
+            <a href="#ai-assistant" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="ai-assistant">
+                <span class="text-2xl mb-1">🤖</span>
+                <span class="text-xs font-medium">AI助手</span>
+            </a>
+            <a href="#login" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="login">
+                <span class="text-2xl mb-1">🔑</span>
+                <span class="text-xs font-medium">我的</span>
             </a>
         </div>
     </nav>
@@ -607,11 +601,11 @@
             const hash = window.location.hash.slice(1) || 'welcome';
             document.querySelectorAll('#mobile-nav .mobile-nav-item').forEach(item => {
                 if (item.dataset.module === hash) {
-                    item.classList.add('text-blue-600', 'font-semibold');
-                    item.classList.remove('text-gray-600');
+                    item.classList.add('text-blue-600', 'font-semibold', 'bg-blue-50');
+                    item.classList.remove('text-gray-500');
                 } else {
-                    item.classList.remove('text-blue-600', 'font-semibold');
-                    item.classList.add('text-gray-600');
+                    item.classList.remove('text-blue-600', 'font-semibold', 'bg-blue-50');
+                    item.classList.add('text-gray-500');
                 }
             });
         }
