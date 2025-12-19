@@ -76,8 +76,41 @@ git commit -m "Fix Vercel deployment issues"  # ✅ 成功
 
 ---
 
+## Vercel Serverless Functions 限制
+
+### Hobby 套餐限制
+- **最多 12 个 Serverless Functions** 每次部署
+- 超过限制会导致构建失败
+
+### 解决方案
+1. **明确列出 API 文件**：在 `vercel.json` 中明确列出每个 API 文件，而不是使用通配符 `api/**/*.py`
+2. **移除非 API 文件**：将工具文件（如 `utils.py`）移到 `api` 目录外（如 `lib/` 目录）
+3. **排除 __init__.py**：这些文件不是实际的 API endpoints，不应该被计算在内
+
+**示例配置**：
+```json
+{
+  "builds": [
+    {
+      "src": "api/ai/coze.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/ai/deepseek.py",
+      "use": "@vercel/python"
+    }
+    // ... 明确列出所有 API 文件
+  ]
+}
+```
+
+**当前项目**：8 个 Serverless Functions（在限制内）
+
+---
+
 ## 更新日志
 
 - 2024-12-19: 添加 Git 提交信息必须使用英文的注意事项
 - 2024-12-19: 记录 Vercel 部署相关注意事项
+- 2024-12-19: 添加 Vercel Serverless Functions 限制和解决方案
 

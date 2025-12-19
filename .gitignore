@@ -42,4 +42,7 @@ check_csv_structure.py
 *.csv
 # 生成的词典JSON文件（太大，需要本地生成）
 public/data/dicts/french_dict.json
+public/data/dicts/*.json
+!public/data/dicts/french_dict.json
+!public/data/dicts/gonggong.json
 
