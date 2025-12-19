@@ -5,7 +5,7 @@ import json
 import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime
-from api.utils import json_response
+from lib.utils import json_response
 
 NEWS_SOURCES = [
     'https://www.france24.com/fr/rss',

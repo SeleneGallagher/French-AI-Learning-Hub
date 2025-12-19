@@ -3,6 +3,8 @@
  * 三个面板按钮可切换：历史记录、收藏夹、背单词
  */
 
+import { debounce } from '../utils/helpers.js';
+
 const DICT_STORAGE_KEY = 'dict_data';
 const HISTORY_KEY = 'dict_history';
 const FAVORITES_KEY = 'dict_favorites';
@@ -16,6 +18,16 @@ let favorites = [];
 let vocabProgress = {}; // { word: { quality: 0-2, count: n, lastReview: timestamp } }
 let currentVocabWord = null;
 let currentPanel = null; // 'history' | 'favorites' | 'vocab' | null
+
+// 索引系统
+let wordIndex = new Map();        // word.toLowerCase() -> wordObj
+let prefixIndex = new Map();      // prefix -> [wordObj, ...]
+let posIndex = new Map();         // pos -> [wordObj, ...]
+let dictMetadata = {              // 词典元数据
+    totalCount: 0,
+    posCounts: {},
+    loadedAt: null
+};
 
 // 初始化词典模块
 export async function initDictionary() {
@@ -70,7 +82,73 @@ function saveVocabProgress() {
 // 词典加载状态
 let dictionaryLoadPromise = null;
 
-// 加载词典（懒加载，只加载一次）
+// 构建索引系统
+function buildIndexes(words) {
+    wordIndex.clear();
+    prefixIndex.clear();
+    posIndex.clear();
+    
+    words.forEach(word => {
+        const wordLower = word.word.toLowerCase();
+        
+        // 单词索引（精确匹配）
+        // 如果同一个词有多个词性，合并词性信息
+        if (wordIndex.has(wordLower)) {
+            const existing = wordIndex.get(wordLower);
+            // 合并词性
+            const existingPos = new Set(existing.pos?.map(p => p.abbr || p.full) || []);
+            const newPos = word.pos?.filter(p => !existingPos.has(p.abbr || p.full)) || [];
+            if (newPos.length > 0) {
+                existing.pos = [...(existing.pos || []), ...newPos];
+            }
+            // 合并定义
+            const existingDefs = new Set(existing.definitions?.map(d => d.text) || []);
+            const newDefs = word.definitions?.filter(d => !existingDefs.has(d.text)) || [];
+            if (newDefs.length > 0) {
+                existing.definitions = [...(existing.definitions || []), ...newDefs];
+            }
+        } else {
+            wordIndex.set(wordLower, word);
+        }
+        
+        // 前缀索引（1-5个字符，用于自动补全）
+        const maxPrefixLen = Math.min(5, word.word.length);
+        for (let len = 1; len <= maxPrefixLen; len++) {
+            const prefix = wordLower.substring(0, len);
+            if (!prefixIndex.has(prefix)) {
+                prefixIndex.set(prefix, []);
+            }
+            const prefixList = prefixIndex.get(prefix);
+            // 避免重复添加
+            if (!prefixList.some(w => w.word.toLowerCase() === wordLower)) {
+                prefixList.push(word);
+            }
+        }
+        
+        // 词性索引（用于按词性筛选）
+        word.pos?.forEach(p => {
+            const posKey = p.abbr || p.full;
+            if (!posIndex.has(posKey)) {
+                posIndex.set(posKey, []);
+            }
+            const posList = posIndex.get(posKey);
+            if (!posList.some(w => w.word.toLowerCase() === wordLower)) {
+                posList.push(word);
+            }
+        });
+    });
+    
+    // 限制前缀索引的候选数量（每个前缀最多100个，避免内存过大）
+    for (const [prefix, words] of prefixIndex.entries()) {
+        if (words.length > 100) {
+            prefixIndex.set(prefix, words.slice(0, 100));
+        }
+    }
+    
+    console.log(`索引构建完成: ${wordIndex.size} 个唯一词条, ${prefixIndex.size} 个前缀索引`);
+}
+
+// 加载词典（并行加载多个JSON文件）
 async function loadDictionary() {
     // 如果已经在加载，返回同一个Promise
     if (dictionaryLoadPromise) {
@@ -90,39 +168,61 @@ async function loadDictionary() {
     
     dictionaryLoadPromise = (async () => {
         try {
-            // 优先尝试加载新的 French Dictionary
-            let response = await fetch('/public/data/dicts/french_dict.json');
-            if (!response.ok) {
-                // 如果新词典不存在，静默回退到旧词典
-                response = await fetch('/public/data/dicts/gonggong.json');
-            }
+            // 优先尝试并行加载新的分词性文件
+            const posFiles = ['noun', 'verb', 'adj', 'adv', 'conj', 'prep', 'pron', 'det'];
+            const loadPromises = posFiles.map(pos => 
+                fetch(`/public/data/dicts/${pos}.json`)
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json().then(data => ({ pos, data, success: true }));
+                        }
+                        return { pos, data: null, success: false };
+                    })
+                    .catch(() => ({ pos, data: null, success: false }))
+            );
             
-            if (response.ok) {
-                dictData = await response.json();
-                dictWords = dictData.words || [];
-                console.log(`词典加载成功: ${dictWords.length} 词条 (${dictData.name || '未知词典'})`);
-            } else {
-                console.warn('词典文件不存在，词典功能将不可用');
+            const results = await Promise.all(loadPromises);
+            const loadedFiles = results.filter(r => r.success);
+            
+            if (loadedFiles.length > 0) {
+                // 合并所有词条
                 dictWords = [];
-            }
-        } catch (e) {
-            // 静默处理错误
-            if (!e.message.includes('404')) {
-                console.error('加载词典失败:', e);
-            }
-            // 尝试加载旧词典
-            try {
-                const fallbackResponse = await fetch('public/data/dicts/gonggong.json');
-                if (fallbackResponse.ok) {
-                    dictData = await fallbackResponse.json();
+                dictMetadata.posCounts = {};
+                dictMetadata.totalCount = 0;
+                
+                loadedFiles.forEach(({ pos, data }) => {
+                    const words = data.words || [];
+                    dictWords.push(...words);
+                    dictMetadata.posCounts[pos] = words.length;
+                    dictMetadata.totalCount += words.length;
+                });
+                
+                // 构建索引
+                buildIndexes(dictWords);
+                
+                dictMetadata.loadedAt = new Date().toISOString();
+                console.log(`词典加载成功: ${dictWords.length} 词条 (${loadedFiles.length}/${posFiles.length} 个文件)`);
+            } else {
+                // 如果新格式文件都不存在，尝试加载旧的统一文件
+                console.log('新格式文件不存在，尝试加载旧格式...');
+                let response = await fetch('/public/data/dicts/french_dict.json');
+                if (!response.ok) {
+                    response = await fetch('/public/data/dicts/gonggong.json');
+                }
+                
+                if (response.ok) {
+                    dictData = await response.json();
                     dictWords = dictData.words || [];
-                    console.log(`词典加载成功: ${dictWords.length} 词条 (${dictData.name || '未知词典'})`);
+                    buildIndexes(dictWords);
+                    console.log(`词典加载成功: ${dictWords.length} 词条 (旧格式)`);
                 } else {
+                    console.warn('词典文件不存在，词典功能将不可用');
                     dictWords = [];
                 }
-            } catch {
-                dictWords = [];
             }
+        } catch (e) {
+            console.error('加载词典失败:', e);
+            dictWords = [];
         } finally {
             if (loadingEl) loadingEl.classList.add('hidden');
             if (welcomeEl) welcomeEl.classList.remove('hidden');
@@ -142,9 +242,10 @@ function bindEvents() {
     const clearHistoryBtn = document.getElementById('dict-clear-history-btn');
     const clearFavoritesBtn = document.getElementById('dict-clear-favorites-btn');
     
-    // 搜索输入
+    // 搜索输入（使用防抖优化）
     if (searchInput) {
-        searchInput.addEventListener('input', handleSearchInput);
+        const handleSearchInputDebounced = debounce(handleSearchInput, 200);
+        searchInput.addEventListener('input', handleSearchInputDebounced);
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 performSearch(searchInput.value.trim());
@@ -264,26 +365,75 @@ function resetAllButtons() {
     });
 }
 
-// 处理搜索输入
+// 使用索引优化的搜索函数
+function findExactMatch(query) {
+    return wordIndex.get(query.toLowerCase()) || null;
+}
+
+function findPrefixMatches(query) {
+    const prefix = query.toLowerCase();
+    const matches = prefixIndex.get(prefix) || [];
+    // 限制结果数量，按字母顺序排序
+    return matches.slice(0, 10).sort((a, b) => 
+        a.word.localeCompare(b.word)
+    );
+}
+
+function findFuzzyMatches(query) {
+    const q = query.toLowerCase();
+    const results = [];
+    const seen = new Set();
+    
+    // 优先使用前缀索引
+    if (prefixIndex.has(q)) {
+        prefixIndex.get(q).forEach(word => {
+            const wordLower = word.word.toLowerCase();
+            if (wordLower !== q && !seen.has(wordLower)) {
+                results.push(word);
+                seen.add(wordLower);
+            }
+        });
+    }
+    
+    // 如果结果不足，遍历单词索引（限制范围）
+    if (results.length < 10) {
+        for (const [word, wordObj] of wordIndex.entries()) {
+            if (word.includes(q) && word !== q && !seen.has(word)) {
+                results.push(wordObj);
+                seen.add(word);
+                if (results.length >= 10) break;
+            }
+        }
+    }
+    
+    return results.slice(0, 10);
+}
+
+// 处理搜索输入（使用索引优化）
 function handleSearchInput(e) {
-    const query = e.target.value.trim().toLowerCase();
+    const query = e.target.value.trim();
     
     if (query.length < 1) {
         hideSuggestions();
         return;
     }
     
-    // 搜索匹配的单词
-    const matches = dictWords.filter(w => 
-        w.word.toLowerCase().startsWith(query)
-    ).slice(0, 10);
+    // 使用前缀索引快速查找
+    const prefixMatches = findPrefixMatches(query);
     
-    // 同时搜索包含该词的单词
-    const contains = dictWords.filter(w => 
-        w.word.toLowerCase().includes(query) && !w.word.toLowerCase().startsWith(query)
-    ).slice(0, 5);
+    // 如果前缀匹配不足，添加模糊匹配
+    let allMatches = [...prefixMatches];
+    if (allMatches.length < 10) {
+        const fuzzyMatches = findFuzzyMatches(query);
+        const seen = new Set(prefixMatches.map(w => w.word.toLowerCase()));
+        fuzzyMatches.forEach(w => {
+            if (!seen.has(w.word.toLowerCase())) {
+                allMatches.push(w);
+            }
+        });
+    }
     
-    showSuggestions([...matches, ...contains]);
+    showSuggestions(allMatches.slice(0, 15));
 }
 
 // 显示搜索建议
@@ -338,7 +488,7 @@ function getShortDefinition(wordObj) {
     return text;
 }
 
-// 执行搜索
+// 执行搜索（使用索引优化）
 function performSearch(query) {
     if (!query) return;
     
@@ -370,14 +520,11 @@ function performSearch(query) {
     
     if (welcomeEl) welcomeEl.classList.add('hidden');
     
-    // 精确匹配
-    const exactMatch = dictWords.find(w => w.word.toLowerCase() === query.toLowerCase());
+    // 使用索引进行精确匹配（O(1)）
+    const exactMatch = findExactMatch(query);
     
-    // 模糊匹配
-    const fuzzyMatches = dictWords.filter(w => 
-        w.word.toLowerCase().includes(query.toLowerCase()) && 
-        w.word.toLowerCase() !== query.toLowerCase()
-    ).slice(0, 10);
+    // 使用索引进行模糊匹配
+    const fuzzyMatches = findFuzzyMatches(query);
     
     if (!exactMatch && fuzzyMatches.length === 0) {
         if (resultsEl) {

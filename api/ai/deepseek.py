@@ -4,7 +4,7 @@ DeepSeek API代理 - 后端调用，使用环境变量
 import os
 import json
 import requests
-from api.utils import json_response
+from lib.utils import json_response
 
 def handler(request):
     """代理DeepSeek API调用"""

@@ -4,7 +4,7 @@
 """
 import os
 import json
-from api.utils import json_response
+from lib.utils import json_response
 
 def handler(request):
     """返回前端配置"""

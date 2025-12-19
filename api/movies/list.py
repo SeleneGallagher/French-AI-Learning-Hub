@@ -4,7 +4,7 @@
 import json
 import os
 import requests
-from api.utils import json_response
+from lib.utils import json_response
 
 TMDB_API_KEY = os.environ.get('TMDB_API_KEY', '')
 

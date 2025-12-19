@@ -5,7 +5,7 @@ import json
 import os
 import jwt
 import bcrypt
-from api.utils import get_supabase, json_response
+from lib.utils import get_supabase, json_response
 
 JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-change-this')
 

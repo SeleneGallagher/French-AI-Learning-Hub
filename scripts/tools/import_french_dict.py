@@ -243,27 +243,68 @@ def merge_words(all_words):
     
     return list(merged.values())
 
+def find_dict_source_dir():
+    """智能检测词典目录路径"""
+    possible_paths = [
+        BASE_DIR / 'French-Dictionary' / 'dictionary',  # 项目内
+        BASE_DIR.parent / 'French-Dictionary' / 'dictionary',  # 项目同级
+        BASE_DIR / 'dictionary',  # 项目根目录
+    ]
+    
+    for path in possible_paths:
+        if path.exists():
+            return path
+    
+    return None
+
+def validate_words(words, pos_name):
+    """验证词条数据"""
+    valid_words = []
+    errors = []
+    
+    for word in words:
+        if not word.get('word'):
+            errors.append(f"发现空词条，已跳过")
+            continue
+        
+        # 确保必要字段存在
+        if 'pos' not in word or not word['pos']:
+            word['pos'] = [{'abbr': POS_INFO[pos_name]['abbr'], 'full': POS_INFO[pos_name]['full']}]
+        
+        if 'definitions' not in word or not word['definitions']:
+            word['definitions'] = [{'text': POS_INFO[pos_name]['full']}]
+        
+        valid_words.append(word)
+    
+    if errors:
+        print(f"  [WARNING] 警告: {len(errors)} 个数据问题")
+    
+    return valid_words
+
 def main():
-    """主函数：处理所有CSV并合并为一个统一的词典文件"""
+    """主函数：分别生成各词性的JSON文件"""
+    import datetime
+    
     print("=" * 60)
     print("French-Dictionary Import Tool")
-    print("合并所有CSV为一个统一的词典文件")
+    print("分别生成各词性的JSON文件")
     print("=" * 60)
     print()
     
-    # 检查词典目录
-    dict_source_dir = BASE_DIR / 'dictionary'
-    if not dict_source_dir.exists():
-        alt_dir = BASE_DIR.parent / 'French-Dictionary' / 'dictionary'
-        if alt_dir.exists():
-            dict_source_dir = alt_dir
-        else:
-            print(f"错误: 找不到词典目录")
-            print(f"已检查: {BASE_DIR / 'dictionary'}")
-            print(f"已检查: {alt_dir}")
-            print()
-            print("请运行: git clone https://github.com/hbenbel/French-Dictionary.git")
-            return
+    # 智能检测词典目录
+    dict_source_dir = find_dict_source_dir()
+    if not dict_source_dir:
+        print("错误: 找不到词典目录")
+        print("已检查以下路径:")
+        print("  1. French-Dictionary/dictionary/ (项目内)")
+        print("  2. ../French-Dictionary/dictionary/ (项目同级)")
+        print("  3. dictionary/ (项目根目录)")
+        print()
+        print("请运行: git clone https://github.com/hbenbel/French-Dictionary.git")
+        return
+    
+    print(f"[OK] 找到词典目录: {dict_source_dir}")
+    print()
     
     # 确保输出目录存在
     DICT_DIR.mkdir(parents=True, exist_ok=True)
@@ -280,8 +321,10 @@ def main():
         'det.csv': ('det', lambda p: process_other_pos_csv(p, 'det'))
     }
     
-    all_words = []
     pos_counts = {}
+    total_count = 0
+    generated_files = []
+    start_time = datetime.datetime.now()
     
     print("正在处理CSV文件...")
     print()
@@ -293,44 +336,63 @@ def main():
             print(f"跳过: {filename} (文件不存在)")
             continue
         
-        print(f"处理: {filename} ({POS_INFO[pos_name]['full']})...")
-        words = processor(csv_path)
-        pos_counts[pos_name] = len(words)
-        all_words.extend(words)
-        print(f"  ✓ 提取了 {len(words)} 个词条")
+        try:
+            print(f"处理: {filename} ({POS_INFO[pos_name]['full']})...")
+            
+            # 处理CSV
+            words = processor(csv_path)
+            
+            # 验证数据
+            words = validate_words(words, pos_name)
+            
+            # 按字母顺序排序
+            words.sort(key=lambda x: x['word'].lower())
+            
+            pos_counts[pos_name] = len(words)
+            total_count += len(words)
+            
+            # 生成JSON文件
+            output_file = DICT_DIR / f'{pos_name}.json'
+            output_data = {
+                'name': f'French Dictionary - {POS_INFO[pos_name]["full"]}',
+                'pos': pos_name,
+                'count': len(words),
+                'source': 'https://github.com/hbenbel/French-Dictionary',
+                'license': 'MIT License',
+                'copyright': 'Copyright (c) 2021 Hussem Ben Belgacem',
+                'version': '1.0.0',
+                'generated_at': datetime.datetime.now().isoformat() + 'Z',
+                'words': words
+            }
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(output_data, f, ensure_ascii=False, indent=2)
+            
+            generated_files.append(output_file.name)
+            print(f"  [OK] 提取了 {len(words)} 个词条")
+            print(f"  [OK] 已保存: {output_file.name}")
+            print()
+            
+        except Exception as e:
+            print(f"  [ERROR] 处理失败: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            print()
+            continue
     
-    print()
-    print("正在合并相同单词的不同词性...")
-    merged_words = merge_words(all_words)
-    
-    # 按字母顺序排序
-    merged_words.sort(key=lambda x: x['word'].lower())
-    
-    print(f"  ✓ 合并后共 {len(merged_words)} 个唯一词条")
-    print()
-    
-    # 保存为统一的词典文件
-    output_file = DICT_DIR / 'french_dict.json'
-    output_data = {
-        'name': '公共法语学习词典',
-        'description': '合并自 French-Dictionary (GitHub: hbenbel/French-Dictionary)',
-        'source': 'https://github.com/hbenbel/French-Dictionary',
-        'license': 'MIT License',
-        'copyright': 'Copyright (c) 2021 Hussem Ben Belgacem',
-        'total_count': len(merged_words),
-        'pos_counts': pos_counts,
-        'words': merged_words
-    }
-    
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=2)
+    elapsed_time = (datetime.datetime.now() - start_time).total_seconds()
     
     print("=" * 60)
-    print(f"✓ 成功生成统一词典: {output_file.name}")
-    print(f"  总词条数: {len(merged_words)}")
-    print(f"  各词性统计:")
-    for pos, count in pos_counts.items():
-        print(f"    - {POS_INFO[pos]['full']}: {count}")
+    if generated_files:
+        print("[SUCCESS] 成功生成所有词典文件")
+        print(f"  总词条数: {total_count:,}")
+        print(f"  各词性统计:")
+        for pos, count in sorted(pos_counts.items()):
+            print(f"    - {POS_INFO[pos]['full']}: {count:,}")
+        print(f"  生成文件数: {len(generated_files)}")
+        print(f"  处理时间: {elapsed_time:.2f} 秒")
+    else:
+        print("[ERROR] 未能生成任何文件")
     print("=" * 60)
 
 if __name__ == '__main__':
