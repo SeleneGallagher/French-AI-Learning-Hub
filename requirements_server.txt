@@ -1,0 +1,13 @@
+# 服务器部署所需依赖
+flask>=2.3.0
+flask-cors>=4.0.0
+gunicorn>=21.2.0
+python-dotenv>=1.0.0
+
+# 原有依赖
+supabase>=2.0.0
+pyjwt>=2.8.0
+bcrypt>=4.0.0
+requests>=2.31.0
+python-dateutil>=2.8.2
+
