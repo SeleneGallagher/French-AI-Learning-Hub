@@ -4,6 +4,8 @@
  * 现在通过后端API代理调用，不直接使用API密钥
  */
 
+import { simulateStream, handleAPIError, Logger } from '../utils/helpers.js';
+
 /**
  * 调用DeepSeek API - 通过后端代理
  * @param {string} prompt - 提示词
@@ -26,9 +28,7 @@ export async function callDeepSeek(prompt, onStream = null) {
         });
 
         if (!response.ok) {
-            const errorData = await response.json().catch(() => ({}));
-            const errorMsg = errorData.message || `DeepSeek API错误: ${response.status}`;
-            throw new Error(errorMsg);
+            throw await handleAPIError(response, 'DeepSeek API错误');
         }
 
         const result = await response.json();
@@ -39,21 +39,15 @@ export async function callDeepSeek(prompt, onStream = null) {
         
         const content = result.content || '';
         
-        // 处理流式响应（简化版）
+        // 处理流式响应
         if (onStream && content) {
-            // 模拟流式输出
-            for (let i = 0; i < content.length; i += 5) {
-                const chunk = content.slice(i, i + 5);
-                if (onStream) onStream(chunk, false);
-                await new Promise(resolve => setTimeout(resolve, 20));
-            }
-            if (onStream) onStream('', true);
+            await simulateStream(content, onStream);
         }
         
         return content;
         
     } catch (error) {
-        console.error('DeepSeek API调用失败:', error);
+        Logger.error('DeepSeek API调用失败:', error);
         throw error;
     }
 }

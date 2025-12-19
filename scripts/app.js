@@ -10,6 +10,7 @@ import { initAIAssistant } from './modules/aiAssistant.js';
 import { initLogin } from './modules/login.js';
 import { initAbout } from './modules/about.js';
 import { AuthService } from './services/auth.js';
+import { Logger } from './utils/helpers.js';
 
 // 当前激活的模块
 let currentModule = null;
@@ -53,7 +54,7 @@ function initNavigation() {
             e.preventDefault();
             const module = e.target.dataset.module || e.target.closest('a')?.dataset.module;
             if (module) {
-                console.log('导航点击:', module); // 调试日志
+                Logger.debug('导航点击:', module);
                 window.location.hash = '#' + module;
             }
         });
@@ -87,7 +88,7 @@ function initNavigation() {
  * @param {string} moduleName - 模块名称
  */
 async function switchModule(moduleName) {
-    console.log('切换模块:', moduleName); // 调试日志
+    Logger.debug('切换模块:', moduleName);
     
     // 隐藏所有模块
     document.querySelectorAll('.module').forEach(m => {
@@ -118,7 +119,9 @@ async function switchModule(moduleName) {
                 await initModule(moduleName);
                 initializedModules.add(moduleName);
             } catch (error) {
-                console.error(`模块 ${moduleName} 初始化失败:`, error);
+                Logger.error(`模块 ${moduleName} 初始化失败:`, error);
+                // 显示用户友好的错误提示
+                showModuleError(moduleName, error);
             }
         }
         
@@ -126,10 +129,28 @@ async function switchModule(moduleName) {
         window.scrollTo(0, 0);
     } else {
         // 默认显示欢迎页
-        console.warn(`模块 "${moduleName}" 不存在，切换到欢迎页`);
+        Logger.warn(`模块 "${moduleName}" 不存在，切换到欢迎页`);
         if (moduleName !== 'welcome') {
             switchModule('welcome');
         }
+    }
+}
+
+/**
+ * 显示模块错误提示
+ * @param {string} moduleName - 模块名称
+ * @param {Error} error - 错误对象
+ */
+function showModuleError(moduleName, error) {
+    const targetModule = document.getElementById(moduleName);
+    if (!targetModule) return;
+    
+    const errorEl = targetModule.querySelector('.module-error') || document.createElement('div');
+    errorEl.className = 'module-error bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4';
+    errorEl.textContent = `模块加载失败: ${error.message || '未知错误'}`;
+    
+    if (!targetModule.querySelector('.module-error')) {
+        targetModule.insertBefore(errorEl, targetModule.firstChild);
     }
 }
 
@@ -138,54 +159,46 @@ async function switchModule(moduleName) {
  * @param {string} moduleName - 模块名称
  */
 async function initModule(moduleName) {
-    console.log('初始化模块:', moduleName); // 调试日志
+    Logger.debug('初始化模块:', moduleName);
     try {
         switch (moduleName) {
             case 'welcome':
                 // 欢迎页是静态的，不需要初始化
-                console.log('欢迎页无需初始化');
                 break;
             case 'news':
-                console.log('开始初始化新闻模块...');
+                Logger.debug('初始化新闻模块');
                 await initNews();
-                console.log('新闻模块初始化完成');
                 break;
             case 'movies':
-                console.log('开始初始化影视模块...');
+                Logger.debug('初始化影视模块');
                 await initMovies();
-                console.log('影视模块初始化完成');
                 break;
             case 'dictionary':
-                console.log('开始初始化词典模块...');
+                Logger.debug('初始化词典模块');
                 await initDictionary();
-                console.log('词典模块初始化完成');
                 break;
             case 'expressions':
-                console.log('开始初始化语用模块...');
+                Logger.debug('初始化语用模块');
                 await initExpressions();
-                console.log('语用模块初始化完成');
                 break;
             case 'ai-assistant':
-                console.log('开始初始化AI助手模块...');
+                Logger.debug('初始化AI助手模块');
                 initAIAssistant();
-                console.log('AI助手模块初始化完成');
                 break;
             case 'login':
-                console.log('开始初始化登录模块...');
+                Logger.debug('初始化登录模块');
                 initLogin();
-                console.log('登录模块初始化完成');
                 break;
             case 'about':
-                console.log('开始初始化关于模块...');
+                Logger.debug('初始化关于模块');
                 initAbout();
-                console.log('关于模块初始化完成');
                 break;
             default:
-                console.warn(`未知模块: ${moduleName}`);
+                Logger.warn(`未知模块: ${moduleName}`);
         }
     } catch (error) {
-        console.error(`初始化模块 ${moduleName} 失败:`, error);
-        console.error('错误详情:', error.stack);
+        Logger.error(`初始化模块 ${moduleName} 失败:`, error);
+        throw error; // 重新抛出以便上层处理
     }
 }
 

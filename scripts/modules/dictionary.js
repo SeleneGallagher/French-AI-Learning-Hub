@@ -67,52 +67,70 @@ function saveVocabProgress() {
     } catch {}
 }
 
-// 加载词典
+// 词典加载状态
+let dictionaryLoadPromise = null;
+
+// 加载词典（懒加载，只加载一次）
 async function loadDictionary() {
+    // 如果已经在加载，返回同一个Promise
+    if (dictionaryLoadPromise) {
+        return dictionaryLoadPromise;
+    }
+    
+    // 如果已经加载过，直接返回
+    if (dictWords.length > 0) {
+        return;
+    }
+    
     const loadingEl = document.getElementById('dict-loading');
     const welcomeEl = document.getElementById('dict-welcome');
     
     if (loadingEl) loadingEl.classList.remove('hidden');
     if (welcomeEl) welcomeEl.classList.add('hidden');
     
-    try {
-        // 优先尝试加载新的 French Dictionary
-        let response = await fetch('/public/data/dicts/french_dict.json');
-        if (!response.ok) {
-            // 如果新词典不存在，静默回退到旧词典（不显示404错误）
-            response = await fetch('/public/data/dicts/gonggong.json');
-        }
-        
-        if (response.ok) {
-            dictData = await response.json();
-            dictWords = dictData.words || [];
-            console.log(`词典加载成功: ${dictWords.length} 词条 (${dictData.name || '未知词典'})`);
-        } else {
-            console.warn('词典文件不存在，词典功能将不可用');
-            dictWords = [];
-        }
-    } catch (e) {
-        // 静默处理错误，不显示404到控制台
-        if (!e.message.includes('404')) {
-            console.error('加载词典失败:', e);
-        }
-        // 尝试加载旧词典
+    dictionaryLoadPromise = (async () => {
         try {
-            const fallbackResponse = await fetch('public/data/dicts/gonggong.json');
-            if (fallbackResponse.ok) {
-                dictData = await fallbackResponse.json();
+            // 优先尝试加载新的 French Dictionary
+            let response = await fetch('public/data/dicts/french_dict.json');
+            if (!response.ok) {
+                // 如果新词典不存在，静默回退到旧词典
+                response = await fetch('public/data/dicts/gonggong.json');
+            }
+            
+            if (response.ok) {
+                dictData = await response.json();
                 dictWords = dictData.words || [];
                 console.log(`词典加载成功: ${dictWords.length} 词条 (${dictData.name || '未知词典'})`);
             } else {
+                console.warn('词典文件不存在，词典功能将不可用');
                 dictWords = [];
             }
-        } catch {
-            dictWords = [];
+        } catch (e) {
+            // 静默处理错误
+            if (!e.message.includes('404')) {
+                console.error('加载词典失败:', e);
+            }
+            // 尝试加载旧词典
+            try {
+                const fallbackResponse = await fetch('public/data/dicts/gonggong.json');
+                if (fallbackResponse.ok) {
+                    dictData = await fallbackResponse.json();
+                    dictWords = dictData.words || [];
+                    console.log(`词典加载成功: ${dictWords.length} 词条 (${dictData.name || '未知词典'})`);
+                } else {
+                    dictWords = [];
+                }
+            } catch {
+                dictWords = [];
+            }
+        } finally {
+            if (loadingEl) loadingEl.classList.add('hidden');
+            if (welcomeEl) welcomeEl.classList.remove('hidden');
+            dictionaryLoadPromise = null; // 加载完成后清除Promise
         }
-    }
+    })();
     
-    if (loadingEl) loadingEl.classList.add('hidden');
-    if (welcomeEl) welcomeEl.classList.remove('hidden');
+    return dictionaryLoadPromise;
 }
 
 // 绑定事件

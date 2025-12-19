@@ -39,6 +39,14 @@ export class APIService {
                 throw new Error('请重新登录');
             }
             
+            // 检查响应类型
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                // 如果不是JSON，尝试读取文本以获取错误信息
+                const text = await response.text();
+                throw new Error(`服务器返回非JSON响应 (${response.status}): ${text.substring(0, 100)}`);
+            }
+            
             const data = await response.json();
             if (!data.success && data.message) {
                 throw new Error(data.message);
@@ -46,7 +54,10 @@ export class APIService {
             
             return data;
         } catch (error) {
-            console.error('API请求失败:', error);
+            // 统一错误处理，避免重复日志
+            if (error.message && !error.message.includes('请重新登录')) {
+                console.error('API请求失败:', error.message);
+            }
             throw error;
         }
     }

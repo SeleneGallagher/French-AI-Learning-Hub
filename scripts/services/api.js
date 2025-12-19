@@ -3,6 +3,7 @@
  */
 
 import { localStorageService } from './storage.js';
+import { simulateStream, handleAPIError, Logger } from '../utils/helpers.js';
 
 const USER_ID_KEY = 'coze_user_id';
 const CONVERSATION_ID_KEY = 'coze_conversation_id';
@@ -37,7 +38,6 @@ export async function callCozeAPI(prompt, onStream = null) {
     const userId = getUserId();
     const conversationId = getConversationId();
     
-    // 通过后端API代理调用Coze
     try {
         const response = await fetch('/api/ai/coze', {
             method: 'POST',
@@ -52,8 +52,7 @@ export async function callCozeAPI(prompt, onStream = null) {
         });
 
         if (!response.ok) {
-            const errorData = await response.json().catch(() => ({}));
-            throw new Error(errorData.message || `API错误: ${response.status}`);
+            throw await handleAPIError(response, 'Coze API错误');
         }
 
         const result = await response.json();
@@ -67,22 +66,16 @@ export async function callCozeAPI(prompt, onStream = null) {
             saveConversationId(result.conversation_id);
         }
         
-        // 处理流式响应（简化版，后端返回完整内容）
+        // 处理流式响应
         const content = result.content || '';
         if (onStream && content) {
-            // 模拟流式输出
-            for (let i = 0; i < content.length; i += 5) {
-                const chunk = content.slice(i, i + 5);
-                if (onStream) onStream(chunk, false);
-                await new Promise(resolve => setTimeout(resolve, 20));
-            }
-            if (onStream) onStream('', true);
+            await simulateStream(content, onStream);
         }
         
         return content;
         
     } catch (error) {
-        console.error('扣子API调用失败:', error);
+        Logger.error('扣子API调用失败:', error);
         throw error;
     }
 }

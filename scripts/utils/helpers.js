@@ -114,3 +114,73 @@ export function compareDates(date1, date2) {
     return 0;
 }
 
+/**
+ * 模拟流式输出文本
+ * @param {string} content - 完整内容
+ * @param {Function} onStream - 流式回调函数 (chunk, isDone) => void
+ * @param {number} chunkSize - 每次输出的字符数，默认5
+ * @param {number} delay - 每次输出的延迟（毫秒），默认20
+ */
+export async function simulateStream(content, onStream, chunkSize = 5, delay = 20) {
+    if (!onStream || !content) return;
+    
+    for (let i = 0; i < content.length; i += chunkSize) {
+        const chunk = content.slice(i, i + chunkSize);
+        onStream(chunk, false);
+        await new Promise(resolve => setTimeout(resolve, delay));
+    }
+    onStream('', true);
+}
+
+/**
+ * 统一处理API错误响应
+ * @param {Response} response - Fetch响应对象
+ * @param {string} defaultMessage - 默认错误消息
+ * @returns {Promise<Error>} 错误对象
+ */
+export async function handleAPIError(response, defaultMessage = 'API请求失败') {
+    let errorMessage = defaultMessage;
+    
+    try {
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+            const errorData = await response.json();
+            errorMessage = errorData.message || errorData.error || defaultMessage;
+        } else {
+            const text = await response.text();
+            errorMessage = text.substring(0, 100) || defaultMessage;
+        }
+    } catch {
+        errorMessage = `${defaultMessage}: ${response.status}`;
+    }
+    
+    return new Error(errorMessage);
+}
+
+/**
+ * 日志管理器 - 控制调试日志输出
+ */
+export const Logger = {
+    enabled: false, // 生产环境设为false
+    
+    log(...args) {
+        if (this.enabled) {
+            console.log(...args);
+        }
+    },
+    
+    warn(...args) {
+        console.warn(...args);
+    },
+    
+    error(...args) {
+        console.error(...args);
+    },
+    
+    debug(...args) {
+        if (this.enabled) {
+            console.log('[DEBUG]', ...args);
+        }
+    }
+};
+
