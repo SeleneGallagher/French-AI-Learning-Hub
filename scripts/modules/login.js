@@ -135,11 +135,19 @@ async function handleLogin() {
         loginBtn.disabled = true;
         loginBtn.textContent = '登录中...';
         
-        await AuthService.login(username, password);
+        const user = await AuthService.login(username, password);
+        currentUser = user;
         
-        // 登录成功，加载用户数据并跳转
+        // 登录成功，加载用户数据并更新UI
         await loadUserData();
-        window.location.hash = '#news';
+        updateUserStatus();
+        
+        // 移动端返回"我的"页面，桌面端跳转到新闻
+        if (window.innerWidth < 768) {
+            window.location.hash = '#login';
+        } else {
+            window.location.hash = '#news';
+        }
     } catch (error) {
         showError(errorEl, error.message || '登录失败');
     } finally {
