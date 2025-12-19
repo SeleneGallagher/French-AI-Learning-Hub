@@ -1,5 +1,5 @@
 # 配置文件（包含敏感信息）
-config.js
+# config.js - 已改为使用默认值，可以提交
 .env
 .env.local
 
