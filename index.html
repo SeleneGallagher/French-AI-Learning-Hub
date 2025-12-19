@@ -61,7 +61,7 @@
     <div class="flex h-screen overflow-hidden">
         <!-- 左侧导航栏 - 法国深蓝 -->
         <nav class="w-64 text-white flex flex-col shadow-lg" style="background: linear-gradient(180deg, #002654 0%, #001a3d 100%);">
-            <div class="p-6 border-b border-white/10">
+            <div class="p-6 border-b border-white/10 cursor-pointer hover:bg-white/5 transition-colors" onclick="window.location.hash = 'welcome'">
                 <h1 class="text-xl font-bold flex items-center gap-2">
                     <span class="text-2xl">🇫🇷</span>
                     <span>French AI</span>
@@ -94,16 +94,75 @@
                         🤖 AI助手
                     </a>
                 </li>
-                <li>
-                    <a href="#about" class="nav-link block px-6 py-3 hover:bg-white/10 transition-colors border-l-4 border-transparent hover:border-red-500" data-module="about">
-                        ℹ️ 关于
-                    </a>
-                </li>
             </ul>
+            <!-- 底部操作区 -->
+            <div class="mt-auto border-t border-white/10 pt-4 px-6">
+                <div class="flex items-center gap-4 text-sm">
+                    <a href="#login" class="nav-link text-blue-200 hover:text-white transition-colors underline" data-module="login">
+                        登录/注册
+                    </a>
+                    <span class="text-white/30">|</span>
+                    <a href="#about" class="nav-link text-blue-200 hover:text-white transition-colors underline" data-module="about">
+                        关于
+                    </a>
+                </div>
+            </div>
         </nav>
 
         <!-- 右侧主内容区 -->
         <main class="flex-1 overflow-y-auto">
+            <!-- 欢迎页 -->
+            <section id="welcome" class="module p-8">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h1 class="text-5xl font-bold text-gray-800 mb-4">
+                            🇫🇷 欢迎来到 French AI Learning Hub
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            一个功能丰富的法语学习平台
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-12">
+                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-3">📰 实时新闻资讯</h3>
+                            <p class="text-gray-600 mb-4">推送法国主流媒体最新新闻，帮助用户了解法国时事动态</p>
+                            <a href="#news" class="text-blue-600 hover:text-blue-800 font-medium">开始阅读 →</a>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-3">🎬 热门影视推荐</h3>
+                            <p class="text-gray-600 mb-4">推荐热门优质法语电影和剧集，帮助用户提升听力和语感</p>
+                            <a href="#movies" class="text-blue-600 hover:text-blue-800 font-medium">查看推荐 →</a>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-3">📖 法语词典</h3>
+                            <p class="text-gray-600 mb-4">强大的词典查询功能，同时支持背单词和进度管理</p>
+                            <a href="#dictionary" class="text-blue-600 hover:text-blue-800 font-medium">开始查询 →</a>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-3">💬 语用积累</h3>
+                            <p class="text-gray-600 mb-4">根据您输入的场景生成实用的法语表达</p>
+                            <a href="#expressions" class="text-blue-600 hover:text-blue-800 font-medium">开始学习 →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 text-center">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">🤖 AI助手</h3>
+                        <p class="text-gray-600 mb-6">智能对话助手，随时解答你的法语学习问题</p>
+                        <a href="#ai-assistant" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                            开始对话
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 text-center text-gray-500 text-sm">
+                        <p>请先 <a href="#login" class="text-blue-600 hover:text-blue-800 font-medium">登录/注册</a> 以使用完整功能</p>
+                    </div>
+                </div>
+            </section>
+            
             <!-- 实时新闻资讯模块 -->
             <section id="news" class="module hidden p-8">
                 <h2 class="text-3xl font-bold mb-6 text-gray-800">📰 实时新闻资讯</h2>

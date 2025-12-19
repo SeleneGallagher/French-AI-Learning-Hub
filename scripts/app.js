@@ -20,23 +20,15 @@ const initializedModules = new Set();
  * 初始化应用
  */
 async function init() {
-    // 检查登录状态
-    const hash = window.location.hash.slice(1);
-    if (hash !== 'login' && hash !== 'about') {
-        if (!AuthService.isAuthenticated()) {
-            window.location.hash = '#login';
-            return;
-        }
-    }
-    
     // 初始化路由
     initRouter();
 
     // 初始化导航
     initNavigation();
 
-    // 根据URL hash加载对应模块
-    const moduleHash = hash || 'news';
+    // 根据URL hash加载对应模块，默认显示欢迎页
+    const hash = window.location.hash.slice(1);
+    const moduleHash = hash || 'welcome';
     switchModule(moduleHash);
 }
 
@@ -46,7 +38,7 @@ async function init() {
 function initRouter() {
     // 监听hash变化
     window.addEventListener('hashchange', () => {
-        const hash = window.location.hash.slice(1) || 'news';
+        const hash = window.location.hash.slice(1) || 'welcome';
         switchModule(hash);
     });
 }
@@ -55,6 +47,7 @@ function initRouter() {
  * 初始化导航
  */
 function initNavigation() {
+    // 导航链接点击事件
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -64,6 +57,14 @@ function initNavigation() {
             }
         });
     });
+    
+    // 顶部标题区域点击回到主页
+    const header = document.querySelector('nav > div:first-child');
+    if (header) {
+        header.addEventListener('click', () => {
+            window.location.hash = 'welcome';
+        });
+    }
 }
 
 /**
@@ -100,10 +101,10 @@ async function switchModule(moduleName) {
             initializedModules.add(moduleName);
         }
     } else {
-        // 默认显示新闻模块
-        console.warn(`模块 "${moduleName}" 不存在，切换到新闻模块`);
-        if (moduleName !== 'news') {
-            switchModule('news');
+        // 默认显示欢迎页
+        console.warn(`模块 "${moduleName}" 不存在，切换到欢迎页`);
+        if (moduleName !== 'welcome') {
+            switchModule('welcome');
         }
     }
 }
@@ -115,6 +116,9 @@ async function switchModule(moduleName) {
 async function initModule(moduleName) {
     try {
         switch (moduleName) {
+            case 'welcome':
+                // 欢迎页是静态的，不需要初始化
+                break;
             case 'news':
                 await initNews();
                 break;

@@ -107,6 +107,7 @@ INSERT INTO registration_codes (code, unlimited_use) VALUES
 -- 所以这里只需要启用RLS，不需要创建复杂的策略
 
 ALTER TABLE users ENABLE ROW LEVEL SECURITY;
+ALTER TABLE registration_codes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE dict_history ENABLE ROW LEVEL SECURITY;
 ALTER TABLE dict_favorites ENABLE ROW LEVEL SECURITY;
 ALTER TABLE vocab_progress ENABLE ROW LEVEL SECURITY;
