@@ -86,15 +86,21 @@ python -m SimpleHTTPServer 8000
 项目支持使用 [French-Dictionary](https://github.com/hbenbel/French-Dictionary) 提供的完整法语词典数据。
 
 **使用步骤：**
-1. 下载或克隆 French-Dictionary 仓库
+1. 下载或克隆 French-Dictionary 仓库：
+   ```bash
+   git clone https://github.com/hbenbel/French-Dictionary.git
+   ```
 2. 将 `dictionary` 文件夹复制到项目根目录（或放在项目同级目录）
 3. 运行导入工具：
    ```bash
    python scripts/tools/import_french_dict.py
    ```
-4. 生成的 `french_dict.json` 会自动被词典模块加载
+4. 生成的 `french_dict.json`（约180MB）会自动被词典模块加载
 
-**注意：** French-Dictionary 使用 MIT License，使用时请保留原始许可证文件（项目已包含 `LICENSE-French-Dictionary`）。
+**注意：** 
+- French-Dictionary 使用 MIT License，使用时请保留原始许可证文件（项目已包含 `LICENSE-French-Dictionary`）
+- `french_dict.json` 文件较大，已添加到 `.gitignore`，需要在本地生成
+- 导入工具会保留所有原始信息：词性、性别、变位、标签等
 
 #### DeepSeek API（可选）
 - **用途**：新闻关键词生成、语用表达生成
