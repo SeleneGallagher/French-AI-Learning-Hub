@@ -563,6 +563,64 @@
             }
         });
     </script>
+    
+    <!-- 移动端底部导航栏 -->
+    <nav id="mobile-nav" class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+        <div class="flex justify-around items-center h-16">
+            <a href="#welcome" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="welcome">
+                <span class="text-xl mb-1">🏠</span>
+                <span class="text-xs">首页</span>
+            </a>
+            <a href="#news" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="news">
+                <span class="text-xl mb-1">📰</span>
+                <span class="text-xs">新闻</span>
+            </a>
+            <a href="#movies" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="movies">
+                <span class="text-xl mb-1">🎬</span>
+                <span class="text-xs">影视</span>
+            </a>
+            <a href="#dictionary" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="dictionary">
+                <span class="text-xl mb-1">📖</span>
+                <span class="text-xs">词典</span>
+            </a>
+            <a href="#login" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-600 hover:text-blue-600 transition-colors" data-module="login">
+                <span class="text-xl mb-1">🔑</span>
+                <span class="text-xs">我的</span>
+            </a>
+        </div>
+    </nav>
+    
+    <script>
+        // 移动端底部导航栏点击处理
+        document.querySelectorAll('#mobile-nav .mobile-nav-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const module = item.dataset.module;
+                if (module) {
+                    window.location.hash = '#' + module;
+                }
+            });
+        });
+        
+        // 更新移动端导航栏激活状态
+        function updateMobileNav() {
+            const hash = window.location.hash.slice(1) || 'welcome';
+            document.querySelectorAll('#mobile-nav .mobile-nav-item').forEach(item => {
+                if (item.dataset.module === hash) {
+                    item.classList.add('text-blue-600', 'font-semibold');
+                    item.classList.remove('text-gray-600');
+                } else {
+                    item.classList.remove('text-blue-600', 'font-semibold');
+                    item.classList.add('text-gray-600');
+                }
+            });
+        }
+        
+        // 监听hash变化
+        window.addEventListener('hashchange', updateMobileNav);
+        // 初始化时也更新
+        updateMobileNav();
+    </script>
 </body>
 </html>
 
