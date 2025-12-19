@@ -7,7 +7,7 @@ import jwt
 from supabase import create_client
 
 SUPABASE_URL = os.environ.get('SUPABASE_URL')
-SUPABASE_KEY = os.environ.get('SUPABASE_SERVICE_KEY')  # 使用service_role key
+SUPABASE_KEY = os.environ.get('SUPABASE_SECRET_KEY')  # 使用secret key
 JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-change-this')
 
 def get_supabase():
@@ -33,7 +33,12 @@ def json_response(data, status_code=200):
     """返回JSON响应"""
     return {
         'statusCode': status_code,
-        'headers': {'Content-Type': 'application/json'},
+        'headers': {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+        },
         'body': json.dumps(data, ensure_ascii=False)
     }
 

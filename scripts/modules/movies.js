@@ -217,7 +217,7 @@ async function processTVShow(show) {
 // 从本地JSON文件获取电影数据（服务器预更新）
 async function getMoviesFromLocal() {
     try {
-        const response = await fetch('public/data/movies.json');
+        const response = await fetch('/public/data/movies.json');
         if (response.ok) {
             const data = await response.json();
             if (data.movies && data.movies.length > 0) {

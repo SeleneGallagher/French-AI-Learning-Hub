@@ -8,6 +8,10 @@ from api.utils import json_response
 
 def handler(request):
     """代理Coze API调用"""
+    # 处理 CORS 预检请求
+    if request.method == 'OPTIONS':
+        return json_response({}, 200)
+    
     if request.method != 'POST':
         return json_response({'success': False, 'message': 'Method not allowed'}, 405)
     

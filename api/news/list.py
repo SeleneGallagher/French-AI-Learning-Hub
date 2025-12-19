@@ -16,6 +16,10 @@ NEWS_SOURCES = [
 ]
 
 def handler(request):
+    # 处理 CORS 预检请求
+    if request.method == 'OPTIONS':
+        return json_response({}, 200)
+    
     if request.method != 'GET':
         return json_response({'success': False, 'message': 'Method not allowed'}, 405)
     

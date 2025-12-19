@@ -10,6 +10,10 @@ from api.utils import get_supabase, json_response
 JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-change-this')
 
 def handler(request):
+    # 处理 CORS 预检请求
+    if request.method == 'OPTIONS':
+        return json_response({}, 200)
+    
     if request.method != 'POST':
         return json_response({'success': False, 'message': 'Method not allowed'}, 405)
     

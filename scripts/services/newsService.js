@@ -127,7 +127,7 @@ async function fetchRSS(rssUrl, sourceName) {
  */
 async function getNewsFromLocal() {
     try {
-        const response = await fetch('public/data/news.json');
+        const response = await fetch('/public/data/news.json');
         if (response.ok) {
             const data = await response.json();
             if (data.news && data.news.length > 0) {
