@@ -2,47 +2,6 @@
   "version": 2,
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
-  "builds": [
-    {
-      "src": "api/ai/coze.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "api/ai/deepseek.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "api/auth/login.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "api/auth/register.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "api/movies/list.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "api/news/list.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "api/dictionary/history.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "api/config.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "."
-      }
-    }
-  ],
   "routes": [
     {
       "src": "/public/(.*)",
