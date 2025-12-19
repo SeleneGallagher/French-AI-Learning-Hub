@@ -262,6 +262,9 @@ def main():
     print("French-Dictionary 导入工具")
     print("=" * 60)
     print()
+    print("注意: French-Dictionary 使用 MIT License")
+    print("请确保已包含原始许可证文件 (LICENSE-French-Dictionary)")
+    print()
     
     # 检查词典目录（支持两种路径）
     dict_source_dir = BASE_DIR / 'dictionary'
@@ -280,6 +283,11 @@ def main():
             print("2. 下载或克隆仓库")
             print("3. 将 dictionary 文件夹复制到项目根目录")
             print("   或者将整个 French-Dictionary 文件夹放在项目同级目录")
+            print()
+            print("下载方式:")
+            print("  - 方式1: git clone https://github.com/hbenbel/French-Dictionary.git")
+            print("  - 方式2: 访问 https://github.com/hbenbel/French-Dictionary")
+            print("           点击 'Code' -> 'Download ZIP'")
             print()
             return
     

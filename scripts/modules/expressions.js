@@ -110,14 +110,15 @@ async function generateExpression(scenario) {
     try {
         showLoading(loadingEl);
         
-        const prompt = `你是法语学习助手。根据场景生成3-5个实用法语句子。要求：
+        const prompt = `你是法语学习助手。根据场景生成4-6个实用法语句子。要求：
 1. 每句包含：法语原文、逐字直译、中文翻译
 2. 提供文化提示
 3. JSON格式返回：{"expressions":[{"french":"","literal":"","translation":""}],"cultural_tips":""}
+4. 必须生成至少4个表达，最好5-6个
 
 场景：${scenario}
 
-直接返回JSON。`;
+直接返回JSON，确保expressions数组包含至少4个元素。`;
 
         let aiResponse = '';
         try {
