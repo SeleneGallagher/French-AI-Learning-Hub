@@ -445,11 +445,16 @@ button[style*="border: 1px solid var(--gray-300)"][style*="color: var(--gray-700
     
     /* 欢迎页标题 */
     .text-5xl {
-        font-size: 2rem !important;
+        font-size: 1.75rem !important;
     }
     
     .text-xl {
-        font-size: 1.125rem !important;
+        font-size: 1rem !important;
+    }
+    
+    /* 欢迎页顶部间距，避免与菜单按钮重合 */
+    #welcome {
+        padding-top: 4rem !important;
     }
     
     /* 新闻列表在移动端调整 */

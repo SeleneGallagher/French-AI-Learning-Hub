@@ -51,9 +51,10 @@ function initNavigation() {
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const module = e.target.dataset.module || e.target.closest('a').dataset.module;
+            const module = e.target.dataset.module || e.target.closest('a')?.dataset.module;
             if (module) {
-                window.location.hash = module;
+                console.log('导航点击:', module); // 调试日志
+                window.location.hash = '#' + module;
             }
         });
     });
@@ -62,9 +63,23 @@ function initNavigation() {
     const header = document.querySelector('nav > div:first-child');
     if (header) {
         header.addEventListener('click', () => {
-            window.location.hash = 'welcome';
+            window.location.hash = '#welcome';
         });
     }
+    
+    // 欢迎页中的链接也需要处理
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const module = href.slice(1);
+                if (module) {
+                    e.preventDefault();
+                    window.location.hash = '#' + module;
+                }
+            }
+        });
+    });
 }
 
 /**
@@ -72,6 +87,8 @@ function initNavigation() {
  * @param {string} moduleName - 模块名称
  */
 async function switchModule(moduleName) {
+    console.log('切换模块:', moduleName); // 调试日志
+    
     // 隐藏所有模块
     document.querySelectorAll('.module').forEach(m => {
         m.classList.add('hidden');
@@ -97,9 +114,16 @@ async function switchModule(moduleName) {
 
         // 初始化模块（如果尚未初始化）
         if (!initializedModules.has(moduleName)) {
-            await initModule(moduleName);
-            initializedModules.add(moduleName);
+            try {
+                await initModule(moduleName);
+                initializedModules.add(moduleName);
+            } catch (error) {
+                console.error(`模块 ${moduleName} 初始化失败:`, error);
+            }
         }
+        
+        // 滚动到顶部
+        window.scrollTo(0, 0);
     } else {
         // 默认显示欢迎页
         console.warn(`模块 "${moduleName}" 不存在，切换到欢迎页`);
