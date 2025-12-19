@@ -367,14 +367,179 @@ button[style*="border: 1px solid var(--gray-300)"][style*="color: var(--gray-700
     color: var(--primary-700) !important;
 }
 
-/* ==================== 响应式调整 ==================== */
+/* ==================== 响应式设计 - 移动端适配 ==================== */
+
+/* 移动端基础样式 (小于768px) */
 @media (max-width: 768px) {
+    /* 导航栏在移动端全屏显示 */
+    #sidebar {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* 主内容区在移动端全宽 */
+    main {
+        width: 100%;
+    }
+    
+    /* 导航链接在移动端加大点击区域 */
+    .nav-link {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* 模块内容在移动端调整内边距 */
+    .module {
+        padding: 1rem !important;
+    }
+    
+    /* 标题在移动端缩小 */
+    .module h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* 卡片在移动端调整 */
+    .card {
+        padding: 1rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    /* 按钮在移动端加大，便于触摸 */
+    button, .btn-primary, .btn-secondary {
+        min-height: 44px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* 输入框在移动端加大 */
+    input[type="text"],
+    input[type="search"],
+    textarea {
+        font-size: 16px; /* 防止iOS自动缩放 */
+        padding: 0.75rem 1rem;
+        min-height: 44px;
+    }
+    
+    /* 词典搜索输入框 */
     #dict-search-input {
         font-size: 16px;
         padding: 12px 16px 12px 44px;
     }
     
+    /* 词典卡片标题 */
     .word-card h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+    }
+    
+    /* 欢迎页网格在移动端单列 */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    /* 欢迎页卡片 */
+    .bg-white.rounded-lg.shadow-md {
+        padding: 1.5rem !important;
+    }
+    
+    /* 欢迎页标题 */
+    .text-5xl {
+        font-size: 2rem !important;
+    }
+    
+    .text-xl {
+        font-size: 1.125rem !important;
+    }
+    
+    /* 新闻列表在移动端调整 */
+    #news-list > div {
+        padding: 1rem !important;
+    }
+    
+    /* 电影网格在移动端单列 */
+    #movies-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* 底部操作区在移动端调整 */
+    .mt-auto {
+        padding: 1rem !important;
+    }
+    
+    /* 底部链接在移动端调整 */
+    .text-sm {
+        font-size: 0.875rem;
+    }
+}
+
+/* 小屏幕手机 (小于640px) */
+@media (max-width: 640px) {
+    /* 进一步缩小字体和间距 */
+    .module {
+        padding: 0.75rem !important;
+    }
+    
+    .module h2 {
+        font-size: 1.25rem !important;
+    }
+    
+    .text-3xl {
+        font-size: 1.5rem !important;
+    }
+    
+    .text-2xl {
+        font-size: 1.25rem !important;
+    }
+    
+    /* 导航栏在小屏幕更窄 */
+    #sidebar {
+        max-width: 260px;
+    }
+    
+    /* 导航链接文字 */
+    .nav-link {
+        font-size: 0.9375rem;
+        padding: 0.875rem 1.25rem;
+    }
+}
+
+/* 超小屏幕 (小于480px) */
+@media (max-width: 480px) {
+    /* 最小化间距 */
+    .module {
+        padding: 0.5rem !important;
+    }
+    
+    /* 标题进一步缩小 */
+    .module h2 {
+        font-size: 1.125rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    /* 按钮和输入框保持最小触摸尺寸 */
+    button, input, textarea {
+        min-height: 44px;
+    }
+    
+    /* 导航栏标题 */
+    #sidebar h1 {
+        font-size: 1rem !important;
+    }
+    
+    #sidebar p {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* 横屏模式优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+    /* 横屏时导航栏可以更紧凑 */
+    #sidebar {
+        max-width: 240px;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem;
     }
 }

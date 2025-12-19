@@ -58,15 +58,33 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg-gray-50">
+    <!-- 移动端菜单按钮 -->
+    <button id="mobile-menu-btn" class="md:hidden fixed top-4 left-4 z-50 bg-blue-800 text-white p-2 rounded-lg shadow-lg">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+    
+    <!-- 移动端遮罩层 -->
+    <div id="mobile-overlay" class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+    
     <div class="flex h-screen overflow-hidden">
         <!-- 左侧导航栏 - 法国深蓝 -->
-        <nav class="w-64 text-white flex flex-col shadow-lg" style="background: linear-gradient(180deg, #002654 0%, #001a3d 100%);">
-            <div class="p-6 border-b border-white/10 cursor-pointer hover:bg-white/5 transition-colors" onclick="window.location.hash = 'welcome'">
-                <h1 class="text-xl font-bold flex items-center gap-2">
-                    <span class="text-2xl">🇫🇷</span>
-                    <span>French AI</span>
-                </h1>
-                <p class="text-sm text-blue-200 mt-1">法语AI学习中心</p>
+        <nav id="sidebar" class="fixed md:static w-64 text-white flex flex-col shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 h-full" style="background: linear-gradient(180deg, #002654 0%, #001a3d 100%);">
+            <div class="p-4 md:p-6 border-b border-white/10 cursor-pointer hover:bg-white/5 transition-colors flex items-center justify-between" onclick="window.location.hash = 'welcome'">
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold flex items-center gap-2">
+                        <span class="text-xl md:text-2xl">🇫🇷</span>
+                        <span>French AI</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-blue-200 mt-1">法语AI学习中心</p>
+                </div>
+                <!-- 移动端关闭按钮 -->
+                <button id="mobile-close-btn" class="md:hidden text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
             </div>
             <ul class="flex-1 py-4 space-y-1">
                 <li>
@@ -110,7 +128,7 @@
         </nav>
 
         <!-- 右侧主内容区 -->
-        <main class="flex-1 overflow-y-auto">
+        <main class="flex-1 overflow-y-auto md:ml-0 pt-16 md:pt-0">
             <!-- 欢迎页 -->
             <section id="welcome" class="module p-8">
                 <div class="max-w-4xl mx-auto">
@@ -506,6 +524,53 @@
 
     <!-- 脚本加载 -->
     <script type="module" src="scripts/app.js"></script>
+    <script>
+        // 移动端菜单控制
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('mobile-overlay');
+        
+        function openMenu() {
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMenu() {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMenu);
+        }
+        
+        if (mobileCloseBtn) {
+            mobileCloseBtn.addEventListener('click', closeMenu);
+        }
+        
+        if (overlay) {
+            overlay.addEventListener('click', closeMenu);
+        }
+        
+        // 点击导航链接后关闭菜单
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    closeMenu();
+                }
+            });
+        });
+        
+        // 窗口大小改变时，如果大于768px自动关闭菜单
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                closeMenu();
+            }
+        });
+    </script>
 </body>
 </html>
 
