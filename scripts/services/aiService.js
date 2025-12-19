@@ -1,8 +1,7 @@
 /**
  * AI服务 - 统一接口（仅支持扣子和DeepSeek）
+ * 现在通过后端API代理，不直接使用配置
  */
-
-import { config } from '../../config.js';
 
 /**
  * 调用AI生成内容（流式）
@@ -10,31 +9,31 @@ import { config } from '../../config.js';
 export async function generateWithAIStream(prompt, onChunk, module = 'ai-assistant') {
     // AI助手模块使用扣子API
     if (module === 'ai-assistant') {
-        const cozeToken = config.coze?.pat_token || config.coze?.access_token;
-        if (config.coze?.bot_id && cozeToken) {
+        try {
             const { callCozeAPI } = await import('./api.js');
             return await callCozeAPI(prompt, onChunk);
+        } catch (error) {
+            throw new Error('扣子API未配置或调用失败: ' + error.message);
         }
-        throw new Error('扣子API未配置');
     }
     
     // 其他模块使用DeepSeek
-    if (config.ai?.deepseek_api_key && config.ai.deepseek_api_key !== 'YOUR_DEEPSEEK_API_KEY') {
+    try {
         const { callDeepSeek } = await import('./deepseekService.js');
         return await callDeepSeek(prompt, onChunk);
+    } catch (error) {
+        throw new Error('DeepSeek API未配置或调用失败: ' + error.message);
     }
-    
-    throw new Error('未配置可用的AI服务（需要DeepSeek API Key）');
 }
 
 /**
  * 调用AI（非流式）
  */
 export async function generateWithAI(prompt) {
-    if (config.ai?.deepseek_api_key && config.ai.deepseek_api_key !== 'YOUR_DEEPSEEK_API_KEY') {
+    try {
         const { generateWithDeepSeek } = await import('./deepseekService.js');
         return await generateWithDeepSeek(prompt);
+    } catch (error) {
+        throw new Error('DeepSeek API未配置或调用失败: ' + error.message);
     }
-    
-    throw new Error('未配置可用的AI服务（需要DeepSeek API Key）');
 }

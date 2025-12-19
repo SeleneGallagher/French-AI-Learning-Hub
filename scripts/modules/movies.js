@@ -3,8 +3,8 @@
  */
 
 import { showError, hideLoading, showLoading } from '../utils/helpers.js';
-import { config } from '../../config.js';
 import { translateText } from '../services/translationService.js';
+import { APIService } from '../services/apiService.js';
 
 const MIN_RATING = 6.5;
 const STORAGE_KEY = 'movie_watchlist';
@@ -63,15 +63,11 @@ function saveCache(data) {
     localStorage.setItem(CACHE_KEY, JSON.stringify({ timestamp: Date.now(), data }));
 }
 
-// TMDB API调用
+// TMDB API调用 - 通过后端API（movies/list.py已经处理了TMDB调用）
+// 不再需要直接调用TMDB API
 async function fetchFromTMDB(endpoint) {
-    const apiKey = config.tmdb_api_key;
-    if (!apiKey) return null;
-    
-    try {
-        const response = await fetch(`https://api.themoviedb.org/3${endpoint}${endpoint.includes('?') ? '&' : '?'}api_key=${apiKey}&language=fr-FR`);
-        if (response.ok) return await response.json();
-    } catch {}
+    // 所有TMDB调用都通过后端API /api/movies/list
+    // 这里保留函数签名以兼容现有代码，但实际不再使用
     return null;
 }
 
@@ -289,11 +285,36 @@ export async function initMovies() {
     }
 }
 
-// 加载内容
+// 加载内容 - 通过后端API
 async function loadContent() {
     const shownIds = getShownItems();
     
-    // 获取各类型内容
+    try {
+        // 通过后端API获取电影数据
+        const response = await APIService.getMovies();
+        if (response.success && response.data) {
+            allMovies = response.data.map(m => ({
+                id: m.id,
+                title: m.title || m.name,
+                originalTitle: m.original_title || m.original_name,
+                year: m.release_date ? new Date(m.release_date).getFullYear() : (m.first_air_date ? new Date(m.first_air_date).getFullYear() : ''),
+                rating: m.vote_average || 0,
+                poster: m.poster_path || '',
+                plot: m.overview || '',
+                fullPlot: m.overview || '',
+                type: m.media_type || 'movie',
+                translatedPlot: ''
+            }));
+            renderItems(allMovies);
+            translateAllPlots();
+            saveCache(allMovies);
+            return;
+        }
+    } catch (error) {
+        console.warn('从后端API获取电影数据失败，尝试其他方式:', error);
+    }
+    
+    // 如果后端API失败，尝试旧的获取方式（作为fallback）
     const [recentMovies, classicMovies, otherMovies, recentTV, classicTV, otherTV] = await Promise.all([
         fetchMovies(true),
         fetchMovies(false),
