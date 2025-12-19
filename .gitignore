@@ -38,4 +38,6 @@ env/
 # 词典导入临时文件
 dictionary/
 *.csv
+# 生成的词典JSON文件（太大，需要本地生成）
+public/data/dicts/french_dict.json
 
