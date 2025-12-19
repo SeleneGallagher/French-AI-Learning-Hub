@@ -416,6 +416,33 @@ button[style*="border: 1px solid var(--gray-300)"][style*="color: var(--gray-700
         height: 4.5rem;
     }
     
+    /* "我的"页面样式 */
+    .my-menu-item {
+        transition: background-color 0.2s;
+    }
+    
+    .my-menu-item:active {
+        background-color: #f3f4f6;
+    }
+    
+    /* 隐藏桌面端登录表单 */
+    #login .hidden.md\\:block {
+        display: none;
+    }
+    
+    /* 显示移动端"我的"页面 */
+    #my-page {
+        display: block;
+    }
+}
+
+/* 桌面端样式 */
+@media (min-width: 768px) {
+    /* 隐藏移动端"我的"页面 */
+    #my-page {
+        display: none;
+    }
+    
     /* 导航链接在移动端加大点击区域 */
     .nav-link {
         padding: 1rem 1.5rem;

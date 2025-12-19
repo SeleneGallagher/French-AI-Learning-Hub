@@ -408,6 +408,19 @@ function renderWordCard(wordObj, isMain = false) {
     const isFavorite = favorites.some(f => f.word === wordObj.word);
     const posText = wordObj.pos?.map(p => `<span class="px-2 py-0.5 text-xs rounded" style="background-color: var(--primary-100); color: var(--primary-700);">${p.full || p.abbr}</span>`).join(' ') || '';
     
+    // 性别标签（针对名词）
+    const genderBadge = wordObj.gender ? `<span class="px-2 py-0.5 text-xs rounded font-semibold" style="background-color: var(--accent-100); color: var(--accent-700);">
+        ${wordObj.gender === 'm' ? '♂ 阳性' : wordObj.gender === 'f' ? '♀ 阴性' : '♂/♀ 双性'}
+    </span>` : '';
+    
+    // 变位信息（针对动词）
+    const conjugationInfo = wordObj.conjugation ? `
+        <div class="mt-4 p-3 rounded" style="background-color: var(--gray-50); border-left: 3px solid var(--primary-500);">
+            <div class="text-sm font-semibold mb-2" style="color: var(--gray-700);">变位类型</div>
+            <div class="text-sm" style="color: var(--gray-600);">${wordObj.conjugation}</div>
+        </div>
+    ` : '';
+    
     if (isMain) {
         // 主卡片 - 详细展示（使用新配色系统）
         return `
@@ -415,7 +428,7 @@ function renderWordCard(wordObj, isMain = false) {
                 <!-- 头部 - 深蓝渐变 -->
                 <div class="px-6 py-4 text-white" style="background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-700) 100%);">
                     <div class="flex items-start justify-between">
-                        <div>
+                        <div class="flex-1">
                             <h2 class="text-2xl font-bold mb-1">${wordObj.word}</h2>
                             ${wordObj.phonetic ? `<div style="color: var(--primary-200);">/${wordObj.phonetic}/</div>` : ''}
                         </div>
@@ -425,12 +438,16 @@ function renderWordCard(wordObj, isMain = false) {
                             </svg>
                         </button>
                     </div>
-                    ${posText ? `<div class="flex flex-wrap gap-2 mt-2">${posText}</div>` : ''}
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        ${posText}
+                        ${genderBadge}
+                    </div>
                 </div>
                 
                 <!-- 释义 -->
                 <div class="p-6">
                     ${renderDefinitions(wordObj.definitions)}
+                    ${conjugationInfo}
                 </div>
             </div>
         `;
