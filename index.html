@@ -71,20 +71,12 @@
     <div class="flex h-screen overflow-hidden">
         <!-- 左侧导航栏 - 法国深蓝 -->
         <nav id="sidebar" class="fixed md:static w-64 text-white flex flex-col shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 h-full" style="background: linear-gradient(180deg, #002654 0%, #001a3d 100%);">
-            <div class="p-4 md:p-6 border-b border-white/10 cursor-pointer hover:bg-white/5 transition-colors flex items-center justify-between" onclick="window.location.hash = 'welcome'">
-                <div>
-                    <h1 class="text-lg md:text-xl font-bold flex items-center gap-2">
-                        <span class="text-xl md:text-2xl">🇫🇷</span>
-                        <span>French AI</span>
-                    </h1>
-                    <p class="text-xs md:text-sm text-blue-200 mt-1">法语AI学习中心</p>
-                </div>
-                <!-- 移动端关闭按钮 -->
-                <button id="mobile-close-btn" class="md:hidden text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
+            <div class="p-6 border-b border-white/10 cursor-pointer hover:bg-white/5 transition-colors" onclick="window.location.hash = 'welcome'">
+                <h1 class="text-xl font-bold flex items-center gap-2">
+                    <span class="text-2xl">🇫🇷</span>
+                    <span>French AI</span>
+                </h1>
+                <p class="text-sm text-blue-200 mt-1">法语AI学习中心</p>
             </div>
             <ul class="flex-1 py-4 space-y-1">
                 <li>
@@ -128,7 +120,7 @@
         </nav>
 
         <!-- 右侧主内容区 -->
-        <main class="flex-1 overflow-y-auto md:ml-0 pt-16 md:pt-0">
+        <main class="flex-1 overflow-y-auto pb-20 md:pb-0">
             <!-- 欢迎页 -->
             <section id="welcome" class="module p-4 md:p-8">
                 <div class="max-w-4xl mx-auto">

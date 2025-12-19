@@ -138,37 +138,54 @@ async function switchModule(moduleName) {
  * @param {string} moduleName - 模块名称
  */
 async function initModule(moduleName) {
+    console.log('初始化模块:', moduleName); // 调试日志
     try {
         switch (moduleName) {
             case 'welcome':
                 // 欢迎页是静态的，不需要初始化
+                console.log('欢迎页无需初始化');
                 break;
             case 'news':
+                console.log('开始初始化新闻模块...');
                 await initNews();
+                console.log('新闻模块初始化完成');
                 break;
             case 'movies':
+                console.log('开始初始化影视模块...');
                 await initMovies();
+                console.log('影视模块初始化完成');
                 break;
             case 'dictionary':
+                console.log('开始初始化词典模块...');
                 await initDictionary();
+                console.log('词典模块初始化完成');
                 break;
             case 'expressions':
+                console.log('开始初始化语用模块...');
                 await initExpressions();
+                console.log('语用模块初始化完成');
                 break;
             case 'ai-assistant':
+                console.log('开始初始化AI助手模块...');
                 initAIAssistant();
+                console.log('AI助手模块初始化完成');
                 break;
             case 'login':
+                console.log('开始初始化登录模块...');
                 initLogin();
+                console.log('登录模块初始化完成');
                 break;
             case 'about':
+                console.log('开始初始化关于模块...');
                 initAbout();
+                console.log('关于模块初始化完成');
                 break;
             default:
                 console.warn(`未知模块: ${moduleName}`);
         }
     } catch (error) {
         console.error(`初始化模块 ${moduleName} 失败:`, error);
+        console.error('错误详情:', error.stack);
     }
 }
 

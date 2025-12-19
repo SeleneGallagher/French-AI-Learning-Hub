@@ -369,17 +369,23 @@ button[style*="border: 1px solid var(--gray-300)"][style*="color: var(--gray-700
 
 /* ==================== 响应式设计 - 移动端适配 ==================== */
 
+/* 移动端底部导航栏样式 */
+#mobile-nav {
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#mobile-nav .mobile-nav-item.active,
+#mobile-nav .mobile-nav-item.text-blue-600 {
+    color: #0054a0;
+    font-weight: 600;
+}
+
 /* 移动端基础样式 (小于768px) */
 @media (max-width: 768px) {
-    /* 导航栏在移动端全屏显示 */
-    #sidebar {
-        width: 100%;
-        max-width: 280px;
-    }
-    
     /* 主内容区在移动端全宽 */
     main {
         width: 100%;
+        padding-bottom: 5rem; /* 为底部导航栏留出空间 */
     }
     
     /* 导航链接在移动端加大点击区域 */
