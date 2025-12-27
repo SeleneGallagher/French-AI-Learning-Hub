@@ -10,15 +10,19 @@ TMDB_API_KEY = os.environ.get('TMDB_API_KEY', '')
 
 def handler(request):
     # 获取请求方法（兼容不同的 request 对象格式）
-    method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
-    method = method.upper()
+    # Vercel Python runtime 使用 request['httpMethod'] 或 request.get('httpMethod')
+    if isinstance(request, dict):
+        method = request.get('httpMethod', 'GET')
+    else:
+        method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
+    method = method.upper() if method else 'GET'
     
     # 处理 CORS 预检请求
     if method == 'OPTIONS':
         return json_response({}, 200)
     
     if method != 'GET':
-        return json_response({'success': False, 'message': 'Method not allowed'}, 405)
+        return json_response({'success': False, 'message': f'Method not allowed. Got: {method}'}, 405)
     
     if not TMDB_API_KEY:
         return json_response({'success': False, 'message': 'TMDB API Key未配置'}, 500)
