@@ -38,38 +38,6 @@
   ],
   "routes": [
     {
-      "src": "/api/ai/coze",
-      "dest": "/api/ai/coze.py"
-    },
-    {
-      "src": "/api/ai/deepseek",
-      "dest": "/api/ai/deepseek.py"
-    },
-    {
-      "src": "/api/auth/login",
-      "dest": "/api/auth/login.py"
-    },
-    {
-      "src": "/api/auth/register",
-      "dest": "/api/auth/register.py"
-    },
-    {
-      "src": "/api/movies/list",
-      "dest": "/api/movies/list.py"
-    },
-    {
-      "src": "/api/news/list",
-      "dest": "/api/news/list.py"
-    },
-    {
-      "src": "/api/dictionary/history",
-      "dest": "/api/dictionary/history.py"
-    },
-    {
-      "src": "/api/config",
-      "dest": "/api/config.py"
-    },
-    {
       "src": "/public/(.*)",
       "dest": "/public/$1"
     },
