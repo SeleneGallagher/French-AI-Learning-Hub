@@ -108,9 +108,58 @@ git commit -m "Fix Vercel deployment issues"  # ✅ 成功
 
 ---
 
+## Vercel Python Serverless Functions 路由
+
+### 使用 builds 配置时的路由规则
+- 当使用 `builds` 配置时，Vercel 会自动为每个 Python 文件创建路由
+- 文件路径 `api/movies/list.py` 会自动映射到 `/api/movies/list`
+- **不需要**自定义 API 路由，让 Vercel 自动处理
+- 自定义路由可能会干扰自动路由，导致 404 错误
+
+### 正确的配置方式
+```json
+{
+  "builds": [
+    {
+      "src": "api/movies/list.py",
+      "use": "@vercel/python"
+    }
+    // ... 明确列出所有 API 文件
+  ],
+  "routes": [
+    {
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|json|...))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(?!api|public).*",
+      "dest": "/index.html"
+    }
+  ]
+}
+```
+
+### Request 对象格式
+Vercel Python runtime 的 request 对象可能是 dict 格式：
+```python
+# 兼容不同的 request 对象格式
+if isinstance(request, dict):
+    method = request.get('httpMethod', 'GET')
+else:
+    method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
+method = method.upper() if method else 'GET'
+```
+
+---
+
 ## 更新日志
 
 - 2024-12-19: 添加 Git 提交信息必须使用英文的注意事项
 - 2024-12-19: 记录 Vercel 部署相关注意事项
 - 2024-12-19: 添加 Vercel Serverless Functions 限制和解决方案
+- 2024-12-19: 添加 Vercel Python Serverless Functions 路由规则和 request 对象格式说明
 
