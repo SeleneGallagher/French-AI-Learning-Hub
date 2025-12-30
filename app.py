@@ -12,6 +12,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__, static_folder='.', static_url_path='')
+
+# 添加 public 目录到静态文件路径
+import os
+from flask import send_from_directory
+
+@app.route('/public/<path:filename>')
+def public_files(filename):
+    """提供 public 目录下的静态文件"""
+    return send_from_directory('public', filename)
 CORS(app)  # 允许跨域请求
 
 # 导入API处理函数
@@ -109,23 +118,26 @@ def config():
         return '', 200
     return adapt_handler(config_handler)()
 
-# 静态文件路由（用于开发环境，生产环境建议使用Nginx）
+# 静态文件路由
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve_static(path):
-    """提供静态文件服务（仅用于开发，生产环境使用Nginx）"""
+    """提供静态文件服务"""
     if not path:
         return app.send_static_file('index.html')
     # 排除API路由
     if path.startswith('api/'):
         return jsonify({'error': 'Not found'}), 404
     try:
+        # 处理 public/ 路径（去掉 public/ 前缀）
+        if path.startswith('public/'):
+            path = path[7:]  # 移除 'public/' 前缀
         return app.send_static_file(path)
-    except:
+    except Exception as e:
         # SPA路由回退到index.html
         if '.' not in path.split('/')[-1]:  # 没有扩展名，可能是前端路由
             return app.send_static_file('index.html')
-        return jsonify({'error': 'Not found'}), 404
+        return jsonify({'error': 'Not found', 'path': path, 'message': str(e)}), 404
 
 @app.route('/health', methods=['GET'])
 def health():
