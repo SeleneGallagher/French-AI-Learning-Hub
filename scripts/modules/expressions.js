@@ -224,23 +224,23 @@ function createExpressionCard(expr, isFavView) {
     
     card.innerHTML = `
         <div class="flex items-start justify-between mb-3">
-            <h3 class="text-xl font-bold text-gray-800">${expr.scenario || '未命名场景'}</h3>
+            <h3 class="text-xl font-bold" style="color: var(--gray-800);">${expr.scenario || '未命名场景'}</h3>
             <div class="flex items-center gap-2">
-                <span class="text-xs text-gray-500">${expr.createdAt ? new Date(expr.createdAt).toLocaleString('zh-CN') : ''}</span>
-                ${!isFavView ? `<button class="favorite-btn text-yellow-400 hover:text-yellow-600" data-id="${expr.id}">${isFav ? '⭐' : '☆'}</button>` : ''}
-                <button class="delete-btn text-red-400 hover:text-red-600" data-id="${expr.id}" data-fav="${isFavView}">🗑️</button>
+                <span class="text-xs" style="color: var(--gray-500);">${expr.createdAt ? new Date(expr.createdAt).toLocaleString('zh-CN') : ''}</span>
+                ${!isFavView ? `<button class="favorite-btn" style="color: var(--accent-600);" data-id="${expr.id}">${isFav ? '⭐' : '☆'}</button>` : ''}
+                <button class="delete-btn" style="color: var(--error);" data-id="${expr.id}" data-fav="${isFavView}">🗑️</button>
             </div>
         </div>
         <div class="space-y-3 mb-4">
             ${(expr.expressions || []).map(exp => `
-                <div class="border-l-4 border-blue-500 pl-4 py-2">
-                    <p class="text-lg text-gray-800 font-medium mb-1">${exp.french || ''}</p>
-                    ${exp.literal ? `<p class="text-sm text-gray-600 mb-1 italic">直译：${exp.literal}</p>` : ''}
-                    <p class="text-gray-700">${exp.translation || ''}</p>
+                <div class="pl-4 py-2" style="border-left: 4px solid var(--primary-700);">
+                    <p class="text-lg font-medium mb-1" style="color: var(--gray-800);">${exp.french || ''}</p>
+                    ${exp.literal ? `<p class="text-sm mb-1 italic" style="color: var(--gray-600);">直译：${exp.literal}</p>` : ''}
+                    <p style="color: var(--gray-700);">${exp.translation || ''}</p>
                 </div>
             `).join('')}
         </div>
-        ${expr.cultural_tips ? `<div class="bg-yellow-50 border border-yellow-200 rounded p-3"><p class="text-sm text-yellow-800"><strong>💡</strong> ${expr.cultural_tips}</p></div>` : ''}
+        ${expr.cultural_tips ? `<div class="rounded p-3" style="background-color: var(--accent-50); border: 1px solid var(--accent-200);"><p class="text-sm" style="color: var(--accent-800);"><strong>💡</strong> ${expr.cultural_tips}</p></div>` : ''}
     `;
     
     // 绑定收藏按钮
