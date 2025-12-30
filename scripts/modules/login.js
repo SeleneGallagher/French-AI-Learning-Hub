@@ -27,7 +27,9 @@ function initMyPage() {
     // 显示登录/注册页面
     function showAuthPage(isLogin = true) {
         if (authPage && myPage) {
+            // 隐藏"我的"页面的所有内容（用户信息、功能列表等）
             myPage.classList.add('hidden');
+            // 显示纯登录/注册表单页面
             authPage.classList.remove('hidden');
             // 更新移动端标题栏
             const mobileHeader = document.getElementById('mobile-header');
