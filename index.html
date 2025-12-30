@@ -181,7 +181,7 @@
             
             <!-- 实时新闻资讯模块 -->
             <section id="news" class="module hidden p-8">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">📰 实时新闻资讯</h2>
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 md:block hidden">📰 实时新闻资讯</h2>
                 <div id="news-loading" class="text-center py-8">
                     <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                     <p class="mt-2 text-gray-600">正在加载新闻...</p>
@@ -192,7 +192,7 @@
 
             <!-- 热门影视推荐模块 -->
             <section id="movies" class="module hidden p-8">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">🎬 热门影视推荐</h2>
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 md:block hidden">🎬 热门影视推荐</h2>
                 <div id="movies-loading" class="text-center py-8">
                     <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                     <p class="mt-2 text-gray-600">正在加载影视数据...</p>
@@ -215,7 +215,7 @@
 
             <!-- 法语词典模块 -->
             <section id="dictionary" class="module hidden p-8">
-                <h2 class="text-3xl font-bold mb-6" style="color: var(--gray-800);">📖 法语词典</h2>
+                <h2 class="text-3xl font-bold mb-6 md:block hidden" style="color: var(--gray-800);">📖 法语词典</h2>
                 
                 <!-- 搜索栏 -->
                 <div class="mb-6 card p-6">
@@ -370,7 +370,7 @@
 
             <!-- 语用积累模块 -->
             <section id="expressions" class="module hidden p-8">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">💬 语用积累</h2>
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 md:block hidden">💬 语用积累</h2>
                 <div class="mb-6 bg-white p-6 rounded-lg shadow">
                     <div class="flex gap-4">
                         <input type="text" id="expression-input" placeholder="输入想学习的场景，如：在咖啡馆礼貌地续杯" 
@@ -404,7 +404,7 @@
             <!-- AI助手模块 -->
             <section id="ai-assistant" class="module hidden p-8 flex flex-col h-full">
                 <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-3xl font-bold text-gray-800">🤖 AI助手</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 md:block hidden">🤖 AI助手</h2>
                     <button id="chat-clear-btn" class="text-sm text-gray-600 hover:text-gray-800 px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                         清除对话
                     </button>
@@ -461,46 +461,6 @@
                     <!-- 功能列表 -->
                     <div class="space-y-2">
                         <div class="bg-white rounded-lg shadow-sm">
-                            <a href="#settings" class="my-menu-item flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                        </svg>
-                                    </div>
-                                    <span class="font-medium text-gray-800">设置</span>
-                                </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                            <a href="#about" class="my-menu-item flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                        </svg>
-                                    </div>
-                                    <span class="font-medium text-gray-800">关于我们</span>
-                                </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                            <a href="#contact" class="my-menu-item flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                        </svg>
-                                    </div>
-                                    <span class="font-medium text-gray-800">联系我们</span>
-                                </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
                             <a href="#help" class="my-menu-item flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
@@ -514,14 +474,27 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
                             </a>
-                            <a href="#feedback" class="my-menu-item flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0">
+                            <button id="my-contact-btn" class="my-menu-item w-full flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0 text-left">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
                                         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                         </svg>
                                     </div>
-                                    <span class="font-medium text-gray-800">反馈与建议</span>
+                                    <span class="font-medium text-gray-800">联系我们</span>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                            <a href="#about" class="my-menu-item flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium text-gray-800">关于我们</span>
                                 </div>
                                 <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -696,11 +669,7 @@
     <!-- 移动端底部导航栏 -->
     <nav id="mobile-nav" class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 shadow-2xl z-50 safe-area-inset-bottom">
         <div class="flex justify-around items-center h-18 px-2 pb-2">
-            <a href="#welcome" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="welcome">
-                <span class="text-2xl mb-1">🏠</span>
-                <span class="text-xs font-medium">首页</span>
-            </a>
-            <a href="#news" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="news">
+            <a href="#news" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg relative" data-module="news">
                 <span class="text-2xl mb-1">📰</span>
                 <span class="text-xs font-medium">新闻</span>
             </a>
@@ -743,12 +712,17 @@
         function updateMobileNav() {
             const hash = window.location.hash.slice(1) || 'welcome';
             document.querySelectorAll('#mobile-nav .mobile-nav-item').forEach(item => {
+                const indicator = item.querySelector('.mobile-nav-indicator');
                 if (item.dataset.module === hash) {
-                    item.classList.add('text-blue-600', 'font-semibold', 'bg-blue-50');
+                    item.classList.add('text-blue-600', 'font-semibold');
                     item.classList.remove('text-gray-500');
+                    if (indicator) indicator.classList.add('opacity-100');
+                    if (indicator) indicator.classList.remove('opacity-0');
                 } else {
-                    item.classList.remove('text-blue-600', 'font-semibold', 'bg-blue-50');
+                    item.classList.remove('text-blue-600', 'font-semibold');
                     item.classList.add('text-gray-500');
+                    if (indicator) indicator.classList.remove('opacity-100');
+                    if (indicator) indicator.classList.add('opacity-0');
                 }
             });
         }

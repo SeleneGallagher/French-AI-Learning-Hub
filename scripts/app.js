@@ -148,21 +148,22 @@ function updateMobileHeader(moduleName) {
     if (!mobileHeader || !mobileHeaderTitle) return;
     
     const moduleTitles = {
-        'welcome': '首页',
-        'news': '实时新闻资讯',
-        'movies': '热门影视推荐',
-        'dictionary': '法语词典',
-        'expressions': '语用积累',
-        'ai-assistant': 'AI助手',
-        'login': '我的',
-        'about': '关于'
+        'welcome': { text: '首页', emoji: '🏠' },
+        'news': { text: '实时新闻资讯', emoji: '📰' },
+        'movies': { text: '热门影视推荐', emoji: '🎬' },
+        'dictionary': { text: '法语词典', emoji: '📖' },
+        'expressions': { text: '语用积累', emoji: '💬' },
+        'ai-assistant': { text: 'AI助手', emoji: '🤖' },
+        'login': { text: '我的', emoji: '👤' },
+        'about': { text: '关于', emoji: 'ℹ️' }
     };
     
     if (moduleName === 'welcome') {
         mobileHeader.classList.add('hidden');
     } else {
         mobileHeader.classList.remove('hidden');
-        mobileHeaderTitle.textContent = moduleTitles[moduleName] || moduleName;
+        const moduleInfo = moduleTitles[moduleName] || { text: moduleName, emoji: '' };
+        mobileHeaderTitle.innerHTML = `<span>${moduleInfo.emoji}</span><span>${moduleInfo.text}</span>`;
     }
     
     const mobileHomeBtn = document.getElementById('mobile-home-btn');

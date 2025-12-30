@@ -79,6 +79,16 @@ def adapt_handler(handler_func):
                 return response, 200
             else:
                 return result
+        except json.JSONDecodeError as e:
+            error_response = {
+                'success': False,
+                'message': f'JSON解析错误: {str(e)}',
+                'type': 'json_error'
+            }
+            response = jsonify(error_response)
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Content-Type'] = 'application/json'
+            return response, 400
         except Exception as e:
             import traceback
             error_msg = str(e)
@@ -93,6 +103,8 @@ def adapt_handler(handler_func):
             response = jsonify(error_response)
             response.headers['Access-Control-Allow-Origin'] = '*'
             response.headers['Content-Type'] = 'application/json'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
             return response, 500
     wrapper.__name__ = handler_func.__name__
     return wrapper

@@ -41,7 +41,16 @@ def handler(request):
                 data = json.loads(request.body) if request.body else {}
         else:
             # Flask格式或其他
-            data = request.get_json() if hasattr(request, 'get_json') else {}
+            try:
+                data = request.get_json() if hasattr(request, 'get_json') else {}
+                if not data:
+                    # 尝试从form获取
+                    if hasattr(request, 'form'):
+                        data = dict(request.form)
+                    elif hasattr(request, 'json'):
+                        data = request.json if request.json else {}
+            except:
+                data = {}
         
         prompt = data.get('prompt', '')
         model = data.get('model', 'deepseek-chat')

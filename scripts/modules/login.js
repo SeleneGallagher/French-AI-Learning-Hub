@@ -164,6 +164,15 @@ function initMyPage() {
         logoutBtn.addEventListener('click', handleLogout);
     }
     
+    // 联系我们按钮（移动端弹窗显示邮箱）
+    const contactBtn = document.getElementById('my-contact-btn');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('邮箱：202300210001@sdu.edu.cn');
+        });
+    }
+    
     // 菜单项点击（后续完善）
     document.querySelectorAll('.my-menu-item').forEach(item => {
         item.addEventListener('click', (e) => {
@@ -173,6 +182,9 @@ function initMyPage() {
                 const target = href.slice(1);
                 if (target === 'about') {
                     window.location.hash = '#about';
+                } else if (target === 'help') {
+                    // 帮助中心功能后续完善
+                    console.log('帮助中心功能开发中');
                 } else {
                     // 其他功能后续完善
                     console.log('功能开发中:', target);

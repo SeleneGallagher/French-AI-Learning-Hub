@@ -510,7 +510,7 @@ function renderCard(item, container, isWatchlist) {
     const typeBadgeColor = item.type === 'tv' ? 'bg-purple-500' : 'bg-blue-500';
     
     card.innerHTML = `
-        <div class="relative flex-shrink-0 w-full md:w-[140px] h-48 md:h-[200px]">
+        <div class="relative flex-shrink-0 w-full md:w-[140px] h-56 md:h-[200px]">
             ${item.poster 
                 ? `<img src="${item.poster}" alt="${item.title}" class="w-full h-full object-cover">`
                 : `<div class="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold">${item.title.substring(0, 2)}</div>`
