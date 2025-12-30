@@ -117,6 +117,20 @@
 
         <!-- 右侧主内容区 -->
         <main class="flex-1 overflow-y-auto pb-20 md:pb-0">
+            <!-- 移动端顶部标题栏（仅在非首页时显示） -->
+            <div id="mobile-header" class="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-sm z-40 hidden">
+                <div class="flex items-center justify-between px-4 py-3 h-14">
+                    <button id="mobile-back-btn" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                        <span class="font-medium">返回首页</span>
+                    </button>
+                    <h2 id="mobile-header-title" class="text-lg font-semibold text-gray-800 flex-1 text-center"></h2>
+                    <div class="w-20"></div> <!-- 占位，保持标题居中 -->
+                </div>
+            </div>
+            <div class="md:hidden h-14"></div> <!-- 为固定头部留出空间 -->
             <!-- 欢迎页 -->
             <section id="welcome" class="module p-4 md:p-8">
                 <div class="max-w-4xl mx-auto">
@@ -188,7 +202,19 @@
                     <p class="mt-2 text-gray-600">正在加载影视数据...</p>
                 </div>
                 <div id="movies-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"></div>
-                <div id="movies-grid" class="grid gap-4" style="grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));"></div>
+                <div id="movies-grid" class="grid gap-4" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));"></div>
+                <style>
+                    @media (min-width: 1024px) {
+                        #movies-grid {
+                            grid-template-columns: repeat(3, 1fr) !important;
+                        }
+                    }
+                    @media (max-width: 768px) {
+                        #movies-grid {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
             </section>
 
             <!-- 法语词典模块 -->
@@ -423,16 +449,71 @@
                         <div id="my-user-not-logged-in">
                             <div class="text-center py-4">
                                 <div class="text-4xl mb-3">👤</div>
-                                <div class="text-lg font-semibold mb-2">未登录</div>
-                                <button id="my-login-btn" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                                    登录/注册
-                                </button>
+                                <div class="text-lg font-semibold mb-3">未登录</div>
+                                <div class="flex gap-3 justify-center">
+                                    <button id="my-login-btn" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors border border-blue-600">
+                                        登录
+                                    </button>
+                                    <button id="my-register-btn" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                        注册
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 移动端登录/注册表单（默认隐藏） -->
-                    <div id="my-auth-forms" class="hidden mt-4 space-y-4">
+                    <!-- 移动端登录/注册侧边栏（从右侧滑入） -->
+                    <div id="my-auth-sidebar" class="fixed top-0 right-0 h-full w-full max-w-sm bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+                        <div class="flex flex-col h-full">
+                            <!-- 头部：返回按钮和标题 -->
+                            <div class="flex items-center justify-between px-4 py-4 border-b border-gray-200">
+                                <button id="my-auth-close-btn" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                                <h3 id="my-auth-title" class="text-lg font-semibold text-gray-800">登录</h3>
+                                <div class="w-10"></div> <!-- 占位，保持标题居中 -->
+                            </div>
+                            
+                            <!-- 内容区 -->
+                            <div class="flex-1 overflow-y-auto p-4">
+                                <!-- 登录表单 -->
+                                <div id="my-login-form" class="space-y-4">
+                                    <div id="my-login-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-3 py-2 rounded text-sm"></div>
+                                    <input type="text" id="my-login-username" placeholder="用户名" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                                    <input type="password" id="my-login-password" placeholder="密码" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                                    <button id="my-login-submit-btn" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                                        登录
+                                    </button>
+                                    <button id="my-show-register-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm text-center py-2">
+                                        没有账号？注册
+                                    </button>
+                                </div>
+                                
+                                <!-- 注册表单 -->
+                                <div id="my-register-form" class="hidden space-y-4">
+                                    <div id="my-register-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-3 py-2 rounded text-sm"></div>
+                                    <input type="text" id="my-register-username" placeholder="用户名" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                                    <input type="password" id="my-register-password" placeholder="密码" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                                    <input type="text" id="my-register-code" placeholder="注册码" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                                    <button id="my-register-submit-btn" class="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-medium">
+                                        注册
+                                    </button>
+                                    <button id="my-show-login-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm text-center py-2">
+                                        已有账号？登录
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 背景遮罩 -->
+                        <div id="my-auth-overlay" class="fixed inset-0 bg-black/50 z-40 -translate-x-full transition-opacity duration-300"></div>
+                    </div>
                         <!-- 登录表单 -->
                         <div id="my-login-form" class="bg-white rounded-lg shadow-sm p-4 space-y-3">
                             <h3 class="text-lg font-semibold text-gray-800 mb-3">登录</h3>
@@ -722,12 +803,16 @@
                 <span class="text-2xl mb-1">📖</span>
                 <span class="text-xs font-medium">词典</span>
             </a>
+            <a href="#expressions" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="expressions">
+                <span class="text-2xl mb-1">💬</span>
+                <span class="text-xs font-medium">语用</span>
+            </a>
             <a href="#ai-assistant" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="ai-assistant">
                 <span class="text-2xl mb-1">🤖</span>
                 <span class="text-xs font-medium">AI助手</span>
             </a>
             <a href="#login" class="mobile-nav-item flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-blue-600 transition-all duration-200 py-2 rounded-lg" data-module="login">
-                <span class="text-2xl mb-1">🔑</span>
+                <span class="text-2xl mb-1">👤</span>
                 <span class="text-xs font-medium">我的</span>
             </a>
         </div>

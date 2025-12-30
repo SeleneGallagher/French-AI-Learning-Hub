@@ -127,12 +127,48 @@ async function switchModule(moduleName) {
         
         // 滚动到顶部
         window.scrollTo(0, 0);
+        
+        // 更新移动端顶部标题栏
+        updateMobileHeader(moduleName);
     } else {
         // 默认显示欢迎页
         Logger.warn(`模块 "${moduleName}" 不存在，切换到欢迎页`);
         if (moduleName !== 'welcome') {
             switchModule('welcome');
         }
+    }
+}
+
+// 更新移动端顶部标题栏
+function updateMobileHeader(moduleName) {
+    const mobileHeader = document.getElementById('mobile-header');
+    const mobileHeaderTitle = document.getElementById('mobile-header-title');
+    const mobileBackBtn = document.getElementById('mobile-back-btn');
+    
+    if (!mobileHeader || !mobileHeaderTitle) return;
+    
+    const moduleTitles = {
+        'welcome': '首页',
+        'news': '实时新闻资讯',
+        'movies': '热门影视推荐',
+        'dictionary': '法语词典',
+        'expressions': '语用积累',
+        'ai-assistant': 'AI助手',
+        'login': '我的',
+        'about': '关于'
+    };
+    
+    if (moduleName === 'welcome') {
+        mobileHeader.classList.add('hidden');
+    } else {
+        mobileHeader.classList.remove('hidden');
+        mobileHeaderTitle.textContent = moduleTitles[moduleName] || moduleName;
+    }
+    
+    if (mobileBackBtn) {
+        mobileBackBtn.onclick = () => {
+            window.location.hash = '#welcome';
+        };
     }
 }
 

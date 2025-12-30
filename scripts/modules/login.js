@@ -19,21 +19,74 @@ export function initLogin() {
 
 // 初始化移动端"我的"页面
 function initMyPage() {
+    const authSidebar = document.getElementById('my-auth-sidebar');
+    const authOverlay = document.getElementById('my-auth-overlay');
+    const authCloseBtn = document.getElementById('my-auth-close-btn');
+    const authTitle = document.getElementById('my-auth-title');
+    
+    // 显示侧边栏
+    function showAuthSidebar(isLogin = true) {
+        if (authSidebar && authOverlay) {
+            authSidebar.classList.remove('translate-x-full');
+            authOverlay.classList.remove('-translate-x-full');
+            authOverlay.classList.remove('opacity-0');
+            authOverlay.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden';
+            if (authTitle) {
+                authTitle.textContent = isLogin ? '登录' : '注册';
+            }
+        }
+    }
+    
+    // 隐藏侧边栏
+    function hideAuthSidebar() {
+        if (authSidebar && authOverlay) {
+            authSidebar.classList.add('translate-x-full');
+            authOverlay.classList.add('-translate-x-full');
+            authOverlay.classList.remove('opacity-100');
+            authOverlay.classList.add('opacity-0');
+            document.body.style.overflow = '';
+        }
+    }
+    
     // 移动端登录按钮
     const myLoginBtn = document.getElementById('my-login-btn');
     if (myLoginBtn) {
         myLoginBtn.addEventListener('click', () => {
-            // 显示移动端登录表单
-            const authForms = document.getElementById('my-auth-forms');
+            showAuthSidebar(true);
             const loginForm = document.getElementById('my-login-form');
             const registerForm = document.getElementById('my-register-form');
-            if (authForms && loginForm) {
-                authForms.classList.remove('hidden');
+            if (loginForm && registerForm) {
                 loginForm.classList.remove('hidden');
-                registerForm?.classList.add('hidden');
+                registerForm.classList.add('hidden');
                 isLoginMode = true;
             }
         });
+    }
+    
+    // 移动端注册按钮
+    const myRegisterBtn = document.getElementById('my-register-btn');
+    if (myRegisterBtn) {
+        myRegisterBtn.addEventListener('click', () => {
+            showAuthSidebar(false);
+            const loginForm = document.getElementById('my-login-form');
+            const registerForm = document.getElementById('my-register-form');
+            if (loginForm && registerForm) {
+                loginForm.classList.add('hidden');
+                registerForm.classList.remove('hidden');
+                isLoginMode = false;
+            }
+        });
+    }
+    
+    // 关闭按钮
+    if (authCloseBtn) {
+        authCloseBtn.addEventListener('click', hideAuthSidebar);
+    }
+    
+    // 点击遮罩关闭
+    if (authOverlay) {
+        authOverlay.addEventListener('click', hideAuthSidebar);
     }
     
     // 移动端登录/注册表单切换
@@ -47,6 +100,7 @@ function initMyPage() {
                 loginForm.classList.add('hidden');
                 registerForm.classList.remove('hidden');
                 isLoginMode = false;
+                if (authTitle) authTitle.textContent = '注册';
             }
         });
     }
@@ -58,6 +112,7 @@ function initMyPage() {
                 loginForm.classList.remove('hidden');
                 registerForm.classList.add('hidden');
                 isLoginMode = true;
+                if (authTitle) authTitle.textContent = '登录';
             }
         });
     }
@@ -79,9 +134,8 @@ function initMyPage() {
             document.getElementById('login-username').value = username;
             document.getElementById('login-password').value = password;
             handleLogin().then(() => {
-                // 登录成功后隐藏表单，显示用户信息
-                const authForms = document.getElementById('my-auth-forms');
-                if (authForms) authForms.classList.add('hidden');
+                // 登录成功后隐藏侧边栏，显示用户信息
+                hideAuthSidebar();
             }).catch(err => {
                 showError(errorEl, err.message || '登录失败');
             });
@@ -107,9 +161,8 @@ function initMyPage() {
             document.getElementById('register-password').value = password;
             document.getElementById('register-code').value = regCode;
             handleRegister().then(() => {
-                // 注册成功后隐藏表单，显示用户信息
-                const authForms = document.getElementById('my-auth-forms');
-                if (authForms) authForms.classList.add('hidden');
+                // 注册成功后隐藏侧边栏，显示用户信息
+                hideAuthSidebar();
             }).catch(err => {
                 showError(errorEl, err.message || '注册失败');
             });
