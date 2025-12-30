@@ -58,11 +58,18 @@ try:
     from api.news.rss_proxy import handler as rss_proxy_handler
     from api.movies.list import handler as movies_handler
     from api.dictionary.history import handler as dict_handler
+    from api.config import handler as config_handler
     from api.ai.coze import handler as coze_handler
     from api.ai.deepseek import handler as deepseek_handler
-    from api.config import handler as config_handler
 except ImportError as e:
+    import traceback
+    traceback.print_exc()
     print(f"警告: 无法导入某些模块: {e}")
+    # 创建占位函数
+    def placeholder_handler(request):
+        return {'statusCode': 500, 'body': json.dumps({'success': False, 'error': 'Handler not loaded', 'details': str(e)})}
+    login_handler = register_handler = news_handler = movies_handler = dict_handler = config_handler = placeholder_handler
+    coze_handler = deepseek_handler = placeholder_handler
 
 # 适配函数：将Flask request转换为Vercel格式
 class VercelRequest:

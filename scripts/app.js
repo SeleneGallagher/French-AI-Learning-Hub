@@ -148,29 +148,51 @@ function updateMobileHeader(moduleName) {
     if (!mobileHeader || !mobileHeaderTitle) return;
     
     const moduleTitles = {
-        'welcome': { text: '首页', emoji: '🏠' },
-        'news': { text: '实时新闻资讯', emoji: '📰' },
-        'movies': { text: '热门影视推荐', emoji: '🎬' },
-        'dictionary': { text: '法语词典', emoji: '📖' },
-        'expressions': { text: '语用积累', emoji: '💬' },
-        'ai-assistant': { text: 'AI助手', emoji: '🤖' },
-        'login': { text: '我的', emoji: '👤' },
-        'about': { text: '关于', emoji: 'ℹ️' }
+        'welcome': { text: '首页', emoji: '', showBack: false, showHome: false },
+        'news': { text: '实时新闻资讯', emoji: '📰', showBack: false, showHome: true },
+        'movies': { text: '热门影视推荐', emoji: '🎬', showBack: false, showHome: true },
+        'dictionary': { text: '法语词典', emoji: '📖', showBack: false, showHome: true },
+        'expressions': { text: '语用积累', emoji: '💬', showBack: false, showHome: true },
+        'ai-assistant': { text: 'AI助手', emoji: '🤖', showBack: false, showHome: true },
+        'login': { text: '我的', emoji: '👤', showBack: false, showHome: true },
+        'about': { text: '关于', emoji: 'ℹ️', showBack: true, showHome: false }
     };
     
-    if (moduleName === 'welcome') {
-        mobileHeader.classList.add('hidden');
-    } else {
-        mobileHeader.classList.remove('hidden');
-        const moduleInfo = moduleTitles[moduleName] || { text: moduleName, emoji: '' };
-        mobileHeaderTitle.innerHTML = `<span>${moduleInfo.emoji}</span><span>${moduleInfo.text}</span>`;
+    const mobileHeader = document.getElementById('mobile-header');
+    const mobileHeaderTitle = document.getElementById('mobile-header-title');
+    const mobileBackBtn = document.getElementById('mobile-back-btn');
+    const mobileHomeBtn = document.getElementById('mobile-home-btn');
+    
+    if (!mobileHeader || !mobileHeaderTitle) return;
+    
+    mobileHeader.classList.remove('hidden');
+    const moduleInfo = moduleTitles[moduleName] || { text: moduleName, emoji: '', showBack: false, showHome: false };
+    
+    // 设置标题（居中显示）
+    mobileHeaderTitle.innerHTML = moduleInfo.emoji ? `<span>${moduleInfo.emoji}</span><span>${moduleInfo.text}</span>` : `<span>${moduleInfo.text}</span>`;
+    
+    // 显示/隐藏返回按钮
+    if (mobileBackBtn) {
+        if (moduleInfo.showBack) {
+            mobileBackBtn.classList.remove('hidden');
+            mobileBackBtn.onclick = () => {
+                window.location.hash = '#login';
+            };
+        } else {
+            mobileBackBtn.classList.add('hidden');
+        }
     }
     
-    const mobileHomeBtn = document.getElementById('mobile-home-btn');
+    // 显示/隐藏首页按钮
     if (mobileHomeBtn) {
-        mobileHomeBtn.onclick = () => {
-            window.location.hash = '#welcome';
-        };
+        if (moduleInfo.showHome) {
+            mobileHomeBtn.classList.remove('hidden');
+            mobileHomeBtn.onclick = () => {
+                window.location.hash = '#welcome';
+            };
+        } else {
+            mobileHomeBtn.classList.add('hidden');
+        }
     }
 }
 
