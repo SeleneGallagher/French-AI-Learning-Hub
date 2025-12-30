@@ -25,9 +25,16 @@ def handler(request):
     
     try:
         # Vercel Serverless Functions格式
-        if hasattr(request, 'body'):
+        if isinstance(request, dict):
+            # Vercel格式：request是字典，body是字符串
+            body_str = request.get('body', '{}')
+            if isinstance(body_str, str):
+                data = json.loads(body_str) if body_str else {}
+            else:
+                data = body_str if body_str else {}
+        elif hasattr(request, 'body'):
             if isinstance(request.body, str):
-                data = json.loads(request.body)
+                data = json.loads(request.body) if request.body else {}
             elif isinstance(request.body, dict):
                 data = request.body
             else:

@@ -5,12 +5,13 @@ Flask后端应用 - 用于国内服务器部署
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
+import json
 from dotenv import load_dotenv
 
 # 加载环境变量
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)  # 允许跨域请求
 
 # 导入API处理函数
@@ -20,6 +21,9 @@ try:
     from api.news.list import handler as news_handler
     from api.movies.list import handler as movies_handler
     from api.dictionary.history import handler as dict_handler
+    from api.ai.coze import handler as coze_handler
+    from api.ai.deepseek import handler as deepseek_handler
+    from api.config import handler as config_handler
 except ImportError as e:
     print(f"警告: 无法导入某些模块: {e}")
 
@@ -40,7 +44,13 @@ def adapt_handler(handler_func):
             result = handler_func(vercel_request)
             # 如果返回的是字典，转换为Flask响应
             if isinstance(result, dict) and 'statusCode' in result:
-                return jsonify(eval(result['body'])), result['statusCode']
+                # 安全地解析JSON body
+                body = result.get('body', '{}')
+                if isinstance(body, str):
+                    body_data = json.loads(body)
+                else:
+                    body_data = body
+                return jsonify(body_data), result['statusCode']
             elif isinstance(result, dict):
                 return jsonify(result), 200
             else:
@@ -80,6 +90,42 @@ def dictionary_history():
     if request.method == 'OPTIONS':
         return '', 200
     return adapt_handler(dict_handler)()
+
+@app.route('/api/ai/coze', methods=['POST', 'OPTIONS'])
+def coze():
+    if request.method == 'OPTIONS':
+        return '', 200
+    return adapt_handler(coze_handler)()
+
+@app.route('/api/ai/deepseek', methods=['POST', 'OPTIONS'])
+def deepseek():
+    if request.method == 'OPTIONS':
+        return '', 200
+    return adapt_handler(deepseek_handler)()
+
+@app.route('/api/config', methods=['GET', 'OPTIONS'])
+def config():
+    if request.method == 'OPTIONS':
+        return '', 200
+    return adapt_handler(config_handler)()
+
+# 静态文件路由（用于开发环境，生产环境建议使用Nginx）
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_static(path):
+    """提供静态文件服务（仅用于开发，生产环境使用Nginx）"""
+    if not path:
+        return app.send_static_file('index.html')
+    # 排除API路由
+    if path.startswith('api/'):
+        return jsonify({'error': 'Not found'}), 404
+    try:
+        return app.send_static_file(path)
+    except:
+        # SPA路由回退到index.html
+        if '.' not in path.split('/')[-1]:  # 没有扩展名，可能是前端路由
+            return app.send_static_file('index.html')
+        return jsonify({'error': 'Not found'}), 404
 
 @app.route('/health', methods=['GET'])
 def health():

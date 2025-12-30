@@ -21,19 +21,27 @@ git commit -m "Fix Vercel deployment issues"  # ✅ 成功
 
 ---
 
-## Vercel 部署
+## 部署说明
+
+> **注意**：项目已从 Vercel 迁移，现在使用 Railway 或其他平台部署。详见 [部署方案指南](./docs/部署方案.md)
+
+### Railway 部署（当前推荐）
+
+- 使用 `Procfile` 配置启动命令
+- 环境变量在 Railway Dashboard 中配置
+- 详细步骤请参考 [Railway 部署指南](./docs/Railway部署指南.md)
 
 ### 环境变量命名
-- ✅ 使用 `SUPABASE_SECRET_KEY`（不是 `SUPABASE_SERVICE_KEY`）
-- 确保所有环境变量在 Vercel Dashboard 中正确配置
+- ✅ 项目已移除 Supabase 依赖，不再需要 Supabase 相关环境变量
+- ✅ 所有数据使用本地存储（localStorage/IndexedDB）
 
 ### 静态文件路径
 - 前端代码中使用 `/public/data/...`（带前导斜杠）
-- Vercel 会自动提供 `public` 目录下的静态文件
+- Flask 应用会自动提供静态文件
 
 ### API 路由
-- Python Serverless Functions 需要 `__init__.py` 文件使目录成为包
 - 所有 API 处理函数必须处理 OPTIONS 请求（CORS 预检）
+- Flask 路由在 `app.py` 中统一管理
 
 ---
 
@@ -76,82 +84,31 @@ git commit -m "Fix Vercel deployment issues"  # ✅ 成功
 
 ---
 
-## Vercel Serverless Functions 限制
+## Flask 应用部署
 
-### Hobby 套餐限制
-- **最多 12 个 Serverless Functions** 每次部署
-- 超过限制会导致构建失败
+### 当前架构
+- 使用 Flask 作为统一后端框架
+- 所有 API 路由在 `app.py` 中定义
+- 使用 Gunicorn 作为 WSGI 服务器
 
-### 解决方案
-1. **明确列出 API 文件**：在 `vercel.json` 中明确列出每个 API 文件，而不是使用通配符 `api/**/*.py`
-2. **移除非 API 文件**：将工具文件（如 `utils.py`）移到 `api` 目录外（如 `lib/` 目录）
-3. **排除 __init__.py**：这些文件不是实际的 API endpoints，不应该被计算在内
+### 部署平台
+- **Railway**（推荐）：简单易用，免费额度充足
+- **Render**：免费套餐可用
+- **Fly.io**：全球边缘部署
+- **云服务器**：完全控制，适合国内用户
 
-**示例配置**：
-```json
-{
-  "builds": [
-    {
-      "src": "api/ai/coze.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "api/ai/deepseek.py",
-      "use": "@vercel/python"
-    }
-    // ... 明确列出所有 API 文件
-  ]
-}
-```
+详细部署指南请参考 [部署方案指南](./docs/部署方案.md)
 
-**当前项目**：8 个 Serverless Functions（在限制内）
-
----
-
-## Vercel Python Serverless Functions 路由
-
-### 使用 builds 配置时的路由规则
-- 当使用 `builds` 配置时，Vercel 会自动为每个 Python 文件创建路由
-- 文件路径 `api/movies/list.py` 会自动映射到 `/api/movies/list`
-- **不需要**自定义 API 路由，让 Vercel 自动处理
-- 自定义路由可能会干扰自动路由，导致 404 错误
-
-### 正确的配置方式
-```json
-{
-  "builds": [
-    {
-      "src": "api/movies/list.py",
-      "use": "@vercel/python"
-    }
-    // ... 明确列出所有 API 文件
-  ],
-  "routes": [
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/(.*\\.(js|css|json|...))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(?!api|public).*",
-      "dest": "/index.html"
-    }
-  ]
-}
-```
-
-### Request 对象格式
-Vercel Python runtime 的 request 对象可能是 dict 格式：
+### Request 对象适配
+Flask 应用使用适配器将 Flask request 转换为 Vercel 格式，以复用现有 API handler：
 ```python
-# 兼容不同的 request 对象格式
-if isinstance(request, dict):
-    method = request.get('httpMethod', 'GET')
-else:
-    method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
-method = method.upper() if method else 'GET'
+class VercelRequest:
+    def __init__(self, flask_request):
+        self.method = flask_request.method
+        self.headers = flask_request.headers
+        self.json = flask_request.get_json(silent=True)
+        self.form = flask_request.form
+        self.args = flask_request.args
 ```
 
 ---
@@ -162,4 +119,5 @@ method = method.upper() if method else 'GET'
 - 2024-12-19: 记录 Vercel 部署相关注意事项
 - 2024-12-19: 添加 Vercel Serverless Functions 限制和解决方案
 - 2024-12-19: 添加 Vercel Python Serverless Functions 路由规则和 request 对象格式说明
+- 2024-12-19: 从 Vercel 迁移到 Railway，更新部署文档
 

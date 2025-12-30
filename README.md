@@ -76,7 +76,21 @@ python -m SimpleHTTPServer 8000
 
 ## ⚙️ 配置
 
-### API密钥配置（可选）
+### 环境变量配置（后端）
+
+**详细清单**：查看 [环境变量完整清单](./docs/环境变量清单.md)
+
+**快速设置**：
+1. 复制 `env.example` 为 `.env`
+2. （可选）根据需要添加 API 密钥变量
+
+**在 Railway 中设置**：
+- 在 Railway Dashboard → Variables 中添加
+- 或使用 CLI：`railway variables --file .env`
+
+**注意**：项目使用 Railway PostgreSQL 数据库，支持用户认证和数据同步。查看 [下一步操作指南](./下一步操作.md) 了解数据库设置步骤。
+
+### 前端 API 密钥配置（可选）
 
 1. 复制 `config.example.js` 为 `config.js`
 2. 根据需要配置以下API密钥：
@@ -91,16 +105,18 @@ python -m SimpleHTTPServer 8000
    git clone https://github.com/hbenbel/French-Dictionary.git
    ```
 2. 将 `dictionary` 文件夹复制到项目根目录（或放在项目同级目录）
-3. 运行导入工具：
+3. 运行导入工具生成 JSON 文件：
    ```bash
    python scripts/tools/import_french_dict.py
    ```
-4. 生成的 `french_dict.json`（约180MB）会自动被词典模块加载
+4. 生成的词典文件（8个JSON文件，总计约208MB）会自动被词典模块加载
 
 **注意：** 
 - French-Dictionary 使用 MIT License，使用时请保留原始许可证文件（项目已包含 `LICENSE-French-Dictionary`）
-- `french_dict.json` 文件较大，已添加到 `.gitignore`，需要在本地生成
+- 词典文件较大，已添加到 `.gitignore`，需要在本地生成
 - 导入工具会保留所有原始信息：词性、性别、变位、标签等
+- 词典文件存储在 `public/data/dicts/` 目录，通过静态文件服务提供
+- 所有用户数据（历史记录、收藏夹等）使用浏览器本地存储（localStorage/IndexedDB）
 
 #### DeepSeek API（可选）
 - **用途**：新闻关键词生成、语用表达生成
@@ -128,50 +144,53 @@ python -m SimpleHTTPServer 8000
 git clone https://github.com/hbenbel/French-Dictionary.git
 cp -r French-Dictionary/dictionary ./dictionary
 
-# 2. 运行导入脚本
+# 2. 运行导入脚本（生成8个JSON文件）
 python3 scripts/tools/import_french_dict.py
 ```
 
-导入后的词典文件将保存在 `public/data/dicts/french_dict.json`。
+导入后的词典文件将保存在 `public/data/dicts/` 目录，通过静态文件服务提供。
+
+**注意**：
+- 词典文件较大（总计约 208MB），确保部署平台支持大文件
+- 所有用户数据（历史记录、收藏夹等）使用浏览器本地存储，无需服务器数据库
 
 ## 📁 项目结构
 
+详细结构说明请查看：[项目结构说明](./docs/项目结构说明.md)
+
 ```
 AI_LL/
-├── index.html              # 主页面
-├── config.example.js       # 配置文件示例
-├── config.js               # 配置文件（需自行创建）
-├── start.bat               # Windows启动脚本
-├── start.sh                # Mac/Linux启动脚本
+├── api/                    # 后端 API 模块
+│   ├── ai/                # AI 相关（Coze、DeepSeek）
+│   ├── auth/              # 用户认证（登录/注册）
+│   ├── dictionary/        # 词典相关
+│   ├── movies/            # 电影数据
+│   ├── news/              # 新闻数据
+│   └── config.py          # 配置 API
 │
-├── scripts/                # JavaScript代码
-│   ├── app.js             # 主应用逻辑
-│   ├── modules/           # 功能模块
-│   │   ├── news.js        # 新闻模块
-│   │   ├── movies.js      # 影视模块
-│   │   ├── dictionary.js  # 词典模块
-│   │   ├── expressions.js # 语用模块
-│   │   └── aiAssistant.js # AI助手模块
-│   ├── services/          # 服务层
-│   │   ├── api.js         # API调用
-│   │   ├── storage.js     # 本地存储
-│   │   ├── newsService.js # 新闻服务
-│   │   └── ...
-│   ├── utils/             # 工具函数
-│   ├── server/            # 服务器端脚本
-│   │   ├── update_data.py # 数据更新脚本
-│   │   └── deploy.sh      # 部署脚本
-│   └── tools/             # 工具脚本
-│       └── import_french_dict.py # 词典导入脚本
+├── database/              # 数据库
+│   └── init.sql          # PostgreSQL 初始化脚本
 │
-├── styles/                 # 样式文件
-│   └── main.css
+├── lib/                   # 共享库
+│   └── utils.py          # 工具函数（数据库、JWT）
 │
-└── public/                 # 静态资源
-    └── data/              # 数据文件
-        ├── dicts/         # 词典数据
-        ├── news.json      # 新闻数据
-        └── movies.json    # 影视数据
+├── scripts/               # 前端脚本
+│   ├── modules/          # 功能模块
+│   ├── services/         # 服务层
+│   ├── utils/           # 工具函数
+│   └── app.js           # 主入口
+│
+├── public/               # 静态资源
+│   └── data/            # 数据文件（词典、新闻、电影）
+│
+├── docs/                # 文档目录
+│
+├── app.py               # Flask 应用主文件
+├── index.html           # 前端主页面
+│
+├── requirements_server.txt # Python 依赖
+├── Procfile             # Railway 启动配置
+└── railway.json         # Railway 配置
 ```
 
 ## 🛠️ 技术栈
@@ -203,26 +222,90 @@ AI_LL/
 
 ## 🌐 部署
 
-### 云服务器部署（推荐）
+### 🚂 Railway 部署（推荐）⭐
+
+**最简单的方式**：查看 [Railway 快速开始指南](./RAILWAY_QUICKSTART.md)
+
+**快速部署步骤：**
+
+1. **访问 Railway Dashboard**
+   - 打开 https://railway.app
+   - 使用 GitHub 登录
+   - 选择 "Deploy from GitHub repo"
+   - 选择你的仓库
+
+2. **添加 PostgreSQL 数据库**
+   - 点击 **"New"** → **"Database"** → **"Add PostgreSQL"**
+   - Railway 会自动设置 `DATABASE_URL` 环境变量
+
+3. **设置环境变量**
+   - 在 Railway Dashboard → Variables 中添加：
+     - `JWT_SECRET` - JWT 签名密钥（必需，用于用户认证）
+     - `COZE_BOT_ID`、`COZE_PAT_TOKEN` 等（可选，AI 功能）
+
+4. **初始化数据库**
+   - 查看 [下一步操作指南](./NEXT_STEPS.md) 了解详细步骤
+
+5. **等待部署完成**
+   - Railway 会自动构建和部署
+   - 2-5 分钟后即可访问
+
+**或使用命令行：**
+```bash
+# 使用部署脚本（最简单）
+./scripts/deploy_railway.sh  # Linux/Mac
+scripts\deploy_railway.bat   # Windows
+
+# 或手动部署
+npm install -g @railway/cli
+railway login
+railway init
+railway variables --file .env  # 从 .env 导入环境变量
+railway up
+```
+
+**详细文档：**
+- [下一步操作指南](./下一步操作.md) - ⭐ **当前步骤（从这里开始）**
+- [环境变量清单](./docs/环境变量清单.md) - 所有环境变量说明
+- [PostgreSQL 设置指南](./docs/PostgreSQL设置指南.md) - 数据库设置详细步骤
+- [Railway 部署指南](./docs/Railway部署指南.md) - 完整部署步骤
+
+#### 2. 国内云服务器（推荐国内用户）⭐
+
+**优点**：完全控制、无限制、访问速度快
+
+详细步骤请参考 [部署方案指南](./docs/部署方案.md#方案-4国内云服务器推荐国内用户)
+
+#### 3. Render / Fly.io
+
+详细步骤请参考 [部署方案指南](./docs/部署方案.md)
+
+### 云服务器部署（详细步骤）
 
 ```bash
 # 1. 上传项目到服务器
 scp -r /path/to/AI_LL root@服务器IP:/var/www/
 
-# 2. 配置 Nginx
-# 创建配置文件 /etc/nginx/sites-available/french-ai
-# 指向项目目录
+# 2. 安装依赖
+cd /var/www/AI_LL
+python3.11 -m venv venv
+source venv/bin/activate
+pip install -r requirements_server.txt
 
-# 3. 设置定时任务更新数据
+# 3. 配置环境变量
+cp .env.example .env
+nano .env  # 编辑环境变量
+
+# 4. 启动服务（使用 gunicorn）
+gunicorn app:app --bind 127.0.0.1:5000 --workers 2
+
+# 5. 配置 Nginx（参考部署方案指南）
+# 6. 设置定时任务更新数据
 crontab -e
 # 添加：0 */6 * * * cd /var/www/AI_LL && python3 scripts/server/update_data.py
 ```
 
-### 静态网站托管
-
-项目可以部署到 Vercel、Netlify、GitHub Pages 等静态托管平台。
-
-> **注意**：静态托管无法运行定时任务，需要手动更新数据或使用 GitHub Actions。
+> **详细部署指南**：请查看 [部署方案指南](./docs/部署方案.md) 了解所有部署选项和详细步骤。
 
 ## 🔧 数据更新
 

@@ -1,18 +1,21 @@
 """
-用户登录API
+用户登录API - 使用 PostgreSQL
 """
 import json
 import os
 import jwt
 import bcrypt
-from lib.utils import get_supabase, json_response
+from lib.utils import json_response, get_db_cursor, get_db_connection
 
 JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-change-this')
 
 def handler(request):
-    # 获取请求方法（兼容不同的 request 对象格式）
-    method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
-    method = method.upper()
+    # 获取请求方法
+    if isinstance(request, dict):
+        method = request.get('httpMethod', 'GET')
+    else:
+        method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
+    method = method.upper() if method else 'GET'
     
     # 处理 CORS 预检请求
     if method == 'OPTIONS':
@@ -22,36 +25,51 @@ def handler(request):
         return json_response({'success': False, 'message': 'Method not allowed'}, 405)
     
     try:
-        data = json.loads(request.body)
+        # 解析请求体
+        if isinstance(request, dict):
+            body_str = request.get('body', '{}')
+            data = json.loads(body_str) if body_str else {}
+        elif hasattr(request, 'body'):
+            if isinstance(request.body, str):
+                data = json.loads(request.body) if request.body else {}
+            else:
+                data = request.body if request.body else {}
+        else:
+            data = request.get_json() if hasattr(request, 'get_json') else {}
+        
         username = data.get('username', '').strip()
         password = data.get('password', '')
         
         if not username or not password:
             return json_response({'success': False, 'message': '请填写用户名和密码'}, 400)
         
-        supabase = get_supabase()
-        
         # 查询用户
-        user_result = supabase.table('users')\
-            .select('*')\
-            .eq('username', username)\
-            .eq('is_active', True)\
-            .execute()
+        cursor = get_db_cursor()
+        cursor.execute("""
+            SELECT id, username, password_hash 
+            FROM users 
+            WHERE username = %s AND is_active = TRUE
+        """, (username,))
         
-        if not user_result.data:
+        user = cursor.fetchone()
+        
+        if not user:
+            cursor.close()
             return json_response({'success': False, 'message': '用户名或密码错误'}, 401)
         
-        user = user_result.data[0]
-        
         # 验证密码
-        if not bcrypt.checkpw(password.encode(), user['password_hash'].encode()):
+        if not bcrypt.checkpw(password.encode('utf-8'), user['password_hash'].encode('utf-8')):
+            cursor.close()
             return json_response({'success': False, 'message': '用户名或密码错误'}, 401)
         
         # 更新最后登录时间
-        supabase.table('users')\
-            .update({'last_login': 'now()'})\
-            .eq('id', user['id'])\
-            .execute()
+        conn = get_db_connection()
+        cursor.execute("""
+            UPDATE users 
+            SET last_login = CURRENT_TIMESTAMP 
+            WHERE id = %s
+        """, (user['id'],))
+        conn.commit()
         
         # 生成JWT Token
         token = jwt.encode(
@@ -59,6 +77,8 @@ def handler(request):
             JWT_SECRET,
             algorithm='HS256'
         )
+        
+        cursor.close()
         
         return json_response({
             'success': True,
@@ -68,5 +88,3 @@ def handler(request):
         
     except Exception as e:
         return json_response({'success': False, 'message': str(e)}, 500)
-
-

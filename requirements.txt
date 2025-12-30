@@ -1,7 +1,16 @@
-supabase>=2.0.0
+# 服务器部署所需依赖
+flask>=2.3.0
+flask-cors>=4.0.0
+gunicorn>=21.2.0
+python-dotenv>=1.0.0
+
+# 数据库
+psycopg2-binary>=2.9.9
+
+# 认证和安全
 pyjwt>=2.8.0
 bcrypt>=4.0.0
+
+# 其他依赖
 requests>=2.31.0
 python-dateutil>=2.8.2
-
-

@@ -1,18 +1,21 @@
 """
-用户注册API
+用户注册API - 使用 PostgreSQL
 """
 import json
 import os
 import jwt
 import bcrypt
-from lib.utils import get_supabase, json_response
+from lib.utils import json_response, get_db_cursor, get_db_connection
 
 JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-change-this')
 
 def handler(request):
-    # 获取请求方法（兼容不同的 request 对象格式）
-    method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
-    method = method.upper()
+    # 获取请求方法
+    if isinstance(request, dict):
+        method = request.get('httpMethod', 'GET')
+    else:
+        method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
+    method = method.upper() if method else 'GET'
     
     # 处理 CORS 预检请求
     if method == 'OPTIONS':
@@ -22,7 +25,18 @@ def handler(request):
         return json_response({'success': False, 'message': 'Method not allowed'}, 405)
     
     try:
-        data = json.loads(request.body)
+        # 解析请求体
+        if isinstance(request, dict):
+            body_str = request.get('body', '{}')
+            data = json.loads(body_str) if body_str else {}
+        elif hasattr(request, 'body'):
+            if isinstance(request.body, str):
+                data = json.loads(request.body) if request.body else {}
+            else:
+                data = request.body if request.body else {}
+        else:
+            data = request.get_json() if hasattr(request, 'get_json') else {}
+        
         username = data.get('username', '').strip()
         password = data.get('password', '')
         reg_code = data.get('registration_code', '').strip()
@@ -30,56 +44,52 @@ def handler(request):
         if not username or not password or not reg_code:
             return json_response({'success': False, 'message': '请填写所有字段'}, 400)
         
-        supabase = get_supabase()
+        cursor = get_db_cursor()
+        conn = get_db_connection()
         
         # 验证注册码
-        code_result = supabase.table('registration_codes')\
-            .select('*')\
-            .eq('code', reg_code)\
-            .eq('is_active', True)\
-            .execute()
+        cursor.execute("""
+            SELECT id, unlimited_use, used_at 
+            FROM registration_codes 
+            WHERE code = %s AND is_active = TRUE
+        """, (reg_code,))
         
-        if not code_result.data:
+        code_record = cursor.fetchone()
+        
+        if not code_record:
+            cursor.close()
             return json_response({'success': False, 'message': '注册码无效'}, 400)
         
-        registration_code = code_result.data[0]
-        
-        # 检查注册码是否可用
-        # 如果是无限使用的注册码，跳过used_at检查
-        if not registration_code.get('unlimited_use', False):
-            # 单次使用的注册码，检查是否已使用
-            if registration_code.get('used_at'):
-                return json_response({'success': False, 'message': '注册码已使用'}, 400)
+        # 检查注册码是否已使用（仅限单次使用的注册码）
+        if not code_record['unlimited_use'] and code_record['used_at']:
+            cursor.close()
+            return json_response({'success': False, 'message': '注册码已使用'}, 400)
         
         # 检查用户名是否存在
-        user_result = supabase.table('users')\
-            .select('id')\
-            .eq('username', username)\
-            .execute()
-        
-        if user_result.data:
+        cursor.execute("SELECT id FROM users WHERE username = %s", (username,))
+        if cursor.fetchone():
+            cursor.close()
             return json_response({'success': False, 'message': '用户名已存在'}, 400)
         
         # 创建用户
-        password_hash = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
-        user_result = supabase.table('users')\
-            .insert({
-                'username': username,
-                'password_hash': password_hash
-            })\
-            .execute()
+        password_hash = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+        cursor.execute("""
+            INSERT INTO users (username, password_hash) 
+            VALUES (%s, %s) 
+            RETURNING id, username
+        """, (username, password_hash))
         
-        user = user_result.data[0]
+        user = cursor.fetchone()
         
         # 标记注册码为已使用（仅限单次使用的注册码）
-        if not registration_code.get('unlimited_use', False):
-            supabase.table('registration_codes')\
-                .update({
-                    'used_at': 'now()',
-                    'used_by_user_id': user['id']
-                })\
-                .eq('code', reg_code)\
-                .execute()
+        if not code_record['unlimited_use']:
+            cursor.execute("""
+                UPDATE registration_codes 
+                SET used_at = CURRENT_TIMESTAMP, used_by_user_id = %s 
+                WHERE id = %s
+            """, (user['id'], code_record['id']))
+        
+        conn.commit()
         
         # 生成JWT Token
         token = jwt.encode(
@@ -88,6 +98,8 @@ def handler(request):
             algorithm='HS256'
         )
         
+        cursor.close()
+        
         return json_response({
             'success': True,
             'token': token,
@@ -95,6 +107,6 @@ def handler(request):
         })
         
     except Exception as e:
+        conn = get_db_connection()
+        conn.rollback()
         return json_response({'success': False, 'message': str(e)}, 500)
-
-

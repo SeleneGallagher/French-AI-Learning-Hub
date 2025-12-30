@@ -13,7 +13,10 @@ export const config = {
     cors_proxy: 'https://api.allorigins.win/get?url=',
     // 新闻RSS源
     news_sources: [
-        'https://www.france24.com/fr/rss'
+        'https://www.france24.com/fr/rss',
+        'https://www.lemonde.fr/rss/une.xml',
+        'https://www.lemonde.fr/international/rss_full.xml',
+        'https://www.rfi.fr/fr/rss'
     ],
     // TMDB API配置（可选，用于获取电影海报）
     // 免费注册：https://www.themoviedb.org/settings/api

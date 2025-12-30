@@ -5,7 +5,10 @@ export const config = {
     cors_proxy: 'https://api.allorigins.win/get?url=',
     // 新闻RSS源
     news_sources: [
-        'https://www.france24.com/fr/rss'
+        'https://www.france24.com/fr/rss',
+        'https://www.lemonde.fr/rss/une.xml',
+        'https://www.lemonde.fr/international/rss_full.xml',
+        'https://www.rfi.fr/fr/rss'
     ],
     // API配置现在通过后端获取，不在此处配置
     // 所有需要API密钥的调用都通过后端API代理

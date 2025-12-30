@@ -4,22 +4,73 @@ API工具函数
 import os
 import json
 import jwt
-from supabase import create_client
+import psycopg2
+from psycopg2.extras import RealDictCursor
+from urllib.parse import urlparse
 
-SUPABASE_URL = os.environ.get('SUPABASE_URL')
-SUPABASE_KEY = os.environ.get('SUPABASE_SECRET_KEY')  # 使用secret key
 JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-change-this')
 
-def get_supabase():
-    """获取Supabase客户端"""
-    if not SUPABASE_URL or not SUPABASE_KEY:
-        raise ValueError('Supabase配置缺失，请设置环境变量')
-    return create_client(SUPABASE_URL, SUPABASE_KEY)
+# PostgreSQL 连接池（简单实现）
+_db_connection = None
+
+def get_db_connection():
+    """获取 PostgreSQL 数据库连接"""
+    global _db_connection
+    
+    if _db_connection and not _db_connection.closed:
+        return _db_connection
+    
+    # 从环境变量获取数据库 URL
+    database_url = os.environ.get('DATABASE_URL')
+    
+    if not database_url:
+        raise ValueError('DATABASE_URL 环境变量未设置。请在 Railway Dashboard 中配置数据库连接。')
+    
+    try:
+        # Railway PostgreSQL URL 格式可能是 postgres:// 或 postgresql://
+        # 统一转换为 postgresql://
+        if database_url.startswith('postgres://'):
+            database_url = database_url.replace('postgres://', 'postgresql://', 1)
+        
+        # 解析数据库 URL
+        parsed = urlparse(database_url)
+        
+        # 建立连接
+        _db_connection = psycopg2.connect(
+            host=parsed.hostname,
+            port=parsed.port or 5432,
+            database=parsed.path[1:],  # 移除前导斜杠
+            user=parsed.username,
+            password=parsed.password,
+            sslmode='require'  # Railway PostgreSQL 需要 SSL
+        )
+        
+        return _db_connection
+    except Exception as e:
+        raise ValueError(f'无法连接到数据库: {str(e)}')
+
+def get_db_cursor():
+    """获取数据库游标（返回字典格式）"""
+    conn = get_db_connection()
+    return conn.cursor(cursor_factory=RealDictCursor)
 
 def verify_token(request):
     """验证JWT Token并返回user_id"""
-    auth_header = request.headers.get('Authorization', '')
-    if not auth_header.startswith('Bearer '):
+    # 处理Vercel格式的request对象
+    if isinstance(request, dict):
+        headers = request.get('headers', {})
+        # Vercel headers可能是小写的
+        auth_header = headers.get('Authorization', '') or headers.get('authorization', '')
+    elif hasattr(request, 'headers'):
+        if isinstance(request.headers, dict):
+            auth_header = request.headers.get('Authorization', '') or request.headers.get('authorization', '')
+        else:
+            # Flask格式
+            auth_header = request.headers.get('Authorization', '')
+    else:
+        auth_header = ''
+    
+    if not auth_header or not auth_header.startswith('Bearer '):
         return None
     
     token = auth_header.replace('Bearer ', '')

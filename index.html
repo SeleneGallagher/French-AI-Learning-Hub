@@ -56,6 +56,12 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- 词典文件配置 -->
+    <!-- 
+    词典文件现在使用本地静态文件（/public/data/dicts/*.json）
+    所有数据（历史记录、收藏夹等）都使用浏览器本地存储（localStorage/IndexedDB）
+    -->
 </head>
 <body class="bg-gray-50">
     <div class="flex h-screen overflow-hidden">
@@ -611,9 +617,9 @@
                         <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
                             <li>前端: JavaScript (ES6+), Tailwind CSS</li>
                             <li>后端: Vercel Serverless Functions (Python)</li>
-                            <li>数据库: Supabase PostgreSQL</li>
-                            <li>认证: JWT Token</li>
-                            <li>部署: Vercel + Supabase</li>
+                            <li>数据存储: 本地存储（localStorage/IndexedDB）</li>
+                            <li>后端: Flask (Python)</li>
+                            <li>部署: Railway / 云服务器</li>
                         </ul>
                     </div>
                 </div>

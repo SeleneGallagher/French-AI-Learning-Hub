@@ -148,6 +148,39 @@ function buildIndexes(words) {
     console.log(`索引构建完成: ${wordIndex.size} 个唯一词条, ${prefixIndex.size} 个前缀索引`);
 }
 
+// 获取词典文件URL（支持 Supabase Storage 和本地静态文件）
+function getDictionaryUrl(pos) {
+    // 从配置或环境变量获取 Supabase Storage URL
+    // 格式: https://{project-ref}.supabase.co/storage/v1/object/public/{bucket}/{path}
+    const supabaseStorageUrl = window.SUPABASE_STORAGE_URL || 
+                               localStorage.getItem('supabase_storage_url') ||
+                               null;
+    
+    if (supabaseStorageUrl) {
+        // 从 Supabase Storage 加载
+        return `${supabaseStorageUrl}/${pos}.json`;
+    } else {
+        // 从本地静态文件加载
+        return `/public/data/dicts/${pos}.json`;
+    }
+}
+
+// 加载单个词典文件
+async function loadDictionaryFile(pos) {
+    const url = getDictionaryUrl(pos);
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            return { pos, data, success: true };
+        }
+        return { pos, data: null, success: false };
+    } catch (e) {
+        console.warn(`加载 ${pos}.json 失败:`, e);
+        return { pos, data: null, success: false };
+    }
+}
+
 // 加载词典（并行加载多个JSON文件）
 async function loadDictionary() {
     // 如果已经在加载，返回同一个Promise
@@ -170,16 +203,7 @@ async function loadDictionary() {
         try {
             // 优先尝试并行加载新的分词性文件
             const posFiles = ['noun', 'verb', 'adj', 'adv', 'conj', 'prep', 'pron', 'det'];
-            const loadPromises = posFiles.map(pos => 
-                fetch(`/public/data/dicts/${pos}.json`)
-                    .then(response => {
-                        if (response.ok) {
-                            return response.json().then(data => ({ pos, data, success: true }));
-                        }
-                        return { pos, data: null, success: false };
-                    })
-                    .catch(() => ({ pos, data: null, success: false }))
-            );
+            const loadPromises = posFiles.map(pos => loadDictionaryFile(pos));
             
             const results = await Promise.all(loadPromises);
             const loadedFiles = results.filter(r => r.success);
@@ -201,11 +225,18 @@ async function loadDictionary() {
                 buildIndexes(dictWords);
                 
                 dictMetadata.loadedAt = new Date().toISOString();
-                console.log(`词典加载成功: ${dictWords.length} 词条 (${loadedFiles.length}/${posFiles.length} 个文件)`);
+                const source = window.SUPABASE_STORAGE_URL ? 'Supabase Storage' : '本地文件';
+                console.log(`词典加载成功: ${dictWords.length} 词条 (${loadedFiles.length}/${posFiles.length} 个文件, 来源: ${source})`);
             } else {
                 // 如果新格式文件都不存在，尝试加载旧的统一文件
                 console.log('新格式文件不存在，尝试加载旧格式...');
-                let response = await fetch('/public/data/dicts/french_dict.json');
+                const supabaseStorageUrl = window.SUPABASE_STORAGE_URL || 
+                                           localStorage.getItem('supabase_storage_url') ||
+                                           null;
+                let url = supabaseStorageUrl ? 
+                    `${supabaseStorageUrl}/french_dict.json` : 
+                    '/public/data/dicts/french_dict.json';
+                let response = await fetch(url);
                 if (!response.ok) {
                     response = await fetch('/public/data/dicts/gonggong.json');
                 }
