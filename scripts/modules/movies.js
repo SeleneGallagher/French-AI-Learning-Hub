@@ -6,7 +6,7 @@ import { showError, hideLoading, showLoading } from '../utils/helpers.js';
 import { translateText } from '../services/translationService.js';
 import { APIService } from '../services/apiService.js';
 
-const MIN_RATING = 6.5;
+const MIN_RATING = 8.0;
 const STORAGE_KEY = 'movie_watchlist';
 const SHOWN_KEY = 'shown_movies_session';
 const CACHE_KEY = 'movies_cache';
@@ -285,74 +285,164 @@ export async function initMovies() {
     }
 }
 
+// 处理单个影视项目
+function processMovieItem(m) {
+    const itemType = m.media_type || 'movie';
+    
+    // 必须有评语，否则跳过（按旧版要求）
+    if (!m.tagline || m.tagline.trim() === '') {
+        return null;
+    }
+    
+    // 处理类型信息（优先使用genres数组，其次使用genre_ids）
+    let genres = [];
+    if (m.genres && Array.isArray(m.genres)) {
+        genres = m.genres.map(g => g.name || g).slice(0, 3);
+    } else if (m.genre_ids && Array.isArray(m.genre_ids)) {
+        genres = m.genre_ids.map(id => genreMap[id]).filter(Boolean).slice(0, 3);
+    }
+    
+    // 提取导演/创作者
+    let director = '';
+    if (itemType === 'movie') {
+        director = m.director || '';
+    } else if (itemType === 'tv') {
+        if (m.created_by && Array.isArray(m.created_by) && m.created_by.length > 0) {
+            director = m.created_by[0].name || '';
+        } else if (m.creator) {
+            director = m.creator;
+        }
+    }
+    
+    // 处理评语
+    let tagline = m.tagline || '';
+    if (tagline && tagline.length > 60) {
+        tagline = tagline.substring(0, 60) + '...';
+    }
+    
+    // 处理简介截断
+    let plot = m.overview || '';
+    if (plot.length > 150) {
+        plot = plot.substring(0, 150) + '...';
+    }
+    
+    // 处理时长信息
+    let mediaInfo = '';
+    if (itemType === 'movie' && m.runtime) {
+        mediaInfo = `${m.runtime}分钟`;
+    } else if (itemType === 'tv') {
+        const seasons = m.number_of_seasons || 0;
+        const episodes = m.number_of_episodes || 0;
+        if (seasons > 0) {
+            mediaInfo = `${seasons}季`;
+            if (episodes > 0) {
+                mediaInfo += ` · ${episodes}集`;
+            }
+        }
+    }
+    
+    const currentYear = new Date().getFullYear();
+    const year = m.release_date ? new Date(m.release_date).getFullYear() : (m.first_air_date ? new Date(m.first_air_date).getFullYear() : '');
+    const isRecent = year >= currentYear - 2;
+    const isClassic = year < currentYear - 5;
+    
+    return {
+        id: m.id,
+        title: m.title || m.name,
+        originalTitle: m.original_title || m.original_name || '',
+        year: year,
+        rating: m.vote_average || 0,
+        poster: m.poster_path || '',
+        plot: plot,
+        fullPlot: m.overview || '',
+        type: itemType,
+        translatedPlot: '',
+        genres: genres.length > 0 ? genres : (itemType === 'movie' ? ['法语电影'] : ['法语剧集']),
+        director: director,
+        tagline: tagline,
+        runtime: m.runtime || 0,
+        mediaInfo: mediaInfo,
+        isRecent: isRecent,
+        isClassic: isClassic
+    };
+}
+
 // 加载内容 - 通过后端API
 async function loadContent(forceRefresh = false) {
     const shownIds = getShownItems();
+    const currentYear = new Date().getFullYear();
     
     try {
-        // 通过后端API获取电影数据（刷新时传递refresh参数）
-        const response = await APIService.getMovies(forceRefresh);
-        if (response.success && response.data) {
-            // 过滤掉已显示的ID，避免重复显示
-            const filtered = response.data.filter(m => {
-                const itemId = `${m.media_type || 'movie'}_${m.id}`;
-                return !shownIds.includes(itemId);
-            });
-            
-            // 如果过滤后没有足够的数据，使用所有数据（避免空列表）
-            const dataToUse = filtered.length > 0 ? filtered : response.data;
-            
-            // 处理数据，补充完整信息
-            allMovies = await Promise.all(dataToUse.map(async (m) => {
-                const itemType = m.media_type || 'movie';
-                const baseItem = {
-                    id: m.id,
-                    title: m.title || m.name,
-                    originalTitle: m.original_title || m.original_name || '',
-                    year: m.release_date ? new Date(m.release_date).getFullYear() : (m.first_air_date ? new Date(m.first_air_date).getFullYear() : ''),
-                    rating: m.vote_average || 0,
-                    poster: m.poster_path || '',
-                    plot: m.overview || '',
-                    fullPlot: m.overview || '',
-                    type: itemType,
-                    translatedPlot: '',
-                    // 从基础数据中提取类型信息
-                    genres: (m.genre_ids || []).map(id => genreMap[id]).filter(Boolean).slice(0, 3),
-                    director: '', // 需要从详情API获取
-                    tagline: m.tagline || '', // 如果有的话
-                    runtime: m.runtime || 0,
-                    mediaInfo: ''
-                };
-                
-                // 如果没有类型，设置默认值
-                if (itemType === 'movie' && baseItem.genres.length === 0) {
-                    baseItem.genres = ['法语电影'];
-                } else if (itemType === 'tv' && baseItem.genres.length === 0) {
-                    baseItem.genres = ['法语剧集'];
-                }
-                
-                // 处理简介截断
-                if (baseItem.plot.length > 150) {
-                    baseItem.plot = baseItem.plot.substring(0, 150) + '...';
-                }
-                
-                // 处理评语截断
-                if (baseItem.tagline && baseItem.tagline.length > 60) {
-                    baseItem.tagline = baseItem.tagline.substring(0, 60) + '...';
-                }
-                
-                // 处理时长信息
-                if (itemType === 'movie' && baseItem.runtime) {
-                    baseItem.mediaInfo = `${baseItem.runtime}分钟`;
-                } else if (itemType === 'tv' && m.number_of_seasons) {
-                    const seasons = m.number_of_seasons || 0;
-                    const episodes = m.number_of_episodes || 0;
-                    baseItem.mediaInfo = seasons > 0 ? `${seasons}季${episodes > 0 ? ' · ' + episodes + '集' : ''}` : '';
-                }
-                
-                return baseItem;
-            }));
-            
+        // 分别获取近两年、经典和其他类型的影视
+        const [recentResponse, classicResponse, otherResponse] = await Promise.all([
+            APIService.getMovies(forceRefresh, 'recent', 'movie'),
+            APIService.getMovies(forceRefresh, 'classic', 'movie'),
+            APIService.getMovies(forceRefresh, 'other', 'movie')
+        ]);
+        
+        // 也获取剧集
+        const [recentTVResponse, classicTVResponse, otherTVResponse] = await Promise.all([
+            APIService.getMovies(forceRefresh, 'recent', 'tv'),
+            APIService.getMovies(forceRefresh, 'classic', 'tv'),
+            APIService.getMovies(forceRefresh, 'other', 'tv')
+        ]);
+        
+        // 合并所有数据
+        const allData = [
+            ...(recentResponse.success && recentResponse.data ? recentResponse.data : []),
+            ...(classicResponse.success && classicResponse.data ? classicResponse.data : []),
+            ...(otherResponse.success && otherResponse.data ? otherResponse.data : []),
+            ...(recentTVResponse.success && recentTVResponse.data ? recentTVResponse.data : []),
+            ...(classicTVResponse.success && classicTVResponse.data ? classicTVResponse.data : []),
+            ...(otherTVResponse.success && otherTVResponse.data ? otherTVResponse.data : [])
+        ];
+        
+        if (allData.length === 0) {
+            throw new Error('未获取到影视数据');
+        }
+        
+        // 过滤掉已显示的ID
+        const filtered = allData.filter(m => {
+            const itemId = `${m.media_type || 'movie'}_${m.id}`;
+            return !shownIds.includes(itemId);
+        });
+        
+        const dataToUse = filtered.length > 0 ? filtered : allData;
+        
+        // 处理数据，补充完整信息，并过滤掉没有评语的项目
+        const processedMovies = [];
+        for (const m of dataToUse) {
+            const item = processMovieItem(m);
+            if (item) {
+                processedMovies.push(item);
+            }
+        }
+        
+        // 分类：近两年和经典影视
+        const recentAndClassic = processedMovies.filter(m => m.isRecent || m.isClassic);
+        const others = processedMovies.filter(m => !m.isRecent && !m.isClassic);
+        
+        // 确保近两年和经典影视超过一半（至少11个，总共20个）
+        const targetCount = 11; // 超过一半
+        let finalList = [];
+        
+        if (recentAndClassic.length >= targetCount) {
+            // 如果近两年和经典影视足够，取11个，其他取9个
+            const shuffledRecent = recentAndClassic.sort(() => Math.random() - 0.5);
+            const shuffledOthers = others.sort(() => Math.random() - 0.5);
+            finalList = [...shuffledRecent.slice(0, targetCount), ...shuffledOthers.slice(0, 9)];
+        } else {
+            // 如果不够，全部使用近两年和经典影视，不足的用其他补充
+            const shuffledRecent = recentAndClassic.sort(() => Math.random() - 0.5);
+            const shuffledOthers = others.sort(() => Math.random() - 0.5);
+            finalList = [...shuffledRecent, ...shuffledOthers.slice(0, 20 - shuffledRecent.length)];
+        }
+        
+        // 最终打乱顺序
+        finalList.sort(() => Math.random() - 0.5);
+        allMovies = finalList.slice(0, 20);
+        
+        if (allMovies.length > 0) {
             renderItems(allMovies);
             translateAllPlots();
             saveCache(allMovies);
@@ -581,7 +671,7 @@ function renderCard(item, container, isWatchlist) {
     // 桌面端：横向布局（flex-row），移动端：纵向布局（flex-col）
     card.className = 'movie-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:flex-row cursor-pointer';
     card.setAttribute('data-item-id', `${item.type}_${item.id}`);
-    // 桌面端固定高度200px，移动端自适应
+    // 桌面端固定高度200px，移动端自适应（增加高度以显示更多内容）
     card.style.minHeight = '200px';
     
     const inList = isInWatchlist(item.id, item.type);
@@ -593,7 +683,7 @@ function renderCard(item, container, isWatchlist) {
     const typeBadgeColor = item.type === 'tv' ? 'bg-purple-500' : 'bg-blue-500';
     
     card.innerHTML = `
-        <div class="relative flex-shrink-0 w-full md:w-[140px] h-56 md:h-[200px]">
+        <div class="relative flex-shrink-0 w-full md:w-[140px] h-48 md:h-[200px]">
             ${item.poster 
                 ? `<img src="${item.poster}" alt="${item.title}" class="w-full h-full object-cover">`
                 : `<div class="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold">${item.title.substring(0, 2)}</div>`
@@ -603,24 +693,25 @@ function renderCard(item, container, isWatchlist) {
                 ${inList ? '⭐' : '☆'}
             </button>
         </div>
-        <div class="flex-1 p-3 flex flex-col justify-between min-w-0 md:h-[200px]">
+        <div class="flex-1 p-4 md:p-4 flex flex-col justify-between min-w-0 md:h-[200px]">
             <div class="flex-1 overflow-hidden">
-                <div class="flex items-start justify-between mb-1.5">
-                    <h3 class="text-base font-bold text-gray-800 line-clamp-2 flex-1 pr-2">${item.title}</h3>
+                <div class="flex items-start justify-between mb-2">
+                    <h3 class="text-base md:text-base font-bold text-gray-800 line-clamp-2 flex-1 pr-2">${item.title}</h3>
                     <span class="px-2 py-0.5 text-white text-xs rounded flex-shrink-0" style="background-color: var(--accent-600);">⭐${parseFloat(item.rating).toFixed(1)}</span>
                 </div>
-                <div class="text-xs text-gray-600 mb-1.5">
+                ${item.originalTitle && item.originalTitle !== item.title ? `<div class="text-xs text-gray-500 mb-1.5 italic">${item.originalTitle}</div>` : ''}
+                <div class="text-xs text-gray-600 mb-2">
                     ${item.year || '未知'}${item.director ? ' · ' + item.director : ''}${item.mediaInfo ? ' · ' + item.mediaInfo : ''}
                 </div>
-                <div class="flex flex-wrap gap-1 mb-1.5">
+                <div class="flex flex-wrap gap-1 mb-2">
                     ${(item.genres || []).map(genre => `<span class="px-1.5 py-0.5 bg-blue-100 text-blue-700 text-xs rounded">${genre}</span>`).join('')}
                 </div>
-                <div class="text-xs text-gray-600 line-clamp-4 mb-1 relative plot-container" data-original="${item.plot}" data-translated="${item.translatedPlot || ''}">
+                <div class="text-xs text-gray-600 mb-2 relative plot-container md:line-clamp-4 line-clamp-8" data-original="${item.plot}" data-translated="${item.translatedPlot || ''}">
                     ${item.plot}
                 </div>
-                ${item.tagline ? `<p class="text-xs text-gray-500 italic line-clamp-2">"${item.tagline}"</p>` : ''}
+                ${item.tagline ? `<p class="text-xs text-gray-500 italic line-clamp-2 mb-2">"${item.tagline}"</p>` : ''}
             </div>
-            <div class="flex justify-end mt-1">
+            <div class="flex justify-end mt-2 pt-2 border-t border-gray-100">
                 <span class="text-xs text-gray-400 italic">点击卡片查看详情</span>
             </div>
         </div>

@@ -87,8 +87,15 @@ export class APIService {
     }
     
     // ========== 电影相关 ==========
-    static async getMovies(refresh = false) {
-        const url = refresh ? '/movies/list?refresh=true' : '/movies/list';
+    static async getMovies(refresh = false, category = '', type = '') {
+        let url = '/movies/list';
+        const params = [];
+        if (refresh) params.push('refresh=true');
+        if (category) params.push(`category=${category}`);
+        if (type) params.push(`type=${type}`);
+        if (params.length > 0) {
+            url += '?' + params.join('&');
+        }
         return this.request(url);
     }
     

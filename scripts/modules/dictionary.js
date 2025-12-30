@@ -1039,14 +1039,16 @@ function renderHistoryPanel() {
     } else {
         listEl.innerHTML = searchHistory.map(item => {
             const word = typeof item === 'string' ? item : item.word;
+            const escapedWord = word.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
             return `
-            <div class="history-item flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer transition-colors card" data-word="${word}">
-                <span class="font-medium" style="color: var(--gray-700);">${word}</span>
+            <div class="history-item flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer transition-colors card" data-word="${escapedWord}">
+                <span class="font-medium" style="color: var(--gray-700);">${escapedWord}</span>
                 <svg class="w-4 h-4" style="color: var(--gray-400);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                 </svg>
             </div>
-        `).join('');
+        `;
+        }).join('');
         
         listEl.querySelectorAll('.history-item').forEach(item => {
             item.addEventListener('click', () => {
