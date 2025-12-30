@@ -54,8 +54,25 @@ function loadChatHistory() {
 function saveChatHistory() {
     try {
         localStorageService.set(CHAT_HISTORY_KEY, chatHistory);
+        // 如果已登录，同步到数据库
+        uploadChatHistoryToServer();
     } catch (e) {
         // 静默失败
+    }
+}
+
+// 上传聊天记录到服务器
+async function uploadChatHistoryToServer() {
+    try {
+        const token = APIService.getToken();
+        if (!token || chatHistory.length === 0) return;
+        
+        await APIService.uploadUserData({
+            chat_history: chatHistory
+        });
+    } catch (e) {
+        // 静默失败，不影响本地保存
+        console.warn('上传聊天记录失败:', e);
     }
 }
 

@@ -158,6 +158,13 @@ export class APIService {
         return this.request('/user/sync');
     }
     
+    static async uploadUserData(data) {
+        return this.request('/user/sync', {
+            method: 'POST',
+            body: JSON.stringify(data)
+        });
+    }
+    
     // ========== AI助手相关 ==========
     static async getChatHistory(conversationId = null) {
         const url = conversationId 

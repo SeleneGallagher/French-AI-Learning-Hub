@@ -111,7 +111,24 @@ function saveHistory() {
 function saveFavorites() {
     try {
         localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+        // 如果已登录，同步到数据库
+        uploadDictFavoritesToServer();
     } catch {}
+}
+
+// 上传词典收藏夹到服务器
+async function uploadDictFavoritesToServer() {
+    try {
+        const token = APIService.getToken();
+        if (!token || favorites.length === 0) return;
+        
+        await APIService.uploadUserData({
+            dict_favorites: favorites
+        });
+    } catch (e) {
+        // 静默失败，不影响本地保存
+        console.warn('上传词典收藏夹失败:', e);
+    }
 }
 
 // 保存学习进度

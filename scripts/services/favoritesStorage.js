@@ -29,8 +29,25 @@ export function getAllFavorites() {
 export function saveAllFavorites(favorites) {
     try {
         localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
+        // 如果已登录，同步到数据库
+        uploadFavoritesToServer(favorites);
     } catch (error) {
         console.error('保存收藏夹失败:', error);
+    }
+}
+
+// 上传收藏夹到服务器
+async function uploadFavoritesToServer(favorites) {
+    try {
+        const token = APIService.getToken();
+        if (!token) return;
+        
+        await APIService.uploadUserData({
+            expression_favorites: favorites
+        });
+    } catch (e) {
+        // 静默失败，不影响本地保存
+        console.warn('上传收藏夹失败:', e);
     }
 }
 
