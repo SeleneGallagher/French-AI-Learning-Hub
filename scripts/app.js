@@ -165,8 +165,9 @@ function updateMobileHeader(moduleName) {
         mobileHeaderTitle.textContent = moduleTitles[moduleName] || moduleName;
     }
     
-    if (mobileBackBtn) {
-        mobileBackBtn.onclick = () => {
+    const mobileHomeBtn = document.getElementById('mobile-home-btn');
+    if (mobileHomeBtn) {
+        mobileHomeBtn.onclick = () => {
             window.location.hash = '#welcome';
         };
     }

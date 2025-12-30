@@ -19,33 +19,39 @@ export function initLogin() {
 
 // 初始化移动端"我的"页面
 function initMyPage() {
-    const authSidebar = document.getElementById('my-auth-sidebar');
-    const authOverlay = document.getElementById('my-auth-overlay');
-    const authCloseBtn = document.getElementById('my-auth-close-btn');
+    const authPage = document.getElementById('my-auth-page');
+    const myPage = document.getElementById('my-page');
     const authTitle = document.getElementById('my-auth-title');
+    const authBackBtn = document.getElementById('my-auth-back-btn');
     
-    // 显示侧边栏
-    function showAuthSidebar(isLogin = true) {
-        if (authSidebar && authOverlay) {
-            authSidebar.classList.remove('translate-x-full');
-            authOverlay.classList.remove('-translate-x-full');
-            authOverlay.classList.remove('opacity-0');
-            authOverlay.classList.add('opacity-100');
-            document.body.style.overflow = 'hidden';
+    // 显示登录/注册页面
+    function showAuthPage(isLogin = true) {
+        if (authPage && myPage) {
+            myPage.classList.add('hidden');
+            authPage.classList.remove('hidden');
             if (authTitle) {
                 authTitle.textContent = isLogin ? '登录' : '注册';
+            }
+            const loginForm = document.getElementById('my-login-form');
+            const registerForm = document.getElementById('my-register-form');
+            if (loginForm && registerForm) {
+                if (isLogin) {
+                    loginForm.classList.remove('hidden');
+                    registerForm.classList.add('hidden');
+                } else {
+                    loginForm.classList.add('hidden');
+                    registerForm.classList.remove('hidden');
+                }
+                isLoginMode = isLogin;
             }
         }
     }
     
-    // 隐藏侧边栏
-    function hideAuthSidebar() {
-        if (authSidebar && authOverlay) {
-            authSidebar.classList.add('translate-x-full');
-            authOverlay.classList.add('-translate-x-full');
-            authOverlay.classList.remove('opacity-100');
-            authOverlay.classList.add('opacity-0');
-            document.body.style.overflow = '';
+    // 隐藏登录/注册页面，返回"我的"页面
+    function hideAuthPage() {
+        if (authPage && myPage) {
+            authPage.classList.add('hidden');
+            myPage.classList.remove('hidden');
         }
     }
     
@@ -53,14 +59,7 @@ function initMyPage() {
     const myLoginBtn = document.getElementById('my-login-btn');
     if (myLoginBtn) {
         myLoginBtn.addEventListener('click', () => {
-            showAuthSidebar(true);
-            const loginForm = document.getElementById('my-login-form');
-            const registerForm = document.getElementById('my-register-form');
-            if (loginForm && registerForm) {
-                loginForm.classList.remove('hidden');
-                registerForm.classList.add('hidden');
-                isLoginMode = true;
-            }
+            showAuthPage(true);
         });
     }
     
@@ -68,25 +67,13 @@ function initMyPage() {
     const myRegisterBtn = document.getElementById('my-register-btn');
     if (myRegisterBtn) {
         myRegisterBtn.addEventListener('click', () => {
-            showAuthSidebar(false);
-            const loginForm = document.getElementById('my-login-form');
-            const registerForm = document.getElementById('my-register-form');
-            if (loginForm && registerForm) {
-                loginForm.classList.add('hidden');
-                registerForm.classList.remove('hidden');
-                isLoginMode = false;
-            }
+            showAuthPage(false);
         });
     }
     
-    // 关闭按钮
-    if (authCloseBtn) {
-        authCloseBtn.addEventListener('click', hideAuthSidebar);
-    }
-    
-    // 点击遮罩关闭
-    if (authOverlay) {
-        authOverlay.addEventListener('click', hideAuthSidebar);
+    // 返回按钮
+    if (authBackBtn) {
+        authBackBtn.addEventListener('click', hideAuthPage);
     }
     
     // 移动端登录/注册表单切换
@@ -101,6 +88,7 @@ function initMyPage() {
                 registerForm.classList.remove('hidden');
                 isLoginMode = false;
                 if (authTitle) authTitle.textContent = '注册';
+                isLoginMode = false;
             }
         });
     }
@@ -113,6 +101,7 @@ function initMyPage() {
                 registerForm.classList.add('hidden');
                 isLoginMode = true;
                 if (authTitle) authTitle.textContent = '登录';
+                isLoginMode = true;
             }
         });
     }
@@ -134,8 +123,8 @@ function initMyPage() {
             document.getElementById('login-username').value = username;
             document.getElementById('login-password').value = password;
             handleLogin().then(() => {
-                // 登录成功后隐藏侧边栏，显示用户信息
-                hideAuthSidebar();
+                // 登录成功后隐藏登录页面，显示用户信息
+                hideAuthPage();
             }).catch(err => {
                 showError(errorEl, err.message || '登录失败');
             });
@@ -161,8 +150,8 @@ function initMyPage() {
             document.getElementById('register-password').value = password;
             document.getElementById('register-code').value = regCode;
             handleRegister().then(() => {
-                // 注册成功后隐藏侧边栏，显示用户信息
-                hideAuthSidebar();
+                // 注册成功后隐藏注册页面，显示用户信息
+                hideAuthPage();
             }).catch(err => {
                 showError(errorEl, err.message || '注册失败');
             });
