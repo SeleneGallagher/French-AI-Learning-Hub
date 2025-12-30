@@ -558,6 +558,12 @@
                         <p class="text-gray-700 mb-4">
                             French AI Learning Hub 是一个功能丰富的法语学习平台，集成了新闻阅读、影视推荐、词典查询、语用积累和AI助手等功能。
                         </p>
+                        <p class="text-gray-700 mb-2 text-sm">
+                            <strong>部署平台</strong>：Railway（使用 PostgreSQL 数据库）
+                        </p>
+                        <p class="text-gray-700 text-sm">
+                            <strong>数据同步</strong>：支持跨设备数据同步，用户数据存储在云端 PostgreSQL 数据库
+                        </p>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow p-6">
@@ -587,10 +593,12 @@
                             <div>
                                 <h4 class="font-semibold text-gray-800 mb-2">🤖 AI服务</h4>
                                 <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                                    <li>DeepSeek API: https://platform.deepseek.com/</li>
+                                    <li><strong>DeepSeek API</strong>: https://platform.deepseek.com/</li>
                                     <li>用于新闻关键词提取和语用表达生成</li>
-                                    <li>Coze API: https://www.coze.cn/</li>
+                                    <li>需要配置 <code>DEEPSEEK_API_KEY</code> 环境变量</li>
+                                    <li><strong>Coze API</strong>: https://www.coze.cn/</li>
                                     <li>用于AI助手对话功能，提供流式响应</li>
+                                    <li>需要配置 <code>COZE_BOT_ID</code> 和 <code>COZE_PAT_TOKEN</code> 环境变量</li>
                                 </ul>
                             </div>
                             
