@@ -2,6 +2,7 @@
  * 登录/注册模块
  */
 import { AuthService } from '../services/auth.js';
+import { APIService } from '../services/apiService.js';
 
 let isLoginMode = true; // true=登录, false=注册
 let currentUser = null; // 当前登录用户
@@ -184,6 +185,12 @@ function initMyPage() {
                 return;
             }
             
+            // 验证用户名长度
+            if (username.length > 10) {
+                showError(errorEl, '用户名不能超过10个字符');
+                return;
+            }
+            
             if (password !== passwordConfirm) {
                 showError(errorEl, '两次输入的密码不一致');
                 return;
@@ -307,6 +314,9 @@ async function handleLogin() {
     const errorEl = document.getElementById('login-error');
     const loginBtn = document.getElementById('login-btn');
     
+    // 清除之前的错误
+    if (errorEl) errorEl.classList.add('hidden');
+    
     if (!username || !password) {
         showError(errorEl, '请填写用户名和密码');
         return;
@@ -331,6 +341,7 @@ async function handleLogin() {
         }
     } catch (error) {
         showError(errorEl, error.message || '登录失败');
+        // 不跳转，只显示错误信息
     } finally {
         loginBtn.disabled = false;
         loginBtn.textContent = '登录';
@@ -424,10 +435,21 @@ async function handleRegister() {
     const passwordConfirm = document.getElementById('register-password-confirm')?.value;
     const regCode = document.getElementById('register-code')?.value.trim();
     const errorEl = document.getElementById('register-error');
+    const usernameErrorEl = document.getElementById('register-username-error');
     const registerBtn = document.getElementById('register-btn');
+    
+    // 清除之前的错误
+    if (errorEl) errorEl.classList.add('hidden');
+    if (usernameErrorEl) usernameErrorEl.classList.add('hidden');
     
     if (!username || !password || !regCode) {
         showError(errorEl, '请填写所有字段');
+        return;
+    }
+    
+    // 验证用户名长度
+    if (username.length > 10) {
+        showError(usernameErrorEl, '用户名不能超过10个字符');
         return;
     }
     
@@ -537,6 +559,19 @@ function updateUserStatus() {
             // 添加新的事件监听器
             document.getElementById('sidebar-logout-btn').addEventListener('click', handleLogout);
         }
+        
+        // 添加"我的"按钮事件
+        const sidebarMyBtn = document.getElementById('sidebar-my-btn');
+        if (sidebarMyBtn) {
+            // 移除旧的事件监听器（如果存在）
+            const newMyBtn = sidebarMyBtn.cloneNode(true);
+            sidebarMyBtn.parentNode.replaceChild(newMyBtn, sidebarMyBtn);
+            // 添加新的事件监听器
+            document.getElementById('sidebar-my-btn').addEventListener('click', () => {
+                // 桌面端点击"我的"按钮，显示类似手机端的"我的"页面
+                window.location.hash = '#login';
+            });
+        }
     } else {
         // 移动端：显示未登录状态
         if (loggedInSection) {
@@ -563,9 +598,10 @@ function showError(element, message) {
     if (element) {
         element.textContent = message;
         element.classList.remove('hidden');
-        setTimeout(() => {
-            element.classList.add('hidden');
-        }, 5000);
+        // 不自动隐藏，让用户看到错误信息
+        // setTimeout(() => {
+        //     element.classList.add('hidden');
+        // }, 5000);
     } else {
         alert(message);
     }

@@ -102,31 +102,30 @@
                 </li>
             </ul>
             <!-- 底部操作区 -->
-            <div class="mt-auto border-t border-white/10 pt-4 px-6">
+            <div class="mt-auto border-t border-white/10 pt-4 px-6 space-y-2">
                 <!-- 未登录状态 -->
-                <div id="sidebar-not-logged-in" class="flex items-center gap-4 text-sm whitespace-nowrap">
-                    <a href="#login" class="nav-link text-blue-200 hover:text-white transition-colors underline" data-module="login">
+                <div id="sidebar-not-logged-in" class="space-y-2">
+                    <a href="#login" class="block w-full px-3 py-2 text-sm rounded transition-colors text-blue-200 hover:text-white hover:bg-white/10 text-center" style="border: 1px solid rgba(255,255,255,0.2);" data-module="login">
                         登录/注册
                     </a>
-                    <span class="text-white/30">|</span>
-                    <a href="#about" class="nav-link text-blue-200 hover:text-white transition-colors underline" data-module="about">
+                    <a href="#about" class="block w-full px-3 py-2 text-sm rounded transition-colors text-blue-200 hover:text-white hover:bg-white/10 text-center" style="border: 1px solid rgba(255,255,255,0.2);" data-module="about">
                         关于
                     </a>
                 </div>
                 <!-- 已登录状态 -->
-                <div id="sidebar-logged-in" class="hidden">
+                <div id="sidebar-logged-in" class="hidden space-y-2">
                     <div class="flex items-center gap-2 mb-2">
-                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold" id="sidebar-username-avatar">
+                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold flex-shrink-0" id="sidebar-username-avatar">
                             U
                         </div>
-                        <span class="text-sm text-blue-200 flex-1 truncate" id="sidebar-username-display">用户名</span>
+                        <span class="text-sm text-blue-200 flex-1 truncate" id="sidebar-username-display" style="max-width: 120px;">用户名</span>
                     </div>
+                    <button id="sidebar-my-btn" class="w-full px-3 py-2 text-sm rounded transition-colors text-blue-200 hover:text-white hover:bg-white/10" style="border: 1px solid rgba(255,255,255,0.2);">
+                        我的
+                    </button>
                     <button id="sidebar-logout-btn" class="w-full px-3 py-2 text-sm rounded transition-colors text-blue-200 hover:text-white hover:bg-white/10" style="border: 1px solid rgba(255,255,255,0.2);">
                         退出登录
                     </button>
-                    <a href="#about" class="block mt-2 text-center text-sm text-blue-200 hover:text-white transition-colors underline" data-module="about">
-                        关于
-                    </a>
                 </div>
             </div>
         </nav>
@@ -561,9 +560,10 @@
                             <div id="my-register-form" class="hidden space-y-4">
                                 <div id="my-register-error" class="hidden px-3 py-2 rounded text-sm" style="background-color: rgba(194, 65, 12, 0.1); border: 1px solid var(--error); color: var(--error);"></div>
                                 <div class="flex items-center gap-2">
-                                    <input type="text" id="my-register-username" placeholder="用户名" 
+                                    <input type="text" id="my-register-username" placeholder="用户名（最多10个字符）" 
                                            class="flex-1 px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
-                                           style="border: 1px solid var(--gray-300); background-color: white;">
+                                           style="border: 1px solid var(--gray-300); background-color: white;"
+                                           maxlength="10">
                                     <div class="w-9 flex-shrink-0"></div>
                                 </div>
                                 <div class="flex items-center gap-2">
@@ -610,7 +610,6 @@
                     
                     <!-- 登录表单 -->
                     <div id="login-form" class="space-y-4">
-                        <div id="login-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"></div>
                         <div class="flex items-center gap-2">
                             <input type="text" id="login-username" placeholder="用户名" 
                                    class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -629,9 +628,13 @@
                                 </svg>
                             </button>
                         </div>
-                        <button id="login-btn" class="w-full bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
-                            登录
-                        </button>
+                        <div id="login-error" class="hidden text-sm text-red-600 px-2"></div>
+                        <div class="flex items-center gap-2">
+                            <button id="login-btn" class="flex-1 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
+                                登录
+                            </button>
+                            <div class="w-9 flex-shrink-0"></div>
+                        </div>
                         <button id="show-register-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm">
                             没有账号？注册
                         </button>
@@ -639,12 +642,13 @@
                     
                     <!-- 注册表单 -->
                     <div id="register-form" class="hidden space-y-4">
-                        <div id="register-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"></div>
                         <div class="flex items-center gap-2">
-                            <input type="text" id="register-username" placeholder="用户名" 
-                                   class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <input type="text" id="register-username" placeholder="用户名（最多10个字符）" 
+                                   class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                   maxlength="10">
                             <div class="w-9 flex-shrink-0"></div>
                         </div>
+                        <div id="register-username-error" class="hidden text-sm text-red-600 px-2"></div>
                         <div class="flex items-center gap-2">
                             <input type="password" id="register-password" placeholder="密码" 
                                    class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -668,9 +672,13 @@
                                    class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <div class="w-9 flex-shrink-0"></div>
                         </div>
-                        <button id="register-btn" class="w-full bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition-colors">
-                            注册
-                        </button>
+                        <div id="register-error" class="hidden text-sm text-red-600 px-2"></div>
+                        <div class="flex items-center gap-2">
+                            <button id="register-btn" class="flex-1 bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition-colors">
+                                注册
+                            </button>
+                            <div class="w-9 flex-shrink-0"></div>
+                        </div>
                         <button id="show-login-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm">
                             已有账号？登录
                         </button>
@@ -685,14 +693,22 @@
                     <div class="bg-white rounded-lg shadow p-6">
                         <h3 class="text-xl font-bold mb-4">项目简介</h3>
                         <p class="text-gray-700 mb-4">
-                            French AI Learning Hub 是一个功能丰富的法语学习平台，集成了新闻阅读、影视推荐、词典查询、语用积累和AI助手等功能。
+                            French AI Learning Hub 是一个功能丰富的法语学习平台，集成了新闻阅读、影视推荐、词典查询、语用积累和AI助手等功能，旨在为法语学习者提供一站式的学习体验。
                         </p>
-                        <p class="text-gray-700 mb-2 text-sm">
-                            <strong>部署平台</strong>：Railway（使用 PostgreSQL 数据库）
-                        </p>
-                        <p class="text-gray-700 text-sm">
-                            <strong>数据同步</strong>：支持跨设备数据同步，用户数据存储在云端 PostgreSQL 数据库
-                        </p>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-700">
+                                <strong>部署平台</strong>：Railway（使用 PostgreSQL 数据库，支持自动部署和扩展）
+                            </p>
+                            <p class="text-gray-700">
+                                <strong>数据同步</strong>：支持跨设备数据同步，用户数据（词典历史、收藏、学习进度、AI对话记录等）存储在云端 PostgreSQL 数据库
+                            </p>
+                            <p class="text-gray-700">
+                                <strong>词典数据</strong>：基于 French-Dictionary 项目，包含完整的分词性词典文件（名词、动词、形容词、副词等），总计超过 11 万词条
+                            </p>
+                            <p class="text-gray-700">
+                                <strong>AI 能力</strong>：集成 DeepSeek API（关键词提取、语用生成）和 Coze API（智能对话助手），提供流式响应体验
+                            </p>
+                        </div>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow p-6">
@@ -734,10 +750,12 @@
                             <div>
                                 <h4 class="font-semibold text-gray-800 mb-2">📚 词典数据</h4>
                                 <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                                    <li>French-Dictionary: https://github.com/hbenbel/French-Dictionary</li>
-                                    <li>基于Wiktionary的完整法语词典</li>
-                                    <li>许可证: MIT License (详见项目 LICENSE-French-Dictionary 文件)</li>
-                                    <li>版权: Copyright (c) 2021 Hussem Ben Belgacem</li>
+                                    <li><strong>项目</strong>：French-Dictionary - https://github.com/hbenbel/French-Dictionary</li>
+                                    <li><strong>数据来源</strong>：基于 Wiktionary 的完整法语词典</li>
+                                    <li><strong>数据规模</strong>：超过 11 万词条，分词性存储（名词、动词、形容词等）</li>
+                                    <li><strong>许可证</strong>：MIT License (详见项目 LICENSE-French-Dictionary 文件)</li>
+                                    <li><strong>版权</strong>：Copyright (c) 2021 Hussem Ben Belgacem</li>
+                                    <li><strong>文件格式</strong>：JSON 格式，存储在 <code>public/data/dicts/</code> 目录</li>
                                 </ul>
                             </div>
                             
@@ -753,39 +771,147 @@
                     
                     <div class="bg-white rounded-lg shadow p-6">
                         <h3 class="text-xl font-bold mb-4">技术栈</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                            <li>前端: JavaScript (ES6+), Tailwind CSS</li>
-                            <li>后端: Flask (Python)</li>
-                            <li>数据库: Railway PostgreSQL</li>
-                            <li>数据存储: PostgreSQL（用户数据、历史记录、收藏等）+ 本地存储（localStorage/IndexedDB，用于缓存）</li>
-                            <li>部署: Railway</li>
-                            <li>认证: JWT Token + bcrypt 密码加密</li>
-                        </ul>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">前端技术</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li><strong>JavaScript (ES6+)</strong>：原生 JavaScript，模块化设计</li>
+                                    <li><strong>Tailwind CSS</strong>：实用优先的 CSS 框架，响应式设计</li>
+                                    <li><strong>LocalStorage/IndexedDB</strong>：本地数据缓存，提升性能</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">后端技术</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li><strong>Flask (Python 3.11+)</strong>：轻量级 Web 框架</li>
+                                    <li><strong>Gunicorn</strong>：生产环境 WSGI 服务器</li>
+                                    <li><strong>PostgreSQL</strong>：关系型数据库，存储用户数据</li>
+                                    <li><strong>JWT Token</strong>：用户认证和授权</li>
+                                    <li><strong>bcrypt</strong>：密码加密存储</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">AI 服务</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li><strong>DeepSeek API</strong>：新闻关键词提取、语用表达生成</li>
+                                    <li><strong>Coze API</strong>：智能对话助手，流式响应</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">部署与运维</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li><strong>Railway</strong>：云平台部署，自动构建和扩展</li>
+                                    <li><strong>Docker</strong>：容器化部署（可选）</li>
+                                    <li><strong>Nixpacks</strong>：自动构建系统</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow p-6">
                         <h3 class="text-xl font-bold mb-4">功能特性</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                            <li>✅ 用户注册和登录（使用注册码）</li>
-                            <li>✅ 跨设备数据同步（词典历史、收藏、学习进度等）</li>
-                            <li>✅ AI 聊天记录云端存储</li>
-                            <li>✅ 电影收藏列表云端存储</li>
-                            <li>✅ 语用表达和收藏云端存储</li>
-                            <li>✅ 背单词进度云端同步</li>
-                        </ul>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">📖 词典模块</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li>快速搜索法语词汇（支持完整 Wiktionary 词典，超过 11 万词条）</li>
+                                    <li>智能索引系统：精确匹配、前缀匹配、模糊匹配</li>
+                                    <li>自动保存查询历史，支持跨设备同步</li>
+                                    <li>收藏夹功能，收藏常用单词</li>
+                                    <li>背单词系统：随机学习、复习生疏单词、熟练度标记（生疏/模糊/熟练）</li>
+                                    <li>已学列表管理，支持快速切换熟练度</li>
+                                    <li>分词性词典：名词、动词、形容词、副词、连词、介词、代词、限定词</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">📰 新闻模块</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li>自动抓取法国主流媒体最新新闻（France 24、Le Monde、RFI等）</li>
+                                    <li>支持关键词提取和翻译（DeepSeek API）</li>
+                                    <li>新闻列表实时更新</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">🎬 影视模块</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li>推荐高质量法语电影和剧集（TMDB API）</li>
+                                    <li>显示评分、简介、海报等信息</li>
+                                    <li>支持"想看"列表管理，云端同步</li>
+                                    <li>自动翻译剧情简介</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">💬 语用积累</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li>学习常用法语表达和短语</li>
+                                    <li>AI生成情景对话（DeepSeek API）</li>
+                                    <li>收藏喜欢的表达，云端同步</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">🤖 AI助手</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li>基于Coze平台的智能对话</li>
+                                    <li>支持法语学习相关问题</li>
+                                    <li>流式响应，体验流畅</li>
+                                    <li>聊天记录云端存储，跨设备同步</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">👤 用户系统</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm ml-2">
+                                    <li>用户注册和登录（使用注册码）</li>
+                                    <li>JWT Token 认证，安全可靠</li>
+                                    <li>跨设备数据同步（词典历史、收藏、学习进度、AI对话、电影收藏、语用收藏等）</li>
+                                    <li>所有用户数据存储在云端 PostgreSQL 数据库</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow p-6">
                         <h3 class="text-xl font-bold mb-4">数据说明</h3>
-                        <p class="text-gray-700 mb-2 text-sm">
+                        <p class="text-gray-700 mb-3 text-sm">
                             本项目使用以下数据源，所有数据均遵循其原始许可证要求：
                         </p>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                            <li><strong>词典数据</strong>：基于 French-Dictionary (MIT License)，来源：Wiktionary</li>
-                            <li><strong>电影数据</strong>：TMDB API，遵循 TMDB API 使用条款</li>
-                            <li><strong>新闻数据</strong>：通过 RSS 订阅获取，仅用于学习目的</li>
-                            <li><strong>用户数据</strong>：存储在 Railway PostgreSQL 数据库，遵循隐私保护原则</li>
-                        </ul>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1 text-sm">📚 词典数据</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs ml-2">
+                                    <li><strong>来源</strong>：French-Dictionary (MIT License)，基于 Wiktionary</li>
+                                    <li><strong>内容</strong>：分词性词典文件（adj.json, adv.json, conj.json, det.json, noun.json, prep.json, pron.json, verb.json）</li>
+                                    <li><strong>规模</strong>：超过 11 万词条，包含词性、性别、变位、定义、例句等信息</li>
+                                    <li><strong>许可证</strong>：MIT License（详见项目 LICENSE-French-Dictionary 文件）</li>
+                                    <li><strong>版权</strong>：Copyright (c) 2021 Hussem Ben Belgacem</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1 text-sm">🎬 电影数据</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs ml-2">
+                                    <li><strong>来源</strong>：TMDB API (The Movie Database)</li>
+                                    <li><strong>内容</strong>：法语电影和剧集信息、海报、评分、简介等</li>
+                                    <li><strong>使用条款</strong>：遵循 TMDB API 使用条款和 Attribution 要求</li>
+                                    <li><strong>配置</strong>：需要配置 <code>TMDB_API_KEY</code> 环境变量</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1 text-sm">📰 新闻数据</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs ml-2">
+                                    <li><strong>来源</strong>：通过 RSS 订阅获取法国主流媒体新闻</li>
+                                    <li><strong>媒体</strong>：France 24、Le Monde、RFI、franceinfo、20 Minutes 等</li>
+                                    <li><strong>用途</strong>：仅用于学习目的，不用于商业用途</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1 text-sm">👤 用户数据</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs ml-2">
+                                    <li><strong>存储</strong>：Railway PostgreSQL 数据库</li>
+                                    <li><strong>内容</strong>：用户账号、词典历史、收藏、学习进度、AI对话记录、电影收藏、语用收藏等</li>
+                                    <li><strong>安全</strong>：密码使用 bcrypt 加密，遵循隐私保护原则</li>
+                                    <li><strong>同步</strong>：支持跨设备数据同步</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
