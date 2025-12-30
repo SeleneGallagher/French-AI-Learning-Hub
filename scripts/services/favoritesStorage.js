@@ -3,6 +3,8 @@
  * 使用localStorage存储，不会被清除历史清除
  */
 
+import { APIService } from './apiService.js';
+
 const FAVORITES_STORAGE_KEY = 'french_learning_favorites';
 
 /**

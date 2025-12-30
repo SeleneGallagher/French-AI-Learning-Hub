@@ -42,8 +42,10 @@ def parse_pos_from_line(line):
     # 例如：> à prép. [与定冠词 le, les 构成缩合冠词au, aux]
     # 例如：> abandonner v. t.
     # 例如：> abîmé， e a.
+    # 例如：> après prép. ; adv.
     
-    match = re.match(r'>\s*([^<>]+?)\s+([a-z]+\.(?:\s+[a-z]+\.?)*)\s*(?:\[([^\]]+)\])?', line)
+    # 更灵活的正则，匹配词和词性
+    match = re.match(r'>\s*([^<>]+?)\s+([a-zé]+\.(?:\s+[a-zé]+\.?)*(?:\s*;\s*[a-zé]+\.(?:\s+[a-zé]+\.?)*)?)\s*(?:\[([^\]]+)\])?', line)
     if not match:
         return None, None, None, None
     
@@ -52,15 +54,31 @@ def parse_pos_from_line(line):
     extra_info = match.group(3) if match.group(3) else None
     
     # 处理词形（可能包含变位形式，如"abîmé， e"）
-    # 提取主词形（逗号前的部分）
+    # 提取主词形（逗号前的部分，去除音标等）
     word = word_part.split('，')[0].split(',')[0].strip()
+    # 去除音标，如 "*hall [ol]" -> "hall"
+    word = re.sub(r'\s*\[[^\]]+\]', '', word).strip()
+    # 去除星号
+    word = word.lstrip('*')
+    
+    # 处理多个词性（用分号分隔）
+    pos_parts = [p.strip() for p in pos_part.split(';')]
+    primary_pos = pos_parts[0]
     
     # 解析词性
-    pos_info = POS_MAPPING.get(pos_part)
+    pos_info = POS_MAPPING.get(primary_pos)
     if not pos_info:
-        # 尝试匹配部分词性
+        # 尝试匹配部分词性（去掉空格）
+        normalized_pos = primary_pos.replace(' ', '')
         for key, value in POS_MAPPING.items():
-            if pos_part.startswith(key.split()[0]):
+            if normalized_pos == key.replace(' ', '') or primary_pos.startswith(key.split()[0]):
+                pos_info = value
+                break
+    
+    # 如果还是找不到，尝试模糊匹配
+    if not pos_info:
+        for key, value in POS_MAPPING.items():
+            if key.split('.')[0] in primary_pos:
                 pos_info = value
                 break
     
@@ -77,23 +95,32 @@ def extract_gender_from_pos(pos_str, word):
 def parse_definitions(lines, start_idx):
     """解析词条的释义部分"""
     definitions = []
-    current_def = None
     
     i = start_idx
     while i < len(lines):
         line = lines[i].strip()
         
-        # 如果遇到新的词条标记或空行后遇到新词条，停止
-        if line.startswith('<') or (line.startswith('>') and i > start_idx):
+        # 如果遇到新的词条标记，停止
+        if line.startswith('<'):
             break
         
-        # 如果遇到空行，跳过
+        # 如果遇到新词条（>开头），停止
+        if line.startswith('>') and i > start_idx:
+            break
+        
+        # 如果遇到空行，检查下一个非空行
         if not line:
+            # 检查下一行是否是新的词条
+            if i + 1 < len(lines):
+                next_line = lines[i + 1].strip()
+                if next_line.startswith('>') or next_line.startswith('<'):
+                    break
             i += 1
             continue
         
         # 匹配释义行：数字 [分类]释义:◇例句 翻译。
-        match = re.match(r'(\d+)\s*(?:\[([^\]]+)\])?\s*(.+?)(?:\s*$)', line)
+        # 或者：数字 释义:◇例句 翻译。
+        match = re.match(r'(\d+)\s*(?:\[([^\]]+)\])?\s*(.+?)$', line)
         if match:
             num = match.group(1)
             category = match.group(2) if match.group(2) else None
@@ -114,8 +141,9 @@ def parse_definitions(lines, start_idx):
                     def_obj['category'] = category
                 definitions.append(def_obj)
         else:
-            # 可能是续行（没有数字开头）
-            if definitions and line:
+            # 可能是续行（没有数字开头，但也不是新词条）
+            # 检查是否是纯文本续行
+            if definitions and line and not line.startswith('<') and not line.startswith('>'):
                 # 追加到最后一个定义
                 last_def = definitions[-1]
                 last_def['text'] += ' ' + line.strip()

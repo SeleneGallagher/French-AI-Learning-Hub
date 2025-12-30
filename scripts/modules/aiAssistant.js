@@ -217,28 +217,40 @@ async function clearAllMessages() {
 
 // 同步AI聊天记录（从服务器）
 window.syncAIChatHistory = function(serverChatHistory) {
-    if (!Array.isArray(serverChatHistory) || serverChatHistory.length === 0) return;
+    if (!Array.isArray(serverChatHistory) || serverChatHistory.length === 0) {
+        // 如果服务器没有记录，但本地有，则上传本地记录
+        if (chatHistory.length > 0) {
+            uploadChatHistoryToServer();
+        }
+        return;
+    }
     
     // 合并服务器和本地聊天记录
     const localHistory = chatHistory;
     const mergedHistory = [];
-    const seenConversations = new Set();
+    const seenMessages = new Set();
     
     // 先添加服务器记录
-    serverChatHistory.forEach(record => {
-        if (record.messages && Array.isArray(record.messages)) {
-            record.messages.forEach(msg => {
-                mergedHistory.push(msg);
-            });
-            if (record.conversation_id) {
-                seenConversations.add(record.conversation_id);
+    serverChatHistory.forEach(msg => {
+        if (msg.role && msg.content) {
+            const msgKey = `${msg.role}:${msg.content.substring(0, 50)}`;
+            if (!seenMessages.has(msgKey)) {
+                mergedHistory.push({
+                    role: msg.role,
+                    content: msg.content
+                });
+                seenMessages.add(msgKey);
             }
         }
     });
     
     // 再添加本地记录（避免重复）
     localHistory.forEach(msg => {
-        mergedHistory.push(msg);
+        const msgKey = `${msg.role}:${msg.content.substring(0, 50)}`;
+        if (!seenMessages.has(msgKey)) {
+            mergedHistory.push(msg);
+            seenMessages.add(msgKey);
+        }
     });
     
     // 限制长度并保存
