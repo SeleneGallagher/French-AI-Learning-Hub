@@ -13,6 +13,29 @@ load_dotenv()
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 
+# 全局错误处理器，确保所有错误都返回JSON
+@app.errorhandler(500)
+def internal_error(error):
+    response = jsonify({
+        'success': False,
+        'message': str(error) if error else 'Internal Server Error',
+        'type': 'server_error'
+    })
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Content-Type'] = 'application/json'
+    return response, 500
+
+@app.errorhandler(404)
+def not_found(error):
+    response = jsonify({
+        'success': False,
+        'message': 'Not Found',
+        'type': 'not_found'
+    })
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Content-Type'] = 'application/json'
+    return response, 404
+
 # 添加 public 目录到静态文件路径
 import os
 from flask import send_from_directory

@@ -91,10 +91,14 @@ def handler(request):
         response = requests.post(url, headers=headers, json=payload, stream=True)
         
         if response.status_code != 200:
-            error_data = response.json() if response.headers.get('content-type', '').startswith('application/json') else {}
+            try:
+                error_data = response.json() if response.headers.get('content-type', '').startswith('application/json') else {}
+                error_msg = error_data.get('msg') or error_data.get('message') or f'Coze API错误: {response.status_code}'
+            except:
+                error_msg = f'Coze API错误: {response.status_code}'
             return json_response({
                 'success': False,
-                'message': error_data.get('msg') or error_data.get('message') or f'Coze API错误: {response.status_code}'
+                'message': error_msg
             }, response.status_code)
         
         # 返回流式响应

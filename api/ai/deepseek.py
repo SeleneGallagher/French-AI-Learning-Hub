@@ -84,10 +84,16 @@ def handler(request):
         response = requests.post(url, headers=headers, json=payload, timeout=30)
         
         if response.status_code != 200:
-            error_data = response.json() if response.headers.get('content-type', '').startswith('application/json') else {}
+            try:
+                error_data = response.json() if response.headers.get('content-type', '').startswith('application/json') else {}
+                error_msg = error_data.get('error', {}).get('message') if isinstance(error_data.get('error'), dict) else str(error_data.get('error', ''))
+                if not error_msg:
+                    error_msg = f'DeepSeek API错误: {response.status_code}'
+            except:
+                error_msg = f'DeepSeek API错误: {response.status_code}'
             return json_response({
                 'success': False,
-                'message': error_data.get('error', {}).get('message') or f'DeepSeek API错误: {response.status_code}'
+                'message': error_msg
             }, response.status_code)
         
         result = response.json()
