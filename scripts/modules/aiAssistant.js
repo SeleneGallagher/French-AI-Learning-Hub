@@ -123,9 +123,12 @@ function addMessageToUI(role, content, isLoading = false) {
     messageDiv.className = `chat-message mb-4 ${role === 'user' ? 'flex justify-end' : 'flex justify-start'}`;
     
     const bubble = document.createElement('div');
-    bubble.className = `inline-block max-w-3xl p-4 rounded-lg ${
-        role === 'user' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-800'
-    }`;
+    bubble.className = 'inline-block max-w-3xl p-4 rounded-lg';
+    if (role === 'user') {
+        bubble.style.cssText = 'background-color: var(--primary-700); color: white;';
+    } else {
+        bubble.style.cssText = 'background-color: var(--gray-100); color: var(--gray-800);';
+    }
     
     bubble.innerHTML = formatMessage(content);
     
@@ -152,7 +155,7 @@ function formatMessage(content) {
     escaped = escaped
         .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.+?)\*/g, '<em>$1</em>')
-        .replace(/`(.+?)`/g, '<code class="bg-gray-200 px-1 rounded">$1</code>')
+        .replace(/`(.+?)`/g, '<code class="px-1 rounded" style="background-color: var(--gray-200);">$1</code>')
         .replace(/\n/g, '<br>');
     
     return escaped;
@@ -184,8 +187,8 @@ async function clearAllMessages() {
     const messagesEl = document.getElementById('chat-messages');
     if (messagesEl) {
         messagesEl.innerHTML = `
-            <div class="bg-blue-50 p-4 rounded-lg welcome-message">
-                <p class="text-gray-700">👋 你好！我是你的法语学习AI助手，可以帮你解答任何关于法语学习的问题。</p>
+            <div class="p-4 rounded-lg welcome-message" style="background-color: var(--primary-50);">
+                <p style="color: var(--gray-700);">👋 你好！我是你的法语学习AI助手，可以帮你解答任何关于法语学习的问题。</p>
             </div>
         `;
     }

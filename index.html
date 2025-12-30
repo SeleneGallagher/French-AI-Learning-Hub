@@ -187,21 +187,21 @@
             
             <!-- 实时新闻资讯模块 -->
             <section id="news" class="module hidden p-8">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800 md:block hidden">📰 实时新闻资讯</h2>
+                <h2 class="text-3xl font-bold mb-6 md:block hidden" style="color: var(--gray-800);">📰 实时新闻资讯</h2>
                 <div id="news-loading" class="text-center py-8">
-                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                    <p class="mt-2 text-gray-600">正在加载新闻...</p>
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2" style="border-color: var(--primary-700);"></div>
+                    <p class="mt-2" style="color: var(--gray-600);">正在加载新闻...</p>
                 </div>
-                <div id="news-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"></div>
+                <div id="news-error" class="hidden px-4 py-3 rounded mb-4" style="background-color: var(--error); background-color: rgba(194, 65, 12, 0.1); border: 1px solid var(--error); color: var(--error);"></div>
                 <div id="news-list" class="space-y-6"></div>
             </section>
 
             <!-- 热门影视推荐模块 -->
             <section id="movies" class="module hidden p-8">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800 md:block hidden">🎬 热门影视推荐</h2>
+                <h2 class="text-3xl font-bold mb-6 md:block hidden" style="color: var(--gray-800);">🎬 热门影视推荐</h2>
                 <div id="movies-loading" class="text-center py-8">
-                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                    <p class="mt-2 text-gray-600">正在加载影视数据...</p>
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2" style="border-color: var(--primary-700);"></div>
+                    <p class="mt-2" style="color: var(--gray-600);">正在加载影视数据...</p>
                 </div>
                 <div id="movies-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"></div>
                 <div id="movies-grid" class="grid gap-4" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));"></div>
@@ -410,22 +410,23 @@
             <!-- AI助手模块 -->
             <section id="ai-assistant" class="module hidden p-8 flex flex-col h-full">
                 <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-3xl font-bold text-gray-800 md:block hidden">🤖 AI助手</h2>
-                    <button id="chat-clear-btn" class="text-sm text-gray-600 hover:text-gray-800 px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                    <h2 class="text-3xl font-bold md:block hidden" style="color: var(--gray-800);">🤖 AI助手</h2>
+                    <button id="chat-clear-btn" class="text-sm px-3 py-1 rounded transition-colors" style="color: var(--gray-600); border: 1px solid var(--gray-300);">
                         清除对话
                     </button>
                 </div>
-                <div id="chat-container" class="flex-1 bg-white rounded-lg shadow-lg p-6 mb-4 overflow-y-auto" style="max-height: calc(100vh - 250px);">
+                <div id="chat-container" class="flex-1 card p-6 mb-4 overflow-y-auto" style="max-height: calc(100vh - 250px);">
                     <div id="chat-messages" class="space-y-4">
-                        <div class="bg-blue-50 p-4 rounded-lg welcome-message">
-                            <p class="text-gray-700">👋 你好！我是你的法语学习AI助手，可以帮你解答任何关于法语学习的问题。</p>
+                        <div class="p-4 rounded-lg welcome-message" style="background-color: var(--primary-50);">
+                            <p style="color: var(--gray-700);">👋 你好！我是你的法语学习AI助手，可以帮你解答任何关于法语学习的问题。</p>
                         </div>
                     </div>
                 </div>
                 <div class="flex gap-4">
                     <input type="text" id="chat-input" placeholder="输入你的问题..." 
-                           class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <button id="chat-send-btn" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
+                           class="flex-1 px-4 py-2 rounded transition-all focus:outline-none"
+                           style="border: 1px solid var(--gray-300);">
+                    <button id="chat-send-btn" class="px-6 py-2 rounded transition-colors" style="background-color: var(--primary-700); color: white;">
                         发送
                     </button>
                 </div>

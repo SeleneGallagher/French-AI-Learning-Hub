@@ -82,7 +82,8 @@ function toggleFavoritesView() {
         isInFavoritesView = false;
         if (viewFavoritesBtn) {
             viewFavoritesBtn.innerHTML = '<span>⭐</span><span>收藏夹</span>';
-            viewFavoritesBtn.className = 'bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition-colors text-sm flex items-center gap-1';
+            viewFavoritesBtn.className = 'px-4 py-2 rounded transition-colors text-sm flex items-center gap-1';
+            viewFavoritesBtn.style.cssText = 'background-color: var(--accent-600); color: white;';
         }
         if (expressionsList) expressionsList.classList.remove('hidden');
         if (favoritesSection) favoritesSection.classList.add('hidden');
@@ -92,7 +93,8 @@ function toggleFavoritesView() {
         isInFavoritesView = true;
         if (viewFavoritesBtn) {
             viewFavoritesBtn.innerHTML = '<span>←</span><span>返回</span>';
-            viewFavoritesBtn.className = 'bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors text-sm flex items-center gap-1';
+            viewFavoritesBtn.className = 'px-4 py-2 rounded transition-colors text-sm flex items-center gap-1';
+            viewFavoritesBtn.style.cssText = 'background-color: var(--gray-500); color: white;';
         }
         if (expressionsList) expressionsList.classList.add('hidden');
         if (favoritesSection) favoritesSection.classList.remove('hidden');
@@ -213,7 +215,10 @@ async function loadExpressions() {
 
 function createExpressionCard(expr, isFavView) {
     const card = document.createElement('div');
-    card.className = `bg-white rounded-lg shadow p-6 mb-4 ${isFavView ? 'border-l-4 border-yellow-400' : ''}`;
+    card.className = 'card p-6 mb-4';
+    if (isFavView) {
+        card.style.borderLeft = '4px solid var(--accent-500)';
+    }
     
     const isFav = isFavorite(expr.id);
     
@@ -282,7 +287,7 @@ function loadFavorites() {
     favoritesList.innerHTML = '';
     
     if (favorites.length === 0) {
-        favoritesList.innerHTML = '<p class="text-gray-500 text-center py-8">收藏夹为空</p>';
+        favoritesList.innerHTML = '<p class="text-center py-8" style="color: var(--gray-500);">收藏夹为空</p>';
         return;
     }
     
