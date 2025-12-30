@@ -87,8 +87,9 @@ export class APIService {
     }
     
     // ========== 电影相关 ==========
-    static async getMovies() {
-        return this.request('/movies/list');
+    static async getMovies(refresh = false) {
+        const url = refresh ? '/movies/list?refresh=true' : '/movies/list';
+        return this.request(url);
     }
     
     // ========== 词典相关 ==========

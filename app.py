@@ -65,6 +65,13 @@ try:
     from api.config import handler as config_handler
     from api.ai.coze import handler as coze_handler
     from api.ai.deepseek import handler as deepseek_handler
+    try:
+        from api.admin.users import handler as admin_users_handler
+        from api.admin.registration_codes import handler as admin_codes_handler
+    except ImportError as admin_error:
+        print(f"警告: 无法导入 admin模块: {admin_error}")
+        admin_users_handler = None
+        admin_codes_handler = None
 except ImportError as import_error:
     import traceback
     traceback.print_exc()
@@ -78,6 +85,7 @@ except ImportError as import_error:
     placeholder_handler = create_placeholder_handler(error_msg)
     login_handler = register_handler = news_handler = movies_handler = dict_handler = config_handler = placeholder_handler
     coze_handler = deepseek_handler = placeholder_handler
+    admin_users_handler = placeholder_handler
 
 # 适配函数：将Flask request转换为Vercel格式
 class VercelRequest:
@@ -105,6 +113,11 @@ class VercelRequest:
             import json
             return json.dumps(self._json)
         return ''
+    
+    @property
+    def queryStringParameters(self):
+        """提供queryStringParameters属性，用于获取URL参数"""
+        return dict(self.args)
 
 def adapt_handler(handler_func):
     """适配Vercel handler为Flask路由"""
@@ -234,6 +247,24 @@ def config():
     if request.method == 'OPTIONS':
         return '', 200
     return adapt_handler(config_handler)()
+
+@app.route('/api/admin/users', methods=['GET', 'OPTIONS'])
+def admin_users():
+    if request.method == 'OPTIONS':
+        return '', 200
+    if admin_users_handler:
+        return adapt_handler(admin_users_handler)()
+    else:
+        return jsonify({'success': False, 'message': 'Admin handler not loaded'}), 500
+
+@app.route('/api/admin/registration-codes', methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'])
+def admin_codes():
+    if request.method == 'OPTIONS':
+        return '', 200
+    if admin_codes_handler:
+        return adapt_handler(admin_codes_handler)()
+    else:
+        return jsonify({'success': False, 'message': 'Admin codes handler not loaded'}), 500
 
 # 静态文件路由
 @app.route('/', defaults={'path': ''})

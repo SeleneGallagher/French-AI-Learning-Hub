@@ -1,0 +1,252 @@
+/**
+ * 管理员模块
+ */
+let adminPassword = '';
+
+export function initAdmin() {
+    // 管理员入口按钮
+    const adminAccessBtn = document.getElementById('admin-access-btn');
+    if (adminAccessBtn) {
+        adminAccessBtn.addEventListener('click', () => {
+            window.location.hash = '#admin';
+        });
+    }
+    
+    // 管理员登录
+    const adminLoginBtn = document.getElementById('admin-login-btn');
+    const adminPasswordInput = document.getElementById('admin-password');
+    const adminLoginError = document.getElementById('admin-login-error');
+    
+    if (adminLoginBtn && adminPasswordInput) {
+        adminLoginBtn.addEventListener('click', handleAdminLogin);
+        adminPasswordInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleAdminLogin();
+            }
+        });
+    }
+    
+    // 刷新按钮
+    const adminRefreshBtn = document.getElementById('admin-refresh-btn');
+    if (adminRefreshBtn) {
+        adminRefreshBtn.addEventListener('click', loadUsers);
+    }
+    
+    // 标签页切换
+    const adminTabUsers = document.getElementById('admin-tab-users');
+    const adminTabCodes = document.getElementById('admin-tab-codes');
+    const adminUsersTab = document.getElementById('admin-users-tab');
+    const adminCodesTab = document.getElementById('admin-codes-tab');
+    
+    if (adminTabUsers && adminTabCodes) {
+        adminTabUsers.addEventListener('click', () => switchTab('users'));
+        adminTabCodes.addEventListener('click', () => switchTab('codes'));
+    }
+    
+    // 注册码管理
+    const adminAddCodeBtn = document.getElementById('admin-add-code-btn');
+    const adminAddCodeForm = document.getElementById('admin-add-code-form');
+    const adminSaveCodeBtn = document.getElementById('admin-save-code-btn');
+    const adminCancelCodeBtn = document.getElementById('admin-cancel-code-btn');
+    const adminRefreshCodesBtn = document.getElementById('admin-refresh-codes-btn');
+    
+    if (adminAddCodeBtn && adminAddCodeForm) {
+        adminAddCodeBtn.addEventListener('click', () => {
+            adminAddCodeForm.classList.remove('hidden');
+        });
+    }
+    
+    if (adminCancelCodeBtn && adminAddCodeForm) {
+        adminCancelCodeBtn.addEventListener('click', () => {
+            adminAddCodeForm.classList.add('hidden');
+            document.getElementById('new-code-input').value = '';
+            document.getElementById('new-code-unlimited').checked = false;
+            document.getElementById('new-code-active').checked = true;
+            const errorEl = document.getElementById('admin-code-error');
+            if (errorEl) errorEl.classList.add('hidden');
+        });
+    }
+    
+    if (adminSaveCodeBtn) {
+        adminSaveCodeBtn.addEventListener('click', handleCreateCode);
+    }
+    
+    if (adminRefreshCodesBtn) {
+        adminRefreshCodesBtn.addEventListener('click', loadCodes);
+    }
+}
+
+function switchTab(tab) {
+    const adminTabUsers = document.getElementById('admin-tab-users');
+    const adminTabCodes = document.getElementById('admin-tab-codes');
+    const adminUsersTab = document.getElementById('admin-users-tab');
+    const adminCodesTab = document.getElementById('admin-codes-tab');
+    
+    if (tab === 'users') {
+        if (adminTabUsers) {
+            adminTabUsers.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            adminTabUsers.classList.remove('text-gray-600');
+        }
+        if (adminTabCodes) {
+            adminTabCodes.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            adminTabCodes.classList.add('text-gray-600');
+        }
+        if (adminUsersTab) adminUsersTab.classList.remove('hidden');
+        if (adminCodesTab) adminCodesTab.classList.add('hidden');
+    } else {
+        if (adminTabCodes) {
+            adminTabCodes.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            adminTabCodes.classList.remove('text-gray-600');
+        }
+        if (adminTabUsers) {
+            adminTabUsers.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            adminTabUsers.classList.add('text-gray-600');
+        }
+        if (adminCodesTab) adminCodesTab.classList.remove('hidden');
+        if (adminUsersTab) adminUsersTab.classList.add('hidden');
+        loadCodes();
+    }
+}
+
+async function handleAdminLogin() {
+    const adminPasswordInput = document.getElementById('admin-password');
+    const adminLoginError = document.getElementById('admin-login-error');
+    const adminLoginBtn = document.getElementById('admin-login-btn');
+    
+    if (!adminPasswordInput || !adminLoginError || !adminLoginBtn) return;
+    
+    const password = adminPasswordInput.value.trim();
+    
+    if (!password) {
+        showAdminError(adminLoginError, '请输入管理员密码');
+        return;
+    }
+    
+    try {
+        adminLoginBtn.disabled = true;
+        adminLoginBtn.textContent = '登录中...';
+        adminLoginError.classList.add('hidden');
+        
+        // 保存管理员密码（用于后续API调用）
+        adminPassword = password;
+        
+        // 尝试加载用户列表来验证密码
+        await loadUsers();
+        
+        // 登录成功，显示用户列表
+        const adminLoginSection = document.getElementById('admin-login-section');
+        const adminUsersSection = document.getElementById('admin-users-section');
+        
+        if (adminLoginSection) {
+            adminLoginSection.classList.add('hidden');
+        }
+        if (adminUsersSection) {
+            adminUsersSection.classList.remove('hidden');
+        }
+        
+        // 默认显示用户标签页
+        switchTab('users');
+        
+    } catch (error) {
+        showAdminError(adminLoginError, error.message || '登录失败');
+        adminPassword = '';
+    } finally {
+        adminLoginBtn.disabled = false;
+        adminLoginBtn.textContent = '登录';
+    }
+}
+
+async function loadUsers() {
+    const adminUsersList = document.getElementById('admin-users-list');
+    const adminUsersLoading = document.getElementById('admin-users-loading');
+    const adminUsersCount = document.getElementById('admin-users-count');
+    const adminLoginError = document.getElementById('admin-login-error');
+    
+    if (!adminUsersList || !adminUsersLoading) return;
+    
+    if (!adminPassword) {
+        if (adminLoginError) {
+            showAdminError(adminLoginError, '请先登录');
+        }
+        return;
+    }
+    
+    try {
+        adminUsersLoading.classList.remove('hidden');
+        adminUsersList.innerHTML = '';
+        
+        const response = await fetch('/api/admin/users', {
+            method: 'GET',
+            headers: {
+                'X-Admin-Password': adminPassword
+            }
+        });
+        
+        const data = await response.json();
+        
+        if (!data.success) {
+            throw new Error(data.message || '获取用户列表失败');
+        }
+        
+        // 更新用户数量
+        if (adminUsersCount) {
+            adminUsersCount.textContent = `共 ${data.count} 个用户`;
+        }
+        
+        // 显示用户列表
+        if (data.users && data.users.length > 0) {
+            const usersHtml = data.users.map((user, index) => {
+                const createdDate = user.created_at ? new Date(user.created_at).toLocaleString('zh-CN') : '未知';
+                const lastLoginDate = user.last_login ? new Date(user.last_login).toLocaleString('zh-CN') : '从未登录';
+                const statusBadge = user.is_active 
+                    ? '<span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">活跃</span>'
+                    : '<span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs">已禁用</span>';
+                
+                return `
+                    <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="text-sm text-gray-500">#${index + 1}</span>
+                                    <span class="font-semibold text-gray-800">${escapeHtml(user.username)}</span>
+                                    ${statusBadge}
+                                </div>
+                                <div class="text-xs text-gray-500 space-y-1">
+                                    <div>用户ID: <code class="bg-gray-100 px-1 rounded">${user.id}</code></div>
+                                    <div>注册时间: ${createdDate}</div>
+                                    <div>最后登录: ${lastLoginDate}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            adminUsersList.innerHTML = usersHtml;
+        } else {
+            adminUsersList.innerHTML = '<div class="text-center py-8 text-gray-500">暂无用户</div>';
+        }
+        
+    } catch (error) {
+        if (adminLoginError) {
+            showAdminError(adminLoginError, error.message || '加载用户列表失败');
+        }
+        adminUsersList.innerHTML = '<div class="text-center py-8 text-red-500">加载失败</div>';
+    } finally {
+        adminUsersLoading.classList.add('hidden');
+    }
+}
+
+function showAdminError(element, message) {
+    if (element) {
+        element.textContent = message;
+        element.classList.remove('hidden');
+    }
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+

@@ -703,7 +703,7 @@
                                 <strong>数据同步</strong>：支持跨设备数据同步，用户数据（词典历史、收藏、学习进度、AI对话记录等）存储在云端 PostgreSQL 数据库
                             </p>
                             <p class="text-gray-700">
-                                <strong>词典数据</strong>：基于 French-Dictionary 项目，包含完整的分词性词典文件（名词、动词、形容词、副词等），总计超过 11 万词条
+                                <strong>词典数据</strong>：公共法语学习词典（从 <a href="https://forum.freemdict.com/t/topic/42143/12" target="_blank" class="text-blue-600 hover:underline">FreeMDict 论坛</a> 下载），包含完整的分词性词典文件（名词、动词、形容词、副词等），总计超过 11 万词条
                             </p>
                             <p class="text-gray-700">
                                 <strong>AI 能力</strong>：集成 DeepSeek API（关键词提取、语用生成）和 Coze API（智能对话助手），提供流式响应体验
@@ -750,12 +750,10 @@
                             <div>
                                 <h4 class="font-semibold text-gray-800 mb-2">📚 词典数据</h4>
                                 <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                                    <li><strong>项目</strong>：French-Dictionary - https://github.com/hbenbel/French-Dictionary</li>
-                                    <li><strong>数据来源</strong>：基于 Wiktionary 的完整法语词典</li>
-                                    <li><strong>数据规模</strong>：超过 11 万词条，分词性存储（名词、动词、形容词等）</li>
-                                    <li><strong>许可证</strong>：MIT License (详见项目 LICENSE-French-Dictionary 文件)</li>
-                                    <li><strong>版权</strong>：Copyright (c) 2021 Hussem Ben Belgacem</li>
+                                    <li><strong>数据来源</strong>：公共法语学习词典（从 <a href="https://forum.freemdict.com/t/topic/42143/12" target="_blank" class="text-blue-600 hover:underline">FreeMDict 论坛</a> 下载）</li>
+                                    <li><strong>数据规模</strong>：超过 11 万词条，分词性存储（名词、动词、形容词、副词、连词、介词、代词、限定词）</li>
                                     <li><strong>文件格式</strong>：JSON 格式，存储在 <code>public/data/dicts/</code> 目录</li>
+                                    <li><strong>内容</strong>：包含词性、性别、变位、定义、例句等完整信息</li>
                                 </ul>
                             </div>
                             
@@ -878,11 +876,9 @@
                             <div>
                                 <h4 class="font-semibold text-gray-800 mb-1 text-sm">📚 词典数据</h4>
                                 <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs ml-2">
-                                    <li><strong>来源</strong>：French-Dictionary (MIT License)，基于 Wiktionary</li>
+                                    <li><strong>来源</strong>：公共法语学习词典（从 <a href="https://forum.freemdict.com/t/topic/42143/12" target="_blank" class="text-blue-600 hover:underline">FreeMDict 论坛</a> 下载）</li>
                                     <li><strong>内容</strong>：分词性词典文件（adj.json, adv.json, conj.json, det.json, noun.json, prep.json, pron.json, verb.json）</li>
                                     <li><strong>规模</strong>：超过 11 万词条，包含词性、性别、变位、定义、例句等信息</li>
-                                    <li><strong>许可证</strong>：MIT License（详见项目 LICENSE-French-Dictionary 文件）</li>
-                                    <li><strong>版权</strong>：Copyright (c) 2021 Hussem Ben Belgacem</li>
                                 </ul>
                             </div>
                             <div>
@@ -911,6 +907,127 @@
                                     <li><strong>同步</strong>：支持跨设备数据同步</li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 管理员入口 -->
+                    <div class="bg-white rounded-lg shadow p-6 mt-6 border-t-2 border-gray-200">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-1">🔐 管理员</h3>
+                                <p class="text-sm text-gray-600">查看和管理所有已注册用户信息</p>
+                            </div>
+                            <button id="admin-access-btn" class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                                进入管理
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 管理员模块 -->
+            <section id="admin" class="module hidden p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 md:block hidden">🔐 管理员面板</h2>
+                <div class="space-y-6">
+                    <!-- 管理员登录 -->
+                    <div id="admin-login-section" class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-bold mb-4">管理员登录</h3>
+                        <div class="space-y-4 max-w-md">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">管理员密码</label>
+                                <input type="password" id="admin-password" placeholder="请输入管理员密码" 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div id="admin-login-error" class="hidden text-sm text-red-600"></div>
+                            <button id="admin-login-btn" class="w-full bg-gray-700 text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors">
+                                登录
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 用户列表 -->
+                    <div id="admin-users-section" class="hidden space-y-6">
+                        <!-- 标签页切换 -->
+                        <div class="bg-white rounded-lg shadow p-4">
+                            <div class="flex gap-4 border-b border-gray-200">
+                                <button id="admin-tab-users" class="px-4 py-2 font-medium text-blue-600 border-b-2 border-blue-600 transition-colors">
+                                    用户管理
+                                </button>
+                                <button id="admin-tab-codes" class="px-4 py-2 font-medium text-gray-600 hover:text-blue-600 transition-colors">
+                                    注册码管理
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- 用户列表 -->
+                        <div id="admin-users-tab" class="bg-white rounded-lg shadow p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold">用户列表</h3>
+                                <div class="flex items-center gap-4">
+                                    <span id="admin-users-count" class="text-sm text-gray-600">共 0 个用户</span>
+                                    <button id="admin-refresh-btn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm">
+                                        刷新
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="admin-users-loading" class="hidden text-center py-8">
+                                <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                                <p class="mt-2 text-gray-600">加载中...</p>
+                            </div>
+                            <div id="admin-users-list" class="space-y-2"></div>
+                        </div>
+                        
+                        <!-- 注册码列表 -->
+                        <div id="admin-codes-tab" class="hidden bg-white rounded-lg shadow p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold">注册码列表</h3>
+                                <div class="flex items-center gap-4">
+                                    <span id="admin-codes-count" class="text-sm text-gray-600">共 0 个注册码</span>
+                                    <button id="admin-add-code-btn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm">
+                                        + 添加注册码
+                                    </button>
+                                    <button id="admin-refresh-codes-btn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm">
+                                        刷新
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- 添加注册码表单 -->
+                            <div id="admin-add-code-form" class="hidden mb-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                                <h4 class="font-semibold mb-3">添加新注册码</h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">注册码</label>
+                                        <input type="text" id="new-code-input" placeholder="输入注册码" 
+                                               class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <label class="flex items-center gap-2">
+                                            <input type="checkbox" id="new-code-unlimited" class="rounded">
+                                            <span class="text-sm text-gray-700">永久使用（可多次使用）</span>
+                                        </label>
+                                        <label class="flex items-center gap-2">
+                                            <input type="checkbox" id="new-code-active" checked class="rounded">
+                                            <span class="text-sm text-gray-700">立即激活</span>
+                                        </label>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <button id="admin-save-code-btn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm">
+                                            保存
+                                        </button>
+                                        <button id="admin-cancel-code-btn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition-colors text-sm">
+                                            取消
+                                        </button>
+                                    </div>
+                                    <div id="admin-code-error" class="hidden text-sm text-red-600"></div>
+                                </div>
+                            </div>
+                            
+                            <div id="admin-codes-loading" class="hidden text-center py-8">
+                                <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                                <p class="mt-2 text-gray-600">加载中...</p>
+                            </div>
+                            <div id="admin-codes-list" class="space-y-2"></div>
                         </div>
                     </div>
                 </div>

@@ -9,6 +9,7 @@ import { initExpressions } from './modules/expressions.js';
 import { initAIAssistant } from './modules/aiAssistant.js';
 import { initLogin } from './modules/login.js';
 import { initAbout } from './modules/about.js';
+import { initAdmin } from './modules/admin.js';
 import { AuthService } from './services/auth.js';
 import { Logger } from './utils/helpers.js';
 
@@ -118,6 +119,12 @@ async function switchModule(moduleName) {
             navLink.classList.add('active');
         }
 
+        // 立即更新移动端顶部标题栏（在内容加载之前）
+        updateMobileHeader(moduleName);
+        
+        // 滚动到顶部
+        window.scrollTo(0, 0);
+
         // 初始化模块（如果尚未初始化）
         if (!initializedModules.has(moduleName)) {
             try {
@@ -129,12 +136,6 @@ async function switchModule(moduleName) {
                 showModuleError(moduleName, error);
             }
         }
-        
-        // 滚动到顶部
-        window.scrollTo(0, 0);
-        
-        // 更新移动端顶部标题栏
-        updateMobileHeader(moduleName);
     } else {
         // 默认显示欢迎页
         Logger.warn(`模块 "${moduleName}" 不存在，切换到欢迎页`);
@@ -161,7 +162,8 @@ function updateMobileHeader(moduleName) {
         'expressions': { text: '语用积累', emoji: '💬', showBack: false, showHome: true },
         'ai-assistant': { text: 'AI助手', emoji: '🤖', showBack: false, showHome: true },
         'login': { text: '我的', emoji: '👤', showBack: false, showHome: true },
-        'about': { text: '关于', emoji: 'ℹ️', showBack: true, showHome: false }
+        'about': { text: '关于', emoji: 'ℹ️', showBack: true, showHome: false },
+        'admin': { text: '管理员面板', emoji: '🔐', showBack: true, showHome: true }
     };
     
     // 检查是否在移动端登录/注册页面
@@ -289,6 +291,10 @@ async function initModule(moduleName) {
             case 'about':
                 Logger.debug('初始化关于模块');
                 initAbout();
+                break;
+            case 'admin':
+                Logger.debug('初始化管理员模块');
+                initAdmin();
                 break;
             default:
                 Logger.warn(`未知模块: ${moduleName}`);

@@ -106,24 +106,20 @@ python -c "import secrets; print(secrets.token_hex(32))"
 
 ### 词典数据导入（可选）
 
-项目支持使用 [French-Dictionary](https://github.com/hbenbel/French-Dictionary) 提供的完整法语词典数据。
+项目使用公共法语学习词典数据，可从 [FreeMDict 论坛](https://forum.freemdict.com/t/topic/42143/12) 下载。
 
 **使用步骤：**
-1. 下载或克隆 French-Dictionary 仓库：
+1. 从 [FreeMDict 论坛](https://forum.freemdict.com/t/topic/42143/12) 下载公共法语学习词典文件
+2. 将词典文件（`公共法语学习词典.txt`）放置在项目根目录或 `scripts/tools/` 目录
+3. 运行转换工具生成 JSON 文件：
    ```bash
-   git clone https://github.com/hbenbel/French-Dictionary.git
+   python scripts/tools/convert_public_dict.py
    ```
-2. 将 `dictionary` 文件夹复制到项目根目录（或放在项目同级目录）
-3. 运行导入工具生成 JSON 文件：
-   ```bash
-   python scripts/tools/import_french_dict.py
-   ```
-4. 生成的词典文件（8个JSON文件，总计约208MB）会自动被词典模块加载
+4. 生成的词典文件（8个JSON文件）会自动被词典模块加载
 
 **注意：** 
-- French-Dictionary 使用 MIT License，使用时请保留原始许可证文件（项目已包含 `LICENSE-French-Dictionary`）
 - 词典文件较大，已添加到 `.gitignore`，需要在本地生成
-- 导入工具会保留所有原始信息：词性、性别、变位、标签等
+- 转换工具会保留所有原始信息：词性、性别、变位、定义、例句等
 - 词典文件存储在 `public/data/dicts/` 目录，通过静态文件服务提供
 
 ## 📁 项目结构
@@ -283,7 +279,7 @@ python3 scripts/server/update_data.py
 
 本项目仅供学习使用。
 
-词典数据来源于 [French-Dictionary](https://github.com/hbenbel/French-Dictionary)，使用 MIT License。
+词典数据来源于公共法语学习词典，从 [FreeMDict 论坛](https://forum.freemdict.com/t/topic/42143/12) 下载。
 
 ## 🤝 贡献
 

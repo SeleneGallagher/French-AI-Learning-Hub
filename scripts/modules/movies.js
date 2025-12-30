@@ -286,30 +286,77 @@ export async function initMovies() {
 }
 
 // 加载内容 - 通过后端API
-async function loadContent(excludeHistory = []) {
+async function loadContent(forceRefresh = false) {
     const shownIds = getShownItems();
-    // 合并当前已显示和历史记录，避免重复显示
-    const allExcludedIds = [...new Set([...shownIds, ...excludeHistory])];
     
     try {
-        // 通过后端API获取电影数据
-        const response = await APIService.getMovies();
+        // 通过后端API获取电影数据（刷新时传递refresh参数）
+        const response = await APIService.getMovies(forceRefresh);
         if (response.success && response.data) {
-            allMovies = response.data.map(m => ({
-                id: m.id,
-                title: m.title || m.name,
-                originalTitle: m.original_title || m.original_name,
-                year: m.release_date ? new Date(m.release_date).getFullYear() : (m.first_air_date ? new Date(m.first_air_date).getFullYear() : ''),
-                rating: m.vote_average || 0,
-                poster: m.poster_path || '',
-                plot: m.overview || '',
-                fullPlot: m.overview || '',
-                type: m.media_type || 'movie',
-                translatedPlot: ''
+            // 过滤掉已显示的ID，避免重复显示
+            const filtered = response.data.filter(m => {
+                const itemId = `${m.media_type || 'movie'}_${m.id}`;
+                return !shownIds.includes(itemId);
+            });
+            
+            // 如果过滤后没有足够的数据，使用所有数据（避免空列表）
+            const dataToUse = filtered.length > 0 ? filtered : response.data;
+            
+            // 处理数据，补充完整信息
+            allMovies = await Promise.all(dataToUse.map(async (m) => {
+                const itemType = m.media_type || 'movie';
+                const baseItem = {
+                    id: m.id,
+                    title: m.title || m.name,
+                    originalTitle: m.original_title || m.original_name || '',
+                    year: m.release_date ? new Date(m.release_date).getFullYear() : (m.first_air_date ? new Date(m.first_air_date).getFullYear() : ''),
+                    rating: m.vote_average || 0,
+                    poster: m.poster_path || '',
+                    plot: m.overview || '',
+                    fullPlot: m.overview || '',
+                    type: itemType,
+                    translatedPlot: '',
+                    // 从基础数据中提取类型信息
+                    genres: (m.genre_ids || []).map(id => genreMap[id]).filter(Boolean).slice(0, 3),
+                    director: '', // 需要从详情API获取
+                    tagline: m.tagline || '', // 如果有的话
+                    runtime: m.runtime || 0,
+                    mediaInfo: ''
+                };
+                
+                // 如果没有类型，设置默认值
+                if (itemType === 'movie' && baseItem.genres.length === 0) {
+                    baseItem.genres = ['法语电影'];
+                } else if (itemType === 'tv' && baseItem.genres.length === 0) {
+                    baseItem.genres = ['法语剧集'];
+                }
+                
+                // 处理简介截断
+                if (baseItem.plot.length > 150) {
+                    baseItem.plot = baseItem.plot.substring(0, 150) + '...';
+                }
+                
+                // 处理评语截断
+                if (baseItem.tagline && baseItem.tagline.length > 60) {
+                    baseItem.tagline = baseItem.tagline.substring(0, 60) + '...';
+                }
+                
+                // 处理时长信息
+                if (itemType === 'movie' && baseItem.runtime) {
+                    baseItem.mediaInfo = `${baseItem.runtime}分钟`;
+                } else if (itemType === 'tv' && m.number_of_seasons) {
+                    const seasons = m.number_of_seasons || 0;
+                    const episodes = m.number_of_episodes || 0;
+                    baseItem.mediaInfo = seasons > 0 ? `${seasons}季${episodes > 0 ? ' · ' + episodes + '集' : ''}` : '';
+                }
+                
+                return baseItem;
             }));
+            
             renderItems(allMovies);
             translateAllPlots();
             saveCache(allMovies);
+            saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
             return;
         }
     } catch (error) {
@@ -326,7 +373,7 @@ async function loadContent(excludeHistory = []) {
         fetchOtherTV()
     ]);
     
-    const filterShown = (items, type) => items.filter(i => !allExcludedIds.includes(`${type}_${i.id}`));
+    const filterShown = (items, type) => items.filter(i => !shownIds.includes(`${type}_${i.id}`));
     
     const processed = [];
     
@@ -362,7 +409,7 @@ async function loadContent(excludeHistory = []) {
     allMovies = processed;
     
     saveCache(allMovies);
-    saveShownItems([...allExcludedIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
+    saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
     
     renderItems(allMovies);
     translateAllPlots();
@@ -444,47 +491,23 @@ function addControlButtons() {
 
 // 刷新内容
 async function refreshContent() {
-    console.log('开始刷新影视内容');
     const loadingEl = document.getElementById('movies-loading');
     const gridEl = document.getElementById('movies-grid');
     const errorEl = document.getElementById('movies-error');
-    
-    // 获取当前已显示的ID列表
-    const currentShownIds = getShownItems();
-    
-    // 清除缓存，强制重新获取
-    localStorage.removeItem(CACHE_KEY);
-    
-    // 保存当前已显示的ID到历史记录（用于避免短时间内重复显示）
-    const historyKey = 'movies_shown_history';
-    let history = [];
-    try {
-        const stored = sessionStorage.getItem(historyKey);
-        if (stored) {
-            history = JSON.parse(stored);
-        }
-    } catch (e) {
-        console.warn('读取历史记录失败:', e);
-    }
-    
-    // 将当前显示的ID添加到历史记录（保留最近50个）
-    const newHistory = [...currentShownIds, ...history].slice(0, 50);
-    try {
-        sessionStorage.setItem(historyKey, JSON.stringify(newHistory));
-    } catch (e) {
-        console.warn('保存历史记录失败:', e);
-    }
-    
-    // 清除当前已显示的项目记录
-    sessionStorage.removeItem(SHOWN_KEY);
     
     if (loadingEl) showLoading(loadingEl);
     if (errorEl) errorEl.classList.add('hidden');
     if (gridEl) gridEl.innerHTML = '';
     
-    // 重新加载内容（loadContent会使用历史记录过滤）
+    // 清除缓存，强制重新获取
+    localStorage.removeItem(CACHE_KEY);
+    
+    // 清除当前已显示的项目记录，这样loadContent会基于新的session状态过滤
+    sessionStorage.removeItem(SHOWN_KEY);
+    
     try {
-        await loadContent(newHistory);
+        // 刷新时强制从API获取，跳过本地文件，并传递refresh参数
+        await loadContent(true);
     } catch (error) {
         console.error('刷新失败:', error);
         if (errorEl) {
