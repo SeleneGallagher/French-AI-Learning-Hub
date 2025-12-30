@@ -182,6 +182,8 @@ def movies_list():
 def dictionary_history():
     if request.method == 'OPTIONS':
         return '', 200
+    if dict_handler is None:
+        return jsonify({'success': False, 'message': 'Dictionary handler not loaded'}), 500
     return adapt_handler(dict_handler)()
 
 @app.route('/api/ai/coze', methods=['POST', 'OPTIONS'])
