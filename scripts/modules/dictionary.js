@@ -4,6 +4,7 @@
  */
 
 import { debounce } from '../utils/helpers.js';
+import { APIService } from '../services/apiService.js';
 
 const DICT_STORAGE_KEY = 'dict_data';
 const HISTORY_KEY = 'dict_history';
@@ -274,18 +275,33 @@ async function loadDictionary() {
                 dictMetadata.totalCount = 0;
                 
                 loadedFiles.forEach(({ pos, data }) => {
-                    const words = data.words || [];
+                    if (!data || !data.words) {
+                        console.warn(`警告: ${pos}.json 文件格式不正确，缺少 words 字段`);
+                        return;
+                    }
+                    const words = Array.isArray(data.words) ? data.words : [];
+                    if (words.length === 0) {
+                        console.warn(`警告: ${pos}.json 文件没有词条`);
+                        return;
+                    }
                     dictWords.push(...words);
                     dictMetadata.posCounts[pos] = words.length;
                     dictMetadata.totalCount += words.length;
                 });
+                
+                // 检查是否有词条
+                if (dictWords.length === 0) {
+                    console.warn('警告: 所有词典文件都没有词条，尝试加载旧格式...');
+                    throw new Error('新格式文件无词条');
+                }
                 
                 // 构建索引
                 buildIndexes(dictWords);
                 
                 dictMetadata.loadedAt = new Date().toISOString();
                 const source = window.SUPABASE_STORAGE_URL ? 'Supabase Storage' : '本地文件';
-                console.log(`词典加载成功: ${dictWords.length} 词条 (${loadedFiles.length}/${posFiles.length} 个文件, 来源: ${source})`);
+                console.log(`✓ 词典加载成功: ${dictWords.length.toLocaleString()} 词条 (${loadedFiles.length}/${posFiles.length} 个文件, 来源: ${source})`);
+                console.log(`  词性分布:`, dictMetadata.posCounts);
             } else {
                 // 如果新格式文件都不存在，尝试加载旧的统一文件
                 console.log('新格式文件不存在，尝试加载旧格式...');
@@ -302,17 +318,46 @@ async function loadDictionary() {
                 
                 if (response.ok) {
                     dictData = await response.json();
-                    dictWords = dictData.words || [];
-                    buildIndexes(dictWords);
-                    console.log(`词典加载成功: ${dictWords.length} 词条 (旧格式)`);
+                    dictWords = Array.isArray(dictData.words) ? dictData.words : [];
+                    if (dictWords.length > 0) {
+                        buildIndexes(dictWords);
+                        console.log(`✓ 词典加载成功: ${dictWords.length.toLocaleString()} 词条 (旧格式)`);
+                    } else {
+                        console.warn('警告: 旧格式词典文件没有词条');
+                        dictWords = [];
+                    }
                 } else {
-                    console.warn('词典文件不存在，词典功能将不可用');
+                    console.error('✗ 词典文件不存在，词典功能将不可用');
+                    console.error('  请确保以下文件之一存在:');
+                    console.error('  - /public/data/dicts/noun.json, verb.json, adj.json 等');
+                    console.error('  - /public/data/dicts/french_dict.json');
+                    console.error('  - /public/data/dicts/gonggong.json');
                     dictWords = [];
                 }
             }
         } catch (e) {
-            console.error('加载词典失败:', e);
+            console.error('✗ 加载词典失败:', e);
+            console.error('  错误详情:', e.message);
+            if (e.stack) {
+                console.error('  堆栈:', e.stack);
+            }
             dictWords = [];
+            
+            // 显示错误提示
+            const resultsEl = document.getElementById('dict-results');
+            const welcomeEl = document.getElementById('dict-welcome');
+            if (welcomeEl) welcomeEl.classList.add('hidden');
+            if (resultsEl) {
+                resultsEl.innerHTML = `
+                    <div class="text-center py-16">
+                        <div class="text-6xl mb-4">⚠️</div>
+                        <h3 class="text-xl font-bold text-slate-700 mb-2">词典加载失败</h3>
+                        <p class="text-slate-500 mb-4">${e.message || '未知错误'}</p>
+                        <p class="text-sm text-slate-400">请检查词典文件是否存在，或刷新页面重试</p>
+                    </div>
+                `;
+                resultsEl.classList.remove('hidden');
+            }
         } finally {
             if (loadingEl) loadingEl.classList.add('hidden');
             if (welcomeEl) welcomeEl.classList.remove('hidden');

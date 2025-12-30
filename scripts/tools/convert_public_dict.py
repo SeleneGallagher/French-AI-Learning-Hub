@@ -13,7 +13,18 @@ from collections import defaultdict
 from datetime import datetime
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-TXT_FILE = BASE_DIR / '公共法语学习词典.txt'
+# 尝试多个可能的位置
+TXT_FILE = None
+possible_paths = [
+    BASE_DIR / '公共法语学习词典.txt',  # 项目根目录
+    BASE_DIR / 'scripts' / 'tools' / '公共法语学习词典.txt',  # tools目录
+    BASE_DIR / 'database' / '公共法语学习词典.txt',  # database目录
+]
+for path in possible_paths:
+    if path.exists():
+        TXT_FILE = path
+        break
+
 DICT_DIR = BASE_DIR / 'public' / 'data' / 'dicts'
 
 # 词性映射（从txt中的缩写到标准格式）
@@ -120,6 +131,7 @@ def parse_definitions(lines, start_idx):
         
         # 匹配释义行：数字 [分类]释义:◇例句 翻译。
         # 或者：数字 释义:◇例句 翻译。
+        # 或者：直接释义（没有数字编号）
         match = re.match(r'(\d+)\s*(?:\[([^\]]+)\])?\s*(.+?)$', line)
         if match:
             num = match.group(1)
@@ -141,12 +153,24 @@ def parse_definitions(lines, start_idx):
                     def_obj['category'] = category
                 definitions.append(def_obj)
         else:
-            # 可能是续行（没有数字开头，但也不是新词条）
-            # 检查是否是纯文本续行
-            if definitions and line and not line.startswith('<') and not line.startswith('>'):
-                # 追加到最后一个定义
-                last_def = definitions[-1]
-                last_def['text'] += ' ' + line.strip()
+            # 检查是否是直接释义（没有数字编号，但包含中文或法文内容）
+            # 例如："丰富，大量: En cette saison..."
+            if line and not line.startswith('<') and not line.startswith('>'):
+                # 检查是否包含中文或法文（基本判断：包含冒号或常见标点）
+                if ':' in line or '，' in line or '。' in line or any(ord(c) > 127 for c in line):
+                    # 这是一个释义行
+                    def_text = line
+                    # 清理文本
+                    def_text = re.sub(r'◇', ' ', def_text)
+                    def_text = re.sub(r'\s+', ' ', def_text)
+                    def_text = def_text.strip()
+                    
+                    if def_text:
+                        definitions.append({'text': def_text})
+                elif definitions:
+                    # 可能是续行，追加到最后一个定义
+                    last_def = definitions[-1]
+                    last_def['text'] += ' ' + line.strip()
         
         i += 1
     

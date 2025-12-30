@@ -4,7 +4,7 @@
 import os
 import json
 import jwt
-from lib.utils import get_db_connection, verify_jwt
+from lib.utils import get_db_connection, verify_token
 
 def handler(request):
     if request.method == 'GET':
@@ -209,15 +209,7 @@ def handle_post_sync(request):
 
 def verify_user(request):
     """验证用户身份，返回user_id或None"""
-    auth_header = request.headers.get('Authorization', '')
-    if not auth_header.startswith('Bearer '):
-        return None
-    
-    token = auth_header.replace('Bearer ', '')
-    try:
-        payload = verify_jwt(token)
-        user_id = payload.get('user_id')
-        return user_id if user_id else None
-    except:
-        return None
+    # 使用 verify_token 函数，它直接返回 user_id
+    user_id = verify_token(request)
+    return user_id
 
