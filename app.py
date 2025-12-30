@@ -61,13 +61,17 @@ try:
     from api.config import handler as config_handler
     from api.ai.coze import handler as coze_handler
     from api.ai.deepseek import handler as deepseek_handler
-except ImportError as e:
+except ImportError as import_error:
     import traceback
     traceback.print_exc()
-    print(f"警告: 无法导入某些模块: {e}")
-    # 创建占位函数
-    def placeholder_handler(request):
-        return {'statusCode': 500, 'body': json.dumps({'success': False, 'error': 'Handler not loaded', 'details': str(e)})}
+    error_msg = str(import_error)
+    print(f"警告: 无法导入某些模块: {error_msg}")
+    # 创建占位函数（使用闭包捕获错误信息）
+    def create_placeholder_handler(error_details):
+        def placeholder_handler(request):
+            return {'statusCode': 500, 'body': json.dumps({'success': False, 'error': 'Handler not loaded', 'details': error_details})}
+        return placeholder_handler
+    placeholder_handler = create_placeholder_handler(error_msg)
     login_handler = register_handler = news_handler = movies_handler = dict_handler = config_handler = placeholder_handler
     coze_handler = deepseek_handler = placeholder_handler
 

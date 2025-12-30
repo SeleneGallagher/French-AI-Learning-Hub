@@ -9,6 +9,8 @@ from lib.utils import json_response, get_db_cursor, get_db_connection
 
 JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-change-this')
 
+JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-change-this')
+
 def handler(request):
     # 获取请求方法
     if isinstance(request, dict):
