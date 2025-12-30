@@ -28,6 +28,7 @@ try:
     from api.auth.login import handler as login_handler
     from api.auth.register import handler as register_handler
     from api.news.list import handler as news_handler
+    from api.news.rss_proxy import handler as rss_proxy_handler
     from api.movies.list import handler as movies_handler
     from api.dictionary.history import handler as dict_handler
     from api.ai.coze import handler as coze_handler
@@ -56,17 +57,32 @@ def adapt_handler(handler_func):
                 # 安全地解析JSON body
                 body = result.get('body', '{}')
                 if isinstance(body, str):
-                    body_data = json.loads(body)
+                    try:
+                        body_data = json.loads(body)
+                    except:
+                        body_data = {'message': body}
                 else:
                     body_data = body
-                return jsonify(body_data), result['statusCode']
+                status_code = result.get('statusCode', 200)
+                response = jsonify(body_data)
+                response.headers['Access-Control-Allow-Origin'] = '*'
+                response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+                response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
+                return response, status_code
             elif isinstance(result, dict):
-                return jsonify(result), 200
+                response = jsonify(result)
+                response.headers['Access-Control-Allow-Origin'] = '*'
+                return response, 200
             else:
                 return result
         except Exception as e:
-            print(f"API错误: {e}")
-            return jsonify({'success': False, 'message': str(e)}), 500
+            import traceback
+            error_msg = str(e)
+            traceback.print_exc()
+            response = jsonify({'success': False, 'message': error_msg, 'type': type(e).__name__})
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            return response, 500
+    wrapper.__name__ = handler_func.__name__
     return wrapper
 
 # 定义路由
@@ -87,6 +103,12 @@ def news_list():
     if request.method == 'OPTIONS':
         return '', 200
     return adapt_handler(news_handler)()
+
+@app.route('/api/news/rss_proxy', methods=['GET', 'OPTIONS'])
+def rss_proxy():
+    if request.method == 'OPTIONS':
+        return '', 200
+    return adapt_handler(rss_proxy_handler)()
 
 @app.route('/api/movies/list', methods=['GET', 'OPTIONS'])
 def movies_list():

@@ -78,10 +78,33 @@ function parseRSSXML(xmlText, sourceName) {
 }
 
 /**
- * 使用多个CORS代理尝试获取RSS
+ * 使用后端RSS代理API获取RSS（优先）
  */
 async function fetchRSS(rssUrl, sourceName) {
-    // 多个CORS代理备选
+    // 优先使用后端RSS代理API
+    try {
+        const proxyUrl = `/api/news/rss_proxy?url=${encodeURIComponent(rssUrl)}`;
+        const response = await fetch(proxyUrl, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            if (data.success && data.content) {
+                const news = parseRSSXML(data.content, sourceName);
+                if (news.length > 0) {
+                    return news;
+                }
+            }
+        }
+    } catch (error) {
+        console.warn('后端RSS代理失败，尝试其他方法:', error);
+    }
+    
+    // 备用：多个CORS代理备选
     const proxies = [
         (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
         (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
