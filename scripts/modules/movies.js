@@ -286,8 +286,10 @@ export async function initMovies() {
 }
 
 // 加载内容 - 通过后端API
-async function loadContent() {
+async function loadContent(excludeHistory = []) {
     const shownIds = getShownItems();
+    // 合并当前已显示和历史记录，避免重复显示
+    const allExcludedIds = [...new Set([...shownIds, ...excludeHistory])];
     
     try {
         // 通过后端API获取电影数据
@@ -324,7 +326,7 @@ async function loadContent() {
         fetchOtherTV()
     ]);
     
-    const filterShown = (items, type) => items.filter(i => !shownIds.includes(`${type}_${i.id}`));
+    const filterShown = (items, type) => items.filter(i => !allExcludedIds.includes(`${type}_${i.id}`));
     
     const processed = [];
     
@@ -360,7 +362,7 @@ async function loadContent() {
     allMovies = processed;
     
     saveCache(allMovies);
-    saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
+    saveShownItems([...allExcludedIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
     
     renderItems(allMovies);
     translateAllPlots();
@@ -447,19 +449,42 @@ async function refreshContent() {
     const gridEl = document.getElementById('movies-grid');
     const errorEl = document.getElementById('movies-error');
     
-    // 清除已显示的项目记录，允许重新显示
-    sessionStorage.removeItem(SHOWN_KEY);
+    // 获取当前已显示的ID列表
+    const currentShownIds = getShownItems();
     
-    // 清除缓存
+    // 清除缓存，强制重新获取
     localStorage.removeItem(CACHE_KEY);
+    
+    // 保存当前已显示的ID到历史记录（用于避免短时间内重复显示）
+    const historyKey = 'movies_shown_history';
+    let history = [];
+    try {
+        const stored = sessionStorage.getItem(historyKey);
+        if (stored) {
+            history = JSON.parse(stored);
+        }
+    } catch (e) {
+        console.warn('读取历史记录失败:', e);
+    }
+    
+    // 将当前显示的ID添加到历史记录（保留最近50个）
+    const newHistory = [...currentShownIds, ...history].slice(0, 50);
+    try {
+        sessionStorage.setItem(historyKey, JSON.stringify(newHistory));
+    } catch (e) {
+        console.warn('保存历史记录失败:', e);
+    }
+    
+    // 清除当前已显示的项目记录
+    sessionStorage.removeItem(SHOWN_KEY);
     
     if (loadingEl) showLoading(loadingEl);
     if (errorEl) errorEl.classList.add('hidden');
     if (gridEl) gridEl.innerHTML = '';
     
-    // 重新加载内容
+    // 重新加载内容（loadContent会使用历史记录过滤）
     try {
-        await loadContent();
+        await loadContent(newHistory);
     } catch (error) {
         console.error('刷新失败:', error);
         if (errorEl) {
@@ -551,7 +576,7 @@ function renderCard(item, container, isWatchlist) {
                 : `<div class="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold">${item.title.substring(0, 2)}</div>`
             }
             <span class="absolute top-2 left-2 px-2 py-1 ${typeBadgeColor} text-white text-xs rounded">${typeLabel}</span>
-            <button class="watchlist-btn absolute top-2 right-2 w-8 h-8 rounded-full ${inList ? 'bg-yellow-500' : 'bg-black/50'} text-white flex items-center justify-center hover:scale-110 transition-transform text-sm" data-item-type="${item.type}" data-item-id="${item.id}">
+            <button class="watchlist-btn absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center hover:scale-110 transition-transform text-sm" style="${inList ? 'background-color: var(--accent-600);' : 'background-color: rgba(0, 0, 0, 0.5);'} color: white;" data-item-type="${item.type}" data-item-id="${item.id}">
                 ${inList ? '⭐' : '☆'}
             </button>
         </div>
@@ -624,7 +649,8 @@ function renderCard(item, container, isWatchlist) {
                 // 推荐列表中：直接切换收藏状态
                 const added = toggleWatchlist(item);
                 watchlistBtn.innerHTML = added ? '⭐' : '☆';
-                watchlistBtn.className = `watchlist-btn absolute top-2 right-2 w-8 h-8 rounded-full ${added ? 'bg-yellow-500' : 'bg-black/50'} text-white flex items-center justify-center hover:scale-110 transition-transform text-sm`;
+                watchlistBtn.style.backgroundColor = added ? 'var(--accent-600)' : 'rgba(0, 0, 0, 0.5)';
+                watchlistBtn.style.color = 'white';
             }
         });
     }
