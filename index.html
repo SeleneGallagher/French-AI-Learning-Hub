@@ -745,6 +745,7 @@
                 e.preventDefault();
                 const module = item.dataset.module;
                 if (module) {
+                    // 直接更新URL，hashchange事件会自动触发switchModule
                     window.location.hash = '#' + module;
                 }
             });
@@ -758,13 +759,17 @@
                 if (item.dataset.module === hash) {
                     item.classList.add('text-blue-600', 'font-semibold');
                     item.classList.remove('text-gray-500');
-                    if (indicator) indicator.classList.add('opacity-100');
-                    if (indicator) indicator.classList.remove('opacity-0');
+                    if (indicator) {
+                        indicator.classList.add('opacity-100');
+                        indicator.classList.remove('opacity-0');
+                    }
                 } else {
                     item.classList.remove('text-blue-600', 'font-semibold');
                     item.classList.add('text-gray-500');
-                    if (indicator) indicator.classList.remove('opacity-100');
-                    if (indicator) indicator.classList.add('opacity-0');
+                    if (indicator) {
+                        indicator.classList.remove('opacity-100');
+                        indicator.classList.add('opacity-0');
+                    }
                 }
             });
         }
