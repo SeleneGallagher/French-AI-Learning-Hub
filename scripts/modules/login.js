@@ -476,12 +476,24 @@ async function handleLogout() {
 // 更新用户状态显示
 function updateUserStatus() {
     const isAuthenticated = AuthService.isAuthenticated();
+    
+    // 移动端用户状态
     const loggedInSection = document.getElementById('my-user-logged-in');
     const notLoggedInSection = document.getElementById('my-user-not-logged-in');
     const logoutSection = document.getElementById('my-logout-section');
     
+    // 桌面端侧边栏状态
+    const sidebarLoggedIn = document.getElementById('sidebar-logged-in');
+    const sidebarNotLoggedIn = document.getElementById('sidebar-not-logged-in');
+    const sidebarUsernameDisplay = document.getElementById('sidebar-username-display');
+    const sidebarUsernameAvatar = document.getElementById('sidebar-username-avatar');
+    const sidebarLogoutBtn = document.getElementById('sidebar-logout-btn');
+    
     if (isAuthenticated && currentUser) {
-        // 显示已登录状态
+        const username = currentUser.username || '用户';
+        const usernameInitial = username.charAt(0).toUpperCase();
+        
+        // 移动端：显示已登录状态
         if (loggedInSection) {
             loggedInSection.classList.remove('hidden');
             const usernameDisplay = document.getElementById('my-username-display');
@@ -489,13 +501,13 @@ function updateUserStatus() {
             const usernameAvatar = document.getElementById('my-username-avatar');
             
             if (usernameDisplay) {
-                usernameDisplay.textContent = currentUser.username || '用户';
+                usernameDisplay.textContent = username;
             }
             if (userAccount) {
-                userAccount.textContent = `账号: ${currentUser.username || '未知'}`;
+                userAccount.textContent = `账号: ${username}`;
             }
             if (usernameAvatar) {
-                usernameAvatar.textContent = (currentUser.username || 'U').charAt(0).toUpperCase();
+                usernameAvatar.textContent = usernameInitial;
             }
         }
         if (notLoggedInSection) {
@@ -504,8 +516,25 @@ function updateUserStatus() {
         if (logoutSection) {
             logoutSection.classList.remove('hidden');
         }
+        
+        // 桌面端：显示已登录状态
+        if (sidebarLoggedIn) {
+            sidebarLoggedIn.classList.remove('hidden');
+        }
+        if (sidebarNotLoggedIn) {
+            sidebarNotLoggedIn.classList.add('hidden');
+        }
+        if (sidebarUsernameDisplay) {
+            sidebarUsernameDisplay.textContent = username;
+        }
+        if (sidebarUsernameAvatar) {
+            sidebarUsernameAvatar.textContent = usernameInitial;
+        }
+        if (sidebarLogoutBtn) {
+            sidebarLogoutBtn.addEventListener('click', handleLogout);
+        }
     } else {
-        // 显示未登录状态
+        // 移动端：显示未登录状态
         if (loggedInSection) {
             loggedInSection.classList.add('hidden');
         }
@@ -514,6 +543,14 @@ function updateUserStatus() {
         }
         if (logoutSection) {
             logoutSection.classList.add('hidden');
+        }
+        
+        // 桌面端：显示未登录状态
+        if (sidebarLoggedIn) {
+            sidebarLoggedIn.classList.add('hidden');
+        }
+        if (sidebarNotLoggedIn) {
+            sidebarNotLoggedIn.classList.remove('hidden');
         }
     }
 }
