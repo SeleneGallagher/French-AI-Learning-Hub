@@ -17,7 +17,7 @@
 
 ### 📖 法语词典
 - **词典查询**：快速搜索法语词汇（支持完整 Wiktionary 词典）
-- **历史记录**：自动保存查询历史
+- **历史记录**：自动保存查询历史，支持跨设备同步
 - **收藏夹**：收藏常用单词
 - **背单词**：智能学习系统
   - 随机单词学习
@@ -39,7 +39,8 @@
 
 ### 环境要求
 
-- Python 3.6+（用于本地服务器）
+- Python 3.11+（用于后端服务）
+- PostgreSQL（用于数据存储，可选）
 - 现代浏览器（Chrome、Firefox、Edge等）
 
 ### 本地运行
@@ -66,8 +67,8 @@ chmod +x start.sh
 # Python 3
 python3 -m http.server 8000
 
-# 或 Python 2
-python -m SimpleHTTPServer 8000
+# 或使用 Flask 服务器（支持后端API）
+python start_server.py
 ```
 
 然后在浏览器打开：`http://localhost:8000`
@@ -76,26 +77,35 @@ python -m SimpleHTTPServer 8000
 
 ## ⚙️ 配置
 
-### 环境变量配置（后端）
-
-**详细清单**：查看 [环境变量完整清单](./docs/环境变量清单.md)
+### 环境变量配置
 
 **快速设置**：
 1. 复制 `env.example` 为 `.env`
-2. （可选）根据需要添加 API 密钥变量
+2. 根据需要配置环境变量（所有变量都是可选的）
 
-**在 Railway 中设置**：
-- 在 Railway Dashboard → Variables 中添加
-- 或使用 CLI：`railway variables --file .env`
+**必需变量（部署时）：**
+- `DATABASE_URL` - PostgreSQL 数据库连接URL（Railway会自动设置）
+- `JWT_SECRET` - JWT签名密钥（用于用户认证）
 
-**注意**：项目使用 Railway PostgreSQL 数据库，支持用户认证和数据同步。查看 [下一步操作指南](./下一步操作.md) 了解数据库设置步骤。
+**可选变量：**
+- `COZE_BOT_ID` - Coze机器人ID（AI助手功能）
+- `COZE_PAT_TOKEN` - Coze访问令牌
+- `COZE_SAT_TOKEN` - Coze系统令牌（备选）
+- `DEEPSEEK_API_KEY` - DeepSeek API密钥（新闻关键词、语用生成）
+- `TMDB_API_KEY` - TMDB API密钥（电影数据）
 
-### 前端 API 密钥配置（可选）
+**详细说明**：查看 [环境变量清单](./docs/环境变量清单.md)
 
-1. 复制 `config.example.js` 为 `config.js`
-2. 根据需要配置以下API密钥：
+**生成 JWT_SECRET：**
+```bash
+# Linux/Mac
+openssl rand -hex 32
 
-#### 词典数据导入（可选）
+# Windows PowerShell
+python -c "import secrets; print(secrets.token_hex(32))"
+```
+
+### 词典数据导入（可选）
 
 项目支持使用 [French-Dictionary](https://github.com/hbenbel/French-Dictionary) 提供的完整法语词典数据。
 
@@ -116,47 +126,8 @@ python -m SimpleHTTPServer 8000
 - 词典文件较大，已添加到 `.gitignore`，需要在本地生成
 - 导入工具会保留所有原始信息：词性、性别、变位、标签等
 - 词典文件存储在 `public/data/dicts/` 目录，通过静态文件服务提供
-- 所有用户数据（历史记录、收藏夹等）使用浏览器本地存储（localStorage/IndexedDB）
-
-#### DeepSeek API（可选）
-- **用途**：新闻关键词生成、语用表达生成
-- **获取**：访问 https://platform.deepseek.com/api_keys
-- **配置**：在 `config.js` 中添加 `deepseek_api_key`
-
-#### TMDB API（可选）
-- **用途**：电影数据和海报
-- **获取**：访问 https://www.themoviedb.org/settings/api
-- **配置**：在服务器 `.env` 文件中设置 `TMDB_API_KEY`
-
-#### Coze API（可选）
-- **用途**：AI助手对话
-- **获取**：访问 https://www.coze.cn/ 创建机器人
-- **配置**：在 `config.js` 中配置 `bot_id` 和 `access_token`
-
-> **提示**：所有 API Key 都是可选的，不配置也能使用基础功能。不要将 `config.js` 提交到 Git。
-
-### 词典导入
-
-项目支持使用 [French-Dictionary](https://github.com/hbenbel/French-Dictionary) 词典：
-
-```bash
-# 1. 下载 French-Dictionary 并复制 dictionary 文件夹到项目根目录
-git clone https://github.com/hbenbel/French-Dictionary.git
-cp -r French-Dictionary/dictionary ./dictionary
-
-# 2. 运行导入脚本（生成8个JSON文件）
-python3 scripts/tools/import_french_dict.py
-```
-
-导入后的词典文件将保存在 `public/data/dicts/` 目录，通过静态文件服务提供。
-
-**注意**：
-- 词典文件较大（总计约 208MB），确保部署平台支持大文件
-- 所有用户数据（历史记录、收藏夹等）使用浏览器本地存储，无需服务器数据库
 
 ## 📁 项目结构
-
-详细结构说明请查看：[项目结构说明](./docs/项目结构说明.md)
 
 ```
 AI_LL/
@@ -169,7 +140,15 @@ AI_LL/
 │   └── config.py          # 配置 API
 │
 ├── database/              # 数据库
-│   └── init.sql          # PostgreSQL 初始化脚本
+│   ├── init.sql          # PostgreSQL 初始化脚本
+│   └── init_db.py        # 数据库初始化工具
+│
+├── docs/                  # 文档目录
+│   ├── PostgreSQL设置指南.md
+│   ├── Railway部署指南.md
+│   ├── 环境变量清单.md
+│   ├── 部署方案.md
+│   └── 项目结构说明.md
 │
 ├── lib/                   # 共享库
 │   └── utils.py          # 工具函数（数据库、JWT）
@@ -183,26 +162,28 @@ AI_LL/
 ├── public/               # 静态资源
 │   └── data/            # 数据文件（词典、新闻、电影）
 │
-├── docs/                # 文档目录
+├── app.py                # Flask 应用主文件
+├── index.html            # 前端主页面
 │
-├── app.py               # Flask 应用主文件
-├── index.html           # 前端主页面
-│
-├── requirements_server.txt # Python 依赖
-├── Procfile             # Railway 启动配置
-└── railway.json         # Railway 配置
+├── requirements.txt      # Python 依赖（开发）
+├── requirements_server.txt # Python 依赖（生产）
+├── Procfile              # Railway 启动配置
+├── railway.json          # Railway 配置
+└── Dockerfile            # Docker 配置
 ```
+
+详细结构说明请查看：[项目结构说明](./docs/项目结构说明.md)
 
 ## 🛠️ 技术栈
 
 - **前端**：原生JavaScript (ES6+)、Tailwind CSS
-- **存储**：LocalStorage、IndexedDB
-- **后端服务**：Python（数据更新脚本）
+- **后端**：Python Flask
+- **数据库**：PostgreSQL（用户数据、同步功能）
+- **存储**：LocalStorage、IndexedDB（本地数据）
 - **AI服务**：DeepSeek API、Coze API
+- **部署**：Railway、Docker
 
 ## 📝 使用说明
-
-> 💡 **开发注意事项**：请查看 [DEVELOPMENT_NOTES.md](./DEVELOPMENT_NOTES.md) 了解开发过程中的重要注意事项和常见问题解决方案。
 
 ### 词典模块
 1. 在搜索框输入法语单词
@@ -224,8 +205,6 @@ AI_LL/
 
 ### 🚂 Railway 部署（推荐）⭐
 
-**最简单的方式**：查看 [Railway 快速开始指南](./RAILWAY_QUICKSTART.md)
-
 **快速部署步骤：**
 
 1. **访问 Railway Dashboard**
@@ -240,47 +219,29 @@ AI_LL/
 
 3. **设置环境变量**
    - 在 Railway Dashboard → Variables 中添加：
-     - `JWT_SECRET` - JWT 签名密钥（必需，用于用户认证）
+     - `JWT_SECRET` - JWT 签名密钥（必需）
      - `COZE_BOT_ID`、`COZE_PAT_TOKEN` 等（可选，AI 功能）
 
 4. **初始化数据库**
-   - 查看 [下一步操作指南](./NEXT_STEPS.md) 了解详细步骤
+   - 使用 Python 脚本（推荐）：
+     ```bash
+     # 设置数据库连接
+     $env:DATABASE_URL="postgresql://postgres:密码@主机:5432/railway"
+     
+     # 运行初始化脚本
+     python database/init_db.py
+     ```
+   - 或使用 DBeaver 等数据库工具执行 `database/init.sql`
 
 5. **等待部署完成**
    - Railway 会自动构建和部署
    - 2-5 分钟后即可访问
 
-**或使用命令行：**
-```bash
-# 使用部署脚本（最简单）
-./scripts/deploy_railway.sh  # Linux/Mac
-scripts\deploy_railway.bat   # Windows
-
-# 或手动部署
-npm install -g @railway/cli
-railway login
-railway init
-railway variables --file .env  # 从 .env 导入环境变量
-railway up
-```
-
 **详细文档：**
-- [下一步操作指南](./下一步操作.md) - ⭐ **当前步骤（从这里开始）**
-- [环境变量清单](./docs/环境变量清单.md) - 所有环境变量说明
-- [PostgreSQL 设置指南](./docs/PostgreSQL设置指南.md) - 数据库设置详细步骤
 - [Railway 部署指南](./docs/Railway部署指南.md) - 完整部署步骤
+- [PostgreSQL 设置指南](./docs/PostgreSQL设置指南.md) - 数据库设置详细步骤
 
-#### 2. 国内云服务器（推荐国内用户）⭐
-
-**优点**：完全控制、无限制、访问速度快
-
-详细步骤请参考 [部署方案指南](./docs/部署方案.md#方案-4国内云服务器推荐国内用户)
-
-#### 3. Render / Fly.io
-
-详细步骤请参考 [部署方案指南](./docs/部署方案.md)
-
-### 云服务器部署（详细步骤）
+### 云服务器部署
 
 ```bash
 # 1. 上传项目到服务器
@@ -293,19 +254,22 @@ source venv/bin/activate
 pip install -r requirements_server.txt
 
 # 3. 配置环境变量
-cp .env.example .env
+cp env.example .env
 nano .env  # 编辑环境变量
 
-# 4. 启动服务（使用 gunicorn）
+# 4. 初始化数据库
+python database/init_db.py
+
+# 5. 启动服务（使用 gunicorn）
 gunicorn app:app --bind 127.0.0.1:5000 --workers 2
 
-# 5. 配置 Nginx（参考部署方案指南）
-# 6. 设置定时任务更新数据
+# 6. 配置 Nginx 反向代理
+# 7. 设置定时任务更新数据
 crontab -e
 # 添加：0 */6 * * * cd /var/www/AI_LL && python3 scripts/server/update_data.py
 ```
 
-> **详细部署指南**：请查看 [部署方案指南](./docs/部署方案.md) 了解所有部署选项和详细步骤。
+详细步骤请参考 [部署方案指南](./docs/部署方案.md)
 
 ## 🔧 数据更新
 
@@ -327,6 +291,8 @@ python3 scripts/server/update_data.py
 ## 📄 许可证
 
 本项目仅供学习使用。
+
+词典数据来源于 [French-Dictionary](https://github.com/hbenbel/French-Dictionary)，使用 MIT License。
 
 ## 🤝 贡献
 
