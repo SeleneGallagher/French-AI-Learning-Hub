@@ -584,7 +584,7 @@ function renderCard(item, container, isWatchlist) {
             <div class="flex-1 overflow-hidden">
                 <div class="flex items-start justify-between mb-1.5">
                     <h3 class="text-base font-bold text-gray-800 line-clamp-2 flex-1 pr-2">${item.title}</h3>
-                    <span class="px-2 py-0.5 bg-yellow-500 text-white text-xs rounded flex-shrink-0">⭐${parseFloat(item.rating).toFixed(1)}</span>
+                    <span class="px-2 py-0.5 text-white text-xs rounded flex-shrink-0" style="background-color: var(--accent-600);">⭐${parseFloat(item.rating).toFixed(1)}</span>
                 </div>
                 <div class="text-xs text-gray-600 mb-1.5">
                     ${item.year || '未知'}${item.director ? ' · ' + item.director : ''}${item.mediaInfo ? ' · ' + item.mediaInfo : ''}
@@ -644,7 +644,9 @@ function renderCard(item, container, isWatchlist) {
                 
                 // 只更新按钮状态，不移除卡片
                 watchlistBtn.innerHTML = added ? '⭐' : '☆';
-                watchlistBtn.className = `watchlist-btn absolute top-2 right-2 w-8 h-8 rounded-full ${added ? 'bg-yellow-500' : 'bg-black/50'} text-white flex items-center justify-center hover:scale-110 transition-transform text-sm`;
+                watchlistBtn.style.backgroundColor = added ? 'var(--accent-600)' : 'rgba(0, 0, 0, 0.5)';
+                watchlistBtn.style.color = 'white';
+                watchlistBtn.className = 'watchlist-btn absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center hover:scale-110 transition-transform text-sm';
             } else {
                 // 推荐列表中：直接切换收藏状态
                 const added = toggleWatchlist(item);
