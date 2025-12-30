@@ -531,7 +531,11 @@ function updateUserStatus() {
             sidebarUsernameAvatar.textContent = usernameInitial;
         }
         if (sidebarLogoutBtn) {
-            sidebarLogoutBtn.addEventListener('click', handleLogout);
+            // 移除旧的事件监听器（如果存在）
+            const newBtn = sidebarLogoutBtn.cloneNode(true);
+            sidebarLogoutBtn.parentNode.replaceChild(newBtn, sidebarLogoutBtn);
+            // 添加新的事件监听器
+            document.getElementById('sidebar-logout-btn').addEventListener('click', handleLogout);
         }
     } else {
         // 移动端：显示未登录状态
