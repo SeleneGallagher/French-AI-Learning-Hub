@@ -400,7 +400,13 @@ function updateItemTranslation(item) {
 // 添加控制按钮
 function addControlButtons() {
     const section = document.getElementById('movies');
-    if (!section || section.querySelector('.movie-controls')) return;
+    if (!section) return;
+    
+    // 如果已经存在控制按钮，先移除
+    const existingControls = section.querySelector('.movie-controls');
+    if (existingControls) {
+        existingControls.remove();
+    }
     
     const h2 = section.querySelector('h2');
     if (!h2) return;
@@ -418,8 +424,20 @@ function addControlButtons() {
     
     h2.after(controlsDiv);
     
-    document.getElementById('refresh-movies-btn')?.addEventListener('click', refreshContent);
-    document.getElementById('view-watchlist-btn')?.addEventListener('click', toggleWatchlistView);
+    // 绑定事件监听器
+    const refreshBtn = document.getElementById('refresh-movies-btn');
+    const watchlistBtn = document.getElementById('view-watchlist-btn');
+    
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', async () => {
+            console.log('换一批按钮被点击');
+            await refreshContent();
+        });
+    }
+    
+    if (watchlistBtn) {
+        watchlistBtn.addEventListener('click', toggleWatchlistView);
+    }
 }
 
 // 刷新内容
