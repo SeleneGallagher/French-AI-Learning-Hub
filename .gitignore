@@ -40,9 +40,17 @@ dictionary/
 French-Dictionary/
 check_csv_structure.py
 *.csv
-# 生成的词典JSON文件（太大，需要本地生成）
+# 生成的词典JSON文件
+# 注意：分词性词典文件需要被提交以支持部署
 public/data/dicts/french_dict.json
-public/data/dicts/*.json
-!public/data/dicts/french_dict.json
+# 允许分词性词典文件被提交
+!public/data/dicts/adj.json
+!public/data/dicts/adv.json
+!public/data/dicts/conj.json
+!public/data/dicts/det.json
+!public/data/dicts/noun.json
+!public/data/dicts/prep.json
+!public/data/dicts/pron.json
+!public/data/dicts/verb.json
 !public/data/dicts/gonggong.json
 

@@ -1,0 +1,321 @@
+{
+  "name": "公共法语学习词典 - 连词",
+  "pos": "conj",
+  "count": 16,
+  "source": "公共法语学习词典",
+  "license": "Unknown",
+  "copyright": "",
+  "version": "1.0.0",
+  "generated_at": "2025-12-30T23:54:52.226156Z",
+  "words": [
+    {
+      "word": "car¹",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "因为: Ferme la fenêtre, car il y a un courant d'air.把窗关上，因为有股穿堂风。"
+        }
+      ]
+    },
+    {
+      "word": "cependant",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "可是，然而: Il fait très froid, cependant nous essaierons de partir en voiture pour Lille.天气很冷，然而我们尽量开车去里尔。"
+        }
+      ]
+    },
+    {
+      "word": "comme",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "好像，如同: S'il travaillait comme son père, il réussirait.假如他像他父亲那样工作，他会成功的。 Faites comme vous voulez.您愿意干什么就干什么。 Ça se casse comme si c'était du verre. 这像玻璃一样易碎。"
+        },
+        {
+          "text": "例如: Les animaux comme le chien, le chat vivent facilement avec les hommes.一些动物，如狗、猫，容易和人生活在一起。"
+        },
+        {
+          "text": "由于，因为: Comme la voiture est en panne, nous prendrons le bus.由于汽车出故障，我们将乘坐公交车。"
+        },
+        {
+          "text": "正当，在…同时: Il s'est mis à neiger juste comme nous partions.就在我们动身时，天下起了雪。"
+        }
+      ]
+    },
+    {
+      "word": "donc",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "因此，所以: Le voilà， donc nous pouvons commencer.他来了，因此我们可以开始了。 Il était ici il y a un instant; il n'est donc pas loin. 他刚才还在这里，因此他不会走远。"
+        },
+        {
+          "text": "那么，到底[用于疑问句和命令句，donc 读[dō]]: Où vas-tu donc? 那么你去哪呢? Tais-toi donc!你住嘴!"
+        }
+      ]
+    },
+    {
+      "word": "et",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "和，及，与: J'ai mangé de la viande et des légumes.我吃了肉和蔬菜。"
+        },
+        {
+          "text": "而且，并且: Catherine est jolie et sympathique.卡特琳长得漂亮并且讨人喜 欢。"
+        },
+        {
+          "text": "但是，然而: J'ai fait beaucoup d'efforts, et je n'ai pas réussi.我作了很大努 力，但是我没有成功。"
+        }
+      ]
+    },
+    {
+      "word": "lorsque",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "当…时: Lorsque tu seras à Paris, téléphone-moi.当你来巴黎时，给我打个电话。"
+        }
+      ]
+    },
+    {
+      "word": "mais",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "但是，可是: Elle est belle, mais elle n'a pas de charme.她美丽，但她没有魅力。"
+        }
+      ]
+    },
+    {
+      "word": "ni",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "【ne... ni...ni...】 既不…也不: Je n'ai ni faim ni soif.我既不饿也不渴。 Il ne veut ni thé ni café.他既不想喝茶也不想喝咖啡。"
+        },
+        {
+          "text": ": Êtes-vous libre? — Ni aujourd'hui ni demain.您有空吗?—今天没空，明天也没空。",
+          "category": "在无动词的省略句中，不和 ne 连用"
+        }
+      ]
+    },
+    {
+      "word": "or²",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不过，然而: Il faut partir, or nous ne sommes pas prêts.应该动身了，然而我们却没有准备好。"
+        }
+      ]
+    },
+    {
+      "word": "ou",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "或者，还是: Que préfères-tu, la pêche ou la poire? 你更喜欢什么?桃子还是生梨?"
+        },
+        {
+          "text": "或者，还是[ou bien 加强语气]: Je partirai demain ou bien après-demain.我明天或者后天动身。"
+        },
+        {
+          "text": "否则，要不然[在命令句后引出后果从句]: Ne fais pas trop de bruit, ou tu seras grondé.声音不要太响，否则你要受到训斥。"
+        }
+      ]
+    },
+    {
+      "word": "plus²",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "加，加上: Sept plus deux font neuf.七加二等于九。"
+        }
+      ]
+    },
+    {
+      "word": "puisque",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "既然: Puisque tu n'as pas le temps, je vais chercher du pain.既然你没空，我买面包。"
+        }
+      ]
+    },
+    {
+      "word": "quoique",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "尽管，虽然[引出让步从句，谓语用虚拟式]: Quoiqu'il soit malade, André assistera à la réunion.安德烈虽然生病，仍将参加会议。"
+        }
+      ]
+    },
+    {
+      "word": "sinon",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "否则: Arrête de tricher, sinon je ne joue plus. 别再作弊，否则我就不玩了。"
+        }
+      ]
+    },
+    {
+      "word": "si¹",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "如果，假如:"
+        },
+        {
+          "text": "Je vais chez Paul, s'il n'est pas là， je déposerai le paquet chez la concierge.我去保尔家，如果他不在，我就把包裹放在门房。"
+        },
+        {
+          "text": "S'il faisait beau demain, nous ferions une excursion en montagne. 假如明天天气晴朗，我们就去山里远足。"
+        }
+      ]
+    },
+    {
+      "word": "soit",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "即，也就是: Il a payé le prix indiqué， soit 10€.他支付了标出的价格，即10欧元。"
+        },
+        {
+          "text": "soit... soit 或…或…: Nous irons en vacances soit à la campagne, soit à la mer.我们度假或去乡间，或去海边。"
+        }
+      ]
+    }
+  ]
+}

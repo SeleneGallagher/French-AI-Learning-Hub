@@ -1,0 +1,1070 @@
+{
+  "name": "公共法语学习词典 - 介词",
+  "pos": "prep",
+  "count": 46,
+  "source": "公共法语学习词典",
+  "license": "Unknown",
+  "copyright": "",
+  "version": "1.0.0",
+  "generated_at": "2025-12-30T23:54:52.054324Z",
+  "words": [
+    {
+      "word": "afin de",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "为了，以便: Je hâte le pas afin d'arriver à l'heure.我加快脚步以便准时赶到。"
+        }
+      ]
+    },
+    {
+      "word": "après",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "prép.在…以后[表示时间]: On se reposera après le travail.我们将在工作后休息。 Un an après sa mort, elle est partie en France.他去世后一年，她动身去了法国。"
+        },
+        {
+          "text": "prép.在…后面[表示空间]: La gare est après le carrefour.火车站在十字路口后面。"
+        },
+        {
+          "text": "adv.以后，之后[表示时间]: Vingt ans après, la guerre recommença. 20年后，战争重新打响了。 Avant son accident, il était très gentil, mais après, il est devenu bizarre.在事故发生前，他对人很好，可是之后，他变得古怪了。"
+        },
+        {
+          "text": "adv.后面，在后面[表示空间]: Voici la poste, l'épicerie est après. 这是邮局，食品杂货店就在后面。"
+        },
+        {
+          "text": "【après】 在…以后[后接不定式过去时]: Après avoir mangé， il est parti sans nous dire au revoir.他吃完饭后，没有向我们说声再见就走了。"
+        },
+        {
+          "text": "【après que...】 在…以后: Après qu'il était parti, on a reconstruit la maison.他走了以后，重新造了房子。"
+        },
+        {
+          "text": "【d'après】 loc. prép. 根据…，按照…: D'après vous, quel est le coupable? 依您看，罪犯是谁呢?"
+        }
+      ]
+    },
+    {
+      "word": "au lieu de",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "【au lieu de (qqch, de faire qqch)】不…而…: Mon frère a mis mon pyjama au lieu du sien.我兄弟不穿自己的睡衣裤，而穿我的睡衣裤。 Je prendrai le train au lieu de la voiture, c'est plus rapide et plus sûr. 我将不坐汽车而乘火车，这样更快也更安全。 Il s'amuse au lieu de travailler.他不学习而在玩。"
+        }
+      ]
+    },
+    {
+      "word": "au-dessous (de)",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "loc. prép.在…下面，在…以下: Le grenier est au-dessous du toit. 顶楼在屋顶下面。 Ce film est interdit aux jeunes au-dessous de dix-huit ans. 这部影片禁止十八岁以下青少年观看。"
+        },
+        {
+          "text": "loc. adv.在下面: En ce moment, notre appartement est très calme, il n'y a personne au-dessous. 这一会儿，我们的房间很清静，下面没有人。"
+        }
+      ]
+    },
+    {
+      "word": "au-dessus (de)",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "loc. prép.在…上面，在…以上: Nous habitons au-dessus de la pharmacie.我们住在药房楼上。 Les enfants au-dessus de sept ans payent place entière. 七岁以上儿童买全票。"
+        },
+        {
+          "text": "loc. adv.在上面: Mavalise est solide, mettez la vôtre au-dessus.我的手提箱结实，把您的那只放在上面吧。 Voilà la boulangerie, M. Dupont habite au-dessus.这是面包房，杜邦先生住在这楼上。"
+        }
+      ]
+    },
+    {
+      "word": "auprès de",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…旁边，在……附近: Elle est restée toute la nuit auprès de son fils malade.整整一夜她呆在生病的儿子身边。 Il y a une boulangerie auprès de l'église.在教堂附近有一家面包房。 Je vais demander des renseignements auprès du directeur.我到经理那儿去打听一下情况。"
+        }
+      ]
+    },
+    {
+      "word": "autour (de)",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "loc. prép.在…周围，在…四周: La circulation autour de Paris est difficile.巴黎周围的交通很困难。 Nous sommes allés ramasser des champignons dans les forêts qui sont autour du village. 我们到村子周围的树林里去采了蘑菇。"
+        },
+        {
+          "text": "adv.在周围: Impossible d'entrer dans ce parc, il y a un mur tout autour.不可能进入这座公园，四周有围墙。"
+        }
+      ]
+    },
+    {
+      "word": "avant",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "prép.在…以前[表示时间]: Elle est arrivée avant nous.她比我们先到。 Pour être en forme, reposez-vous avant l'examen.为了精力充沛，考试前你们要休息休息。"
+        },
+        {
+          "text": "prép.在…前面[表示空间]: Le bureau de poste est juste avant le pont. 邮局就在桥前面。"
+        },
+        {
+          "text": "adv.以前，之前[表示时间】: On a construit une nouvelle route; avant, il fallait faire un long détour.人们修建了一条新公路;以前，必须绕很大一圈。 Ne vous décidez pas tout de suite; réfléchissez avant. 不要立即作出决定，先思考一下。 Quelques jours avant, il était parti pour Paris.(当时)几天以前，他动身去了巴黎。"
+        },
+        {
+          "text": "adv.前面，在前面[表示空间]: N'allez pas jusqu'à la place, arrêtez-vous avant.不要一直走到广场，在前面停下来。"
+        },
+        {
+          "text": "【avant de】 loc. prép. 在…前[后接不定式]: Mets ton manteau avant de sortir, il fait froid dehors.出去以前穿好大衣，外面寒冷。"
+        },
+        {
+          "text": "【avant que】 loc. conj. 在…前[后接虚拟式]: Rentrons vite avant qu'il (ne) pleuve.下雨之前，我们赶紧回家。"
+        }
+      ]
+    },
+    {
+      "word": "avec",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "和…一起[表示伴同关系]: Paul se promène avec un ami.保尔和一个朋友在散步。"
+        },
+        {
+          "text": "和，同，与[表示相互关系]: Jacques est gentil avec tout le monde. 雅克对大家都很好。"
+        },
+        {
+          "text": "随着，与…同时[表示同时]: Il se lève avec le jour.天一亮他就起床。"
+        },
+        {
+          "text": "…地[表示方式]: M. Dupont conduit avec prudence. 杜邦先生驾车谨慎。"
+        },
+        {
+          "text": "用，使用[表示手段]: Les Chinois mangent avec des baguettes.中国人用筷子吃饭。"
+        },
+        {
+          "text": "还有[表示添加]: Et avec ça, madame?太太，您还要买些什么吗?"
+        },
+        {
+          "text": "假如[表示条件]: Avec un peu de travail, il aurait réussi.假如稍加努力的话，他就成功了。"
+        }
+      ]
+    },
+    {
+      "word": "chez",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…家里: Ce soir, je reste chez moi. 今晚我待在家里。"
+        },
+        {
+          "text": "在…店里: Va chez le boulanger acheter du pain.你去面包房买些面包。"
+        },
+        {
+          "text": "在…国家，在…地方: Chez les Esquimaux, la pêche est une activité vitale.在爱斯基摩人那里，捕鱼是一种生活必需的活动。"
+        }
+      ]
+    },
+    {
+      "word": "contre",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "向，朝: Il lance la balle contre le mur. 他朝墙上掷球。"
+        },
+        {
+          "text": "靠，挨: La vieille dame est assise contre le mur.老太太靠墙坐着。"
+        },
+        {
+          "text": "反对: La plupart sont contre ce projet.大部分人反对这个方案。"
+        }
+      ]
+    },
+    {
+      "word": "d'après",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "根据…，按照…: D'après toi, fera-t-il beau demain? 依你看，明天天气会好吗? D'après la radio, un accident s'est passé sur le boulevard Voltaire.据电台报导，在伏尔泰大街发生了一起车祸。"
+        }
+      ]
+    },
+    {
+      "word": "dans",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…里，在…内[表示位置]: Il met deux morceaux de sucre dans le café.他在咖啡里放两块糖。 Il entre dans la maison.他走进屋子。"
+        },
+        {
+          "text": "过…后，…以后[表示时间]: Il viendra dans huit jours.他一星期以后来。"
+        },
+        {
+          "text": "用…[表示方式]: Il boit de l'eau dans un verre. 他用玻璃杯喝水。"
+        }
+      ]
+    },
+    {
+      "word": "de",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "从，自[表示来源]: Il vient de Paris. 他来自巴黎。"
+        },
+        {
+          "text": "从…时候起[表示时间]: Du lundi au mercredi, il travaille au bureau.从周一至周三，他在办公室工作。 Le lait est de la semaine dernière.牛奶还是上星期的。"
+        },
+        {
+          "text": "由于[表示原因]: Je meurs de soif.我渴死了。 Elle est surprise de sa maladie.她对自己的病很吃惊。"
+        },
+        {
+          "text": "…的[表示属于关系]: Je lave la voiture d'un voisin.我洗邻居的车子。"
+        },
+        {
+          "text": ": Voilà des manuels de français. 这是一些法语课本。",
+          "category": "表示属性、特性"
+        },
+        {
+          "text": ": J'ai acheté une belle table de bois. 我买了一张很好看的木质桌子。",
+          "category": "表示材料"
+        },
+        {
+          "text": ": Donnez-moi deux kilos de pommes. 给我来2公斤苹果。 Je voudrais un paquet de cigarettes.我想买包香烟。",
+          "category": "表示分量、部分"
+        },
+        {
+          "text": ": Il a parlé de son travail en France.他谈了他在法国的工作情况。",
+          "category": "引出间接宾语"
+        },
+        {
+          "text": ": Le professeur est content de mon travail.老师对我的学习感到满意。 Il y a beaucoup de voitures aux heures de pointe. 高峰时间汽车很多。",
+          "category": "引出形容词、副词补语"
+        },
+        {
+          "text": ": Il n'a pas de logement.他没有住房。 L'enfant ne veut pas de légumes.孩子不想吃蔬菜。",
+          "category": "否定句中代替不定冠词或部分冠词"
+        }
+      ]
+    },
+    {
+      "word": "depuis",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "自…以来: Il pleut depuis huit jours. 一周以来天一直在下雨。"
+        },
+        {
+          "text": "从(某地)起: Nous avons eu beau temps depuis Paris.从巴黎起我们一路上天气晴朗。"
+        },
+        {
+          "text": "【depuis que loc. conj.】 自从…以后: Depuis qu'il fait froid, je ne sors plus.自天冷以来，我就再也不出去了。"
+        }
+      ]
+    },
+    {
+      "word": "derrière",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…后面: Pierre se cache derrière un arbre. 皮埃尔躲藏在一棵树后面。 Le jardin est derrière la maison.园子在屋后面。"
+        }
+      ]
+    },
+    {
+      "word": "devant",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…前面，在…面前: Ne reste pas devant la porte.你别呆在门前。 La boulangerie est juste devant l'église. 面包房正好在教堂前面。 Nous sommes tous égaux devant la loi.法律面前我们都是平等的。"
+        }
+      ]
+    },
+    {
+      "word": "durant",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…期间: Un accident s'est passé durant la nuit.夜里发生了一起事故。"
+        }
+      ]
+    },
+    {
+      "word": "dès",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "从…起: Je commencerai dès demain.我从明天起就开始。"
+        },
+        {
+          "text": "【dès que loc. conj.】 一…(就…): Prévenez-moi dès que vous serez arrivé.您一到就通知我。"
+        }
+      ]
+    },
+    {
+      "word": "entre",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…之间: Je viendrai entre midi et deux heures. 我将在中午12点和2点之 间来。 Ilya 500 kilomètres entre Lyon et Paris.里昂和巴黎之间有500公里。 Quelle est la différence entre ces deux mots? 这两个词有什么区别?"
+        },
+        {
+          "text": "在…中间: Paul est assis entre nous deux.保尔坐在我俩中间。 J'ai à choi- sir entre plusieurs solutions. 我要在多个解决办法中选择。"
+        }
+      ]
+    },
+    {
+      "word": "envers",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "对，对于: Sois doux envers ta petite sœur.对你妹妹温柔些。"
+        }
+      ]
+    },
+    {
+      "word": "en¹",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…[表示地点]: Il travaille en France.他在法国工作。 Les Dupont habitent en ville ou en banlieue? 杜邦一家住在城里还是住在郊区?"
+        },
+        {
+          "text": "在…时候，在…时间内[表示时间]: En hiver, il fait très froid dans cette région.冬天，这个地区天气很冷。 Il a fini ce travail en deux jours. 2天之内他做完了这项工作。"
+        },
+        {
+          "text": ": Son père est en retraite.他父亲退休了。 Le directeur est en vacances.经理在休假。",
+          "category": "表示状态、处境"
+        },
+        {
+          "text": "在…方面[表示范围] : Voilà des étudiants en médecine. 这是一些医科大学生。 Il est fort en français.他的法语很好。"
+        },
+        {
+          "text": "穿着，戴着[表示服饰] : Sophie s'habille toujours en rouge. 索菲总是穿红衣服。 Il est en costume.他穿着西装。"
+        },
+        {
+          "text": ": Il a acheté une chemise en soie. 他买了一件真丝衬衫。 C'est en métal ou en plastique? 这是金属的还是塑料的?",
+          "category": "表示材料"
+        },
+        {
+          "text": ": Vous voyagerez en avion ou en bateau?您将坐飞机还是坐船旅行?",
+          "category": "表示方式"
+        }
+      ]
+    },
+    {
+      "word": "excepté",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "除了…以外: Tout le monde est là， excepté Pierre.除了皮埃尔，大家都到了。"
+        }
+      ]
+    },
+    {
+      "word": "jusque",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "jusqu'à 直到，直至[表示地点、位置、时间等]: La plaine s'étend jusqu'à la mer.平原一直延伸到海边。 Il travaille du matin jusqu'au soir. 他从早到晚工作。"
+        },
+        {
+          "text": "直到，直至[后接其他介词]: Jusqu'où irez-vous cet été? Probablement jusqu'en Espagne.今年夏天你们一直走到什么地方?—可能一直走到西班牙。"
+        }
+      ]
+    },
+    {
+      "word": "lors de",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "当…时候，在…期间: Mon oncle m'a donné ce livre lors de sa dernière visite.我叔叔最后一次来看我时给了我这本书。"
+        }
+      ]
+    },
+    {
+      "word": "malgré",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不管，不顾(某人的反对) : Il est parti tout seul malgré mes conseils. 他不听我劝告独自走了。"
+        },
+        {
+          "text": "虽然，尽管: Le match continue malgré la pluie.虽然下雨，球赛仍继续进行。"
+        }
+      ]
+    },
+    {
+      "word": "outre",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "除…之外: Outre leur chien, ils ont deux chats. 除了一条狗，他们还有两只猫。"
+        }
+      ]
+    },
+    {
+      "word": "par",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "经过，通过[表示地点]: En rentrant de l'école, Agnès passe par le marché.阿涅斯放学回家经过集市。 Nous sortirons de Paris par l'autoroute.我们将经高速公路出巴黎。"
+        },
+        {
+          "text": "用，以，通过[表示方式]: Je voyage par la train. 我坐火车旅行。 J'ai appris cette nouvelle par la radio.我通过无线电得知了这条消息。"
+        },
+        {
+          "text": "按照，每[表示分配]: Je gagne 100 € par semaine.我每星期赚到100欧元。"
+        },
+        {
+          "text": "被，由[引导施动者补语]: Bruno a été griffé par le chat.布律诺被猫抓伤了。"
+        }
+      ]
+    },
+    {
+      "word": "parmi",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…之中，在…中间: Parmi toutes les solutions possibles, il a choisi la plus simple.在所有可行的解决办法中，他选择了最简单的。"
+        }
+      ]
+    },
+    {
+      "word": "pendant",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…期间: J'ai fait du ski pendant les vacances d'hiver. 寒假里我滑了雪。 Nous avons discuté pendant deux heures.我们讨论了2个小时。"
+        },
+        {
+          "text": "【pendant que loc. conj.】 当…时候: Je mets le couvert pendant que ma mère"
+        }
+      ]
+    },
+    {
+      "word": "pour",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "为了[表示目的]: Il est parti tôt pour arriver à l'heure.他动身得早是为了准时到达。"
+        },
+        {
+          "text": "向，往[表示目的地]: Nous partons pour l'Italie.我们动身去意大利。"
+        },
+        {
+          "text": "在…时间内[表示将来一段时间]: Je resterai à Paris pour trois mois. 我将在巴黎待3个月。"
+        },
+        {
+          "text": "对于，适合于[表示对象、用途]: Tiens! c'est pour toi.瞧!这是给你的。"
+        },
+        {
+          "text": "依…看来，对…来说: Pour moi, il faudrait connaître deux ou trois langues étrangères.依我看，应该懂两三门外语。"
+        },
+        {
+          "text": "由于，因为[表示原因]: Elle est récompensée pour sa gentillesse. 她因对人热情而得到奖赏。"
+        },
+        {
+          "text": "用…代价[表示等值]: J'ai acheté cette bicyclette pour 120€.我用120欧元买了这辆自行车。"
+        }
+      ]
+    },
+    {
+      "word": "quant à",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "至于，关于: Joue si tu veux; quant à moi, je dors.你想玩就玩，至于我，我睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "sans",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "没有，无，不:"
+        },
+        {
+          "text": "Il est sorti sans son chapeau.他没戴帽子出去了。"
+        },
+        {
+          "text": "M.Dupont est allé au théâtre sans sa femme.杜邦先生没带他妻子去看戏了。"
+        },
+        {
+          "text": "Il grimpe à l'arbre sans échelle. 他不用梯子爬树。"
+        },
+        {
+          "text": "Michel descend la côte sans freiner.米歇尔下坡不踩刹车。"
+        },
+        {
+          "text": "Il est parti sans qu'on s'en aperçoive. 他走了，大家却没有察觉。"
+        }
+      ]
+    },
+    {
+      "word": "selon",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "按照，根据:"
+        },
+        {
+          "text": "Selon les journaux, le mauvais temps ne devrait pas durer. 据报纸报导，坏天气不会持续下去。"
+        },
+        {
+          "text": "Selon le temps, le bateau partira ou non.船起航与否要根据气候。"
+        }
+      ]
+    },
+    {
+      "word": "sous",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…下面: J'ai trouvé ta balle sous le buffet. 我在碗橱下找到了你的球。 Nous faisons un pique-nique sous un arbre.我们在一棵树下进行野餐。"
+        },
+        {
+          "text": "在…时期，在…时代: La Fontaine vivait sous Louis XIV.拉封丹生活在路易十四时期。"
+        }
+      ]
+    },
+    {
+      "word": "suivant",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        },
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "按照，根据: Choisissez-les suivant vos préférences. 按照您喜欢的挑选吧。 Suivant son habitude, il arrivera à temps.根据他的习惯，他将及时赶到。"
+        },
+        {
+          "text": "a.随后的，后面的: La solution du problème est à la page suivante.这道题的答案在下一页。"
+        },
+        {
+          "text": "n.下一个人: «Au suivant!» dit le coiffeur.“下一个!”理发师说道。"
+        }
+      ]
+    },
+    {
+      "word": "sur",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…上面: Le verre est sur la table.杯子在桌上。"
+        },
+        {
+          "text": "向着…，朝着……: La salle de séjour donne sur le jardin.客厅朝花园。"
+        },
+        {
+          "text": "关于: Voici un livre sur les plantes sous-marines. 这是一本关于海底植物的书。"
+        },
+        {
+          "text": "在…中: Six candidats sur dix sont reçus. 10个考生中录取了6名。"
+        }
+      ]
+    },
+    {
+      "word": "vers",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "朝，向: Les voitures se dirigent vers Paris. 汽车朝着巴黎开去。"
+        },
+        {
+          "text": "将近: Je rentre de l'école tous les jours vers 5 heures. 每天将近5点钟时我放学回家。"
+        }
+      ]
+    },
+    {
+      "word": "vis-à-vis de",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…对面: À table, je m'assoirai vis-à-vis de toi.就餐时我将坐在你对面。"
+        }
+      ]
+    },
+    {
+      "word": "voici",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "这是，这儿是: Voici notre maison.这是我们家的房子。"
+        }
+      ]
+    },
+    {
+      "word": "voilà",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "那是，那儿是;这是，这儿是[现代法语中，常用来代替 voici] : Voici mon frère, voilà mes amis.这是我的兄弟，那是我的一些朋友。 Voilà la clé de la voiture.这是汽车钥匙。"
+        }
+      ]
+    },
+    {
+      "word": "vu",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "鉴于，由于，考虑到: Vu l'heure qu'il est, il nous faut partir.考虑到现在时间，"
+        }
+      ]
+    },
+    {
+      "word": "à",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "到…: Sophie va souvent au cinéma. 索菲常去看电影。 Les touristes arrivent à Paris.旅游者来到巴黎。",
+          "category": "目的地"
+        },
+        {
+          "text": "在…: Ils travaillent au restaurant.他们在餐馆工作。 Toute sa famille va s'installer à la campagne. 他全家将在乡下安置下来。 Elle habite au Japon.她住在日本。",
+          "category": "地点"
+        },
+        {
+          "text": "de... à... 从…到…: Le supermarché est ouvert de 9 heures du matin à 10 heures du soir.超市从上午九点开到晚上十点。 Ça fait un quart d'heure d'ici à la gare.从这里到火车站有一刻钟路程。",
+          "category": "范围"
+        },
+        {
+          "text": "在…: On se voit à six heures ce soir? 我们今晚六点见面，好吗? À demain!明天见!",
+          "category": "时间"
+        },
+        {
+          "text": ": On y va à pied.咱们走着去。 Je rentre à vélo.我骑自行车回家。",
+          "category": "工具"
+        },
+        {
+          "text": ": Je voudrais une chambre à deux lits.我想要一间双人房。 Elle veut acheter une robe à manches courtes.她想买一条短袖连衣裙。",
+          "category": "特征、特点"
+        },
+        {
+          "text": ": Ça se fait à la main.这是用手工做的。 Les ouvriers travaillent à la chaîne.工人们在流水线上作业。",
+          "category": "方式"
+        },
+        {
+          "text": ": La salle à manger n'est pas grande.餐厅不大。 Ces tasses à thé sont très jolies. 这些茶杯很好看。",
+          "category": "用途"
+        },
+        {
+          "text": ": Cette voiture est à nous.这辆汽车是我们的。 C'est un parent à moi.这是我的一个亲戚。 C'est à vous de faire un exposé.该由您来陈述了。",
+          "category": "归属"
+        },
+        {
+          "text": ": Voilà un timbre à 0，50€.这是一张0.5欧元的邮票。 À 1，60 € le kilo, ces pommes sont chères. 这些苹果每公斤1.6欧元，很贵。",
+          "category": "价格"
+        },
+        {
+          "text": ": 【avoir à inf.】应该，必须: Vous n'avez qu'à lui demander.您只须问他就可以了。【être à inf.】应该，要: Ce travail est à refaire. 这项工作得重做。",
+          "category": "应该、必须"
+        },
+        {
+          "text": ": Remettez cette lettre au directeur.把这封信交给经理。 À quoi pensez-vous?您在想什么? Il apprend à conduire.他在学开车。",
+          "category": "引出间接宾语"
+        },
+        {
+          "text": ": C'est facile à dire, c'est difficile à faire.说起来容易做起来难。 Ce tissu est agréable à toucher.这衣料摸上去很柔软。",
+          "category": "作形容词补语"
+        }
+      ],
+      "extra_info": "与定冠词 le, les 构成缩合冠词au, aux"
+    },
+    {
+      "word": "【*hors】 de",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…之外，在…外面;脱离(某种影响或状态): Il habite hors de Paris. 他住在巴黎城外。 Les appartements sont hors de prix à Paris.巴黎的住房价格特贵。 Le blessé est hors de danger.伤员已经脱离危险。"
+        }
+      ]
+    },
+    {
+      "word": "【grâce】 à",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "多亏，幸亏: J'ai retrouvé mon chemin grâce à la carte.多亏地图我找回了路。 J'ai réussi grâce à toi. 幸亏你，我才获得了成功。"
+        }
+      ]
+    },
+    {
+      "word": "【travers (à)】loc.",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "穿过，透过: Je l'ai vue à travers les carreaux de la fenêtre.我透过玻璃窗看见了她。"
+        }
+      ]
+    }
+  ]
+}

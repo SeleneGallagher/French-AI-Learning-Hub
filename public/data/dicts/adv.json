@@ -1,0 +1,4240 @@
+{
+  "name": "公共法语学习词典 - 副词",
+  "pos": "adv",
+  "count": 233,
+  "source": "公共法语学习词典",
+  "license": "Unknown",
+  "copyright": "",
+  "version": "1.0.0",
+  "generated_at": "2025-12-30T23:54:52.218153Z",
+  "words": [
+    {
+      "word": "absolument",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "绝对地，完全地: C'est absolument interdit.这是绝对禁止的。 Vous êtes d'accord avec moi? -Absolument!您同意我吗?—完全同意。"
+        },
+        {
+          "text": "必定，一定: Il faut absolument que tu viennes, j'ai besoin de toi.你一定得来，我需要你。"
+        }
+      ]
+    },
+    {
+      "word": "actuellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "目前，当前: Il est actuellement en vacances. 他目前在度假。 Elle travaille actuellement dans une banque.她目前在一家银行工作。"
+        }
+      ]
+    },
+    {
+      "word": "adieu",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "再见!永别!: 【dire adieu à qqn】 向某人告别"
+        }
+      ]
+    },
+    {
+      "word": "affectueusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "深情地，亲热地: Elle regarde affectueusement son enfant faire ses premiers pas.她深情地看着自己孩子蹒跚学步。"
+        }
+      ]
+    },
+    {
+      "word": "agréablement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "愉快地，舒适地;讨人喜欢地: Les vacances se sont passées très agréablement.假期过得非常愉快。"
+        }
+      ]
+    },
+    {
+      "word": "ah!",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "啊!嗳!唉!哎唷![表示喜悦、痛苦、吃惊等]: Ah! quelle bonne nouvelle!啊!多好的消息! Ah!ça me fait mal!哎唷!这弄痛我了!"
+        }
+      ]
+    },
+    {
+      "word": "ailleurs",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在别处，在其他地方: Ne reste pas ici, va jouer ailleurs.别待在这里，到别处去玩吧。"
+        },
+        {
+          "text": "【d'ailleurs】 loc. adv.此外，况且: Il faut rentrer, d'ailleurs il pleut.该回去了，况且天下着雨。"
+        }
+      ]
+    },
+    {
+      "word": "ainsi",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "adv.这样，如此: Pourquoi me regardez-vous ainsi?您为什么这样看着我?"
+        },
+        {
+          "text": "conj.由此，因此: Je prends l'express, ainsi j'arriverai plus tôt. 我乘快车，这样我就会更早到达。"
+        },
+        {
+          "text": "【ainsi que】 loc. conj.如同，正如;和，以及: Il est venu ainsi que je le lui avais demandé.正如我要求他的那样他来了。 Je t'invite, ainsi que ta sœur. 我邀请你以及你姐姐。"
+        }
+      ]
+    },
+    {
+      "word": "alentour",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "adv.在周围，在附近: Vous verrez une maison avec des arbres alentour.您可以看到一幢四周有树木的房子。"
+        },
+        {
+          "text": "n. m. pl.周围，近郊: Les alentours de la ville sont pittoresques. 城市近郊风景如画。"
+        }
+      ]
+    },
+    {
+      "word": "allô!",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "喂![电话用语]: Allô! Qui est à l'appareil?喂!您是谁?"
+        }
+      ]
+    },
+    {
+      "word": "alors",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "当时，那时: Je me souviens de l'avoir vu: il avait alors vingt ans. 我记得见到过他，当时他20岁。"
+        },
+        {
+          "text": "那么: Il est malade? Alors, je le remplacerai.他病了?那么我接替他吧。 Vous êtes contents? Alors tant mieux.你们高兴吗?那就好了。"
+        },
+        {
+          "text": "【alors que】 loc. conj.而，却: François veut continuer à jouer, alors que Sylvie préfère aller se coucher. 弗朗索瓦想继续玩，而西尔维则更喜欢去睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "amicalement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "友好地，亲切地: Nous avons bavardé amicalement.我们亲切地聊了一会。"
+        }
+      ]
+    },
+    {
+      "word": "après-demain",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "后天: Les vacances commencent après-demain.假期后天开始。"
+        }
+      ]
+    },
+    {
+      "word": "assez",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "够，足够，相当: Voulez-vous encore un peu de fromage? — Non, merci, j'ai assez mangé.您还要点奶酪吗?—不要了，谢谢，我吃够了。 La boîte n'est pas assez grande.盒子不够大。 Il parle assez vite.他讲得相当快。 C'est assez.够了。 Il n'y a pas assez d'huile dans la salade. 色拉中油放得不够多。 Nous avons assez d'argent pour faire ce grand voyage.我们有足够的钱进行这次远途旅游。"
+        }
+      ]
+    },
+    {
+      "word": "attentivement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "专心地，注意地: L'enfant regardait attentivement les acrobates.孩子专心地在看杂技演员表演。"
+        }
+      ]
+    },
+    {
+      "word": "au revoir",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "再见: Je m'en vais: au revoir!我走了，再见! Je lui ai dit au revoir.我向他告别过了。"
+        }
+      ]
+    },
+    {
+      "word": "aujourd'hui",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "今天: Aujourd'hui, c'est dimanche.今天是星期天。 J'ai beaucoup travaillé aujourd'hui.今天我干得很多。"
+        },
+        {
+          "text": "当今，现在: L'homme est aujourd'hui capable d'aller sur la Lune.当今，人有能力登上月球。"
+        }
+      ]
+    },
+    {
+      "word": "aussi",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "也，同样，一样: Tu vas chez Carrefour? Je t'accompagne, j'y vais aussi.你去家乐福吗?我陪你，我也去的。 Vous connaissez Jacques? Nous aussi!你们认识雅克?我们也认识!"
+        },
+        {
+          "text": "还，此外: Achète-moi des pommes, et aussi des poires.替我买些苹果，还有梨子。"
+        },
+        {
+          "text": "和…一样，和…同样: Cette voiture est aussi chère que l'autre. 这辆汽车和另"
+        }
+      ]
+    },
+    {
+      "word": "aussitôt",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "立刻，立即，马上: Je l'ai appelé et il est arrivé aussitôt. 我给他打了电话，他马上就来了。 Il est sorti aussitôt après le dîner.他一吃完晚饭就出去了。"
+        },
+        {
+          "text": "【aussitôt que】 loc. conj.刚一…就，一旦…就: Il la reconnut aussitôt qu'il la vit.他一见到她就认出了她。"
+        }
+      ]
+    },
+    {
+      "word": "autant",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "同样，一样多，同样多: Il lit autant que moi.他书看得和我一样多。 Lucie dessine autant de fleurs que Germaine.吕西画的花朵和热尔梅娜一样多。 Le cinéma ne m'intéresse pas autant que la télévision.电影不像电视那样使我感兴趣。"
+        }
+      ]
+    },
+    {
+      "word": "automatiquement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "autrefois",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "过去，以前，从前: Autrefois, Paris s'appelait Lutèce.从前，巴黎被称为吕泰斯。"
+        }
+      ]
+    },
+    {
+      "word": "autrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "别样，不一样，不同: Tu aurais dû répondre autrement.你本该换种方式回答的。"
+        },
+        {
+          "text": "否则，不然: Dépêchez-vous, autrement vous serez en retard.快点，否则你们会迟到的。"
+        }
+      ]
+    },
+    {
+      "word": "avant-hier",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "前天: Avant-hier soir, j'ai été au théâtre. 前天晚上，我去看戏了。"
+        }
+      ]
+    },
+    {
+      "word": "beaucoup",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "很多，非常[修饰动词]: Ils travaillent beaucoup.他们干得很多。 Notre"
+        }
+      ]
+    },
+    {
+      "word": "bientôt",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不久，马上: Nous partirons bientôt.我们不久就动身。 À bientôt! 不久再见!"
+        }
+      ]
+    },
+    {
+      "word": "bien¹",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "好，出色的: Vous chantez très bien, vous avez suivi des cours? 您唱得很好，您听过课吗? Yann parle bien l'allemand, mais il a encore un petit accent.雅南德语讲得好，不过他还有一点乡音。 Voilà un travail bien fait. 这是一项做得出色的工作。"
+        },
+        {
+          "text": "很，非常: J'aime bien les gâteaux.我很喜欢吃蛋糕。 Jacques est bien con-tent de partir en vacances.雅克很高兴动身去度假。"
+        }
+      ]
+    },
+    {
+      "word": "bis",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "interj.(要求表演者)再来一遍: Les spectateurs crient: «Bis! bis!» 观众们叫喊着:“再来一个!再来一个!”"
+        },
+        {
+          "text": "adv.(表示数字)重复: Ma maison porte le numéro 6 bis car la maison voisine porte déjà le numéro 6.我家门牌号是6号乙，因为邻居家门牌号已经是6号了。"
+        }
+      ]
+    },
+    {
+      "word": "bon²",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "好![表示赞成、不满、惊奇、厌恶等]: Bon, je vous laisse, il est sept heures.好，我走了，现在七点钟啦。 Tu ne peux pas venir vendredi? Bon. Alors, à samedi.你不能星期五来吗?好吧，那就星期六见吧。 Il est parti en France. —"
+        }
+      ]
+    },
+    {
+      "word": "bravo",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "好!妙! Bravo, Blandine! tu as très bien dansé!好极了，布朗迪恩!你跳舞跳得非常好!"
+        }
+      ]
+    },
+    {
+      "word": "brièvement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "brusquement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "突然地: L'autobus s'est arrêté brusquement. 公交车突然停了下来。"
+        }
+      ]
+    },
+    {
+      "word": "brutalement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "粗暴地;剧烈地: Il a fermé la porte brutalement. 他猛地关上了门。"
+        }
+      ]
+    },
+    {
+      "word": "calmement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "平静地，冷静地，镇静地，沉着地: La journée s'est passée calmement.一天平静地过去了。 Considérez calmement la situation.冷静地考虑一下形势。"
+        }
+      ]
+    },
+    {
+      "word": "certainement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "肯定地: Il viendra certainement.他肯定会来。"
+        },
+        {
+          "text": "当然: Vous apprendrez la seconde langue étrangère? Certainement!您学第二门外语吗?—当然啰!"
+        }
+      ]
+    },
+    {
+      "word": "chaleureusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "热情地，热烈地: Ils m'ont reçu chaleureusement.他们热情地接待了我。"
+        }
+      ]
+    },
+    {
+      "word": "chut",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "嘘[表示让人别作声]: Chut! il dort.嘘!他睡着。"
+        }
+      ]
+    },
+    {
+      "word": "clairement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "清楚地，明了地: Parlez donc plus clairement! 您讲得再清楚些!"
+        }
+      ]
+    },
+    {
+      "word": "combien",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "多少: Combien sont-ils?他们多少人? Combien coûte ce sac?这只包多少钱? Combien de temps faut-il pour faire ce trajet? 这段路程要用多少时间?"
+        }
+      ]
+    },
+    {
+      "word": "comment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "如何，怎么，怎样: Comment écrit-on votre nom?您的姓名怎么写? Comment partiras-tu, en voiture ou par le train?你怎么动身，开车还是坐火车? Je me demande comment il a pu s'échapper.我在想他是怎样得以逃脱的。"
+        },
+        {
+          "text": "怎么[用于感叹句，表示惊讶、愤怒等]: Comment? vous n'étiez pas au courant?怎么?您不知道? Comment! vous osez rire?怎么!你们还敢笑?"
+        }
+      ]
+    },
+    {
+      "word": "complètement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "完全地，完整地: Çayest, mon travail est complètement terminé.好了，我的工作全部做完了。 Catherine n'est pas complètement guérie.卡特琳病没有全好。"
+        }
+      ]
+    },
+    {
+      "word": "confortablement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "舒适地: Il s'est installé confortablement dans un fauteuil.他舒适地坐在一把扶手椅里。"
+        }
+      ]
+    },
+    {
+      "word": "constamment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "经常地，不断地: L'eau de la piscine est constamment renouvelée.游泳池的水经常更换。"
+        }
+      ]
+    },
+    {
+      "word": "correctement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "正确地: Paul écrit correctement.保尔书写正确。"
+        }
+      ]
+    },
+    {
+      "word": "courageusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "勇敢地，大胆地: Ils ont lutté courageusement.他们勇敢地进行了斗争。"
+        }
+      ]
+    },
+    {
+      "word": "couramment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "流利地，流畅地: Le professeur parle l'anglais couramment.老师讲英语很流利。"
+        }
+      ]
+    },
+    {
+      "word": "davantage",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "更，更多，更加: Il faut travailler davantage pour arriver à ce but.要达到这个目标，必须更加努力。 Ilya chaque année davantage de voitures dans les rues.马路上的汽车一年比一年多。 Ce paquet pèse davantage que les autres.这包东西比其他几包重。"
+        }
+      ]
+    },
+    {
+      "word": "debout",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "站着，直立着: Ne restez pas debout, asseyez-vous.别站着，请坐。"
+        },
+        {
+          "text": "起床，起身: Tous les matins, Mme Dubois est debout à six heures. 每天早晨，杜布瓦太太六点起床。 Quand le président est entré， tout le monde s'est mis debout.当主席走进来时，大家都站起身来。"
+        }
+      ]
+    },
+    {
+      "word": "dedans",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在里面: Ouvre ton sac et regarde si les clés sont dedans. 打开你的包，看看钥匙是否在里面。"
+        }
+      ]
+    },
+    {
+      "word": "dehors",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在外面: Entrez, ne restez pas dehors. 进来吧，不要待在外面。"
+        }
+      ]
+    },
+    {
+      "word": "demain",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "dessous",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在下面: Le chat n'est pas sous la table, regarde dessous.猫不在桌子底下，你看看下面。 Regardez cette pierre, il y a sans doute un serpent dessous. 看这块石头，下面可能有条蛇。"
+        }
+      ]
+    },
+    {
+      "word": "dessus",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在上面: Ce meuble n'est pas solide, ne t'appuie pas dessus. 这件家具不结实，你别靠在上面。"
+        }
+      ]
+    },
+    {
+      "word": "difficilement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "困难的，艰难地: Un vieillard marche difficilement.一个老年人在艰难地行走。"
+        }
+      ]
+    },
+    {
+      "word": "différemment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不同地: Je pense différemment là-dessus.这点上我的想法是不一样的。"
+        }
+      ]
+    },
+    {
+      "word": "directement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "径直地，直接地: Il rentre directement chez lui.他直接回家。 Adressez-vous directement au chef de service.您直接找部门经理。"
+        }
+      ]
+    },
+    {
+      "word": "doucement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "轻轻地，慢慢地: Chut! Parlez doucement, les enfants dorment.嘘!说话轻声些，孩子们睡着。 La voiture roule doucement. 汽车慢慢地在行驶。"
+        }
+      ]
+    },
+    {
+      "word": "drôlement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "特别，异乎寻常地: Pierre est drôlement grand.皮埃尔身材出奇的高。"
+        }
+      ]
+    },
+    {
+      "word": "déjà",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "已经: Il a déjà un manteau, pourquoi veut-il en acheter un autre? 他已经有一件大衣了，为什么还要买一件呢? Je t'ai déjà dit mon opinion.我已经跟你说过我的想法了。"
+        }
+      ]
+    },
+    {
+      "word": "désormais",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "从今以后，从此以后: Désormais, on se lèvera une heure plus tôt.从今以后，我们早起一个小时。"
+        }
+      ]
+    },
+    {
+      "word": "encore",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "还，仍: Est-ce qu'il pleut encore? 天还在下雨吗? Tu travailles encore à cette heure-ci?这个时候你还在工作?"
+        },
+        {
+          "text": "再，又: Allons! encore un effort! 来吧!再努力一下! J'ai encore perdu ma clé.我又丢了钥匙。"
+        }
+      ]
+    },
+    {
+      "word": "enfin",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "最后，终于: Nous irons d'abord à la tour Eiffel, ensuite à l'Arc de Triomphe et enfin au Louvre.我们先去埃菲尔铁塔，然后去凯旋门，最后去卢浮宫。 J'ai enfin retrouvé mes clés. 我终于找回了我的钥匙。"
+        },
+        {
+          "text": "毕竟，到底: Cela est difficile; enfin, vous pouvez toujours essayer. 这很难; 不过，您总是可以试一试的。 Enfin, tu es d'accord? 你到底同意吗?"
+        }
+      ]
+    },
+    {
+      "word": "ensemble",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "共同，一起: Paul et Marie sont partis ensemble.保尔和玛丽一起走了。"
+        }
+      ]
+    },
+    {
+      "word": "ensuite",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "然后: Je regarde d'abord, je choisirai ensuite. 我先看一看，然后再挑选。"
+        }
+      ]
+    },
+    {
+      "word": "entièrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "完全地，全部: Je suis entièrement d'accord.我完全同意。 L'incendie a entièrement détruit l'immeuble.火灾彻底烧毁了大楼。"
+        }
+      ]
+    },
+    {
+      "word": "environ",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "大约，将近，左右: Il y a environ cent personnes dans la salle. 大厅里大约有一 百个人。"
+        }
+      ]
+    },
+    {
+      "word": "exactement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "准确地，确切地，精确地: Il est exactement sept heures.现在是七点整。 Les experts ont calculé exactement la durée du voyage spatial.专家们精确地计算了 宇宙中旅程的时间。"
+        }
+      ]
+    },
+    {
+      "word": "exprès",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "故意地，特意地: Je t'ai fait mal? Pardon, je ne l'ai pas fait exprès. 我把你弄疼 了?对不起，我不是故意的。"
+        }
+      ]
+    },
+    {
+      "word": "extrêmement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "极端地，极其: M. Duval est extrêmement riche.迪瓦尔先生极其富有。"
+        }
+      ]
+    },
+    {
+      "word": "facilement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "容易地，不费力地: Ce livre se lit facilement. 这本书容易读。"
+        }
+      ]
+    },
+    {
+      "word": "finalement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "最后，终于: Finalement, il a accepté.最后他接受了。"
+        }
+      ]
+    },
+    {
+      "word": "forcément",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "必然地，不可避免地: Il rentrera forcément, puisqu'il n'a pas mangé.既然他没有吃过饭，必然会回来。"
+        }
+      ]
+    },
+    {
+      "word": "fort²",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "有力地，用力地，猛烈地: Parlez plus fort.讲得大声些。 Ne frappez pas si fort!不要敲得那么重!"
+        },
+        {
+          "text": "非常，很: Ce gâteau est fort bon.这块蛋糕非常好吃。"
+        }
+      ]
+    },
+    {
+      "word": "franchement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "坦率地，直爽地: Je vous dis franchement que je ne suis pas d'accord. 我坦率地告诉您，我不同意。"
+        }
+      ]
+    },
+    {
+      "word": "fréquemment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "常常，经常: Ces accidents arrivent fréquemment.这类事故经常发生。"
+        }
+      ]
+    },
+    {
+      "word": "gaiement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "快活地，愉快地: Les enfants chantent gaiement.孩子们在愉快地唱歌。"
+        }
+      ]
+    },
+    {
+      "word": "gentiment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "亲切地，可爱地: Marie m'a répondu gentiment.玛丽亲切地给了我回复。"
+        }
+      ]
+    },
+    {
+      "word": "gratuitement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "免费地，无偿地: Les enfants voyagent gratuitement.孩子们免费旅游。"
+        }
+      ]
+    },
+    {
+      "word": "gravement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "严重地: Il est gravement malade.他病得厉害。"
+        }
+      ]
+    },
+    {
+      "word": "grièvement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "严重地: Le conducteur de la voiture est grièvement blessé. 汽车司机严重受伤。"
+        }
+      ]
+    },
+    {
+      "word": "généralement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "一般地，通常: Généralement, il arrive au bureau avant 9 heures.一般地说，他在9点以前到办公室。"
+        }
+      ]
+    },
+    {
+      "word": "habituellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "通常，惯常地，习惯性地: Habituellement, Paul vient nous voir le jeudi.通常，保尔每周四来看我们。"
+        }
+      ]
+    },
+    {
+      "word": "haut³",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "高声地，大声地: Parlez plus haut.请您讲响点。"
+        },
+        {
+          "text": "【en】 haut loc. adv. 在高处，在上面: J'habite tout en haut, au dernier étage.我住在最上面，最高一层楼。"
+        }
+      ]
+    },
+    {
+      "word": "heureusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "幸好: Il commence à pleuvoir; heureusement, j'ai pris mon imperméable. 天下起雨来;幸好我带了雨衣。"
+        }
+      ]
+    },
+    {
+      "word": "hier",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "昨天: J'ai vu Paul hier.昨天我见到过保尔。"
+        }
+      ]
+    },
+    {
+      "word": "hélas",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "唉!咳!哎呀![表示失望、遗憾、惋惜等]: Hélas! il est trop tard!唉!太晚了!"
+        }
+      ]
+    },
+    {
+      "word": "ici",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "这里: Je reste ici. 我待在这里。 On passe par ici.我们从这边走。"
+        }
+      ]
+    },
+    {
+      "word": "immédiatement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "立即，即时: Tu as de la fièvre, je vais dire au docteur de venir immédiatement.你在发烧，我去跟医生说叫他马上来。"
+        }
+      ]
+    },
+    {
+      "word": "infiniment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "无限地，无穷地: Le ciel est infiniment grand.天空无限大。"
+        },
+        {
+          "text": "非常，极其: Cette musique me plaît infiniment.这首乐曲我非常喜欢。"
+        }
+      ]
+    },
+    {
+      "word": "jadis",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "从前，过去: Jadis, cette ville n'existait pas.从前这座城市不存在。"
+        }
+      ]
+    },
+    {
+      "word": "jamais",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "曾经: Avez-vous jamais observé ce phénomène? 您是否曾经观察过这种现象?"
+        },
+        {
+          "text": "将来有一天: Si jamais vous le voyez, vous lui direz que j'ai besoin de son aide.如果有一天您见到他，您对他说我需要他的帮助。"
+        },
+        {
+          "text": "ne... jamais 从来没有，从未;永远不: Je ne triche jamais.我从不作弊。 Il ne m'a jamais vu.他从未见到过我。"
+        }
+      ]
+    },
+    {
+      "word": "joyeusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "快乐地，喜悦地，高兴地: On fête joyeusement Noël.人们喜庆圣诞节。"
+        }
+      ]
+    },
+    {
+      "word": "justement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "正好，恰好: Tiens, te voilà! Nous parlions justement de toi. 瞧，你来了!我们正好说到你。"
+        }
+      ]
+    },
+    {
+      "word": "largement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "大大地;大量地，宽裕地: Pour aérer ma chambre, j'ouvre largement ma fenêtre.为使房间通风，我把窗开得大大的。 J'ai largement le temps de préparer le dîner.我有宽裕的时间准备晚餐。"
+        }
+      ]
+    },
+    {
+      "word": "lentement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "缓慢地，慢腾腾地: Marie mange lentement.玛丽吃饭慢腾腾。"
+        }
+      ]
+    },
+    {
+      "word": "loin",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "远，遥远: J'habite loin. 我住得远。"
+        },
+        {
+          "text": "【de loin】 loc. adv.从远处: On voit de loin la tour Eiffel.很远便可望见埃菲尔铁塔。"
+        },
+        {
+          "text": "【loin de】 loc. prép.远离: L'école est loin de chez moi.学校离我家远。"
+        }
+      ]
+    },
+    {
+      "word": "longtemps",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "长久地，很久: La visite ne durera pas longtemps. 参观时间不会很长。"
+        }
+      ]
+    },
+    {
+      "word": "longuement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "là",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "那儿，那里: Votre stylo n'est pas ici, je le vois là， sur l'autre bureau.您的钢笔不在这里，我看见在那儿，在另一张办公桌上。"
+        },
+        {
+          "text": "这儿，这里: Le directeur n'est pas là en ce moment, voulez-vous rappeler plus tard?经理不在，请您过会再打。"
+        },
+        {
+          "text": "là-bas 在那儿: Vous voyez cette maison là-bas, c'est là que j'habite.你们看那边的那幢房子，我就住在那儿。"
+        },
+        {
+          "text": "là-dedans 在这里面: Inutile de chercher là-dedans.在这里面找没用。"
+        },
+        {
+          "text": "là-dessous 在这下面: Votre clef est peut-être là-dessous.您的钥匙可能在这下面。"
+        },
+        {
+          "text": "là-dessus 在这上面: J'avais posé mon livre là-dessus.我是把书放在这上面的。"
+        },
+        {
+          "text": "là-haut 在那上面: Il est là-haut, au grenier. 他在上面，在顶楼。"
+        }
+      ]
+    },
+    {
+      "word": "légèrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "轻轻地，轻微地: Ne vous inquiétez pas, Nicolas est légèrement blessé.您别担心，尼古拉只受了点轻伤。"
+        },
+        {
+          "text": "轻便地，单薄地: Tu es habillé trop légèrement. 你穿得太单薄。"
+        },
+        {
+          "text": "简便地，少量地: Je déjeunerai légèrement.午餐我简便地吃一些。"
+        }
+      ]
+    },
+    {
+      "word": "maintenant",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "现在，目前: Autrefois nous habitions à Paris, maintenant nous sommes installés en banlieue.以前我们住在巴黎，现在我们在郊区安了家。"
+        }
+      ]
+    },
+    {
+      "word": "malheureusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不幸地;可惜: Je voulais voir Pierre, malheureusement il est parti.我想见见皮埃尔，可惜他走了。"
+        }
+      ]
+    },
+    {
+      "word": "mal¹",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "坏，不好: Il écrit mal.他写得不好。"
+        },
+        {
+          "text": "不舒服，不适: Je me sens mal. 我感到不舒服。"
+        },
+        {
+          "text": "【pas mal】 不错，不坏: Comment vont les affaires? — Pas mal.生意怎么样?一不坏。"
+        },
+        {
+          "text": "【pas mal de】 很多，不少: Il y a pas mal de gens dans les rues. 大街上有不少人。"
+        }
+      ]
+    },
+    {
+      "word": "merci",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "谢谢: Merci beaucoup.非常感谢。 Merci de votre cadeau.谢谢您的礼物。 Non, merci, je ne fume pas.不，谢谢，我不抽烟。"
+        }
+      ]
+    },
+    {
+      "word": "mieux",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "更好地[bien 的比较级]: Jacqueline dessine mieux qu'Isabelle.雅克琳比伊莎贝尔画得好。"
+        },
+        {
+          "text": "最好地[与定冠词连用构成 bien 的最高级]: De toute la classe, c'est Julie qui travaille le mieux.班里是朱莉学习最好。"
+        }
+      ]
+    },
+    {
+      "word": "moins",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "比…少，不如[构成形容词或副词的比较级]: Je suis moins grand que toi.我没你高。 Parlez moins vite.您讲得慢一些。 Le sac coûte moins cher.这只包不太贵。"
+        },
+        {
+          "text": "最不，最少[构成形容词或副词的最高级]: La maison de Sophie est moins grande que celle de Marianne, mais ce n'est pas la moins grande du quartier. 索菲的房子不如玛丽安娜的大，但不是街区里最小的。 Elle va au cinéma le moins souvent de sa classe.她是班里最少去看电影的人。"
+        },
+        {
+          "text": "更少，较少[peu 的比较级]: Paul travaille peu, mais Pierre travaille encore moins.保尔干得不多，但皮埃尔干得更少。 Dans notre classe, il y a moins de filles que de garçons.在我们班里，女孩没有男孩多。"
+        },
+        {
+          "text": "最少，最不[与定冠词连用构成 peu 的最高级]: Ma grand-mère mange le moins.我祖母吃得最少。 Il a le moins de capacité pour ce travail.做这项工作他能力最差。"
+        }
+      ]
+    },
+    {
+      "word": "moralement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "道德上，道义上: Il est moralement vainqueur.道义上他是赢家。"
+        },
+        {
+          "text": "精神上: Elle me soutient moralement.她在精神上支持我。"
+        }
+      ]
+    },
+    {
+      "word": "même³",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "甚至: Dans le bateau, tout le monde est malade, même Jacques. 在船上，大家都病了，甚至雅克也病了。 Je ne me rappelle même plus son nom. 我甚至连他的名字都记不起来了。"
+        },
+        {
+          "text": "【même si】 即使: Je prendrai mon vélo, même s'il pleut.即使下雨，我也骑自行车。"
+        },
+        {
+          "text": "【quand même, tout de même】 loc. adv.仍然，还是: Il pleuvait, mais il est parti quand même. 当时天下雨，但他还是动身了。 Il a réussi tout de même.他还是成功了。"
+        }
+      ]
+    },
+    {
+      "word": "naturellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "必然地，自然而然地: Quand j'ai appris cette nouvelle, j'ai naturellement téléphoné à mes parents.当我得知这条消息后，我自然给我父母打了电话。"
+        },
+        {
+          "text": "当然: As-tu pensé à fermer la porte? — Naturellement.你有没有想到把门关上?一当然想到了。"
+        }
+      ]
+    },
+    {
+      "word": "nettement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "清楚地;明显地: On voit nettement tous les détails de la photo. 照片的各个细部看得清清楚楚。 Pierre est nettement fort au tennis. 皮埃尔打网球明显打得好。"
+        }
+      ]
+    },
+    {
+      "word": "non",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不，不是，没有: Voulez-vous du café? — Non, merci.您要喝点咖啡吗?一不要，谢谢。 Veux-tu jouer avec nous? — Non, je n'en ai pas envie.你想和我们一起玩吗?一不，我不想玩。"
+        }
+      ]
+    },
+    {
+      "word": "normalement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "正常地，在正常情况下，通常: Normalement, il rentre chez lui à 5 heures. 通常，他五点回到家里。"
+        }
+      ]
+    },
+    {
+      "word": "notamment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "特别是，尤其: Dominique aime tous les sports, notamment le judo.多米尼克喜欢各项体育运动，尤其是柔道。"
+        }
+      ]
+    },
+    {
+      "word": "nécessairement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "必然，必定: Il viendra nécessairement.他必然会来。"
+        }
+      ]
+    },
+    {
+      "word": "officiellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "正式地: On l'a averti officiellement. 他正式接到了通知。"
+        }
+      ]
+    },
+    {
+      "word": "opportunément",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "恰好，及时: Tu es arrivé opportunément.你恰好到了。"
+        }
+      ]
+    },
+    {
+      "word": "oralement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "口头上: Répondez oralement.您给口头答复吧。"
+        }
+      ]
+    },
+    {
+      "word": "ordinairement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "通常，平常: Ordinairement, il vient le jeudi. 通常他每周四来。"
+        }
+      ]
+    },
+    {
+      "word": "oui",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "是，是的: Tu viens? — Oui.你来吗?—来的。"
+        }
+      ]
+    },
+    {
+      "word": "ouvertement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "坦率地，公开地: Il a déclaré ouvertement qu'il ne craignait personne.他公开宣称他不怕任何人。"
+        }
+      ]
+    },
+    {
+      "word": "où",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "【adv. interr.】 在哪儿，去哪儿: Où travaille-t-il? 他在哪儿工作?"
+        },
+        {
+          "text": "【pron. rel.】 …地方，…时候: Voilà la maison où habite mon ami.这就是我朋友住的房子。 J'attends l'heure où il sortira.我在等什么时候他出去。"
+        }
+      ]
+    },
+    {
+      "word": "parallèlement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "平行地: Les arbres sont alignés parallèlement à la route. 树与公路平行地排成行。"
+        }
+      ]
+    },
+    {
+      "word": "parfaitement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "完美地，极好地: Paul joue parfaitement du violon.保尔小提琴拉得非常好。"
+        }
+      ]
+    },
+    {
+      "word": "parfois",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "有时: J'aide parfois mon père à bricoler. 有时我帮父亲修修弄弄。"
+        }
+      ]
+    },
+    {
+      "word": "particulièrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "特别，尤其: Elle aime les fruits, particulièrement les poires. 她喜欢吃水果，尤其是梨子。"
+        }
+      ]
+    },
+    {
+      "word": "partiellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "部分地，局部地: Le pont a été partiellement détruit.桥部分被毁。"
+        }
+      ]
+    },
+    {
+      "word": "partout",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "到处，处处: Mon chien me suit partout.我的狗跟随我到处走。"
+        }
+      ]
+    },
+    {
+      "word": "pas²",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不，没有[和 ne 连用或单独使用]: On ne travaille pas les jours de fête.节假日人们不工作。 Il aime les ananas, pas moi.他喜欢吃菠萝，我不喜欢。 Il est rentré? —Pas encore. 他回家了?—还没有。"
+        }
+      ]
+    },
+    {
+      "word": "patiemment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "耐心地: Paul attend patiemment.保尔在耐心等待。"
+        }
+      ]
+    },
+    {
+      "word": "personnellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "亲自: Je m'occuperai personnellement de votre affaire. 我亲自负责做您的事情。"
+        },
+        {
+          "text": "作为个人，就个人而言: Personnellement, je ne suis pas de cet avis.就个人而言，我不赞同这种想法。"
+        }
+      ]
+    },
+    {
+      "word": "peu",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "少，不多;不大，不太: Georges n'a pas d'appétit, il mange peu. 乔治没胃口，他吃得少。 Il y a peu de fraises cette année. 今年草莓不多。 Paul est peu at-tentif en classe.保尔在课堂上不太专心。"
+        },
+        {
+          "text": "【un peu】 一点儿，少量，稍微: Attendez un peu.您稍等。 Il va un peu mieux.他好些了。 Donnez-moi un peu de sel.给我一点盐。"
+        }
+      ]
+    },
+    {
+      "word": "peut-être",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "可能，也许: Ici, nous trouverons peut-être des champignons. 在这里我们也许能采到蘑菇。"
+        }
+      ]
+    },
+    {
+      "word": "physiquement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "身体上，相貌上: Physiquement, il ressemble à Georges.从长相上看，他像乔治。"
+        }
+      ]
+    },
+    {
+      "word": "plus¹",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "比…更[用于比较级]: Marie est plus jeune que Jeanne.玛丽比让娜年轻。 Pierre travaille beaucoup, mais Paul travaille encore plus [plys]. 皮埃尔干活干得多，但保尔干得还要多。 Dans notre classe, il y a plus de bruns que de blonds.在我们班里，棕色头发比金黄色头发多。"
+        },
+        {
+          "text": "最…[用于最高级]: Marie est la plus jeune de la classe. 玛丽是班里年龄最小的。 Paul travaille le plus [plys].保尔干活干得最多。 Pierre a fait le plus de fautes dans sa dictée.皮埃尔听写错得最多。"
+        }
+      ]
+    },
+    {
+      "word": "plutôt",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "宁愿;与其…倒不如: Je pars aujourd'hui plutôt que demain. 我宁愿今天动身，而不要明天动身。 Le train ou la voiture? — Je prendrai plutôt le train.乘火车还是开车去?—我更愿乘火车。"
+        }
+      ]
+    },
+    {
+      "word": "point²",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "并不，并没有[和 ne连用]: Je ne le comprends point.我并没有理解他的意思。"
+        }
+      ]
+    },
+    {
+      "word": "poliment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "pourquoi",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "为什么:Pourquoi ris-tu? 你为什么笑? Je me demande pourquoi tu ris.我在想你为什么笑。"
+        },
+        {
+          "text": "【c'est pourquoi】 loc. conj. 所以，因此: Il pleut, c'est pourquoi je reste. 天下雨，所以我留下了。"
+        }
+      ]
+    },
+    {
+      "word": "pourtant",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "然而，可是: Il est malade, pourtant il est venu.他病了，然而他却来了。"
+        }
+      ]
+    },
+    {
+      "word": "pratiquement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "实践上;实际上: Théoriquement, ça a l'air facile, mais pratiquement, c'est difficile.理论上看来容易，但实际上是难的。"
+        },
+        {
+          "text": "几乎，简直: Il est pratiquement huit heures.差不多8点了。"
+        }
+      ]
+    },
+    {
+      "word": "premièrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "首先，第一: Premièrement, tu iras à la boulangerie; deuxièmement, à la boucherie.你先去面包房，然后再去肉店。"
+        }
+      ]
+    },
+    {
+      "word": "presque",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "几乎，差不多: Il est presque 10 heures.现在差不多10点了。"
+        }
+      ]
+    },
+    {
+      "word": "principalement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "probablement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "可能，大概: Tu penses que la boulangerie est fermée? — Probablement.你认为面包房关门了吗?—大概关门了。"
+        }
+      ]
+    },
+    {
+      "word": "prochainement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不久以后，即将: Nous allons nous revoir prochainement. 我们不久以后再见。"
+        }
+      ]
+    },
+    {
+      "word": "profondément",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "深，深深地: Le couteau a pénétré profondément.刀扎得很深。"
+        },
+        {
+          "text": "极大地，完全地: Pierre est profondément ému.皮埃尔非常激动。"
+        }
+      ]
+    },
+    {
+      "word": "progressivement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "逐渐地，渐次地: La chaleur diminue progressivement.高溫在逐渐减弱。"
+        }
+      ]
+    },
+    {
+      "word": "provisoirement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "临时地，暂时地: Ils logent provisoirement à l'hôtel.他们临时住在旅馆里。"
+        }
+      ]
+    },
+    {
+      "word": "prudemment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "谨慎地，慎重地: M. Durand ne conduit pas prudemment.迪朗先生开车不谨慎。"
+        }
+      ]
+    },
+    {
+      "word": "près",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "近[常与 tout, très, si, trop 连用]: Pierre habite tout près.皮埃尔住得很近。"
+        },
+        {
+          "text": "【près de】 loc. prép. 靠近，邻近;将近: Cette île est située près de l'équateur.这座岛屿靠近赤道。 Debout! il est près de 8 heures.起床了!快8点了。"
+        },
+        {
+          "text": "【de près】 loc. adv. 靠近地，贴近地: Regardez de près.您靠近看。"
+        },
+        {
+          "text": "【à peu près】 loc. adv. 差不多，几乎: Il est à peu près 10 heures.差不多10点了。"
+        }
+      ]
+    },
+    {
+      "word": "précieusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "珍贵地: Papa garde précieusement sa première photo de maman.爸爸珍藏着妈妈给他的第一张照片。"
+        }
+      ]
+    },
+    {
+      "word": "précipitamment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "publiquement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "当众，在大庭广众: Le ministre a annoncé publiquement sa démission.部长当众宣布辞职。"
+        }
+      ]
+    },
+    {
+      "word": "puis",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "接着，然后: Le soir au lit, je lis un peu, puis je m'endors. 晚上躺在床上，我 看一会儿书，然后我便入睡了。"
+        },
+        {
+          "text": "【et puis】此外，再说: Je n'ai pas fini ce roman, car j'étais très occupé， et puis il était fort ennuyeux.我没有看完这本小说，因为我很忙，再说小说十分枯燥乏味。"
+        }
+      ]
+    },
+    {
+      "word": "péniblement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "费力地，困难地，艰难地: Mon grand-père marche péniblement.我祖父行走困难。"
+        }
+      ]
+    },
+    {
+      "word": "quand",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "adv.什么时候: Quand viendra-t-il?他什么时候来?"
+        },
+        {
+          "text": "conj.当…时: Je partirai quand mon vélo sera réparé.当我的自行车修好后我再动身。"
+        },
+        {
+          "text": "【quand même】loc.conj.仍然，还是: Marc a fait de la peine à sa mère, mais elle l'embrasse quand même.马克使他母亲感到不快，但他母亲还是拥吻了他。"
+        }
+      ]
+    },
+    {
+      "word": "quelquefois",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "有时: Je vais quelquefois chez ma grand-mère. 我有时去我祖母家。"
+        }
+      ]
+    },
+    {
+      "word": "que²",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "多么[引出感叹句]: Que c'est beau!多美啊! Que de monde!人真多!"
+        }
+      ]
+    },
+    {
+      "word": "radicalement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "根本地，彻底地: Il a été guéri radicalement de ses rhumatismes.他的风湿病得到了根治。"
+        }
+      ]
+    },
+    {
+      "word": "rapidement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "很快地，迅速地: Marche plus rapidement.你走得快些。"
+        }
+      ]
+    },
+    {
+      "word": "rarement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "很少地: Paul arrive rarement en retard.保尔很少迟到。"
+        }
+      ]
+    },
+    {
+      "word": "relativement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "相对地: Cette langue est relativement difficile. 这门语言相对而言难学。"
+        }
+      ]
+    },
+    {
+      "word": "remarquablement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "出色地，显著地: Marie chante remarquablement.玛丽唱歌唱得非常好。"
+        }
+      ]
+    },
+    {
+      "word": "respectivement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "各自地，分别地:"
+        },
+        {
+          "text": "Ils ont présenté respectivement leur demande.他们各自提出了自己的要求。"
+        }
+      ]
+    },
+    {
+      "word": "rigoureusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "严厉地，严格地:"
+        },
+        {
+          "text": "Il est rigoureusement interdit de fumer.严禁吸烟。"
+        }
+      ]
+    },
+    {
+      "word": "récemment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "最近: J'ai vu Paul récemment.最近我见到过保尔。"
+        }
+      ]
+    },
+    {
+      "word": "réellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "确实，真正地: Que penses-tu réellement? 你真的在想什么?"
+        }
+      ]
+    },
+    {
+      "word": "régulièrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "有规律地，有规则地: Le cœur bat régulièrement.心脏有规律地跳动。"
+        },
+        {
+          "text": "按时地: M. Dupont paie régulièrement son loyer.杜邦先生按时支付房租。"
+        }
+      ]
+    },
+    {
+      "word": "sensiblement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "明显地，显著地:"
+        },
+        {
+          "text": "Il a sensiblement grandi.他明显长大了。"
+        }
+      ]
+    },
+    {
+      "word": "seulement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "只，仅仅:"
+        },
+        {
+          "text": "Pour mon goûter, je prendrai seulement une tartine.下午点心我将只吃一块面包片。"
+        },
+        {
+          "text": "【non seulement】 [后接 mais 或 mais encore] loc. adv.不仅…(而且):"
+        },
+        {
+          "text": "Non seulement nous respectons notre professeur, mais encore nous l'aimons.我们不仅尊敬我们的老师，而且还爱戴他。"
+        },
+        {
+          "text": "【si seulement】 要是…就好了[谓语用未完成过去时]:"
+        },
+        {
+          "text": "Si seulement il faisait beau l'après-midi! 要是下午天气好就好了!"
+        }
+      ]
+    },
+    {
+      "word": "silencieusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "无声地，静悄悄地: Les chats marchent silencieusement.猫咪走路静悄悄。"
+        }
+      ]
+    },
+    {
+      "word": "simplement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "简单地: Marie est habillée simplement.玛丽衣着简单。"
+        },
+        {
+          "text": "仅仅，只是: Je voulais simplement lui dire bonjour.我只是想向他问个好。"
+        }
+      ]
+    },
+    {
+      "word": "simultanément",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "同时地: Mon réveil et le téléphone sonnent simultanément.我的闹钟和电话同时响了。"
+        }
+      ]
+    },
+    {
+      "word": "sincèrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "真诚地，诚恳地，由衷地: Je vous remercie sincèrement.我真心感谢您。"
+        }
+      ]
+    },
+    {
+      "word": "si²",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "如此的[用于修饰形容词或副词]:"
+        },
+        {
+          "text": "Elle est si belle! 她是那么漂亮!"
+        },
+        {
+          "text": "这样地…以致[引出由 que 引导的后果从句]:"
+        },
+        {
+          "text": "Il a tiré si fort que la corde a"
+        }
+      ]
+    },
+    {
+      "word": "soigneusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "细心地，仔细地: Range soigneusement tes livres!把你的书仔仔细细放好!"
+        }
+      ]
+    },
+    {
+      "word": "solidement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "坚固地，牢固地: Le chien enragé est solidement attaché.疯狗被紧紧地拴着。"
+        }
+      ]
+    },
+    {
+      "word": "souvent",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "经常，常常: En automne, il pleut souvent.秋天常常下雨。"
+        }
+      ]
+    },
+    {
+      "word": "spontanément",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "自发地，本能地: Il a proposé son aide spontanément.他主动提出帮助他人。"
+        }
+      ]
+    },
+    {
+      "word": "spécialement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "专门，特地: Je viens spécialement pour vous voir. 我是专门来看望您的。"
+        },
+        {
+          "text": "特别，尤其: Il s'intéresse spécialement à la peinture. 他对绘画特别感兴趣。"
+        }
+      ]
+    },
+    {
+      "word": "stop",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "interj.停止: Il ya un accident! Stop!发生一起车祸!停车!"
+        },
+        {
+          "text": "n. m.停止: Les voitures s'arrêtent au stop.车辆在标有“停”字的路标处停了下来。"
+        }
+      ]
+    },
+    {
+      "word": "subitement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "突然，骤然: Il est parti subitement.他突然走了。"
+        }
+      ]
+    },
+    {
+      "word": "successivement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "suffisamment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "surtout",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "特别，尤其: Elle aime les fleurs, surtout les roses. 她喜欢花，尤其是玫瑰花。 Surtout, n'oublie pas ce que je t'ai dit.特别是别忘了我对你说的事。"
+        }
+      ]
+    },
+    {
+      "word": "séparément",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "分开地，各别地:"
+        },
+        {
+          "text": "Travaillons séparément. 大家各自工作。"
+        }
+      ]
+    },
+    {
+      "word": "sérieusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "严肃地，认真地:"
+        },
+        {
+          "text": "Pierre ne travaille pas sérieusement.皮埃尔不认真学习。"
+        }
+      ]
+    },
+    {
+      "word": "sévèrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "严厉地，严格地:"
+        },
+        {
+          "text": "Pierre a été puni sévèrement.皮埃尔受到严厉处罚。"
+        }
+      ]
+    },
+    {
+      "word": "sûrement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "当然，肯定: Je vais sûrement gagner. 我肯定能赢。"
+        },
+        {
+          "text": "可靠地，稳当地: Il conduit sûrement. 他开车稳当。"
+        }
+      ]
+    },
+    {
+      "word": "tant",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "如此，如此多[修饰动词]: Comme il est gros! mais il mange tant!他真胖!他吃得那么多![与que 连用]那么…以至于: Sophie a tant parlé qu'elle a la bouche sèche.索菲讲得那么多以至于口都干了。"
+        },
+        {
+          "text": "那么多[后接由 de 引导的名词]: J'ai tant de travail à faire! 我有那么多的事要做![与 que 连用]那么多的…以至于: Pierre a mangé tant de bonbons que ses dents sont abîmées. 皮埃尔吃糖吃得那么多以至于牙齿都坏了。"
+        },
+        {
+          "text": "【tant que】 loc. conj.只要…(就)…: Je resterai ici tant qu'il fera jour.只要天还亮着我就待在这里。"
+        },
+        {
+          "text": "【tant mieux】 loc. adv.好极了: Tu as réussi à ton examen? Tant mieux!你考试通过了?好极了!"
+        },
+        {
+          "text": "【tant pis】 loc. adv.算了，活该，倒霉: Si tu ne peux pas venir, tant pis.如果你不能来，那就算了。 Tant pis pour moi! 算我倒霉!"
+        }
+      ]
+    },
+    {
+      "word": "tantôt",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "tantôt... tantôt... 时而…时而…: Alexandre change souvent d'avis: tantôt il joue avec moi, tantôt il reste dans son coin.亚历山大常常改变想法:他一会儿和我玩，一会儿呆在自己的角落里。"
+        }
+      ]
+    },
+    {
+      "word": "tard",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "晚，迟: Il est midi, tu te lèves si tard! 中午12点了，你这么晚起床! On verra ça plus tard. 我们以后再说吧。"
+        }
+      ]
+    },
+    {
+      "word": "tellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "这样地，如此地: Vous ne reconnaîtrez pas votre ami, il a tellement changé.您将认不出您的朋友，他变化非常大。 Ma grand-mère est tellement bavarde.我祖母是那么唠叨。"
+        },
+        {
+          "text": "tellement de 那么多的: Les élèves ont tellement de questions. 学生们有那么多的问题。"
+        },
+        {
+          "text": "tellement... que... 那么地…以致…: Pascal a tellement changé que je ne le reconnais pas. 帕斯卡尔变化那么大，我都认不出他了。 Cette maison est tellement grande qu'il est difficile de la chauffer. 这幢房子那么大以致难以使房间暖和起来。"
+        }
+      ]
+    },
+    {
+      "word": "terriblement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "非常地，极度地: Il fait terriblement froid.天气非常冷。"
+        }
+      ]
+    },
+    {
+      "word": "théoriquement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "从理论上，在理论上: Théoriquement cela n'aurait pas dû arriver.理论上讲，这件事本不该发生。"
+        }
+      ]
+    },
+    {
+      "word": "timidement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "腼腆地，害羞地;胆怯地: Jeannot s'approche timidement de l'agent de police.雅诺畏畏缩缩地走近警察。"
+        }
+      ]
+    },
+    {
+      "word": "totalement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "全部地，完全地: C'est totalement faux.这完全是虚假的。 Il a totalement changé.他完全变了。"
+        }
+      ]
+    },
+    {
+      "word": "toujours",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "总是，始终: Sylvie passe toujours par le même chemin.希尔维总是经过同一条路。 Il est toujours prêt à vous aider. 他始终乐于帮助您。"
+        }
+      ]
+    },
+    {
+      "word": "toutefois",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不过，仍然，还是: Je ne suis pas convaincu, toutefois j'accepte.我没有被说服，不过我还是接受的。"
+        }
+      ]
+    },
+    {
+      "word": "tout³",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "tranquillement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "安静地，安稳地，安心地: Il dort tranquillement. 他安安稳稳地在睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "trop",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "très",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "很，非常: Je suis très content.我很高兴。 Il se couche très tard.他很晚睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "typiquement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "典型地，地道地: Cette habitude est typiquement française.这种习惯是典型的法国人习惯。"
+        }
+      ]
+    },
+    {
+      "word": "tôt",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "早: Le matin, je me lève tôt.早晨我起得早。"
+        },
+        {
+          "text": "【tôt ou tard】loc. adv. 迟早，早晚: Tôt ou tard, on s'en apercevra.人们迟早会发觉的。"
+        }
+      ]
+    },
+    {
+      "word": "ultérieurement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "以后，今后: On en reparlera ultérieurement.我们以后再谈。"
+        }
+      ]
+    },
+    {
+      "word": "uniquement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "仅仅，唯一地: Égoïste, tu penses uniquement à toi! 你自私，只想到自己!"
+        }
+      ]
+    },
+    {
+      "word": "vaguement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "含糊地，不明确地: Il m'a vaguement parlé de ses projets. 他含含糊糊地跟我谈了他的计划。"
+        },
+        {
+          "text": "模模糊糊地，隐隐约约地: On voit vaguement une silhouette au loin.远处隐隐约约可见一个人影。"
+        }
+      ]
+    },
+    {
+      "word": "vainement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "徒然，白白地: J'ai attendu vainement pendant trois heures. 我白白等了3个小时。"
+        }
+      ]
+    },
+    {
+      "word": "verticalement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "垂直地，笔直地: Les corps tombent verticalement.物体垂直落地。"
+        }
+      ]
+    },
+    {
+      "word": "vice versa",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "副词"
+        }
+      ]
+    },
+    {
+      "word": "vigoureusement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "用力地;有力地;强烈地: Tout le monde a protesté vigoureusement contre cette injustice.众人强烈抗议这一不公正的行为。"
+        }
+      ]
+    },
+    {
+      "word": "violemment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "粗暴地: Il m'a repoussé violemment.他粗暴地把我推开。"
+        },
+        {
+          "text": "猛烈地，强烈地: Ils ont réagi violemment.他们反应强烈。"
+        }
+      ]
+    },
+    {
+      "word": "visiblement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "明显地，显然: Il grossit visiblement.他明显在发胖。"
+        }
+      ]
+    },
+    {
+      "word": "vite",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "快，迅速地: Je n'arrive pas à te suivre, tu marches trop vite. 我跟不上你，你走得太快了。 Vite! ferme le robinet.快!关上水龙头。"
+        }
+      ]
+    },
+    {
+      "word": "vivement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "急速地，迅速地: Il m'a répondu vivement.他很快地给了我答复。"
+        }
+      ]
+    },
+    {
+      "word": "voire",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "甚至: Je resterai absent des semaines, voire des mois. 我将有几个星期甚至几个月不在。"
+        }
+      ]
+    },
+    {
+      "word": "volontairement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "自愿地: Il s'est dénoncé volontairement.他自首了。"
+        },
+        {
+          "text": "故意地: Il m'a poussé volontairement.他故意推我。"
+        }
+      ]
+    },
+    {
+      "word": "volontiers",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "乐意地，自愿地: Je le recevrai volontiers.我很乐意接待他。 Peux-tu me prêter ce livre? - Volontiers.你可以把这本书借给我吗?一可以的。"
+        }
+      ]
+    },
+    {
+      "word": "vraiment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "真正地，确实地，实在地: Ce que je dis s'est vraiment passé.我所说的确实发生了。 Cette fleur est vraiment belle.这朵花实在美丽。"
+        },
+        {
+          "text": "真的，的确[加强肯定的语气]: Vraiment, il ne comprend pas du tout.他的确一点都不懂。"
+        }
+      ]
+    },
+    {
+      "word": "vraisemblablement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "看来，很可能: D'après son accent, cet étranger est vraisemblablement Allemand.根据他的口音，这个外国人很可能是德国人。"
+        }
+      ]
+    },
+    {
+      "word": "véritablement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "真正地，确实地: Les acteurs mangent véritablement sur la scène. 演员们真的在舞台上吃饭。"
+        }
+      ]
+    },
+    {
+      "word": "zut!",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "该死!倒霉!见鬼!去他的!: Zut! j'ai oublié ma clé! 倒霉!我忘了带钥匙!"
+        }
+      ]
+    },
+    {
+      "word": "également",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "相等地，同等地: Le partage a été fait également. 分配是均等的。"
+        },
+        {
+          "text": "也: Pour rentrer à Paris, vous pouvez prendre l'autoroute, mais vous pouvez également prendre la route nationale.回巴黎您可以走高速公路，也可以走国道。"
+        }
+      ]
+    },
+    {
+      "word": "énormément",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "极大量地，巨大地: Il pleut énormément. 雨下得非常大。"
+        }
+      ]
+    },
+    {
+      "word": "étroitement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "紧密地，密切地: Ces deux questions sont étroitement liées. 这两个问题密切相 连。"
+        }
+      ]
+    },
+    {
+      "word": "éventuellement",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "或许，可能: Je vous préviendrai éventuellement.有可能的话我会通知您。"
+        }
+      ]
+    },
+    {
+      "word": "évidemment",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "当然，肯定地: Tu acceptes? Évidemment!你接受了?—当然!"
+        }
+      ]
+    },
+    {
+      "word": "【ne...】 guère",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "ne... guère 不大，不很，几乎没有: Je n'aime guère la viande. 我不很喜欢吃肉。"
+        }
+      ]
+    },
+    {
+      "word": "【tout de suite】loc.",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "立即，马上: Pars tout de suite!你马上动身!"
+        }
+      ]
+    },
+    {
+      "word": "【tout à coup】loc.",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "突然: Tout à coup le chat a bondi sur la souris. 突然，猫扑向小老鼠。"
+        }
+      ]
+    },
+    {
+      "word": "【tout à fait】loc.",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "完全地: Je suis tout à fait d'accord.我完全同意。"
+        }
+      ]
+    },
+    {
+      "word": "【vain (en)】loc.",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "徒劳地，白白地: J'ai cherché ma clef en vain. 我白找了我的钥匙。"
+        }
+      ]
+    }
+  ]
+}

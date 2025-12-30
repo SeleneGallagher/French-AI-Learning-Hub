@@ -1,0 +1,1007 @@
+{
+  "name": "French Dictionary - 限定词",
+  "pos": "det",
+  "count": 57,
+  "source": "https://github.com/hbenbel/French-Dictionary",
+  "license": "MIT License",
+  "copyright": "Copyright (c) 2021 Hussem Ben Belgacem",
+  "version": "1.0.0",
+  "generated_at": "2025-12-19T20:34:58.128382Z",
+  "words": [
+    {
+      "word": "bien d'autres",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "ce",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "certain",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "ces",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "plural"
+      ],
+      "raw_tags": "['plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "cet",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "before-vowel",
+        "masculine"
+      ],
+      "raw_tags": "['before-vowel', 'masculine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "cette",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "d'autres",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "plural"
+      ],
+      "raw_tags": "['plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "ladite",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "singular"
+      ],
+      "raw_tags": "['feminine', 'singular']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "ledit",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "lesdites",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "plural"
+      ],
+      "raw_tags": "['feminine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "lesdits",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine",
+        "plural"
+      ],
+      "raw_tags": "['masculine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "leur",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "leurdit",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "leurdite",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "leurs",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "plural"
+      ],
+      "raw_tags": "['plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "leursdites",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "plural"
+      ],
+      "raw_tags": "['feminine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "leursdits",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine",
+        "plural"
+      ],
+      "raw_tags": "['masculine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "ma",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "madite",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "mes",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "mesdites",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "plural"
+      ],
+      "raw_tags": "['feminine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "mesdits",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine",
+        "plural"
+      ],
+      "raw_tags": "['masculine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "mon",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine"
+      ],
+      "raw_tags": "['masculine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "mondit",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "n'importe quel",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "n'importe quelle",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "n'importe quelles",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "plural"
+      ],
+      "raw_tags": "['feminine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "n'importe quels",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine",
+        "plural"
+      ],
+      "raw_tags": "['masculine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "nos",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "nosdites",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "plural"
+      ],
+      "raw_tags": "['feminine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "nosdits",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine",
+        "plural"
+      ],
+      "raw_tags": "['masculine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "notre",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "notredit",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "notredite",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "sa",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "sadite",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "ses",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "sesdites",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "plural"
+      ],
+      "raw_tags": "['feminine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "sesdits",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine",
+        "plural"
+      ],
+      "raw_tags": "['masculine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "son",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "sondit",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "ta",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "tadite",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "tes",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "tesdites",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "plural"
+      ],
+      "raw_tags": "['feminine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "tesdits",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine",
+        "plural"
+      ],
+      "raw_tags": "['masculine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "ton",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "tondit",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "tous deux",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "un autre",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "une autre",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "singular"
+      ],
+      "raw_tags": "['feminine', 'singular']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "vos",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "vosdites",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine",
+        "plural"
+      ],
+      "raw_tags": "['feminine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "vosdits",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "masculine",
+        "plural"
+      ],
+      "raw_tags": "['masculine', 'plural']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "votre",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "votredit",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    },
+    {
+      "word": "votredite",
+      "pos": [
+        {
+          "abbr": "det.",
+          "full": "限定词"
+        }
+      ],
+      "tags": [
+        "feminine"
+      ],
+      "raw_tags": "['feminine']",
+      "definitions": [
+        {
+          "text": "限定词"
+        }
+      ]
+    }
+  ]
+}

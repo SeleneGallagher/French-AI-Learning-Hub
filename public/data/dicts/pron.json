@@ -1,0 +1,476 @@
+{
+  "name": "公共法语学习词典 - 代词",
+  "pos": "pron",
+  "count": 22,
+  "source": "公共法语学习词典",
+  "license": "Unknown",
+  "copyright": "",
+  "version": "1.0.0",
+  "generated_at": "2025-12-30T23:54:52.225156Z",
+  "words": [
+    {
+      "word": "ceci",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "这，这个: Retenez bien ceci: les enfants doivent se coucher avant neuf heures.记住这个:孩子们必须在9点以前睡觉。 Il faut choisir entre ceci et cela.应该在这个和那个之间作出选择。"
+        }
+      ]
+    },
+    {
+      "word": "cela",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "那，那个: Tu as le choix entre ceci et cela.这个和那个由你选择。"
+        },
+        {
+          "text": "这件事，这个东西[口语中用ça] : Cela est très difficile.这件事很难做。 Je n'aime pas cela.我不喜欢这个东西。"
+        }
+      ]
+    },
+    {
+      "word": "celui",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": ": Je n'ai pas de valise, je prends celle de Pierre. 我没有手",
+          "category": "和介词 de 连用"
+        }
+      ],
+      "extra_info": "阴性单数为 celle, 阴性复数为 celles, 阳性复数为 ceux"
+    },
+    {
+      "word": "ce²",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "这是，这些是: Qui est-ce? — Ce sont des amis.这些人是谁?—这是一些朋友。 C'est la salle de lecture.这是阅览室。 Ce sont là des bêtises.那是一些蠢话(蠢事)。 C'est fini.结束了。 C'est Georges qui a téléphoné tout à l'heure.刚才是乔治打的电话。",
+          "category": "用于动词 être前，构成c'est, ce sont"
+        },
+        {
+          "text": ": Ce qui me plaît le plus, c'est la lecture. 我最喜欢的是看书。 Je comprends ce que vous dites. 我明白您说的。 Dites-moi ce dont vous avez besoin pour le travail.告诉我您工作需要些什么。",
+          "category": "和关系代词合用，构成 ce qui, ce que, ce dont"
+        }
+      ]
+    },
+    {
+      "word": "chacun",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "每个人: Ce n'est peut-être pas vrai, mais chacun le dit.这也许不是真的，但人人都在说。 Chacun des enfants a eu un cadeau.每个孩子都得到一份礼物。 Nous avons chacun un ordinateur à notre disposition.我们每个人都有一台电脑可供支配。 Remettez ces photos chacune à sa (leur) place.把这些照片每张放回原处。"
+        }
+      ]
+    },
+    {
+      "word": "dont",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": ": L'homme dont je vous ai parlé fera le tour du monde.我向你们谈及的那个人将周游世界。 Prends l'outil dont tu as besoin. 拿你需要的这件工具。",
+          "category": "用作间接宾语"
+        },
+        {
+          "text": ": Il m'a dit une nouvelle dont il n'était pas sûr lui-même.他告诉了我一条连他自己都不能肯定的消息。 Son fils, dont il était si fier, l'a beaucoup déçu.他的儿子，以前他那么引以为豪，却使他大为失望。",
+          "category": "用作形容词补语"
+        },
+        {
+          "text": ": Ce chanteur dont les disques connaissent un si grand succès paraîtra à la télévision ce soir.这位歌唱演员，其唱片获得如此成功，今晚将在电视里露面。 Ce magasin vend des chaussures dont la qualité est excellente. 这家商店销售质量很好的鞋子。",
+          "category": "用作名词补语"
+        },
+        {
+          "text": ": Il y avait plusieurs invités, dont son oncle Jules.有好几位客人，其中有他的叔叔于勒。 Les Dupont ont trois maisons, dont une au bord de la mer.杜邦一家有三处住房，其中有一处在海滨。",
+          "category": "用作数量补语"
+        }
+      ]
+    },
+    {
+      "word": "en²",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": ": Il a des timbres français, j'en ai aussi.他有法国邮票，我也有。 Il y a des fruits, prends-en. 有水果，你吃些。",
+          "category": "代替不定冠词或部分冠词加直接宾语"
+        },
+        {
+          "text": ": Mon père boit du vin, ma mère n'en boit pas. 我父亲喝葡萄酒，我母亲不喝。",
+          "category": "代替否定句中介词 de 加直接宾语"
+        },
+        {
+          "text": ": Il est resté dans son bureau toute la journée et vient juste d'en sortir.他在办公室呆了一整天，刚从那里出来。",
+          "category": "代替介词 de 引导的地点状语"
+        },
+        {
+          "text": ": Ce film lui plaît, il en parle sans cesse. 这部影片他喜欢，他不停地在议论。",
+          "category": "代替介词 de 引导的间接宾语"
+        },
+        {
+          "text": ": Paul va arriver tard, j'en suis sûr.保尔将晚到，我能肯定。",
+          "category": "代替介词 de 引导的形容词补语"
+        },
+        {
+          "text": ": Les légumes sont bons pour la santé， j'en mange beaucoup.蔬菜对身体有好处，我吃许多。",
+          "category": "代替数量副词的补语"
+        },
+        {
+          "text": ": Vous parlez de mes fils, mais je n'en ai qu'un.你们议论我有几个孩子，可我只有一个呀。",
+          "category": "代替数词后的名词"
+        }
+      ]
+    },
+    {
+      "word": "même²",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "同样的人，同样的事物[和定冠词连用]: Il est toujours le même.他总是老脾气。 Tu as un beau stylo, je veux le même. 你有一支漂亮的钢笔，我也想有这"
+        }
+      ]
+    },
+    {
+      "word": "on",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "人们;大家;有人: En Chine, on mange avec des baguettes. 在中国，吃饭用筷子。 On doit penser aux autres.每个人都该想到他人。 Écoute, on frappe à la porte.听，有人敲门。"
+        },
+        {
+          "text": "我们[在口语中代替 nous] : On y va.我们走吧。 Qu'est-ce qu'on fait cet après-midi?今天下午我们干什么?"
+        }
+      ]
+    },
+    {
+      "word": "personne²",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "无人，没有人[和ne连用]: La rue est vide, on ne voit personne.大街空空如也，看不到任何人。 Personne ne parle russe dans notre classe.我们班里没有人会讲俄语。"
+        }
+      ]
+    },
+    {
+      "word": "quelqu'un",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "某人，有人: Quelqu'un frappe à la porte. 有人敲门。"
+        },
+        {
+          "text": "pl. quelques-uns 某些人，一些人: Quelques-uns des élèves ont été punis.学生中有些人受到了处罚。"
+        }
+      ]
+    },
+    {
+      "word": "quelque chose",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "某事，某物: J'ai quelque chose à te dire. 我有事对你说。 J'ai visité une exposition et j'y ai vu quelque chose d'extraordinaire. 我参观了一个展览，我在那里看到了奇特的东西。"
+        }
+      ]
+    },
+    {
+      "word": "que¹",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "pron. interr.什么，什么东西，什么事: Que ferons-nous cet après-midi? 今天下午我们将做什么?"
+        },
+        {
+          "text": "pron.rel.〔用作直接宾语，可以指人或物]: Voici le livre qu'il nous a apporté.这就是他给我们带来的书。 Les enfants que tu vois jouer dans la cour sont ceux du voisin.你看到在院子里玩的这些孩子是邻居家的孩子。"
+        },
+        {
+          "text": "conj.[引出从句]: Il dit qu'il viendra.他说他将来。"
+        }
+      ]
+    },
+    {
+      "word": "qui",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "pron.rel.[用作主语，可以指人或物]: J'ai un ami qui aime le cyclisme.我有一个喜欢自行车运动的朋友。 J'ai remonté la pendule qui était arrêtée. 我给停走的挂钟上了发条。"
+        },
+        {
+          "text": "pron.rel.〔用作间接宾语或状语，指人]: Voilà le passant à qui j'ai demandé l'heure.那就是我询问时间的过路人。 Je connais l'homme avec qui elle parlait.我认识她一起说话的那个人。"
+        },
+        {
+          "text": "pron. interr.谁: Qui est là? 谁在那里? Qui cherchez-vous? 您在找谁?"
+        }
+      ]
+    },
+    {
+      "word": "quiconque",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "不论谁，论何人[在主句中作主语或宾语、从句中作主语]: Quiconque a beau-coup voyagé sait comme les heures des repas sont variables.任何常旅行的人都知道就餐时间是那么变化无常。"
+        }
+      ]
+    },
+    {
+      "word": "quoi²",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": ": Voilà à quoi je rêvais.这就是我当时在设想的事。",
+          "category": "用于 voilà， c'est 后面"
+        },
+        {
+          "text": "【de quoi】足够的东西，必需的东西: Je n'ai pas de quoi m'habiller. 我没有足"
+        }
+      ]
+    },
+    {
+      "word": "quoi¹",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "什么，什么东西[常和介词连用]: À quoi penses-tu? 你在想什么? De quoi parlez-vous?您在讲什么? Je voudrais quelque chose. - Quoi? 我想要个东西。一什么东西?"
+        }
+      ]
+    },
+    {
+      "word": "rien",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "没有什么东西[用作主语]:"
+        },
+        {
+          "text": "Rien n'intéresse ce petit garçon.没有什么东西能引起这个小男孩的兴趣。"
+        },
+        {
+          "text": "什么也不……[用作宾语]:"
+        },
+        {
+          "text": "Il fait noir, je ne vois rien.天黑了，我什么也看不见。"
+        },
+        {
+          "text": "没有什么[用于省略句]:"
+        },
+        {
+          "text": "Qu'est-ce qu'il y a dans ton sac? - Rien.你的包里有什么?一没有什么。"
+        }
+      ],
+      "extra_info": "和ne 连用"
+    },
+    {
+      "word": "soi",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "自己[与 on, chacun, personne 等配合]: Après la classe, chacun rentre chez soi. 放学后，每个人都回了自己家。"
+        }
+      ]
+    },
+    {
+      "word": "tout²",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "m. sing.一切，所有的东西: Tout va bien chez nous.我们家里一切都好。 Marie sait tout faire.玛丽什么都会做。"
+        },
+        {
+          "text": "pl.大家，所有的人: Tous savent nager. 大家都会游泳。 Ils sont tous là en ce moment.这时候他们都在那儿。"
+        }
+      ],
+      "extra_info": "阳性复数 tous [tus"
+    },
+    {
+      "word": "ça",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "这个，那个:Ça va?你好吗?行吗? J'aime ça.我喜欢这个。 Ça suffit.这够了。 Ça me plaît beaucoup.这个我很喜欢。"
+        }
+      ]
+    },
+    {
+      "word": "【pas】 grand-chose",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "pas grand-chose 没什么东西;不重要的事物: Tu n'as pas mangé grand-chose.你没吃什么。 Ce n'est pas grand-chose. 这事无关紧要。"
+        }
+      ]
+    }
+  ]
+}
