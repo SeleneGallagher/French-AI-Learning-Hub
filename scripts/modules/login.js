@@ -173,17 +173,24 @@ function initMyPage() {
         myRegisterSubmitBtn.addEventListener('click', () => {
             const username = document.getElementById('my-register-username')?.value.trim();
             const password = document.getElementById('my-register-password')?.value;
+            const passwordConfirm = document.getElementById('my-register-password-confirm')?.value;
             const regCode = document.getElementById('my-register-code')?.value.trim();
             const errorEl = document.getElementById('my-register-error');
             
-            if (!username || !password || !regCode) {
+            if (!username || !password || !passwordConfirm || !regCode) {
                 showError(errorEl, '请填写所有字段');
+                return;
+            }
+            
+            if (password !== passwordConfirm) {
+                showError(errorEl, '两次输入的密码不一致');
                 return;
             }
             
             // 使用桌面端的注册逻辑
             document.getElementById('register-username').value = username;
             document.getElementById('register-password').value = password;
+            document.getElementById('register-password-confirm').value = passwordConfirm;
             document.getElementById('register-code').value = regCode;
             handleRegister().then(() => {
                 // 注册成功后隐藏注册页面，显示用户信息
