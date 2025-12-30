@@ -89,6 +89,18 @@ def handler(request):
             'content': content
         }, 200)
         
+    except requests.exceptions.RequestException as e:
+        return json_response({
+            'success': False,
+            'message': f'DeepSeek API请求失败: {str(e)}',
+            'type': 'network_error'
+        }, 500)
     except Exception as e:
-        return json_response({'success': False, 'message': str(e)}, 500)
+        import traceback
+        traceback.print_exc()
+        return json_response({
+            'success': False,
+            'message': f'服务器错误: {str(e)}',
+            'type': 'server_error'
+        }, 500)
 

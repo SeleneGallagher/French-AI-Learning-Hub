@@ -20,7 +20,11 @@ from flask import send_from_directory
 @app.route('/public/<path:filename>')
 def public_files(filename):
     """提供 public 目录下的静态文件"""
-    return send_from_directory('public', filename)
+    try:
+        return send_from_directory('public', filename)
+    except Exception as e:
+        print(f"静态文件错误: {e}, 文件: {filename}")
+        return jsonify({'error': 'File not found'}), 404
 CORS(app)  # 允许跨域请求
 
 # 导入API处理函数
@@ -151,9 +155,11 @@ def serve_static(path):
     if path.startswith('api/'):
         return jsonify({'error': 'Not found'}), 404
     try:
-        # 处理 public/ 路径（去掉 public/ 前缀）
+        # 处理 public/ 路径（使用专门的public路由）
         if path.startswith('public/'):
-            path = path[7:]  # 移除 'public/' 前缀
+            # 移除 'public/' 前缀，使用send_from_directory
+            file_path = path[7:]  # 移除 'public/' 前缀
+            return send_from_directory('public', file_path)
         return app.send_static_file(path)
     except Exception as e:
         # SPA路由回退到index.html
