@@ -391,10 +391,10 @@
                     <p class="mt-2" style="color: var(--gray-600);">AI正在生成...</p>
                 </div>
                 <div class="mb-4 flex justify-end gap-2">
-                    <button id="clear-expressions-btn" class="px-3 py-2 rounded transition-colors text-xs whitespace-nowrap" style="background-color: var(--error); color: white;">
+                    <button id="clear-expressions-btn" class="px-3 py-2 rounded transition-colors text-xs whitespace-nowrap" style="background-color: #6B7280; color: white;">
                         清除记录
                     </button>
-                    <button id="view-favorites-btn" class="px-3 py-2 rounded transition-colors text-xs flex items-center gap-1 whitespace-nowrap" style="background-color: var(--accent-600); color: white;">
+                    <button id="view-favorites-btn" class="px-3 py-2 rounded transition-colors text-xs flex items-center gap-1 whitespace-nowrap" style="background-color: #3B82F6; color: white;">
                         <span>⭐</span>
                         <span>收藏</span>
                     </button>
@@ -513,14 +513,17 @@
                             <!-- 登录表单 -->
                             <div id="my-login-form" class="space-y-4">
                                 <div id="my-login-error" class="hidden px-3 py-2 rounded text-sm" style="background-color: rgba(194, 65, 12, 0.1); border: 1px solid var(--error); color: var(--error);"></div>
-                                <input type="text" id="my-login-username" placeholder="用户名" 
-                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
-                                       style="border: 1px solid var(--gray-300); background-color: white;">
+                                <div class="flex items-center gap-2">
+                                    <input type="text" id="my-login-username" placeholder="用户名" 
+                                           class="flex-1 px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                           style="border: 1px solid var(--gray-300); background-color: white;">
+                                    <div class="w-9 flex-shrink-0"></div>
+                                </div>
                                 <div class="flex items-center gap-2">
                                     <input type="password" id="my-login-password" placeholder="密码" 
                                            class="flex-1 px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
                                            style="border: 1px solid var(--gray-300); background-color: white;">
-                                    <button type="button" id="my-login-password-toggle" class="text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0" style="background: none; border: none; cursor: pointer; padding: 8px;">
+                                    <button type="button" id="my-login-password-toggle" class="text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0" style="background: none; border: none; cursor: pointer; padding: 8px; width: 36px; display: flex; align-items: center; justify-content: center;">
                                         <svg id="my-login-password-eye" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: block;">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
@@ -541,14 +544,17 @@
                             <!-- 注册表单 -->
                             <div id="my-register-form" class="hidden space-y-4">
                                 <div id="my-register-error" class="hidden px-3 py-2 rounded text-sm" style="background-color: rgba(194, 65, 12, 0.1); border: 1px solid var(--error); color: var(--error);"></div>
-                                <input type="text" id="my-register-username" placeholder="用户名" 
-                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
-                                       style="border: 1px solid var(--gray-300); background-color: white;">
+                                <div class="flex items-center gap-2">
+                                    <input type="text" id="my-register-username" placeholder="用户名" 
+                                           class="flex-1 px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                           style="border: 1px solid var(--gray-300); background-color: white;">
+                                    <div class="w-9 flex-shrink-0"></div>
+                                </div>
                                 <div class="flex items-center gap-2">
                                     <input type="password" id="my-register-password" placeholder="密码" 
                                            class="flex-1 px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
                                            style="border: 1px solid var(--gray-300); background-color: white;">
-                                    <button type="button" id="my-register-password-toggle" class="text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0" style="background: none; border: none; cursor: pointer; padding: 8px;">
+                                    <button type="button" id="my-register-password-toggle" class="text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0" style="background: none; border: none; cursor: pointer; padding: 8px; width: 36px; display: flex; align-items: center; justify-content: center;">
                                         <svg id="my-register-password-eye" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: block;">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
@@ -558,12 +564,18 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <input type="password" id="my-register-password-confirm" placeholder="确认密码" 
-                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
-                                       style="border: 1px solid var(--gray-300); background-color: white;">
-                                <input type="text" id="my-register-code" placeholder="注册码" 
-                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
-                                       style="border: 1px solid var(--gray-300); background-color: white;">
+                                <div class="flex items-center gap-2">
+                                    <input type="password" id="my-register-password-confirm" placeholder="确认密码" 
+                                           class="flex-1 px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                           style="border: 1px solid var(--gray-300); background-color: white;">
+                                    <div class="w-9 flex-shrink-0"></div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <input type="text" id="my-register-code" placeholder="注册码" 
+                                           class="flex-1 px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                           style="border: 1px solid var(--gray-300); background-color: white;">
+                                    <div class="w-9 flex-shrink-0"></div>
+                                </div>
                                 <button id="my-register-submit-btn" class="w-full px-6 py-3 rounded-lg transition-colors font-medium" style="background-color: var(--success); color: white;">
                                     注册
                                 </button>
@@ -583,12 +595,15 @@
                     <!-- 登录表单 -->
                     <div id="login-form" class="space-y-4">
                         <div id="login-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"></div>
-                        <input type="text" id="login-username" placeholder="用户名" 
-                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="flex items-center gap-2">
+                            <input type="text" id="login-username" placeholder="用户名" 
+                                   class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <div class="w-9 flex-shrink-0"></div>
+                        </div>
                         <div class="flex items-center gap-2">
                             <input type="password" id="login-password" placeholder="密码" 
                                    class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <button type="button" id="login-password-toggle" class="text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0" style="background: none; border: none; cursor: pointer; padding: 6px;">
+                            <button type="button" id="login-password-toggle" class="text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0" style="background: none; border: none; cursor: pointer; padding: 6px; width: 36px; display: flex; align-items: center; justify-content: center;">
                                 <svg id="login-password-eye" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: block;">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
@@ -609,12 +624,15 @@
                     <!-- 注册表单 -->
                     <div id="register-form" class="hidden space-y-4">
                         <div id="register-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"></div>
-                        <input type="text" id="register-username" placeholder="用户名" 
-                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="flex items-center gap-2">
+                            <input type="text" id="register-username" placeholder="用户名" 
+                                   class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <div class="w-9 flex-shrink-0"></div>
+                        </div>
                         <div class="flex items-center gap-2">
                             <input type="password" id="register-password" placeholder="密码" 
                                    class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <button type="button" id="register-password-toggle" class="text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0" style="background: none; border: none; cursor: pointer; padding: 6px;">
+                            <button type="button" id="register-password-toggle" class="text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0" style="background: none; border: none; cursor: pointer; padding: 6px; width: 36px; display: flex; align-items: center; justify-content: center;">
                                 <svg id="register-password-eye" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: block;">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
@@ -624,10 +642,16 @@
                                 </svg>
                             </button>
                         </div>
-                        <input type="password" id="register-password-confirm" placeholder="确认密码" 
-                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input type="text" id="register-code" placeholder="注册码" 
-                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="flex items-center gap-2">
+                            <input type="password" id="register-password-confirm" placeholder="确认密码" 
+                                   class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <div class="w-9 flex-shrink-0"></div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="text" id="register-code" placeholder="注册码" 
+                                   class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <div class="w-9 flex-shrink-0"></div>
+                        </div>
                         <button id="register-btn" class="w-full bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition-colors">
                             注册
                         </button>

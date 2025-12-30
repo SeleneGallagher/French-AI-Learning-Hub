@@ -204,6 +204,19 @@ def dictionary_history():
         return jsonify({'success': False, 'message': 'Dictionary handler not loaded'}), 500
     return adapt_handler(dict_handler)()
 
+@app.route('/api/user/sync', methods=['GET', 'OPTIONS'])
+def user_sync():
+    if request.method == 'OPTIONS':
+        return '', 200
+    try:
+        from api.user import sync
+        return adapt_handler(sync.handler)()
+    except ImportError as e:
+        return jsonify({
+            'success': False,
+            'message': f'User sync handler not loaded: {str(e)}'
+        }), 500
+
 @app.route('/api/ai/coze', methods=['POST', 'OPTIONS'])
 def coze():
     if request.method == 'OPTIONS':

@@ -58,6 +58,48 @@ function loadLocalStorage() {
     }
 }
 
+// 同步词典收藏夹（从服务器）
+window.syncDictFavorites = function(serverFavorites) {
+    if (!Array.isArray(serverFavorites) || serverFavorites.length === 0) return;
+    
+    const favoritesMap = new Map();
+    
+    // 先添加本地收藏
+    favorites.forEach(fav => {
+        if (fav.word) {
+            favoritesMap.set(fav.word.toLowerCase(), fav);
+        }
+    });
+    
+    // 再添加服务器收藏（覆盖本地）
+    serverFavorites.forEach(serverFav => {
+        const word = serverFav.word;
+        if (word) {
+            favoritesMap.set(word.toLowerCase(), {
+                word: word,
+                phonetic: serverFav.phonetic || '',
+                pos: serverFav.pos || {},
+                addedAt: serverFav.added_at || new Date().toISOString()
+            });
+        }
+    });
+    
+    // 保存合并后的收藏
+    favorites = Array.from(favoritesMap.values());
+    try {
+        localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+        updateFavoritesCount();
+        // 如果当前在收藏夹面板，刷新显示
+        if (currentPanel === 'favorites') {
+            renderFavoritesPanel();
+        }
+    } catch (e) {
+        console.error('保存词典收藏失败:', e);
+    }
+    
+    console.log('词典收藏夹同步完成');
+};
+
 // 保存历史记录
 function saveHistory() {
     try {

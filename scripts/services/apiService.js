@@ -153,6 +153,11 @@ export class APIService {
         });
     }
     
+    // ========== 用户数据同步 ==========
+    static async syncUserData() {
+        return this.request('/user/sync');
+    }
+    
     // ========== AI助手相关 ==========
     static async getChatHistory(conversationId = null) {
         const url = conversationId 

@@ -297,3 +297,40 @@ function loadFavorites() {
         favoritesList.appendChild(createExpressionCard(expr, true));
     });
 }
+
+// 同步语用收藏夹（从服务器）
+window.syncExpressionFavorites = function(serverFavorites) {
+    if (!Array.isArray(serverFavorites) || serverFavorites.length === 0) return;
+    
+    const localFavorites = getAllFavorites();
+    const favoritesMap = new Map();
+    
+    // 先添加本地收藏
+    localFavorites.forEach(fav => {
+        if (fav.id) {
+            favoritesMap.set(fav.id, fav);
+        }
+    });
+    
+    // 再添加服务器收藏（覆盖本地）
+    serverFavorites.forEach(serverFav => {
+        const exprData = serverFav.expression_data || {};
+        if (exprData.id) {
+            favoritesMap.set(exprData.id, {
+                ...exprData,
+                favoritedAt: serverFav.favorited_at || new Date().toISOString()
+            });
+        }
+    });
+    
+    // 保存合并后的收藏
+    const mergedFavorites = Array.from(favoritesMap.values());
+    saveAllFavorites(mergedFavorites);
+    
+    // 如果当前在收藏夹视图，刷新显示
+    if (isInFavoritesView) {
+        loadFavorites();
+    }
+    
+    console.log('语用收藏夹同步完成');
+};

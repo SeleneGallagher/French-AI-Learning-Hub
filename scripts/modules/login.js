@@ -531,11 +531,43 @@ function showError(element, message) {
 }
 
 async function loadUserData() {
-    // 加载用户数据（后续实现）
+    // 加载用户数据并同步跨设备数据
     console.log('加载用户数据...');
-    // 这里可以调用API获取用户详细信息
-    // const userData = await APIService.getUserProfile();
-    // currentUser = { ...currentUser, ...userData };
+    try {
+        const syncData = await APIService.syncUserData();
+        if (syncData && syncData.success) {
+            const { chat_history, expression_favorites, dict_favorites } = syncData.data;
+            
+            // 同步AI聊天记录
+            if (chat_history && chat_history.length > 0) {
+                // 触发AI助手模块的同步函数
+                if (window.syncAIChatHistory) {
+                    window.syncAIChatHistory(chat_history);
+                }
+            }
+            
+            // 同步语用收藏夹
+            if (expression_favorites && expression_favorites.length > 0) {
+                // 触发语用模块的同步函数
+                if (window.syncExpressionFavorites) {
+                    window.syncExpressionFavorites(expression_favorites);
+                }
+            }
+            
+            // 同步词典收藏夹
+            if (dict_favorites && dict_favorites.length > 0) {
+                // 触发词典模块的同步函数
+                if (window.syncDictFavorites) {
+                    window.syncDictFavorites(dict_favorites);
+                }
+            }
+            
+            console.log('用户数据同步完成');
+        }
+    } catch (error) {
+        console.error('同步用户数据失败:', error);
+        // 静默失败，不影响登录流程
+    }
 }
 
 

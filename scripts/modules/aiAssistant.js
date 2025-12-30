@@ -197,3 +197,38 @@ async function clearAllMessages() {
     saveChatHistory();
     clearChatContext();
 }
+
+// 同步AI聊天记录（从服务器）
+window.syncAIChatHistory = function(serverChatHistory) {
+    if (!Array.isArray(serverChatHistory) || serverChatHistory.length === 0) return;
+    
+    // 合并服务器和本地聊天记录
+    const localHistory = chatHistory;
+    const mergedHistory = [];
+    const seenConversations = new Set();
+    
+    // 先添加服务器记录
+    serverChatHistory.forEach(record => {
+        if (record.messages && Array.isArray(record.messages)) {
+            record.messages.forEach(msg => {
+                mergedHistory.push(msg);
+            });
+            if (record.conversation_id) {
+                seenConversations.add(record.conversation_id);
+            }
+        }
+    });
+    
+    // 再添加本地记录（避免重复）
+    localHistory.forEach(msg => {
+        mergedHistory.push(msg);
+    });
+    
+    // 限制长度并保存
+    chatHistory = mergedHistory.slice(-MAX_HISTORY_LENGTH);
+    saveChatHistory();
+    
+    // 重新渲染
+    renderChatHistory();
+    console.log('AI聊天记录同步完成');
+};
