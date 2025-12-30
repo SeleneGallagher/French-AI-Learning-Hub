@@ -505,21 +505,12 @@
                         </div>
                     </div>
                     
-                    <!-- 移动端登录/注册页面（独立页面，左上角有返回按钮） -->
-                    <div id="my-auth-page" class="md:hidden hidden fixed inset-0 bg-white z-50 flex flex-col">
-                        <!-- 头部：返回按钮和标题 -->
-                        <div class="flex items-center justify-between px-4 py-4 border-b" style="border-color: var(--gray-200); background-color: white;">
-                            <button id="my-auth-back-btn" class="flex items-center gap-2 transition-colors" style="color: var(--gray-700);">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                                </svg>
-                            </button>
-                            <h3 id="my-auth-title" class="text-lg font-semibold" style="color: var(--gray-800);">登录</h3>
-                            <div class="w-10"></div> <!-- 占位，保持标题居中 -->
-                        </div>
-                        
-                        <!-- 内容区 -->
-                        <div class="flex-1 overflow-y-auto p-4" style="background-color: var(--gray-50);">
+                    <!-- 移动端登录/注册页面（独立页面，使用移动端标题栏） -->
+                    <div id="my-auth-page" class="md:hidden hidden">
+                        <!-- 内容区（标题栏由移动端统一管理） -->
+                        <div class="p-4" style="background-color: var(--gray-50); min-height: calc(100vh - 56px);">
+                            <!-- 隐藏的标题元素，用于获取标题文本 -->
+                            <h3 id="my-auth-title" class="hidden">登录</h3>
                             <!-- 登录表单 -->
                             <div id="my-login-form" class="space-y-4">
                                 <div id="my-login-error" class="hidden px-3 py-2 rounded text-sm" style="background-color: rgba(194, 65, 12, 0.1); border: 1px solid var(--error); color: var(--error);"></div>
