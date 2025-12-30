@@ -144,6 +144,7 @@ function updateMobileHeader(moduleName) {
     const mobileHeader = document.getElementById('mobile-header');
     const mobileHeaderTitle = document.getElementById('mobile-header-title');
     const mobileBackBtn = document.getElementById('mobile-back-btn');
+    const mobileHomeBtn = document.getElementById('mobile-home-btn');
     
     if (!mobileHeader || !mobileHeaderTitle) return;
     
@@ -157,13 +158,6 @@ function updateMobileHeader(moduleName) {
         'login': { text: '我的', emoji: '👤', showBack: false, showHome: true },
         'about': { text: '关于', emoji: 'ℹ️', showBack: true, showHome: false }
     };
-    
-    const mobileHeader = document.getElementById('mobile-header');
-    const mobileHeaderTitle = document.getElementById('mobile-header-title');
-    const mobileBackBtn = document.getElementById('mobile-back-btn');
-    const mobileHomeBtn = document.getElementById('mobile-home-btn');
-    
-    if (!mobileHeader || !mobileHeaderTitle) return;
     
     mobileHeader.classList.remove('hidden');
     const moduleInfo = moduleTitles[moduleName] || { text: moduleName, emoji: '', showBack: false, showHome: false };
