@@ -431,6 +431,43 @@
                         </div>
                     </div>
                     
+                    <!-- 移动端登录/注册表单（默认隐藏） -->
+                    <div id="my-auth-forms" class="hidden mt-4 space-y-4">
+                        <!-- 登录表单 -->
+                        <div id="my-login-form" class="bg-white rounded-lg shadow-sm p-4 space-y-3">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">登录</h3>
+                            <div id="my-login-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-3 py-2 rounded text-sm"></div>
+                            <input type="text" id="my-login-username" placeholder="用户名" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                            <input type="password" id="my-login-password" placeholder="密码" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                            <button id="my-login-submit-btn" class="w-full bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors font-medium">
+                                登录
+                            </button>
+                            <button id="my-show-register-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm text-center py-2">
+                                没有账号？注册
+                            </button>
+                        </div>
+                        
+                        <!-- 注册表单 -->
+                        <div id="my-register-form" class="hidden bg-white rounded-lg shadow-sm p-4 space-y-3">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">注册</h3>
+                            <div id="my-register-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-3 py-2 rounded text-sm"></div>
+                            <input type="text" id="my-register-username" placeholder="用户名" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                            <input type="password" id="my-register-password" placeholder="密码" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                            <input type="text" id="my-register-code" placeholder="注册码" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+                            <button id="my-register-submit-btn" class="w-full bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition-colors font-medium">
+                                注册
+                            </button>
+                            <button id="my-show-login-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm text-center py-2">
+                                已有账号？登录
+                            </button>
+                        </div>
+                    </div>
+                    
                     <!-- 功能列表 -->
                     <div class="space-y-2">
                         <div class="bg-white rounded-lg shadow-sm">

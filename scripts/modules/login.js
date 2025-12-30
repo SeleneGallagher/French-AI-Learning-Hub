@@ -23,14 +23,96 @@ function initMyPage() {
     const myLoginBtn = document.getElementById('my-login-btn');
     if (myLoginBtn) {
         myLoginBtn.addEventListener('click', () => {
-            // 切换到登录表单（移动端显示桌面端表单）
-            const loginForm = document.getElementById('login-form');
-            const myPage = document.getElementById('my-page');
-            if (loginForm && myPage) {
-                myPage.classList.add('hidden');
-                loginForm.closest('.hidden')?.classList.remove('hidden');
-                loginForm.closest('div')?.classList.remove('hidden');
+            // 显示移动端登录表单
+            const authForms = document.getElementById('my-auth-forms');
+            const loginForm = document.getElementById('my-login-form');
+            const registerForm = document.getElementById('my-register-form');
+            if (authForms && loginForm) {
+                authForms.classList.remove('hidden');
+                loginForm.classList.remove('hidden');
+                registerForm?.classList.add('hidden');
+                isLoginMode = true;
             }
+        });
+    }
+    
+    // 移动端登录/注册表单切换
+    const myShowRegisterBtn = document.getElementById('my-show-register-btn');
+    const myShowLoginBtn = document.getElementById('my-show-login-btn');
+    if (myShowRegisterBtn) {
+        myShowRegisterBtn.addEventListener('click', () => {
+            const loginForm = document.getElementById('my-login-form');
+            const registerForm = document.getElementById('my-register-form');
+            if (loginForm && registerForm) {
+                loginForm.classList.add('hidden');
+                registerForm.classList.remove('hidden');
+                isLoginMode = false;
+            }
+        });
+    }
+    if (myShowLoginBtn) {
+        myShowLoginBtn.addEventListener('click', () => {
+            const loginForm = document.getElementById('my-login-form');
+            const registerForm = document.getElementById('my-register-form');
+            if (loginForm && registerForm) {
+                loginForm.classList.remove('hidden');
+                registerForm.classList.add('hidden');
+                isLoginMode = true;
+            }
+        });
+    }
+    
+    // 移动端登录提交
+    const myLoginSubmitBtn = document.getElementById('my-login-submit-btn');
+    if (myLoginSubmitBtn) {
+        myLoginSubmitBtn.addEventListener('click', () => {
+            const username = document.getElementById('my-login-username')?.value.trim();
+            const password = document.getElementById('my-login-password')?.value;
+            const errorEl = document.getElementById('my-login-error');
+            
+            if (!username || !password) {
+                showError(errorEl, '请填写用户名和密码');
+                return;
+            }
+            
+            // 使用桌面端的登录逻辑
+            document.getElementById('login-username').value = username;
+            document.getElementById('login-password').value = password;
+            handleLogin().then(() => {
+                // 登录成功后隐藏表单，显示用户信息
+                const authForms = document.getElementById('my-auth-forms');
+                if (authForms) authForms.classList.add('hidden');
+            }).catch(err => {
+                showError(errorEl, err.message || '登录失败');
+            });
+        });
+    }
+    
+    // 移动端注册提交
+    const myRegisterSubmitBtn = document.getElementById('my-register-submit-btn');
+    if (myRegisterSubmitBtn) {
+        myRegisterSubmitBtn.addEventListener('click', () => {
+            const username = document.getElementById('my-register-username')?.value.trim();
+            const password = document.getElementById('my-register-password')?.value;
+            const regCode = document.getElementById('my-register-code')?.value.trim();
+            const errorEl = document.getElementById('my-register-error');
+            
+            if (!username || !password || !regCode) {
+                showError(errorEl, '请填写所有字段');
+                return;
+            }
+            
+            // 使用桌面端的注册逻辑
+            document.getElementById('register-username').value = username;
+            document.getElementById('register-password').value = password;
+            document.getElementById('register-code').value = regCode;
+            handleRegister().then(() => {
+                // 注册成功后隐藏表单，显示用户信息
+                const authForms = document.getElementById('my-auth-forms');
+                if (authForms) authForms.classList.add('hidden');
+            }).catch(err => {
+                showError(errorEl, err.message || '注册失败');
+            });
         });
     }
     

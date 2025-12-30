@@ -83,8 +83,16 @@ def adapt_handler(handler_func):
             import traceback
             error_msg = str(e)
             traceback.print_exc()
-            response = jsonify({'success': False, 'message': error_msg, 'type': type(e).__name__})
+            # 确保错误信息是JSON格式，而不是HTML
+            error_response = {
+                'success': False,
+                'message': error_msg,
+                'type': type(e).__name__,
+                'error': error_msg
+            }
+            response = jsonify(error_response)
             response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Content-Type'] = 'application/json'
             return response, 500
     wrapper.__name__ = handler_func.__name__
     return wrapper
