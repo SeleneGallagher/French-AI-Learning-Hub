@@ -128,7 +128,8 @@ def handler(request):
         if response.ok:
             data = response.json()
             # 处理数据，添加poster完整URL和media_type
-            results = data.get('results', [])[:20]
+            # 增加返回数量，确保有足够的数据
+            results = data.get('results', [])[:30]
             
             # 为每个项目获取详细信息（包括导演、类型、评语等）
             detailed_results = []

@@ -79,10 +79,27 @@ def handle_get_sync(request):
         """, (user_id,))
         dict_favorites = []
         for row in cursor.fetchall():
+            # 处理pos字段：可能是dict、str、list或None
+            pos_data = row[2]
+            if pos_data is None:
+                pos_data = {}
+            elif isinstance(pos_data, dict):
+                pos_data = pos_data
+            elif isinstance(pos_data, str):
+                try:
+                    pos_data = json.loads(pos_data)
+                except:
+                    pos_data = {}
+            elif isinstance(pos_data, list):
+                # 如果是列表，转换为字典格式
+                pos_data = {}
+            else:
+                pos_data = {}
+            
             dict_favorites.append({
                 'word': row[0],
                 'phonetic': row[1],
-                'pos': row[2] if isinstance(row[2], dict) else json.loads(row[2]) if row[2] else {},
+                'pos': pos_data,
                 'added_at': row[3].isoformat() if row[3] else None
             })
         

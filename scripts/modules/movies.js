@@ -387,8 +387,9 @@ async function loadContent(forceRefresh = false) {
             APIService.getMovies(forceRefresh, 'other', 'tv')
         ]);
         
-        // 合并所有数据
-        const allData = [
+        // 合并所有数据，并立即去重（基于id和type）
+        const allDataMap = new Map();
+        const allDataArrays = [
             ...(recentResponse.success && recentResponse.data ? recentResponse.data : []),
             ...(classicResponse.success && classicResponse.data ? classicResponse.data : []),
             ...(otherResponse.success && otherResponse.data ? otherResponse.data : []),
@@ -396,6 +397,16 @@ async function loadContent(forceRefresh = false) {
             ...(classicTVResponse.success && classicTVResponse.data ? classicTVResponse.data : []),
             ...(otherTVResponse.success && otherTVResponse.data ? otherTVResponse.data : [])
         ];
+        
+        // 合并并去重
+        for (const m of allDataArrays) {
+            const itemId = `${m.media_type || 'movie'}_${m.id}`;
+            if (!allDataMap.has(itemId)) {
+                allDataMap.set(itemId, m);
+            }
+        }
+        
+        const allData = Array.from(allDataMap.values());
         
         if (allData.length === 0) {
             throw new Error('未获取到影视数据');
@@ -407,13 +418,23 @@ async function loadContent(forceRefresh = false) {
             return !shownIds.includes(itemId);
         });
         
-        const dataToUse = filtered.length > 0 ? filtered : allData;
+        // 如果过滤后数据不足，清空已显示列表重新开始（避免无法获取新内容）
+        const dataToUse = filtered.length >= 25 ? filtered : allData;
         
         // 处理数据，补充完整信息，并过滤掉没有评语的项目
         const processedMovies = [];
+        const processedIds = new Set(); // 用于去重
+        
         for (const m of dataToUse) {
+            const itemId = `${m.media_type || 'movie'}_${m.id}`;
+            // 再次检查去重（防止处理过程中出现重复）
+            if (processedIds.has(itemId)) {
+                continue;
+            }
+            
             const item = processMovieItem(m);
             if (item) {
+                processedIds.add(itemId);
                 processedMovies.push(item);
             }
         }
@@ -422,31 +443,60 @@ async function loadContent(forceRefresh = false) {
         const recentAndClassic = processedMovies.filter(m => m.isRecent || m.isClassic);
         const others = processedMovies.filter(m => !m.isRecent && !m.isClassic);
         
-        // 确保近两年和经典影视超过一半（至少11个，总共20个）
-        const targetCount = 11; // 超过一半
+        // 确保近两年和经典影视超过一半（至少13个，总共25个）
+        const targetCount = 13; // 超过一半
+        const totalCount = 25; // 至少25部
         let finalList = [];
         
         if (recentAndClassic.length >= targetCount) {
-            // 如果近两年和经典影视足够，取11个，其他取9个
+            // 如果近两年和经典影视足够，取13个，其他取12个
             const shuffledRecent = recentAndClassic.sort(() => Math.random() - 0.5);
             const shuffledOthers = others.sort(() => Math.random() - 0.5);
-            finalList = [...shuffledRecent.slice(0, targetCount), ...shuffledOthers.slice(0, 9)];
+            finalList = [...shuffledRecent.slice(0, targetCount), ...shuffledOthers.slice(0, totalCount - targetCount)];
         } else {
             // 如果不够，全部使用近两年和经典影视，不足的用其他补充
             const shuffledRecent = recentAndClassic.sort(() => Math.random() - 0.5);
             const shuffledOthers = others.sort(() => Math.random() - 0.5);
-            finalList = [...shuffledRecent, ...shuffledOthers.slice(0, 20 - shuffledRecent.length)];
+            finalList = [...shuffledRecent, ...shuffledOthers.slice(0, Math.max(0, totalCount - shuffledRecent.length))];
         }
         
-        // 最终打乱顺序
+        // 最终打乱顺序，确保至少25部，并再次去重
         finalList.sort(() => Math.random() - 0.5);
-        allMovies = finalList.slice(0, 20);
+        
+        // 最终去重检查（防止重复显示）
+        const uniqueMovies = [];
+        const seenIds = new Set();
+        for (const movie of finalList) {
+            const itemId = `${movie.type}_${movie.id}`;
+            // 检查是否已处理过，以及是否在已显示列表中
+            if (!seenIds.has(itemId) && !shownIds.includes(itemId)) {
+                seenIds.add(itemId);
+                uniqueMovies.push(movie);
+                if (uniqueMovies.length >= totalCount) break;
+            }
+        }
+        
+        // 如果去重后数量不足25，尝试从processedMovies中补充（但排除已显示的）
+        if (uniqueMovies.length < totalCount) {
+            for (const movie of processedMovies) {
+                if (uniqueMovies.length >= totalCount) break;
+                const itemId = `${movie.type}_${movie.id}`;
+                if (!seenIds.has(itemId) && !shownIds.includes(itemId)) {
+                    seenIds.add(itemId);
+                    uniqueMovies.push(movie);
+                }
+            }
+        }
+        
+        allMovies = uniqueMovies.slice(0, totalCount);
         
         if (allMovies.length > 0) {
             renderItems(allMovies);
             translateAllPlots();
             saveCache(allMovies);
-            saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
+            // 更新已显示列表，确保不会重复显示
+            const newShownIds = allMovies.map(m => `${m.type}_${m.id}`);
+            saveShownItems([...shownIds, ...newShownIds]);
             return;
         }
     } catch (error) {

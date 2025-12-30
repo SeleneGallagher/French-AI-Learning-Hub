@@ -33,14 +33,43 @@ export class APIService {
                 headers
             });
             
-            if (response.status === 401) {
-                this.setToken(null);
-                window.location.hash = '#login';
-                throw new Error('请重新登录');
-            }
-            
             // 检查响应类型
             const contentType = response.headers.get('content-type');
+            
+            if (response.status === 401) {
+                // 检查是否是登录接口，如果是登录接口返回401，说明密码错误
+                const isLoginEndpoint = endpoint.includes('/auth/login');
+                if (isLoginEndpoint) {
+                    // 尝试解析响应获取具体错误信息
+                    try {
+                        let errorData;
+                        if (contentType && contentType.includes('application/json')) {
+                            errorData = await response.json();
+                        } else {
+                            const text = await response.text();
+                            try {
+                                errorData = JSON.parse(text);
+                            } catch {
+                                errorData = { message: '密码错误，请重新输入' };
+                            }
+                        }
+                        throw new Error(errorData.message || '密码错误，请重新输入');
+                    } catch (e) {
+                        // 如果已经是Error对象，直接抛出
+                        if (e instanceof Error && e.message) {
+                            throw e;
+                        }
+                        // 如果解析失败，使用默认消息
+                        throw new Error('密码错误，请重新输入');
+                    }
+                } else {
+                    // 其他接口的401错误，说明需要重新登录
+                    this.setToken(null);
+                    window.location.hash = '#login';
+                    throw new Error('请重新登录');
+                }
+            }
+            
             if (!contentType || !contentType.includes('application/json')) {
                 // 如果不是JSON，尝试读取文本以获取错误信息
                 const text = await response.text();

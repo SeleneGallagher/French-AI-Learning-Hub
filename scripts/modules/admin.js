@@ -4,6 +4,19 @@
 let adminPassword = '';
 
 export function initAdmin() {
+    // 确保初始状态：显示登录界面，隐藏用户列表
+    const adminLoginSection = document.getElementById('admin-login-section');
+    const adminUsersSection = document.getElementById('admin-users-section');
+    if (adminLoginSection) {
+        adminLoginSection.classList.remove('hidden');
+    }
+    if (adminUsersSection) {
+        adminUsersSection.classList.add('hidden');
+    }
+    
+    // 清空管理员密码（每次进入都需要重新登录）
+    adminPassword = '';
+    
     // 管理员入口按钮
     const adminAccessBtn = document.getElementById('admin-access-btn');
     if (adminAccessBtn) {
@@ -18,7 +31,11 @@ export function initAdmin() {
     const adminLoginError = document.getElementById('admin-login-error');
     
     if (adminLoginBtn && adminPasswordInput) {
-        adminLoginBtn.addEventListener('click', handleAdminLogin);
+        // 移除旧的事件监听器（避免重复绑定）
+        const newLoginBtn = adminLoginBtn.cloneNode(true);
+        adminLoginBtn.parentNode.replaceChild(newLoginBtn, adminLoginBtn);
+        newLoginBtn.addEventListener('click', handleAdminLogin);
+        
         adminPasswordInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 handleAdminLogin();
