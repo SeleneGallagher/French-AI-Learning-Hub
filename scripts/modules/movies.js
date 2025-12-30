@@ -504,7 +504,7 @@ function toggleWatchlistView() {
     
     if (showingWatchlist) {
         showingWatchlist = false;
-        if (btn) btn.textContent = '⭐ 想看列表';
+        if (btn) btn.innerHTML = '<span>⭐</span><span>想看</span>';
         if (refreshBtn) {
             refreshBtn.disabled = false;
             refreshBtn.classList.remove('opacity-50', 'cursor-not-allowed');
@@ -512,7 +512,7 @@ function toggleWatchlistView() {
         renderItems(allMovies);
     } else {
         showingWatchlist = true;
-        if (btn) btn.textContent = '← 返回推荐';
+        if (btn) btn.innerHTML = '<span>←</span><span>返回</span>';
         if (refreshBtn) {
             refreshBtn.disabled = true;
             refreshBtn.classList.add('opacity-50', 'cursor-not-allowed');

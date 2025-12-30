@@ -103,7 +103,7 @@
             </ul>
             <!-- 底部操作区 -->
             <div class="mt-auto border-t border-white/10 pt-4 px-6">
-                <div class="flex items-center gap-4 text-sm">
+                <div class="flex items-center gap-4 text-sm whitespace-nowrap">
                     <a href="#login" class="nav-link text-blue-200 hover:text-white transition-colors underline" data-module="login">
                         登录/注册
                     </a>
@@ -125,7 +125,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
                     </button>
-                    <h2 id="mobile-header-title" class="text-lg font-semibold text-gray-800 flex-1 text-center"></h2>
+                    <h2 id="mobile-header-title" class="text-lg font-semibold text-gray-800 flex-1"></h2>
                     <button id="mobile-home-btn" class="text-blue-600 hover:text-blue-700 font-medium transition-colors hidden" style="min-width: 50px; flex-shrink: 0; padding: 0 4px;">
                         首页
                     </button>
@@ -391,12 +391,12 @@
                     <p class="mt-2" style="color: var(--gray-600);">AI正在生成...</p>
                 </div>
                 <div class="mb-4 flex justify-end gap-2">
-                    <button id="clear-expressions-btn" class="px-4 py-2 rounded transition-colors text-sm" style="background-color: var(--error); color: white;">
-                        清除所有记录
+                    <button id="clear-expressions-btn" class="px-3 py-2 rounded transition-colors text-xs whitespace-nowrap" style="background-color: var(--error); color: white;">
+                        清除记录
                     </button>
-                    <button id="view-favorites-btn" class="px-4 py-2 rounded transition-colors text-sm flex items-center gap-1" style="background-color: var(--accent-600); color: white;">
+                    <button id="view-favorites-btn" class="px-3 py-2 rounded transition-colors text-xs flex items-center gap-1 whitespace-nowrap" style="background-color: var(--accent-600); color: white;">
                         <span>⭐</span>
-                        <span>收藏夹</span>
+                        <span>收藏</span>
                     </button>
                 </div>
                 <div id="expressions-list" class="space-y-4"></div>
@@ -411,8 +411,8 @@
             <section id="ai-assistant" class="module hidden p-8 flex flex-col h-full">
                 <div class="flex items-center justify-between mb-6">
                     <h2 class="text-3xl font-bold md:block hidden" style="color: var(--gray-800);">🤖 AI助手</h2>
-                    <button id="chat-clear-btn" class="text-sm px-3 py-1 rounded transition-colors" style="color: var(--gray-600); border: 1px solid var(--gray-300);">
-                        清除对话
+                    <button id="chat-clear-btn" class="text-xs px-3 py-1 rounded transition-colors whitespace-nowrap" style="color: var(--gray-600); border: 1px solid var(--gray-300);">
+                        清除
                     </button>
                 </div>
                 <div id="chat-container" class="flex-1 card p-6 mb-4 overflow-y-auto" style="max-height: calc(100vh - 250px);">
@@ -498,7 +498,7 @@
                         
                         <!-- 退出登录（仅登录时显示） -->
                         <div id="my-logout-section" class="hidden mt-4">
-                            <button id="my-logout-btn" class="w-full px-4 py-3 rounded-lg font-medium transition-colors" style="background-color: rgba(194, 65, 12, 0.1); color: var(--error);">
+                            <button id="my-logout-btn" class="w-full px-4 py-3 rounded-lg font-medium transition-colors whitespace-nowrap" style="background-color: rgba(194, 65, 12, 0.1); color: var(--error);">
                                 退出登录
                             </button>
                         </div>
