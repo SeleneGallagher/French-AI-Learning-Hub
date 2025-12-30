@@ -357,43 +357,22 @@ function initPasswordToggles() {
         });
     }
     
-    // 移动端注册密码
+    // 移动端注册密码（同时控制确认密码）
     const mobileRegisterPassword = document.getElementById('my-register-password');
+    const mobileRegisterPasswordConfirm = document.getElementById('my-register-password-confirm');
     const mobileRegisterToggle = document.getElementById('my-register-password-toggle');
     const mobileRegisterEye = document.getElementById('my-register-password-eye');
     const mobileRegisterEyeSlash = document.getElementById('my-register-password-eye-slash');
     
-    if (mobileRegisterPassword && mobileRegisterToggle && mobileRegisterEye && mobileRegisterEyeSlash) {
+    if (mobileRegisterPassword && mobileRegisterPasswordConfirm && mobileRegisterToggle && mobileRegisterEye && mobileRegisterEyeSlash) {
         mobileRegisterToggle.addEventListener('click', () => {
-            if (mobileRegisterPassword.type === 'password') {
-                mobileRegisterPassword.type = 'text';
-                mobileRegisterEye.style.display = 'none';
-                mobileRegisterEyeSlash.style.display = 'block';
-            } else {
-                mobileRegisterPassword.type = 'password';
-                mobileRegisterEye.style.display = 'block';
-                mobileRegisterEyeSlash.style.display = 'none';
-            }
-        });
-    }
-    
-    // 移动端注册确认密码
-    const mobileRegisterPasswordConfirm = document.getElementById('my-register-password-confirm');
-    const mobileRegisterConfirmToggle = document.getElementById('my-register-password-confirm-toggle');
-    const mobileRegisterConfirmEye = document.getElementById('my-register-password-confirm-eye');
-    const mobileRegisterConfirmEyeSlash = document.getElementById('my-register-password-confirm-eye-slash');
-    
-    if (mobileRegisterPasswordConfirm && mobileRegisterConfirmToggle && mobileRegisterConfirmEye && mobileRegisterConfirmEyeSlash) {
-        mobileRegisterConfirmToggle.addEventListener('click', () => {
-            if (mobileRegisterPasswordConfirm.type === 'password') {
-                mobileRegisterPasswordConfirm.type = 'text';
-                mobileRegisterConfirmEye.style.display = 'none';
-                mobileRegisterConfirmEyeSlash.style.display = 'block';
-            } else {
-                mobileRegisterPasswordConfirm.type = 'password';
-                mobileRegisterConfirmEye.style.display = 'block';
-                mobileRegisterConfirmEyeSlash.style.display = 'none';
-            }
+            const isPassword = mobileRegisterPassword.type === 'password';
+            // 同时切换两个密码输入框
+            mobileRegisterPassword.type = isPassword ? 'text' : 'password';
+            mobileRegisterPasswordConfirm.type = isPassword ? 'text' : 'password';
+            // 更新眼睛图标
+            mobileRegisterEye.style.display = isPassword ? 'none' : 'block';
+            mobileRegisterEyeSlash.style.display = isPassword ? 'block' : 'none';
         });
     }
     
@@ -417,43 +396,22 @@ function initPasswordToggles() {
         });
     }
     
-    // 桌面端注册密码
+    // 桌面端注册密码（同时控制确认密码）
     const desktopRegisterPassword = document.getElementById('register-password');
+    const desktopRegisterPasswordConfirm = document.getElementById('register-password-confirm');
     const desktopRegisterToggle = document.getElementById('register-password-toggle');
     const desktopRegisterEye = document.getElementById('register-password-eye');
     const desktopRegisterEyeSlash = document.getElementById('register-password-eye-slash');
     
-    if (desktopRegisterPassword && desktopRegisterToggle && desktopRegisterEye && desktopRegisterEyeSlash) {
+    if (desktopRegisterPassword && desktopRegisterPasswordConfirm && desktopRegisterToggle && desktopRegisterEye && desktopRegisterEyeSlash) {
         desktopRegisterToggle.addEventListener('click', () => {
-            if (desktopRegisterPassword.type === 'password') {
-                desktopRegisterPassword.type = 'text';
-                desktopRegisterEye.style.display = 'none';
-                desktopRegisterEyeSlash.style.display = 'block';
-            } else {
-                desktopRegisterPassword.type = 'password';
-                desktopRegisterEye.style.display = 'block';
-                desktopRegisterEyeSlash.style.display = 'none';
-            }
-        });
-    }
-    
-    // 桌面端注册确认密码
-    const desktopRegisterPasswordConfirm = document.getElementById('register-password-confirm');
-    const desktopRegisterConfirmToggle = document.getElementById('register-password-confirm-toggle');
-    const desktopRegisterConfirmEye = document.getElementById('register-password-confirm-eye');
-    const desktopRegisterConfirmEyeSlash = document.getElementById('register-password-confirm-eye-slash');
-    
-    if (desktopRegisterPasswordConfirm && desktopRegisterConfirmToggle && desktopRegisterConfirmEye && desktopRegisterConfirmEyeSlash) {
-        desktopRegisterConfirmToggle.addEventListener('click', () => {
-            if (desktopRegisterPasswordConfirm.type === 'password') {
-                desktopRegisterPasswordConfirm.type = 'text';
-                desktopRegisterConfirmEye.style.display = 'none';
-                desktopRegisterConfirmEyeSlash.style.display = 'block';
-            } else {
-                desktopRegisterPasswordConfirm.type = 'password';
-                desktopRegisterConfirmEye.style.display = 'block';
-                desktopRegisterConfirmEyeSlash.style.display = 'none';
-            }
+            const isPassword = desktopRegisterPassword.type === 'password';
+            // 同时切换两个密码输入框
+            desktopRegisterPassword.type = isPassword ? 'text' : 'password';
+            desktopRegisterPasswordConfirm.type = isPassword ? 'text' : 'password';
+            // 更新眼睛图标
+            desktopRegisterEye.style.display = isPassword ? 'none' : 'block';
+            desktopRegisterEyeSlash.style.display = isPassword ? 'block' : 'none';
         });
     }
 }

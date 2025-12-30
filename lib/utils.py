@@ -35,11 +35,23 @@ def get_db_connection():
         # 解析数据库 URL
         parsed = urlparse(database_url)
         
+        # 如果 hostname 是内部网络地址，尝试使用外部连接
+        # Railway 内部网络地址格式：postgres.railway.internal
+        hostname = parsed.hostname
+        if hostname and 'railway.internal' in hostname:
+            # 尝试从环境变量获取外部连接 URL
+            external_url = os.environ.get('DATABASE_EXTERNAL_URL') or os.environ.get('RAILWAY_DATABASE_URL')
+            if external_url:
+                if external_url.startswith('postgres://'):
+                    external_url = external_url.replace('postgres://', 'postgresql://', 1)
+                parsed = urlparse(external_url)
+                hostname = parsed.hostname
+        
         # 建立连接
         _db_connection = psycopg2.connect(
-            host=parsed.hostname,
+            host=hostname,
             port=parsed.port or 5432,
-            database=parsed.path[1:],  # 移除前导斜杠
+            database=parsed.path[1:] if parsed.path else '',  # 移除前导斜杠
             user=parsed.username,
             password=parsed.password,
             sslmode='require'  # Railway PostgreSQL 需要 SSL
