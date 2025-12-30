@@ -57,7 +57,11 @@ try:
     from api.news.list import handler as news_handler
     from api.news.rss_proxy import handler as rss_proxy_handler
     from api.movies.list import handler as movies_handler
-    from api.dictionary.history import handler as dict_handler
+    try:
+        from api.dictionary.history import handler as dict_handler
+    except ImportError as dict_error:
+        print(f"警告: 无法导入 dictionary.history: {dict_error}")
+        dict_handler = None
     from api.config import handler as config_handler
     from api.ai.coze import handler as coze_handler
     from api.ai.deepseek import handler as deepseek_handler
