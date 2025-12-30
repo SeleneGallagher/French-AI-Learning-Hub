@@ -204,7 +204,7 @@ def dictionary_history():
         return jsonify({'success': False, 'message': 'Dictionary handler not loaded'}), 500
     return adapt_handler(dict_handler)()
 
-@app.route('/api/user/sync', methods=['GET', 'OPTIONS'])
+@app.route('/api/user/sync', methods=['GET', 'POST', 'OPTIONS'])
 def user_sync():
     if request.method == 'OPTIONS':
         return '', 200

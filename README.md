@@ -94,7 +94,6 @@ python start_server.py
 - `DEEPSEEK_API_KEY` - DeepSeek API密钥（新闻关键词、语用生成）
 - `TMDB_API_KEY` - TMDB API密钥（电影数据）
 
-**详细说明**：查看 [环境变量清单](./docs/环境变量清单.md)
 
 **生成 JWT_SECRET：**
 ```bash
@@ -144,11 +143,7 @@ AI_LL/
 │   └── init_db.py        # 数据库初始化工具
 │
 ├── docs/                  # 文档目录
-│   ├── PostgreSQL设置指南.md
-│   ├── Railway部署指南.md
-│   ├── 环境变量清单.md
-│   ├── 部署方案.md
-│   └── 项目结构说明.md
+│   └── 环境变量清单.md    # 环境变量详细说明（可选）
 │
 ├── lib/                   # 共享库
 │   └── utils.py          # 工具函数（数据库、JWT）
@@ -237,9 +232,6 @@ AI_LL/
    - Railway 会自动构建和部署
    - 2-5 分钟后即可访问
 
-**详细文档：**
-- [Railway 部署指南](./docs/Railway部署指南.md) - 完整部署步骤
-- [PostgreSQL 设置指南](./docs/PostgreSQL设置指南.md) - 数据库设置详细步骤
 
 ### 云服务器部署
 
@@ -269,7 +261,6 @@ crontab -e
 # 添加：0 */6 * * * cd /var/www/AI_LL && python3 scripts/server/update_data.py
 ```
 
-详细步骤请参考 [部署方案指南](./docs/部署方案.md)
 
 ## 🔧 数据更新
 

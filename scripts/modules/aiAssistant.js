@@ -6,6 +6,7 @@ import { clearChatContext } from '../services/api.js';
 import { generateWithAIStream } from '../services/aiService.js';
 import { localStorageService } from '../services/storage.js';
 import { showConfirm } from '../utils/confirmDialog.js';
+import { APIService } from '../services/apiService.js';
 
 const CHAT_HISTORY_KEY = 'ai_chat_history';
 const MAX_HISTORY_LENGTH = 50;
