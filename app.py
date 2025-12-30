@@ -84,9 +84,27 @@ class VercelRequest:
     def __init__(self, flask_request):
         self.method = flask_request.method
         self.headers = flask_request.headers
-        self.json = flask_request.get_json(silent=True)
+        self._json = flask_request.get_json(silent=True)
         self.form = flask_request.form
         self.args = flask_request.args
+        self._flask_request = flask_request
+    
+    def get_json(self):
+        """提供get_json方法以兼容Flask格式"""
+        return self._json
+    
+    @property
+    def json(self):
+        """提供json属性"""
+        return self._json
+    
+    @property
+    def body(self):
+        """提供body属性，返回JSON字符串"""
+        if self._json:
+            import json
+            return json.dumps(self._json)
+        return ''
 
 def adapt_handler(handler_func):
     """适配Vercel handler为Flask路由"""

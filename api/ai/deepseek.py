@@ -42,17 +42,30 @@ def handler(request):
         else:
             # Flask格式或其他
             try:
-                data = request.get_json() if hasattr(request, 'get_json') else {}
-                if not data:
-                    # 尝试从form获取
-                    if hasattr(request, 'form'):
-                        data = dict(request.form)
-                    elif hasattr(request, 'json'):
-                        data = request.json if request.json else {}
-            except:
+                # 优先使用get_json方法
+                if hasattr(request, 'get_json'):
+                    data = request.get_json() or {}
+                # 如果没有，尝试json属性
+                elif hasattr(request, 'json') and request.json:
+                    data = request.json
+                # 尝试从body获取
+                elif hasattr(request, 'body'):
+                    if isinstance(request.body, str):
+                        data = json.loads(request.body) if request.body else {}
+                    elif isinstance(request.body, dict):
+                        data = request.body
+                    else:
+                        data = {}
+                # 最后尝试form
+                elif hasattr(request, 'form'):
+                    data = dict(request.form)
+                else:
+                    data = {}
+            except Exception as e:
+                print(f"解析请求数据失败: {e}")
                 data = {}
         
-        prompt = data.get('prompt', '')
+        prompt = data.get('prompt', '') or data.get('content', '') or ''
         model = data.get('model', 'deepseek-chat')
         
         if not prompt:

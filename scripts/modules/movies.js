@@ -408,10 +408,10 @@ function addControlButtons() {
     const controlsDiv = document.createElement('div');
     controlsDiv.className = 'movie-controls flex justify-end gap-2 mb-4';
     controlsDiv.innerHTML = `
-        <button id="refresh-movies-btn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors text-sm">
+        <button id="refresh-movies-btn" class="px-4 py-2 rounded transition-colors text-sm" style="background-color: var(--primary-700); color: white;">
             🔄 换一批
         </button>
-        <button id="view-watchlist-btn" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition-colors text-sm">
+        <button id="view-watchlist-btn" class="px-4 py-2 rounded transition-colors text-sm" style="background-color: var(--accent-600); color: white;">
             ⭐ 想看列表
         </button>
     `;
