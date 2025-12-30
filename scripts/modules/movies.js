@@ -442,16 +442,33 @@ function addControlButtons() {
 
 // 刷新内容
 async function refreshContent() {
+    console.log('开始刷新影视内容');
     const loadingEl = document.getElementById('movies-loading');
     const gridEl = document.getElementById('movies-grid');
+    const errorEl = document.getElementById('movies-error');
+    
+    // 清除已显示的项目记录，允许重新显示
+    sessionStorage.removeItem(SHOWN_KEY);
+    
+    // 清除缓存
+    localStorage.removeItem(CACHE_KEY);
     
     if (loadingEl) showLoading(loadingEl);
+    if (errorEl) errorEl.classList.add('hidden');
     if (gridEl) gridEl.innerHTML = '';
     
-    localStorage.removeItem(CACHE_KEY);
-    await loadContent();
-    
-    if (loadingEl) hideLoading(loadingEl);
+    // 重新加载内容
+    try {
+        await loadContent();
+    } catch (error) {
+        console.error('刷新失败:', error);
+        if (errorEl) {
+            errorEl.textContent = `刷新失败：${error.message}`;
+            errorEl.classList.remove('hidden');
+        }
+    } finally {
+        if (loadingEl) hideLoading(loadingEl);
+    }
 }
 
 let showingWatchlist = false;
