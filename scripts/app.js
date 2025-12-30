@@ -161,9 +161,35 @@ function updateMobileHeader(moduleName) {
         'expressions': { text: '语用积累', emoji: '💬', showBack: false, showHome: true },
         'ai-assistant': { text: 'AI助手', emoji: '🤖', showBack: false, showHome: true },
         'login': { text: '我的', emoji: '👤', showBack: false, showHome: true },
-        'about': { text: '关于', emoji: 'ℹ️', showBack: true, showHome: false },
-        'auth': { text: '登录', emoji: '', showBack: true, showHome: false } // 移动端登录页面
+        'about': { text: '关于', emoji: 'ℹ️', showBack: true, showHome: false }
     };
+    
+    // 检查是否在移动端登录/注册页面
+    const authPage = document.getElementById('my-auth-page');
+    if (authPage && !authPage.classList.contains('hidden')) {
+        // 在登录/注册页面，显示返回按钮
+        const moduleInfo = { text: '登录', emoji: '', showBack: true, showHome: false };
+        if (mobileHeader) mobileHeader.classList.remove('hidden');
+        if (mobileHeaderTitle) {
+            const authTitle = document.getElementById('my-auth-title');
+            const titleText = authTitle ? authTitle.textContent : '登录';
+            mobileHeaderTitle.innerHTML = `<span>${titleText}</span>`;
+        }
+        if (mobileBackBtn) {
+            mobileBackBtn.classList.remove('hidden');
+            mobileBackBtn.onclick = () => {
+                const hideAuthPage = () => {
+                    if (authPage) authPage.classList.add('hidden');
+                    const myPage = document.getElementById('my-page');
+                    if (myPage) myPage.classList.remove('hidden');
+                    updateMobileHeader('login');
+                };
+                hideAuthPage();
+            };
+        }
+        if (mobileHomeBtn) mobileHomeBtn.classList.add('hidden');
+        return;
+    }
     
     mobileHeader.classList.remove('hidden');
     const moduleInfo = moduleTitles[moduleName] || { text: moduleName, emoji: '', showBack: false, showHome: false };
