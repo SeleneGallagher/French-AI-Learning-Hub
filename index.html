@@ -120,16 +120,15 @@
             <!-- 移动端顶部标题栏（所有模块都显示） -->
             <div id="mobile-header" class="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-sm z-40">
                 <div class="flex items-center justify-between px-4 py-3 h-14">
-                    <button id="mobile-back-btn" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors hidden">
+                    <button id="mobile-back-btn" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors hidden" style="min-width: 40px; flex-shrink: 0;">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
                     </button>
                     <h2 id="mobile-header-title" class="text-lg font-semibold text-gray-800 flex-1 text-center"></h2>
-                    <button id="mobile-home-btn" class="text-blue-600 hover:text-blue-700 font-medium transition-colors hidden">
+                    <button id="mobile-home-btn" class="text-blue-600 hover:text-blue-700 font-medium transition-colors hidden" style="min-width: 50px; flex-shrink: 0; padding: 0 4px;">
                         首页
                     </button>
-                    <div class="w-10"></div> <!-- 占位，保持标题居中 -->
                 </div>
             </div>
             <div class="md:hidden h-14"></div> <!-- 为固定头部留出空间 -->

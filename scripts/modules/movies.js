@@ -651,6 +651,7 @@ function renderCard(item, container, isWatchlist) {
                 watchlistBtn.innerHTML = added ? '⭐' : '☆';
                 watchlistBtn.style.backgroundColor = added ? 'var(--accent-600)' : 'rgba(0, 0, 0, 0.5)';
                 watchlistBtn.style.color = 'white';
+                watchlistBtn.className = 'watchlist-btn absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center hover:scale-110 transition-transform text-sm';
             }
         });
     }
