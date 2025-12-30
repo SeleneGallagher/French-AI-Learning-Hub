@@ -376,25 +376,26 @@
 
             <!-- 语用积累模块 -->
             <section id="expressions" class="module hidden p-8">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800 md:block hidden">💬 语用积累</h2>
-                <div class="mb-6 bg-white p-6 rounded-lg shadow">
+                <h2 class="text-3xl font-bold mb-6 md:block hidden" style="color: var(--gray-800);">💬 语用积累</h2>
+                <div class="mb-6 card p-6">
                     <div class="flex gap-4">
                         <input type="text" id="expression-input" placeholder="输入想学习的场景，如：在咖啡馆礼貌地续杯" 
-                               class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button id="generate-expression-btn" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
+                               class="flex-1 px-4 py-2 rounded transition-all focus:outline-none"
+                               style="border: 1px solid var(--gray-300);">
+                        <button id="generate-expression-btn" class="px-6 py-2 rounded transition-colors" style="background-color: var(--primary-700); color: white;">
                             生成
                         </button>
                     </div>
                 </div>
                 <div id="expressions-loading" class="hidden text-center py-4">
-                    <div class="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
-                    <p class="mt-2 text-gray-600">AI正在生成...</p>
+                    <div class="inline-block animate-spin rounded-full h-6 w-6 border-b-2" style="border-color: var(--primary-700);"></div>
+                    <p class="mt-2" style="color: var(--gray-600);">AI正在生成...</p>
                 </div>
                 <div class="mb-4 flex justify-end gap-2">
-                    <button id="clear-expressions-btn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors text-sm">
+                    <button id="clear-expressions-btn" class="px-4 py-2 rounded transition-colors text-sm" style="background-color: var(--error); color: white;">
                         清除所有记录
                     </button>
-                    <button id="view-favorites-btn" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition-colors text-sm flex items-center gap-1">
+                    <button id="view-favorites-btn" class="px-4 py-2 rounded transition-colors text-sm flex items-center gap-1" style="background-color: var(--accent-600); color: white;">
                         <span>⭐</span>
                         <span>收藏夹</span>
                     </button>
@@ -437,7 +438,7 @@
                 <!-- 移动端"我的"页面 -->
                 <div id="my-page" class="md:hidden">
                     <!-- 用户信息栏 -->
-                    <div id="my-user-section" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 rounded-lg mb-4">
+                    <div id="my-user-section" class="text-white p-6 rounded-lg mb-4" style="background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-700) 100%);">
                         <div id="my-user-logged-in" class="hidden">
                             <div class="flex items-center gap-4">
                                 <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-2xl font-bold">
@@ -454,10 +455,10 @@
                                 <div class="text-4xl mb-3">👤</div>
                                 <div class="text-lg font-semibold mb-3">未登录</div>
                                 <div class="flex gap-3 justify-center">
-                                    <button id="my-login-btn" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors border border-blue-600">
+                                    <button id="my-login-btn" class="px-6 py-2 rounded-lg font-semibold transition-colors" style="background-color: white; color: var(--primary-700); border: 1px solid var(--primary-700);">
                                         登录
                                     </button>
-                                    <button id="my-register-btn" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                    <button id="my-register-btn" class="px-6 py-2 rounded-lg font-semibold transition-colors" style="background-color: var(--primary-700); color: white;">
                                         注册
                                     </button>
                                 </div>
@@ -467,30 +468,30 @@
                     
                     <!-- 功能列表 -->
                     <div class="space-y-2">
-                        <div class="bg-white rounded-lg shadow-sm">
-                            <button id="my-contact-btn" class="my-menu-item w-full flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0 text-left">
+                        <div class="card rounded-lg">
+                            <button id="my-contact-btn" class="my-menu-item w-full flex items-center justify-between p-4 text-left" style="border-bottom: 1px solid var(--gray-200);">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background-color: var(--gray-100);">
+                                        <svg class="w-5 h-5" style="color: var(--gray-600);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                         </svg>
                                     </div>
-                                    <span class="font-medium text-gray-800">联系我们</span>
+                                    <span class="font-medium" style="color: var(--gray-800);">联系我们</span>
                                 </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5" style="color: var(--gray-400);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
                             </button>
-                            <a href="#about" class="my-menu-item flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0">
+                            <a href="#about" class="my-menu-item flex items-center justify-between p-4" style="border-bottom: 1px solid var(--gray-200);">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background-color: var(--gray-100);">
+                                        <svg class="w-5 h-5" style="color: var(--gray-600);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                         </svg>
                                     </div>
-                                    <span class="font-medium text-gray-800">关于</span>
+                                    <span class="font-medium" style="color: var(--gray-800);">关于</span>
                                 </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5" style="color: var(--gray-400);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
                             </a>
@@ -498,55 +499,60 @@
                         
                         <!-- 退出登录（仅登录时显示） -->
                         <div id="my-logout-section" class="hidden mt-4">
-                            <button id="my-logout-btn" class="w-full bg-red-50 text-red-600 px-4 py-3 rounded-lg font-medium hover:bg-red-100 transition-colors">
+                            <button id="my-logout-btn" class="w-full px-4 py-3 rounded-lg font-medium transition-colors" style="background-color: rgba(194, 65, 12, 0.1); color: var(--error);">
                                 退出登录
                             </button>
                         </div>
                     </div>
                     
                     <!-- 移动端登录/注册页面（独立页面，左上角有返回按钮） -->
-                    <div id="my-auth-page" class="md:hidden hidden">
+                    <div id="my-auth-page" class="md:hidden hidden fixed inset-0 bg-white z-50 flex flex-col">
                         <!-- 头部：返回按钮和标题 -->
-                        <div class="flex items-center justify-between px-4 py-4 border-b border-gray-200 bg-white sticky top-0 z-10">
-                            <button id="my-auth-back-btn" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors">
+                        <div class="flex items-center justify-between px-4 py-4 border-b" style="border-color: var(--gray-200); background-color: white;">
+                            <button id="my-auth-back-btn" class="flex items-center gap-2 transition-colors" style="color: var(--gray-700);">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                 </svg>
                             </button>
-                            <h3 id="my-auth-title" class="text-lg font-semibold text-gray-800">登录</h3>
+                            <h3 id="my-auth-title" class="text-lg font-semibold" style="color: var(--gray-800);">登录</h3>
                             <div class="w-10"></div> <!-- 占位，保持标题居中 -->
                         </div>
                         
                         <!-- 内容区 -->
-                        <div class="flex-1 overflow-y-auto p-4 bg-gray-50 min-h-screen">
+                        <div class="flex-1 overflow-y-auto p-4" style="background-color: var(--gray-50);">
                             <!-- 登录表单 -->
                             <div id="my-login-form" class="space-y-4">
-                                <div id="my-login-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-3 py-2 rounded text-sm"></div>
+                                <div id="my-login-error" class="hidden px-3 py-2 rounded text-sm" style="background-color: rgba(194, 65, 12, 0.1); border: 1px solid var(--error); color: var(--error);"></div>
                                 <input type="text" id="my-login-username" placeholder="用户名" 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base bg-white">
+                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                       style="border: 1px solid var(--gray-300); background-color: white;">
                                 <input type="password" id="my-login-password" placeholder="密码" 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base bg-white">
-                                <button id="my-login-submit-btn" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                       style="border: 1px solid var(--gray-300); background-color: white;">
+                                <button id="my-login-submit-btn" class="w-full px-6 py-3 rounded-lg transition-colors font-medium" style="background-color: var(--primary-700); color: white;">
                                     登录
                                 </button>
-                                <button id="my-show-register-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm text-center py-2">
+                                <button id="my-show-register-btn" class="w-full text-sm text-center py-2 transition-colors" style="color: var(--gray-600);">
                                     没有账号？注册
                                 </button>
                             </div>
                             
                             <!-- 注册表单 -->
                             <div id="my-register-form" class="hidden space-y-4">
-                                <div id="my-register-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-3 py-2 rounded text-sm"></div>
+                                <div id="my-register-error" class="hidden px-3 py-2 rounded text-sm" style="background-color: rgba(194, 65, 12, 0.1); border: 1px solid var(--error); color: var(--error);"></div>
                                 <input type="text" id="my-register-username" placeholder="用户名" 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base bg-white">
+                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                       style="border: 1px solid var(--gray-300); background-color: white;">
                                 <input type="password" id="my-register-password" placeholder="密码" 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base bg-white">
+                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                       style="border: 1px solid var(--gray-300); background-color: white;">
                                 <input type="text" id="my-register-code" placeholder="注册码" 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base bg-white">
-                                <button id="my-register-submit-btn" class="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-medium">
+                                       class="w-full px-4 py-3 rounded-lg transition-all focus:outline-none text-base"
+                                       style="border: 1px solid var(--gray-300); background-color: white;">
+                                <button id="my-register-submit-btn" class="w-full px-6 py-3 rounded-lg transition-colors font-medium" style="background-color: var(--success); color: white;">
                                     注册
                                 </button>
-                                <button id="my-show-login-btn" class="w-full text-gray-600 hover:text-gray-800 text-sm text-center py-2">
+                                <button id="my-show-login-btn" class="w-full text-sm text-center py-2 transition-colors" style="color: var(--gray-600);">
                                     已有账号？登录
                                 </button>
                             </div>

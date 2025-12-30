@@ -29,6 +29,24 @@ function initMyPage() {
         if (authPage && myPage) {
             myPage.classList.add('hidden');
             authPage.classList.remove('hidden');
+            // 更新移动端标题栏
+            const mobileHeader = document.getElementById('mobile-header');
+            const mobileHeaderTitle = document.getElementById('mobile-header-title');
+            const mobileBackBtn = document.getElementById('mobile-back-btn');
+            const mobileHomeBtn = document.getElementById('mobile-home-btn');
+            
+            if (mobileHeader) mobileHeader.classList.remove('hidden');
+            if (mobileHeaderTitle) {
+                mobileHeaderTitle.innerHTML = `<span>${isLogin ? '登录' : '注册'}</span>`;
+            }
+            if (mobileBackBtn) {
+                mobileBackBtn.classList.remove('hidden');
+                mobileBackBtn.onclick = () => {
+                    hideAuthPage();
+                };
+            }
+            if (mobileHomeBtn) mobileHomeBtn.classList.add('hidden');
+            
             if (authTitle) {
                 authTitle.textContent = isLogin ? '登录' : '注册';
             }
@@ -52,6 +70,18 @@ function initMyPage() {
         if (authPage && myPage) {
             authPage.classList.add('hidden');
             myPage.classList.remove('hidden');
+            // 恢复移动端标题栏
+            const mobileHeader = document.getElementById('mobile-header');
+            const mobileHeaderTitle = document.getElementById('mobile-header-title');
+            const mobileBackBtn = document.getElementById('mobile-back-btn');
+            const mobileHomeBtn = document.getElementById('mobile-home-btn');
+            
+            if (mobileHeader) mobileHeader.classList.remove('hidden');
+            if (mobileHeaderTitle) {
+                mobileHeaderTitle.innerHTML = `<span>👤</span><span>我的</span>`;
+            }
+            if (mobileBackBtn) mobileBackBtn.classList.add('hidden');
+            if (mobileHomeBtn) mobileHomeBtn.classList.remove('hidden');
         }
     }
     

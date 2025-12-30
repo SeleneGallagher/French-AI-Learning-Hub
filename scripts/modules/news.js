@@ -49,42 +49,41 @@ function renderNews(news) {
 
     news.forEach((item) => {
         const card = document.createElement('div');
-        card.className = 'news-card card p-6 mb-6 cursor-pointer';
-        card.style.cssText = 'border-left: 4px solid var(--primary-700);';
+        card.className = 'news-card bg-white rounded-lg shadow-md p-6 mb-6 hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500 cursor-pointer';
         
         // 点击整个卡片跳转
         card.addEventListener('click', () => {
             window.open(item.link, '_blank');
         });
         
-        // 来源徽章颜色（使用CSS变量）
+        // 来源徽章颜色（恢复原来的配色）
         const sourceColors = {
-            'F24': 'var(--primary-600)',
-            'franceinfo': 'var(--error)',
-            '20 Minutes': 'var(--success)',
-            'RFI': 'var(--primary-500)',
-            'France Bleu': 'var(--accent-600)',
-            'Le Monde': 'var(--primary-700)'
+            'F24': 'bg-blue-500',
+            'franceinfo': 'bg-red-500',
+            '20 Minutes': 'bg-green-500',
+            'RFI': 'bg-purple-500',
+            'France Bleu': 'bg-yellow-500',
+            'Le Monde': 'bg-indigo-500'
         };
         
-        const sourceColor = sourceColors[item.source] || 'var(--gray-500)';
+        const sourceColor = sourceColors[item.source] || 'bg-gray-400';
         
         card.innerHTML = `
             <div class="flex items-start justify-between mb-2">
                 <div class="flex-1 mr-4">
-                    <h3 class="text-lg font-bold mb-1 transition-colors leading-tight" style="color: var(--gray-800);">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1 hover:text-blue-600 transition-colors leading-tight">
                         ${item.title}
                     </h3>
-                    <div class="news-translation text-sm mb-2" style="color: var(--gray-600);"></div>
+                    <div class="news-translation text-sm text-gray-500 mb-2"></div>
                 </div>
-                <span class="px-3 py-1 text-white text-xs font-semibold rounded-full whitespace-nowrap shadow-sm flex-shrink-0" style="background-color: ${sourceColor};">
+                <span class="px-3 py-1 ${sourceColor} text-white text-xs font-semibold rounded-full whitespace-nowrap shadow-sm flex-shrink-0">
                     ${item.source}
                 </span>
             </div>
-            <p class="mb-3 leading-relaxed text-sm" style="color: var(--gray-600);">${item.description}</p>
-            <div class="flex items-center justify-between pt-3" style="border-top: 1px solid var(--gray-200);">
-                <span class="text-xs" style="color: var(--gray-400);">${item.formattedDate}</span>
-                <span class="text-xs" style="color: var(--gray-400);">点击卡片查看原文</span>
+            <p class="text-gray-600 mb-3 leading-relaxed text-sm">${item.description}</p>
+            <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                <span class="text-xs text-gray-400">${item.formattedDate}</span>
+                <span class="text-xs text-gray-400">点击卡片查看原文</span>
             </div>
         `;
         

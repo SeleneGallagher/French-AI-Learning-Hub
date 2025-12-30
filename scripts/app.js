@@ -161,7 +161,8 @@ function updateMobileHeader(moduleName) {
         'expressions': { text: '语用积累', emoji: '💬', showBack: false, showHome: true },
         'ai-assistant': { text: 'AI助手', emoji: '🤖', showBack: false, showHome: true },
         'login': { text: '我的', emoji: '👤', showBack: false, showHome: true },
-        'about': { text: '关于', emoji: 'ℹ️', showBack: true, showHome: false }
+        'about': { text: '关于', emoji: 'ℹ️', showBack: true, showHome: false },
+        'auth': { text: '登录', emoji: '', showBack: true, showHome: false } // 移动端登录页面
     };
     
     mobileHeader.classList.remove('hidden');
