@@ -73,7 +73,10 @@ function initMyPage() {
     
     // 返回按钮
     if (authBackBtn) {
-        authBackBtn.addEventListener('click', hideAuthPage);
+        authBackBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            hideAuthPage();
+        });
     }
     
     // 移动端登录/注册表单切换
