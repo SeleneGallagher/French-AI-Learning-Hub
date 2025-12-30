@@ -31,10 +31,6 @@ env/
 .vercel
 .netlify
 
-# 环境变量
-.env
-.env.local
-
 # 词典导入临时文件
 dictionary/
 French-Dictionary/

@@ -34,8 +34,8 @@
 
 **必需的环境变量：**
 ```
-SUPABASE_URL=https://xxxxx.supabase.co
-SUPABASE_SECRET_KEY=your-service-role-key
+DATABASE_URL=postgresql://...  # Railway 自动设置（添加 PostgreSQL 服务后）
+JWT_SECRET=your-jwt-secret-key  # 必须使用强随机字符串
 ```
 
 **可选的环境变量（根据你的需求添加）：**
@@ -44,7 +44,6 @@ COZE_BOT_ID=your-bot-id
 COZE_PAT_TOKEN=your-pat-token
 DEEPSEEK_API_KEY=your-deepseek-key
 TMDB_API_KEY=your-tmdb-key
-JWT_SECRET=your-jwt-secret-key
 ```
 
 #### 步骤 4：部署
@@ -97,13 +96,20 @@ railway init
 #### 步骤 4：设置环境变量
 
 ```bash
-# 设置单个变量
-railway variables set SUPABASE_URL=https://xxxxx.supabase.co
-railway variables set SUPABASE_SECRET_KEY=your-key
+# 设置必需变量
+railway variables set JWT_SECRET=your-generated-secret-key
+
+# 设置可选变量
+railway variables set COZE_BOT_ID=your-bot-id
+railway variables set COZE_PAT_TOKEN=your-pat-token
+railway variables set DEEPSEEK_API_KEY=your-deepseek-key
+railway variables set TMDB_API_KEY=your-tmdb-key
 
 # 或从 .env 文件导入（推荐）
 railway variables --file .env
 ```
+
+> **注意**：`DATABASE_URL` 会在添加 PostgreSQL 服务时自动设置，无需手动配置。
 
 #### 步骤 5：部署
 
@@ -159,8 +165,8 @@ chmod +x scripts/deploy_railway.sh
 
 | 变量名 | 说明 | 获取方式 |
 |--------|------|----------|
-| `SUPABASE_URL` | Supabase 项目 URL | Supabase Dashboard → Settings → API |
-| `SUPABASE_SECRET_KEY` | Supabase Service Role Key | Supabase Dashboard → Settings → API → service_role key |
+| `DATABASE_URL` | PostgreSQL 数据库连接 URL | Railway 自动设置（添加 PostgreSQL 服务后） |
+| `JWT_SECRET` | JWT 签名密钥 | 自行生成（使用 `openssl rand -hex 32` 或 Python `secrets.token_hex(32)`） |
 
 ### 可选变量
 

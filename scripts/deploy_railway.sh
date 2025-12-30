@@ -23,12 +23,12 @@ fi
 # 设置环境变量提示
 echo ""
 echo "⚠️  请确保在 Railway Dashboard 中设置了以下环境变量："
-echo "   - SUPABASE_URL"
-echo "   - SUPABASE_SECRET_KEY"
-echo "   - COZE_BOT_ID (可选)"
-echo "   - COZE_PAT_TOKEN (可选)"
-echo "   - DEEPSEEK_API_KEY (可选)"
-echo "   - TMDB_API_KEY (可选)"
+echo "   - DATABASE_URL (必需，Railway 会自动设置 PostgreSQL)"
+echo "   - JWT_SECRET (必需，用于用户认证)"
+echo "   - COZE_BOT_ID (可选，AI助手功能)"
+echo "   - COZE_PAT_TOKEN (可选，AI助手功能)"
+echo "   - DEEPSEEK_API_KEY (可选，新闻关键词提取、语用生成)"
+echo "   - TMDB_API_KEY (可选，电影数据)"
 echo ""
 
 # 部署
