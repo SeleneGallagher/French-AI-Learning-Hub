@@ -495,9 +495,11 @@ function renderItems(items) {
 // 渲染单个卡片
 function renderCard(item, container, isWatchlist) {
     const card = document.createElement('div');
-    card.className = 'movie-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex cursor-pointer';
+    // 桌面端：横向卡片布局（图片在左，内容在右）
+    // 移动端：保持响应式
+    card.className = 'movie-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:flex-row cursor-pointer';
     card.setAttribute('data-item-id', `${item.type}_${item.id}`);
-    card.style.height = '200px';
+    card.style.minHeight = '200px';
     
     const inList = isInWatchlist(item.id, item.type);
     const tmdbUrl = item.type === 'movie' 
@@ -508,7 +510,7 @@ function renderCard(item, container, isWatchlist) {
     const typeBadgeColor = item.type === 'tv' ? 'bg-purple-500' : 'bg-blue-500';
     
     card.innerHTML = `
-        <div class="relative flex-shrink-0" style="width: 140px; height: 200px;">
+        <div class="relative flex-shrink-0 w-full md:w-40 h-48 md:h-auto" style="min-height: 200px;">
             ${item.poster 
                 ? `<img src="${item.poster}" alt="${item.title}" class="w-full h-full object-cover">`
                 : `<div class="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold">${item.title.substring(0, 2)}</div>`
@@ -518,7 +520,7 @@ function renderCard(item, container, isWatchlist) {
                 ${inList ? '⭐' : '☆'}
             </button>
         </div>
-        <div class="flex-1 p-3 flex flex-col justify-between min-w-0" style="height: 200px;">
+        <div class="flex-1 p-3 flex flex-col justify-between min-w-0">
             <div class="flex-1 overflow-hidden">
                 <div class="flex items-start justify-between mb-1.5">
                     <h3 class="text-base font-bold text-gray-800 line-clamp-2 flex-1 pr-2">${item.title}</h3>

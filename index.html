@@ -188,7 +188,7 @@
                     <p class="mt-2 text-gray-600">正在加载影视数据...</p>
                 </div>
                 <div id="movies-error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"></div>
-                <div id="movies-grid" class="grid gap-4" style="grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));"></div>
+                <div id="movies-grid" class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
             </section>
 
             <!-- 法语词典模块 -->
@@ -577,8 +577,10 @@
                             <div>
                                 <h4 class="font-semibold text-gray-800 mb-2">🎬 影视模块</h4>
                                 <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                                    <li>TMDB API: https://www.themoviedb.org/</li>
+                                    <li><strong>TMDB API</strong>: https://www.themoviedb.org/</li>
                                     <li>用于获取法语电影和剧集信息、海报、评分等</li>
+                                    <li>需要配置 <code>TMDB_API_KEY</code> 环境变量</li>
+                                    <li>遵循 TMDB API 使用条款和 Attribution 要求</li>
                                 </ul>
                             </div>
                             
@@ -616,10 +618,36 @@
                         <h3 class="text-xl font-bold mb-4">技术栈</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
                             <li>前端: JavaScript (ES6+), Tailwind CSS</li>
-                            <li>后端: Vercel Serverless Functions (Python)</li>
-                            <li>数据存储: 本地存储（localStorage/IndexedDB）</li>
                             <li>后端: Flask (Python)</li>
-                            <li>部署: Railway / 云服务器</li>
+                            <li>数据库: Railway PostgreSQL</li>
+                            <li>数据存储: PostgreSQL（用户数据、历史记录、收藏等）+ 本地存储（localStorage/IndexedDB，用于缓存）</li>
+                            <li>部署: Railway</li>
+                            <li>认证: JWT Token + bcrypt 密码加密</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-bold mb-4">功能特性</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                            <li>✅ 用户注册和登录（使用注册码）</li>
+                            <li>✅ 跨设备数据同步（词典历史、收藏、学习进度等）</li>
+                            <li>✅ AI 聊天记录云端存储</li>
+                            <li>✅ 电影收藏列表云端存储</li>
+                            <li>✅ 语用表达和收藏云端存储</li>
+                            <li>✅ 背单词进度云端同步</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-bold mb-4">数据说明</h3>
+                        <p class="text-gray-700 mb-2 text-sm">
+                            本项目使用以下数据源，所有数据均遵循其原始许可证要求：
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                            <li><strong>词典数据</strong>：基于 French-Dictionary (MIT License)，来源：Wiktionary</li>
+                            <li><strong>电影数据</strong>：TMDB API，遵循 TMDB API 使用条款</li>
+                            <li><strong>新闻数据</strong>：通过 RSS 订阅获取，仅用于学习目的</li>
+                            <li><strong>用户数据</strong>：存储在 Railway PostgreSQL 数据库，遵循隐私保护原则</li>
                         </ul>
                     </div>
                 </div>
