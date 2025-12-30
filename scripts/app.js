@@ -194,30 +194,41 @@ function updateMobileHeader(moduleName) {
     mobileHeader.classList.remove('hidden');
     const moduleInfo = moduleTitles[moduleName] || { text: moduleName, emoji: '', showBack: false, showHome: false };
     
-    // 设置标题（居中显示）
-    mobileHeaderTitle.innerHTML = moduleInfo.emoji ? `<span>${moduleInfo.emoji}</span><span>${moduleInfo.text}</span>` : `<span>${moduleInfo.text}</span>`;
-    
-    // 显示/隐藏返回按钮
-    if (mobileBackBtn) {
-        if (moduleInfo.showBack) {
-            mobileBackBtn.classList.remove('hidden');
-            mobileBackBtn.onclick = () => {
-                window.location.hash = '#login';
-            };
-        } else {
-            mobileBackBtn.classList.add('hidden');
+    if (moduleInfo.text === '首页') {
+        // 首页：标题居中，不显示返回和首页按钮
+        mobileHeaderTitle.innerHTML = `<span>${moduleInfo.text}</span>`;
+        mobileHeaderTitle.style.textAlign = 'center';
+        if (mobileBackBtn) mobileBackBtn.classList.add('hidden');
+        if (mobileHomeBtn) mobileHomeBtn.classList.add('hidden');
+    } else {
+        // 其他模块：标题在左，首页按钮在右
+        mobileHeaderTitle.innerHTML = moduleInfo.emoji 
+            ? `<span>${moduleInfo.emoji}</span><span>${moduleInfo.text}</span>`
+            : `<span>${moduleInfo.text}</span>`;
+        mobileHeaderTitle.style.textAlign = 'left';
+        
+        // 显示/隐藏返回按钮
+        if (mobileBackBtn) {
+            if (moduleInfo.showBack) {
+                mobileBackBtn.classList.remove('hidden');
+                mobileBackBtn.onclick = () => {
+                    window.location.hash = '#login';
+                };
+            } else {
+                mobileBackBtn.classList.add('hidden');
+            }
         }
-    }
-    
-    // 显示/隐藏首页按钮
-    if (mobileHomeBtn) {
-        if (moduleInfo.showHome) {
-            mobileHomeBtn.classList.remove('hidden');
-            mobileHomeBtn.onclick = () => {
-                window.location.hash = '#welcome';
-            };
-        } else {
-            mobileHomeBtn.classList.add('hidden');
+        
+        // 显示/隐藏首页按钮
+        if (mobileHomeBtn) {
+            if (moduleInfo.showHome) {
+                mobileHomeBtn.classList.remove('hidden');
+                mobileHomeBtn.onclick = () => {
+                    window.location.hash = '#welcome';
+                };
+            } else {
+                mobileHomeBtn.classList.add('hidden');
+            }
         }
     }
 }
