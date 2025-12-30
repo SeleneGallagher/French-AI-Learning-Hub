@@ -38,9 +38,14 @@ async function init() {
  */
 function initRouter() {
     // 监听hash变化
-    window.addEventListener('hashchange', () => {
+    window.addEventListener('hashchange', async () => {
         const hash = window.location.hash.slice(1) || 'welcome';
-        switchModule(hash);
+        Logger.debug('Hash变化，切换到:', hash);
+        try {
+            await switchModule(hash);
+        } catch (error) {
+            Logger.error('切换模块失败:', error);
+        }
     });
 }
 
