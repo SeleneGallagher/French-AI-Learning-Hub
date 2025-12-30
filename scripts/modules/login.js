@@ -559,19 +559,6 @@ function updateUserStatus() {
             // 添加新的事件监听器
             document.getElementById('sidebar-logout-btn').addEventListener('click', handleLogout);
         }
-        
-        // 添加"我的"按钮事件
-        const sidebarMyBtn = document.getElementById('sidebar-my-btn');
-        if (sidebarMyBtn) {
-            // 移除旧的事件监听器（如果存在）
-            const newMyBtn = sidebarMyBtn.cloneNode(true);
-            sidebarMyBtn.parentNode.replaceChild(newMyBtn, sidebarMyBtn);
-            // 添加新的事件监听器
-            document.getElementById('sidebar-my-btn').addEventListener('click', () => {
-                // 桌面端点击"我的"按钮，显示类似手机端的"我的"页面
-                window.location.hash = '#login';
-            });
-        }
     } else {
         // 移动端：显示未登录状态
         if (loggedInSection) {
@@ -611,6 +598,10 @@ async function loadUserData() {
     // 加载用户数据并同步跨设备数据
     console.log('加载用户数据...');
     try {
+        // 先上传本地数据到服务器
+        await uploadLocalDataToServer();
+        
+        // 然后从服务器下载数据
         const syncData = await APIService.syncUserData();
         if (syncData && syncData.success) {
             const { chat_history, expression_favorites, dict_favorites } = syncData.data;
@@ -639,10 +630,105 @@ async function loadUserData() {
                 }
             }
             
+            // 同步背单词进度
+            if (syncData.data.vocab_progress && syncData.data.vocab_progress.length > 0) {
+                // 触发词典模块的同步函数
+                if (window.syncVocabProgress) {
+                    window.syncVocabProgress(syncData.data.vocab_progress);
+                }
+            }
+            
             console.log('用户数据同步完成');
         }
     } catch (error) {
         console.error('同步用户数据失败:', error);
+        // 静默失败，不影响登录流程
+    }
+}
+
+/**
+ * 上传本地数据到服务器
+ */
+async function uploadLocalDataToServer() {
+    console.log('开始上传本地数据到服务器...');
+    try {
+        const uploadData = {};
+        
+        // 1. 上传AI聊天记录
+        if (window.getChatHistory) {
+            const chatHistory = window.getChatHistory();
+            if (chatHistory && chatHistory.length > 0) {
+                uploadData.chat_history = chatHistory;
+                console.log(`准备上传 ${chatHistory.length} 条聊天记录`);
+            }
+        }
+        
+        // 2. 上传语用收藏夹
+        if (window.getAllFavorites) {
+            const exprFavorites = window.getAllFavorites();
+            if (exprFavorites && exprFavorites.length > 0) {
+                uploadData.expression_favorites = exprFavorites;
+                console.log(`准备上传 ${exprFavorites.length} 个语用收藏`);
+            }
+        }
+        
+        // 3. 上传词典收藏夹
+        if (window.getDictFavorites) {
+            const dictFavorites = window.getDictFavorites();
+            if (dictFavorites && dictFavorites.length > 0) {
+                uploadData.dict_favorites = dictFavorites;
+                console.log(`准备上传 ${dictFavorites.length} 个词典收藏`);
+            }
+        }
+        
+        // 如果有数据需要上传，执行上传
+        if (Object.keys(uploadData).length > 0) {
+            const result = await APIService.uploadUserData(uploadData);
+            if (result && result.success) {
+                console.log('本地数据上传成功:', Object.keys(uploadData));
+            } else {
+                console.warn('本地数据上传失败:', result?.message);
+            }
+        } else {
+            console.log('没有本地数据需要上传');
+        }
+        
+        // 4. 上传词典历史记录（通过单独的API，异步进行，不阻塞）
+        if (window.getDictHistory) {
+            const dictHistory = window.getDictHistory();
+            if (dictHistory && dictHistory.length > 0) {
+                console.log(`准备上传 ${dictHistory.length} 条词典历史记录`);
+                // 词典历史记录需要单独上传，每次上传一条
+                // 使用 Promise.all 并行上传，但限制并发数
+                const historyToUpload = dictHistory.slice(-50); // 最多上传最近50条
+                const uploadPromises = historyToUpload.map(async (historyItem) => {
+                    try {
+                        if (historyItem && historyItem.word) {
+                            await APIService.addDictHistory(historyItem.word);
+                        }
+                    } catch (e) {
+                        console.warn('上传词典历史记录失败:', e);
+                    }
+                });
+                // 并行上传，但不等待完成（后台进行）
+                Promise.all(uploadPromises).then(() => {
+                    console.log('词典历史记录上传完成');
+                }).catch(err => {
+                    console.warn('词典历史记录上传部分失败:', err);
+                });
+            }
+        }
+        
+        // 5. 上传背单词进度
+        if (window.getVocabProgress) {
+            const vocabProgress = window.getVocabProgress();
+            if (vocabProgress && Object.keys(vocabProgress).length > 0) {
+                console.log(`准备上传 ${Object.keys(vocabProgress).length} 个背单词进度`);
+                uploadData.vocab_progress = vocabProgress;
+            }
+        }
+    } catch (error) {
+        console.error('上传本地数据失败:', error);
         // 静默失败，不影响登录流程
     }
 }

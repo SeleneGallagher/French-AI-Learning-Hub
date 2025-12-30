@@ -24,6 +24,12 @@ export function getAllFavorites() {
     }
 }
 
+// 暴露给全局，供登录模块使用
+window.getAllFavorites = getAllFavorites;
+
+// 语用收藏上传防抖
+let favoritesUploadTimer = null;
+
 /**
  * 保存所有收藏
  * @param {Array} favorites - 收藏数组
@@ -31,8 +37,14 @@ export function getAllFavorites() {
 export function saveAllFavorites(favorites) {
     try {
         localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
-        // 如果已登录，同步到数据库
-        uploadFavoritesToServer(favorites);
+        // 如果已登录，自动同步到数据库（防抖：1秒后上传）
+        const token = APIService.getToken();
+        if (token) {
+            clearTimeout(favoritesUploadTimer);
+            favoritesUploadTimer = setTimeout(() => {
+                uploadFavoritesToServer(favorites);
+            }, 1000);
+        }
     } catch (error) {
         console.error('保存收藏夹失败:', error);
     }

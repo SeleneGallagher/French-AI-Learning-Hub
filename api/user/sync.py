@@ -86,6 +86,22 @@ def handle_get_sync(request):
                 'added_at': row[3].isoformat() if row[3] else None
             })
         
+        # 获取背单词进度
+        cursor.execute("""
+            SELECT word, quality, count, last_review
+            FROM vocab_progress
+            WHERE user_id = %s
+            ORDER BY last_review DESC
+        """, (user_id,))
+        vocab_progress = []
+        for row in cursor.fetchall():
+            vocab_progress.append({
+                'word': row[0],
+                'quality': row[1],
+                'count': row[2],
+                'last_review': row[3].isoformat() if row[3] else None
+            })
+        
         cursor.close()
         conn.close()
         
@@ -97,7 +113,8 @@ def handle_get_sync(request):
                 'data': {
                     'chat_history': chat_records,
                     'expression_favorites': expression_favorites,
-                    'dict_favorites': dict_favorites
+                    'dict_favorites': dict_favorites,
+                    'vocab_progress': vocab_progress
                 }
             })
         }
@@ -182,6 +199,68 @@ def handle_post_sync(request):
                         ON CONFLICT (user_id, word) 
                         DO UPDATE SET phonetic = EXCLUDED.phonetic, pos = EXCLUDED.pos
                     """, (user_id, word, phonetic, pos))
+        
+        # 上传背单词进度
+        if 'vocab_progress' in body and isinstance(body['vocab_progress'], (dict, list)):
+            vocab_data = body['vocab_progress']
+            # 支持字典格式 {word: {quality, count, lastReview}}
+            if isinstance(vocab_data, dict):
+                for word, progress in vocab_data.items():
+                    if isinstance(progress, dict) and word:
+                        quality = progress.get('quality', 0)
+                        count = progress.get('count', 0)
+                        last_review = progress.get('lastReview') or progress.get('last_review')
+                        # 转换时间戳为datetime
+                        from datetime import datetime
+                        if last_review:
+                            if isinstance(last_review, (int, float)):
+                                last_review_dt = datetime.fromtimestamp(last_review / 1000 if last_review > 1e10 else last_review)
+                            else:
+                                try:
+                                    last_review_dt = datetime.fromisoformat(str(last_review).replace('Z', '+00:00'))
+                                except:
+                                    last_review_dt = datetime.now()
+                        else:
+                            last_review_dt = datetime.now()
+                        
+                        cursor.execute("""
+                            INSERT INTO vocab_progress (user_id, word, quality, count, last_review)
+                            VALUES (%s, %s, %s, %s, %s)
+                            ON CONFLICT (user_id, word) 
+                            DO UPDATE SET 
+                                quality = EXCLUDED.quality,
+                                count = EXCLUDED.count,
+                                last_review = EXCLUDED.last_review
+                        """, (user_id, word, quality, count, last_review_dt))
+            # 支持数组格式
+            elif isinstance(vocab_data, list):
+                for item in vocab_data:
+                    if isinstance(item, dict) and item.get('word'):
+                        word = item['word']
+                        quality = item.get('quality', 0)
+                        count = item.get('count', 0)
+                        last_review = item.get('last_review') or item.get('lastReview')
+                        from datetime import datetime
+                        if last_review:
+                            if isinstance(last_review, (int, float)):
+                                last_review_dt = datetime.fromtimestamp(last_review / 1000 if last_review > 1e10 else last_review)
+                            else:
+                                try:
+                                    last_review_dt = datetime.fromisoformat(str(last_review).replace('Z', '+00:00'))
+                                except:
+                                    last_review_dt = datetime.now()
+                        else:
+                            last_review_dt = datetime.now()
+                        
+                        cursor.execute("""
+                            INSERT INTO vocab_progress (user_id, word, quality, count, last_review)
+                            VALUES (%s, %s, %s, %s, %s)
+                            ON CONFLICT (user_id, word) 
+                            DO UPDATE SET 
+                                quality = EXCLUDED.quality,
+                                count = EXCLUDED.count,
+                                last_review = EXCLUDED.last_review
+                        """, (user_id, word, quality, count, last_review_dt))
         
         conn.commit()
         cursor.close()

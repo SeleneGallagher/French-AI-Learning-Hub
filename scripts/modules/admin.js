@@ -250,3 +250,184 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
+async function loadCodes() {
+    const adminCodesList = document.getElementById('admin-codes-list');
+    const adminCodesLoading = document.getElementById('admin-codes-loading');
+    const adminCodesCount = document.getElementById('admin-codes-count');
+    const adminCodeError = document.getElementById('admin-code-error');
+    
+    if (!adminCodesList || !adminCodesLoading) return;
+    
+    if (!adminPassword) {
+        if (adminCodeError) {
+            showAdminError(adminCodeError, '请先登录');
+        }
+        return;
+    }
+    
+    try {
+        adminCodesLoading.classList.remove('hidden');
+        adminCodesList.innerHTML = '';
+        
+        const response = await fetch('/api/admin/registration-codes', {
+            method: 'GET',
+            headers: {
+                'X-Admin-Password': adminPassword
+            }
+        });
+        
+        const data = await response.json();
+        
+        if (!data.success) {
+            throw new Error(data.message || '获取注册码列表失败');
+        }
+        
+        // 更新注册码数量
+        if (adminCodesCount) {
+            adminCodesCount.textContent = `共 ${data.count || 0} 个注册码`;
+        }
+        
+        // 显示注册码列表
+        if (data.codes && data.codes.length > 0) {
+            const codesHtml = data.codes.map((code, index) => {
+                const statusBadge = code.is_active 
+                    ? '<span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">激活</span>'
+                    : '<span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs">已禁用</span>';
+                const unlimitedBadge = code.unlimited_use 
+                    ? '<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">永久</span>'
+                    : '<span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">单次</span>';
+                const usedInfo = code.used_at 
+                    ? `<div class="text-xs text-gray-500">使用时间: ${new Date(code.used_at).toLocaleString('zh-CN')}</div>`
+                    : '<div class="text-xs text-gray-500">未使用</div>';
+                
+                return `
+                    <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="text-sm text-gray-500">#${index + 1}</span>
+                                    <code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono">${escapeHtml(code.code)}</code>
+                                    ${statusBadge}
+                                    ${unlimitedBadge}
+                                </div>
+                                ${usedInfo}
+                            </div>
+                            <button class="delete-code-btn px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 transition-colors text-sm" data-code-id="${code.id}">
+                                删除
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            adminCodesList.innerHTML = codesHtml;
+            
+            // 绑定删除按钮
+            document.querySelectorAll('.delete-code-btn').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    const codeId = btn.dataset.codeId;
+                    if (confirm('确定删除此注册码？')) {
+                        try {
+                            const response = await fetch(`/api/admin/registration-codes`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-Admin-Password': adminPassword
+                                },
+                                body: JSON.stringify({ id: codeId })
+                            });
+                            
+                            const data = await response.json();
+                            if (data.success) {
+                                loadCodes(); // 重新加载列表
+                            } else {
+                                alert('删除失败: ' + (data.message || '未知错误'));
+                            }
+                        } catch (error) {
+                            alert('删除失败: ' + error.message);
+                        }
+                    }
+                });
+            });
+        } else {
+            adminCodesList.innerHTML = '<div class="text-center py-8 text-gray-500">暂无注册码</div>';
+        }
+        
+    } catch (error) {
+        if (adminCodeError) {
+            showAdminError(adminCodeError, error.message || '加载注册码列表失败');
+        }
+        adminCodesList.innerHTML = '<div class="text-center py-8 text-red-500">加载失败</div>';
+    } finally {
+        adminCodesLoading.classList.add('hidden');
+    }
+}
+
+async function handleCreateCode() {
+    const newCodeInput = document.getElementById('new-code-input');
+    const newCodeUnlimited = document.getElementById('new-code-unlimited');
+    const newCodeActive = document.getElementById('new-code-active');
+    const adminCodeError = document.getElementById('admin-code-error');
+    const adminSaveCodeBtn = document.getElementById('admin-save-code-btn');
+    
+    if (!newCodeInput || !adminCodeError || !adminSaveCodeBtn) return;
+    
+    const code = newCodeInput.value.trim();
+    const unlimited = newCodeUnlimited ? newCodeUnlimited.checked : false;
+    const isActive = newCodeActive ? newCodeActive.checked : true;
+    
+    if (!code) {
+        showAdminError(adminCodeError, '请输入注册码');
+        return;
+    }
+    
+    if (!adminPassword) {
+        showAdminError(adminCodeError, '请先登录');
+        return;
+    }
+    
+    try {
+        adminSaveCodeBtn.disabled = true;
+        adminSaveCodeBtn.textContent = '保存中...';
+        adminCodeError.classList.add('hidden');
+        
+        const response = await fetch('/api/admin/registration-codes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Admin-Password': adminPassword
+            },
+            body: JSON.stringify({
+                code: code,
+                unlimited_use: unlimited,
+                is_active: isActive
+            })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            // 清空表单
+            newCodeInput.value = '';
+            if (newCodeUnlimited) newCodeUnlimited.checked = false;
+            if (newCodeActive) newCodeActive.checked = true;
+            
+            // 隐藏表单
+            const adminAddCodeForm = document.getElementById('admin-add-code-form');
+            if (adminAddCodeForm) {
+                adminAddCodeForm.classList.add('hidden');
+            }
+            
+            // 重新加载列表
+            loadCodes();
+        } else {
+            showAdminError(adminCodeError, data.message || '创建失败');
+        }
+    } catch (error) {
+        showAdminError(adminCodeError, error.message || '创建失败');
+    } finally {
+        adminSaveCodeBtn.disabled = false;
+        adminSaveCodeBtn.textContent = '保存';
+    }
+}
+

@@ -41,6 +41,11 @@ export function initAIAssistant() {
     if (clearBtn) {
         clearBtn.addEventListener('click', clearAllMessages);
     }
+    
+    // 暴露获取聊天历史的函数，供登录模块使用
+    window.getChatHistory = function() {
+        return chatHistory;
+    };
 }
 
 function loadChatHistory() {
@@ -52,11 +57,20 @@ function loadChatHistory() {
     }
 }
 
+// 聊天记录上传防抖
+let chatHistoryUploadTimer = null;
+
 function saveChatHistory() {
     try {
         localStorageService.set(CHAT_HISTORY_KEY, chatHistory);
-        // 如果已登录，同步到数据库
-        uploadChatHistoryToServer();
+        // 如果已登录，自动同步到数据库（防抖：1秒后上传）
+        const token = APIService.getToken();
+        if (token) {
+            clearTimeout(chatHistoryUploadTimer);
+            chatHistoryUploadTimer = setTimeout(() => {
+                uploadChatHistoryToServer();
+            }, 1000);
+        }
     } catch (e) {
         // 静默失败
     }

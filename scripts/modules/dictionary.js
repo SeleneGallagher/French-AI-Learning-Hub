@@ -44,6 +44,19 @@ export async function initDictionary() {
     // 更新UI
     updateFavoritesCount();
     updateTotalCount();
+    
+    // 暴露获取数据的函数，供登录模块使用
+    window.getDictFavorites = function() {
+        return favorites;
+    };
+    
+    window.getDictHistory = function() {
+        return searchHistory;
+    };
+    
+    window.getVocabProgress = function() {
+        return vocabProgress;
+    };
 }
 
 // 加载本地存储
@@ -61,7 +74,7 @@ function loadLocalStorage() {
 
 // 同步词典收藏夹（从服务器）
 window.syncDictFavorites = function(serverFavorites) {
-    if (!Array.isArray(serverFavorites) || serverFavorites.length === 0) return;
+    if (!Array.isArray(serverFavorites)) return;
     
     const favoritesMap = new Map();
     
@@ -72,18 +85,27 @@ window.syncDictFavorites = function(serverFavorites) {
         }
     });
     
-    // 再添加服务器收藏（覆盖本地）
-    serverFavorites.forEach(serverFav => {
-        const word = serverFav.word;
-        if (word) {
-            favoritesMap.set(word.toLowerCase(), {
-                word: word,
-                phonetic: serverFav.phonetic || '',
-                pos: serverFav.pos || {},
-                addedAt: serverFav.added_at || new Date().toISOString()
-            });
-        }
-    });
+    // 再添加服务器收藏（如果服务器有更新，覆盖本地）
+    if (serverFavorites.length > 0) {
+        serverFavorites.forEach(serverFav => {
+            const word = serverFav.word;
+            if (word) {
+                const localFav = favoritesMap.get(word.toLowerCase());
+                const serverAddedAt = serverFav.added_at ? new Date(serverFav.added_at).getTime() : 0;
+                const localAddedAt = localFav?.addedAt ? new Date(localFav.addedAt).getTime() : 0;
+                
+                // 如果服务器数据更新，使用服务器数据；否则保留本地数据
+                if (!localFav || serverAddedAt >= localAddedAt) {
+                    favoritesMap.set(word.toLowerCase(), {
+                        word: word,
+                        phonetic: serverFav.phonetic || '',
+                        pos: serverFav.pos || {},
+                        addedAt: serverFav.added_at || new Date().toISOString()
+                    });
+                }
+            }
+        });
+    }
     
     // 保存合并后的收藏
     favorites = Array.from(favoritesMap.values());
@@ -94,6 +116,10 @@ window.syncDictFavorites = function(serverFavorites) {
         if (currentPanel === 'favorites') {
             renderFavoritesPanel();
         }
+        // 自动上传合并后的数据
+        if (APIService.getToken()) {
+            uploadDictFavoritesToServer();
+        }
     } catch (e) {
         console.error('保存词典收藏失败:', e);
     }
@@ -101,19 +127,101 @@ window.syncDictFavorites = function(serverFavorites) {
     console.log('词典收藏夹同步完成');
 };
 
-// 保存历史记录
+// 同步背单词进度（从服务器）
+window.syncVocabProgress = function(serverProgress) {
+    if (!Array.isArray(serverProgress)) return;
+    
+    // 先保留本地进度
+    const mergedProgress = { ...vocabProgress };
+    
+    // 合并服务器进度（如果服务器数据更新，使用服务器数据）
+    serverProgress.forEach(item => {
+        if (item && item.word) {
+            const word = item.word;
+            const serverLastReview = item.last_review ? new Date(item.last_review).getTime() : 0;
+            const localLastReview = mergedProgress[word]?.lastReview || 0;
+            
+            // 如果服务器数据更新，使用服务器数据；否则保留本地数据
+            if (!mergedProgress[word] || serverLastReview >= localLastReview) {
+                mergedProgress[word] = {
+                    quality: item.quality || 0,
+                    count: item.count || 0,
+                    lastReview: item.last_review ? new Date(item.last_review).getTime() : Date.now()
+                };
+            }
+        }
+    });
+    
+    // 保存合并后的进度
+    vocabProgress = mergedProgress;
+    try {
+        localStorage.setItem(VOCAB_PROGRESS_KEY, JSON.stringify(vocabProgress));
+        updateVocabStats();
+        // 如果当前在背单词面板，刷新显示
+        if (currentPanel === 'vocab') {
+            showLearnedList();
+        }
+        // 自动上传合并后的数据
+        if (APIService.getToken()) {
+            uploadVocabProgressToServer();
+        }
+    } catch (e) {
+        console.error('保存背单词进度失败:', e);
+    }
+    
+    console.log('背单词进度同步完成');
+};
+
+// 保存历史记录（带自动同步）
+let historyUploadTimer = null;
 function saveHistory() {
     try {
         localStorage.setItem(HISTORY_KEY, JSON.stringify(searchHistory.slice(0, MAX_HISTORY)));
+        // 如果已登录，自动同步到数据库（防抖：2秒后上传）
+        if (APIService.getToken()) {
+            clearTimeout(historyUploadTimer);
+            historyUploadTimer = setTimeout(() => {
+                uploadDictHistoryToServer();
+            }, 2000);
+        }
     } catch {}
 }
 
-// 保存收藏
+// 上传词典历史记录到服务器
+async function uploadDictHistoryToServer() {
+    try {
+        const token = APIService.getToken();
+        if (!token || searchHistory.length === 0) return;
+        
+        // 上传最近的历史记录（最多50条）
+        const recentHistory = searchHistory.slice(-50);
+        for (const historyItem of recentHistory) {
+            if (historyItem && historyItem.word) {
+                try {
+                    await APIService.addDictHistory(historyItem.word);
+                } catch (e) {
+                    // 静默失败，继续上传其他记录
+                }
+            }
+        }
+    } catch (e) {
+        // 静默失败，不影响本地保存
+        console.warn('上传词典历史记录失败:', e);
+    }
+}
+
+// 保存收藏（带自动同步）
+let favoritesUploadTimer = null;
 function saveFavorites() {
     try {
         localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
-        // 如果已登录，同步到数据库
-        uploadDictFavoritesToServer();
+        // 如果已登录，自动同步到数据库（防抖：1秒后上传）
+        if (APIService.getToken()) {
+            clearTimeout(favoritesUploadTimer);
+            favoritesUploadTimer = setTimeout(() => {
+                uploadDictFavoritesToServer();
+            }, 1000);
+        }
     } catch {}
 }
 
@@ -132,11 +240,34 @@ async function uploadDictFavoritesToServer() {
     }
 }
 
-// 保存学习进度
+// 保存学习进度（带自动同步）
+let vocabProgressUploadTimer = null;
 function saveVocabProgress() {
     try {
         localStorage.setItem(VOCAB_PROGRESS_KEY, JSON.stringify(vocabProgress));
+        // 如果已登录，自动同步到数据库（防抖：1秒后上传）
+        if (APIService.getToken()) {
+            clearTimeout(vocabProgressUploadTimer);
+            vocabProgressUploadTimer = setTimeout(() => {
+                uploadVocabProgressToServer();
+            }, 1000);
+        }
     } catch {}
+}
+
+// 上传背单词进度到服务器
+async function uploadVocabProgressToServer() {
+    try {
+        const token = APIService.getToken();
+        if (!token || Object.keys(vocabProgress).length === 0) return;
+        
+        await APIService.uploadUserData({
+            vocab_progress: vocabProgress
+        });
+    } catch (e) {
+        // 静默失败，不影响本地保存
+        console.warn('上传背单词进度失败:', e);
+    }
 }
 
 // 词典加载状态
@@ -859,10 +990,33 @@ function toggleFavorite(word) {
 
 // 添加到历史
 function addToHistory(word) {
+    if (!word) return;
+    
+    // 如果已登录，立即上传到服务器（不等待防抖）
+    if (APIService.getToken()) {
+        const wordStr = typeof word === 'string' ? word : (word.word || word);
+        if (wordStr) {
+            APIService.addDictHistory(wordStr).catch(e => {
+                console.warn('上传词典历史记录失败:', e);
+            });
+        }
+    }
+    
+    // 统一处理：转换为对象格式 {word: string, searchedAt: timestamp}
+    const wordStr = typeof word === 'string' ? word : (word.word || word);
+    const historyItem = typeof word === 'string' 
+        ? { word: wordStr, searchedAt: Date.now() }
+        : { word: wordStr, searchedAt: word.searchedAt || Date.now() };
+    
     // 移除重复
-    searchHistory = searchHistory.filter(h => h !== word);
+    searchHistory = searchHistory.filter(h => {
+        const hWord = typeof h === 'string' ? h : h.word;
+        return hWord !== wordStr;
+    });
+    
     // 添加到开头
-    searchHistory.unshift(word);
+    searchHistory.unshift(historyItem);
+    
     // 限制数量
     searchHistory = searchHistory.slice(0, MAX_HISTORY);
     saveHistory();
@@ -883,7 +1037,9 @@ function renderHistoryPanel() {
             </div>
         `;
     } else {
-        listEl.innerHTML = searchHistory.map(word => `
+        listEl.innerHTML = searchHistory.map(item => {
+            const word = typeof item === 'string' ? item : item.word;
+            return `
             <div class="history-item flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer transition-colors card" data-word="${word}">
                 <span class="font-medium" style="color: var(--gray-700);">${word}</span>
                 <svg class="w-4 h-4" style="color: var(--gray-400);" fill="none" stroke="currentColor" viewBox="0 0 24 24">

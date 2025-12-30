@@ -240,7 +240,7 @@ function createExpressionCard(expr, isFavView) {
                 </div>
             `).join('')}
         </div>
-        ${expr.cultural_tips ? `<div class="rounded p-3" style="background-color: var(--accent-50); border: 1px solid var(--accent-200);"><p class="text-sm" style="color: var(--accent-800);"><strong>💡</strong> ${expr.cultural_tips}</p></div>` : ''}
+        ${expr.cultural_tips ? `<div class="rounded p-3" style="background-color: var(--primary-50); border: 1px solid var(--primary-200);"><p class="text-sm" style="color: var(--primary-700);"><strong>💡</strong> ${expr.cultural_tips}</p></div>` : ''}
     `;
     
     // 绑定收藏按钮
