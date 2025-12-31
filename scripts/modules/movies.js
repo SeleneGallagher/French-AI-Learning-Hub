@@ -292,7 +292,30 @@ export async function initMovies() {
         // 优先尝试从本地JSON文件读取（服务器预更新）
         const localMovies = await getMoviesFromLocal();
         if (localMovies && localMovies.length > 0) {
-            allMovies = localMovies;
+            // 从缓存中随机选择25部，确保近两年和经典影视超过一半
+            const currentYear = new Date().getFullYear();
+            const recentAndClassic = localMovies.filter(m => m.isRecent || m.isClassic);
+            const others = localMovies.filter(m => !m.isRecent && !m.isClassic);
+            
+            // 打乱顺序
+            recentAndClassic.sort(() => Math.random() - 0.5);
+            others.sort(() => Math.random() - 0.5);
+            
+            // 确保近两年和经典影视超过一半（至少13个）
+            const targetCount = 25;
+            const recentTarget = 13;
+            let finalList = [];
+            
+            if (recentAndClassic.length >= recentTarget) {
+                finalList = [...recentAndClassic.slice(0, recentTarget), ...others.slice(0, targetCount - recentTarget)];
+            } else {
+                finalList = [...recentAndClassic, ...others.slice(0, targetCount - recentAndClassic.length)];
+            }
+            
+            // 最终打乱
+            finalList.sort(() => Math.random() - 0.5);
+            allMovies = finalList.slice(0, targetCount);
+            
             renderItems(allMovies);
             hideLoading(loadingEl);
             translateAllPlots();
