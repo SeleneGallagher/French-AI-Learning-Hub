@@ -215,11 +215,14 @@ def movies_tmdb(endpoint):
     if request.method == 'OPTIONS':
         return '', 200
     from api.movies.tmdb import handler as tmdb_handler
+    # 构建完整的endpoint路径（包含查询参数）
+    full_endpoint = f'/{endpoint}'
+    if request.query_string:
+        full_endpoint += f'?{request.query_string.decode()}'
+    
     # 将endpoint添加到request中
     class RequestWrapper:
         def __init__(self, original_request, endpoint_path):
-            self.__dict__ = original_request.__dict__.copy()
-            self.endpoint_path = f'/{endpoint}'
             # 复制所有属性
             for attr in dir(original_request):
                 if not attr.startswith('_'):
@@ -227,13 +230,15 @@ def movies_tmdb(endpoint):
                         setattr(self, attr, getattr(original_request, attr))
                     except:
                         pass
+            # 确保endpoint_path被设置
+            self.endpoint_path = endpoint_path
+            # 确保args被正确传递（用于queryStringParameters）
+            if hasattr(original_request, 'args'):
+                self.args = original_request.args
     
-    # 构建完整的endpoint路径（包含查询参数）
-    full_endpoint = f'/{endpoint}'
-    if request.query_string:
-        full_endpoint += f'?{request.query_string.decode()}'
-    
-    wrapped_request = RequestWrapper(request, full_endpoint)
+    # 创建VercelRequest包装器
+    vercel_request = VercelRequest(request)
+    wrapped_request = RequestWrapper(vercel_request, full_endpoint)
     return adapt_handler(tmdb_handler)(wrapped_request)
 
 @app.route('/api/dictionary/history', methods=['GET', 'POST', 'OPTIONS'])
