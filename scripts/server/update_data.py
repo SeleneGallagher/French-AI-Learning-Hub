@@ -147,12 +147,12 @@ def fetch_news():
     return all_news[:20]  # 返回最新20条
 
 def fetch_movies():
-    """从TMDB API获取热门法语电影和剧集
+    """从TMDB API获取热门法语电影和剧集（8.0+评分，有tagline，至少25部）
     
     需要设置环境变量 TMDB_API_KEY
     
     Returns:
-        list: 电影和剧集列表，每个条目包含id, title, overview等字段
+        list: 电影和剧集列表，每个条目包含完整信息
     """
     api_key = os.getenv('TMDB_API_KEY')
     
@@ -160,49 +160,189 @@ def fetch_movies():
         print("警告: 未设置 TMDB_API_KEY，跳过电影数据更新")
         return []
     
+    MIN_RATING = 8.0
+    TARGET_COUNT = 30  # 目标30部，确保有足够的数据
+    current_year = datetime.now().year
+    
+    all_movies = []
+    
     try:
-        # 获取热门电影
-        movies_url = f'https://api.themoviedb.org/3/movie/popular?api_key={api_key}&language=fr-FR&page=1'
-        response = requests.get(movies_url, timeout=10)
-        response.raise_for_status()
-        movies_data = response.json()
+        # 获取近两年电影（多页）
+        print("获取近两年电影...")
+        for page in range(1, 6):  # 最多5页
+            url = f'https://api.themoviedb.org/3/discover/movie'
+            params = {
+                'api_key': api_key,
+                'language': 'fr-FR',
+                'with_original_language': 'fr',
+                'sort_by': 'popularity.desc',
+                'vote_count.gte': 30,
+                'vote_average.gte': MIN_RATING,
+                'primary_release_date.gte': f'{current_year - 2}-01-01',
+                'page': page
+            }
+            response = requests.get(url, params=params, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            all_movies.extend(data.get('results', []))
+            if len(data.get('results', [])) < 20:
+                break
+            time.sleep(0.3)  # 避免API限流
         
-        movies = []
-        for movie in movies_data.get('results', [])[:10]:
-            if movie.get('vote_average', 0) >= 6.5:
-                movies.append({
-                    'id': movie['id'],
-                    'title': movie.get('title', ''),
-                    'original_title': movie.get('original_title', ''),
-                    'overview': movie.get('overview', ''),
-                    'poster_path': movie.get('poster_path', ''),
-                    'release_date': movie.get('release_date', ''),
-                    'vote_average': movie.get('vote_average', 0),
-                    'type': 'movie'
-                })
+        # 获取经典电影（多页）
+        print("获取经典电影...")
+        for page in range(1, 6):
+            url = f'https://api.themoviedb.org/3/discover/movie'
+            params = {
+                'api_key': api_key,
+                'language': 'fr-FR',
+                'with_original_language': 'fr',
+                'sort_by': 'vote_average.desc',
+                'vote_count.gte': 300,
+                'vote_average.gte': MIN_RATING,
+                'primary_release_date.lte': f'{current_year - 5}-12-31',
+                'page': page
+            }
+            response = requests.get(url, params=params, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            all_movies.extend(data.get('results', []))
+            if len(data.get('results', [])) < 20:
+                break
+            time.sleep(0.3)
         
-        # 获取热门剧集
-        tv_url = f'https://api.themoviedb.org/3/tv/popular?api_key={api_key}&language=fr-FR&page=1'
-        response = requests.get(tv_url, timeout=10)
-        response.raise_for_status()
-        tv_data = response.json()
+        # 获取近两年剧集（多页）
+        print("获取近两年剧集...")
+        for page in range(1, 6):
+            url = f'https://api.themoviedb.org/3/discover/tv'
+            params = {
+                'api_key': api_key,
+                'language': 'fr-FR',
+                'with_original_language': 'fr',
+                'sort_by': 'popularity.desc',
+                'vote_count.gte': 20,
+                'vote_average.gte': MIN_RATING,
+                'first_air_date.gte': f'{current_year - 2}-01-01',
+                'page': page
+            }
+            response = requests.get(url, params=params, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            all_movies.extend(data.get('results', []))
+            if len(data.get('results', [])) < 20:
+                break
+            time.sleep(0.3)
         
-        for tv in tv_data.get('results', [])[:10]:
-            if tv.get('vote_average', 0) >= 6.5:
-                movies.append({
-                    'id': tv['id'],
-                    'title': tv.get('name', ''),
-                    'original_title': tv.get('original_name', ''),
-                    'overview': tv.get('overview', ''),
-                    'poster_path': tv.get('poster_path', ''),
-                    'release_date': tv.get('first_air_date', ''),
-                    'vote_average': tv.get('vote_average', 0),
-                    'type': 'tv'
-                })
+        # 获取经典剧集（多页）
+        print("获取经典剧集...")
+        for page in range(1, 6):
+            url = f'https://api.themoviedb.org/3/discover/tv'
+            params = {
+                'api_key': api_key,
+                'language': 'fr-FR',
+                'with_original_language': 'fr',
+                'sort_by': 'vote_average.desc',
+                'vote_count.gte': 100,
+                'vote_average.gte': MIN_RATING,
+                'first_air_date.lte': f'{current_year - 5}-12-31',
+                'page': page
+            }
+            response = requests.get(url, params=params, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            all_movies.extend(data.get('results', []))
+            if len(data.get('results', [])) < 20:
+                break
+            time.sleep(0.3)
         
-        return movies
+        # 去重
+        seen_ids = set()
+        unique_movies = []
+        for movie in all_movies:
+            item_id = f"{movie.get('media_type', 'movie')}_{movie['id']}"
+            if item_id not in seen_ids:
+                seen_ids.add(item_id)
+                unique_movies.append(movie)
+        
+        print(f"获取到 {len(unique_movies)} 部基础数据，开始获取详细信息...")
+        
+        # 获取详细信息（包括tagline、导演等）
+        processed_movies = []
+        for idx, movie in enumerate(unique_movies[:100]):  # 限制最多100个，避免API限流
+            try:
+                item_type = movie.get('media_type', 'movie')
+                movie_id = movie['id']
+                
+                # 获取详情
+                detail_url = f'https://api.themoviedb.org/3/{item_type}/{movie_id}'
+                detail_params = {
+                    'api_key': api_key,
+                    'language': 'fr-FR',
+                    'append_to_response': 'credits'
+                }
+                detail_response = requests.get(detail_url, params=detail_params, timeout=10)
+                
+                if detail_response.ok:
+                    detail_data = detail_response.json()
+                    
+                    # 必须有tagline
+                    tagline = detail_data.get('tagline', '')
+                    if not tagline or tagline.strip() == '':
+                        continue
+                    
+                    # 提取导演/创作者
+                    director = ''
+                    if item_type == 'movie' and detail_data.get('credits', {}).get('crew'):
+                        director_obj = next((c for c in detail_data['credits']['crew'] if c.get('job') == 'Director'), None)
+                        if director_obj:
+                            director = director_obj.get('name', '')
+                    elif item_type == 'tv' and detail_data.get('created_by'):
+                        if detail_data['created_by']:
+                            director = detail_data['created_by'][0].get('name', '')
+                    
+                    # 提取类型
+                    genres = []
+                    if detail_data.get('genres'):
+                        genres = [g.get('name', '') for g in detail_data['genres'][:3]]
+                    
+                    # 构建完整数据
+                    processed_movie = {
+                        'id': movie_id,
+                        'title': movie.get('title') or movie.get('name', ''),
+                        'original_title': movie.get('original_title') or movie.get('original_name', ''),
+                        'overview': detail_data.get('overview', ''),
+                        'poster_path': movie.get('poster_path', ''),
+                        'release_date': movie.get('release_date') or movie.get('first_air_date', ''),
+                        'vote_average': movie.get('vote_average', 0),
+                        'type': item_type,
+                        'tagline': tagline,
+                        'director': director,
+                        'genres': genres,
+                        'runtime': detail_data.get('runtime', 0),
+                        'number_of_seasons': detail_data.get('number_of_seasons', 0),
+                        'number_of_episodes': detail_data.get('number_of_episodes', 0),
+                        'media_type': item_type
+                    }
+                    
+                    processed_movies.append(processed_movie)
+                    
+                    if len(processed_movies) >= TARGET_COUNT:
+                        break
+                
+                # 避免API限流
+                time.sleep(0.2)
+                
+            except Exception as e:
+                print(f"处理电影 {movie.get('id')} 失败: {e}")
+                continue
+        
+        print(f"成功处理 {len(processed_movies)} 部影视（8.0+评分且有tagline）")
+        return processed_movies
+        
     except Exception as e:
         print(f"获取电影数据失败: {e}")
+        import traceback
+        traceback.print_exc()
         return []
 
 def main():

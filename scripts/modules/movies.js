@@ -244,19 +244,30 @@ async function getMoviesFromLocal() {
             const data = await response.json();
             if (data.movies && data.movies.length > 0) {
                 console.log(`从本地文件加载 ${data.movies.length} 部影视 (更新于: ${data.updated_at})`);
-                // 转换为前端需要的格式
-                return data.movies.map(m => ({
-                    id: m.id,
-                    title: m.title,
-                    originalTitle: m.original_title,
-                    year: m.release_date ? new Date(m.release_date).getFullYear() : '',
-                    rating: m.vote_average,
-                    poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : '',
-                    plot: m.overview || '',
-                    fullPlot: m.overview || '',
-                    type: m.type || 'movie',
-                    translatedPlot: '' // 前端会翻译
-                }));
+                // 转换为前端需要的格式，包含完整信息
+                return data.movies.map(m => {
+                    const year = m.release_date ? new Date(m.release_date).getFullYear() : '';
+                    const currentYear = new Date().getFullYear();
+                    return {
+                        id: m.id,
+                        title: m.title,
+                        originalTitle: m.original_title || '',
+                        year: year,
+                        rating: m.vote_average || 0,
+                        poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : '',
+                        plot: (m.overview || '').length > 150 ? (m.overview || '').substring(0, 150) + '...' : (m.overview || ''),
+                        fullPlot: m.overview || '',
+                        type: m.type || m.media_type || 'movie',
+                        translatedPlot: '',
+                        genres: m.genres || [],
+                        director: m.director || '',
+                        tagline: (m.tagline || '').length > 60 ? (m.tagline || '').substring(0, 60) + '...' : (m.tagline || ''),
+                        runtime: m.runtime || 0,
+                        mediaInfo: m.type === 'movie' && m.runtime ? `${m.runtime}分钟` : (m.type === 'tv' && m.number_of_seasons ? `${m.number_of_seasons}季${m.number_of_episodes ? ' · ' + m.number_of_episodes + '集' : ''}` : ''),
+                        isRecent: year >= currentYear - 2,
+                        isClassic: year < currentYear - 5
+                    };
+                });
             }
         }
     } catch (error) {

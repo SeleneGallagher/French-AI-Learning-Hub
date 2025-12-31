@@ -83,5 +83,9 @@ def handler(request):
             return json_response({'success': False, 'message': f'TMDB API错误: {response.status_code}'}, response.status_code)
             
     except Exception as e:
-        return json_response({'success': False, 'message': str(e)}, 500)
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"TMDB API代理错误: {str(e)}")
+        print(error_details)
+        return json_response({'success': False, 'message': f'服务器错误: {str(e)}'}, 500)
 
