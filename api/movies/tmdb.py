@@ -53,18 +53,25 @@ def handler(request):
         else:
             if hasattr(request, 'args') and request.args:
                 query_params = dict(request.args)
-            elif hasattr(request, 'query_string'):
-                from urllib.parse import parse_qs, urlparse
-                parsed = urlparse(request.url if hasattr(request, 'url') else '')
-                query_params = {k: v[0] if len(v) == 1 else v for k, v in parse_qs(parsed.query).items()}
             else:
                 query_params = {}
+        
+        # 从endpoint中提取查询参数（如果endpoint包含?）
+        if '?' in endpoint:
+            from urllib.parse import urlparse, parse_qs
+            parsed = urlparse(endpoint)
+            endpoint = parsed.path
+            endpoint_params = parse_qs(parsed.query)
+            # 将列表转换为单个值
+            for k, v in endpoint_params.items():
+                if isinstance(v, list) and len(v) > 0:
+                    query_params[k] = v[0]
         
         # 构建TMDB API URL
         url = f'https://api.themoviedb.org/3{endpoint}'
         
         # 添加API密钥和查询参数
-        params = {'api_key': TMDB_API_KEY}
+        params = {'api_key': TMDB_API_KEY, 'language': 'fr-FR'}
         params.update(query_params)
         
         # 调用TMDB API

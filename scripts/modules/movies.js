@@ -86,36 +86,38 @@ function isFrenchText(text) {
 }
 
 // 获取电影列表
-async function fetchMovies(isRecent) {
+async function fetchMovies(isRecent, page = 1) {
     const currentYear = new Date().getFullYear();
     const endpoint = isRecent
-        ? `/discover/movie?with_original_language=fr&sort_by=popularity.desc&vote_count.gte=30&vote_average.gte=${MIN_RATING}&primary_release_date.gte=${currentYear - 2}-01-01&page=1`
-        : `/discover/movie?with_original_language=fr&sort_by=vote_average.desc&vote_count.gte=300&vote_average.gte=${MIN_RATING}&primary_release_date.lte=${currentYear - 5}-12-31&page=1`;
+        ? `/discover/movie?with_original_language=fr&sort_by=popularity.desc&vote_count.gte=30&vote_average.gte=${MIN_RATING}&primary_release_date.gte=${currentYear - 2}-01-01&page=${page}`
+        : `/discover/movie?with_original_language=fr&sort_by=vote_average.desc&vote_count.gte=300&vote_average.gte=${MIN_RATING}&primary_release_date.lte=${currentYear - 5}-12-31&page=${page}`;
     
     const data = await fetchFromTMDB(endpoint);
+    // fetchFromTMDB返回的是TMDB API的原始响应，直接取results
     return data?.results || [];
 }
 
 // 获取剧集列表
-async function fetchTVShows(isRecent) {
+async function fetchTVShows(isRecent, page = 1) {
     const currentYear = new Date().getFullYear();
     const endpoint = isRecent
-        ? `/discover/tv?with_original_language=fr&sort_by=popularity.desc&vote_count.gte=20&vote_average.gte=${MIN_RATING}&first_air_date.gte=${currentYear - 2}-01-01&page=1`
-        : `/discover/tv?with_original_language=fr&sort_by=vote_average.desc&vote_count.gte=100&vote_average.gte=${MIN_RATING}&first_air_date.lte=${currentYear - 5}-12-31&page=1`;
+        ? `/discover/tv?with_original_language=fr&sort_by=popularity.desc&vote_count.gte=20&vote_average.gte=${MIN_RATING}&first_air_date.gte=${currentYear - 2}-01-01&page=${page}`
+        : `/discover/tv?with_original_language=fr&sort_by=vote_average.desc&vote_count.gte=100&vote_average.gte=${MIN_RATING}&first_air_date.lte=${currentYear - 5}-12-31&page=${page}`;
     
     const data = await fetchFromTMDB(endpoint);
+    // fetchFromTMDB返回的是TMDB API的原始响应，直接取results
     return data?.results || [];
 }
 
 // 获取其它电影
-async function fetchOtherMovies() {
-    const data = await fetchFromTMDB(`/discover/movie?with_original_language=fr&sort_by=popularity.desc&vote_count.gte=50&vote_average.gte=${MIN_RATING}&page=1`);
+async function fetchOtherMovies(page = 1) {
+    const data = await fetchFromTMDB(`/discover/movie?with_original_language=fr&sort_by=popularity.desc&vote_count.gte=50&vote_average.gte=${MIN_RATING}&page=${page}`);
     return data?.results || [];
 }
 
 // 获取其它剧集
-async function fetchOtherTV() {
-    const data = await fetchFromTMDB(`/discover/tv?with_original_language=fr&sort_by=popularity.desc&vote_count.gte=30&vote_average.gte=${MIN_RATING}&page=1`);
+async function fetchOtherTV(page = 1) {
+    const data = await fetchFromTMDB(`/discover/tv?with_original_language=fr&sort_by=popularity.desc&vote_count.gte=30&vote_average.gte=${MIN_RATING}&page=${page}`);
     return data?.results || [];
 }
 
@@ -399,6 +401,7 @@ async function loadContent(forceRefresh = false) {
     const recentItems = [...filterShown(recentMovies, 'movie'), ...filterShown(recentTV, 'tv')];
     for (const item of recentItems) {
         if (processed.filter(p => p.year >= currentYear - 2).length >= recentTarget && processed.length >= targetCount) break;
+        // 正确判断是电影还是剧集：电影有title，剧集有name
         const result = item.title ? await processMovie(item) : await processTVShow(item);
         if (result) {
             processed.push(result);
@@ -416,6 +419,7 @@ async function loadContent(forceRefresh = false) {
     const classicItems = [...filterShown(classicMovies, 'movie'), ...filterShown(classicTV, 'tv')];
     for (const item of classicItems) {
         if (processed.filter(p => p.year < currentYear - 5).length >= classicTarget && processed.length >= targetCount) break;
+        // 正确判断是电影还是剧集：电影有title，剧集有name
         const result = item.title ? await processMovie(item) : await processTVShow(item);
         if (result) {
             processed.push(result);
@@ -433,15 +437,32 @@ async function loadContent(forceRefresh = false) {
     const otherItems = [...filterShown(otherMovies, 'movie'), ...filterShown(otherTV, 'tv')];
     for (const item of otherItems) {
         if (processed.length >= targetCount) break;
+        // 正确判断是电影还是剧集：电影有title，剧集有name
         const result = item.title ? await processMovie(item) : await processTVShow(item);
         if (result) processed.push(result);
         await new Promise(r => setTimeout(r, 100));
     }
     
-    // 如果还是不够25部，继续从所有类型中补充
+    // 如果还是不够25部，继续从所有类型中补充（增加更多页面）
     if (processed.length < targetCount) {
-        const allItems = [...recentItems, ...classicItems, ...otherItems];
-        for (const item of allItems) {
+        // 尝试获取更多页面的数据
+        const moreRecentMovies = await fetchMovies(true, 2); // 第2页
+        const moreClassicMovies = await fetchMovies(false, 2); // 第2页
+        const moreRecentTV = await fetchTVShows(true, 2); // 第2页
+        const moreClassicTV = await fetchTVShows(false, 2); // 第2页
+        const moreOtherMovies = await fetchOtherMovies(2); // 第2页
+        const moreOtherTV = await fetchOtherTV(2); // 第2页
+        
+        const allMoreItems = [
+            ...filterShown(moreRecentMovies, 'movie'),
+            ...filterShown(moreClassicMovies, 'movie'),
+            ...filterShown(moreOtherMovies, 'movie'),
+            ...filterShown(moreRecentTV, 'tv'),
+            ...filterShown(moreClassicTV, 'tv'),
+            ...filterShown(moreOtherTV, 'tv')
+        ];
+        
+        for (const item of allMoreItems) {
             if (processed.length >= targetCount) break;
             const itemId = `${item.title ? 'movie' : 'tv'}_${item.id}`;
             if (!shownIds.includes(itemId) && !processed.find(p => `${p.type}_${p.id}` === itemId)) {
