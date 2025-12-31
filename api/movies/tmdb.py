@@ -47,16 +47,8 @@ def handler(request):
                 query_params = dict(request.args) if hasattr(request, 'args') and request.args else {}
             endpoint = query_params.get('endpoint', '/discover/movie')
         
-        # 获取查询参数
-        if isinstance(request, dict):
-            query_params = request.get('queryStringParameters') or {}
-        else:
-            if hasattr(request, 'args') and request.args:
-                query_params = dict(request.args)
-            else:
-                query_params = {}
-        
         # 从endpoint中提取查询参数（如果endpoint包含?）
+        query_params = {}
         if '?' in endpoint:
             from urllib.parse import urlparse, parse_qs
             parsed = urlparse(endpoint)
@@ -66,6 +58,20 @@ def handler(request):
             for k, v in endpoint_params.items():
                 if isinstance(v, list) and len(v) > 0:
                     query_params[k] = v[0]
+        
+        # 从request获取额外的查询参数（如果endpoint中没有）
+        if isinstance(request, dict):
+            flask_params = request.get('queryStringParameters') or {}
+        else:
+            if hasattr(request, 'args') and request.args:
+                flask_params = dict(request.args)
+            elif hasattr(request, 'queryStringParameters'):
+                flask_params = request.queryStringParameters or {}
+            else:
+                flask_params = {}
+        
+        # 合并查询参数（endpoint中的优先）
+        query_params.update(flask_params)
         
         # 构建TMDB API URL
         url = f'https://api.themoviedb.org/3{endpoint}'
