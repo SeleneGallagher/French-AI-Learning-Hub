@@ -63,11 +63,17 @@ function saveCache(data) {
     localStorage.setItem(CACHE_KEY, JSON.stringify({ timestamp: Date.now(), data }));
 }
 
-// TMDB API调用 - 通过后端API（movies/list.py已经处理了TMDB调用）
-// 不再需要直接调用TMDB API
+// TMDB API调用 - 通过后端API
 async function fetchFromTMDB(endpoint) {
-    // 所有TMDB调用都通过后端API /api/movies/list
-    // 这里保留函数签名以兼容现有代码，但实际不再使用
+    // 通过后端API代理TMDB调用
+    try {
+        const response = await fetch(`/api/movies/tmdb${endpoint}`);
+        if (response.ok) {
+            return await response.json();
+        }
+    } catch (error) {
+        console.warn('TMDB API调用失败:', error);
+    }
     return null;
 }
 
@@ -367,143 +373,11 @@ function processMovieItem(m) {
     };
 }
 
-// 加载内容 - 通过后端API
+// 加载内容 - 参考旧版经典写法，确保至少25部
 async function loadContent(forceRefresh = false) {
     const shownIds = getShownItems();
-    const currentYear = new Date().getFullYear();
     
-    try {
-        // 分别获取近两年、经典和其他类型的影视
-        const [recentResponse, classicResponse, otherResponse] = await Promise.all([
-            APIService.getMovies(forceRefresh, 'recent', 'movie'),
-            APIService.getMovies(forceRefresh, 'classic', 'movie'),
-            APIService.getMovies(forceRefresh, 'other', 'movie')
-        ]);
-        
-        // 也获取剧集
-        const [recentTVResponse, classicTVResponse, otherTVResponse] = await Promise.all([
-            APIService.getMovies(forceRefresh, 'recent', 'tv'),
-            APIService.getMovies(forceRefresh, 'classic', 'tv'),
-            APIService.getMovies(forceRefresh, 'other', 'tv')
-        ]);
-        
-        // 合并所有数据，并立即去重（基于id和type）
-        const allDataMap = new Map();
-        const allDataArrays = [
-            ...(recentResponse.success && recentResponse.data ? recentResponse.data : []),
-            ...(classicResponse.success && classicResponse.data ? classicResponse.data : []),
-            ...(otherResponse.success && otherResponse.data ? otherResponse.data : []),
-            ...(recentTVResponse.success && recentTVResponse.data ? recentTVResponse.data : []),
-            ...(classicTVResponse.success && classicTVResponse.data ? classicTVResponse.data : []),
-            ...(otherTVResponse.success && otherTVResponse.data ? otherTVResponse.data : [])
-        ];
-        
-        // 合并并去重
-        for (const m of allDataArrays) {
-            const itemId = `${m.media_type || 'movie'}_${m.id}`;
-            if (!allDataMap.has(itemId)) {
-                allDataMap.set(itemId, m);
-            }
-        }
-        
-        const allData = Array.from(allDataMap.values());
-        
-        if (allData.length === 0) {
-            throw new Error('未获取到影视数据');
-        }
-        
-        // 过滤掉已显示的ID
-        const filtered = allData.filter(m => {
-            const itemId = `${m.media_type || 'movie'}_${m.id}`;
-            return !shownIds.includes(itemId);
-        });
-        
-        // 如果过滤后数据不足，清空已显示列表重新开始（避免无法获取新内容）
-        const dataToUse = filtered.length >= 25 ? filtered : allData;
-        
-        // 处理数据，补充完整信息，并过滤掉没有评语的项目
-        const processedMovies = [];
-        const processedIds = new Set(); // 用于去重
-        
-        for (const m of dataToUse) {
-            const itemId = `${m.media_type || 'movie'}_${m.id}`;
-            // 再次检查去重（防止处理过程中出现重复）
-            if (processedIds.has(itemId)) {
-                continue;
-            }
-            
-            const item = processMovieItem(m);
-            if (item) {
-                processedIds.add(itemId);
-                processedMovies.push(item);
-            }
-        }
-        
-        // 分类：近两年和经典影视
-        const recentAndClassic = processedMovies.filter(m => m.isRecent || m.isClassic);
-        const others = processedMovies.filter(m => !m.isRecent && !m.isClassic);
-        
-        // 确保近两年和经典影视超过一半（至少13个，总共25个）
-        const targetCount = 13; // 超过一半
-        const totalCount = 25; // 至少25部
-        let finalList = [];
-        
-        if (recentAndClassic.length >= targetCount) {
-            // 如果近两年和经典影视足够，取13个，其他取12个
-            const shuffledRecent = recentAndClassic.sort(() => Math.random() - 0.5);
-            const shuffledOthers = others.sort(() => Math.random() - 0.5);
-            finalList = [...shuffledRecent.slice(0, targetCount), ...shuffledOthers.slice(0, totalCount - targetCount)];
-        } else {
-            // 如果不够，全部使用近两年和经典影视，不足的用其他补充
-            const shuffledRecent = recentAndClassic.sort(() => Math.random() - 0.5);
-            const shuffledOthers = others.sort(() => Math.random() - 0.5);
-            finalList = [...shuffledRecent, ...shuffledOthers.slice(0, Math.max(0, totalCount - shuffledRecent.length))];
-        }
-        
-        // 最终打乱顺序，确保至少25部，并再次去重
-        finalList.sort(() => Math.random() - 0.5);
-        
-        // 最终去重检查（防止重复显示）
-        const uniqueMovies = [];
-        const seenIds = new Set();
-        for (const movie of finalList) {
-            const itemId = `${movie.type}_${movie.id}`;
-            // 检查是否已处理过，以及是否在已显示列表中
-            if (!seenIds.has(itemId) && !shownIds.includes(itemId)) {
-                seenIds.add(itemId);
-                uniqueMovies.push(movie);
-                if (uniqueMovies.length >= totalCount) break;
-            }
-        }
-        
-        // 如果去重后数量不足25，尝试从processedMovies中补充（但排除已显示的）
-        if (uniqueMovies.length < totalCount) {
-            for (const movie of processedMovies) {
-                if (uniqueMovies.length >= totalCount) break;
-                const itemId = `${movie.type}_${movie.id}`;
-                if (!seenIds.has(itemId) && !shownIds.includes(itemId)) {
-                    seenIds.add(itemId);
-                    uniqueMovies.push(movie);
-                }
-            }
-        }
-        
-        allMovies = uniqueMovies.slice(0, totalCount);
-        
-        if (allMovies.length > 0) {
-            renderItems(allMovies);
-            translateAllPlots();
-            saveCache(allMovies);
-            // 更新已显示列表，确保不会重复显示
-            const newShownIds = allMovies.map(m => `${m.type}_${m.id}`);
-            saveShownItems([...shownIds, ...newShownIds]);
-            return;
-        }
-    } catch (error) {
-        console.warn('从后端API获取电影数据失败，尝试其他方式:', error);
-    }
-    
-    // 如果后端API失败，尝试旧的获取方式（作为fallback）
+    // 获取各类型内容
     const [recentMovies, classicMovies, otherMovies, recentTV, classicTV, otherTV] = await Promise.all([
         fetchMovies(true),
         fetchMovies(false),
@@ -516,37 +390,71 @@ async function loadContent(forceRefresh = false) {
     const filterShown = (items, type) => items.filter(i => !shownIds.includes(`${type}_${i.id}`));
     
     const processed = [];
+    const currentYear = new Date().getFullYear();
+    const targetCount = 25; // 目标25部
+    const recentTarget = 8; // 近两年至少8部
+    const classicTarget = 8; // 经典至少8部
     
-    // 处理近两年（至少5部）
+    // 处理近两年（至少8部，确保超过一半）
     const recentItems = [...filterShown(recentMovies, 'movie'), ...filterShown(recentTV, 'tv')];
     for (const item of recentItems) {
-        if (processed.filter(p => p.year >= new Date().getFullYear() - 2).length >= 5) break;
+        if (processed.filter(p => p.year >= currentYear - 2).length >= recentTarget && processed.length >= targetCount) break;
         const result = item.title ? await processMovie(item) : await processTVShow(item);
-        if (result) processed.push(result);
+        if (result) {
+            processed.push(result);
+            // 如果已经达到目标数量，继续处理以确保有足够的近两年和经典影视
+            if (processed.length >= targetCount && 
+                processed.filter(p => p.year >= currentYear - 2).length >= recentTarget &&
+                processed.filter(p => p.year < currentYear - 5).length >= classicTarget) {
+                break;
+            }
+        }
         await new Promise(r => setTimeout(r, 100));
     }
     
-    // 处理经典（至少5部）
+    // 处理经典（至少8部，确保超过一半）
     const classicItems = [...filterShown(classicMovies, 'movie'), ...filterShown(classicTV, 'tv')];
     for (const item of classicItems) {
-        if (processed.filter(p => p.year < new Date().getFullYear() - 5).length >= 5) break;
+        if (processed.filter(p => p.year < currentYear - 5).length >= classicTarget && processed.length >= targetCount) break;
+        const result = item.title ? await processMovie(item) : await processTVShow(item);
+        if (result) {
+            processed.push(result);
+            // 如果已经达到目标数量，继续处理以确保有足够的近两年和经典影视
+            if (processed.length >= targetCount && 
+                processed.filter(p => p.year >= currentYear - 2).length >= recentTarget &&
+                processed.filter(p => p.year < currentYear - 5).length >= classicTarget) {
+                break;
+            }
+        }
+        await new Promise(r => setTimeout(r, 100));
+    }
+    
+    // 其它（补充到25部）
+    const otherItems = [...filterShown(otherMovies, 'movie'), ...filterShown(otherTV, 'tv')];
+    for (const item of otherItems) {
+        if (processed.length >= targetCount) break;
         const result = item.title ? await processMovie(item) : await processTVShow(item);
         if (result) processed.push(result);
         await new Promise(r => setTimeout(r, 100));
     }
     
-    // 其它（最多10部）
-    const otherItems = [...filterShown(otherMovies, 'movie'), ...filterShown(otherTV, 'tv')];
-    for (const item of otherItems) {
-        if (processed.length >= 20) break;
-        const result = item.title ? await processMovie(item) : await processTVShow(item);
-        if (result) processed.push(result);
-        await new Promise(r => setTimeout(r, 100));
+    // 如果还是不够25部，继续从所有类型中补充
+    if (processed.length < targetCount) {
+        const allItems = [...recentItems, ...classicItems, ...otherItems];
+        for (const item of allItems) {
+            if (processed.length >= targetCount) break;
+            const itemId = `${item.title ? 'movie' : 'tv'}_${item.id}`;
+            if (!shownIds.includes(itemId) && !processed.find(p => `${p.type}_${p.id}` === itemId)) {
+                const result = item.title ? await processMovie(item) : await processTVShow(item);
+                if (result) processed.push(result);
+                await new Promise(r => setTimeout(r, 100));
+            }
+        }
     }
     
     // 打乱顺序
     processed.sort(() => Math.random() - 0.5);
-    allMovies = processed;
+    allMovies = processed.slice(0, targetCount);
     
     saveCache(allMovies);
     saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);

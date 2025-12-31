@@ -1,0 +1,80 @@
+"""
+TMDB API代理 - 直接代理TMDB API请求
+"""
+import os
+import requests
+from lib.utils import json_response
+
+TMDB_API_KEY = os.environ.get('TMDB_API_KEY', '')
+
+def handler(request):
+    if isinstance(request, dict):
+        method = request.get('httpMethod', 'GET')
+    else:
+        method = getattr(request, 'method', None) or getattr(request, 'httpMethod', None) or 'GET'
+    method = method.upper() if method else 'GET'
+    
+    if method == 'OPTIONS':
+        return json_response({}, 200)
+    
+    if method != 'GET':
+        return json_response({'success': False, 'message': 'Method not allowed'}, 405)
+    
+    if not TMDB_API_KEY:
+        return json_response({'success': False, 'message': 'TMDB API Key未配置'}, 500)
+    
+    try:
+        # 获取路径参数
+        if isinstance(request, dict):
+            path = request.get('path', '') or request.get('pathParameters', {}).get('proxy', '')
+            endpoint_path = request.get('endpoint_path', '')
+        else:
+            path = getattr(request, 'path', '') or ''
+            endpoint_path = getattr(request, 'endpoint_path', '') or ''
+        
+        # 优先使用endpoint_path（Flask路由传递的）
+        if endpoint_path:
+            endpoint = endpoint_path
+        elif path.startswith('/api/movies/tmdb'):
+            endpoint = path.replace('/api/movies/tmdb', '')
+        elif path.startswith('/movies/tmdb'):
+            endpoint = path.replace('/movies/tmdb', '')
+        else:
+            # 从查询参数获取
+            if isinstance(request, dict):
+                query_params = request.get('queryStringParameters') or {}
+            else:
+                query_params = dict(request.args) if hasattr(request, 'args') and request.args else {}
+            endpoint = query_params.get('endpoint', '/discover/movie')
+        
+        # 获取查询参数
+        if isinstance(request, dict):
+            query_params = request.get('queryStringParameters') or {}
+        else:
+            if hasattr(request, 'args') and request.args:
+                query_params = dict(request.args)
+            elif hasattr(request, 'query_string'):
+                from urllib.parse import parse_qs, urlparse
+                parsed = urlparse(request.url if hasattr(request, 'url') else '')
+                query_params = {k: v[0] if len(v) == 1 else v for k, v in parse_qs(parsed.query).items()}
+            else:
+                query_params = {}
+        
+        # 构建TMDB API URL
+        url = f'https://api.themoviedb.org/3{endpoint}'
+        
+        # 添加API密钥和查询参数
+        params = {'api_key': TMDB_API_KEY}
+        params.update(query_params)
+        
+        # 调用TMDB API
+        response = requests.get(url, params=params, timeout=10)
+        
+        if response.ok:
+            return json_response(response.json())
+        else:
+            return json_response({'success': False, 'message': f'TMDB API错误: {response.status_code}'}, response.status_code)
+            
+    except Exception as e:
+        return json_response({'success': False, 'message': str(e)}, 500)
+

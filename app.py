@@ -209,6 +209,28 @@ def movies_list():
         return '', 200
     return adapt_handler(movies_handler)()
 
+@app.route('/api/movies/tmdb/<path:endpoint>', methods=['GET', 'OPTIONS'])
+def movies_tmdb(endpoint):
+    """TMDB API代理"""
+    if request.method == 'OPTIONS':
+        return '', 200
+    from api.movies.tmdb import handler as tmdb_handler
+    # 将endpoint添加到request中
+    class RequestWrapper:
+        def __init__(self, original_request, endpoint_path):
+            self.__dict__ = original_request.__dict__.copy()
+            self.endpoint_path = f'/{endpoint}'
+            # 复制所有属性
+            for attr in dir(original_request):
+                if not attr.startswith('_'):
+                    try:
+                        setattr(self, attr, getattr(original_request, attr))
+                    except:
+                        pass
+    
+    wrapped_request = RequestWrapper(request, endpoint)
+    return adapt_handler(tmdb_handler)(wrapped_request)
+
 @app.route('/api/dictionary/history', methods=['GET', 'POST', 'OPTIONS'])
 def dictionary_history():
     if request.method == 'OPTIONS':

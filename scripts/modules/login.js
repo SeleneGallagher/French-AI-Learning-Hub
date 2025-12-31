@@ -14,6 +14,14 @@ export function initLogin() {
     // 初始化桌面端登录/注册表单
     initAuthForms();
     
+    // 绑定管理模块入口按钮（在登录页面）
+    const adminAccessBtn = document.getElementById('admin-access-btn');
+    if (adminAccessBtn) {
+        adminAccessBtn.addEventListener('click', () => {
+            window.location.hash = '#admin';
+        });
+    }
+    
     // 更新用户状态显示
     updateUserStatus();
 }
