@@ -69,7 +69,21 @@ async function fetchFromTMDB(endpoint) {
     try {
         const response = await fetch(`/api/movies/tmdb${endpoint}`);
         if (response.ok) {
-            return await response.json();
+            const data = await response.json();
+            // Flask的adapt_handler会处理json_response，直接返回数据
+            // 如果返回的是包装格式（Vercel格式），需要解析body
+            if (data && typeof data === 'object' && 'body' in data) {
+                try {
+                    return JSON.parse(data.body);
+                } catch {
+                    return data.body;
+                }
+            }
+            // 直接返回数据
+            return data;
+        } else {
+            const errorText = await response.text();
+            console.warn('TMDB API调用失败:', response.status, errorText.substring(0, 100));
         }
     } catch (error) {
         console.warn('TMDB API调用失败:', error);
@@ -379,6 +393,8 @@ function processMovieItem(m) {
 async function loadContent(forceRefresh = false) {
     const shownIds = getShownItems();
     
+    console.log('开始加载影视内容，已显示数量:', shownIds.length);
+    
     // 获取各类型内容
     const [recentMovies, classicMovies, otherMovies, recentTV, classicTV, otherTV] = await Promise.all([
         fetchMovies(true),
@@ -388,6 +404,15 @@ async function loadContent(forceRefresh = false) {
         fetchTVShows(false),
         fetchOtherTV()
     ]);
+    
+    console.log('获取到的数据:', {
+        recentMovies: recentMovies.length,
+        classicMovies: classicMovies.length,
+        otherMovies: otherMovies.length,
+        recentTV: recentTV.length,
+        classicTV: classicTV.length,
+        otherTV: otherTV.length
+    });
     
     const filterShown = (items, type) => items.filter(i => !shownIds.includes(`${type}_${i.id}`));
     
@@ -476,6 +501,18 @@ async function loadContent(forceRefresh = false) {
     // 打乱顺序
     processed.sort(() => Math.random() - 0.5);
     allMovies = processed.slice(0, targetCount);
+    
+    console.log('最终处理结果:', {
+        total: allMovies.length,
+        movies: allMovies.filter(m => m.type === 'movie').length,
+        tv: allMovies.filter(m => m.type === 'tv').length,
+        recent: allMovies.filter(m => m.year >= currentYear - 2).length,
+        classic: allMovies.filter(m => m.year < currentYear - 5).length
+    });
+    
+    if (allMovies.length === 0) {
+        throw new Error('未获取到符合条件的影视数据（需要8.0+评分且有评语）');
+    }
     
     saveCache(allMovies);
     saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
