@@ -6,7 +6,7 @@ import { showError, hideLoading, showLoading } from '../utils/helpers.js';
 import { translateText } from '../services/translationService.js';
 import { APIService } from '../services/apiService.js';
 
-const MIN_RATING = 8.0;
+const MIN_RATING = 7.0;  // 降低到7.0，与服务器缓存保持一致
 const STORAGE_KEY = 'movie_watchlist';
 const SHOWN_KEY = 'shown_movies_session';
 const CACHE_KEY = 'movies_cache';

@@ -98,7 +98,7 @@ def handler(request):
                 'language': 'fr-FR',
                 'with_original_language': 'fr',
                 'sort_by': sort_by,
-                'vote_average.gte': 8.0,
+                'vote_average.gte': 7.0,
                 'vote_count.gte': 30,  # 确保有足够的评分数量，保证质量
                 'page': page
             }
@@ -113,7 +113,7 @@ def handler(request):
                 'language': 'fr-FR',
                 'with_original_language': 'fr',
                 'sort_by': sort_by,
-                'vote_average.gte': 8.0,
+                'vote_average.gte': 7.0,
                 'vote_count.gte': 20,  # 剧集评分数量要求稍低
                 'page': page
             }

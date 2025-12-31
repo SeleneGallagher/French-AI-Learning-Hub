@@ -147,7 +147,7 @@ def fetch_news():
     return all_news[:20]  # 返回最新20条
 
 def fetch_movies():
-    """从TMDB API获取热门法语电影和剧集（8.0+评分，有tagline，至少25部）
+    """从TMDB API获取热门法语电影和剧集（7.0+评分，有tagline，至少100部）
     
     需要设置环境变量 TMDB_API_KEY
     
@@ -160,16 +160,16 @@ def fetch_movies():
         print("警告: 未设置 TMDB_API_KEY，跳过电影数据更新")
         return []
     
-    MIN_RATING = 8.0
-    TARGET_COUNT = 30  # 目标30部，确保有足够的数据
+    MIN_RATING = 7.0  # 降低到7.0，确保有足够的数据
+    TARGET_COUNT = 120  # 目标120部，确保至少100部有效数据，可以刷4次
     current_year = datetime.now().year
     
     all_movies = []
     
     try:
-        # 获取近两年电影（多页）
+        # 获取近两年电影（多页，最多10页）
         print("获取近两年电影...")
-        for page in range(1, 6):  # 最多5页
+        for page in range(1, 11):  # 增加到10页
             url = f'https://api.themoviedb.org/3/discover/movie'
             params = {
                 'api_key': api_key,
@@ -184,14 +184,15 @@ def fetch_movies():
             response = requests.get(url, params=params, timeout=10)
             response.raise_for_status()
             data = response.json()
-            all_movies.extend(data.get('results', []))
-            if len(data.get('results', [])) < 20:
+            results = data.get('results', [])
+            all_movies.extend(results)
+            if len(results) < 20:
                 break
             time.sleep(0.3)  # 避免API限流
         
-        # 获取经典电影（多页）
+        # 获取经典电影（多页，最多10页）
         print("获取经典电影...")
-        for page in range(1, 6):
+        for page in range(1, 11):
             url = f'https://api.themoviedb.org/3/discover/movie'
             params = {
                 'api_key': api_key,
@@ -206,14 +207,15 @@ def fetch_movies():
             response = requests.get(url, params=params, timeout=10)
             response.raise_for_status()
             data = response.json()
-            all_movies.extend(data.get('results', []))
-            if len(data.get('results', [])) < 20:
+            results = data.get('results', [])
+            all_movies.extend(results)
+            if len(results) < 20:
                 break
             time.sleep(0.3)
         
-        # 获取近两年剧集（多页）
+        # 获取近两年剧集（多页，最多10页）
         print("获取近两年剧集...")
-        for page in range(1, 6):
+        for page in range(1, 11):
             url = f'https://api.themoviedb.org/3/discover/tv'
             params = {
                 'api_key': api_key,
@@ -228,14 +230,15 @@ def fetch_movies():
             response = requests.get(url, params=params, timeout=10)
             response.raise_for_status()
             data = response.json()
-            all_movies.extend(data.get('results', []))
-            if len(data.get('results', [])) < 20:
+            results = data.get('results', [])
+            all_movies.extend(results)
+            if len(results) < 20:
                 break
             time.sleep(0.3)
         
-        # 获取经典剧集（多页）
+        # 获取经典剧集（多页，最多10页）
         print("获取经典剧集...")
-        for page in range(1, 6):
+        for page in range(1, 11):
             url = f'https://api.themoviedb.org/3/discover/tv'
             params = {
                 'api_key': api_key,
@@ -250,8 +253,9 @@ def fetch_movies():
             response = requests.get(url, params=params, timeout=10)
             response.raise_for_status()
             data = response.json()
-            all_movies.extend(data.get('results', []))
-            if len(data.get('results', [])) < 20:
+            results = data.get('results', [])
+            all_movies.extend(results)
+            if len(results) < 20:
                 break
             time.sleep(0.3)
         
@@ -268,7 +272,7 @@ def fetch_movies():
         
         # 获取详细信息（包括tagline、导演等）
         processed_movies = []
-        for idx, movie in enumerate(unique_movies[:100]):  # 限制最多100个，避免API限流
+        for idx, movie in enumerate(unique_movies[:200]):  # 增加到200个，确保有足够的数据
             try:
                 item_type = movie.get('media_type', 'movie')
                 movie_id = movie['id']
@@ -336,7 +340,7 @@ def fetch_movies():
                 print(f"处理电影 {movie.get('id')} 失败: {e}")
                 continue
         
-        print(f"成功处理 {len(processed_movies)} 部影视（8.0+评分且有tagline）")
+        print(f"成功处理 {len(processed_movies)} 部影视（7.0+评分且有tagline）")
         return processed_movies
         
     except Exception as e:
