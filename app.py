@@ -218,7 +218,11 @@ def movies_tmdb(endpoint):
     
     # 构建完整的endpoint路径
     # endpoint已经包含了路径部分（如 discover/movie），查询参数在request.args中
-    full_endpoint = f'/{endpoint}'
+    # 确保endpoint以/开头
+    if not endpoint.startswith('/'):
+        full_endpoint = f'/{endpoint}'
+    else:
+        full_endpoint = endpoint
     
     # 如果有查询参数，添加到endpoint中
     if request.query_string:

@@ -35,10 +35,17 @@ def handler(request):
         # 优先使用endpoint_path（Flask路由传递的）
         if endpoint_path:
             endpoint = endpoint_path
+            # 确保endpoint以/开头
+            if not endpoint.startswith('/'):
+                endpoint = '/' + endpoint
         elif path.startswith('/api/movies/tmdb'):
             endpoint = path.replace('/api/movies/tmdb', '')
+            if not endpoint.startswith('/'):
+                endpoint = '/' + endpoint
         elif path.startswith('/movies/tmdb'):
             endpoint = path.replace('/movies/tmdb', '')
+            if not endpoint.startswith('/'):
+                endpoint = '/' + endpoint
         else:
             # 从查询参数获取
             if isinstance(request, dict):
@@ -46,6 +53,8 @@ def handler(request):
             else:
                 query_params = dict(request.args) if hasattr(request, 'args') and request.args else {}
             endpoint = query_params.get('endpoint', '/discover/movie')
+            if not endpoint.startswith('/'):
+                endpoint = '/' + endpoint
         
         # 从endpoint中提取查询参数（如果endpoint包含?）
         query_params = {}
@@ -91,7 +100,13 @@ def handler(request):
     except Exception as e:
         import traceback
         error_details = traceback.format_exc()
-        print(f"TMDB API代理错误: {str(e)}")
+        error_msg = str(e)
+        print(f"TMDB API代理错误: {error_msg}")
         print(error_details)
-        return json_response({'success': False, 'message': f'服务器错误: {str(e)}'}, 500)
+        # 返回更详细的错误信息（仅包含错误类型和消息，不包含完整traceback）
+        return json_response({
+            'success': False, 
+            'message': f'服务器错误: {error_msg}',
+            'type': type(e).__name__
+        }, 500)
 
