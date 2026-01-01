@@ -122,9 +122,10 @@ class VercelRequest:
 def adapt_handler(handler_func):
     """适配Vercel handler为Flask路由"""
     def wrapper():
-        vercel_request = VercelRequest(request)
         try:
+            vercel_request = VercelRequest(request)
             result = handler_func(vercel_request)
+            
             # 如果返回的是字典，转换为Flask响应
             if isinstance(result, dict) and 'statusCode' in result:
                 # 安全地解析JSON body
@@ -132,8 +133,9 @@ def adapt_handler(handler_func):
                 if isinstance(body, str):
                     try:
                         body_data = json.loads(body)
-                    except:
-                        body_data = {'message': body}
+                    except json.JSONDecodeError:
+                        # 如果body不是有效的JSON，直接使用字符串
+                        body_data = {'message': body, 'raw_body': body}
                 else:
                     body_data = body
                 status_code = result.get('statusCode', 200)
@@ -152,7 +154,8 @@ def adapt_handler(handler_func):
             error_response = {
                 'success': False,
                 'message': f'JSON解析错误: {str(e)}',
-                'type': 'json_error'
+                'type': 'json_error',
+                'error_code': 'JSON_DECODE_ERROR'
             }
             response = jsonify(error_response)
             response.headers['Access-Control-Allow-Origin'] = '*'
@@ -161,13 +164,16 @@ def adapt_handler(handler_func):
         except Exception as e:
             import traceback
             error_msg = str(e)
-            traceback.print_exc()
+            error_type = type(e).__name__
+            error_traceback = traceback.format_exc()
+            print(f"ERROR in adapt_handler: {error_type}: {error_msg}")
+            print(error_traceback)
             # 确保错误信息是JSON格式，而不是HTML
             error_response = {
                 'success': False,
                 'message': error_msg,
-                'type': type(e).__name__,
-                'error': error_msg
+                'type': error_type,
+                'error_code': 'ADAPTER_EXCEPTION'
             }
             response = jsonify(error_response)
             response.headers['Access-Control-Allow-Origin'] = '*'
