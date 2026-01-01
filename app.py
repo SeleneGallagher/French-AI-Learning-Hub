@@ -255,7 +255,34 @@ def movies_tmdb(endpoint):
         # 创建VercelRequest包装器
         vercel_request = VercelRequest(request)
         wrapped_request = RequestWrapper(vercel_request, full_endpoint)
-        return adapt_handler(tmdb_handler)(wrapped_request)
+        
+        # 直接调用handler并处理响应
+        result = tmdb_handler(wrapped_request)
+        
+        # 处理handler返回的响应
+        if isinstance(result, dict) and 'statusCode' in result:
+            # Vercel格式响应
+            body = result.get('body', '{}')
+            if isinstance(body, str):
+                try:
+                    body_data = json.loads(body)
+                except json.JSONDecodeError:
+                    body_data = {'message': body, 'raw_body': body}
+            else:
+                body_data = body
+            status_code = result.get('statusCode', 200)
+            response = jsonify(body_data)
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
+            return response, status_code
+        elif isinstance(result, dict):
+            # 直接字典响应
+            response = jsonify(result)
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            return response, 200
+        else:
+            return result
     except Exception as e:
         import traceback
         error_msg = str(e)
