@@ -158,6 +158,60 @@ CREATE TABLE IF NOT EXISTS movie_watchlist (
 CREATE INDEX IF NOT EXISTS idx_movie_watchlist_user ON movie_watchlist(user_id, added_at DESC);
 
 -- ============================================
+-- 11. 电影缓存表 (cached_movies)
+-- ============================================
+-- 用途：存储从TMDB获取并处理好的电影/剧集数据，供前端快速加载
+CREATE TABLE IF NOT EXISTS cached_movies (
+    id SERIAL PRIMARY KEY,
+    tmdb_id INTEGER NOT NULL,  -- TMDB电影/剧集ID
+    type VARCHAR(10) NOT NULL,  -- 'movie' 或 'tv'
+    
+    -- 基本信息
+    title TEXT NOT NULL,
+    original_title TEXT,
+    year INTEGER,
+    release_date DATE,
+    
+    -- 评分和统计
+    rating NUMERIC(3,1) NOT NULL,
+    vote_count INTEGER DEFAULT 0,
+    
+    -- 媒体信息
+    poster_path TEXT,
+    backdrop_path TEXT,
+    plot TEXT,  -- 完整简介
+    plot_truncated TEXT,  -- 截断后的简介（150字符）
+    tagline TEXT,
+    tagline_truncated TEXT,  -- 截断后的评语（60字符）
+    
+    -- 详细信息
+    director TEXT,  -- 导演/创作者
+    genres JSONB,  -- 类型数组 ['动作', '剧情']
+    runtime INTEGER,  -- 电影时长（分钟）
+    seasons INTEGER,  -- 剧集季数
+    episodes INTEGER,  -- 剧集集数
+    media_info TEXT,  -- 格式化信息 "120分钟" 或 "3季 · 24集"
+    
+    -- 分类标记
+    is_recent BOOLEAN DEFAULT FALSE,  -- 近两年（year >= current_year - 2）
+    is_classic BOOLEAN DEFAULT FALSE,  -- 经典（year < current_year - 5）
+    
+    -- 元数据
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    
+    CONSTRAINT unique_tmdb_movie UNIQUE(tmdb_id, type)
+);
+
+-- 索引：优化查询性能
+CREATE INDEX IF NOT EXISTS idx_cached_movies_type ON cached_movies(type);
+CREATE INDEX IF NOT EXISTS idx_cached_movies_rating ON cached_movies(rating DESC);
+CREATE INDEX IF NOT EXISTS idx_cached_movies_recent ON cached_movies(is_recent) WHERE is_recent = TRUE;
+CREATE INDEX IF NOT EXISTS idx_cached_movies_classic ON cached_movies(is_classic) WHERE is_classic = TRUE;
+CREATE INDEX IF NOT EXISTS idx_cached_movies_year ON cached_movies(year DESC);
+CREATE INDEX IF NOT EXISTS idx_cached_movies_updated ON cached_movies(updated_at DESC);
+
+-- ============================================
 -- 10. 初始化数据
 -- ============================================
 -- 插入永久使用的注册码（用于测试和生产环境）

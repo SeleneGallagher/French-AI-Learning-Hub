@@ -6,6 +6,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 import json
+import threading
+import time
 from dotenv import load_dotenv
 
 # 加载环境变量
@@ -215,6 +217,37 @@ def movies_list():
         return '', 200
     return adapt_handler(movies_handler)()
 
+@app.route('/api/movies/cached', methods=['GET', 'OPTIONS'])
+def movies_cached():
+    """电影缓存API"""
+    if request.method == 'OPTIONS':
+        return '', 200
+    from api.movies.cached import handler as cached_handler
+    result = cached_handler(request)
+    
+    # 处理响应
+    if isinstance(result, dict) and 'statusCode' in result:
+        body = result.get('body', '{}')
+        if isinstance(body, str):
+            try:
+                body_data = json.loads(body)
+            except:
+                body_data = {'message': body}
+        else:
+            body_data = body
+        status_code = result.get('statusCode', 200)
+        response = jsonify(body_data)
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+        response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
+        return response, status_code
+    elif isinstance(result, dict):
+        response = jsonify(result)
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        return response, 200
+    else:
+        return result
+
 @app.route('/api/movies/tmdb/<path:endpoint>', methods=['GET', 'OPTIONS'])
 def movies_tmdb(endpoint):
     """TMDB API代理"""
@@ -385,6 +418,64 @@ def serve_static(path):
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({'status': 'ok', 'message': 'French AI Learning Hub Backend'})
+
+# 后台任务：定期更新电影缓存
+def background_cache_update():
+    """后台任务：每6小时更新一次电影缓存"""
+    def update_task():
+        while True:
+            try:
+                # 等待6小时（21600秒）
+                time.sleep(6 * 60 * 60)
+                
+                print("=" * 50)
+                print("开始定时更新电影缓存...")
+                print("=" * 50)
+                
+                # 导入并运行更新脚本
+                import sys
+                import os
+                script_path = os.path.join(os.path.dirname(__file__), 'scripts', 'server', 'update_movies_cache.py')
+                
+                if os.path.exists(script_path):
+                    # 直接执行脚本的update_cache函数
+                    sys.path.insert(0, os.path.dirname(__file__))
+                    from scripts.server.update_movies_cache import update_cache
+                    update_cache()
+                else:
+                    print(f"警告: 缓存更新脚本不存在: {script_path}")
+                    
+            except Exception as e:
+                import traceback
+                print(f"后台缓存更新任务出错: {e}")
+                traceback.print_exc()
+                # 即使出错也继续运行，等待下一个周期
+    
+    # 启动后台线程
+    cache_thread = threading.Thread(target=update_task, daemon=True)
+    cache_thread.start()
+    print("✓ 电影缓存后台更新任务已启动（每6小时更新一次）")
+    
+    # 启动时立即执行一次（延迟30秒，等待服务器完全启动）
+    def initial_update():
+        time.sleep(30)
+        try:
+            import sys
+            import os
+            script_path = os.path.join(os.path.dirname(__file__), 'scripts', 'server', 'update_movies_cache.py')
+            if os.path.exists(script_path):
+                sys.path.insert(0, os.path.dirname(__file__))
+                from scripts.server.update_movies_cache import update_cache
+                print("执行初始缓存更新...")
+                update_cache()
+        except Exception as e:
+            print(f"初始缓存更新失败: {e}")
+    
+    initial_thread = threading.Thread(target=initial_update, daemon=True)
+    initial_thread.start()
+
+# 启动后台任务
+background_cache_update()
 
 if __name__ == '__main__':
     # 开发环境：从环境变量读取端口，如果没有则使用8000（本地开发）

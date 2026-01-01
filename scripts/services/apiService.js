@@ -128,6 +128,16 @@ export class APIService {
         return this.request(url);
     }
     
+    static async getCachedMovies(page = 1, limit = 25, category = 'all', type = 'mixed', minRating = 7.0) {
+        const params = [];
+        params.push(`page=${page}`);
+        params.push(`limit=${limit}`);
+        params.push(`category=${category}`);
+        params.push(`type=${type}`);
+        params.push(`min_rating=${minRating}`);
+        return this.request(`/movies/cached?${params.join('&')}`);
+    }
+    
     // ========== 词典相关 ==========
     static async getDictHistory(limit = 50) {
         return this.request(`/dictionary/history?limit=${limit}`);

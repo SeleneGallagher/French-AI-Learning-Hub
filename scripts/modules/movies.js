@@ -423,11 +423,140 @@ function processMovieItem(m) {
     };
 }
 
+// 从缓存API加载内容（优先使用）
+async function loadFromCache(forceRefresh = false) {
+    const shownIds = getShownItems();
+    const targetCount = 25;
+    const recentTarget = 8;
+    const classicTarget = 8;
+    
+    try {
+        // 尝试从缓存API获取数据
+        const [recentData, classicData, otherData] = await Promise.all([
+            APIService.getCachedMovies(1, 50, 'recent', 'mixed', MIN_RATING),
+            APIService.getCachedMovies(1, 50, 'classic', 'mixed', MIN_RATING),
+            APIService.getCachedMovies(1, 50, 'all', 'mixed', MIN_RATING)
+        ]);
+        
+        if (!recentData || !recentData.success || !recentData.data) {
+            return null;
+        }
+        
+        // 合并所有数据
+        const allCached = [];
+        if (recentData.data.movies) allCached.push(...recentData.data.movies);
+        if (classicData && classicData.success && classicData.data && classicData.data.movies) {
+            allCached.push(...classicData.data.movies);
+        }
+        if (otherData && otherData.success && otherData.data && otherData.data.movies) {
+            allCached.push(...otherData.data.movies);
+        }
+        
+        // 去重
+        const seenIds = new Set();
+        const uniqueCached = [];
+        for (const item of allCached) {
+            const itemId = `${item.type}_${item.id}`;
+            if (!seenIds.has(itemId) && !shownIds.includes(itemId)) {
+                seenIds.add(itemId);
+                uniqueCached.push(item);
+            }
+        }
+        
+        if (uniqueCached.length < targetCount) {
+            console.log(`缓存数据不足 (${uniqueCached.length} < ${targetCount})，将使用直接API调用`);
+            return null;
+        }
+        
+        // 筛选和排序
+        const currentYear = new Date().getFullYear();
+        const recent = uniqueCached.filter(m => m.isRecent || (m.year && m.year >= currentYear - 2));
+        const classic = uniqueCached.filter(m => m.isClassic || (m.year && m.year < currentYear - 5));
+        const other = uniqueCached.filter(m => {
+            if (m.isRecent || m.isClassic) return false;
+            if (!m.year) return true;
+            return m.year >= currentYear - 5 && m.year < currentYear - 2;
+        });
+        
+        // 确保有足够的近两年和经典
+        const selected = [];
+        const selectedIds = new Set();
+        
+        // 优先选择近两年
+        for (const item of recent) {
+            if (selected.length >= targetCount) break;
+            if (!selectedIds.has(`${item.type}_${item.id}`)) {
+                selected.push(item);
+                selectedIds.add(`${item.type}_${item.id}`);
+            }
+        }
+        
+        // 补充经典
+        for (const item of classic) {
+            if (selected.length >= targetCount) break;
+            if (!selectedIds.has(`${item.type}_${item.id}`)) {
+                selected.push(item);
+                selectedIds.add(`${item.type}_${item.id}`);
+            }
+        }
+        
+        // 补充其他
+        for (const item of other) {
+            if (selected.length >= targetCount) break;
+            if (!selectedIds.has(`${item.type}_${item.id}`)) {
+                selected.push(item);
+                selectedIds.add(`${item.type}_${item.id}`);
+            }
+        }
+        
+        // 如果数量不足，从所有数据中随机补充
+        if (selected.length < targetCount) {
+            const remaining = uniqueCached.filter(m => !selectedIds.has(`${m.type}_${m.id}`));
+            remaining.sort(() => Math.random() - 0.5);
+            selected.push(...remaining.slice(0, targetCount - selected.length));
+        }
+        
+        // 打乱顺序
+        selected.sort(() => Math.random() - 0.5);
+        const final = selected.slice(0, targetCount);
+        
+        console.log('从缓存加载成功:', {
+            total: final.length,
+            movies: final.filter(m => m.type === 'movie').length,
+            tv: final.filter(m => m.type === 'tv').length,
+            recent: final.filter(m => m.isRecent || (m.year && m.year >= currentYear - 2)).length,
+            classic: final.filter(m => m.isClassic || (m.year && m.year < currentYear - 5)).length
+        });
+        
+        return final;
+        
+    } catch (error) {
+        console.warn('从缓存API加载失败，将使用直接API调用:', error);
+        return null;
+    }
+}
+
 // 加载内容 - 参考旧版经典写法，确保至少25部
 async function loadContent(forceRefresh = false) {
     const shownIds = getShownItems();
     
     console.log('开始加载影视内容，已显示数量:', shownIds.length);
+    
+    // 优先尝试从缓存加载
+    if (!forceRefresh) {
+        const cachedData = await loadFromCache(forceRefresh);
+        if (cachedData && cachedData.length >= 25) {
+            allMovies = cachedData;
+            saveCache(allMovies);
+            saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
+            renderItems(allMovies);
+            translateAllPlots();
+            return;
+        }
+    }
+    
+    // 如果缓存不可用，使用直接API调用（fallback）
+    console.log('使用直接API调用获取数据...');
     
     // 获取各类型内容（多页获取，每类获取20页，确保有足够数据）
     const MAX_PAGES = 20; // 增加到20页
