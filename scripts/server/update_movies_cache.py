@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspa
 from lib.utils import get_db_connection
 
 # 配置参数
-MIN_RATING = 7.0
+MIN_RATING = 7.5
 TARGET_COUNT = 200
 MAX_PAGES_PER_CATEGORY = 20
 CACHE_EXPIRY_DAYS = 7

@@ -38,7 +38,7 @@ def handler(request):
         limit = min(int(query_params.get('limit', 25)), 100)  # 最多100条
         movie_type = query_params.get('type', 'mixed')  # movie, tv, mixed
         category = query_params.get('category', 'all')  # recent, classic, all
-        min_rating = float(query_params.get('min_rating', 7.0))
+        min_rating = float(query_params.get('min_rating', 7.5))
         
         # 构建SQL查询
         where_conditions = ['rating >= %s']

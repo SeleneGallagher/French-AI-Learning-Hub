@@ -6,7 +6,7 @@ import { showError, hideLoading, showLoading } from '../utils/helpers.js';
 import { translateText } from '../services/translationService.js';
 import { APIService } from '../services/apiService.js';
 
-const MIN_RATING = 7.0;  // 降低到7.0，与服务器缓存保持一致
+const MIN_RATING = 7.5;  // 最低评分7.5，与服务器缓存保持一致
 const STORAGE_KEY = 'movie_watchlist';
 const SHOWN_KEY = 'shown_movies_session';
 const CACHE_KEY = 'movies_cache';
@@ -763,7 +763,7 @@ async function loadContent(forceRefresh = false) {
         if (uniqueItems.length === 0) {
             throw new Error('未获取到影视数据，请检查网络连接或稍后重试');
         } else if (processed.length === 0) {
-            throw new Error('获取到的影视数据不符合条件（需要7.0+评分且有评语）');
+            throw new Error('获取到的影视数据不符合条件（需要7.5+评分且有评语）');
         } else {
             // 如果处理了一些但被过滤掉了，至少显示处理过的
     allMovies = processed;
