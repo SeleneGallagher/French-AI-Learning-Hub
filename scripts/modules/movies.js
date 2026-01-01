@@ -832,16 +832,16 @@ async function translateAllPlots() {
         const batch = itemsToTranslate.slice(i, i + batchSize);
         await Promise.all(
             batch.map(async (item) => {
-                try {
-                    item.translatedPlot = await translateText(item.fullPlot, 'fr', 'zh');
-                    if (item.translatedPlot.length > 160) {
-                        item.translatedPlot = item.translatedPlot.substring(0, 120) + '...';
-                    }
-                    updateItemTranslation(item);
-                } catch (e) {
-                    item.translatedPlot = '翻译暂不可用';
-                    updateItemTranslation(item);
+            try {
+                item.translatedPlot = await translateText(item.fullPlot, 'fr', 'zh');
+                if (item.translatedPlot.length > 160) {
+                    item.translatedPlot = item.translatedPlot.substring(0, 120) + '...';
                 }
+                updateItemTranslation(item);
+            } catch (e) {
+                item.translatedPlot = '翻译暂不可用';
+                    updateItemTranslation(item);
+            }
             })
         );
         // 批次之间延迟（减少到100ms）
@@ -1021,21 +1021,21 @@ function renderCard(item, container, isWatchlist) {
         </div>
         <div class="flex-1 p-4 md:p-4 flex flex-col justify-between min-w-0 md:h-[200px]">
             <div class="flex-1 overflow-hidden">
-                <div class="flex items-start justify-between mb-2">
+                <div class="flex items-start justify-between mb-1">
                     <h3 class="text-base md:text-base font-bold text-gray-800 line-clamp-2 flex-1 pr-2">${item.title}</h3>
                     <span class="px-2 py-0.5 text-white text-xs rounded flex-shrink-0" style="background-color: var(--accent-600);">⭐${parseFloat(item.rating).toFixed(1)}</span>
                 </div>
-                ${item.originalTitle && item.originalTitle !== item.title ? `<div class="text-xs text-gray-500 mb-1.5 italic">${item.originalTitle}</div>` : ''}
-                <div class="text-xs text-gray-600 mb-2">
+                ${item.originalTitle && item.originalTitle !== item.title ? `<div class="text-xs text-gray-500 mb-0.5 italic">${item.originalTitle}</div>` : ''}
+                <div class="text-xs text-gray-600 mb-1">
                     ${item.year || '未知'}${item.director ? ' · ' + item.director : ''}${item.mediaInfo ? ' · ' + item.mediaInfo : ''}
                 </div>
-                <div class="flex flex-wrap gap-1 mb-2">
+                <div class="flex flex-wrap gap-1 mb-1">
                     ${(item.genres || []).map(genre => `<span class="px-1.5 py-0.5 bg-blue-100 text-blue-700 text-xs rounded">${genre}</span>`).join('')}
                 </div>
-                <div class="text-xs text-gray-600 mb-2 relative plot-container md:line-clamp-4 line-clamp-6" style="line-height: 1.35;" data-original="${item.plot}" data-translated="${item.translatedPlot || ''}">
+                <div class="text-xs text-gray-600 mb-1 relative plot-container md:line-clamp-4 line-clamp-6" style="line-height: 1.35;" data-original="${item.plot}" data-translated="${item.translatedPlot || ''}">
                     ${item.plot}
                 </div>
-                ${item.tagline ? `<p class="text-xs text-gray-500 italic line-clamp-2 mb-2">"${item.tagline}"</p>` : ''}
+                ${item.tagline ? `<p class="text-xs text-gray-500 italic line-clamp-2 mb-1">"${item.tagline}"</p>` : ''}
             </div>
             <div class="flex justify-end mt-2 pt-2 border-t border-gray-100">
                 <span class="text-xs text-gray-400 italic">点击卡片查看详情</span>
