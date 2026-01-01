@@ -218,43 +218,62 @@ def movies_list():
 @app.route('/api/movies/tmdb/<path:endpoint>', methods=['GET', 'OPTIONS'])
 def movies_tmdb(endpoint):
     """TMDB API代理"""
-    if request.method == 'OPTIONS':
-        return '', 200
-    from api.movies.tmdb import handler as tmdb_handler
-    
-    # 构建完整的endpoint路径
-    # endpoint已经包含了路径部分（如 discover/movie），查询参数在request.args中
-    # 确保endpoint以/开头
-    if not endpoint.startswith('/'):
-        full_endpoint = f'/{endpoint}'
-    else:
-        full_endpoint = endpoint
-    
-    # 如果有查询参数，添加到endpoint中
-    if request.query_string:
-        query_string = request.query_string.decode('utf-8')
-        full_endpoint += f'?{query_string}'
-    
-    # 将endpoint添加到request中
-    class RequestWrapper:
-        def __init__(self, original_request, endpoint_path):
-            # 复制所有属性
-            for attr in dir(original_request):
-                if not attr.startswith('_'):
-                    try:
-                        setattr(self, attr, getattr(original_request, attr))
-                    except:
-                        pass
-            # 确保endpoint_path被设置
-            self.endpoint_path = endpoint_path
-            # 确保args被正确传递（用于queryStringParameters）
-            if hasattr(original_request, 'args'):
-                self.args = original_request.args
-    
-    # 创建VercelRequest包装器
-    vercel_request = VercelRequest(request)
-    wrapped_request = RequestWrapper(vercel_request, full_endpoint)
-    return adapt_handler(tmdb_handler)(wrapped_request)
+    try:
+        if request.method == 'OPTIONS':
+            return '', 200
+        from api.movies.tmdb import handler as tmdb_handler
+        
+        # 构建完整的endpoint路径
+        # endpoint已经包含了路径部分（如 discover/movie），查询参数在request.args中
+        # 确保endpoint以/开头
+        if not endpoint.startswith('/'):
+            full_endpoint = f'/{endpoint}'
+        else:
+            full_endpoint = endpoint
+        
+        # 如果有查询参数，添加到endpoint中
+        if request.query_string:
+            query_string = request.query_string.decode('utf-8')
+            full_endpoint += f'?{query_string}'
+        
+        # 将endpoint添加到request中
+        class RequestWrapper:
+            def __init__(self, original_request, endpoint_path):
+                # 复制所有属性
+                for attr in dir(original_request):
+                    if not attr.startswith('_'):
+                        try:
+                            setattr(self, attr, getattr(original_request, attr))
+                        except:
+                            pass
+                # 确保endpoint_path被设置
+                self.endpoint_path = endpoint_path
+                # 确保args被正确传递（用于queryStringParameters）
+                if hasattr(original_request, 'args'):
+                    self.args = original_request.args
+        
+        # 创建VercelRequest包装器
+        vercel_request = VercelRequest(request)
+        wrapped_request = RequestWrapper(vercel_request, full_endpoint)
+        return adapt_handler(tmdb_handler)(wrapped_request)
+    except Exception as e:
+        import traceback
+        error_msg = str(e)
+        error_type = type(e).__name__
+        error_traceback = traceback.format_exc()
+        print(f"ERROR in movies_tmdb route: {error_type}: {error_msg}")
+        print(error_traceback)
+        # 返回JSON格式的错误响应
+        error_response = {
+            'success': False,
+            'message': f'路由处理错误: {error_msg}',
+            'type': error_type,
+            'error_code': 'ROUTE_EXCEPTION'
+        }
+        response = jsonify(error_response)
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        response.headers['Content-Type'] = 'application/json'
+        return response, 500
 
 @app.route('/api/dictionary/history', methods=['GET', 'POST', 'OPTIONS'])
 def dictionary_history():
