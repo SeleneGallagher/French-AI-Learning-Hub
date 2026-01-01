@@ -249,14 +249,14 @@ async function getMoviesFromLocal() {
                     const year = m.release_date ? new Date(m.release_date).getFullYear() : '';
                     const currentYear = new Date().getFullYear();
                     return {
-                        id: m.id,
-                        title: m.title,
+                    id: m.id,
+                    title: m.title,
                         originalTitle: m.original_title || '',
                         year: year,
                         rating: m.vote_average || 0,
-                        poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : '',
+                    poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : '',
                         plot: (m.overview || '').length > 150 ? (m.overview || '').substring(0, 150) + '...' : (m.overview || ''),
-                        fullPlot: m.overview || '',
+                    fullPlot: m.overview || '',
                         type: m.type || m.media_type || 'movie',
                         translatedPlot: '',
                         genres: m.genres || [],
@@ -292,7 +292,7 @@ export async function initMovies() {
         // 优先尝试从本地JSON文件读取（服务器预更新）
         const localMovies = await getMoviesFromLocal();
         if (localMovies && localMovies.length > 0) {
-            // 从缓存中随机选择25部，确保近两年和经典影视超过一半
+            // 从缓存中随机选择30部，确保近两年和经典影视超过一半
             const currentYear = new Date().getFullYear();
             const recentAndClassic = localMovies.filter(m => m.isRecent || m.isClassic);
             const others = localMovies.filter(m => !m.isRecent && !m.isClassic);
@@ -301,9 +301,9 @@ export async function initMovies() {
             recentAndClassic.sort(() => Math.random() - 0.5);
             others.sort(() => Math.random() - 0.5);
             
-            // 确保近两年和经典影视超过一半（至少13个）
-            const targetCount = 25;
-            const recentTarget = 13;
+            // 确保近两年和经典影视超过一半（至少16个）
+            const targetCount = 30;
+            const recentTarget = 16;
             let finalList = [];
             
             if (recentAndClassic.length >= recentTarget) {
@@ -403,14 +403,14 @@ function processMovieItem(m) {
     const isClassic = year < currentYear - 5;
     
     return {
-        id: m.id,
-        title: m.title || m.name,
+                id: m.id,
+                title: m.title || m.name,
         originalTitle: m.original_title || m.original_name || '',
         year: year,
-        rating: m.vote_average || 0,
-        poster: m.poster_path || '',
+                rating: m.vote_average || 0,
+                poster: m.poster_path || '',
         plot: plot,
-        fullPlot: m.overview || '',
+                fullPlot: m.overview || '',
         type: itemType,
         translatedPlot: '',
         genres: genres.length > 0 ? genres : (itemType === 'movie' ? ['法语电影'] : ['法语剧集']),
@@ -426,7 +426,7 @@ function processMovieItem(m) {
 // 从缓存API加载内容（优先使用）
 async function loadFromCache(forceRefresh = false) {
     const shownIds = getShownItems();
-    const targetCount = 25;
+    const targetCount = 30;
     const recentTarget = 8;
     const classicTarget = 8;
     
@@ -542,7 +542,7 @@ async function loadFromCache(forceRefresh = false) {
     }
 }
 
-// 加载内容 - 参考旧版经典写法，确保至少25部
+// 加载内容 - 参考旧版经典写法，确保至少30部
 async function loadContent(forceRefresh = false) {
     const shownIds = getShownItems();
     
@@ -553,14 +553,14 @@ async function loadContent(forceRefresh = false) {
     if (!forceRefresh) {
         try {
             const cachedData = await loadFromCache(forceRefresh);
-            if (cachedData && cachedData.length >= 25) {
+            if (cachedData && cachedData.length >= 30) {
                 // 缓存数据充足，直接使用
                 allMovies = cachedData;
                 saveCache(allMovies);
                 saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
-                renderItems(allMovies);
-                translateAllPlots();
-                return;
+            renderItems(allMovies);
+            translateAllPlots();
+            return;
             } else if (cachedData && cachedData.length > 0) {
                 // 缓存数据不足，先显示已有数据，然后继续获取更多并上传到缓存
                 allMovies = cachedData;
@@ -569,13 +569,13 @@ async function loadContent(forceRefresh = false) {
                 renderItems(allMovies);
                 translateAllPlots();
                 
-                console.log(`缓存数据不足25条（仅${cachedData.length}条），正在获取更多数据并上传到缓存...`);
+                console.log(`缓存数据不足30条（仅${cachedData.length}条），正在获取更多数据并上传到缓存...`);
                 // 继续执行下面的代码，获取更多数据
             } else {
                 // 缓存为空，继续获取数据
                 console.log('缓存为空，正在获取数据...');
-            }
-        } catch (error) {
+        }
+    } catch (error) {
             console.error('缓存API调用失败:', error);
             // 如果缓存API失败，尝试直接获取数据
             console.log('缓存API失败，尝试直接获取数据...');
@@ -637,9 +637,9 @@ async function loadContent(forceRefresh = false) {
     
     const processed = [];
     const currentYear = new Date().getFullYear();
-    const targetCount = 25; // 目标25部
-    const recentTarget = 8; // 近两年至少8部
-    const classicTarget = 8; // 经典至少8部
+    const targetCount = 30; // 目标30部
+    const recentTarget = 10; // 近两年至少10部
+    const classicTarget = 10; // 经典至少10部
     const MAX_PROCESS = 200; // 最多处理200个，确保有足够数据
     
     // 去重
@@ -679,7 +679,7 @@ async function loadContent(forceRefresh = false) {
         if (processed.filter(p => p.year >= currentYear - 2).length >= recentTarget && processed.length >= targetCount) break;
         
         try {
-            const result = item.title ? await processMovie(item) : await processTVShow(item);
+        const result = item.title ? await processMovie(item) : await processTVShow(item);
             if (result) {
                 processed.push(result);
                 processedCount++;
@@ -713,7 +713,7 @@ async function loadContent(forceRefresh = false) {
         if (processed.find(p => `${p.type}_${p.id}` === itemId)) continue;
         
         try {
-            const result = item.title ? await processMovie(item) : await processTVShow(item);
+        const result = item.title ? await processMovie(item) : await processTVShow(item);
             if (result) {
                 processed.push(result);
                 processedCount++;
@@ -731,7 +731,7 @@ async function loadContent(forceRefresh = false) {
         await new Promise(r => setTimeout(r, 100));
     }
     
-    // 其它（补充到25部）
+    // 其它（补充到30部）
     const otherItems = uniqueItems.filter(i => {
         const year = i.release_date || i.first_air_date;
         if (!year) return true;
@@ -747,7 +747,7 @@ async function loadContent(forceRefresh = false) {
         if (processed.find(p => `${p.type}_${p.id}` === itemId)) continue;
         
         try {
-            const result = item.title ? await processMovie(item) : await processTVShow(item);
+        const result = item.title ? await processMovie(item) : await processTVShow(item);
             if (result) {
                 processed.push(result);
                 processedCount++;
@@ -780,7 +780,7 @@ async function loadContent(forceRefresh = false) {
             throw new Error('获取到的影视数据不符合条件（需要7.0+评分且有评语）');
         } else {
             // 如果处理了一些但被过滤掉了，至少显示处理过的
-            allMovies = processed;
+    allMovies = processed;
         }
     }
     
