@@ -6,7 +6,7 @@
   "license": "Unknown",
   "copyright": "",
   "version": "1.0.0",
-  "generated_at": "2026-01-01T19:11:37.273739Z",
+  "generated_at": "2026-01-01T22:44:48.875801Z",
   "words": [
     {
       "word": "ainsi",
@@ -21,13 +21,35 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "这样，如此: Pourquoi me regardez-vous ainsi?您为什么这样看着我?"
+          "text": "这样，如此",
+          "examples": [
+            {
+              "fr": "Pourquoi me regardez-vous ainsi?",
+              "zh": "您为什么这样看着我?"
+            }
+          ]
         },
         {
-          "text": "由此，因此: Je prends l'express, ainsi j'arriverai plus tôt. 我乘快车，这样我就会更早到达。"
+          "text": "由此，因此",
+          "examples": [
+            {
+              "fr": "Je prends l'express, ainsi j'arriverai plus tôt",
+              "zh": "我乘快车，这样我就会更早到达"
+            }
+          ]
         },
         {
-          "text": "【ainsi que】 loc. conj.如同，正如;和，以及: Il est venu ainsi que je le lui avais demandé.正如我要求他的那样他来了。 Je t'invite, ainsi que ta sœur. 我邀请你以及你姐姐。"
+          "text": "【ainsi que】 loc. conj.如同，正如;和，以及",
+          "examples": [
+            {
+              "fr": "Il est venu ainsi que je le lui avais demandé",
+              "zh": "正如我要求他的那样他来了"
+            },
+            {
+              "fr": "Je t'invite, ainsi que ta sœur",
+              "zh": "我邀请你以及你姐姐"
+            }
+          ]
         }
       ]
     },
@@ -44,7 +66,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "因为: Ferme la fenêtre, car il y a un courant d'air.把窗关上，因为有股穿堂风。"
+          "text": "因为",
+          "examples": [
+            {
+              "fr": "Ferme la fenêtre, car il y a un courant d'air",
+              "zh": "把窗关上，因为有股穿堂风"
+            }
+          ]
         }
       ]
     },
@@ -61,7 +89,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "可是，然而: Il fait très froid, cependant nous essaierons de partir en voiture pour Lille.天气很冷，然而我们尽量开车去里尔。"
+          "text": "可是，然而",
+          "examples": [
+            {
+              "fr": "Il fait très froid, cependant nous essaierons de partir en voiture pour Lille",
+              "zh": "天气很冷，然而我们尽量开车去里尔"
+            }
+          ]
         }
       ]
     },
@@ -78,16 +112,48 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "好像，如同: S'il travaillait comme son père, il réussirait.假如他像他父亲那样工作，他会成功的。 Faites comme vous voulez.您愿意干什么就干什么。 Ça se casse comme si c'était du verre. 这像玻璃一样易碎。"
+          "text": "好像，如同",
+          "examples": [
+            {
+              "fr": "S'il travaillait comme son père, il réussirait",
+              "zh": "假如他像他父亲那样工作，他会成功的"
+            },
+            {
+              "fr": "Faites comme vous voulez",
+              "zh": "您愿意干什么就干什么"
+            },
+            {
+              "fr": "Ça se casse comme si c'était du verre",
+              "zh": "这像玻璃一样易碎"
+            }
+          ]
         },
         {
-          "text": "例如: Les animaux comme le chien, le chat vivent facilement avec les hommes.一些动物，如狗、猫，容易和人生活在一起。"
+          "text": "例如",
+          "examples": [
+            {
+              "fr": "Les animaux comme le chien, le chat vivent facilement avec les hommes",
+              "zh": "一些动物，如狗、猫，容易和人生活在一起"
+            }
+          ]
         },
         {
-          "text": "由于，因为: Comme la voiture est en panne, nous prendrons le bus.由于汽车出故障，我们将乘坐公交车。"
+          "text": "由于，因为",
+          "examples": [
+            {
+              "fr": "Comme la voiture est en panne, nous prendrons le bus",
+              "zh": "由于汽车出故障，我们将乘坐公交车"
+            }
+          ]
         },
         {
-          "text": "正当，在…同时: Il s'est mis à neiger juste comme nous partions.就在我们动身时，天下起了雪。"
+          "text": "正当，在…同时",
+          "examples": [
+            {
+              "fr": "Il s'est mis à neiger juste comme nous partions",
+              "zh": "就在我们动身时，天下起了雪"
+            }
+          ]
         }
       ]
     },
@@ -104,10 +170,30 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "因此，所以: Le voilà， donc nous pouvons commencer.他来了，因此我们可以开始了。 Il était ici il y a un instant; il n'est donc pas loin. 他刚才还在这里，因此他不会走远。"
+          "text": "因此，所以",
+          "examples": [
+            {
+              "fr": "Le voilà， donc nous pouvons commencer",
+              "zh": "他来了，因此我们可以开始了"
+            },
+            {
+              "fr": "Il était ici il y a un instant; il n'est donc pas loin",
+              "zh": "他刚才还在这里，因此他不会走远"
+            }
+          ]
         },
         {
-          "text": "那么，到底[用于疑问句和命令句，donc 读[dō]]: Où vas-tu donc? 那么你去哪呢? Tais-toi donc!你住嘴!"
+          "text": "那么，到底[用于疑问句和命令句，donc 读[dō]]",
+          "examples": [
+            {
+              "fr": "Où vas-tu donc?",
+              "zh": "那么你去哪呢?"
+            },
+            {
+              "fr": "Tais-toi donc!",
+              "zh": "你住嘴!"
+            }
+          ]
         }
       ]
     },
@@ -124,13 +210,31 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "和，及，与: J'ai mangé de la viande et des légumes.我吃了肉和蔬菜。"
+          "text": "和，及，与",
+          "examples": [
+            {
+              "fr": "J'ai mangé de la viande et des légumes",
+              "zh": "我吃了肉和蔬菜"
+            }
+          ]
         },
         {
-          "text": "而且，并且: Catherine est jolie et sympathique.卡特琳长得漂亮并且讨人喜 欢。"
+          "text": "而且，并且",
+          "examples": [
+            {
+              "fr": "Catherine est jolie et sympathique",
+              "zh": "卡特琳长得漂亮并且讨人喜 欢"
+            }
+          ]
         },
         {
-          "text": "但是，然而: J'ai fait beaucoup d'efforts, et je n'ai pas réussi.我作了很大努 力，但是我没有成功。"
+          "text": "但是，然而",
+          "examples": [
+            {
+              "fr": "J'ai fait beaucoup d'efforts, et je n'ai pas réussi",
+              "zh": "我作了很大努 力，但是我没有成功"
+            }
+          ]
         }
       ]
     },
@@ -147,7 +251,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "当…时: Lorsque tu seras à Paris, téléphone-moi.当你来巴黎时，给我打个电话。"
+          "text": "当…时",
+          "examples": [
+            {
+              "fr": "Lorsque tu seras à Paris, téléphone-moi",
+              "zh": "当你来巴黎时，给我打个电话"
+            }
+          ]
         }
       ]
     },
@@ -164,7 +274,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "但是，可是: Elle est belle, mais elle n'a pas de charme.她美丽，但她没有魅力。"
+          "text": "但是，可是",
+          "examples": [
+            {
+              "fr": "Elle est belle, mais elle n'a pas de charme",
+              "zh": "她美丽，但她没有魅力"
+            }
+          ]
         }
       ]
     },
@@ -181,11 +297,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "【ne... ni...ni...】 既不…也不: Je n'ai ni faim ni soif.我既不饿也不渴。 Il ne veut ni thé ni café.他既不想喝茶也不想喝咖啡。"
-        },
-        {
-          "text": ": Êtes-vous libre? — Ni aujourd'hui ni demain.您有空吗?—今天没空，明天也没空。",
-          "category": "在无动词的省略句中，不和 ne 连用"
+          "text": "【ne... ni...ni...】 既不…也不",
+          "examples": [
+            {
+              "fr": "Je n'ai ni faim ni soif",
+              "zh": "我既不饿也不渴"
+            },
+            {
+              "fr": "Il ne veut ni thé ni café",
+              "zh": "他既不想喝茶也不想喝咖啡"
+            }
+          ]
         }
       ]
     },
@@ -202,7 +324,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "不过，然而: Il faut partir, or nous ne sommes pas prêts.应该动身了，然而我们却没有准备好。"
+          "text": "不过，然而",
+          "examples": [
+            {
+              "fr": "Il faut partir, or nous ne sommes pas prêts",
+              "zh": "应该动身了，然而我们却没有准备好"
+            }
+          ]
         }
       ]
     },
@@ -219,13 +347,31 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "或者，还是: Que préfères-tu, la pêche ou la poire? 你更喜欢什么?桃子还是生梨?"
+          "text": "或者，还是",
+          "examples": [
+            {
+              "fr": "Que préfères-tu, la pêche ou la poire?",
+              "zh": "你更喜欢什么?桃子还是生梨?"
+            }
+          ]
         },
         {
-          "text": "或者，还是[ou bien 加强语气]: Je partirai demain ou bien après-demain.我明天或者后天动身。"
+          "text": "或者，还是[ou bien 加强语气]",
+          "examples": [
+            {
+              "fr": "Je partirai demain ou bien après-demain",
+              "zh": "我明天或者后天动身"
+            }
+          ]
         },
         {
-          "text": "否则，要不然[在命令句后引出后果从句]: Ne fais pas trop de bruit, ou tu seras grondé.声音不要太响，否则你要受到训斥。"
+          "text": "否则，要不然[在命令句后引出后果从句]",
+          "examples": [
+            {
+              "fr": "Ne fais pas trop de bruit, ou tu seras grondé",
+              "zh": "声音不要太响，否则你要受到训斥"
+            }
+          ]
         }
       ]
     },
@@ -242,7 +388,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "加，加上: Sept plus deux font neuf.七加二等于九。"
+          "text": "加，加上",
+          "examples": [
+            {
+              "fr": "Sept plus deux font neuf",
+              "zh": "七加二等于九"
+            }
+          ]
         }
       ]
     },
@@ -259,7 +411,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "既然: Puisque tu n'as pas le temps, je vais chercher du pain.既然你没空，我买面包。"
+          "text": "既然",
+          "examples": [
+            {
+              "fr": "Puisque tu n'as pas le temps, je vais chercher du pain",
+              "zh": "既然你没空，我买面包"
+            }
+          ]
         }
       ]
     },
@@ -276,13 +434,31 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "什么时候: Quand viendra-t-il?他什么时候来?"
+          "text": "什么时候",
+          "examples": [
+            {
+              "fr": "Quand viendra-t-il?",
+              "zh": "他什么时候来?"
+            }
+          ]
         },
         {
-          "text": "当…时: Je partirai quand mon vélo sera réparé.当我的自行车修好后我再动身。"
+          "text": "当…时",
+          "examples": [
+            {
+              "fr": "Je partirai quand mon vélo sera réparé",
+              "zh": "当我的自行车修好后我再动身"
+            }
+          ]
         },
         {
-          "text": "【quand même】loc.conj.仍然，还是: Marc a fait de la peine à sa mère, mais elle l'embrasse quand même.马克使他母亲感到不快，但他母亲还是拥吻了他。"
+          "text": "【quand même】loc.conj.仍然，还是",
+          "examples": [
+            {
+              "fr": "Marc a fait de la peine à sa mère, mais elle l'embrasse quand même",
+              "zh": "马克使他母亲感到不快，但他母亲还是拥吻了他"
+            }
+          ]
         }
       ]
     },
@@ -299,13 +475,35 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "什么，什么东西，什么事: Que ferons-nous cet après-midi? 今天下午我们将做什么?"
+          "text": "什么，什么东西，什么事",
+          "examples": [
+            {
+              "fr": "Que ferons-nous cet après-midi?",
+              "zh": "今天下午我们将做什么?"
+            }
+          ]
         },
         {
-          "text": "〔用作直接宾语，可以指人或物]: Voici le livre qu'il nous a apporté.这就是他给我们带来的书。 Les enfants que tu vois jouer dans la cour sont ceux du voisin.你看到在院子里玩的这些孩子是邻居家的孩子。"
+          "text": "〔用作直接宾语，可以指人或物]",
+          "examples": [
+            {
+              "fr": "Voici le livre qu'il nous a apporté",
+              "zh": "这就是他给我们带来的书"
+            },
+            {
+              "fr": "Les enfants que tu vois jouer dans la cour sont ceux du voisin",
+              "zh": "你看到在院子里玩的这些孩子是邻居家的孩子"
+            }
+          ]
         },
         {
-          "text": "[引出从句]: Il dit qu'il viendra.他说他将来。"
+          "text": "[引出从句]",
+          "examples": [
+            {
+              "fr": "Il dit qu'il viendra",
+              "zh": "他说他将来"
+            }
+          ]
         }
       ]
     },
@@ -322,7 +520,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "尽管，虽然[引出让步从句，谓语用虚拟式]: Quoiqu'il soit malade, André assistera à la réunion.安德烈虽然生病，仍将参加会议。"
+          "text": "尽管，虽然[引出让步从句，谓语用虚拟式]",
+          "examples": [
+            {
+              "fr": "Quoiqu'il soit malade, André assistera à la réunion",
+              "zh": "安德烈虽然生病，仍将参加会议"
+            }
+          ]
         }
       ]
     },
@@ -339,7 +543,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "否则: Arrête de tricher, sinon je ne joue plus. 别再作弊，否则我就不玩了。"
+          "text": "否则",
+          "examples": [
+            {
+              "fr": "Arrête de tricher, sinon je ne joue plus",
+              "zh": "别再作弊，否则我就不玩了"
+            }
+          ]
         }
       ]
     },
@@ -356,13 +566,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "如果，假如:"
+          "text": "如果，假如"
         },
         {
-          "text": "Je vais chez Paul, s'il n'est pas là， je déposerai le paquet chez la concierge.我去保尔家，如果他不在，我就把包裹放在门房。"
+          "text": "◇Je vais chez Paul, s'il n'est pas là， je déposerai le paquet chez la concierge.我去保尔家，如果他不在，我就把包裹放在门房。"
         },
         {
-          "text": "S'il faisait beau demain, nous ferions une excursion en montagne. 假如明天天气晴朗，我们就去山里远足。"
+          "text": "◇S'il faisait beau demain, nous ferions une excursion en montagne. 假如明天天气晴朗，我们就去山里远足。"
         }
       ]
     },
@@ -379,10 +589,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "即，也就是: Il a payé le prix indiqué， soit 10€.他支付了标出的价格，即10欧元。"
+          "text": "即，也就是",
+          "examples": [
+            {
+              "fr": "Il a payé le prix indiqué， soit 10€",
+              "zh": "他支付了标出的价格，即10欧元"
+            }
+          ]
         },
         {
-          "text": ".. soit 或…或…: Nous irons en vacances soit à la campagne, soit à la mer.我们度假或去乡间，或去海边。"
+          "text": ".. soit 或…或…",
+          "examples": [
+            {
+              "fr": "Nous irons en vacances soit à la campagne, soit à la mer",
+              "zh": "我们度假或去乡间，或去海边"
+            }
+          ]
         }
       ]
     }

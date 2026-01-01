@@ -427,8 +427,8 @@ function processMovieItem(m) {
 async function loadFromCache(forceRefresh = false) {
     const shownIds = getShownItems();
     const targetCount = 30;
-    const recentTarget = 8;
-    const classicTarget = 8;
+    const recentTarget = 10;
+    const classicTarget = 10;
     
     try {
         // 尝试从缓存API获取数据
@@ -605,8 +605,8 @@ async function loadContent(forceRefresh = false) {
                     // 如果某页没有数据，提前结束
                     break;
                 }
-                // 每页之间延迟，避免API限流
-                await new Promise(r => setTimeout(r, 300));
+                // 每页之间延迟，避免API限流（减少到150ms）
+                await new Promise(r => setTimeout(r, 150));
             } catch (error) {
                 console.warn(`${type} 第${page}页获取失败:`, error);
                 // 继续获取下一页，不中断
@@ -665,7 +665,7 @@ async function loadContent(forceRefresh = false) {
     
     console.log(`去重后共有 ${uniqueItems.length} 个唯一项目，开始处理详细信息...`);
     
-    // 处理近两年（至少8部，确保超过一半）
+    // 处理近两年（至少10部，确保超过一半）
     const recentItems = uniqueItems.filter(i => {
         const year = i.release_date || i.first_air_date;
         if (!year) return false;
@@ -673,62 +673,59 @@ async function loadContent(forceRefresh = false) {
         return itemYear >= currentYear - 2;
     });
     
-    let processedCount = 0;
-    for (const item of recentItems) {
-        if (processedCount >= MAX_PROCESS) break;
-        if (processed.filter(p => p.year >= currentYear - 2).length >= recentTarget && processed.length >= targetCount) break;
-        
-        try {
-        const result = item.title ? await processMovie(item) : await processTVShow(item);
-            if (result) {
-                processed.push(result);
-                processedCount++;
-                // 如果已经达到目标数量，继续处理以确保有足够的近两年和经典影视
-                if (processed.length >= targetCount && 
-                    processed.filter(p => p.year >= currentYear - 2).length >= recentTarget &&
-                    processed.filter(p => p.year < currentYear - 5).length >= classicTarget) {
-                    break;
-                }
+    // 批量并行处理（限制并发数为5，避免API限流）
+    const processBatch = async (items, batchSize = 5) => {
+        const results = [];
+        for (let i = 0; i < items.length; i += batchSize) {
+            const batch = items.slice(i, i + batchSize);
+            const batchResults = await Promise.all(
+                batch.map(async (item) => {
+                    try {
+                        return item.title ? await processMovie(item) : await processTVShow(item);
+                    } catch (error) {
+                        console.warn('处理项目失败:', item.id, error);
+                        return null;
+                    }
+                })
+            );
+            results.push(...batchResults.filter(Boolean));
+            
+            // 检查是否已达到目标
+            const currentRecent = results.filter(p => p && p.year >= currentYear - 2).length;
+            const currentClassic = results.filter(p => p && p.year < currentYear - 5).length;
+            if (results.length >= targetCount && currentRecent >= recentTarget && currentClassic >= classicTarget) {
+                break;
             }
-        } catch (error) {
-            console.warn('处理项目失败:', item.id, error);
-            // 继续处理下一个，不中断
+            
+            // 批次之间短暂延迟（减少到50ms）
+            if (i + batchSize < items.length) {
+                await new Promise(r => setTimeout(r, 50));
+            }
         }
-        await new Promise(r => setTimeout(r, 100));
-    }
+        return results;
+    };
     
-    // 处理经典（至少8部，确保超过一半）
+    let processedCount = 0;
+    const recentProcessed = await processBatch(recentItems.slice(0, Math.min(MAX_PROCESS, recentItems.length)));
+    processed.push(...recentProcessed);
+    processedCount += recentProcessed.length;
+    
+    // 处理经典（至少10部，确保超过一半）
     const classicItems = uniqueItems.filter(i => {
         const year = i.release_date || i.first_air_date;
         if (!year) return false;
         const itemYear = new Date(year).getFullYear();
         return itemYear < currentYear - 5;
+    }).filter(i => {
+        // 去重：排除已处理的
+        const itemId = `${i.title ? 'movie' : 'tv'}_${i.id}`;
+        return !processed.find(p => `${p.type}_${p.id}` === itemId);
     });
     
-    for (const item of classicItems) {
-        if (processedCount >= MAX_PROCESS) break;
-        if (processed.filter(p => p.year < currentYear - 5).length >= classicTarget && processed.length >= targetCount) break;
-        
-        const itemId = `${item.title ? 'movie' : 'tv'}_${item.id}`;
-        if (processed.find(p => `${p.type}_${p.id}` === itemId)) continue;
-        
-        try {
-        const result = item.title ? await processMovie(item) : await processTVShow(item);
-            if (result) {
-                processed.push(result);
-                processedCount++;
-                // 如果已经达到目标数量，继续处理以确保有足够的近两年和经典影视
-                if (processed.length >= targetCount && 
-                    processed.filter(p => p.year >= currentYear - 2).length >= recentTarget &&
-                    processed.filter(p => p.year < currentYear - 5).length >= classicTarget) {
-                    break;
-                }
-            }
-        } catch (error) {
-            console.warn('处理项目失败:', item.id, error);
-            // 继续处理下一个，不中断
-        }
-        await new Promise(r => setTimeout(r, 100));
+    if (processed.filter(p => p.year < currentYear - 5).length < classicTarget && processed.length < targetCount) {
+        const classicProcessed = await processBatch(classicItems.slice(0, Math.min(MAX_PROCESS - processedCount, classicItems.length)));
+        processed.push(...classicProcessed);
+        processedCount += classicProcessed.length;
     }
     
     // 其它（补充到30部）
@@ -737,26 +734,15 @@ async function loadContent(forceRefresh = false) {
         if (!year) return true;
         const itemYear = new Date(year).getFullYear();
         return itemYear >= currentYear - 5 && itemYear < currentYear - 2;
+    }).filter(i => {
+        // 去重：排除已处理的
+        const itemId = `${i.title ? 'movie' : 'tv'}_${i.id}`;
+        return !processed.find(p => `${p.type}_${p.id}` === itemId);
     });
     
-    for (const item of otherItems) {
-        if (processedCount >= MAX_PROCESS) break;
-        if (processed.length >= targetCount) break;
-        
-        const itemId = `${item.title ? 'movie' : 'tv'}_${item.id}`;
-        if (processed.find(p => `${p.type}_${p.id}` === itemId)) continue;
-        
-        try {
-        const result = item.title ? await processMovie(item) : await processTVShow(item);
-            if (result) {
-                processed.push(result);
-                processedCount++;
-            }
-        } catch (error) {
-            console.warn('处理项目失败:', item.id, error);
-            // 继续处理下一个，不中断
-        }
-        await new Promise(r => setTimeout(r, 100));
+    if (processed.length < targetCount) {
+        const otherProcessed = await processBatch(otherItems.slice(0, Math.min(MAX_PROCESS - processedCount, targetCount - processed.length)));
+        processed.push(...otherProcessed);
     }
     
     // 打乱顺序
@@ -835,22 +821,32 @@ async function uploadToCache(movies) {
     }
 }
 
-// 串行翻译所有简介（避免API限流）
+// 批量并行翻译所有简介（优化性能）
 async function translateAllPlots() {
-    for (const item of allMovies) {
-        if (item.fullPlot && !item.translatedPlot) {
-            try {
-                item.translatedPlot = await translateText(item.fullPlot, 'fr', 'zh');
-                if (item.translatedPlot.length > 160) {
-                    item.translatedPlot = item.translatedPlot.substring(0, 120) + '...';
+    const itemsToTranslate = allMovies.filter(item => item.fullPlot && !item.translatedPlot);
+    if (itemsToTranslate.length === 0) return;
+    
+    // 批量翻译（每批3个，避免API限流）
+    const batchSize = 3;
+    for (let i = 0; i < itemsToTranslate.length; i += batchSize) {
+        const batch = itemsToTranslate.slice(i, i + batchSize);
+        await Promise.all(
+            batch.map(async (item) => {
+                try {
+                    item.translatedPlot = await translateText(item.fullPlot, 'fr', 'zh');
+                    if (item.translatedPlot.length > 160) {
+                        item.translatedPlot = item.translatedPlot.substring(0, 120) + '...';
+                    }
+                    updateItemTranslation(item);
+                } catch (e) {
+                    item.translatedPlot = '翻译暂不可用';
+                    updateItemTranslation(item);
                 }
-                updateItemTranslation(item);
-                // 间隔150ms，避免API限流
-                await new Promise(r => setTimeout(r, 150));
-            } catch (e) {
-                // 翻译失败时设置默认值
-                item.translatedPlot = '翻译暂不可用';
-            }
+            })
+        );
+        // 批次之间延迟（减少到100ms）
+        if (i + batchSize < itemsToTranslate.length) {
+            await new Promise(r => setTimeout(r, 100));
         }
     }
 }

@@ -59,13 +59,13 @@ def parse_pos_from_line(line):
     
     # 跳过以数字开头的短语（如 "> 4 【à peine loc. adv.】"）
     if re.match(r'>\s*\d+\s*【', line):
-        return None, None, None, None
+        return None, None, None, None, None
     
     # 更灵活的正则，匹配词和词性
     # 匹配：> 词 词性. [额外信息] 或 > 词 词性1. ; 词性2.
     match = re.match(r'>\s*([^<>]+?)\s+([a-zéп]+\.(?:\s+[a-zéп]+\.?)*(?:\s*;\s*[a-zéп]+\.(?:\s+[a-zéп]+\.?)*)?)\s*(?:\[([^\]]+)\])?', line)
     if not match:
-        return None, None, None, None
+        return None, None, None, None, None
     
     word_part = match.group(1).strip()
     pos_part = match.group(2).strip()
@@ -83,7 +83,7 @@ def parse_pos_from_line(line):
     
     # 验证词是否有效（不能是纯数字或特殊字符）
     if not word or re.match(r'^\d+', word) or len(word) < 1:
-        return None, None, None, None
+        return None, None, None, None, None
     
     # 处理多个词性（用分号分隔）
     pos_parts = [p.strip() for p in pos_part.split(';')]
@@ -108,7 +108,7 @@ def parse_pos_from_line(line):
     
     # 如果仍然找不到，跳过这个词条
     if not pos_info:
-        return None, None, None, None
+        return None, None, None, None, None
     
     return word, pos_info, pos_part, extra_info, pos_parts
 
@@ -202,9 +202,9 @@ def parse_definitions(lines, start_idx):
                     # 方法1：查找最后一个句号后的中文部分
                     # 方法2：查找第一个中文字符的位置
                     zh_start = None
-                    for i, char in enumerate(ex_text):
+                    for idx, char in enumerate(ex_text):
                         if ord(char) > 127 and '\u4e00' <= char <= '\u9fff':  # 中文字符
-                            zh_start = i
+                            zh_start = idx
                             break
                     
                     if zh_start and zh_start > 0:
@@ -259,9 +259,9 @@ def parse_definitions(lines, start_idx):
                             zh_text = None
                             
                             zh_start = None
-                            for i, char in enumerate(ex_text):
+                            for idx, char in enumerate(ex_text):
                                 if ord(char) > 127 and '\u4e00' <= char <= '\u9fff':
-                                    zh_start = i
+                                    zh_start = idx
                                     break
                             
                             if zh_start and zh_start > 0:

@@ -6,7 +6,7 @@
   "license": "Unknown",
   "copyright": "",
   "version": "1.0.0",
-  "generated_at": "2026-01-01T19:11:37.257681Z",
+  "generated_at": "2026-01-01T22:44:48.864240Z",
   "words": [
     {
       "word": "absolument",
@@ -21,10 +21,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "绝对地，完全地: C'est absolument interdit.这是绝对禁止的。 Vous êtes d'accord avec moi? -Absolument!您同意我吗?—完全同意。"
+          "text": "绝对地，完全地",
+          "examples": [
+            {
+              "fr": "C'est absolument interdit",
+              "zh": "这是绝对禁止的"
+            },
+            {
+              "fr": "Vous êtes d'accord avec moi? -Absolument!",
+              "zh": "您同意我吗?—完全同意"
+            }
+          ]
         },
         {
-          "text": "必定，一定: Il faut absolument que tu viennes, j'ai besoin de toi.你一定得来，我需要你。"
+          "text": "必定，一定",
+          "examples": [
+            {
+              "fr": "Il faut absolument que tu viennes, j'ai besoin de toi",
+              "zh": "你一定得来，我需要你"
+            }
+          ]
         }
       ]
     },
@@ -41,7 +57,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "目前，当前: Il est actuellement en vacances. 他目前在度假。 Elle travaille actuellement dans une banque.她目前在一家银行工作。"
+          "text": "目前，当前",
+          "examples": [
+            {
+              "fr": "Il est actuellement en vacances",
+              "zh": "他目前在度假"
+            },
+            {
+              "fr": "Elle travaille actuellement dans une banque",
+              "zh": "她目前在一家银行工作"
+            }
+          ]
         }
       ]
     },
@@ -58,7 +84,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "再见!永别!: 【dire adieu à qqn】 向某人告别"
+          "text": "再见!永别!",
+          "examples": [
+            {
+              "fr": "【dire adieu à qqn】",
+              "zh": "向某人告别"
+            }
+          ]
         }
       ]
     },
@@ -75,7 +107,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "深情地，亲热地: Elle regarde affectueusement son enfant faire ses premiers pas.她深情地看着自己孩子蹒跚学步。"
+          "text": "深情地，亲热地",
+          "examples": [
+            {
+              "fr": "Elle regarde affectueusement son enfant faire ses premiers pas",
+              "zh": "她深情地看着自己孩子蹒跚学步"
+            }
+          ]
         }
       ]
     },
@@ -92,7 +130,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "愉快地，舒适地;讨人喜欢地: Les vacances se sont passées très agréablement.假期过得非常愉快。"
+          "text": "愉快地，舒适地;讨人喜欢地",
+          "examples": [
+            {
+              "fr": "Les vacances se sont passées très agréablement",
+              "zh": "假期过得非常愉快"
+            }
+          ]
         }
       ]
     },
@@ -109,7 +153,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "啊!嗳!唉!哎唷![表示喜悦、痛苦、吃惊等]: Ah! quelle bonne nouvelle!啊!多好的消息! Ah!ça me fait mal!哎唷!这弄痛我了!"
+          "text": "啊!嗳!唉!哎唷![表示喜悦、痛苦、吃惊等]",
+          "examples": [
+            {
+              "fr": "Ah! quelle bonne nouvelle!",
+              "zh": "啊!多好的消息!"
+            },
+            {
+              "fr": "Ah!ça me fait mal!",
+              "zh": "哎唷!这弄痛我了!"
+            }
+          ]
         }
       ]
     },
@@ -126,10 +180,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "在别处，在其他地方: Ne reste pas ici, va jouer ailleurs.别待在这里，到别处去玩吧。"
+          "text": "在别处，在其他地方",
+          "examples": [
+            {
+              "fr": "Ne reste pas ici, va jouer ailleurs",
+              "zh": "别待在这里，到别处去玩吧"
+            }
+          ]
         },
         {
-          "text": "【d'ailleurs】 loc. adv.此外，况且: Il faut rentrer, d'ailleurs il pleut.该回去了，况且天下着雨。"
+          "text": "【d'ailleurs】 loc. adv.此外，况且",
+          "examples": [
+            {
+              "fr": "Il faut rentrer, d'ailleurs il pleut",
+              "zh": "该回去了，况且天下着雨"
+            }
+          ]
         }
       ]
     },
@@ -146,13 +212,35 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "这样，如此: Pourquoi me regardez-vous ainsi?您为什么这样看着我?"
+          "text": "这样，如此",
+          "examples": [
+            {
+              "fr": "Pourquoi me regardez-vous ainsi?",
+              "zh": "您为什么这样看着我?"
+            }
+          ]
         },
         {
-          "text": "由此，因此: Je prends l'express, ainsi j'arriverai plus tôt. 我乘快车，这样我就会更早到达。"
+          "text": "由此，因此",
+          "examples": [
+            {
+              "fr": "Je prends l'express, ainsi j'arriverai plus tôt",
+              "zh": "我乘快车，这样我就会更早到达"
+            }
+          ]
         },
         {
-          "text": "【ainsi que】 loc. conj.如同，正如;和，以及: Il est venu ainsi que je le lui avais demandé.正如我要求他的那样他来了。 Je t'invite, ainsi que ta sœur. 我邀请你以及你姐姐。"
+          "text": "【ainsi que】 loc. conj.如同，正如;和，以及",
+          "examples": [
+            {
+              "fr": "Il est venu ainsi que je le lui avais demandé",
+              "zh": "正如我要求他的那样他来了"
+            },
+            {
+              "fr": "Je t'invite, ainsi que ta sœur",
+              "zh": "我邀请你以及你姐姐"
+            }
+          ]
         }
       ]
     },
@@ -169,10 +257,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "在周围，在附近: Vous verrez une maison avec des arbres alentour.您可以看到一幢四周有树木的房子。"
+          "text": "在周围，在附近",
+          "examples": [
+            {
+              "fr": "Vous verrez une maison avec des arbres alentour",
+              "zh": "您可以看到一幢四周有树木的房子"
+            }
+          ]
         },
         {
-          "text": "周围，近郊: Les alentours de la ville sont pittoresques. 城市近郊风景如画。"
+          "text": "周围，近郊",
+          "examples": [
+            {
+              "fr": "Les alentours de la ville sont pittoresques",
+              "zh": "城市近郊风景如画"
+            }
+          ]
         }
       ]
     },
@@ -189,7 +289,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "喂![电话用语]: Allô! Qui est à l'appareil?喂!您是谁?"
+          "text": "喂![电话用语]",
+          "examples": [
+            {
+              "fr": "Allô! Qui est à l'appareil?",
+              "zh": "喂!您是谁?"
+            }
+          ]
         }
       ]
     },
@@ -206,13 +312,35 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "当时，那时: Je me souviens de l'avoir vu: il avait alors vingt ans. 我记得见到过他，当时他20岁。"
+          "text": "当时，那时",
+          "examples": [
+            {
+              "fr": "Je me souviens de l'avoir vu: il avait alors vingt ans",
+              "zh": "我记得见到过他，当时他20岁"
+            }
+          ]
         },
         {
-          "text": "那么: Il est malade? Alors, je le remplacerai.他病了?那么我接替他吧。 Vous êtes contents? Alors tant mieux.你们高兴吗?那就好了。"
+          "text": "那么",
+          "examples": [
+            {
+              "fr": "Il est malade? Alors, je le remplacerai",
+              "zh": "他病了?那么我接替他吧"
+            },
+            {
+              "fr": "Vous êtes contents? Alors tant mieux",
+              "zh": "你们高兴吗?那就好了"
+            }
+          ]
         },
         {
-          "text": "【alors que】 loc. conj.而，却: François veut continuer à jouer, alors que Sylvie préfère aller se coucher. 弗朗索瓦想继续玩，而西尔维则更喜欢去睡觉。"
+          "text": "【alors que】 loc. conj.而，却",
+          "examples": [
+            {
+              "fr": "François veut continuer à jouer, alors que Sylvie préfère aller se coucher",
+              "zh": "弗朗索瓦想继续玩，而西尔维则更喜欢去睡觉"
+            }
+          ]
         }
       ]
     },
@@ -229,7 +357,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "友好地，亲切地: Nous avons bavardé amicalement.我们亲切地聊了一会。"
+          "text": "友好地，亲切地",
+          "examples": [
+            {
+              "fr": "Nous avons bavardé amicalement",
+              "zh": "我们亲切地聊了一会"
+            }
+          ]
         }
       ]
     },
@@ -246,25 +380,75 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "在…以后[表示时间]: On se reposera après le travail.我们将在工作后休息。 Un an après sa mort, elle est partie en France.他去世后一年，她动身去了法国。"
+          "text": "在…以后[表示时间]",
+          "examples": [
+            {
+              "fr": "On se reposera après le travail",
+              "zh": "我们将在工作后休息"
+            },
+            {
+              "fr": "Un an après sa mort, elle est partie en France",
+              "zh": "他去世后一年，她动身去了法国"
+            }
+          ]
         },
         {
-          "text": "在…后面[表示空间]: La gare est après le carrefour.火车站在十字路口后面。"
+          "text": "在…后面[表示空间]",
+          "examples": [
+            {
+              "fr": "La gare est après le carrefour",
+              "zh": "火车站在十字路口后面"
+            }
+          ]
         },
         {
-          "text": "以后，之后[表示时间]: Vingt ans après, la guerre recommença. 20年后，战争重新打响了。 Avant son accident, il était très gentil, mais après, il est devenu bizarre.在事故发生前，他对人很好，可是之后，他变得古怪了。"
+          "text": "以后，之后[表示时间]",
+          "examples": [
+            {
+              "fr": "Vingt ans après, la guerre recommença. 20",
+              "zh": "年后，战争重新打响了"
+            },
+            {
+              "fr": "Avant son accident, il était très gentil, mais après, il est devenu bizarre",
+              "zh": "在事故发生前，他对人很好，可是之后，他变得古怪了"
+            }
+          ]
         },
         {
-          "text": "后面，在后面[表示空间]: Voici la poste, l'épicerie est après. 这是邮局，食品杂货店就在后面。"
+          "text": "后面，在后面[表示空间]",
+          "examples": [
+            {
+              "fr": "Voici la poste, l'épicerie est après",
+              "zh": "这是邮局，食品杂货店就在后面"
+            }
+          ]
         },
         {
-          "text": "【après】 在…以后[后接不定式过去时]: Après avoir mangé， il est parti sans nous dire au revoir.他吃完饭后，没有向我们说声再见就走了。"
+          "text": "【après】 在…以后[后接不定式过去时]",
+          "examples": [
+            {
+              "fr": "Après avoir mangé， il est parti sans nous dire au revoir",
+              "zh": "他吃完饭后，没有向我们说声再见就走了"
+            }
+          ]
         },
         {
-          "text": "【après que...】 在…以后: Après qu'il était parti, on a reconstruit la maison.他走了以后，重新造了房子。"
+          "text": "【après que...】 在…以后",
+          "examples": [
+            {
+              "fr": "Après qu'il était parti, on a reconstruit la maison",
+              "zh": "他走了以后，重新造了房子"
+            }
+          ]
         },
         {
-          "text": "【d'après】 loc. prép. 根据…，按照…: D'après vous, quel est le coupable? 依您看，罪犯是谁呢?"
+          "text": "【d'après】 loc. prép. 根据…，按照…",
+          "examples": [
+            {
+              "fr": "D'après vous, quel est le coupable?",
+              "zh": "依您看，罪犯是谁呢?"
+            }
+          ]
         }
       ]
     },
@@ -281,7 +465,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "后天: Les vacances commencent après-demain.假期后天开始。"
+          "text": "后天",
+          "examples": [
+            {
+              "fr": "Les vacances commencent après-demain",
+              "zh": "假期后天开始"
+            }
+          ]
         }
       ]
     },
@@ -298,7 +488,33 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "够，足够，相当: Voulez-vous encore un peu de fromage? — Non, merci, j'ai assez mangé.您还要点奶酪吗?—不要了，谢谢，我吃够了。 La boîte n'est pas assez grande.盒子不够大。 Il parle assez vite.他讲得相当快。 C'est assez.够了。 Il n'y a pas assez d'huile dans la salade. 色拉中油放得不够多。 Nous avons assez d'argent pour faire ce grand voyage.我们有足够的钱进行这次远途旅游。"
+          "text": "够，足够，相当",
+          "examples": [
+            {
+              "fr": "Voulez-vous encore un peu de fromage? — Non, merci, j'ai assez mangé",
+              "zh": "您还要点奶酪吗?—不要了，谢谢，我吃够了"
+            },
+            {
+              "fr": "La boîte n'est pas assez grande",
+              "zh": "盒子不够大"
+            },
+            {
+              "fr": "Il parle assez vite",
+              "zh": "他讲得相当快"
+            },
+            {
+              "fr": "C'est assez",
+              "zh": "够了"
+            },
+            {
+              "fr": "Il n'y a pas assez d'huile dans la salade",
+              "zh": "色拉中油放得不够多"
+            },
+            {
+              "fr": "Nous avons assez d'argent pour faire ce grand voyage",
+              "zh": "我们有足够的钱进行这次远途旅游"
+            }
+          ]
         }
       ]
     },
@@ -315,7 +531,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "专心地，注意地: L'enfant regardait attentivement les acrobates.孩子专心地在看杂技演员表演。"
+          "text": "专心地，注意地",
+          "examples": [
+            {
+              "fr": "L'enfant regardait attentivement les acrobates",
+              "zh": "孩子专心地在看杂技演员表演"
+            }
+          ]
         }
       ]
     },
@@ -332,7 +554,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "再见: Je m'en vais: au revoir!我走了，再见! Je lui ai dit au revoir.我向他告别过了。"
+          "text": "再见",
+          "examples": [
+            {
+              "fr": "Je m'en vais: au revoir!",
+              "zh": "我走了，再见!"
+            },
+            {
+              "fr": "Je lui ai dit au revoir",
+              "zh": "我向他告别过了"
+            }
+          ]
         }
       ]
     },
@@ -349,10 +581,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "今天: Aujourd'hui, c'est dimanche.今天是星期天。 J'ai beaucoup travaillé aujourd'hui.今天我干得很多。"
+          "text": "今天",
+          "examples": [
+            {
+              "fr": "Aujourd'hui, c'est dimanche",
+              "zh": "今天是星期天"
+            },
+            {
+              "fr": "J'ai beaucoup travaillé aujourd'hui",
+              "zh": "今天我干得很多"
+            }
+          ]
         },
         {
-          "text": "当今，现在: L'homme est aujourd'hui capable d'aller sur la Lune.当今，人有能力登上月球。"
+          "text": "当今，现在",
+          "examples": [
+            {
+              "fr": "L'homme est aujourd'hui capable d'aller sur la Lune",
+              "zh": "当今，人有能力登上月球"
+            }
+          ]
         }
       ]
     },
@@ -369,13 +617,35 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "也，同样，一样: Tu vas chez Carrefour? Je t'accompagne, j'y vais aussi.你去家乐福吗?我陪你，我也去的。 Vous connaissez Jacques? Nous aussi!你们认识雅克?我们也认识!"
+          "text": "也，同样，一样",
+          "examples": [
+            {
+              "fr": "Tu vas chez Carrefour? Je t'accompagne, j'y vais aussi",
+              "zh": "你去家乐福吗?我陪你，我也去的"
+            },
+            {
+              "fr": "Vous connaissez Jacques? Nous aussi!",
+              "zh": "你们认识雅克?我们也认识!"
+            }
+          ]
         },
         {
-          "text": "还，此外: Achète-moi des pommes, et aussi des poires.替我买些苹果，还有梨子。"
+          "text": "还，此外",
+          "examples": [
+            {
+              "fr": "Achète-moi des pommes, et aussi des poires",
+              "zh": "替我买些苹果，还有梨子"
+            }
+          ]
         },
         {
-          "text": "和…一样，和…同样: Cette voiture est aussi chère que l'autre. 这辆汽车和另"
+          "text": "和…一样，和…同样",
+          "examples": [
+            {
+              "fr": "Cette voiture est aussi chère que l'autre",
+              "zh": "这辆汽车和另"
+            }
+          ]
         }
       ]
     },
@@ -392,10 +662,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "立刻，立即，马上: Je l'ai appelé et il est arrivé aussitôt. 我给他打了电话，他马上就来了。 Il est sorti aussitôt après le dîner.他一吃完晚饭就出去了。"
+          "text": "立刻，立即，马上",
+          "examples": [
+            {
+              "fr": "Je l'ai appelé et il est arrivé aussitôt",
+              "zh": "我给他打了电话，他马上就来了"
+            },
+            {
+              "fr": "Il est sorti aussitôt après le dîner",
+              "zh": "他一吃完晚饭就出去了"
+            }
+          ]
         },
         {
-          "text": "【aussitôt que】 loc. conj.刚一…就，一旦…就: Il la reconnut aussitôt qu'il la vit.他一见到她就认出了她。"
+          "text": "【aussitôt que】 loc. conj.刚一…就，一旦…就",
+          "examples": [
+            {
+              "fr": "Il la reconnut aussitôt qu'il la vit",
+              "zh": "他一见到她就认出了她"
+            }
+          ]
         }
       ]
     },
@@ -412,7 +698,21 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "同样，一样多，同样多: Il lit autant que moi.他书看得和我一样多。 Lucie dessine autant de fleurs que Germaine.吕西画的花朵和热尔梅娜一样多。 Le cinéma ne m'intéresse pas autant que la télévision.电影不像电视那样使我感兴趣。"
+          "text": "同样，一样多，同样多",
+          "examples": [
+            {
+              "fr": "Il lit autant que moi",
+              "zh": "他书看得和我一样多"
+            },
+            {
+              "fr": "Lucie dessine autant de fleurs que Germaine",
+              "zh": "吕西画的花朵和热尔梅娜一样多"
+            },
+            {
+              "fr": "Le cinéma ne m'intéresse pas autant que la télévision",
+              "zh": "电影不像电视那样使我感兴趣"
+            }
+          ]
         }
       ]
     },
@@ -446,10 +746,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "prép.在…周围，在…四周: La circulation autour de Paris est difficile.巴黎周围的交通很困难。 Nous sommes allés ramasser des champignons dans les forêts qui sont autour du village. 我们到村子周围的树林里去采了蘑菇。"
+          "text": "prép.在…周围，在…四周",
+          "examples": [
+            {
+              "fr": "La circulation autour de Paris est difficile",
+              "zh": "巴黎周围的交通很困难"
+            },
+            {
+              "fr": "Nous sommes allés ramasser des champignons dans les forêts qui sont autour du village",
+              "zh": "我们到村子周围的树林里去采了蘑菇"
+            }
+          ]
         },
         {
-          "text": "在周围: Impossible d'entrer dans ce parc, il y a un mur tout autour.不可能进入这座公园，四周有围墙。"
+          "text": "在周围",
+          "examples": [
+            {
+              "fr": "Impossible d'entrer dans ce parc, il y a un mur tout autour",
+              "zh": "不可能进入这座公园，四周有围墙"
+            }
+          ]
         }
       ]
     },
@@ -466,7 +782,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "过去，以前，从前: Autrefois, Paris s'appelait Lutèce.从前，巴黎被称为吕泰斯。"
+          "text": "过去，以前，从前",
+          "examples": [
+            {
+              "fr": "Autrefois, Paris s'appelait Lutèce",
+              "zh": "从前，巴黎被称为吕泰斯"
+            }
+          ]
         }
       ]
     },
@@ -483,10 +805,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "别样，不一样，不同: Tu aurais dû répondre autrement.你本该换种方式回答的。"
+          "text": "别样，不一样，不同",
+          "examples": [
+            {
+              "fr": "Tu aurais dû répondre autrement",
+              "zh": "你本该换种方式回答的"
+            }
+          ]
         },
         {
-          "text": "否则，不然: Dépêchez-vous, autrement vous serez en retard.快点，否则你们会迟到的。"
+          "text": "否则，不然",
+          "examples": [
+            {
+              "fr": "Dépêchez-vous, autrement vous serez en retard",
+              "zh": "快点，否则你们会迟到的"
+            }
+          ]
         }
       ]
     },
@@ -503,22 +837,70 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "在…以前[表示时间]: Elle est arrivée avant nous.她比我们先到。 Pour être en forme, reposez-vous avant l'examen.为了精力充沛，考试前你们要休息休息。"
+          "text": "在…以前[表示时间]",
+          "examples": [
+            {
+              "fr": "Elle est arrivée avant nous",
+              "zh": "她比我们先到"
+            },
+            {
+              "fr": "Pour être en forme, reposez-vous avant l'examen",
+              "zh": "为了精力充沛，考试前你们要休息休息"
+            }
+          ]
         },
         {
-          "text": "在…前面[表示空间]: Le bureau de poste est juste avant le pont. 邮局就在桥前面。"
+          "text": "在…前面[表示空间]",
+          "examples": [
+            {
+              "fr": "Le bureau de poste est juste avant le pont",
+              "zh": "邮局就在桥前面"
+            }
+          ]
         },
         {
-          "text": "以前，之前[表示时间】: On a construit une nouvelle route; avant, il fallait faire un long détour.人们修建了一条新公路;以前，必须绕很大一圈。 Ne vous décidez pas tout de suite; réfléchissez avant. 不要立即作出决定，先思考一下。 Quelques jours avant, il était parti pour Paris.(当时)几天以前，他动身去了巴黎。"
+          "text": "以前，之前[表示时间】",
+          "examples": [
+            {
+              "fr": "On a construit une nouvelle route; avant, il fallait faire un long détour",
+              "zh": "人们修建了一条新公路;以前，必须绕很大一圈"
+            },
+            {
+              "fr": "Ne vous décidez pas tout de suite; réfléchissez avant",
+              "zh": "不要立即作出决定，先思考一下"
+            },
+            {
+              "fr": "Quelques jours avant, il était parti pour Paris.(",
+              "zh": "当时)几天以前，他动身去了巴黎"
+            }
+          ]
         },
         {
-          "text": "前面，在前面[表示空间]: N'allez pas jusqu'à la place, arrêtez-vous avant.不要一直走到广场，在前面停下来。"
+          "text": "前面，在前面[表示空间]",
+          "examples": [
+            {
+              "fr": "N'allez pas jusqu'à la place, arrêtez-vous avant",
+              "zh": "不要一直走到广场，在前面停下来"
+            }
+          ]
         },
         {
-          "text": "【avant de】 loc. prép. 在…前[后接不定式]: Mets ton manteau avant de sortir, il fait froid dehors.出去以前穿好大衣，外面寒冷。"
+          "text": "【avant de】 loc. prép. 在…前[后接不定式]",
+          "examples": [
+            {
+              "fr": "Mets ton manteau avant de sortir, il fait froid dehors",
+              "zh": "出去以前穿好大衣，外面寒冷"
+            }
+          ]
         },
         {
-          "text": "【avant que】 loc. conj. 在…前[后接虚拟式]: Rentrons vite avant qu'il (ne) pleuve.下雨之前，我们赶紧回家。"
+          "text": "【avant que】 loc. conj. 在…前[后接虚拟式]",
+          "examples": [
+            {
+              "fr": "Rentrons vite avant qu'il (ne) pleuve",
+              "zh": "下雨之前，我们赶紧回家"
+            }
+          ]
         }
       ]
     },
@@ -535,7 +917,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "前天: Avant-hier soir, j'ai été au théâtre. 前天晚上，我去看戏了。"
+          "text": "前天",
+          "examples": [
+            {
+              "fr": "Avant-hier soir, j'ai été au théâtre",
+              "zh": "前天晚上，我去看戏了"
+            }
+          ]
         }
       ]
     },
@@ -552,7 +940,16 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "很多，非常[修饰动词]: Ils travaillent beaucoup.他们干得很多。 Notre"
+          "text": "很多，非常[修饰动词]",
+          "examples": [
+            {
+              "fr": "Ils travaillent beaucoup",
+              "zh": "他们干得很多"
+            },
+            {
+              "fr": "Notre"
+            }
+          ]
         }
       ]
     },
@@ -569,7 +966,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "不久，马上: Nous partirons bientôt.我们不久就动身。 À bientôt! 不久再见!"
+          "text": "不久，马上",
+          "examples": [
+            {
+              "fr": "Nous partirons bientôt",
+              "zh": "我们不久就动身"
+            },
+            {
+              "fr": "À bientôt!",
+              "zh": "不久再见!"
+            }
+          ]
         }
       ]
     },
@@ -586,10 +993,34 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "好，出色的: Vous chantez très bien, vous avez suivi des cours? 您唱得很好，您听过课吗? Yann parle bien l'allemand, mais il a encore un petit accent.雅南德语讲得好，不过他还有一点乡音。 Voilà un travail bien fait. 这是一项做得出色的工作。"
+          "text": "好，出色的",
+          "examples": [
+            {
+              "fr": "Vous chantez très bien, vous avez suivi des cours?",
+              "zh": "您唱得很好，您听过课吗?"
+            },
+            {
+              "fr": "Yann parle bien l'allemand, mais il a encore un petit accent",
+              "zh": "雅南德语讲得好，不过他还有一点乡音"
+            },
+            {
+              "fr": "Voilà un travail bien fait",
+              "zh": "这是一项做得出色的工作"
+            }
+          ]
         },
         {
-          "text": "很，非常: J'aime bien les gâteaux.我很喜欢吃蛋糕。 Jacques est bien con-tent de partir en vacances.雅克很高兴动身去度假。"
+          "text": "很，非常",
+          "examples": [
+            {
+              "fr": "J'aime bien les gâteaux",
+              "zh": "我很喜欢吃蛋糕"
+            },
+            {
+              "fr": "Jacques est bien con-tent de partir en vacances",
+              "zh": "雅克很高兴动身去度假"
+            }
+          ]
         }
       ]
     },
@@ -606,10 +1037,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "(要求表演者)再来一遍: Les spectateurs crient: «Bis! bis!» 观众们叫喊着:“再来一个!再来一个!”"
+          "text": "(要求表演者)再来一遍",
+          "examples": [
+            {
+              "fr": "Les spectateurs crient: «Bis! bis!»",
+              "zh": "观众们叫喊着:“再来一个!再来一个!”"
+            }
+          ]
         },
         {
-          "text": "(表示数字)重复: Ma maison porte le numéro 6 bis car la maison voisine porte déjà le numéro 6.我家门牌号是6号乙，因为邻居家门牌号已经是6号了。"
+          "text": "(表示数字)重复",
+          "examples": [
+            {
+              "fr": "Ma maison porte le numéro 6 bis car la maison voisine porte déjà le numéro 6",
+              "zh": "我家门牌号是6号乙，因为邻居家门牌号已经是6号了"
+            }
+          ]
         }
       ]
     },
@@ -626,10 +1069,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "(要求表演者)再来一遍: Les spectateurs crient: «Bis! bis!» 观众们叫喊着:“再来一个!再来一个!”"
+          "text": "(要求表演者)再来一遍",
+          "examples": [
+            {
+              "fr": "Les spectateurs crient: «Bis! bis!»",
+              "zh": "观众们叫喊着:“再来一个!再来一个!”"
+            }
+          ]
         },
         {
-          "text": "(表示数字)重复: Ma maison porte le numéro 6 bis car la maison voisine porte déjà le numéro 6.我家门牌号是6号乙，因为邻居家门牌号已经是6号了。"
+          "text": "(表示数字)重复",
+          "examples": [
+            {
+              "fr": "Ma maison porte le numéro 6 bis car la maison voisine porte déjà le numéro 6",
+              "zh": "我家门牌号是6号乙，因为邻居家门牌号已经是6号了"
+            }
+          ]
         }
       ]
     },
@@ -646,7 +1101,20 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "好![表示赞成、不满、惊奇、厌恶等]: Bon, je vous laisse, il est sept heures.好，我走了，现在七点钟啦。 Tu ne peux pas venir vendredi? Bon. Alors, à samedi.你不能星期五来吗?好吧，那就星期六见吧。 Il est parti en France. —"
+          "text": "好![表示赞成、不满、惊奇、厌恶等]",
+          "examples": [
+            {
+              "fr": "Bon, je vous laisse, il est sept heures",
+              "zh": "好，我走了，现在七点钟啦"
+            },
+            {
+              "fr": "Tu ne peux pas venir vendredi? Bon. Alors, à samedi",
+              "zh": "你不能星期五来吗?好吧，那就星期六见吧"
+            },
+            {
+              "fr": "Il est parti en France. —"
+            }
+          ]
         }
       ]
     },
@@ -663,7 +1131,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "好!妙! Bravo, Blandine! tu as très bien dansé!好极了，布朗迪恩!你跳舞跳得非常好!"
+          "text": "好!妙!◇Bravo, Blandine! tu as très bien dansé!好极了，布朗迪恩!你跳舞跳得非常好!"
         }
       ]
     },
@@ -680,10 +1148,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "简短的，简要的: Son exposé a été bref, mais précis.他的陈述简要，但很清楚。 Je vous donne un bref aperçu de cette entreprise française.我向你们简要地介绍一下这家法国企业。"
+          "text": "简短的，简要的",
+          "examples": [
+            {
+              "fr": "Son exposé a été bref, mais précis",
+              "zh": "他的陈述简要，但很清楚"
+            },
+            {
+              "fr": "Je vous donne un bref aperçu de cette entreprise française",
+              "zh": "我向你们简要地介绍一下这家法国企业"
+            }
+          ]
         },
         {
-          "text": "简言之，总之: Bref, il refuse notre invitation.总之，他拒绝我们的邀请。"
+          "text": "简言之，总之",
+          "examples": [
+            {
+              "fr": "Bref, il refuse notre invitation",
+              "zh": "总之，他拒绝我们的邀请"
+            }
+          ]
         }
       ]
     },
@@ -717,7 +1201,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "突然地: L'autobus s'est arrêté brusquement. 公交车突然停了下来。"
+          "text": "突然地",
+          "examples": [
+            {
+              "fr": "L'autobus s'est arrêté brusquement",
+              "zh": "公交车突然停了下来"
+            }
+          ]
         }
       ]
     },
@@ -734,7 +1224,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "粗暴地;剧烈地: Il a fermé la porte brutalement. 他猛地关上了门。"
+          "text": "粗暴地;剧烈地",
+          "examples": [
+            {
+              "fr": "Il a fermé la porte brutalement",
+              "zh": "他猛地关上了门"
+            }
+          ]
         }
       ]
     },
@@ -751,7 +1247,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "平静地，冷静地，镇静地，沉着地: La journée s'est passée calmement.一天平静地过去了。 Considérez calmement la situation.冷静地考虑一下形势。"
+          "text": "平静地，冷静地，镇静地，沉着地",
+          "examples": [
+            {
+              "fr": "La journée s'est passée calmement",
+              "zh": "一天平静地过去了"
+            },
+            {
+              "fr": "Considérez calmement la situation",
+              "zh": "冷静地考虑一下形势"
+            }
+          ]
         }
       ]
     },
@@ -768,10 +1274,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "肯定地: Il viendra certainement.他肯定会来。"
+          "text": "肯定地",
+          "examples": [
+            {
+              "fr": "Il viendra certainement",
+              "zh": "他肯定会来"
+            }
+          ]
         },
         {
-          "text": "当然: Vous apprendrez la seconde langue étrangère? Certainement!您学第二门外语吗?—当然啰!"
+          "text": "当然",
+          "examples": [
+            {
+              "fr": "Vous apprendrez la seconde langue étrangère? Certainement!",
+              "zh": "您学第二门外语吗?—当然啰!"
+            }
+          ]
         }
       ]
     },
@@ -788,7 +1306,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "热情地，热烈地: Ils m'ont reçu chaleureusement.他们热情地接待了我。"
+          "text": "热情地，热烈地",
+          "examples": [
+            {
+              "fr": "Ils m'ont reçu chaleureusement",
+              "zh": "他们热情地接待了我"
+            }
+          ]
         }
       ]
     },
@@ -805,10 +1329,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "亲爱的;昂贵的: Cher ami, je vous remercie de votre cadeau.亲爱的朋友，我感谢您给我的礼物。 Ce costume est trop cher pour moi. 这套西服对我来说太贵了。"
+          "text": "亲爱的;昂贵的",
+          "examples": [
+            {
+              "fr": "Cher ami, je vous remercie de votre cadeau",
+              "zh": "亲爱的朋友，我感谢您给我的礼物"
+            },
+            {
+              "fr": "Ce costume est trop cher pour moi",
+              "zh": "这套西服对我来说太贵了"
+            }
+          ]
         },
         {
-          "text": "昂贵地: Ces médicaments coûtent cher.这些药品价值昂贵。"
+          "text": "昂贵地",
+          "examples": [
+            {
+              "fr": "Ces médicaments coûtent cher",
+              "zh": "这些药品价值昂贵"
+            }
+          ]
         }
       ]
     },
@@ -825,7 +1365,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "嘘[表示让人别作声]: Chut! il dort.嘘!他睡着。"
+          "text": "嘘[表示让人别作声]",
+          "examples": [
+            {
+              "fr": "Chut! il dort",
+              "zh": "嘘!他睡着"
+            }
+          ]
         }
       ]
     },
@@ -842,7 +1388,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "清楚地，明了地: Parlez donc plus clairement! 您讲得再清楚些!"
+          "text": "清楚地，明了地",
+          "examples": [
+            {
+              "fr": "Parlez donc plus clairement!",
+              "zh": "您讲得再清楚些!"
+            }
+          ]
         }
       ]
     },
@@ -859,7 +1411,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "多少: Combien sont-ils?他们多少人? Combien coûte ce sac?这只包多少钱? Combien de temps faut-il pour faire ce trajet? 这段路程要用多少时间?"
+          "text": "多少",
+          "examples": [
+            {
+              "fr": "Combien sont-ils?",
+              "zh": "他们多少人? Combien coûte ce sac?这只包多少钱? Combien de temps faut-il pour faire ce trajet? 这段路程要用多少时间?"
+            }
+          ]
         }
       ]
     },
@@ -876,10 +1434,34 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "如何，怎么，怎样: Comment écrit-on votre nom?您的姓名怎么写? Comment partiras-tu, en voiture ou par le train?你怎么动身，开车还是坐火车? Je me demande comment il a pu s'échapper.我在想他是怎样得以逃脱的。"
+          "text": "如何，怎么，怎样",
+          "examples": [
+            {
+              "fr": "Comment écrit-on votre nom?",
+              "zh": "您的姓名怎么写?"
+            },
+            {
+              "fr": "Comment partiras-tu, en voiture ou par le train?",
+              "zh": "你怎么动身，开车还是坐火车?"
+            },
+            {
+              "fr": "Je me demande comment il a pu s'échapper",
+              "zh": "我在想他是怎样得以逃脱的"
+            }
+          ]
         },
         {
-          "text": "怎么[用于感叹句，表示惊讶、愤怒等]: Comment? vous n'étiez pas au courant?怎么?您不知道? Comment! vous osez rire?怎么!你们还敢笑?"
+          "text": "怎么[用于感叹句，表示惊讶、愤怒等]",
+          "examples": [
+            {
+              "fr": "Comment? vous n'étiez pas au courant?",
+              "zh": "怎么?您不知道?"
+            },
+            {
+              "fr": "Comment! vous osez rire?",
+              "zh": "怎么!你们还敢笑?"
+            }
+          ]
         }
       ]
     },
@@ -896,7 +1478,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "完全地，完整地: Çayest, mon travail est complètement terminé.好了，我的工作全部做完了。 Catherine n'est pas complètement guérie.卡特琳病没有全好。"
+          "text": "完全地，完整地",
+          "examples": [
+            {
+              "fr": "Çayest, mon travail est complètement terminé",
+              "zh": "好了，我的工作全部做完了"
+            },
+            {
+              "fr": "Catherine n'est pas complètement guérie",
+              "zh": "卡特琳病没有全好"
+            }
+          ]
         }
       ]
     },
@@ -913,7 +1505,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "舒适地: Il s'est installé confortablement dans un fauteuil.他舒适地坐在一把扶手椅里。"
+          "text": "舒适地",
+          "examples": [
+            {
+              "fr": "Il s'est installé confortablement dans un fauteuil",
+              "zh": "他舒适地坐在一把扶手椅里"
+            }
+          ]
         }
       ]
     },
@@ -930,7 +1528,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "经常地，不断地: L'eau de la piscine est constamment renouvelée.游泳池的水经常更换。"
+          "text": "经常地，不断地",
+          "examples": [
+            {
+              "fr": "L'eau de la piscine est constamment renouvelée",
+              "zh": "游泳池的水经常更换"
+            }
+          ]
         }
       ]
     },
@@ -947,7 +1551,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "正确地: Paul écrit correctement.保尔书写正确。"
+          "text": "正确地",
+          "examples": [
+            {
+              "fr": "Paul écrit correctement",
+              "zh": "保尔书写正确"
+            }
+          ]
         }
       ]
     },
@@ -964,7 +1574,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "勇敢地，大胆地: Ils ont lutté courageusement.他们勇敢地进行了斗争。"
+          "text": "勇敢地，大胆地",
+          "examples": [
+            {
+              "fr": "Ils ont lutté courageusement",
+              "zh": "他们勇敢地进行了斗争"
+            }
+          ]
         }
       ]
     },
@@ -981,7 +1597,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "流利地，流畅地: Le professeur parle l'anglais couramment.老师讲英语很流利。"
+          "text": "流利地，流畅地",
+          "examples": [
+            {
+              "fr": "Le professeur parle l'anglais couramment",
+              "zh": "老师讲英语很流利"
+            }
+          ]
         }
       ]
     },
@@ -998,7 +1620,21 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "更，更多，更加: Il faut travailler davantage pour arriver à ce but.要达到这个目标，必须更加努力。 Ilya chaque année davantage de voitures dans les rues.马路上的汽车一年比一年多。 Ce paquet pèse davantage que les autres.这包东西比其他几包重。"
+          "text": "更，更多，更加",
+          "examples": [
+            {
+              "fr": "Il faut travailler davantage pour arriver à ce but",
+              "zh": "要达到这个目标，必须更加努力"
+            },
+            {
+              "fr": "Ilya chaque année davantage de voitures dans les rues",
+              "zh": "马路上的汽车一年比一年多"
+            },
+            {
+              "fr": "Ce paquet pèse davantage que les autres",
+              "zh": "这包东西比其他几包重"
+            }
+          ]
         }
       ]
     },
@@ -1015,10 +1651,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "站着，直立着: Ne restez pas debout, asseyez-vous.别站着，请坐。"
+          "text": "站着，直立着",
+          "examples": [
+            {
+              "fr": "Ne restez pas debout, asseyez-vous",
+              "zh": "别站着，请坐"
+            }
+          ]
         },
         {
-          "text": "起床，起身: Tous les matins, Mme Dubois est debout à six heures. 每天早晨，杜布瓦太太六点起床。 Quand le président est entré， tout le monde s'est mis debout.当主席走进来时，大家都站起身来。"
+          "text": "起床，起身",
+          "examples": [
+            {
+              "fr": "Tous les matins, Mme Dubois est debout à six heures",
+              "zh": "每天早晨，杜布瓦太太六点起床"
+            },
+            {
+              "fr": "Quand le président est entré， tout le monde s'est mis debout",
+              "zh": "当主席走进来时，大家都站起身来"
+            }
+          ]
         }
       ]
     },
@@ -1035,7 +1687,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "在里面: Ouvre ton sac et regarde si les clés sont dedans. 打开你的包，看看钥匙是否在里面。"
+          "text": "在里面",
+          "examples": [
+            {
+              "fr": "Ouvre ton sac et regarde si les clés sont dedans",
+              "zh": "打开你的包，看看钥匙是否在里面"
+            }
+          ]
         }
       ]
     },
@@ -1052,7 +1710,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "在外面: Entrez, ne restez pas dehors. 进来吧，不要待在外面。"
+          "text": "在外面",
+          "examples": [
+            {
+              "fr": "Entrez, ne restez pas dehors",
+              "zh": "进来吧，不要待在外面"
+            }
+          ]
         }
       ]
     },
@@ -1086,7 +1750,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "在下面: Le chat n'est pas sous la table, regarde dessous.猫不在桌子底下，你看看下面。 Regardez cette pierre, il y a sans doute un serpent dessous. 看这块石头，下面可能有条蛇。"
+          "text": "在下面",
+          "examples": [
+            {
+              "fr": "Le chat n'est pas sous la table, regarde dessous",
+              "zh": "猫不在桌子底下，你看看下面"
+            },
+            {
+              "fr": "Regardez cette pierre, il y a sans doute un serpent dessous",
+              "zh": "看这块石头，下面可能有条蛇"
+            }
+          ]
         }
       ]
     },
@@ -1103,7 +1777,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "在上面: Ce meuble n'est pas solide, ne t'appuie pas dessus. 这件家具不结实，你别靠在上面。"
+          "text": "在上面",
+          "examples": [
+            {
+              "fr": "Ce meuble n'est pas solide, ne t'appuie pas dessus",
+              "zh": "这件家具不结实，你别靠在上面"
+            }
+          ]
         }
       ]
     },
@@ -1120,10 +1800,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "上帝: Mme Dupont croit en Dieu.杜邦太太信上帝。"
+          "text": "上帝",
+          "examples": [
+            {
+              "fr": "Mme Dupont croit en Dieu",
+              "zh": "杜邦太太信上帝"
+            }
+          ]
         },
         {
-          "text": "上帝: Dieu! Mon Dieu!天啊!上帝啊!"
+          "text": "上帝",
+          "examples": [
+            {
+              "fr": "Dieu! Mon Dieu!",
+              "zh": "天啊!上帝啊!"
+            }
+          ]
         }
       ]
     },
@@ -1140,7 +1832,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "困难的，艰难地: Un vieillard marche difficilement.一个老年人在艰难地行走。"
+          "text": "困难的，艰难地",
+          "examples": [
+            {
+              "fr": "Un vieillard marche difficilement",
+              "zh": "一个老年人在艰难地行走"
+            }
+          ]
         }
       ]
     },
@@ -1157,7 +1855,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "不同地: Je pense différemment là-dessus.这点上我的想法是不一样的。"
+          "text": "不同地",
+          "examples": [
+            {
+              "fr": "Je pense différemment là-dessus",
+              "zh": "这点上我的想法是不一样的"
+            }
+          ]
         }
       ]
     },
@@ -1174,7 +1878,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "径直地，直接地: Il rentre directement chez lui.他直接回家。 Adressez-vous directement au chef de service.您直接找部门经理。"
+          "text": "径直地，直接地",
+          "examples": [
+            {
+              "fr": "Il rentre directement chez lui",
+              "zh": "他直接回家"
+            },
+            {
+              "fr": "Adressez-vous directement au chef de service",
+              "zh": "您直接找部门经理"
+            }
+          ]
         }
       ]
     },
@@ -1191,7 +1905,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "轻轻地，慢慢地: Chut! Parlez doucement, les enfants dorment.嘘!说话轻声些，孩子们睡着。 La voiture roule doucement. 汽车慢慢地在行驶。"
+          "text": "轻轻地，慢慢地",
+          "examples": [
+            {
+              "fr": "Chut! Parlez doucement, les enfants dorment",
+              "zh": "嘘!说话轻声些，孩子们睡着"
+            },
+            {
+              "fr": "La voiture roule doucement",
+              "zh": "汽车慢慢地在行驶"
+            }
+          ]
         }
       ]
     },
@@ -1208,7 +1932,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "特别，异乎寻常地: Pierre est drôlement grand.皮埃尔身材出奇的高。"
+          "text": "特别，异乎寻常地",
+          "examples": [
+            {
+              "fr": "Pierre est drôlement grand",
+              "zh": "皮埃尔身材出奇的高"
+            }
+          ]
         }
       ]
     },
@@ -1225,16 +1955,40 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "硬的，坚硬的: Ce bifteck est dur.这块牛排嚼不动。"
+          "text": "硬的，坚硬的",
+          "examples": [
+            {
+              "fr": "Ce bifteck est dur",
+              "zh": "这块牛排嚼不动"
+            }
+          ]
         },
         {
-          "text": "困难的，费劲的: Ce travail est dur. 这项工作很费劲。"
+          "text": "困难的，费劲的",
+          "examples": [
+            {
+              "fr": "Ce travail est dur",
+              "zh": "这项工作很费劲"
+            }
+          ]
         },
         {
-          "text": "严厉的: Vous êtes dur avec cet enfant.您对这个孩子很严厉。"
+          "text": "严厉的",
+          "examples": [
+            {
+              "fr": "Vous êtes dur avec cet enfant",
+              "zh": "您对这个孩子很严厉"
+            }
+          ]
         },
         {
-          "text": "艰苦地;努力地: On travaille dur.大家勤奋地工作。"
+          "text": "艰苦地;努力地",
+          "examples": [
+            {
+              "fr": "On travaille dur",
+              "zh": "大家勤奋地工作"
+            }
+          ]
         }
       ]
     },
@@ -1251,7 +2005,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "已经: Il a déjà un manteau, pourquoi veut-il en acheter un autre? 他已经有一件大衣了，为什么还要买一件呢? Je t'ai déjà dit mon opinion.我已经跟你说过我的想法了。"
+          "text": "已经",
+          "examples": [
+            {
+              "fr": "Il a déjà un manteau, pourquoi veut-il en acheter un autre?",
+              "zh": "他已经有一件大衣了，为什么还要买一件呢?"
+            },
+            {
+              "fr": "Je t'ai déjà dit mon opinion",
+              "zh": "我已经跟你说过我的想法了"
+            }
+          ]
         }
       ]
     },
@@ -1268,7 +2032,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "从今以后，从此以后: Désormais, on se lèvera une heure plus tôt.从今以后，我们早起一个小时。"
+          "text": "从今以后，从此以后",
+          "examples": [
+            {
+              "fr": "Désormais, on se lèvera une heure plus tôt",
+              "zh": "从今以后，我们早起一个小时"
+            }
+          ]
         }
       ]
     },
@@ -1285,10 +2055,30 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "还，仍: Est-ce qu'il pleut encore? 天还在下雨吗? Tu travailles encore à cette heure-ci?这个时候你还在工作?"
+          "text": "还，仍",
+          "examples": [
+            {
+              "fr": "Est-ce qu'il pleut encore?",
+              "zh": "天还在下雨吗?"
+            },
+            {
+              "fr": "Tu travailles encore à cette heure-ci?",
+              "zh": "这个时候你还在工作?"
+            }
+          ]
         },
         {
-          "text": "再，又: Allons! encore un effort! 来吧!再努力一下! J'ai encore perdu ma clé.我又丢了钥匙。"
+          "text": "再，又",
+          "examples": [
+            {
+              "fr": "Allons! encore un effort!",
+              "zh": "来吧!再努力一下!"
+            },
+            {
+              "fr": "J'ai encore perdu ma clé",
+              "zh": "我又丢了钥匙"
+            }
+          ]
         }
       ]
     },
@@ -1305,10 +2095,30 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "最后，终于: Nous irons d'abord à la tour Eiffel, ensuite à l'Arc de Triomphe et enfin au Louvre.我们先去埃菲尔铁塔，然后去凯旋门，最后去卢浮宫。 J'ai enfin retrouvé mes clés. 我终于找回了我的钥匙。"
+          "text": "最后，终于",
+          "examples": [
+            {
+              "fr": "Nous irons d'abord à la tour Eiffel, ensuite à l'Arc de Triomphe et enfin au Louvre",
+              "zh": "我们先去埃菲尔铁塔，然后去凯旋门，最后去卢浮宫"
+            },
+            {
+              "fr": "J'ai enfin retrouvé mes clés",
+              "zh": "我终于找回了我的钥匙"
+            }
+          ]
         },
         {
-          "text": "毕竟，到底: Cela est difficile; enfin, vous pouvez toujours essayer. 这很难; 不过，您总是可以试一试的。 Enfin, tu es d'accord? 你到底同意吗?"
+          "text": "毕竟，到底",
+          "examples": [
+            {
+              "fr": "Cela est difficile; enfin, vous pouvez toujours essayer",
+              "zh": "这很难; 不过，您总是可以试一试的"
+            },
+            {
+              "fr": "Enfin, tu es d'accord?",
+              "zh": "你到底同意吗?"
+            }
+          ]
         }
       ]
     },
@@ -1325,7 +2135,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "共同，一起: Paul et Marie sont partis ensemble.保尔和玛丽一起走了。"
+          "text": "共同，一起",
+          "examples": [
+            {
+              "fr": "Paul et Marie sont partis ensemble",
+              "zh": "保尔和玛丽一起走了"
+            }
+          ]
         }
       ]
     },
@@ -1342,7 +2158,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "然后: Je regarde d'abord, je choisirai ensuite. 我先看一看，然后再挑选。"
+          "text": "然后",
+          "examples": [
+            {
+              "fr": "Je regarde d'abord, je choisirai ensuite",
+              "zh": "我先看一看，然后再挑选"
+            }
+          ]
         }
       ]
     },
@@ -1359,7 +2181,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "完全地，全部: Je suis entièrement d'accord.我完全同意。 L'incendie a entièrement détruit l'immeuble.火灾彻底烧毁了大楼。"
+          "text": "完全地，全部",
+          "examples": [
+            {
+              "fr": "Je suis entièrement d'accord",
+              "zh": "我完全同意"
+            },
+            {
+              "fr": "L'incendie a entièrement détruit l'immeuble",
+              "zh": "火灾彻底烧毁了大楼"
+            }
+          ]
         }
       ]
     },
@@ -1376,7 +2208,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "大约，将近，左右: Il y a environ cent personnes dans la salle. 大厅里大约有一 百个人。"
+          "text": "大约，将近，左右",
+          "examples": [
+            {
+              "fr": "Il y a environ cent personnes dans la salle",
+              "zh": "大厅里大约有一 百个人"
+            }
+          ]
         }
       ]
     },
@@ -1393,7 +2231,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "准确地，确切地，精确地: Il est exactement sept heures.现在是七点整。 Les experts ont calculé exactement la durée du voyage spatial.专家们精确地计算了 宇宙中旅程的时间。"
+          "text": "准确地，确切地，精确地",
+          "examples": [
+            {
+              "fr": "Il est exactement sept heures",
+              "zh": "现在是七点整"
+            },
+            {
+              "fr": "Les experts ont calculé exactement la durée du voyage spatial",
+              "zh": "专家们精确地计算了 宇宙中旅程的时间"
+            }
+          ]
         }
       ]
     },
@@ -1410,7 +2258,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "故意地，特意地: Je t'ai fait mal? Pardon, je ne l'ai pas fait exprès. 我把你弄疼 了?对不起，我不是故意的。"
+          "text": "故意地，特意地",
+          "examples": [
+            {
+              "fr": "Je t'ai fait mal? Pardon, je ne l'ai pas fait exprès",
+              "zh": "我把你弄疼 了?对不起，我不是故意的"
+            }
+          ]
         }
       ]
     },
@@ -1427,7 +2281,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "极端地，极其: M. Duval est extrêmement riche.迪瓦尔先生极其富有。"
+          "text": "极端地，极其",
+          "examples": [
+            {
+              "fr": "M. Duval est extrêmement riche",
+              "zh": "迪瓦尔先生极其富有"
+            }
+          ]
         }
       ]
     },
@@ -1444,7 +2304,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "容易地，不费力地: Ce livre se lit facilement. 这本书容易读。"
+          "text": "容易地，不费力地",
+          "examples": [
+            {
+              "fr": "Ce livre se lit facilement",
+              "zh": "这本书容易读"
+            }
+          ]
         }
       ]
     },
@@ -1461,7 +2327,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "最后，终于: Finalement, il a accepté.最后他接受了。"
+          "text": "最后，终于",
+          "examples": [
+            {
+              "fr": "Finalement, il a accepté",
+              "zh": "最后他接受了"
+            }
+          ]
         }
       ]
     },
@@ -1478,7 +2350,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "必然地，不可避免地: Il rentrera forcément, puisqu'il n'a pas mangé.既然他没有吃过饭，必然会回来。"
+          "text": "必然地，不可避免地",
+          "examples": [
+            {
+              "fr": "Il rentrera forcément, puisqu'il n'a pas mangé",
+              "zh": "既然他没有吃过饭，必然会回来"
+            }
+          ]
         }
       ]
     },
@@ -1495,10 +2373,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "有力地，用力地，猛烈地: Parlez plus fort.讲得大声些。 Ne frappez pas si fort!不要敲得那么重!"
+          "text": "有力地，用力地，猛烈地",
+          "examples": [
+            {
+              "fr": "Parlez plus fort",
+              "zh": "讲得大声些"
+            },
+            {
+              "fr": "Ne frappez pas si fort!",
+              "zh": "不要敲得那么重!"
+            }
+          ]
         },
         {
-          "text": "非常，很: Ce gâteau est fort bon.这块蛋糕非常好吃。"
+          "text": "非常，很",
+          "examples": [
+            {
+              "fr": "Ce gâteau est fort bon",
+              "zh": "这块蛋糕非常好吃"
+            }
+          ]
         }
       ]
     },
@@ -1515,7 +2409,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "坦率地，直爽地: Je vous dis franchement que je ne suis pas d'accord. 我坦率地告诉您，我不同意。"
+          "text": "坦率地，直爽地",
+          "examples": [
+            {
+              "fr": "Je vous dis franchement que je ne suis pas d'accord",
+              "zh": "我坦率地告诉您，我不同意"
+            }
+          ]
         }
       ]
     },
@@ -1532,7 +2432,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "常常，经常: Ces accidents arrivent fréquemment.这类事故经常发生。"
+          "text": "常常，经常",
+          "examples": [
+            {
+              "fr": "Ces accidents arrivent fréquemment",
+              "zh": "这类事故经常发生"
+            }
+          ]
         }
       ]
     },
@@ -1549,7 +2455,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "快活地，愉快地: Les enfants chantent gaiement.孩子们在愉快地唱歌。"
+          "text": "快活地，愉快地",
+          "examples": [
+            {
+              "fr": "Les enfants chantent gaiement",
+              "zh": "孩子们在愉快地唱歌"
+            }
+          ]
         }
       ]
     },
@@ -1566,7 +2478,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "亲切地，可爱地: Marie m'a répondu gentiment.玛丽亲切地给了我回复。"
+          "text": "亲切地，可爱地",
+          "examples": [
+            {
+              "fr": "Marie m'a répondu gentiment",
+              "zh": "玛丽亲切地给了我回复"
+            }
+          ]
         }
       ]
     },
@@ -1583,7 +2501,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "免费地，无偿地: Les enfants voyagent gratuitement.孩子们免费旅游。"
+          "text": "免费地，无偿地",
+          "examples": [
+            {
+              "fr": "Les enfants voyagent gratuitement",
+              "zh": "孩子们免费旅游"
+            }
+          ]
         }
       ]
     },
@@ -1600,7 +2524,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "严重地: Il est gravement malade.他病得厉害。"
+          "text": "严重地",
+          "examples": [
+            {
+              "fr": "Il est gravement malade",
+              "zh": "他病得厉害"
+            }
+          ]
         }
       ]
     },
@@ -1617,7 +2547,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "严重地: Le conducteur de la voiture est grièvement blessé. 汽车司机严重受伤。"
+          "text": "严重地",
+          "examples": [
+            {
+              "fr": "Le conducteur de la voiture est grièvement blessé",
+              "zh": "汽车司机严重受伤"
+            }
+          ]
         }
       ]
     },
@@ -1634,7 +2570,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "一般地，通常: Généralement, il arrive au bureau avant 9 heures.一般地说，他在9点以前到办公室。"
+          "text": "一般地，通常",
+          "examples": [
+            {
+              "fr": "Généralement, il arrive au bureau avant 9 heures",
+              "zh": "一般地说，他在9点以前到办公室"
+            }
+          ]
         }
       ]
     },
@@ -1651,7 +2593,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "通常，惯常地，习惯性地: Habituellement, Paul vient nous voir le jeudi.通常，保尔每周四来看我们。"
+          "text": "通常，惯常地，习惯性地",
+          "examples": [
+            {
+              "fr": "Habituellement, Paul vient nous voir le jeudi",
+              "zh": "通常，保尔每周四来看我们"
+            }
+          ]
         }
       ]
     },
@@ -1668,10 +2616,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "高声地，大声地: Parlez plus haut.请您讲响点。"
+          "text": "高声地，大声地",
+          "examples": [
+            {
+              "fr": "Parlez plus haut",
+              "zh": "请您讲响点"
+            }
+          ]
         },
         {
-          "text": "【en】 haut loc. adv. 在高处，在上面: J'habite tout en haut, au dernier étage.我住在最上面，最高一层楼。"
+          "text": "【en】 haut loc. adv. 在高处，在上面",
+          "examples": [
+            {
+              "fr": "J'habite tout en haut, au dernier étage",
+              "zh": "我住在最上面，最高一层楼"
+            }
+          ]
         }
       ]
     },
@@ -1688,7 +2648,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "幸好: Il commence à pleuvoir; heureusement, j'ai pris mon imperméable. 天下起雨来;幸好我带了雨衣。"
+          "text": "幸好",
+          "examples": [
+            {
+              "fr": "Il commence à pleuvoir; heureusement, j'ai pris mon imperméable",
+              "zh": "天下起雨来;幸好我带了雨衣"
+            }
+          ]
         }
       ]
     },
@@ -1705,7 +2671,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "昨天: J'ai vu Paul hier.昨天我见到过保尔。"
+          "text": "昨天",
+          "examples": [
+            {
+              "fr": "J'ai vu Paul hier",
+              "zh": "昨天我见到过保尔"
+            }
+          ]
         }
       ]
     },
@@ -1722,7 +2694,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "唉!咳!哎呀![表示失望、遗憾、惋惜等]: Hélas! il est trop tard!唉!太晚了!"
+          "text": "唉!咳!哎呀![表示失望、遗憾、惋惜等]",
+          "examples": [
+            {
+              "fr": "Hélas! il est trop tard!",
+              "zh": "唉!太晚了!"
+            }
+          ]
         }
       ]
     },
@@ -1739,7 +2717,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "这里: Je reste ici. 我待在这里。 On passe par ici.我们从这边走。"
+          "text": "这里",
+          "examples": [
+            {
+              "fr": "Je reste ici",
+              "zh": "我待在这里"
+            },
+            {
+              "fr": "On passe par ici",
+              "zh": "我们从这边走"
+            }
+          ]
         }
       ]
     },
@@ -1756,7 +2744,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "立即，即时: Tu as de la fièvre, je vais dire au docteur de venir immédiatement.你在发烧，我去跟医生说叫他马上来。"
+          "text": "立即，即时",
+          "examples": [
+            {
+              "fr": "Tu as de la fièvre, je vais dire au docteur de venir immédiatement",
+              "zh": "你在发烧，我去跟医生说叫他马上来"
+            }
+          ]
         }
       ]
     },
@@ -1773,10 +2767,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "无限地，无穷地: Le ciel est infiniment grand.天空无限大。"
+          "text": "无限地，无穷地",
+          "examples": [
+            {
+              "fr": "Le ciel est infiniment grand",
+              "zh": "天空无限大"
+            }
+          ]
         },
         {
-          "text": "非常，极其: Cette musique me plaît infiniment.这首乐曲我非常喜欢。"
+          "text": "非常，极其",
+          "examples": [
+            {
+              "fr": "Cette musique me plaît infiniment",
+              "zh": "这首乐曲我非常喜欢"
+            }
+          ]
         }
       ]
     },
@@ -1793,7 +2799,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "从前，过去: Jadis, cette ville n'existait pas.从前这座城市不存在。"
+          "text": "从前，过去",
+          "examples": [
+            {
+              "fr": "Jadis, cette ville n'existait pas",
+              "zh": "从前这座城市不存在"
+            }
+          ]
         }
       ]
     },
@@ -1810,13 +2822,35 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "曾经: Avez-vous jamais observé ce phénomène? 您是否曾经观察过这种现象?"
+          "text": "曾经",
+          "examples": [
+            {
+              "fr": "Avez-vous jamais observé ce phénomène?",
+              "zh": "您是否曾经观察过这种现象?"
+            }
+          ]
         },
         {
-          "text": "将来有一天: Si jamais vous le voyez, vous lui direz que j'ai besoin de son aide.如果有一天您见到他，您对他说我需要他的帮助。"
+          "text": "将来有一天",
+          "examples": [
+            {
+              "fr": "Si jamais vous le voyez, vous lui direz que j'ai besoin de son aide",
+              "zh": "如果有一天您见到他，您对他说我需要他的帮助"
+            }
+          ]
         },
         {
-          "text": ".. jamais 从来没有，从未;永远不: Je ne triche jamais.我从不作弊。 Il ne m'a jamais vu.他从未见到过我。"
+          "text": ".. jamais 从来没有，从未;永远不",
+          "examples": [
+            {
+              "fr": "Je ne triche jamais",
+              "zh": "我从不作弊"
+            },
+            {
+              "fr": "Il ne m'a jamais vu",
+              "zh": "他从未见到过我"
+            }
+          ]
         }
       ]
     },
@@ -1833,7 +2867,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "快乐地，喜悦地，高兴地: On fête joyeusement Noël.人们喜庆圣诞节。"
+          "text": "快乐地，喜悦地，高兴地",
+          "examples": [
+            {
+              "fr": "On fête joyeusement Noël",
+              "zh": "人们喜庆圣诞节"
+            }
+          ]
         }
       ]
     },
@@ -1850,7 +2890,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "正好，恰好: Tiens, te voilà! Nous parlions justement de toi. 瞧，你来了!我们正好说到你。"
+          "text": "正好，恰好",
+          "examples": [
+            {
+              "fr": "Tiens, te voilà! Nous parlions justement de toi",
+              "zh": "瞧，你来了!我们正好说到你"
+            }
+          ]
         }
       ]
     },
@@ -1867,7 +2913,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "大大地;大量地，宽裕地: Pour aérer ma chambre, j'ouvre largement ma fenêtre.为使房间通风，我把窗开得大大的。 J'ai largement le temps de préparer le dîner.我有宽裕的时间准备晚餐。"
+          "text": "大大地;大量地，宽裕地",
+          "examples": [
+            {
+              "fr": "Pour aérer ma chambre, j'ouvre largement ma fenêtre",
+              "zh": "为使房间通风，我把窗开得大大的"
+            },
+            {
+              "fr": "J'ai largement le temps de préparer le dîner",
+              "zh": "我有宽裕的时间准备晚餐"
+            }
+          ]
         }
       ]
     },
@@ -1884,7 +2940,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "缓慢地，慢腾腾地: Marie mange lentement.玛丽吃饭慢腾腾。"
+          "text": "缓慢地，慢腾腾地",
+          "examples": [
+            {
+              "fr": "Marie mange lentement",
+              "zh": "玛丽吃饭慢腾腾"
+            }
+          ]
         }
       ]
     },
@@ -1901,13 +2963,31 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "远，遥远: J'habite loin. 我住得远。"
+          "text": "远，遥远",
+          "examples": [
+            {
+              "fr": "J'habite loin",
+              "zh": "我住得远"
+            }
+          ]
         },
         {
-          "text": "【de loin】 loc. adv.从远处: On voit de loin la tour Eiffel.很远便可望见埃菲尔铁塔。"
+          "text": "【de loin】 loc. adv.从远处",
+          "examples": [
+            {
+              "fr": "On voit de loin la tour Eiffel",
+              "zh": "很远便可望见埃菲尔铁塔"
+            }
+          ]
         },
         {
-          "text": "【loin de】 loc. prép.远离: L'école est loin de chez moi.学校离我家远。"
+          "text": "【loin de】 loc. prép.远离",
+          "examples": [
+            {
+              "fr": "L'école est loin de chez moi",
+              "zh": "学校离我家远"
+            }
+          ]
         }
       ]
     },
@@ -1924,7 +3004,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "长久地，很久: La visite ne durera pas longtemps. 参观时间不会很长。"
+          "text": "长久地，很久",
+          "examples": [
+            {
+              "fr": "La visite ne durera pas longtemps",
+              "zh": "参观时间不会很长"
+            }
+          ]
         }
       ]
     },
@@ -1958,25 +3044,67 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "那儿，那里: Votre stylo n'est pas ici, je le vois là， sur l'autre bureau.您的钢笔不在这里，我看见在那儿，在另一张办公桌上。"
+          "text": "那儿，那里",
+          "examples": [
+            {
+              "fr": "Votre stylo n'est pas ici, je le vois là， sur l'autre bureau",
+              "zh": "您的钢笔不在这里，我看见在那儿，在另一张办公桌上"
+            }
+          ]
         },
         {
-          "text": "这儿，这里: Le directeur n'est pas là en ce moment, voulez-vous rappeler plus tard?经理不在，请您过会再打。"
+          "text": "这儿，这里",
+          "examples": [
+            {
+              "fr": "Le directeur n'est pas là en ce moment, voulez-vous rappeler plus tard?",
+              "zh": "经理不在，请您过会再打"
+            }
+          ]
         },
         {
-          "text": "là-bas 在那儿: Vous voyez cette maison là-bas, c'est là que j'habite.你们看那边的那幢房子，我就住在那儿。"
+          "text": "là-bas 在那儿",
+          "examples": [
+            {
+              "fr": "Vous voyez cette maison là-bas, c'est là que j'habite",
+              "zh": "你们看那边的那幢房子，我就住在那儿"
+            }
+          ]
         },
         {
-          "text": "là-dedans 在这里面: Inutile de chercher là-dedans.在这里面找没用。"
+          "text": "là-dedans 在这里面",
+          "examples": [
+            {
+              "fr": "Inutile de chercher là-dedans",
+              "zh": "在这里面找没用"
+            }
+          ]
         },
         {
-          "text": "là-dessous 在这下面: Votre clef est peut-être là-dessous.您的钥匙可能在这下面。"
+          "text": "là-dessous 在这下面",
+          "examples": [
+            {
+              "fr": "Votre clef est peut-être là-dessous",
+              "zh": "您的钥匙可能在这下面"
+            }
+          ]
         },
         {
-          "text": "là-dessus 在这上面: J'avais posé mon livre là-dessus.我是把书放在这上面的。"
+          "text": "là-dessus 在这上面",
+          "examples": [
+            {
+              "fr": "J'avais posé mon livre là-dessus",
+              "zh": "我是把书放在这上面的"
+            }
+          ]
         },
         {
-          "text": "là-haut 在那上面: Il est là-haut, au grenier. 他在上面，在顶楼。"
+          "text": "là-haut 在那上面",
+          "examples": [
+            {
+              "fr": "Il est là-haut, au grenier",
+              "zh": "他在上面，在顶楼"
+            }
+          ]
         }
       ]
     },
@@ -1993,13 +3121,31 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "轻轻地，轻微地: Ne vous inquiétez pas, Nicolas est légèrement blessé.您别担心，尼古拉只受了点轻伤。"
+          "text": "轻轻地，轻微地",
+          "examples": [
+            {
+              "fr": "Ne vous inquiétez pas, Nicolas est légèrement blessé",
+              "zh": "您别担心，尼古拉只受了点轻伤"
+            }
+          ]
         },
         {
-          "text": "轻便地，单薄地: Tu es habillé trop légèrement. 你穿得太单薄。"
+          "text": "轻便地，单薄地",
+          "examples": [
+            {
+              "fr": "Tu es habillé trop légèrement",
+              "zh": "你穿得太单薄"
+            }
+          ]
         },
         {
-          "text": "简便地，少量地: Je déjeunerai légèrement.午餐我简便地吃一些。"
+          "text": "简便地，少量地",
+          "examples": [
+            {
+              "fr": "Je déjeunerai légèrement",
+              "zh": "午餐我简便地吃一些"
+            }
+          ]
         }
       ]
     },
@@ -2016,7 +3162,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "现在，目前: Autrefois nous habitions à Paris, maintenant nous sommes installés en banlieue.以前我们住在巴黎，现在我们在郊区安了家。"
+          "text": "现在，目前",
+          "examples": [
+            {
+              "fr": "Autrefois nous habitions à Paris, maintenant nous sommes installés en banlieue",
+              "zh": "以前我们住在巴黎，现在我们在郊区安了家"
+            }
+          ]
         }
       ]
     },
@@ -2033,7 +3185,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "不幸地;可惜: Je voulais voir Pierre, malheureusement il est parti.我想见见皮埃尔，可惜他走了。"
+          "text": "不幸地;可惜",
+          "examples": [
+            {
+              "fr": "Je voulais voir Pierre, malheureusement il est parti",
+              "zh": "我想见见皮埃尔，可惜他走了"
+            }
+          ]
         }
       ]
     },
@@ -2050,16 +3208,40 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "坏，不好: Il écrit mal.他写得不好。"
+          "text": "坏，不好",
+          "examples": [
+            {
+              "fr": "Il écrit mal",
+              "zh": "他写得不好"
+            }
+          ]
         },
         {
-          "text": "不舒服，不适: Je me sens mal. 我感到不舒服。"
+          "text": "不舒服，不适",
+          "examples": [
+            {
+              "fr": "Je me sens mal",
+              "zh": "我感到不舒服"
+            }
+          ]
         },
         {
-          "text": "【pas mal】 不错，不坏: Comment vont les affaires? — Pas mal.生意怎么样?一不坏。"
+          "text": "【pas mal】 不错，不坏",
+          "examples": [
+            {
+              "fr": "Comment vont les affaires? — Pas mal",
+              "zh": "生意怎么样?一不坏"
+            }
+          ]
         },
         {
-          "text": "【pas mal de】 很多，不少: Il y a pas mal de gens dans les rues. 大街上有不少人。"
+          "text": "【pas mal de】 很多，不少",
+          "examples": [
+            {
+              "fr": "Il y a pas mal de gens dans les rues",
+              "zh": "大街上有不少人"
+            }
+          ]
         }
       ]
     },
@@ -2076,7 +3258,21 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "谢谢: Merci beaucoup.非常感谢。 Merci de votre cadeau.谢谢您的礼物。 Non, merci, je ne fume pas.不，谢谢，我不抽烟。"
+          "text": "谢谢",
+          "examples": [
+            {
+              "fr": "Merci beaucoup",
+              "zh": "非常感谢"
+            },
+            {
+              "fr": "Merci de votre cadeau",
+              "zh": "谢谢您的礼物"
+            },
+            {
+              "fr": "Non, merci, je ne fume pas",
+              "zh": "不，谢谢，我不抽烟"
+            }
+          ]
         }
       ]
     },
@@ -2093,10 +3289,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "更好地[bien 的比较级]: Jacqueline dessine mieux qu'Isabelle.雅克琳比伊莎贝尔画得好。"
+          "text": "更好地[bien 的比较级]",
+          "examples": [
+            {
+              "fr": "Jacqueline dessine mieux qu'Isabelle",
+              "zh": "雅克琳比伊莎贝尔画得好"
+            }
+          ]
         },
         {
-          "text": "最好地[与定冠词连用构成 bien 的最高级]: De toute la classe, c'est Julie qui travaille le mieux.班里是朱莉学习最好。"
+          "text": "最好地[与定冠词连用构成 bien 的最高级]",
+          "examples": [
+            {
+              "fr": "De toute la classe, c'est Julie qui travaille le mieux",
+              "zh": "班里是朱莉学习最好"
+            }
+          ]
         }
       ]
     },
@@ -2113,16 +3321,60 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "比…少，不如[构成形容词或副词的比较级]: Je suis moins grand que toi.我没你高。 Parlez moins vite.您讲得慢一些。 Le sac coûte moins cher.这只包不太贵。"
+          "text": "比…少，不如[构成形容词或副词的比较级]",
+          "examples": [
+            {
+              "fr": "Je suis moins grand que toi",
+              "zh": "我没你高"
+            },
+            {
+              "fr": "Parlez moins vite",
+              "zh": "您讲得慢一些"
+            },
+            {
+              "fr": "Le sac coûte moins cher",
+              "zh": "这只包不太贵"
+            }
+          ]
         },
         {
-          "text": "最不，最少[构成形容词或副词的最高级]: La maison de Sophie est moins grande que celle de Marianne, mais ce n'est pas la moins grande du quartier. 索菲的房子不如玛丽安娜的大，但不是街区里最小的。 Elle va au cinéma le moins souvent de sa classe.她是班里最少去看电影的人。"
+          "text": "最不，最少[构成形容词或副词的最高级]",
+          "examples": [
+            {
+              "fr": "La maison de Sophie est moins grande que celle de Marianne, mais ce n'est pas la moins grande du quartier",
+              "zh": "索菲的房子不如玛丽安娜的大，但不是街区里最小的"
+            },
+            {
+              "fr": "Elle va au cinéma le moins souvent de sa classe",
+              "zh": "她是班里最少去看电影的人"
+            }
+          ]
         },
         {
-          "text": "更少，较少[peu 的比较级]: Paul travaille peu, mais Pierre travaille encore moins.保尔干得不多，但皮埃尔干得更少。 Dans notre classe, il y a moins de filles que de garçons.在我们班里，女孩没有男孩多。"
+          "text": "更少，较少[peu 的比较级]",
+          "examples": [
+            {
+              "fr": "Paul travaille peu, mais Pierre travaille encore moins",
+              "zh": "保尔干得不多，但皮埃尔干得更少"
+            },
+            {
+              "fr": "Dans notre classe, il y a moins de filles que de garçons",
+              "zh": "在我们班里，女孩没有男孩多"
+            }
+          ]
         },
         {
-          "text": "最少，最不[与定冠词连用构成 peu 的最高级]: Ma grand-mère mange le moins.我祖母吃得最少。 Il a le moins de capacité pour ce travail.做这项工作他能力最差。"
+          "text": "最少，最不[与定冠词连用构成 peu 的最高级]",
+          "examples": [
+            {
+              "fr": "Ma grand-mère mange le moins",
+              "zh": "我祖母吃得最少"
+            },
+            {
+              "fr": "Il a le moins de capacité pour ce travail",
+              "zh": "做这项工作他能力最差"
+            }
+          ]
         }
       ]
     },
@@ -2139,10 +3391,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "道德上，道义上: Il est moralement vainqueur.道义上他是赢家。"
+          "text": "道德上，道义上",
+          "examples": [
+            {
+              "fr": "Il est moralement vainqueur",
+              "zh": "道义上他是赢家"
+            }
+          ]
         },
         {
-          "text": "精神上: Elle me soutient moralement.她在精神上支持我。"
+          "text": "精神上",
+          "examples": [
+            {
+              "fr": "Elle me soutient moralement",
+              "zh": "她在精神上支持我"
+            }
+          ]
         }
       ]
     },
@@ -2159,13 +3423,39 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "甚至: Dans le bateau, tout le monde est malade, même Jacques. 在船上，大家都病了，甚至雅克也病了。 Je ne me rappelle même plus son nom. 我甚至连他的名字都记不起来了。"
+          "text": "甚至",
+          "examples": [
+            {
+              "fr": "Dans le bateau, tout le monde est malade, même Jacques",
+              "zh": "在船上，大家都病了，甚至雅克也病了"
+            },
+            {
+              "fr": "Je ne me rappelle même plus son nom",
+              "zh": "我甚至连他的名字都记不起来了"
+            }
+          ]
         },
         {
-          "text": "【même si】 即使: Je prendrai mon vélo, même s'il pleut.即使下雨，我也骑自行车。"
+          "text": "【même si】 即使",
+          "examples": [
+            {
+              "fr": "Je prendrai mon vélo, même s'il pleut",
+              "zh": "即使下雨，我也骑自行车"
+            }
+          ]
         },
         {
-          "text": "【quand même, tout de même】 loc. adv.仍然，还是: Il pleuvait, mais il est parti quand même. 当时天下雨，但他还是动身了。 Il a réussi tout de même.他还是成功了。"
+          "text": "【quand même, tout de même】 loc. adv.仍然，还是",
+          "examples": [
+            {
+              "fr": "Il pleuvait, mais il est parti quand même",
+              "zh": "当时天下雨，但他还是动身了"
+            },
+            {
+              "fr": "Il a réussi tout de même",
+              "zh": "他还是成功了"
+            }
+          ]
         }
       ]
     },
@@ -2182,10 +3472,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "必然地，自然而然地: Quand j'ai appris cette nouvelle, j'ai naturellement téléphoné à mes parents.当我得知这条消息后，我自然给我父母打了电话。"
+          "text": "必然地，自然而然地",
+          "examples": [
+            {
+              "fr": "Quand j'ai appris cette nouvelle, j'ai naturellement téléphoné à mes parents",
+              "zh": "当我得知这条消息后，我自然给我父母打了电话"
+            }
+          ]
         },
         {
-          "text": "当然: As-tu pensé à fermer la porte? — Naturellement.你有没有想到把门关上?一当然想到了。"
+          "text": "当然",
+          "examples": [
+            {
+              "fr": "As-tu pensé à fermer la porte? — Naturellement",
+              "zh": "你有没有想到把门关上?一当然想到了"
+            }
+          ]
         }
       ]
     },
@@ -2202,7 +3504,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "清楚地;明显地: On voit nettement tous les détails de la photo. 照片的各个细部看得清清楚楚。 Pierre est nettement fort au tennis. 皮埃尔打网球明显打得好。"
+          "text": "清楚地;明显地",
+          "examples": [
+            {
+              "fr": "On voit nettement tous les détails de la photo",
+              "zh": "照片的各个细部看得清清楚楚"
+            },
+            {
+              "fr": "Pierre est nettement fort au tennis",
+              "zh": "皮埃尔打网球明显打得好"
+            }
+          ]
         }
       ]
     },
@@ -2219,7 +3531,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "不，不是，没有: Voulez-vous du café? — Non, merci.您要喝点咖啡吗?一不要，谢谢。 Veux-tu jouer avec nous? — Non, je n'en ai pas envie.你想和我们一起玩吗?一不，我不想玩。"
+          "text": "不，不是，没有",
+          "examples": [
+            {
+              "fr": "Voulez-vous du café? — Non, merci",
+              "zh": "您要喝点咖啡吗?一不要，谢谢"
+            },
+            {
+              "fr": "Veux-tu jouer avec nous? — Non, je n'en ai pas envie",
+              "zh": "你想和我们一起玩吗?一不，我不想玩"
+            }
+          ]
         }
       ]
     },
@@ -2236,7 +3558,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "正常地，在正常情况下，通常: Normalement, il rentre chez lui à 5 heures. 通常，他五点回到家里。"
+          "text": "正常地，在正常情况下，通常",
+          "examples": [
+            {
+              "fr": "Normalement, il rentre chez lui à 5 heures",
+              "zh": "通常，他五点回到家里"
+            }
+          ]
         }
       ]
     },
@@ -2253,7 +3581,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "特别是，尤其: Dominique aime tous les sports, notamment le judo.多米尼克喜欢各项体育运动，尤其是柔道。"
+          "text": "特别是，尤其",
+          "examples": [
+            {
+              "fr": "Dominique aime tous les sports, notamment le judo",
+              "zh": "多米尼克喜欢各项体育运动，尤其是柔道"
+            }
+          ]
         }
       ]
     },
@@ -2270,7 +3604,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "必然，必定: Il viendra nécessairement.他必然会来。"
+          "text": "必然，必定",
+          "examples": [
+            {
+              "fr": "Il viendra nécessairement",
+              "zh": "他必然会来"
+            }
+          ]
         }
       ]
     },
@@ -2287,7 +3627,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "正式地: On l'a averti officiellement. 他正式接到了通知。"
+          "text": "正式地",
+          "examples": [
+            {
+              "fr": "On l'a averti officiellement",
+              "zh": "他正式接到了通知"
+            }
+          ]
         }
       ]
     },
@@ -2304,7 +3650,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "恰好，及时: Tu es arrivé opportunément.你恰好到了。"
+          "text": "恰好，及时",
+          "examples": [
+            {
+              "fr": "Tu es arrivé opportunément",
+              "zh": "你恰好到了"
+            }
+          ]
         }
       ]
     },
@@ -2321,7 +3673,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "口头上: Répondez oralement.您给口头答复吧。"
+          "text": "口头上",
+          "examples": [
+            {
+              "fr": "Répondez oralement",
+              "zh": "您给口头答复吧"
+            }
+          ]
         }
       ]
     },
@@ -2338,7 +3696,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "通常，平常: Ordinairement, il vient le jeudi. 通常他每周四来。"
+          "text": "通常，平常",
+          "examples": [
+            {
+              "fr": "Ordinairement, il vient le jeudi",
+              "zh": "通常他每周四来"
+            }
+          ]
         }
       ]
     },
@@ -2355,7 +3719,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "是，是的: Tu viens? — Oui.你来吗?—来的。"
+          "text": "是，是的",
+          "examples": [
+            {
+              "fr": "Tu viens? — Oui",
+              "zh": "你来吗?—来的"
+            }
+          ]
         }
       ]
     },
@@ -2372,7 +3742,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "坦率地，公开地: Il a déclaré ouvertement qu'il ne craignait personne.他公开宣称他不怕任何人。"
+          "text": "坦率地，公开地",
+          "examples": [
+            {
+              "fr": "Il a déclaré ouvertement qu'il ne craignait personne",
+              "zh": "他公开宣称他不怕任何人"
+            }
+          ]
         }
       ]
     },
@@ -2389,10 +3765,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "【adv. interr.】 在哪儿，去哪儿: Où travaille-t-il? 他在哪儿工作?"
+          "text": "【adv. interr.】 在哪儿，去哪儿",
+          "examples": [
+            {
+              "fr": "Où travaille-t-il?",
+              "zh": "他在哪儿工作?"
+            }
+          ]
         },
         {
-          "text": "【pron. rel.】 …地方，…时候: Voilà la maison où habite mon ami.这就是我朋友住的房子。 J'attends l'heure où il sortira.我在等什么时候他出去。"
+          "text": "【pron. rel.】 …地方，…时候",
+          "examples": [
+            {
+              "fr": "Voilà la maison où habite mon ami",
+              "zh": "这就是我朋友住的房子"
+            },
+            {
+              "fr": "J'attends l'heure où il sortira",
+              "zh": "我在等什么时候他出去"
+            }
+          ]
         }
       ]
     },
@@ -2409,7 +3801,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "平行地: Les arbres sont alignés parallèlement à la route. 树与公路平行地排成行。"
+          "text": "平行地",
+          "examples": [
+            {
+              "fr": "Les arbres sont alignés parallèlement à la route",
+              "zh": "树与公路平行地排成行"
+            }
+          ]
         }
       ]
     },
@@ -2426,7 +3824,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "完美地，极好地: Paul joue parfaitement du violon.保尔小提琴拉得非常好。"
+          "text": "完美地，极好地",
+          "examples": [
+            {
+              "fr": "Paul joue parfaitement du violon",
+              "zh": "保尔小提琴拉得非常好"
+            }
+          ]
         }
       ]
     },
@@ -2443,7 +3847,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "有时: J'aide parfois mon père à bricoler. 有时我帮父亲修修弄弄。"
+          "text": "有时",
+          "examples": [
+            {
+              "fr": "J'aide parfois mon père à bricoler",
+              "zh": "有时我帮父亲修修弄弄"
+            }
+          ]
         }
       ]
     },
@@ -2460,7 +3870,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "特别，尤其: Elle aime les fruits, particulièrement les poires. 她喜欢吃水果，尤其是梨子。"
+          "text": "特别，尤其",
+          "examples": [
+            {
+              "fr": "Elle aime les fruits, particulièrement les poires",
+              "zh": "她喜欢吃水果，尤其是梨子"
+            }
+          ]
         }
       ]
     },
@@ -2477,7 +3893,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "部分地，局部地: Le pont a été partiellement détruit.桥部分被毁。"
+          "text": "部分地，局部地",
+          "examples": [
+            {
+              "fr": "Le pont a été partiellement détruit",
+              "zh": "桥部分被毁"
+            }
+          ]
         }
       ]
     },
@@ -2494,7 +3916,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "到处，处处: Mon chien me suit partout.我的狗跟随我到处走。"
+          "text": "到处，处处",
+          "examples": [
+            {
+              "fr": "Mon chien me suit partout",
+              "zh": "我的狗跟随我到处走"
+            }
+          ]
         }
       ]
     },
@@ -2511,7 +3939,21 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "不，没有[和 ne 连用或单独使用]: On ne travaille pas les jours de fête.节假日人们不工作。 Il aime les ananas, pas moi.他喜欢吃菠萝，我不喜欢。 Il est rentré? —Pas encore. 他回家了?—还没有。"
+          "text": "不，没有[和 ne 连用或单独使用]",
+          "examples": [
+            {
+              "fr": "On ne travaille pas les jours de fête",
+              "zh": "节假日人们不工作"
+            },
+            {
+              "fr": "Il aime les ananas, pas moi",
+              "zh": "他喜欢吃菠萝，我不喜欢"
+            },
+            {
+              "fr": "Il est rentré? —Pas encore",
+              "zh": "他回家了?—还没有"
+            }
+          ]
         }
       ]
     },
@@ -2528,7 +3970,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "耐心地: Paul attend patiemment.保尔在耐心等待。"
+          "text": "耐心地",
+          "examples": [
+            {
+              "fr": "Paul attend patiemment",
+              "zh": "保尔在耐心等待"
+            }
+          ]
         }
       ]
     },
@@ -2545,10 +3993,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "亲自: Je m'occuperai personnellement de votre affaire. 我亲自负责做您的事情。"
+          "text": "亲自",
+          "examples": [
+            {
+              "fr": "Je m'occuperai personnellement de votre affaire",
+              "zh": "我亲自负责做您的事情"
+            }
+          ]
         },
         {
-          "text": "作为个人，就个人而言: Personnellement, je ne suis pas de cet avis.就个人而言，我不赞同这种想法。"
+          "text": "作为个人，就个人而言",
+          "examples": [
+            {
+              "fr": "Personnellement, je ne suis pas de cet avis",
+              "zh": "就个人而言，我不赞同这种想法"
+            }
+          ]
         }
       ]
     },
@@ -2565,10 +4025,38 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "少，不多;不大，不太: Georges n'a pas d'appétit, il mange peu. 乔治没胃口，他吃得少。 Il y a peu de fraises cette année. 今年草莓不多。 Paul est peu at-tentif en classe.保尔在课堂上不太专心。"
+          "text": "少，不多;不大，不太",
+          "examples": [
+            {
+              "fr": "Georges n'a pas d'appétit, il mange peu",
+              "zh": "乔治没胃口，他吃得少"
+            },
+            {
+              "fr": "Il y a peu de fraises cette année",
+              "zh": "今年草莓不多"
+            },
+            {
+              "fr": "Paul est peu at-tentif en classe",
+              "zh": "保尔在课堂上不太专心"
+            }
+          ]
         },
         {
-          "text": "【un peu】 一点儿，少量，稍微: Attendez un peu.您稍等。 Il va un peu mieux.他好些了。 Donnez-moi un peu de sel.给我一点盐。"
+          "text": "【un peu】 一点儿，少量，稍微",
+          "examples": [
+            {
+              "fr": "Attendez un peu",
+              "zh": "您稍等"
+            },
+            {
+              "fr": "Il va un peu mieux",
+              "zh": "他好些了"
+            },
+            {
+              "fr": "Donnez-moi un peu de sel",
+              "zh": "给我一点盐"
+            }
+          ]
         }
       ]
     },
@@ -2585,7 +4073,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "可能，也许: Ici, nous trouverons peut-être des champignons. 在这里我们也许能采到蘑菇。"
+          "text": "可能，也许",
+          "examples": [
+            {
+              "fr": "Ici, nous trouverons peut-être des champignons",
+              "zh": "在这里我们也许能采到蘑菇"
+            }
+          ]
         }
       ]
     },
@@ -2602,7 +4096,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "身体上，相貌上: Physiquement, il ressemble à Georges.从长相上看，他像乔治。"
+          "text": "身体上，相貌上",
+          "examples": [
+            {
+              "fr": "Physiquement, il ressemble à Georges",
+              "zh": "从长相上看，他像乔治"
+            }
+          ]
         }
       ]
     },
@@ -2619,10 +4119,38 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "比…更[用于比较级]: Marie est plus jeune que Jeanne.玛丽比让娜年轻。 Pierre travaille beaucoup, mais Paul travaille encore plus [plys]. 皮埃尔干活干得多，但保尔干得还要多。 Dans notre classe, il y a plus de bruns que de blonds.在我们班里，棕色头发比金黄色头发多。"
+          "text": "比…更[用于比较级]",
+          "examples": [
+            {
+              "fr": "Marie est plus jeune que Jeanne",
+              "zh": "玛丽比让娜年轻"
+            },
+            {
+              "fr": "Pierre travaille beaucoup, mais Paul travaille encore plus [plys]",
+              "zh": "皮埃尔干活干得多，但保尔干得还要多"
+            },
+            {
+              "fr": "Dans notre classe, il y a plus de bruns que de blonds",
+              "zh": "在我们班里，棕色头发比金黄色头发多"
+            }
+          ]
         },
         {
-          "text": "最…[用于最高级]: Marie est la plus jeune de la classe. 玛丽是班里年龄最小的。 Paul travaille le plus [plys].保尔干活干得最多。 Pierre a fait le plus de fautes dans sa dictée.皮埃尔听写错得最多。"
+          "text": "最…[用于最高级]",
+          "examples": [
+            {
+              "fr": "Marie est la plus jeune de la classe",
+              "zh": "玛丽是班里年龄最小的"
+            },
+            {
+              "fr": "Paul travaille le plus [plys]",
+              "zh": "保尔干活干得最多"
+            },
+            {
+              "fr": "Pierre a fait le plus de fautes dans sa dictée",
+              "zh": "皮埃尔听写错得最多"
+            }
+          ]
         }
       ]
     },
@@ -2639,7 +4167,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "宁愿;与其…倒不如: Je pars aujourd'hui plutôt que demain. 我宁愿今天动身，而不要明天动身。 Le train ou la voiture? — Je prendrai plutôt le train.乘火车还是开车去?—我更愿乘火车。"
+          "text": "宁愿;与其…倒不如",
+          "examples": [
+            {
+              "fr": "Je pars aujourd'hui plutôt que demain",
+              "zh": "我宁愿今天动身，而不要明天动身"
+            },
+            {
+              "fr": "Le train ou la voiture? — Je prendrai plutôt le train",
+              "zh": "乘火车还是开车去?—我更愿乘火车"
+            }
+          ]
         }
       ]
     },
@@ -2656,7 +4194,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "并不，并没有[和 ne连用]: Je ne le comprends point.我并没有理解他的意思。"
+          "text": "并不，并没有[和 ne连用]",
+          "examples": [
+            {
+              "fr": "Je ne le comprends point",
+              "zh": "我并没有理解他的意思"
+            }
+          ]
         }
       ]
     },
@@ -2690,10 +4234,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "为什么:Pourquoi ris-tu? 你为什么笑? Je me demande pourquoi tu ris.我在想你为什么笑。"
+          "text": "为什么",
+          "examples": [
+            {
+              "fr": "Pourquoi ris-tu?",
+              "zh": "你为什么笑? Je me demande pourquoi tu ris.我在想你为什么笑"
+            }
+          ]
         },
         {
-          "text": "【c'est pourquoi】 loc. conj. 所以，因此: Il pleut, c'est pourquoi je reste. 天下雨，所以我留下了。"
+          "text": "【c'est pourquoi】 loc. conj. 所以，因此",
+          "examples": [
+            {
+              "fr": "Il pleut, c'est pourquoi je reste",
+              "zh": "天下雨，所以我留下了"
+            }
+          ]
         }
       ]
     },
@@ -2710,7 +4266,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "然而，可是: Il est malade, pourtant il est venu.他病了，然而他却来了。"
+          "text": "然而，可是",
+          "examples": [
+            {
+              "fr": "Il est malade, pourtant il est venu",
+              "zh": "他病了，然而他却来了"
+            }
+          ]
         }
       ]
     },
@@ -2727,10 +4289,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "实践上;实际上: Théoriquement, ça a l'air facile, mais pratiquement, c'est difficile.理论上看来容易，但实际上是难的。"
+          "text": "实践上;实际上",
+          "examples": [
+            {
+              "fr": "Théoriquement, ça a l'air facile, mais pratiquement, c'est difficile",
+              "zh": "理论上看来容易，但实际上是难的"
+            }
+          ]
         },
         {
-          "text": "几乎，简直: Il est pratiquement huit heures.差不多8点了。"
+          "text": "几乎，简直",
+          "examples": [
+            {
+              "fr": "Il est pratiquement huit heures",
+              "zh": "差不多8点了"
+            }
+          ]
         }
       ]
     },
@@ -2747,7 +4321,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "首先，第一: Premièrement, tu iras à la boulangerie; deuxièmement, à la boucherie.你先去面包房，然后再去肉店。"
+          "text": "首先，第一",
+          "examples": [
+            {
+              "fr": "Premièrement, tu iras à la boulangerie; deuxièmement, à la boucherie",
+              "zh": "你先去面包房，然后再去肉店"
+            }
+          ]
         }
       ]
     },
@@ -2764,7 +4344,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "几乎，差不多: Il est presque 10 heures.现在差不多10点了。"
+          "text": "几乎，差不多",
+          "examples": [
+            {
+              "fr": "Il est presque 10 heures",
+              "zh": "现在差不多10点了"
+            }
+          ]
         }
       ]
     },
@@ -2798,7 +4384,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "可能，大概: Tu penses que la boulangerie est fermée? — Probablement.你认为面包房关门了吗?—大概关门了。"
+          "text": "可能，大概",
+          "examples": [
+            {
+              "fr": "Tu penses que la boulangerie est fermée? — Probablement",
+              "zh": "你认为面包房关门了吗?—大概关门了"
+            }
+          ]
         }
       ]
     },
@@ -2815,7 +4407,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "不久以后，即将: Nous allons nous revoir prochainement. 我们不久以后再见。"
+          "text": "不久以后，即将",
+          "examples": [
+            {
+              "fr": "Nous allons nous revoir prochainement",
+              "zh": "我们不久以后再见"
+            }
+          ]
         }
       ]
     },
@@ -2832,10 +4430,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "深，深深地: Le couteau a pénétré profondément.刀扎得很深。"
+          "text": "深，深深地",
+          "examples": [
+            {
+              "fr": "Le couteau a pénétré profondément",
+              "zh": "刀扎得很深"
+            }
+          ]
         },
         {
-          "text": "极大地，完全地: Pierre est profondément ému.皮埃尔非常激动。"
+          "text": "极大地，完全地",
+          "examples": [
+            {
+              "fr": "Pierre est profondément ému",
+              "zh": "皮埃尔非常激动"
+            }
+          ]
         }
       ]
     },
@@ -2852,7 +4462,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "逐渐地，渐次地: La chaleur diminue progressivement.高溫在逐渐减弱。"
+          "text": "逐渐地，渐次地",
+          "examples": [
+            {
+              "fr": "La chaleur diminue progressivement",
+              "zh": "高溫在逐渐减弱"
+            }
+          ]
         }
       ]
     },
@@ -2869,7 +4485,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "临时地，暂时地: Ils logent provisoirement à l'hôtel.他们临时住在旅馆里。"
+          "text": "临时地，暂时地",
+          "examples": [
+            {
+              "fr": "Ils logent provisoirement à l'hôtel",
+              "zh": "他们临时住在旅馆里"
+            }
+          ]
         }
       ]
     },
@@ -2886,7 +4508,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "谨慎地，慎重地: M. Durand ne conduit pas prudemment.迪朗先生开车不谨慎。"
+          "text": "谨慎地，慎重地",
+          "examples": [
+            {
+              "fr": "M. Durand ne conduit pas prudemment",
+              "zh": "迪朗先生开车不谨慎"
+            }
+          ]
         }
       ]
     },
@@ -2903,16 +4531,44 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "近[常与 tout, très, si, trop 连用]: Pierre habite tout près.皮埃尔住得很近。"
+          "text": "近[常与 tout, très, si, trop 连用]",
+          "examples": [
+            {
+              "fr": "Pierre habite tout près",
+              "zh": "皮埃尔住得很近"
+            }
+          ]
         },
         {
-          "text": "【près de】 loc. prép. 靠近，邻近;将近: Cette île est située près de l'équateur.这座岛屿靠近赤道。 Debout! il est près de 8 heures.起床了!快8点了。"
+          "text": "【près de】 loc. prép. 靠近，邻近;将近",
+          "examples": [
+            {
+              "fr": "Cette île est située près de l'équateur",
+              "zh": "这座岛屿靠近赤道"
+            },
+            {
+              "fr": "Debout! il est près de 8 heures",
+              "zh": "起床了!快8点了"
+            }
+          ]
         },
         {
-          "text": "【de près】 loc. adv. 靠近地，贴近地: Regardez de près.您靠近看。"
+          "text": "【de près】 loc. adv. 靠近地，贴近地",
+          "examples": [
+            {
+              "fr": "Regardez de près",
+              "zh": "您靠近看"
+            }
+          ]
         },
         {
-          "text": "【à peu près】 loc. adv. 差不多，几乎: Il est à peu près 10 heures.差不多10点了。"
+          "text": "【à peu près】 loc. adv. 差不多，几乎",
+          "examples": [
+            {
+              "fr": "Il est à peu près 10 heures",
+              "zh": "差不多10点了"
+            }
+          ]
         }
       ]
     },
@@ -2929,7 +4585,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "珍贵地: Papa garde précieusement sa première photo de maman.爸爸珍藏着妈妈给他的第一张照片。"
+          "text": "珍贵地",
+          "examples": [
+            {
+              "fr": "Papa garde précieusement sa première photo de maman",
+              "zh": "爸爸珍藏着妈妈给他的第一张照片"
+            }
+          ]
         }
       ]
     },
@@ -2963,7 +4625,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "当众，在大庭广众: Le ministre a annoncé publiquement sa démission.部长当众宣布辞职。"
+          "text": "当众，在大庭广众",
+          "examples": [
+            {
+              "fr": "Le ministre a annoncé publiquement sa démission",
+              "zh": "部长当众宣布辞职"
+            }
+          ]
         }
       ]
     },
@@ -2980,10 +4648,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "接着，然后: Le soir au lit, je lis un peu, puis je m'endors. 晚上躺在床上，我 看一会儿书，然后我便入睡了。"
+          "text": "接着，然后",
+          "examples": [
+            {
+              "fr": "Le soir au lit, je lis un peu, puis je m'endors",
+              "zh": "晚上躺在床上，我 看一会儿书，然后我便入睡了"
+            }
+          ]
         },
         {
-          "text": "【et puis】此外，再说: Je n'ai pas fini ce roman, car j'étais très occupé， et puis il était fort ennuyeux.我没有看完这本小说，因为我很忙，再说小说十分枯燥乏味。"
+          "text": "【et puis】此外，再说",
+          "examples": [
+            {
+              "fr": "Je n'ai pas fini ce roman, car j'étais très occupé， et puis il était fort ennuyeux",
+              "zh": "我没有看完这本小说，因为我很忙，再说小说十分枯燥乏味"
+            }
+          ]
         }
       ]
     },
@@ -3000,7 +4680,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "费力地，困难地，艰难地: Mon grand-père marche péniblement.我祖父行走困难。"
+          "text": "费力地，困难地，艰难地",
+          "examples": [
+            {
+              "fr": "Mon grand-père marche péniblement",
+              "zh": "我祖父行走困难"
+            }
+          ]
         }
       ]
     },
@@ -3017,13 +4703,31 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "什么时候: Quand viendra-t-il?他什么时候来?"
+          "text": "什么时候",
+          "examples": [
+            {
+              "fr": "Quand viendra-t-il?",
+              "zh": "他什么时候来?"
+            }
+          ]
         },
         {
-          "text": "当…时: Je partirai quand mon vélo sera réparé.当我的自行车修好后我再动身。"
+          "text": "当…时",
+          "examples": [
+            {
+              "fr": "Je partirai quand mon vélo sera réparé",
+              "zh": "当我的自行车修好后我再动身"
+            }
+          ]
         },
         {
-          "text": "【quand même】loc.conj.仍然，还是: Marc a fait de la peine à sa mère, mais elle l'embrasse quand même.马克使他母亲感到不快，但他母亲还是拥吻了他。"
+          "text": "【quand même】loc.conj.仍然，还是",
+          "examples": [
+            {
+              "fr": "Marc a fait de la peine à sa mère, mais elle l'embrasse quand même",
+              "zh": "马克使他母亲感到不快，但他母亲还是拥吻了他"
+            }
+          ]
         }
       ]
     },
@@ -3040,13 +4744,31 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "indéf. sing.一点，少许: M. Duval a quelque expérience.杜瓦尔先生有点经验。"
+          "text": "indéf. sing.一点，少许",
+          "examples": [
+            {
+              "fr": "M. Duval a quelque expérience",
+              "zh": "杜瓦尔先生有点经验"
+            }
+          ]
         },
         {
-          "text": "indéf. pl.几个: Il a dit quelques mots et est parti.他说了几句话走了。"
+          "text": "indéf. pl.几个",
+          "examples": [
+            {
+              "fr": "Il a dit quelques mots et est parti",
+              "zh": "他说了几句话走了"
+            }
+          ]
         },
         {
-          "text": "大约，将近[只修饰数词]: Ilya quelque cinquante candidats à cet examen.这次考试约有五十来个考生。"
+          "text": "大约，将近[只修饰数词]",
+          "examples": [
+            {
+              "fr": "Ilya quelque cinquante candidats à cet examen",
+              "zh": "这次考试约有五十来个考生"
+            }
+          ]
         }
       ]
     },
@@ -3063,7 +4785,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "有时: Je vais quelquefois chez ma grand-mère. 我有时去我祖母家。"
+          "text": "有时",
+          "examples": [
+            {
+              "fr": "Je vais quelquefois chez ma grand-mère",
+              "zh": "我有时去我祖母家"
+            }
+          ]
         }
       ]
     },
@@ -3080,7 +4808,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "多么[引出感叹句]: Que c'est beau!多美啊! Que de monde!人真多!"
+          "text": "多么[引出感叹句]",
+          "examples": [
+            {
+              "fr": "Que c'est beau!",
+              "zh": "多美啊!"
+            },
+            {
+              "fr": "Que de monde!",
+              "zh": "人真多!"
+            }
+          ]
         }
       ]
     },
@@ -3097,7 +4835,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "根本地，彻底地: Il a été guéri radicalement de ses rhumatismes.他的风湿病得到了根治。"
+          "text": "根本地，彻底地",
+          "examples": [
+            {
+              "fr": "Il a été guéri radicalement de ses rhumatismes",
+              "zh": "他的风湿病得到了根治"
+            }
+          ]
         }
       ]
     },
@@ -3114,7 +4858,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "很快地，迅速地: Marche plus rapidement.你走得快些。"
+          "text": "很快地，迅速地",
+          "examples": [
+            {
+              "fr": "Marche plus rapidement",
+              "zh": "你走得快些"
+            }
+          ]
         }
       ]
     },
@@ -3131,7 +4881,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "很少地: Paul arrive rarement en retard.保尔很少迟到。"
+          "text": "很少地",
+          "examples": [
+            {
+              "fr": "Paul arrive rarement en retard",
+              "zh": "保尔很少迟到"
+            }
+          ]
         }
       ]
     },
@@ -3148,7 +4904,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "相对地: Cette langue est relativement difficile. 这门语言相对而言难学。"
+          "text": "相对地",
+          "examples": [
+            {
+              "fr": "Cette langue est relativement difficile",
+              "zh": "这门语言相对而言难学"
+            }
+          ]
         }
       ]
     },
@@ -3165,7 +4927,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "出色地，显著地: Marie chante remarquablement.玛丽唱歌唱得非常好。"
+          "text": "出色地，显著地",
+          "examples": [
+            {
+              "fr": "Marie chante remarquablement",
+              "zh": "玛丽唱歌唱得非常好"
+            }
+          ]
         }
       ]
     },
@@ -3182,10 +4950,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "各自地，分别地:"
+          "text": "各自地，分别地"
         },
         {
-          "text": "Ils ont présenté respectivement leur demande.他们各自提出了自己的要求。"
+          "text": "◇ Ils ont présenté respectivement leur demande.他们各自提出了自己的要求。"
         }
       ]
     },
@@ -3202,10 +4970,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "严厉地，严格地:"
+          "text": "严厉地，严格地"
         },
         {
-          "text": "Il est rigoureusement interdit de fumer.严禁吸烟。"
+          "text": "◇ Il est rigoureusement interdit de fumer.严禁吸烟。"
         }
       ]
     },
@@ -3222,7 +4990,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "最近: J'ai vu Paul récemment.最近我见到过保尔。"
+          "text": "最近",
+          "examples": [
+            {
+              "fr": "J'ai vu Paul récemment",
+              "zh": "最近我见到过保尔"
+            }
+          ]
         }
       ]
     },
@@ -3239,7 +5013,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "确实，真正地: Que penses-tu réellement? 你真的在想什么?"
+          "text": "确实，真正地",
+          "examples": [
+            {
+              "fr": "Que penses-tu réellement?",
+              "zh": "你真的在想什么?"
+            }
+          ]
         }
       ]
     },
@@ -3256,10 +5036,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "有规律地，有规则地: Le cœur bat régulièrement.心脏有规律地跳动。"
+          "text": "有规律地，有规则地",
+          "examples": [
+            {
+              "fr": "Le cœur bat régulièrement",
+              "zh": "心脏有规律地跳动"
+            }
+          ]
         },
         {
-          "text": "按时地: M. Dupont paie régulièrement son loyer.杜邦先生按时支付房租。"
+          "text": "按时地",
+          "examples": [
+            {
+              "fr": "M. Dupont paie régulièrement son loyer",
+              "zh": "杜邦先生按时支付房租"
+            }
+          ]
         }
       ]
     },
@@ -3276,10 +5068,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "明显地，显著地:"
+          "text": "明显地，显著地"
         },
         {
-          "text": "Il a sensiblement grandi.他明显长大了。"
+          "text": "◇ Il a sensiblement grandi.他明显长大了。"
         }
       ]
     },
@@ -3296,22 +5088,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "只，仅仅:"
+          "text": "只，仅仅"
         },
         {
-          "text": "Pour mon goûter, je prendrai seulement une tartine.下午点心我将只吃一块面包片。"
+          "text": "◇Pour mon goûter, je prendrai seulement une tartine.下午点心我将只吃一块面包片。"
         },
         {
-          "text": "【non seulement】 [后接 mais 或 mais encore] loc. adv.不仅…(而且):"
+          "text": "【non seulement】 [后接 mais 或 mais encore] loc. adv.不仅…(而且)"
         },
         {
-          "text": "Non seulement nous respectons notre professeur, mais encore nous l'aimons.我们不仅尊敬我们的老师，而且还爱戴他。"
+          "text": "◇ Non seulement nous respectons notre professeur, mais encore nous l'aimons.我们不仅尊敬我们的老师，而且还爱戴他。"
         },
         {
-          "text": "【si seulement】 要是…就好了[谓语用未完成过去时]:"
+          "text": "【si seulement】 要是…就好了[谓语用未完成过去时]"
         },
         {
-          "text": "Si seulement il faisait beau l'après-midi! 要是下午天气好就好了!"
+          "text": "◇ Si seulement il faisait beau l'après-midi! 要是下午天气好就好了!"
         }
       ]
     },
@@ -3328,7 +5120,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "无声地，静悄悄地: Les chats marchent silencieusement.猫咪走路静悄悄。"
+          "text": "无声地，静悄悄地",
+          "examples": [
+            {
+              "fr": "Les chats marchent silencieusement",
+              "zh": "猫咪走路静悄悄"
+            }
+          ]
         }
       ]
     },
@@ -3345,10 +5143,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "简单地: Marie est habillée simplement.玛丽衣着简单。"
+          "text": "简单地",
+          "examples": [
+            {
+              "fr": "Marie est habillée simplement",
+              "zh": "玛丽衣着简单"
+            }
+          ]
         },
         {
-          "text": "仅仅，只是: Je voulais simplement lui dire bonjour.我只是想向他问个好。"
+          "text": "仅仅，只是",
+          "examples": [
+            {
+              "fr": "Je voulais simplement lui dire bonjour",
+              "zh": "我只是想向他问个好"
+            }
+          ]
         }
       ]
     },
@@ -3365,7 +5175,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "同时地: Mon réveil et le téléphone sonnent simultanément.我的闹钟和电话同时响了。"
+          "text": "同时地",
+          "examples": [
+            {
+              "fr": "Mon réveil et le téléphone sonnent simultanément",
+              "zh": "我的闹钟和电话同时响了"
+            }
+          ]
         }
       ]
     },
@@ -3382,7 +5198,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "真诚地，诚恳地，由衷地: Je vous remercie sincèrement.我真心感谢您。"
+          "text": "真诚地，诚恳地，由衷地",
+          "examples": [
+            {
+              "fr": "Je vous remercie sincèrement",
+              "zh": "我真心感谢您"
+            }
+          ]
         }
       ]
     },
@@ -3399,16 +5221,16 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "如此的[用于修饰形容词或副词]:"
+          "text": "如此的[用于修饰形容词或副词]"
         },
         {
-          "text": "Elle est si belle! 她是那么漂亮!"
+          "text": "◇Elle est si belle! 她是那么漂亮!"
         },
         {
-          "text": "这样地…以致[引出由 que 引导的后果从句]:"
+          "text": "这样地…以致[引出由 que 引导的后果从句]"
         },
         {
-          "text": "Il a tiré si fort que la corde a"
+          "text": "◇ Il a tiré si fort que la corde a"
         }
       ]
     },
@@ -3425,7 +5247,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "细心地，仔细地: Range soigneusement tes livres!把你的书仔仔细细放好!"
+          "text": "细心地，仔细地",
+          "examples": [
+            {
+              "fr": "Range soigneusement tes livres!",
+              "zh": "把你的书仔仔细细放好!"
+            }
+          ]
         }
       ]
     },
@@ -3442,7 +5270,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "坚固地，牢固地: Le chien enragé est solidement attaché.疯狗被紧紧地拴着。"
+          "text": "坚固地，牢固地",
+          "examples": [
+            {
+              "fr": "Le chien enragé est solidement attaché",
+              "zh": "疯狗被紧紧地拴着"
+            }
+          ]
         }
       ]
     },
@@ -3459,10 +5293,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "突然的，忽然的: Une pluie soudaine se met à tomber. 突然下起一场雨来。"
+          "text": "突然的，忽然的",
+          "examples": [
+            {
+              "fr": "Une pluie soudaine se met à tomber",
+              "zh": "突然下起一场雨来"
+            }
+          ]
         },
         {
-          "text": "突然，忽然: Je lisais tranquillement: soudain la lampe s'éteignit. 我正在安心看书，突然灯灭了。"
+          "text": "突然，忽然",
+          "examples": [
+            {
+              "fr": "Je lisais tranquillement: soudain la lampe s'éteignit",
+              "zh": "我正在安心看书，突然灯灭了"
+            }
+          ]
         }
       ]
     },
@@ -3479,7 +5325,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "经常，常常: En automne, il pleut souvent.秋天常常下雨。"
+          "text": "经常，常常",
+          "examples": [
+            {
+              "fr": "En automne, il pleut souvent",
+              "zh": "秋天常常下雨"
+            }
+          ]
         }
       ]
     },
@@ -3496,7 +5348,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "自发地，本能地: Il a proposé son aide spontanément.他主动提出帮助他人。"
+          "text": "自发地，本能地",
+          "examples": [
+            {
+              "fr": "Il a proposé son aide spontanément",
+              "zh": "他主动提出帮助他人"
+            }
+          ]
         }
       ]
     },
@@ -3513,10 +5371,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "专门，特地: Je viens spécialement pour vous voir. 我是专门来看望您的。"
+          "text": "专门，特地",
+          "examples": [
+            {
+              "fr": "Je viens spécialement pour vous voir",
+              "zh": "我是专门来看望您的"
+            }
+          ]
         },
         {
-          "text": "特别，尤其: Il s'intéresse spécialement à la peinture. 他对绘画特别感兴趣。"
+          "text": "特别，尤其",
+          "examples": [
+            {
+              "fr": "Il s'intéresse spécialement à la peinture",
+              "zh": "他对绘画特别感兴趣"
+            }
+          ]
         }
       ]
     },
@@ -3533,10 +5403,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "停止: Il ya un accident! Stop!发生一起车祸!停车!"
+          "text": "停止",
+          "examples": [
+            {
+              "fr": "Il ya un accident! Stop!",
+              "zh": "发生一起车祸!停车!"
+            }
+          ]
         },
         {
-          "text": "停止: Les voitures s'arrêtent au stop.车辆在标有“停”字的路标处停了下来。"
+          "text": "停止",
+          "examples": [
+            {
+              "fr": "Les voitures s'arrêtent au stop",
+              "zh": "车辆在标有“停”字的路标处停了下来"
+            }
+          ]
         }
       ]
     },
@@ -3553,7 +5435,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "突然，骤然: Il est parti subitement.他突然走了。"
+          "text": "突然，骤然",
+          "examples": [
+            {
+              "fr": "Il est parti subitement",
+              "zh": "他突然走了"
+            }
+          ]
         }
       ]
     },
@@ -3604,7 +5492,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "特别，尤其: Elle aime les fleurs, surtout les roses. 她喜欢花，尤其是玫瑰花。 Surtout, n'oublie pas ce que je t'ai dit.特别是别忘了我对你说的事。"
+          "text": "特别，尤其",
+          "examples": [
+            {
+              "fr": "Elle aime les fleurs, surtout les roses",
+              "zh": "她喜欢花，尤其是玫瑰花"
+            },
+            {
+              "fr": "Surtout, n'oublie pas ce que je t'ai dit",
+              "zh": "特别是别忘了我对你说的事"
+            }
+          ]
         }
       ]
     },
@@ -3621,10 +5519,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "分开地，各别地:"
+          "text": "分开地，各别地"
         },
         {
-          "text": "Travaillons séparément. 大家各自工作。"
+          "text": "◇Travaillons séparément. 大家各自工作。"
         }
       ]
     },
@@ -3641,10 +5539,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "严肃地，认真地:"
+          "text": "严肃地，认真地"
         },
         {
-          "text": "Pierre ne travaille pas sérieusement.皮埃尔不认真学习。"
+          "text": "◇Pierre ne travaille pas sérieusement.皮埃尔不认真学习。"
         }
       ]
     },
@@ -3661,10 +5559,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "严厉地，严格地:"
+          "text": "严厉地，严格地"
         },
         {
-          "text": "Pierre a été puni sévèrement.皮埃尔受到严厉处罚。"
+          "text": "◇Pierre a été puni sévèrement.皮埃尔受到严厉处罚。"
         }
       ]
     },
@@ -3681,10 +5579,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "当然，肯定: Je vais sûrement gagner. 我肯定能赢。"
+          "text": "当然，肯定",
+          "examples": [
+            {
+              "fr": "Je vais sûrement gagner",
+              "zh": "我肯定能赢"
+            }
+          ]
         },
         {
-          "text": "可靠地，稳当地: Il conduit sûrement. 他开车稳当。"
+          "text": "可靠地，稳当地",
+          "examples": [
+            {
+              "fr": "Il conduit sûrement",
+              "zh": "他开车稳当"
+            }
+          ]
         }
       ]
     },
@@ -3701,19 +5611,61 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "如此，如此多[修饰动词]: Comme il est gros! mais il mange tant!他真胖!他吃得那么多![与que 连用]那么…以至于: Sophie a tant parlé qu'elle a la bouche sèche.索菲讲得那么多以至于口都干了。"
+          "text": "如此，如此多[修饰动词]",
+          "examples": [
+            {
+              "fr": "Comme il est gros! mais il mange tant!",
+              "zh": "他真胖!他吃得那么多![与que 连用]那么…以至于:"
+            },
+            {
+              "fr": "Sophie a tant parlé qu'elle a la bouche sèche",
+              "zh": "索菲讲得那么多以至于口都干了"
+            }
+          ]
         },
         {
-          "text": "那么多[后接由 de 引导的名词]: J'ai tant de travail à faire! 我有那么多的事要做![与 que 连用]那么多的…以至于: Pierre a mangé tant de bonbons que ses dents sont abîmées. 皮埃尔吃糖吃得那么多以至于牙齿都坏了。"
+          "text": "那么多[后接由 de 引导的名词]",
+          "examples": [
+            {
+              "fr": "J'ai tant de travail à faire!",
+              "zh": "我有那么多的事要做![与 que 连用]那么多的…以至于:"
+            },
+            {
+              "fr": "Pierre a mangé tant de bonbons que ses dents sont abîmées",
+              "zh": "皮埃尔吃糖吃得那么多以至于牙齿都坏了"
+            }
+          ]
         },
         {
-          "text": "【tant que】 loc. conj.只要…(就)…: Je resterai ici tant qu'il fera jour.只要天还亮着我就待在这里。"
+          "text": "【tant que】 loc. conj.只要…(就)…",
+          "examples": [
+            {
+              "fr": "Je resterai ici tant qu'il fera jour",
+              "zh": "只要天还亮着我就待在这里"
+            }
+          ]
         },
         {
-          "text": "【tant mieux】 loc. adv.好极了: Tu as réussi à ton examen? Tant mieux!你考试通过了?好极了!"
+          "text": "【tant mieux】 loc. adv.好极了",
+          "examples": [
+            {
+              "fr": "Tu as réussi à ton examen? Tant mieux!",
+              "zh": "你考试通过了?好极了!"
+            }
+          ]
         },
         {
-          "text": "【tant pis】 loc. adv.算了，活该，倒霉: Si tu ne peux pas venir, tant pis.如果你不能来，那就算了。 Tant pis pour moi! 算我倒霉!"
+          "text": "【tant pis】 loc. adv.算了，活该，倒霉",
+          "examples": [
+            {
+              "fr": "Si tu ne peux pas venir, tant pis",
+              "zh": "如果你不能来，那就算了"
+            },
+            {
+              "fr": "Tant pis pour moi!",
+              "zh": "算我倒霉!"
+            }
+          ]
         }
       ]
     },
@@ -3730,7 +5682,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "tantôt... tantôt... 时而…时而…: Alexandre change souvent d'avis: tantôt il joue avec moi, tantôt il reste dans son coin.亚历山大常常改变想法:他一会儿和我玩，一会儿呆在自己的角落里。"
+          "text": "tantôt... tantôt... 时而…时而…",
+          "examples": [
+            {
+              "fr": "Alexandre change souvent d'avis: tantôt il joue avec moi, tantôt il reste dans son coin",
+              "zh": "亚历山大常常改变想法:他一会儿和我玩，一会儿呆在自己的角落里"
+            }
+          ]
         }
       ]
     },
@@ -3747,7 +5705,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "晚，迟: Il est midi, tu te lèves si tard! 中午12点了，你这么晚起床! On verra ça plus tard. 我们以后再说吧。"
+          "text": "晚，迟",
+          "examples": [
+            {
+              "fr": "Il est midi, tu te lèves si tard!",
+              "zh": "中午12点了，你这么晚起床!"
+            },
+            {
+              "fr": "On verra ça plus tard",
+              "zh": "我们以后再说吧"
+            }
+          ]
         }
       ]
     },
@@ -3764,13 +5732,39 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "这样地，如此地: Vous ne reconnaîtrez pas votre ami, il a tellement changé.您将认不出您的朋友，他变化非常大。 Ma grand-mère est tellement bavarde.我祖母是那么唠叨。"
+          "text": "这样地，如此地",
+          "examples": [
+            {
+              "fr": "Vous ne reconnaîtrez pas votre ami, il a tellement changé",
+              "zh": "您将认不出您的朋友，他变化非常大"
+            },
+            {
+              "fr": "Ma grand-mère est tellement bavarde",
+              "zh": "我祖母是那么唠叨"
+            }
+          ]
         },
         {
-          "text": "tellement de 那么多的: Les élèves ont tellement de questions. 学生们有那么多的问题。"
+          "text": "tellement de 那么多的",
+          "examples": [
+            {
+              "fr": "Les élèves ont tellement de questions",
+              "zh": "学生们有那么多的问题"
+            }
+          ]
         },
         {
-          "text": ".. que... 那么地…以致…: Pascal a tellement changé que je ne le reconnais pas. 帕斯卡尔变化那么大，我都认不出他了。 Cette maison est tellement grande qu'il est difficile de la chauffer. 这幢房子那么大以致难以使房间暖和起来。"
+          "text": ".. que... 那么地…以致…",
+          "examples": [
+            {
+              "fr": "Pascal a tellement changé que je ne le reconnais pas",
+              "zh": "帕斯卡尔变化那么大，我都认不出他了"
+            },
+            {
+              "fr": "Cette maison est tellement grande qu'il est difficile de la chauffer",
+              "zh": "这幢房子那么大以致难以使房间暖和起来"
+            }
+          ]
         }
       ]
     },
@@ -3787,7 +5781,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "非常地，极度地: Il fait terriblement froid.天气非常冷。"
+          "text": "非常地，极度地",
+          "examples": [
+            {
+              "fr": "Il fait terriblement froid",
+              "zh": "天气非常冷"
+            }
+          ]
         }
       ]
     },
@@ -3804,7 +5804,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "从理论上，在理论上: Théoriquement cela n'aurait pas dû arriver.理论上讲，这件事本不该发生。"
+          "text": "从理论上，在理论上",
+          "examples": [
+            {
+              "fr": "Théoriquement cela n'aurait pas dû arriver",
+              "zh": "理论上讲，这件事本不该发生"
+            }
+          ]
         }
       ]
     },
@@ -3821,7 +5827,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "腼腆地，害羞地;胆怯地: Jeannot s'approche timidement de l'agent de police.雅诺畏畏缩缩地走近警察。"
+          "text": "腼腆地，害羞地;胆怯地",
+          "examples": [
+            {
+              "fr": "Jeannot s'approche timidement de l'agent de police",
+              "zh": "雅诺畏畏缩缩地走近警察"
+            }
+          ]
         }
       ]
     },
@@ -3838,7 +5850,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "全部地，完全地: C'est totalement faux.这完全是虚假的。 Il a totalement changé.他完全变了。"
+          "text": "全部地，完全地",
+          "examples": [
+            {
+              "fr": "C'est totalement faux",
+              "zh": "这完全是虚假的"
+            },
+            {
+              "fr": "Il a totalement changé",
+              "zh": "他完全变了"
+            }
+          ]
         }
       ]
     },
@@ -3855,7 +5877,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "总是，始终: Sylvie passe toujours par le même chemin.希尔维总是经过同一条路。 Il est toujours prêt à vous aider. 他始终乐于帮助您。"
+          "text": "总是，始终",
+          "examples": [
+            {
+              "fr": "Sylvie passe toujours par le même chemin",
+              "zh": "希尔维总是经过同一条路"
+            },
+            {
+              "fr": "Il est toujours prêt à vous aider",
+              "zh": "他始终乐于帮助您"
+            }
+          ]
         }
       ]
     },
@@ -3872,7 +5904,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "不过，仍然，还是: Je ne suis pas convaincu, toutefois j'accepte.我没有被说服，不过我还是接受的。"
+          "text": "不过，仍然，还是",
+          "examples": [
+            {
+              "fr": "Je ne suis pas convaincu, toutefois j'accepte",
+              "zh": "我没有被说服，不过我还是接受的"
+            }
+          ]
         }
       ]
     },
@@ -3906,7 +5944,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "安静地，安稳地，安心地: Il dort tranquillement. 他安安稳稳地在睡觉。"
+          "text": "安静地，安稳地，安心地",
+          "examples": [
+            {
+              "fr": "Il dort tranquillement",
+              "zh": "他安安稳稳地在睡觉"
+            }
+          ]
         }
       ]
     },
@@ -3940,7 +5984,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "很，非常: Je suis très content.我很高兴。 Il se couche très tard.他很晚睡觉。"
+          "text": "很，非常",
+          "examples": [
+            {
+              "fr": "Je suis très content",
+              "zh": "我很高兴"
+            },
+            {
+              "fr": "Il se couche très tard",
+              "zh": "他很晚睡觉"
+            }
+          ]
         }
       ]
     },
@@ -3957,7 +6011,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "典型地，地道地: Cette habitude est typiquement française.这种习惯是典型的法国人习惯。"
+          "text": "典型地，地道地",
+          "examples": [
+            {
+              "fr": "Cette habitude est typiquement française",
+              "zh": "这种习惯是典型的法国人习惯"
+            }
+          ]
         }
       ]
     },
@@ -3974,10 +6034,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "早: Le matin, je me lève tôt.早晨我起得早。"
+          "text": "早",
+          "examples": [
+            {
+              "fr": "Le matin, je me lève tôt",
+              "zh": "早晨我起得早"
+            }
+          ]
         },
         {
-          "text": "【tôt ou tard】loc. adv. 迟早，早晚: Tôt ou tard, on s'en apercevra.人们迟早会发觉的。"
+          "text": "【tôt ou tard】loc. adv. 迟早，早晚",
+          "examples": [
+            {
+              "fr": "Tôt ou tard, on s'en apercevra",
+              "zh": "人们迟早会发觉的"
+            }
+          ]
         }
       ]
     },
@@ -3994,7 +6066,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "以后，今后: On en reparlera ultérieurement.我们以后再谈。"
+          "text": "以后，今后",
+          "examples": [
+            {
+              "fr": "On en reparlera ultérieurement",
+              "zh": "我们以后再谈"
+            }
+          ]
         }
       ]
     },
@@ -4011,7 +6089,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "仅仅，唯一地: Égoïste, tu penses uniquement à toi! 你自私，只想到自己!"
+          "text": "仅仅，唯一地",
+          "examples": [
+            {
+              "fr": "Égoïste, tu penses uniquement à toi!",
+              "zh": "你自私，只想到自己!"
+            }
+          ]
         }
       ]
     },
@@ -4028,10 +6112,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "含糊地，不明确地: Il m'a vaguement parlé de ses projets. 他含含糊糊地跟我谈了他的计划。"
+          "text": "含糊地，不明确地",
+          "examples": [
+            {
+              "fr": "Il m'a vaguement parlé de ses projets",
+              "zh": "他含含糊糊地跟我谈了他的计划"
+            }
+          ]
         },
         {
-          "text": "模模糊糊地，隐隐约约地: On voit vaguement une silhouette au loin.远处隐隐约约可见一个人影。"
+          "text": "模模糊糊地，隐隐约约地",
+          "examples": [
+            {
+              "fr": "On voit vaguement une silhouette au loin",
+              "zh": "远处隐隐约约可见一个人影"
+            }
+          ]
         }
       ]
     },
@@ -4048,7 +6144,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "徒然，白白地: J'ai attendu vainement pendant trois heures. 我白白等了3个小时。"
+          "text": "徒然，白白地",
+          "examples": [
+            {
+              "fr": "J'ai attendu vainement pendant trois heures",
+              "zh": "我白白等了3个小时"
+            }
+          ]
         }
       ]
     },
@@ -4065,7 +6167,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "垂直地，笔直地: Les corps tombent verticalement.物体垂直落地。"
+          "text": "垂直地，笔直地",
+          "examples": [
+            {
+              "fr": "Les corps tombent verticalement",
+              "zh": "物体垂直落地"
+            }
+          ]
         }
       ]
     },
@@ -4099,7 +6207,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "用力地;有力地;强烈地: Tout le monde a protesté vigoureusement contre cette injustice.众人强烈抗议这一不公正的行为。"
+          "text": "用力地;有力地;强烈地",
+          "examples": [
+            {
+              "fr": "Tout le monde a protesté vigoureusement contre cette injustice",
+              "zh": "众人强烈抗议这一不公正的行为"
+            }
+          ]
         }
       ]
     },
@@ -4116,10 +6230,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "粗暴地: Il m'a repoussé violemment.他粗暴地把我推开。"
+          "text": "粗暴地",
+          "examples": [
+            {
+              "fr": "Il m'a repoussé violemment",
+              "zh": "他粗暴地把我推开"
+            }
+          ]
         },
         {
-          "text": "猛烈地，强烈地: Ils ont réagi violemment.他们反应强烈。"
+          "text": "猛烈地，强烈地",
+          "examples": [
+            {
+              "fr": "Ils ont réagi violemment",
+              "zh": "他们反应强烈"
+            }
+          ]
         }
       ]
     },
@@ -4136,7 +6262,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "明显地，显然: Il grossit visiblement.他明显在发胖。"
+          "text": "明显地，显然",
+          "examples": [
+            {
+              "fr": "Il grossit visiblement",
+              "zh": "他明显在发胖"
+            }
+          ]
         }
       ]
     },
@@ -4153,7 +6285,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "快，迅速地: Je n'arrive pas à te suivre, tu marches trop vite. 我跟不上你，你走得太快了。 Vite! ferme le robinet.快!关上水龙头。"
+          "text": "快，迅速地",
+          "examples": [
+            {
+              "fr": "Je n'arrive pas à te suivre, tu marches trop vite",
+              "zh": "我跟不上你，你走得太快了"
+            },
+            {
+              "fr": "Vite! ferme le robinet",
+              "zh": "快!关上水龙头"
+            }
+          ]
         }
       ]
     },
@@ -4170,7 +6312,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "急速地，迅速地: Il m'a répondu vivement.他很快地给了我答复。"
+          "text": "急速地，迅速地",
+          "examples": [
+            {
+              "fr": "Il m'a répondu vivement",
+              "zh": "他很快地给了我答复"
+            }
+          ]
         }
       ]
     },
@@ -4187,7 +6335,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "甚至: Je resterai absent des semaines, voire des mois. 我将有几个星期甚至几个月不在。"
+          "text": "甚至",
+          "examples": [
+            {
+              "fr": "Je resterai absent des semaines, voire des mois",
+              "zh": "我将有几个星期甚至几个月不在"
+            }
+          ]
         }
       ]
     },
@@ -4204,10 +6358,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "自愿地: Il s'est dénoncé volontairement.他自首了。"
+          "text": "自愿地",
+          "examples": [
+            {
+              "fr": "Il s'est dénoncé volontairement",
+              "zh": "他自首了"
+            }
+          ]
         },
         {
-          "text": "故意地: Il m'a poussé volontairement.他故意推我。"
+          "text": "故意地",
+          "examples": [
+            {
+              "fr": "Il m'a poussé volontairement",
+              "zh": "他故意推我"
+            }
+          ]
         }
       ]
     },
@@ -4224,7 +6390,17 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "乐意地，自愿地: Je le recevrai volontiers.我很乐意接待他。 Peux-tu me prêter ce livre? - Volontiers.你可以把这本书借给我吗?一可以的。"
+          "text": "乐意地，自愿地",
+          "examples": [
+            {
+              "fr": "Je le recevrai volontiers",
+              "zh": "我很乐意接待他"
+            },
+            {
+              "fr": "Peux-tu me prêter ce livre? - Volontiers",
+              "zh": "你可以把这本书借给我吗?一可以的"
+            }
+          ]
         }
       ]
     },
@@ -4241,10 +6417,26 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "真正地，确实地，实在地: Ce que je dis s'est vraiment passé.我所说的确实发生了。 Cette fleur est vraiment belle.这朵花实在美丽。"
+          "text": "真正地，确实地，实在地",
+          "examples": [
+            {
+              "fr": "Ce que je dis s'est vraiment passé",
+              "zh": "我所说的确实发生了"
+            },
+            {
+              "fr": "Cette fleur est vraiment belle",
+              "zh": "这朵花实在美丽"
+            }
+          ]
         },
         {
-          "text": "真的，的确[加强肯定的语气]: Vraiment, il ne comprend pas du tout.他的确一点都不懂。"
+          "text": "真的，的确[加强肯定的语气]",
+          "examples": [
+            {
+              "fr": "Vraiment, il ne comprend pas du tout",
+              "zh": "他的确一点都不懂"
+            }
+          ]
         }
       ]
     },
@@ -4261,7 +6453,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "看来，很可能: D'après son accent, cet étranger est vraisemblablement Allemand.根据他的口音，这个外国人很可能是德国人。"
+          "text": "看来，很可能",
+          "examples": [
+            {
+              "fr": "D'après son accent, cet étranger est vraisemblablement Allemand",
+              "zh": "根据他的口音，这个外国人很可能是德国人"
+            }
+          ]
         }
       ]
     },
@@ -4278,7 +6476,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "真正地，确实地: Les acteurs mangent véritablement sur la scène. 演员们真的在舞台上吃饭。"
+          "text": "真正地，确实地",
+          "examples": [
+            {
+              "fr": "Les acteurs mangent véritablement sur la scène",
+              "zh": "演员们真的在舞台上吃饭"
+            }
+          ]
         }
       ]
     },
@@ -4295,7 +6499,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "该死!倒霉!见鬼!去他的!: Zut! j'ai oublié ma clé! 倒霉!我忘了带钥匙!"
+          "text": "该死!倒霉!见鬼!去他的!",
+          "examples": [
+            {
+              "fr": "Zut! j'ai oublié ma clé!",
+              "zh": "倒霉!我忘了带钥匙!"
+            }
+          ]
         }
       ]
     },
@@ -4312,10 +6522,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "相等地，同等地: Le partage a été fait également. 分配是均等的。"
+          "text": "相等地，同等地",
+          "examples": [
+            {
+              "fr": "Le partage a été fait également",
+              "zh": "分配是均等的"
+            }
+          ]
         },
         {
-          "text": "也: Pour rentrer à Paris, vous pouvez prendre l'autoroute, mais vous pouvez également prendre la route nationale.回巴黎您可以走高速公路，也可以走国道。"
+          "text": "也",
+          "examples": [
+            {
+              "fr": "Pour rentrer à Paris, vous pouvez prendre l'autoroute, mais vous pouvez également prendre la route nationale",
+              "zh": "回巴黎您可以走高速公路，也可以走国道"
+            }
+          ]
         }
       ]
     },
@@ -4332,7 +6554,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "极大量地，巨大地: Il pleut énormément. 雨下得非常大。"
+          "text": "极大量地，巨大地",
+          "examples": [
+            {
+              "fr": "Il pleut énormément",
+              "zh": "雨下得非常大"
+            }
+          ]
         }
       ]
     },
@@ -4349,7 +6577,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "紧密地，密切地: Ces deux questions sont étroitement liées. 这两个问题密切相 连。"
+          "text": "紧密地，密切地",
+          "examples": [
+            {
+              "fr": "Ces deux questions sont étroitement liées",
+              "zh": "这两个问题密切相 连"
+            }
+          ]
         }
       ]
     },
@@ -4366,7 +6600,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "或许，可能: Je vous préviendrai éventuellement.有可能的话我会通知您。"
+          "text": "或许，可能",
+          "examples": [
+            {
+              "fr": "Je vous préviendrai éventuellement",
+              "zh": "有可能的话我会通知您"
+            }
+          ]
         }
       ]
     },
@@ -4383,7 +6623,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "当然，肯定地: Tu acceptes? Évidemment!你接受了?—当然!"
+          "text": "当然，肯定地",
+          "examples": [
+            {
+              "fr": "Tu acceptes? Évidemment!",
+              "zh": "你接受了?—当然!"
+            }
+          ]
         }
       ]
     },
@@ -4400,7 +6646,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": ".. guère 不大，不很，几乎没有: Je n'aime guère la viande. 我不很喜欢吃肉。"
+          "text": ".. guère 不大，不很，几乎没有",
+          "examples": [
+            {
+              "fr": "Je n'aime guère la viande",
+              "zh": "我不很喜欢吃肉"
+            }
+          ]
         }
       ]
     },
@@ -4417,7 +6669,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "立即，马上: Pars tout de suite!你马上动身!"
+          "text": "立即，马上",
+          "examples": [
+            {
+              "fr": "Pars tout de suite!",
+              "zh": "你马上动身!"
+            }
+          ]
         }
       ]
     },
@@ -4434,7 +6692,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "突然: Tout à coup le chat a bondi sur la souris. 突然，猫扑向小老鼠。"
+          "text": "突然",
+          "examples": [
+            {
+              "fr": "Tout à coup le chat a bondi sur la souris",
+              "zh": "突然，猫扑向小老鼠"
+            }
+          ]
         }
       ]
     },
@@ -4451,7 +6715,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "完全地: Je suis tout à fait d'accord.我完全同意。"
+          "text": "完全地",
+          "examples": [
+            {
+              "fr": "Je suis tout à fait d'accord",
+              "zh": "我完全同意"
+            }
+          ]
         }
       ]
     },
@@ -4468,7 +6738,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "徒劳地，白白地: J'ai cherché ma clef en vain. 我白找了我的钥匙。"
+          "text": "徒劳地，白白地",
+          "examples": [
+            {
+              "fr": "J'ai cherché ma clef en vain",
+              "zh": "我白找了我的钥匙"
+            }
+          ]
         }
       ]
     }
