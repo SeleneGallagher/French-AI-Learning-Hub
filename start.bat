@@ -56,10 +56,11 @@ REM Wait 2 seconds before opening browser to ensure server is ready
 timeout /t 2 /nobreak >nul
 start http://localhost:8000
 
-REM Start Python HTTP server (in current directory)
+REM Start Flask application
+echo [INFO] Starting Flask application...
 echo [INFO] Server is running. Press Ctrl+C to stop.
 echo.
-python -m http.server 8000
+python app.py
 
 REM If server exits, show error message
 if errorlevel 1 (

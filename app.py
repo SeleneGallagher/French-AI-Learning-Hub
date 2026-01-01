@@ -215,10 +215,15 @@ def movies_tmdb(endpoint):
     if request.method == 'OPTIONS':
         return '', 200
     from api.movies.tmdb import handler as tmdb_handler
-    # 构建完整的endpoint路径（包含查询参数）
+    
+    # 构建完整的endpoint路径
+    # endpoint已经包含了路径部分（如 discover/movie），查询参数在request.args中
     full_endpoint = f'/{endpoint}'
+    
+    # 如果有查询参数，添加到endpoint中
     if request.query_string:
-        full_endpoint += f'?{request.query_string.decode()}'
+        query_string = request.query_string.decode('utf-8')
+        full_endpoint += f'?{query_string}'
     
     # 将endpoint添加到request中
     class RequestWrapper:
@@ -327,5 +332,5 @@ def health():
 
 if __name__ == '__main__':
     # 开发环境
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    app.run(host='127.0.0.1', port=8000, debug=True)
 
