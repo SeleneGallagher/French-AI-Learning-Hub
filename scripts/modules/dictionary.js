@@ -96,10 +96,25 @@ window.syncDictFavorites = function(serverFavorites) {
                 
                 // 如果服务器数据更新，使用服务器数据；否则保留本地数据
                 if (!localFav || serverAddedAt >= localAddedAt) {
+                    // 规范化 pos 格式：如果是对象，尝试转换为数组格式
+                    let normalizedPos = serverFav.pos;
+                    if (normalizedPos && !Array.isArray(normalizedPos) && typeof normalizedPos === 'object') {
+                        // 如果 pos 是对象且有 full 或 abbr 属性，转换为数组格式
+                        if (normalizedPos.full || normalizedPos.abbr) {
+                            normalizedPos = [{
+                                full: normalizedPos.full || '',
+                                abbr: normalizedPos.abbr || ''
+                            }];
+                        } else {
+                            // 否则保持为空对象，让渲染函数处理
+                            normalizedPos = {};
+                        }
+                    }
+                    
                     favoritesMap.set(word.toLowerCase(), {
                         word: word,
                         phonetic: serverFav.phonetic || '',
-                        pos: serverFav.pos || {},
+                        pos: normalizedPos || {},
                         addedAt: serverFav.added_at || new Date().toISOString()
                     });
                 }
@@ -902,6 +917,148 @@ function renderWordCard(wordObj, isMain = false) {
     }
 }
 
+// HTML转义函数（用于转义用户内容，防止XSS）
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// 解析定义文本，分离释义和例句
+function parseDefinitionText(text) {
+    if (!text) return { meaning: '', examples: [] };
+    
+    // 移除开头的编号和◇符号
+    text = text.replace(/^\d+\s*/, '').replace(/◇/g, ' ').trim();
+    
+    // 检查是否有冒号分隔（释义: 例句）
+    const colonIndex = text.indexOf(':');
+    
+    if (colonIndex === -1) {
+        // 没有冒号，整个文本都是释义
+        // 处理分类标记
+        let meaning = text.replace(/【([^】]+)】/g, '<span class="text-xs px-2 py-0.5 rounded mr-1 font-semibold" style="background-color: var(--primary-100); color: var(--primary-700);">$1</span>');
+        meaning = meaning.replace(/\[([^\]]+)\]/g, '<span class="text-xs px-2 py-0.5 rounded mr-1" style="background-color: var(--gray-200); color: var(--gray-600);">$1</span>');
+        return { meaning, examples: [] };
+    }
+    
+    // 分离释义和例句部分
+    let meaning = text.substring(0, colonIndex).trim();
+    let examplesText = text.substring(colonIndex + 1).trim();
+    
+    // 清理释义中的分类标记，如 [目的地]、[分类]、【après】 等，保留为标签
+    // 先处理【】标记（全角）
+    meaning = meaning.replace(/【([^】]+)】/g, '<span class="text-xs px-2 py-0.5 rounded mr-1 font-semibold" style="background-color: var(--primary-100); color: var(--primary-700);">$1</span>');
+    // 再处理[]标记（半角）
+    meaning = meaning.replace(/\[([^\]]+)\]/g, '<span class="text-xs px-2 py-0.5 rounded mr-1" style="background-color: var(--gray-200); color: var(--gray-600);">$1</span>');
+    
+    // 解析例句
+    const examples = [];
+    if (examplesText) {
+        // 格式通常是：法语句子。中文翻译。 或 多个例句连续出现
+        // 例如："On se reposera après le travail.我们将在工作后休息。 Un an après sa mort, elle est partie en France.他去世后一年，她动身去了法国。"
+        
+        // 使用更智能的方法解析例句
+        // 法语句子通常以句号、问号、感叹号结尾，后面跟着中文翻译
+        // 格式：法语句子。中文翻译。 或 法语句子？中文翻译。
+        
+        // 先按句号、问号、感叹号分割，保留标点
+        const parts = examplesText.split(/([。！？\?\!\.])/);
+        let currentFr = '';
+        let currentZh = '';
+        let expectingZh = false;
+        
+        for (let i = 0; i < parts.length; i++) {
+            const part = parts[i].trim();
+            if (!part) continue;
+            
+            // 判断是标点符号（包括中英文标点）
+            if (/^[。！？\?\!\.]$/.test(part)) {
+                if (currentFr && !expectingZh) {
+                    // 法语句子结束，添加标点
+                    currentFr += part;
+                    expectingZh = true;
+                } else if (currentZh) {
+                    // 中文句子结束，添加标点
+                    currentZh += part;
+                    // 完成一个例句对
+                    if (currentFr) {
+                        examples.push({ fr: currentFr.trim(), zh: currentZh.trim() });
+                        currentFr = '';
+                        currentZh = '';
+                        expectingZh = false;
+                    }
+                } else if (currentFr) {
+                    // 只有法语，没有中文
+                    currentFr += part;
+                    examples.push({ fr: currentFr.trim(), zh: '' });
+                    currentFr = '';
+                    expectingZh = false;
+                }
+            } else {
+                // 判断是法语还是中文
+                const hasLatinChars = /[a-zA-ZÀ-ÿ]/.test(part);
+                
+                if (hasLatinChars) {
+                    // 是法语句子
+                    if (currentFr && expectingZh) {
+                        // 上一个例句还没完成，先保存
+                        if (currentFr && currentZh) {
+                            examples.push({ fr: currentFr.trim(), zh: currentZh.trim() });
+                        } else if (currentFr) {
+                            examples.push({ fr: currentFr.trim(), zh: '' });
+                        }
+                        currentFr = part;
+                        currentZh = '';
+                        expectingZh = false;
+                    } else {
+                        currentFr += (currentFr ? ' ' : '') + part;
+                    }
+                } else {
+                    // 是中文
+                    if (expectingZh || currentFr) {
+                        currentZh += (currentZh ? ' ' : '') + part;
+                        expectingZh = false;
+                    }
+                }
+            }
+        }
+        
+        // 处理最后一个例句
+        if (currentFr) {
+            examples.push({ fr: currentFr.trim(), zh: currentZh.trim() });
+        }
+        
+        // 如果解析结果为空但文本中有法语，尝试更宽松的解析
+        if (examples.length === 0 && /[a-zA-ZÀ-ÿ]/.test(examplesText)) {
+            // 简单按空格分割，找出法语句子
+            const sentences = examplesText.split(/\s+/);
+            let tempFr = '';
+            let tempZh = '';
+            
+            for (const sent of sentences) {
+                if (/[a-zA-ZÀ-ÿ]/.test(sent)) {
+                    if (tempFr && tempZh) {
+                        examples.push({ fr: tempFr.trim(), zh: tempZh.trim() });
+                        tempFr = '';
+                        tempZh = '';
+                    }
+                    tempFr += (tempFr ? ' ' : '') + sent;
+                } else {
+                    tempZh += (tempZh ? ' ' : '') + sent;
+                }
+            }
+            
+            if (tempFr) {
+                examples.push({ fr: tempFr.trim(), zh: tempZh.trim() });
+            }
+        }
+    }
+    
+    return { meaning, examples };
+}
+
 // 渲染释义
 function renderDefinitions(definitions) {
     if (!definitions || definitions.length === 0) {
@@ -909,24 +1066,33 @@ function renderDefinitions(definitions) {
     }
     
     return definitions.map((def, idx) => {
-        let text = def.text || '';
-        // 清理文本
-        text = text.replace(/^\d+\s*/, '');
-        
-        const examples = def.examples || [];
+        const { meaning, examples } = parseDefinitionText(def.text);
         
         return `
-            <div class="definition-item ${idx > 0 ? 'mt-4 pt-4' : ''}" style="${idx > 0 ? 'border-top: 1px solid var(--gray-200);' : ''}">
-                <div style="color: var(--gray-700);">${text}</div>
+            <div class="definition-item ${idx > 0 ? 'mt-5 pt-5' : ''}" style="${idx > 0 ? 'border-top: 1px solid var(--gray-200);' : ''}">
+                <div class="mb-3" style="color: var(--gray-800); font-size: 15px; line-height: 1.6;">
+                    ${meaning || '<span style="color: var(--gray-500);">（无释义）</span>'}
+                </div>
                 
                 ${examples.length > 0 ? `
                     <div class="mt-3 space-y-2">
-                        ${examples.slice(0, 3).map(ex => `
-                            <div class="pl-3 py-2 pr-3 rounded-r" style="border-left: 2px solid var(--primary-400); background-color: var(--primary-50);">
-                                <div class="text-sm" style="color: var(--primary-800);">${ex.fr}</div>
-                                ${ex.zh ? `<div class="text-sm mt-1" style="color: var(--gray-600);">${ex.zh}</div>` : ''}
+                        ${examples.slice(0, 5).map(ex => `
+                            <div class="pl-3 py-2.5 pr-3 rounded-r" style="border-left: 3px solid var(--primary-400); background-color: var(--primary-50);">
+                                <div class="text-sm font-medium mb-1" style="color: var(--primary-800); line-height: 1.5;">
+                                    ${escapeHtml(ex.fr)}
+                                </div>
+                                ${ex.zh ? `
+                                    <div class="text-xs mt-1.5" style="color: var(--gray-600); line-height: 1.4;">
+                                        ${escapeHtml(ex.zh)}
+                                    </div>
+                                ` : ''}
                             </div>
                         `).join('')}
+                        ${examples.length > 5 ? `
+                            <div class="text-xs text-center pt-2" style="color: var(--gray-500);">
+                                还有 ${examples.length - 5} 个例句...
+                            </div>
+                        ` : ''}
                     </div>
                 ` : ''}
             </div>
@@ -1080,7 +1246,29 @@ function renderFavoritesPanel() {
     } else {
         listEl.innerHTML = favorites.map(fav => {
             const wordObj = dictWords.find(w => w.word === fav.word);
-            const posText = fav.pos?.map(p => p.full || p.abbr).join(', ') || '';
+            // 处理 pos 可能是数组或对象的情况
+            let posText = '';
+            if (fav.pos) {
+                if (Array.isArray(fav.pos)) {
+                    // pos 是数组格式: [{abbr: 'n.', full: '名词'}, ...]
+                    posText = fav.pos.map(p => p.full || p.abbr).join(', ');
+                } else if (typeof fav.pos === 'object') {
+                    // pos 是对象格式: {abbr: 'n.', full: '名词'} 或 {noun: {...}, verb: {...}}
+                    // 尝试提取 full 或 abbr
+                    if (fav.pos.full || fav.pos.abbr) {
+                        posText = fav.pos.full || fav.pos.abbr;
+                    } else {
+                        // 如果是嵌套对象，提取所有键名
+                        posText = Object.keys(fav.pos).join(', ');
+                    }
+                }
+            }
+            // 如果从词典中找到词条，优先使用词典中的 pos
+            if (!posText && wordObj?.pos) {
+                if (Array.isArray(wordObj.pos)) {
+                    posText = wordObj.pos.map(p => p.full || p.abbr).join(', ');
+                }
+            }
             const shortDef = wordObj ? getShortDefinition(wordObj) : '';
             
             return `

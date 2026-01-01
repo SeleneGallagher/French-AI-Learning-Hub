@@ -1,12 +1,12 @@
 {
   "name": "公共法语学习词典 - 副词",
   "pos": "adv",
-  "count": 233,
+  "count": 243,
   "source": "公共法语学习词典",
   "license": "Unknown",
   "copyright": "",
   "version": "1.0.0",
-  "generated_at": "2025-12-30T23:54:52.218153Z",
+  "generated_at": "2026-01-01T19:11:37.257681Z",
   "words": [
     {
       "word": "absolument",
@@ -146,10 +146,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "adv.这样，如此: Pourquoi me regardez-vous ainsi?您为什么这样看着我?"
+          "text": "这样，如此: Pourquoi me regardez-vous ainsi?您为什么这样看着我?"
         },
         {
-          "text": "conj.由此，因此: Je prends l'express, ainsi j'arriverai plus tôt. 我乘快车，这样我就会更早到达。"
+          "text": "由此，因此: Je prends l'express, ainsi j'arriverai plus tôt. 我乘快车，这样我就会更早到达。"
         },
         {
           "text": "【ainsi que】 loc. conj.如同，正如;和，以及: Il est venu ainsi que je le lui avais demandé.正如我要求他的那样他来了。 Je t'invite, ainsi que ta sœur. 我邀请你以及你姐姐。"
@@ -169,10 +169,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "adv.在周围，在附近: Vous verrez une maison avec des arbres alentour.您可以看到一幢四周有树木的房子。"
+          "text": "在周围，在附近: Vous verrez une maison avec des arbres alentour.您可以看到一幢四周有树木的房子。"
         },
         {
-          "text": "n. m. pl.周围，近郊: Les alentours de la ville sont pittoresques. 城市近郊风景如画。"
+          "text": "周围，近郊: Les alentours de la ville sont pittoresques. 城市近郊风景如画。"
         }
       ]
     },
@@ -230,6 +230,41 @@
       "definitions": [
         {
           "text": "友好地，亲切地: Nous avons bavardé amicalement.我们亲切地聊了一会。"
+        }
+      ]
+    },
+    {
+      "word": "après",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…以后[表示时间]: On se reposera après le travail.我们将在工作后休息。 Un an après sa mort, elle est partie en France.他去世后一年，她动身去了法国。"
+        },
+        {
+          "text": "在…后面[表示空间]: La gare est après le carrefour.火车站在十字路口后面。"
+        },
+        {
+          "text": "以后，之后[表示时间]: Vingt ans après, la guerre recommença. 20年后，战争重新打响了。 Avant son accident, il était très gentil, mais après, il est devenu bizarre.在事故发生前，他对人很好，可是之后，他变得古怪了。"
+        },
+        {
+          "text": "后面，在后面[表示空间]: Voici la poste, l'épicerie est après. 这是邮局，食品杂货店就在后面。"
+        },
+        {
+          "text": "【après】 在…以后[后接不定式过去时]: Après avoir mangé， il est parti sans nous dire au revoir.他吃完饭后，没有向我们说声再见就走了。"
+        },
+        {
+          "text": "【après que...】 在…以后: Après qu'il était parti, on a reconstruit la maison.他走了以后，重新造了房子。"
+        },
+        {
+          "text": "【d'après】 loc. prép. 根据…，按照…: D'après vous, quel est le coupable? 依您看，罪犯是谁呢?"
         }
       ]
     },
@@ -399,6 +434,26 @@
       ]
     },
     {
+      "word": "autour (de)",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "prép.在…周围，在…四周: La circulation autour de Paris est difficile.巴黎周围的交通很困难。 Nous sommes allés ramasser des champignons dans les forêts qui sont autour du village. 我们到村子周围的树林里去采了蘑菇。"
+        },
+        {
+          "text": "在周围: Impossible d'entrer dans ce parc, il y a un mur tout autour.不可能进入这座公园，四周有围墙。"
+        }
+      ]
+    },
+    {
       "word": "autrefois",
       "pos": [
         {
@@ -432,6 +487,38 @@
         },
         {
           "text": "否则，不然: Dépêchez-vous, autrement vous serez en retard.快点，否则你们会迟到的。"
+        }
+      ]
+    },
+    {
+      "word": "avant",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "在…以前[表示时间]: Elle est arrivée avant nous.她比我们先到。 Pour être en forme, reposez-vous avant l'examen.为了精力充沛，考试前你们要休息休息。"
+        },
+        {
+          "text": "在…前面[表示空间]: Le bureau de poste est juste avant le pont. 邮局就在桥前面。"
+        },
+        {
+          "text": "以前，之前[表示时间】: On a construit une nouvelle route; avant, il fallait faire un long détour.人们修建了一条新公路;以前，必须绕很大一圈。 Ne vous décidez pas tout de suite; réfléchissez avant. 不要立即作出决定，先思考一下。 Quelques jours avant, il était parti pour Paris.(当时)几天以前，他动身去了巴黎。"
+        },
+        {
+          "text": "前面，在前面[表示空间]: N'allez pas jusqu'à la place, arrêtez-vous avant.不要一直走到广场，在前面停下来。"
+        },
+        {
+          "text": "【avant de】 loc. prép. 在…前[后接不定式]: Mets ton manteau avant de sortir, il fait froid dehors.出去以前穿好大衣，外面寒冷。"
+        },
+        {
+          "text": "【avant que】 loc. conj. 在…前[后接虚拟式]: Rentrons vite avant qu'il (ne) pleuve.下雨之前，我们赶紧回家。"
         }
       ]
     },
@@ -519,10 +606,30 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "interj.(要求表演者)再来一遍: Les spectateurs crient: «Bis! bis!» 观众们叫喊着:“再来一个!再来一个!”"
+          "text": "(要求表演者)再来一遍: Les spectateurs crient: «Bis! bis!» 观众们叫喊着:“再来一个!再来一个!”"
         },
         {
-          "text": "adv.(表示数字)重复: Ma maison porte le numéro 6 bis car la maison voisine porte déjà le numéro 6.我家门牌号是6号乙，因为邻居家门牌号已经是6号了。"
+          "text": "(表示数字)重复: Ma maison porte le numéro 6 bis car la maison voisine porte déjà le numéro 6.我家门牌号是6号乙，因为邻居家门牌号已经是6号了。"
+        }
+      ]
+    },
+    {
+      "word": "bis",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "(要求表演者)再来一遍: Les spectateurs crient: «Bis! bis!» 观众们叫喊着:“再来一个!再来一个!”"
+        },
+        {
+          "text": "(表示数字)重复: Ma maison porte le numéro 6 bis car la maison voisine porte déjà le numéro 6.我家门牌号是6号乙，因为邻居家门牌号已经是6号了。"
         }
       ]
     },
@@ -557,6 +664,26 @@
       "definitions": [
         {
           "text": "好!妙! Bravo, Blandine! tu as très bien dansé!好极了，布朗迪恩!你跳舞跳得非常好!"
+        }
+      ]
+    },
+    {
+      "word": "bref",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "简短的，简要的: Son exposé a été bref, mais précis.他的陈述简要，但很清楚。 Je vous donne un bref aperçu de cette entreprise française.我向你们简要地介绍一下这家法国企业。"
+        },
+        {
+          "text": "简言之，总之: Bref, il refuse notre invitation.总之，他拒绝我们的邀请。"
         }
       ]
     },
@@ -662,6 +789,26 @@
       "definitions": [
         {
           "text": "热情地，热烈地: Ils m'ont reçu chaleureusement.他们热情地接待了我。"
+        }
+      ]
+    },
+    {
+      "word": "cher",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "亲爱的;昂贵的: Cher ami, je vous remercie de votre cadeau.亲爱的朋友，我感谢您给我的礼物。 Ce costume est trop cher pour moi. 这套西服对我来说太贵了。"
+        },
+        {
+          "text": "昂贵地: Ces médicaments coûtent cher.这些药品价值昂贵。"
         }
       ]
     },
@@ -961,6 +1108,26 @@
       ]
     },
     {
+      "word": "Dieu",
+      "pos": [
+        {
+          "abbr": "interj.",
+          "full": "感叹词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "上帝: Mme Dupont croit en Dieu.杜邦太太信上帝。"
+        },
+        {
+          "text": "上帝: Dieu! Mon Dieu!天啊!上帝啊!"
+        }
+      ]
+    },
+    {
       "word": "difficilement",
       "pos": [
         {
@@ -1042,6 +1209,32 @@
       "definitions": [
         {
           "text": "特别，异乎寻常地: Pierre est drôlement grand.皮埃尔身材出奇的高。"
+        }
+      ]
+    },
+    {
+      "word": "dur",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "硬的，坚硬的: Ce bifteck est dur.这块牛排嚼不动。"
+        },
+        {
+          "text": "困难的，费劲的: Ce travail est dur. 这项工作很费劲。"
+        },
+        {
+          "text": "严厉的: Vous êtes dur avec cet enfant.您对这个孩子很严厉。"
+        },
+        {
+          "text": "艰苦地;努力地: On travaille dur.大家勤奋地工作。"
         }
       ]
     },
@@ -1623,7 +1816,7 @@
           "text": "将来有一天: Si jamais vous le voyez, vous lui direz que j'ai besoin de son aide.如果有一天您见到他，您对他说我需要他的帮助。"
         },
         {
-          "text": "ne... jamais 从来没有，从未;永远不: Je ne triche jamais.我从不作弊。 Il ne m'a jamais vu.他从未见到过我。"
+          "text": ".. jamais 从来没有，从未;永远不: Je ne triche jamais.我从不作弊。 Il ne m'a jamais vu.他从未见到过我。"
         }
       ]
     },
@@ -2824,13 +3017,36 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "adv.什么时候: Quand viendra-t-il?他什么时候来?"
+          "text": "什么时候: Quand viendra-t-il?他什么时候来?"
         },
         {
-          "text": "conj.当…时: Je partirai quand mon vélo sera réparé.当我的自行车修好后我再动身。"
+          "text": "当…时: Je partirai quand mon vélo sera réparé.当我的自行车修好后我再动身。"
         },
         {
           "text": "【quand même】loc.conj.仍然，还是: Marc a fait de la peine à sa mère, mais elle l'embrasse quand même.马克使他母亲感到不快，但他母亲还是拥吻了他。"
+        }
+      ]
+    },
+    {
+      "word": "quelque",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "indéf. sing.一点，少许: M. Duval a quelque expérience.杜瓦尔先生有点经验。"
+        },
+        {
+          "text": "indéf. pl.几个: Il a dit quelques mots et est parti.他说了几句话走了。"
+        },
+        {
+          "text": "大约，将近[只修饰数词]: Ilya quelque cinquante candidats à cet examen.这次考试约有五十来个考生。"
         }
       ]
     },
@@ -3231,6 +3447,26 @@
       ]
     },
     {
+      "word": "soudain",
+      "pos": [
+        {
+          "abbr": "adv.",
+          "full": "副词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "突然的，忽然的: Une pluie soudaine se met à tomber. 突然下起一场雨来。"
+        },
+        {
+          "text": "突然，忽然: Je lisais tranquillement: soudain la lampe s'éteignit. 我正在安心看书，突然灯灭了。"
+        }
+      ]
+    },
+    {
       "word": "souvent",
       "pos": [
         {
@@ -3297,10 +3533,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "interj.停止: Il ya un accident! Stop!发生一起车祸!停车!"
+          "text": "停止: Il ya un accident! Stop!发生一起车祸!停车!"
         },
         {
-          "text": "n. m.停止: Les voitures s'arrêtent au stop.车辆在标有“停”字的路标处停了下来。"
+          "text": "停止: Les voitures s'arrêtent au stop.车辆在标有“停”字的路标处停了下来。"
         }
       ]
     },
@@ -3534,7 +3770,7 @@
           "text": "tellement de 那么多的: Les élèves ont tellement de questions. 学生们有那么多的问题。"
         },
         {
-          "text": "tellement... que... 那么地…以致…: Pascal a tellement changé que je ne le reconnais pas. 帕斯卡尔变化那么大，我都认不出他了。 Cette maison est tellement grande qu'il est difficile de la chauffer. 这幢房子那么大以致难以使房间暖和起来。"
+          "text": ".. que... 那么地…以致…: Pascal a tellement changé que je ne le reconnais pas. 帕斯卡尔变化那么大，我都认不出他了。 Cette maison est tellement grande qu'il est difficile de la chauffer. 这幢房子那么大以致难以使房间暖和起来。"
         }
       ]
     },
@@ -4164,7 +4400,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "ne... guère 不大，不很，几乎没有: Je n'aime guère la viande. 我不很喜欢吃肉。"
+          "text": ".. guère 不大，不很，几乎没有: Je n'aime guère la viande. 我不很喜欢吃肉。"
         }
       ]
     },

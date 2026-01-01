@@ -1,12 +1,12 @@
 {
   "name": "公共法语学习词典 - 形容词",
   "pos": "adj",
-  "count": 1125,
+  "count": 1145,
   "source": "公共法语学习词典",
   "license": "Unknown",
   "copyright": "",
   "version": "1.0.0",
-  "generated_at": "2025-12-30T23:54:52.097399Z",
+  "generated_at": "2026-01-01T19:11:36.997850Z",
   "words": [
     {
       "word": "abondant",
@@ -38,10 +38,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.缺席的，不在场的: Le directeur sera absent pour quelques jours.经理将有几天不在这里。"
+          "text": "缺席的，不在场的: Le directeur sera absent pour quelques jours.经理将有几天不在这里。"
         },
         {
-          "text": "n.缺席者，不在场的人: Il y a deux absents aujourd'hui.今天有两人缺席。"
+          "text": "缺席者，不在场的人: Il y a deux absents aujourd'hui.今天有两人缺席。"
         }
       ]
     },
@@ -319,10 +319,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.非洲的: On parle français dans beaucoup de pays africains.非洲许多国家讲法语。"
+          "text": "非洲的: On parle français dans beaucoup de pays africains.非洲许多国家讲法语。"
         },
         {
-          "text": "n. Africain, e非洲人: Il travaille avec un Africain. 他和一个非洲人一起工作。"
+          "text": "Africain, e非洲人: Il travaille avec un Africain. 他和一个非洲人一起工作。"
         }
       ]
     },
@@ -450,13 +450,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.德国的: C'est un dictionnaire allemand.这是一本德语词典。"
+          "text": "德国的: C'est un dictionnaire allemand.这是一本德语词典。"
         },
         {
-          "text": "n. m.德语: Anne est première en allemand.安娜德语第一名。"
+          "text": "德语: Anne est première en allemand.安娜德语第一名。"
         },
         {
-          "text": "n. Allemand, e德国人: Il travaille avec des Allemands. 他同德国人一起工作。"
+          "text": "Allemand, e德国人: Il travaille avec des Allemands. 他同德国人一起工作。"
         }
       ]
     },
@@ -507,10 +507,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.恋爱的，钟情的: Il est amoureux de sa voisine.他爱上了他的邻居。"
+          "text": "恋爱的，钟情的: Il est amoureux de sa voisine.他爱上了他的邻居。"
         },
         {
-          "text": "n.恋人，情人: Les amoureux se promènent sur les quais de la Seine.恋人们在塞纳河畔散步。"
+          "text": "恋人，情人: Les amoureux se promènent sur les quais de la Seine.恋人们在塞纳河畔散步。"
         }
       ]
     },
@@ -544,10 +544,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.美国的: Les touristes américains sont venus en foule cette année en Italie.今年有大批美国游客来到意大利。"
+          "text": "美国的: Les touristes américains sont venus en foule cette année en Italie.今年有大批美国游客来到意大利。"
         },
         {
-          "text": "n. Américain, e 美国人: Je travaille avec des Américains. 我和一些美国人一起工作。"
+          "text": "Américain, e 美国人: Je travaille avec des Américains. 我和一些美国人一起工作。"
         }
       ]
     },
@@ -587,13 +587,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.英国的: Mon amie anglaise s'appelle Dorothy; elle m'apprend à parler l'anglais.我的英国朋友名叫多萝西;她教我讲英语。"
+          "text": "英国的: Mon amie anglaise s'appelle Dorothy; elle m'apprend à parler l'anglais.我的英国朋友名叫多萝西;她教我讲英语。"
         },
         {
-          "text": "n. m.英语: L'anglais est une des langues officielles du Canada et de l'Afrique du Sud.英语是加拿大和南非官方语言之一。"
+          "text": "英语: L'anglais est une des langues officielles du Canada et de l'Afrique du Sud.英语是加拿大和南非官方语言之一。"
         },
         {
-          "text": "n. Anglais, e 英国人: Ce sont des Anglais.这是一些英国人。"
+          "text": "Anglais, e 英国人: Ce sont des Anglais.这是一些英国人。"
         }
       ]
     },
@@ -749,13 +749,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.阿拉伯的: L'Égypte, la Tunisie et l'Irak sont des pays arabes. 埃及、突尼斯、伊拉克是阿拉伯国家。"
+          "text": "阿拉伯的: L'Égypte, la Tunisie et l'Irak sont des pays arabes. 埃及、突尼斯、伊拉克是阿拉伯国家。"
         },
         {
-          "text": "n. m.阿拉伯语: Les Algériens ne sont pas les seuls à parler l'arabe.阿尔及利亚人不是惟一讲阿拉伯语的人。"
+          "text": "阿拉伯语: Les Algériens ne sont pas les seuls à parler l'arabe.阿尔及利亚人不是惟一讲阿拉伯语的人。"
         },
         {
-          "text": "n. Arabe 阿拉伯人: Les Arabes portent la robe longue.阿拉伯人穿长袍。"
+          "text": "Arabe 阿拉伯人: Les Arabes portent la robe longue.阿拉伯人穿长袍。"
         }
       ]
     },
@@ -806,10 +806,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.亚洲的: Dans ma collection, j'ai une poupée asiatique. 在我的收藏品里，有一只亚洲娃娃。"
+          "text": "亚洲的: Dans ma collection, j'ai une poupée asiatique. 在我的收藏品里，有一只亚洲娃娃。"
         },
         {
-          "text": "n. Asiatique 亚洲人: On peut trouver beaucoup d'Asiatiques dans le XIII® arrondissement à Paris. 在巴黎十三区可以看到许多亚洲人。"
+          "text": "Asiatique 亚洲人: On peut trouver beaucoup d'Asiatiques dans le XIII® arrondissement à Paris. 在巴黎十三区可以看到许多亚洲人。"
         }
       ]
     },
@@ -962,10 +962,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. indéf.没有一个的，没有任何的[和 ne 或 sans 连用，表示否定]: Je n'ai aucune idée de cela.我对此没有任何概念。 Aucune nouvelle ne lui est arrivée.他没有任何消息。 Elle viendra sans aucun doute. 她肯定会来。"
+          "text": "indéf.没有一个的，没有任何的[和 ne 或 sans 连用，表示否定]: Je n'ai aucune idée de cela.我对此没有任何概念。 Aucune nouvelle ne lui est arrivée.他没有任何消息。 Elle viendra sans aucun doute. 她肯定会来。"
         },
         {
-          "text": "pron. indéf.没有一个人，没有任何人[和 ne 连用，表示否定]: Aucun de ses amis n'est venu le voir à l'hôpital.没有一个朋友来医院看望过他。 Aucun d'entre eux n'est au courant.他们中间没有任何人知道。 Sophie attendait plusieurs lettres, mais elle n'en a reçu aucune. 索菲在等好几封信，可她没有收到任何一封。"
+          "text": "indéf.没有一个人，没有任何人[和 ne 连用，表示否定]: Aucun de ses amis n'est venu le voir à l'hôpital.没有一个朋友来医院看望过他。 Aucun d'entre eux n'est au courant.他们中间没有任何人知道。 Sophie attendait plusieurs lettres, mais elle n'en a reçu aucune. 索菲在等好几封信，可她没有收到任何一封。"
         }
       ]
     },
@@ -1033,10 +1033,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.汽车的: L'industrie automobile occupe une place importante dans ce pays.汽车工业在这个国家举足轻重。"
+          "text": "汽车的: L'industrie automobile occupe une place importante dans ce pays.汽车工业在这个国家举足轻重。"
         },
         {
-          "text": "n.f.汽车:♦ On va visiter le Salon de l'Automobile. 我们去参观汽车博览会。"
+          "text": "汽车:♦ On va visiter le Salon de l'Automobile. 我们去参观汽车博览会。"
         }
       ]
     },
@@ -1087,10 +1087,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. indéf.另外的，其它的，别的: Donnez-moi un autre verre.给我一只别的玻璃杯。 Nous nous verrons un autre jour.我们改天再见面吧。 Mets ton autre robe.穿上你的另外一条连衫裙。 J'ai encore deux autres dictionnaires français.我还有另外两本法语词典。 Quelques autres personnes m'ont mal compris.另外几个人没有理解我的意思。 Je ne prendrai que des fruits, je ne veux rien d'autre.我只吃水果，别的什么也不要。 Quelqu'un d'autre a-t-il téléphoné?别人打来过电话吗?"
+          "text": "indéf.另外的，其它的，别的: Donnez-moi un autre verre.给我一只别的玻璃杯。 Nous nous verrons un autre jour.我们改天再见面吧。 Mets ton autre robe.穿上你的另外一条连衫裙。 J'ai encore deux autres dictionnaires français.我还有另外两本法语词典。 Quelques autres personnes m'ont mal compris.另外几个人没有理解我的意思。 Je ne prendrai que des fruits, je ne veux rien d'autre.我只吃水果，别的什么也不要。 Quelqu'un d'autre a-t-il téléphoné?别人打来过电话吗?"
         },
         {
-          "text": "pron. indéf. 另一个人，另一个事物，其他人: Je le prends pour un autre.我把他当作另一个人了。 Ce gâteau était délicieux, donne-m'en un autre. 这块蛋糕真好吃，再给我来一块。 Cette cravate ne me plaît pas; prends plutôt cette autre.这条领带我不喜欢，还是拿那条吧。 Ne t'occupe pas de ce que disent les autres.不要管别人说什么。 Il a deux enfants: l'un travaille à l'hôpital, l'autre est avocat.他有两个孩子，一个在医院工作，另一个当律师。 Les fruits sont tous gâtés: les uns sont pourris, les autres ont été piqués par les oiseaux.这些水果都坏了，一些烂掉了，另一些被鸟啄过了。"
+          "text": "indéf. 另一个人，另一个事物，其他人: Je le prends pour un autre.我把他当作另一个人了。 Ce gâteau était délicieux, donne-m'en un autre. 这块蛋糕真好吃，再给我来一块。 Cette cravate ne me plaît pas; prends plutôt cette autre.这条领带我不喜欢，还是拿那条吧。 Ne t'occupe pas de ce que disent les autres.不要管别人说什么。 Il a deux enfants: l'un travaille à l'hôpital, l'autre est avocat.他有两个孩子，一个在医院工作，另一个当律师。 Les fruits sont tous gâtés: les uns sont pourris, les autres ont été piqués par les oiseaux.这些水果都坏了，一些烂掉了，另一些被鸟啄过了。"
         }
       ]
     },
@@ -1141,10 +1141,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.瞎的，盲的: Ce musicien est aveugle. 这位音乐家是盲人。"
+          "text": "瞎的，盲的: Ce musicien est aveugle. 这位音乐家是盲人。"
         },
         {
-          "text": "n.瞎子，盲人: Sylvie a aidé un aveugle à traverser la rue.西尔维帮助一位盲人过了马路。"
+          "text": "瞎子，盲人: Sylvie a aidé un aveugle à traverser la rue.西尔维帮助一位盲人过了马路。"
         }
       ]
     },
@@ -1229,10 +1229,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.野蛮的，不文明的: Ce chef barbare a fait fusiller des innocents. 这个野蛮的首领指使他人枪杀无辜。"
+          "text": "野蛮的，不文明的: Ce chef barbare a fait fusiller des innocents. 这个野蛮的首领指使他人枪杀无辜。"
         },
         {
-          "text": "n.粗野的人，不文明的人: Il se conduit comme un barbare.他的表现像个不文明的人。"
+          "text": "粗野的人，不文明的人: Il se conduit comme un barbare.他的表现像个不文明的人。"
         }
       ]
     },
@@ -1242,10 +1242,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -1320,10 +1316,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.比利时的: Le chocolat belge est renommé.比利时巧克力很有名。"
+          "text": "比利时的: Le chocolat belge est renommé.比利时巧克力很有名。"
         },
         {
-          "text": "n. Belge 比利时人: Les Belges parlent français.比利时人讲法语。"
+          "text": "Belge 比利时人: Les Belges parlent français.比利时人讲法语。"
         }
       ]
     },
@@ -1340,10 +1336,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.受欢迎的，来得适时的: Cette somme d'argent est bienvenue.这笔钱来得真是时候。"
+          "text": "受欢迎的，来得适时的: Cette somme d'argent est bienvenue.这笔钱来得真是时候。"
         },
         {
-          "text": "n.受欢迎者: Soyez le bienvenu (la bienvenue)!欢迎您!"
+          "text": "受欢迎者: Soyez le bienvenu (la bienvenue)!欢迎您!"
         }
       ]
     },
@@ -1440,10 +1436,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.受伤的，负伤的: Il est grièvement blessé dans un accident.他在一次事故中受了重伤。"
+          "text": "受伤的，负伤的: Il est grièvement blessé dans un accident.他在一次事故中受了重伤。"
         },
         {
-          "text": "n.受伤者，伤员: L'accident a fait un mort et deux blessés. 事故造成一死二伤。"
+          "text": "受伤者，伤员: L'accident a fait un mort et deux blessés. 事故造成一死二伤。"
         }
       ]
     },
@@ -1497,10 +1493,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.跛的，瘸腿的;不稳的: Après son accident, Pierre est resté boiteux.皮埃尔出事故后，就瘸腿了。 C'est une chaise boiteuse.这是一把放不稳的椅子。"
+          "text": "跛的，瘸腿的;不稳的: Après son accident, Pierre est resté boiteux.皮埃尔出事故后，就瘸腿了。 C'est une chaise boiteuse.这是一把放不稳的椅子。"
         },
         {
-          "text": "n.跛子，瘸子: Un boiteux mendiait devant l'église. 一个跛子在教堂前行乞。"
+          "text": "跛子，瘸子: Un boiteux mendiait devant l'église. 一个跛子在教堂前行乞。"
         }
       ]
     },
@@ -1586,10 +1582,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.独眼的，一只眼瞎的: Il est borgne de l'œil gauche.他的左眼瞎了。"
+          "text": "独眼的，一只眼瞎的: Il est borgne de l'œil gauche.他的左眼瞎了。"
         },
         {
-          "text": "n.独眼者，独眼龙: Au royaume des aveugles, les borgnes sont rois.盲人国里独眼称王。"
+          "text": "独眼者，独眼龙: Au royaume des aveugles, les borgnes sont rois.盲人国里独眼称王。"
         }
       ]
     },
@@ -1660,10 +1656,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.简短的，简要的: Son exposé a été bref, mais précis.他的陈述简要，但很清楚。 Je vous donne un bref aperçu de cette entreprise française.我向你们简要地介绍一下这家法国企业。"
+          "text": "简短的，简要的: Son exposé a été bref, mais précis.他的陈述简要，但很清楚。 Je vous donne un bref aperçu de cette entreprise française.我向你们简要地介绍一下这家法国企业。"
         },
         {
-          "text": "adv.简言之，总之: Bref, il refuse notre invitation.总之，他拒绝我们的邀请。"
+          "text": "简言之，总之: Bref, il refuse notre invitation.总之，他拒绝我们的邀请。"
         }
       ]
     },
@@ -1734,10 +1730,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.褐色的，棕色的: Marie a les cheveux bruns.玛丽的头发是棕色的。"
+          "text": "褐色的，棕色的: Marie a les cheveux bruns.玛丽的头发是棕色的。"
         },
         {
-          "text": "n.棕色头发的人: Son père est un brun.他父亲棕色头发。 C'est une petite brune aux yeux noirs. 这是一个黑眼睛棕色头发的小姑娘。"
+          "text": "棕色头发的人: Son père est un brun.他父亲棕色头发。 C'est une petite brune aux yeux noirs. 这是一个黑眼睛棕色头发的小姑娘。"
         }
       ]
     },
@@ -1862,10 +1858,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.较年幼的，年龄较小的: Elle est partie en vacances avec sa sœur cadette.她和妹妹动身度假去了。"
+          "text": "较年幼的，年龄较小的: Elle est partie en vacances avec sa sœur cadette.她和妹妹动身度假去了。"
         },
         {
-          "text": "n.弟弟，妹妹: Chez nos voisins, l'aîné a 12 ans, j'aime mieux le cadet, Marc, qui a 10 ans. 在我的邻居家，哥哥 12 岁;我更喜欢弟弟马克，他10岁。"
+          "text": "弟弟，妹妹: Chez nos voisins, l'aîné a 12 ans, j'aime mieux le cadet, Marc, qui a 10 ans. 在我的邻居家，哥哥 12 岁;我更喜欢弟弟马克，他10岁。"
         }
       ]
     },
@@ -1942,10 +1938,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.资本主义的: Les États-Unis sont un pays capitaliste. 美国是一个资本主义国家。"
+          "text": "资本主义的: Les États-Unis sont un pays capitaliste. 美国是一个资本主义国家。"
         },
         {
-          "text": "n.资本家: M. Durand est un capitaliste. 迪朗先生是一个资本家。"
+          "text": "资本家: M. Durand est un capitaliste. 迪朗先生是一个资本家。"
         }
       ]
     },
@@ -1962,10 +1958,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.有特征的，有特点的: Les courbatures sont un signe caractéristique de la grippe.酸痛是流感的一个特征。"
+          "text": "有特征的，有特点的: Les courbatures sont un signe caractéristique de la grippe.酸痛是流感的一个特征。"
         },
         {
-          "text": "n.f.特征，特点，特性: Quelles sont les caractéristiques de cette voiture?这辆汽车有哪些特点?"
+          "text": "特征，特点，特性: Quelles sont les caractéristiques de cette voiture?这辆汽车有哪些特点?"
         }
       ]
     },
@@ -1982,10 +1978,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.患心脏病的: M. Durand est cardiaque.迪朗先生患有心脏病。 Il est mort d'une maladie cardiaque.他死于心脏病。"
+          "text": "患心脏病的: M. Durand est cardiaque.迪朗先生患有心脏病。 Il est mort d'une maladie cardiaque.他死于心脏病。"
         },
         {
-          "text": "n.心脏病患者: Les cardiaques doivent se ménager.心脏病患者应量力而行。"
+          "text": "心脏病患者: Les cardiaques doivent se ménager.心脏病患者应量力而行。"
         }
       ]
     },
@@ -2039,10 +2035,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.天主教的: Noël est une fête catholique.圣诞节是一个天主教节日。"
+          "text": "天主教的: Noël est une fête catholique.圣诞节是一个天主教节日。"
         },
         {
-          "text": "n.天主教徒: Paul va à la messe: il est catholique.保尔去做弥撒，因为他是天主教徒。"
+          "text": "天主教徒: Paul va à la messe: il est catholique.保尔去做弥撒，因为他是天主教徒。"
         }
       ]
     },
@@ -2110,13 +2106,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.肯定的，确信的: Ilva rater l'examen, c'est certain. 他将考不及格，这是肯定的。 Ils mènent par 5 à 0: la victoire est certaine.他们5比0领先，肯定会赢。 Il est certain de ce qu'il dit. 他能肯定自己所说的。 Je suis certain qu'il fera beau demain.我肯定明天天晴。"
+          "text": "肯定的，确信的: Ilva rater l'examen, c'est certain. 他将考不及格，这是肯定的。 Ils mènent par 5 à 0: la victoire est certaine.他们5比0领先，肯定会赢。 Il est certain de ce qu'il dit. 他能肯定自己所说的。 Je suis certain qu'il fera beau demain.我肯定明天天晴。"
         },
         {
-          "text": "a. indéf.某个;一些，某些: Il a montré un certain courage. 他表现出几分勇气。 Connaissez-vous un certain Dupont?您认识某个叫杜邦的人吗? Dans certains cas, il vaut mieux ne pas se faire remarquer.在某些情况下，最好不要出头露面。 Certains élèves sont très forts en français.有些学生法语学得很好。"
+          "text": "indéf.某个;一些，某些: Il a montré un certain courage. 他表现出几分勇气。 Connaissez-vous un certain Dupont?您认识某个叫杜邦的人吗? Dans certains cas, il vaut mieux ne pas se faire remarquer.在某些情况下，最好不要出头露面。 Certains élèves sont très forts en français.有些学生法语学得很好。"
         },
         {
-          "text": "pron. indéf.pl. 某些人，有些人: Certains pensent que vous avez raison. 有些人认为您有理。 Je ne peux pas approuver l'attitude de certains. 我不能赞同有些人的态度。"
+          "text": "indéf.pl. 某些人，有些人: Certains pensent que vous avez raison. 有些人认为您有理。 Je ne peux pas approuver l'attitude de certains. 我不能赞同有些人的态度。"
         }
       ]
     },
@@ -2201,10 +2197,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.热的，烫的;暖和的: Bois ton café pendant qu'il est chaud.你趁热把咖啡喝了。 Qu'il fait chaud dans cette pièce!这间房间真热! Attention! l'eau est chaude.当心!水烫的。 Ce manteau est chaud.这件大衣很暖和。"
+          "text": "热的，烫的;暖和的: Bois ton café pendant qu'il est chaud.你趁热把咖啡喝了。 Qu'il fait chaud dans cette pièce!这间房间真热! Attention! l'eau est chaude.当心!水烫的。 Ce manteau est chaud.这件大衣很暖和。"
         },
         {
-          "text": "n. m.热: J'ai très chaud.我很热。"
+          "text": "热: J'ai très chaud.我很热。"
         }
       ]
     },
@@ -2221,10 +2217,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.亲爱的;昂贵的: Cher ami, je vous remercie de votre cadeau.亲爱的朋友，我感谢您给我的礼物。 Ce costume est trop cher pour moi. 这套西服对我来说太贵了。"
+          "text": "亲爱的;昂贵的: Cher ami, je vous remercie de votre cadeau.亲爱的朋友，我感谢您给我的礼物。 Ce costume est trop cher pour moi. 这套西服对我来说太贵了。"
         },
         {
-          "text": "adv.昂贵地: Ces médicaments coûtent cher.这些药品价值昂贵。"
+          "text": "昂贵地: Ces médicaments coûtent cher.这些药品价值昂贵。"
         }
       ]
     },
@@ -2275,13 +2271,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.中国的: M. Dupont aime la cuisine chinoise.杜邦先生爱吃中国菜。"
+          "text": "中国的: M. Dupont aime la cuisine chinoise.杜邦先生爱吃中国菜。"
         },
         {
-          "text": "n. m.中文: Il apprend le chinois à l'École des langues orientales. 他在东方语言学校学中文。"
+          "text": "中文: Il apprend le chinois à l'École des langues orientales. 他在东方语言学校学中文。"
         },
         {
-          "text": "n. Chinois, e 中国人: C'est un Chinois installé en France depuis de longues années. 这是一个侨居法国多年的中国人。"
+          "text": "Chinois, e 中国人: C'est un Chinois installé en France depuis de longues années. 这是一个侨居法国多年的中国人。"
         }
       ]
     },
@@ -2423,10 +2419,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.粘的，胶质的: Il a réparé son stylo avec du papier collant. 他用胶纸修好了钢笔。"
+          "text": "粘的，胶质的: Il a réparé son stylo avec du papier collant. 他用胶纸修好了钢笔。"
         },
         {
-          "text": "n. m.连裤袜: Ma sœur n'a plus besoin de bas: elle met un collant. 我妹妹不再需要长袜，因为她穿连裤袜。"
+          "text": "连裤袜: Ma sœur n'a plus besoin de bas: elle met un collant. 我妹妹不再需要长袜，因为她穿连裤袜。"
         }
       ]
     },
@@ -2497,10 +2493,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.商业的: Il y a une rue commerçante près de chez moi. 我家附近有条商业街。 Nous habitons un quartier commerçant. 我们住在商业区。"
+          "text": "商业的: Il y a une rue commerçante près de chez moi. 我家附近有条商业街。 Nous habitons un quartier commerçant. 我们住在商业区。"
         },
         {
-          "text": "n.商人: Il y a beaucoup de commerçants dans cette rue. 这条街上有许多商人。"
+          "text": "商人: Il y a beaucoup de commerçants dans cette rue. 这条街上有许多商人。"
         }
       ]
     },
@@ -2538,6 +2534,26 @@
       "definitions": [
         {
           "text": "共同的，共有的，公用的: Ces deux plantes ont plusieurs caractères communs.这两种植物有好几个共同的特征。 Ce travail est le résultat de l'effort commun.这项工作是共同努力的结果。 Les deux chambres ont une salle de bains commune.两间卧室有一间公用的卫生间。"
+        }
+      ]
+    },
+    {
+      "word": "communiste",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "共产党员，共产主义者: Les communistes sont opposés au capitalisme.共产主义者反对资本主义。"
+        },
+        {
+          "text": "共产党的，共产主义的: Il est du parti communiste.他是共产党员。"
         }
       ]
     },
@@ -2781,10 +2797,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.相反的: Ce qu'il a fait est contraire au règlement.他所做的违反规章制度。 La voiture roule vers Paris et la moto en sens contraire.汽车朝着巴黎方向开，而摩托车则朝着相反的方向开。"
+          "text": "相反的: Ce qu'il a fait est contraire au règlement.他所做的违反规章制度。 La voiture roule vers Paris et la moto en sens contraire.汽车朝着巴黎方向开，而摩托车则朝着相反的方向开。"
         },
         {
-          "text": "n. m.相反，相反的事物: Jacqueline dit qu'il fera beau, Thérèse dit le contraire.雅克琳说天气将晴朗，泰雷兹则看法相反。"
+          "text": "相反，相反的事物: Jacqueline dit qu'il fera beau, Thérèse dit le contraire.雅克琳说天气将晴朗，泰雷兹则看法相反。"
         }
       ]
     },
@@ -2872,10 +2888,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.犯罪的，有罪的: S'il n'était pas coupable, pourquoi se serait-il enfui? 假如他没有犯罪的话，为什么要逃跑呢?"
+          "text": "犯罪的，有罪的: S'il n'était pas coupable, pourquoi se serait-il enfui? 假如他没有犯罪的话，为什么要逃跑呢?"
         },
         {
-          "text": "n.罪犯: La police a enfin découvert le coupable. 警方最终发现了罪犯。"
+          "text": "罪犯: La police a enfin découvert le coupable. 警方最终发现了罪犯。"
         }
       ]
     },
@@ -2902,10 +2918,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -2940,6 +2952,29 @@
         },
         {
           "text": "短暂的，简短的: Yvonne trouve les récréations trop courtes.伊冯娜觉得课间休息时间太短了。"
+        }
+      ]
+    },
+    {
+      "word": "couvert",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": "m",
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "餐具: Veux-tu mettre le couvert? 你来摆餐具，好吗?"
+        },
+        {
+          "text": "一副餐具: Ajoutez un couvert, s'il vous plaît.请添一副餐具。"
+        },
+        {
+          "text": "盖满的，布满的: Mes chaussures sont couvertes de boue. 我的鞋子沾满了泥土。"
         }
       ]
     },
@@ -3044,10 +3079,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.好奇的: Notre concierge est très curieuse.我们的门房太太很好奇。"
+          "text": "好奇的: Notre concierge est très curieuse.我们的门房太太很好奇。"
         },
         {
-          "text": "n.好奇的人: L'accident attire des curieux.事故吸引了一些好奇者。"
+          "text": "好奇的人: L'accident attire des curieux.事故吸引了一些好奇者。"
         }
       ]
     },
@@ -3081,10 +3116,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.独身的，不婚的: Ma sœur ne veut pas rester célibataire. 我姐姐不愿意过独身生活。"
+          "text": "独身的，不婚的: Ma sœur ne veut pas rester célibataire. 我姐姐不愿意过独身生活。"
         },
         {
-          "text": "n.独身者: En France, les célibataires paient plus d'impôts que les gens mariés.在法国，独身者纳税纳得比已婚者多。"
+          "text": "独身者: En France, les célibataires paient plus d'impôts que les gens mariés.在法国，独身者纳税纳得比已婚者多。"
         }
       ]
     },
@@ -3456,10 +3491,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 家庭的，家养的: Les appareils ménagers rendent moins pénibles les travaux domestiques.家用电器使得家务活不那么繁重。"
+          "text": "家庭的，家养的: Les appareils ménagers rendent moins pénibles les travaux domestiques.家用电器使得家务活不那么繁重。"
         },
         {
-          "text": "n. 仆人，佣人: Autrefois les nobles avaient de nombreux domestiques.从前，贵族有许许多多仆人。"
+          "text": "仆人，佣人: Autrefois les nobles avaient de nombreux domestiques.从前，贵族有许许多多仆人。"
         }
       ]
     },
@@ -3594,10 +3629,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -3647,10 +3678,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "adv.",
-          "full": "副词"
         }
       ],
       "gender": null,
@@ -3839,10 +3866,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -4233,10 +4256,30 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.主要的，最重要的: Voilà le passage essentiel de ce livre. 这是这本书的 主要章节。 La question essentielle est de savoir qui est responsable de l'accident. 最重要的问题是弄清楚谁对事故负有责任。"
+          "text": "主要的，最重要的: Voilà le passage essentiel de ce livre. 这是这本书的 主要章节。 La question essentielle est de savoir qui est responsable de l'accident. 最重要的问题是弄清楚谁对事故负有责任。"
         },
         {
-          "text": "n. m. 要点，主要的东西: Nous nous sommes mis d'accord sur l'essentiel.我 们在主要方面达成了一致。 L'essentiel, c'est de pouvoir parler français.主要 的是能够讲法语。"
+          "text": "要点，主要的东西: Nous nous sommes mis d'accord sur l'essentiel.我 们在主要方面达成了一致。 L'essentiel, c'est de pouvoir parler français.主要 的是能够讲法语。"
+        }
+      ]
+    },
+    {
+      "word": "est",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "东，东面; Est 东部地区: Notre cuisine est à l'est.我们的厨房在东 面。 Il habite dans l'Est de la France.他住在法国东部。"
+        },
+        {
+          "text": "东的，东方的: M. Dupont travaille dans la banlieue est de Paris.杜 邦先生在巴黎东郊工作。"
         }
       ]
     },
@@ -4287,10 +4330,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.欧洲的: Il adore la cuisine européenne.他很喜欢吃西餐。"
+          "text": "欧洲的: Il adore la cuisine européenne.他很喜欢吃西餐。"
         },
         {
-          "text": "n. Européen, ne 欧洲人: Ce sont des Européens.这是些欧洲人。"
+          "text": "Européen, ne 欧洲人: Ce sont des Européens.这是些欧洲人。"
         }
       ]
     },
@@ -4553,10 +4596,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -4937,10 +4976,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.已订婚的: Il est fiancé.他订婚了。"
+          "text": "已订婚的: Il est fiancé.他订婚了。"
         },
         {
-          "text": "n.未婚夫，未婚妻: Il m'a présenté sa fiancée.他向我介绍了他的未婚妻。"
+          "text": "未婚夫，未婚妻: Il m'a présenté sa fiancée.他向我介绍了他的未婚妻。"
         }
       ]
     },
@@ -4978,6 +5017,29 @@
         },
         {
           "text": "fier (de qqch, de qqn)以…为荣，以…自豪: Je suis fier de mon travail. 我 以自己的工作为荣。 Elle est fière de son fils. 她为自己的儿子感到自豪。"
+        }
+      ]
+    },
+    {
+      "word": "fin",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": "f",
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "终，末: Son père arrivera d'Amérique à la fin de l'année. 他父亲年底将从美 洲回来。"
+        },
+        {
+          "text": "结尾，最后部分: Je n'ai pas vu ce film jusqu'à la fin.这部电影我没有看到 结束。"
+        },
+        {
+          "text": "形容词"
         }
       ]
     },
@@ -5211,10 +5273,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n.",
-          "full": "名词"
         }
       ],
       "gender": null,
@@ -5259,10 +5317,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n.",
-          "full": "名词"
         }
       ],
       "gender": null,
@@ -5286,10 +5340,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -5334,13 +5384,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.法国的，法语的: Le drapeau français est tricolore.法国国旗是蓝、白、红三色的。"
+          "text": "法国的，法语的: Le drapeau français est tricolore.法国国旗是蓝、白、红三色的。"
         },
         {
-          "text": "n. m.法语: Vous parlez français?您讲法语吗?"
+          "text": "法语: Vous parlez français?您讲法语吗?"
         },
         {
-          "text": "n. Français, e 法国人: Il travaille avec des Français.他和法国人一起工作。"
+          "text": "Français, e 法国人: Il travaille avec des Français.他和法国人一起工作。"
         }
       ]
     },
@@ -5384,10 +5434,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -5452,10 +5498,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 将来的，未来的: Cela servira aux générations futures.这将对后代有用。"
+          "text": "将来的，未来的: Cela servira aux générations futures.这将对后代有用。"
         },
         {
-          "text": "n. m.将来，未来: On ne peut connaître le futur.我们不能够知道未来。 G"
+          "text": "将来，未来: On ne peut connaître le futur.我们不能够知道未来。 G"
         }
       ]
     },
@@ -5918,6 +5964,26 @@
       ]
     },
     {
+      "word": "géant",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "巨人: J'ai lu l'histoire d'un géant qui mesurait 3 mètres. 我看了一篇身高3米的巨人的故事。"
+        },
+        {
+          "text": "巨大的，庞大的: À New York, vous verrez des immeubles géants. 在纽约，您将看到巨大的高楼。"
+        }
+      ]
+    },
+    {
       "word": "génial",
       "pos": [
         {
@@ -5943,10 +6009,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -6156,10 +6218,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.每周一次的: Cécile prend sa leçon de piano hebdomadaire.塞西尔每周上一次钢琴课。"
+          "text": "每周一次的: Cécile prend sa leçon de piano hebdomadaire.塞西尔每周上一次钢琴课。"
         },
         {
-          "text": "n. m.周刊，周报: M. Dupont a acheté un hebdomadaire.杜邦先生买了一份周刊。"
+          "text": "周刊，周报: M. Dupont a acheté un hebdomadaire.杜邦先生买了一份周刊。"
         }
       ]
     },
@@ -6227,13 +6289,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.荷兰的: Je voudrais un fromage hollandais. 我想要一块荷兰奶酪。"
+          "text": "荷兰的: Je voudrais un fromage hollandais. 我想要一块荷兰奶酪。"
         },
         {
-          "text": "n. m.荷兰语: Personne ne parle hollandais ici.这里没有人讲荷兰语。"
+          "text": "荷兰语: Personne ne parle hollandais ici.这里没有人讲荷兰语。"
         },
         {
-          "text": "n. Hollandais, e荷兰人: Ce sont des Hollandais. 这是一些荷兰人。"
+          "text": "Hollandais, e荷兰人: Ce sont des Hollandais. 这是一些荷兰人。"
         }
       ]
     },
@@ -6392,10 +6454,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. num. card.八: Le bâtiment a huit étages. 大楼有九层。"
+          "text": "八: Le bâtiment a huit étages. 大楼有九层。"
         },
         {
-          "text": "n. m. inv.八，八日，八号: Aujourd'hui, c'est le huit.今天是八号。 Il loge au huit.他住在八号。"
+          "text": "八，八日，八号: Aujourd'hui, c'est le huit.今天是八号。 Il loge au huit.他住在八号。"
         }
       ]
     },
@@ -6474,6 +6536,26 @@
       ]
     },
     {
+      "word": "hypocrite",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "伪君子，虚伪的人: C'est un hypocrite. 这是一个伪君子。"
+        },
+        {
+          "text": "伪善的，虚伪的: Paul est hypocrite.保尔虚伪。"
+        }
+      ]
+    },
+    {
       "word": "héroïque",
       "pos": [
         {
@@ -6537,10 +6619,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.傻的，愚蠢的: Comme il est idiot! 他真愚蠢! C'est idiot de sortir par ce mauvais temps.这种糟糕天气出去是愚蠢的。"
+          "text": "傻的，愚蠢的: Comme il est idiot! 他真愚蠢! C'est idiot de sortir par ce mauvais temps.这种糟糕天气出去是愚蠢的。"
         },
         {
-          "text": "n.傻子，呆子: Est-ce qu'il me prend pour un idiot? 他是不是把我当傻瓜了?"
+          "text": "傻子，呆子: Est-ce qu'il me prend pour un idiot? 他是不是把我当傻瓜了?"
         }
       ]
     },
@@ -6849,10 +6931,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.不透水的: C'est un tissu imperméable. 这是防水布料。"
+          "text": "不透水的: C'est un tissu imperméable. 这是防水布料。"
         },
         {
-          "text": "n. m.雨衣: Il va pleuvoir, prends ton imperméable.天要下雨了，带上你的雨衣。"
+          "text": "雨衣: Il va pleuvoir, prends ton imperméable.天要下雨了，带上你的雨衣。"
         }
       ]
     },
@@ -7161,10 +7243,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.不认识的，不熟悉的: Ce mot m'est inconnu.我不认识这个词。 Pour Juliette, ses cousins de Belgique sont tout à fait inconnus.对朱丽叶来说，比利时的堂兄弟是完全陌生的。"
+          "text": "不认识的，不熟悉的: Ce mot m'est inconnu.我不认识这个词。 Pour Juliette, ses cousins de Belgique sont tout à fait inconnus.对朱丽叶来说，比利时的堂兄弟是完全陌生的。"
         },
         {
-          "text": "n.陌生人: Un inconnu m'a abordé dans la rue. 在大街上，有个陌生人走过来和我攀谈。"
+          "text": "陌生人: Un inconnu m'a abordé dans la rue. 在大街上，有个陌生人走过来和我攀谈。"
         }
       ]
     },
@@ -7371,10 +7453,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.工业的: Paris est un centre industriel.巴黎是一个工业中心。"
+          "text": "工业的: Paris est un centre industriel.巴黎是一个工业中心。"
         },
         {
-          "text": "n. m.企业家: M. Dupuis est un industriel.迪皮伊先生是位企业家。"
+          "text": "企业家: M. Dupuis est un industriel.迪皮伊先生是位企业家。"
         }
       ]
     },
@@ -8004,10 +8086,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.內部的，里面的;国内的: Je mets mon argent dans la poche intérieure de ma veste.我把钱放在上衣的内袋里。 Le président a parlé de la politique intérieure.总统讲了国内政策。"
+          "text": "內部的，里面的;国内的: Je mets mon argent dans la poche intérieure de ma veste.我把钱放在上衣的内袋里。 Le président a parlé de la politique intérieure.总统讲了国内政策。"
         },
         {
-          "text": "n. m.内部，里面;国内: Je vais nettoyer l'intérieur du pot. 我来清洗罐的里面。 Le ministre de l'Intérieur a fait une tournée dans le Midi.内政部长巡视了南方。"
+          "text": "内部，里面;国内: Je vais nettoyer l'intérieur du pot. 我来清洗罐的里面。 Le ministre de l'Intérieur a fait une tournée dans le Midi.内政部长巡视了南方。"
         }
       ]
     },
@@ -8041,10 +8123,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.残废的，残疾的: Après un pareil accident, notre cousin restera sans doute invalide.发生这样一起事故，我们的表兄一定会残废的。"
+          "text": "残废的，残疾的: Après un pareil accident, notre cousin restera sans doute invalide.发生这样一起事故，我们的表兄一定会残废的。"
         },
         {
-          "text": "n.残废人，残疾人: M. Dupuis est un invalide de guerre.迪皮伊先生是位残废军人。"
+          "text": "残废人，残疾人: M. Dupuis est un invalide de guerre.迪皮伊先生是位残废军人。"
         }
       ]
     },
@@ -8061,10 +8143,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.相反的，逆的，颠倒的: Pierre est reparti en sens inverse.皮埃尔是从相反方向走的。"
+          "text": "相反的，逆的，颠倒的: Pierre est reparti en sens inverse.皮埃尔是从相反方向走的。"
         },
         {
-          "text": "n. m.相反的事: Pour la photo, les grands derrière les petits, et non l'inverse!拍照，高个子排在矮个子后面，而不是相反!"
+          "text": "相反的事: Pour la photo, les grands derrière les petits, et non l'inverse!拍照，高个子排在矮个子后面，而不是相反!"
         }
       ]
     },
@@ -8274,13 +8356,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.意大利的: Gina aime beaucoup les spaghetti: c'est un plat italien.吉娜很喜欢吃细面条，这是一种意大利菜。"
+          "text": "意大利的: Gina aime beaucoup les spaghetti: c'est un plat italien.吉娜很喜欢吃细面条，这是一种意大利菜。"
         },
         {
-          "text": "n. m.意大利语: Il parle italien.他讲意大利语。"
+          "text": "意大利语: Il parle italien.他讲意大利语。"
         },
         {
-          "text": "n. Italien, ne 意大利人: Beaucoup d'Italiens parlent français.许多意大利人会讲法语。"
+          "text": "Italien, ne 意大利人: Beaucoup d'Italiens parlent français.许多意大利人会讲法语。"
         }
       ]
     },
@@ -8331,13 +8413,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.日本的: Le judo est un sport japonais.柔道是一项日本体育运动。"
+          "text": "日本的: Le judo est un sport japonais.柔道是一项日本体育运动。"
         },
         {
-          "text": "n. m.日语: Je parle un peu japonais.我会讲点日语。"
+          "text": "日语: Je parle un peu japonais.我会讲点日语。"
         },
         {
-          "text": "n. Japonais, e 日本人: Comment mangent les Japonais?日本人如何吃饭?"
+          "text": "Japonais, e 日本人: Comment mangent les Japonais?日本人如何吃饭?"
         }
       ]
     },
@@ -8354,10 +8436,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.黄色的: À l'arrivée du Tour de France, tous les micros sont portés vers le porteur du maillot jaune.在环法自行车大赛终点，所有的话筒都伸向身穿黄色运动衫的人。"
+          "text": "黄色的: À l'arrivée du Tour de France, tous les micros sont portés vers le porteur du maillot jaune.在环法自行车大赛终点，所有的话筒都伸向身穿黄色运动衫的人。"
         },
         {
-          "text": "n. m.黄色: Les murs de la chambre sont peints en jaune.卧室的墙粉刷成黄颜色。"
+          "text": "黄色: Les murs de la chambre sont peints en jaune.卧室的墙粉刷成黄颜色。"
         }
       ]
     },
@@ -8374,10 +8456,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.年轻的: Paul est plus jeune que Jacques.保尔比雅克年轻。 Mon frère de 18 ans est un jeune homme, ma sœur de 17 ans est une jeune fille. 我哥18岁已是个小伙，我姐17岁已是个大姑娘。"
+          "text": "年轻的: Paul est plus jeune que Jacques.保尔比雅克年轻。 Mon frère de 18 ans est un jeune homme, ma sœur de 17 ans est une jeune fille. 我哥18岁已是个小伙，我姐17岁已是个大姑娘。"
         },
         {
-          "text": "n.青年人: Cette musique plaît aux jeunes. 这种音乐青年人喜欢。"
+          "text": "青年人: Cette musique plaît aux jeunes. 这种音乐青年人喜欢。"
         }
       ]
     },
@@ -8462,10 +8544,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.犹太的，犹太人的: Elle est de religion juive. 她是犹太教徒。"
+          "text": "犹太的，犹太人的: Elle est de religion juive. 她是犹太教徒。"
         },
         {
-          "text": "n. Juif, ve 犹太人: Beaucoup de Juifs ont été tués pendant la Seconde Guerre mondiale.二战时期许多犹太人被杀害。"
+          "text": "Juif, ve 犹太人: Beaucoup de Juifs ont été tués pendant la Seconde Guerre mondiale.二战时期许多犹太人被杀害。"
         }
       ]
     },
@@ -8522,10 +8604,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. inv.黄褐色的，土黄色的: J'ai une chemise kaki.我有一件黄褐色的衬衫。"
+          "text": "黄褐色的，土黄色的: J'ai une chemise kaki.我有一件黄褐色的衬衫。"
         },
         {
-          "text": "n. m.黄褐色，土黄色: Le kaki est la couleur de la tenue de campagne de nombreuses armées.黄褐色是许多部队作战服的颜色。"
+          "text": "黄褐色，土黄色: Le kaki est la couleur de la tenue de campagne de nombreuses armées.黄褐色是许多部队作战服的颜色。"
         }
       ]
     },
@@ -8710,10 +8792,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.液态的;稀薄的: La sauce est trop liquide, ajoute de la farine.调味汁太稀，加些面粉。"
+          "text": "液态的;稀薄的: La sauce est trop liquide, ajoute de la farine.调味汁太稀，加些面粉。"
         },
         {
-          "text": "n. m.液体: Qu'est-ce que c'est que ce liquide blanc?这白色液体是什么?"
+          "text": "液体: Qu'est-ce que c'est que ce liquide blanc?这白色液体是什么?"
         }
       ]
     },
@@ -8923,10 +9005,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.懦弱的，胆怯的: Comme il est lâche!他真懦弱!"
+          "text": "懦弱的，胆怯的: Comme il est lâche!他真懦弱!"
         },
         {
-          "text": "n.懦夫: Quel lâche, il a fui!真是个懦夫，他逃走了!"
+          "text": "懦夫: Quel lâche, il a fui!真是个懦夫，他逃走了!"
         }
       ]
     },
@@ -9091,10 +9173,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.患病的: Pierre est malade depuis deux jours.皮埃尔已病了两天。"
+          "text": "患病的: Pierre est malade depuis deux jours.皮埃尔已病了两天。"
         },
         {
-          "text": "n.病人: Ne réveillez pas le malade!别叫醒病人!"
+          "text": "病人: Ne réveillez pas le malade!别叫醒病人!"
         }
       ]
     },
@@ -9213,10 +9295,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.有怪癖的，古怪的: M. Duval est un vieux garçon maniaque.杜瓦尔先生是个古怪的未婚男子。"
+          "text": "有怪癖的，古怪的: M. Duval est un vieux garçon maniaque.杜瓦尔先生是个古怪的未婚男子。"
         },
         {
-          "text": "n.怪人，有怪癖的人: C'est un maniaque.这是一个怪人。"
+          "text": "怪人，有怪癖的人: C'est un maniaque.这是一个怪人。"
         }
       ]
     },
@@ -9226,10 +9308,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -9258,6 +9336,26 @@
       "definitions": [
         {
           "text": "种菜的: Cette région est connue pour ses cultures maraîchères.这个地区以蔬菜种植而闻名。"
+        }
+      ]
+    },
+    {
+      "word": "marin",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": "m",
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "海员，船员: M. Durand est marin.迪朗先生是海员。"
+        },
+        {
+          "text": "海的，海生的，海产的: Ma tante n'utilise que du sel marin.我婶婶只用海盐。 Ce sont des plantes marines. 这是一些海洋植物。"
         }
       ]
     },
@@ -9291,10 +9389,30 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.已婚的: Ils sont mariés depuis cinq ans.他们结婚已有5年。"
+          "text": "已婚的: Ils sont mariés depuis cinq ans.他们结婚已有5年。"
         },
         {
-          "text": "n.新郎，新娘: Nous buvons à la santé des jeunes mariés.我们举杯祝年轻的新婚夫妇身体健康。"
+          "text": "新郎，新娘: Nous buvons à la santé des jeunes mariés.我们举杯祝年轻的新婚夫妇身体健康。"
+        }
+      ]
+    },
+    {
+      "word": "marron",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "栗子: Pierre aime bien les marrons glacés.皮埃尔很喜欢吃冰糖栗子。"
+        },
+        {
+          "text": "栗色的: Il a les yeux marron.他的眼睛是栗色的。"
         }
       ]
     },
@@ -9370,6 +9488,26 @@
       ]
     },
     {
+      "word": "matériel",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": "m",
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "设备，器材，用品: Nous avons visité une exposition de matériel agricole. 我们参观了一个农业设备展览。 Mon frère part camper samedi: il est temps de préparer le matériel de camping.我哥哥周六动身去露营，现在该准备露营用品了。"
+        },
+        {
+          "text": "物质的: L'incendie n'a fait que des dégâts matériels.火灾仅造成物质损失。"
+        }
+      ]
+    },
+    {
       "word": "mauvais",
       "pos": [
         {
@@ -9383,6 +9521,26 @@
       "definitions": [
         {
           "text": "坏的，不好的，低劣的: Il a reçu une mauvaise nouvelle.他收到一条坏消息。 Son écriture est mauvaise.他字写得不好。 Ma mémoire est mauvaise.我的记忆不好。 La voisine est méchante avec nous, c'est une mauvaise femme.邻居对我们很凶，她是一个坏女人。"
+        }
+      ]
+    },
+    {
+      "word": "maximum (pl. ~s 或 maxima)",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "最大量，最大限度: Nous ferons le maximun d'efforts.我们将做最大的努力。 Le maximum de vitesse du véhicule est 160 km/heure.车辆最高时速为160公里。"
+        },
+        {
+          "text": "最大的，最多的[阴性不变]: La température maximum de cette région est de 35℃.这个地区的最高气温为35摄氏度。 Ne dépassez pas la vitesse maximum.不要超过最高时速。"
         }
       ]
     },
@@ -9580,6 +9738,52 @@
       ]
     },
     {
+      "word": "mineur",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": "m",
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "矿工: Le travail des mineurs est très dur.煤矿工人的工作十分艰苦。"
+        },
+        {
+          "text": "次要的，第二等的: Ceci est un problème mineur.这是一个次要的问题。"
+        },
+        {
+          "text": "未成年的: Pierre est mineur.皮埃尔尚未成年。"
+        }
+      ]
+    },
+    {
+      "word": "minimum (pl. ~s)",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "最小量，最少量: Il veut faire le minimum de dépenses. 他想花最少的钱。"
+        },
+        {
+          "text": "最小的，最少的，最低的[阴性不变]: Le salaire minimum est de 1200 € par mois.最低工资是每月1200欧元。"
+        },
+        {
+          "text": "【au minimum】 loc. adv.至少，最少: Il faut au minimum un appartement de trois pièces pour cette famille.对于这个家庭，至少需要有一套三居室住宅。"
+        }
+      ]
+    },
+    {
       "word": "minutieux",
       "pos": [
         {
@@ -9677,10 +9881,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.动产的: M. Durand possède des biens mobiliers: des marchandises, des meubles, des autos, des rentes, etc.迪朗先生拥有一些动产:货物、家具、汽车、公债等。"
+          "text": "动产的: M. Durand possède des biens mobiliers: des marchandises, des meubles, des autos, des rentes, etc.迪朗先生拥有一些动产:货物、家具、汽车、公债等。"
         },
         {
-          "text": "n. m.家具: On a changé le mobilier du salon.我们更换了客厅里的家具。"
+          "text": "家具: On a changé le mobilier du salon.我们更换了客厅里的家具。"
         }
       ]
     },
@@ -9884,6 +10088,26 @@
       ]
     },
     {
+      "word": "mort",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": "f",
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "死，死亡: La mort de son père lui a causé un grand chagrin. 他的父亲去世引起了他极大的悲痛。"
+        },
+        {
+          "text": "死的，死亡的: Il y a beaucoup de poissons morts dans la rivière.河里有"
+        }
+      ]
+    },
+    {
       "word": "mortel",
       "pos": [
         {
@@ -9944,10 +10168,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -9970,7 +10190,7 @@
           "text": "方法，手段，办法: Par quel moyen es-tu entré dans la maison? 你是通过什么手段进入这幢房子的? J'ai trouvé un moyen pour passer la rivière. 我找到了一个办法来过河。"
         },
         {
-          "text": "pl.金钱，财产: Je n'ai pas les moyens de partir en vacances. 我没有财力去度假。"
+          "text": "金钱，财产: Je n'ai pas les moyens de partir en vacances. 我没有财力去度假。"
         }
       ]
     },
@@ -10058,10 +10278,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.伊斯兰教的: Il pratique la religion musulmane.他信奉伊斯兰教。"
+          "text": "伊斯兰教的: Il pratique la religion musulmane.他信奉伊斯兰教。"
         },
         {
-          "text": "n.穆斯林，伊斯兰教徒: Il est musulman.他是穆斯林。"
+          "text": "穆斯林，伊斯兰教徒: Il est musulman.他是穆斯林。"
         }
       ]
     },
@@ -10129,10 +10349,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.男(性)的，雄(性)的: C'est un chaton mâle. 这是一只雄性小猫。"
+          "text": "男(性)的，雄(性)的: C'est un chaton mâle. 这是一只雄性小猫。"
         },
         {
-          "text": "n. m.雄性动物: Notre chatte a trois chatons, deux femelles et un mâle. 我家的猫有三只小猫，两只雌猫，一只雄猫。"
+          "text": "雄性动物: Notre chatte a trois chatons, deux femelles et un mâle. 我家的猫有三只小猫，两只雌猫，一只雄猫。"
         }
       ]
     },
@@ -10149,10 +10369,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.机械的，机动的: On prend l'escalier mécanique.我们走自动楼梯。 La mise en bouteille du champagne est mécanique.香槟酒装瓶是机动化程序。"
+          "text": "机械的，机动的: On prend l'escalier mécanique.我们走自动楼梯。 La mise en bouteille du champagne est mécanique.香槟酒装瓶是机动化程序。"
         },
         {
-          "text": "n. f.机械学，力学: Je connais un peu la mécanique. 我懂点机械学。"
+          "text": "机械学，力学: Je connais un peu la mécanique. 我懂点机械学。"
         }
       ]
     },
@@ -10257,6 +10477,27 @@
           "text": "形容词"
         }
       ]
+    },
+    {
+      "word": "ménager",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "ménager (qqch)爱惜，不滥用: On lui a dit de ménager sa santé.人家对他说要他保重身体。 Par cette sécheresse il faut ménager l'eau.这样的旱情，应该节约用水。"
+        },
+        {
+          "text": "家务的: Son travail est facilité par les appareils ménagers. 家用电器方便了她的工作。"
+        }
+      ],
+      "verb_type": "transitive"
     },
     {
       "word": "métallique",
@@ -10592,10 +10833,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.高尚的，高贵的: Son noble caractère lui vaut l'amitié de tous. 他的高尚品格赢得了大家的友谊。"
+          "text": "高尚的，高贵的: Son noble caractère lui vaut l'amitié de tous. 他的高尚品格赢得了大家的友谊。"
         },
         {
-          "text": "n.贵族: Avant 1789， les nobles formaient la classe supérieure de la société.1789年以前，贵族组成上层社会。"
+          "text": "贵族: Avant 1789， les nobles formaient la classe supérieure de la société.1789年以前，贵族组成上层社会。"
         }
       ]
     },
@@ -11125,10 +11366,30 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.口头的，口述的: Nous avons des épreuves écrites et orales. 我们有笔试和口试。"
+          "text": "口头的，口述的: Nous avons des épreuves écrites et orales. 我们有笔试和口试。"
         },
         {
-          "text": "n. m.口试: Pierre a été collé à l'oral.皮埃尔口试不及格。"
+          "text": "口试: Pierre a été collé à l'oral.皮埃尔口试不及格。"
+        }
+      ]
+    },
+    {
+      "word": "orange",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "柑，橘，橙: Ma tante m'a épluché une orange. 我婶婶给我剥了一只橘子。"
+        },
+        {
+          "text": "橘黄色的，橙色的: Marie a une robe orange. 玛丽有一条橘黄色的连衫裙。"
         }
       ]
     },
@@ -11258,6 +11519,26 @@
       ]
     },
     {
+      "word": "ouest",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "西，西面: Neuilly est à l'ouest de Paris.纳伊位于巴黎西面。"
+        },
+        {
+          "text": "西面的，西部的: Il habite dans la banlieue ouest de Paris. 他住在巴黎西郊。"
+        }
+      ]
+    },
+    {
       "word": "ouvert",
       "pos": [
         {
@@ -11274,6 +11555,26 @@
         },
         {
           "text": "开放的，开门营业的: L'autoroute sera ouverte à la circulation dans quelques mois.数月后高速公路将开通。 La chasse est ouverte depuis hier.猎期昨天开始。"
+        }
+      ]
+    },
+    {
+      "word": "ouvrier",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "工人: M. Duval est ouvrier dans une usine. 杜瓦尔先生是一家工厂的工人。"
+        },
+        {
+          "text": "工人的: Tout près de l'usine se trouve la cité ouvrière.工人住宅区就在工厂附近。"
         }
       ]
     },
@@ -11426,10 +11727,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.懒惰的: Marie est très paresseuse.玛丽很懒。"
+          "text": "懒惰的: Marie est très paresseuse.玛丽很懒。"
         },
         {
-          "text": "n.懒人: C'est un paresseux.这是个懒虫。"
+          "text": "懒人: C'est un paresseux.这是个懒虫。"
         }
       ]
     },
@@ -11463,10 +11764,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.巴黎的: Il habite dans la banlieue parisienne.他住在巴黎郊区。"
+          "text": "巴黎的: Il habite dans la banlieue parisienne.他住在巴黎郊区。"
         },
         {
-          "text": "n. Parisien, ne 巴黎人: Les Parisiens aiment lire dans le transport.巴黎人"
+          "text": "Parisien, ne 巴黎人: Les Parisiens aiment lire dans le transport.巴黎人"
         }
       ]
     },
@@ -11584,10 +11885,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n.",
-          "full": "名词"
         }
       ],
       "gender": null,
@@ -11649,16 +11946,16 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 贫穷的，穷苦的: Il est d'une famille pauvre. 他来自一个贫穷的家庭。 Elle n'est pas pauvre.她不穷。"
+          "text": "贫穷的，穷苦的: Il est d'une famille pauvre. 他来自一个贫穷的家庭。 Elle n'est pas pauvre.她不穷。"
         },
         {
-          "text": "a.可怜的[放在名词前]: Ayez pitié de cette pauvre fillette! 同情同情这个可怜的小姑娘吧!"
+          "text": "可怜的[放在名词前]: Ayez pitié de cette pauvre fillette! 同情同情这个可怜的小姑娘吧!"
         },
         {
-          "text": "n.穷人，贫民: M. Dupont est un pauvre.杜邦先生是个穷人。"
+          "text": "穷人，贫民: M. Dupont est un pauvre.杜邦先生是个穷人。"
         },
         {
-          "text": "n.可怜的人: Le pauvre, il a encore perdu!可怜的人，他又输了!"
+          "text": "可怜的人: Le pauvre, il a encore perdu!可怜的人，他又输了!"
         }
       ]
     },
@@ -11759,10 +12056,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -11807,10 +12100,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 悲观的，悲观主义的: Il reste pessimiste sur la suite des négociations. 他对随后的谈判仍然抱悲观的看法。"
+          "text": "悲观的，悲观主义的: Il reste pessimiste sur la suite des négociations. 他对随后的谈判仍然抱悲观的看法。"
         },
         {
-          "text": "n. 悲观者，悲观主义者: M. Dupont est un pessimiste. 杜邦先生是个悲观主义者。"
+          "text": "悲观者，悲观主义者: M. Dupont est un pessimiste. 杜邦先生是个悲观主义者。"
         }
       ]
     },
@@ -11938,13 +12231,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 物理的: Le son, l'électricité， la lumière sont des phénomènes physiques.声音、电、光是物理现象。"
+          "text": "物理的: Le son, l'électricité， la lumière sont des phénomènes physiques.声音、电、光是物理现象。"
         },
         {
-          "text": "a. 身体的: Chaque matin, il fait des exercices physiques.每天早晨，他进行身体锻炼。"
+          "text": "身体的: Chaque matin, il fait des exercices physiques.每天早晨，他进行身体锻炼。"
         },
         {
-          "text": "n. f. 物理(学): Nous avons un cours de physique.我们有一门物理课。"
+          "text": "物理(学): Nous avons un cours de physique.我们有一门物理课。"
         }
       ]
     },
@@ -12045,10 +12338,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -12072,10 +12361,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "prép.",
-          "full": "介词"
         }
       ],
       "gender": null,
@@ -12120,10 +12405,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. indéf. pl. 好几个: M. Duval a invité plusieurs amis. 杜瓦尔先生邀请了好几位朋友。"
+          "text": "indéf. pl. 好几个: M. Duval a invité plusieurs amis. 杜瓦尔先生邀请了好几位朋友。"
         },
         {
-          "text": "pron. indéf. pl. 好几个: J'en ai vu plusieurs qui copiaient sur leur voisin.我看到好几个在抄袭邻座的作业。 Plusieurs de ses collègues parlent italien.他的"
+          "text": "indéf. pl. 好几个: J'en ai vu plusieurs qui copiaient sur leur voisin.我看到好几个在抄袭邻座的作业。 Plusieurs de ses collègues parlent italien.他的"
         }
       ]
     },
@@ -12194,10 +12479,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 侦探的: À la télévision, on passe quelquefois un film policier.电视里有时播放侦探片。"
+          "text": "侦探的: À la télévision, on passe quelquefois un film policier.电视里有时播放侦探片。"
         },
         {
-          "text": "n. m. 警察，侦探: Les policiers ont arrêté un suspect. 警察抓住了一名嫌疑犯。"
+          "text": "警察，侦探: Les policiers ont arrêté un suspect. 警察抓住了一名嫌疑犯。"
         }
       ]
     },
@@ -12214,10 +12499,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 政治(上)的: Quand les élections approchent, on voit souvent des hommes politiques à la télévision.当大选临近时，电视里常常可见政治家的身影。"
+          "text": "政治(上)的: Quand les élections approchent, on voit souvent des hommes politiques à la télévision.当大选临近时，电视里常常可见政治家的身影。"
         },
         {
-          "text": "n.f. 政治: M. Durand s'intéresse à la politique.迪朗先生对政治感兴趣。"
+          "text": "政治: M. Durand s'intéresse à la politique.迪朗先生对政治感兴趣。"
         }
       ]
     },
@@ -12234,10 +12519,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 胆怯的，胆小的: Marie est poltronne.玛丽胆小。"
+          "text": "胆怯的，胆小的: Marie est poltronne.玛丽胆小。"
         },
         {
-          "text": "n. 胆小鬼: C'est un poltron.这是一个胆小鬼。"
+          "text": "胆小鬼: C'est un poltron.这是一个胆小鬼。"
         }
       ]
     },
@@ -12507,16 +12792,16 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 第一的: Prends la première porte à droite. 走右侧第一扇门。"
+          "text": "第一的: Prends la première porte à droite. 走右侧第一扇门。"
         },
         {
-          "text": "a. 第一位的，第一流的: Marcel est premier en mathématiques. 马赛尔是数学第一名。"
+          "text": "第一位的，第一流的: Marcel est premier en mathématiques. 马赛尔是数学第一名。"
         },
         {
-          "text": "a. 最初的: Demain, c'est le premier jour du mois. 明天是下个月的第一天。 C'est la première fois que je vais à Paris.我是第一次去巴黎。"
+          "text": "最初的: Demain, c'est le premier jour du mois. 明天是下个月的第一天。 C'est la première fois que je vais à Paris.我是第一次去巴黎。"
         },
         {
-          "text": "n. 第一个，第一名: Je suis arrivé le premier.我第一个到。 Jacques est parmi les trois premiers.雅克进入前3名。"
+          "text": "第一个，第一名: Je suis arrivé le premier.我第一个到。 Jacques est parmi les trois premiers.雅克进入前3名。"
         }
       ]
     },
@@ -12763,10 +13048,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 生产的，出产的: Irak est un pays producteur de pétrole.伊拉克是个石油生产国。"
+          "text": "生产的，出产的: Irak est un pays producteur de pétrole.伊拉克是个石油生产国。"
         },
         {
-          "text": "n. 生产者: Les pays arabes sont de grands producteurs de pétrole.阿拉伯国家是重要的石油产地。"
+          "text": "生产者: Les pays arabes sont de grands producteurs de pétrole.阿拉伯国家是重要的石油产地。"
         }
       ]
     },
@@ -12783,10 +13068,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 职业的，专业的: Il enseigne dans une école professionnelle. 他在一所职业学校任教。 C'est un sportif professionnel.这是一名职业运动员。"
+          "text": "职业的，专业的: Il enseigne dans une école professionnelle. 他在一所职业学校任教。 C'est un sportif professionnel.这是一名职业运动员。"
         },
         {
-          "text": "n. 专业人员;职业运动员: Cette équipe de football est composée de professionnels. 这支足球队由职业运动员组成。"
+          "text": "专业人员;职业运动员: Cette équipe de football est composée de professionnels. 这支足球队由职业运动员组成。"
         }
       ]
     },
@@ -12959,10 +13244,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.外省的: Comment trouvez-vous la vie provinciale?您觉得外省生活怎么样?"
+          "text": "外省的: Comment trouvez-vous la vie provinciale?您觉得外省生活怎么样?"
         },
         {
-          "text": "n.外省人:Mme Durand est une provinciale.迪朗太太是外省人。"
+          "text": "外省人:Mme Durand est une provinciale.迪朗太太是外省人。"
         }
       ]
     },
@@ -13318,10 +13603,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -13383,10 +13664,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.公立的，公家的: Annick va à l'école privée, mais son frère à l'école pub-lique.阿尼克读私立学校，而他的兄弟读公立学校。"
+          "text": "公立的，公家的: Annick va à l'école privée, mais son frère à l'école pub-lique.阿尼克读私立学校，而他的兄弟读公立学校。"
         },
         {
-          "text": "a.公共的，公用的: Tout le monde peut se promener dans un jardin public.人人都可以在公园里散步。"
+          "text": "公共的，公用的: Tout le monde peut se promener dans un jardin public.人人都可以在公园里散步。"
         }
       ]
     },
@@ -13602,10 +13883,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.周期(性)的: Mon voisin a des crises périodiques de bronchite. 我邻居的支气管炎会周期性发作。"
+          "text": "周期(性)的: Mon voisin a des crises périodiques de bronchite. 我邻居的支气管炎会周期性发作。"
         },
         {
-          "text": "n. m.期刊: Luc n'aime pas trop les livres, il préfère les périodiques.吕克不太喜欢看书，他更喜欢读期刊。"
+          "text": "期刊: Luc n'aime pas trop les livres, il préfère les périodiques.吕克不太喜欢看书，他更喜欢读期刊。"
         }
       ]
     },
@@ -13639,10 +13920,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 石油的: L'essence, le mazout, le fuel sont des produits pétroliers.汽油、重油、燃料油是石油产品。"
+          "text": "石油的: L'essence, le mazout, le fuel sont des produits pétroliers.汽油、重油、燃料油是石油产品。"
         },
         {
-          "text": "n. m. 油船: Un pétrolier a fait naufrage. 一艘油船失事了。"
+          "text": "油船: Un pétrolier a fait naufrage. 一艘油船失事了。"
         }
       ]
     },
@@ -13761,10 +14042,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. interr.什么样的: Quel livre lis-tu? 你在看什么书? Quel est ton numéro de téléphone? 你的电话号码是多少?"
+          "text": "什么样的: Quel livre lis-tu? 你在看什么书? Quel est ton numéro de téléphone? 你的电话号码是多少?"
         },
         {
-          "text": "a. exclam.多么: Quelle jolie maison! 多么漂亮的房子!"
+          "text": "多么: Quelle jolie maison! 多么漂亮的房子!"
         }
       ]
     },
@@ -13798,13 +14079,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. indéf. sing.一点，少许: M. Duval a quelque expérience.杜瓦尔先生有点经验。"
+          "text": "indéf. sing.一点，少许: M. Duval a quelque expérience.杜瓦尔先生有点经验。"
         },
         {
-          "text": "a. indéf. pl.几个: Il a dit quelques mots et est parti.他说了几句话走了。"
+          "text": "indéf. pl.几个: Il a dit quelques mots et est parti.他说了几句话走了。"
         },
         {
-          "text": "adv.大约，将近[只修饰数词]: Ilya quelque cinquante candidats à cet examen.这次考试约有五十来个考生。"
+          "text": "大约，将近[只修饰数词]: Ilya quelque cinquante candidats à cet examen.这次考试约有五十来个考生。"
         }
       ]
     },
@@ -13855,10 +14136,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.每日的，日常的: Il faut que je fasse mon travail quotidien. 我应该做好每天的工作。"
+          "text": "每日的，日常的: Il faut que je fasse mon travail quotidien. 我应该做好每天的工作。"
         },
         {
-          "text": "n. m.日报: J'achète un quotidien chaque matin.每天早晨我买份日报。"
+          "text": "日报: J'achète un quotidien chaque matin.每天早晨我买份日报。"
         }
       ]
     },
@@ -13892,10 +14173,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 种族主义的: Certains pays mènent une politique raciste. 有些国家实行种族主义政策。"
+          "text": "种族主义的: Certains pays mènent une politique raciste. 有些国家实行种族主义政策。"
         },
         {
-          "text": "n.种族主义者: Nous ne sommes pas des racistes.我们不是种族主义者。"
+          "text": "种族主义者: Nous ne sommes pas des racistes.我们不是种族主义者。"
         }
       ]
     },
@@ -14358,13 +14639,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.负责的;负有责任的:"
+          "text": "负责的;负有责任的:"
         },
         {
           "text": "Il est responsable de l'accident. 他对事故负有责任。"
         },
         {
-          "text": "n.负责人，负责者:"
+          "text": "负责人，负责者:"
         },
         {
           "text": "Je voudrais parler au responsable du service. 我想找部门负责人。"
@@ -14433,13 +14714,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.迟到的:"
+          "text": "迟到的:"
         },
         {
           "text": "Les élèves retardataires seront punis.迟到的学生将受到处罚。"
         },
         {
-          "text": "n.迟到者:"
+          "text": "迟到者:"
         },
         {
           "text": "Les retardataires ne retrouveront plus de places libres. 迟到者将找不到空位子。"
@@ -14499,13 +14780,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.富有的，有钱的:"
+          "text": "富有的，有钱的:"
         },
         {
           "text": "M. Durand est riche.迪朗先生很有钱。"
         },
         {
-          "text": "a.富有…的:"
+          "text": "富有…的:"
         },
         {
           "text": "Ce pays est riche en pétrole. 这个国家有丰富的石油。"
@@ -14604,6 +14885,32 @@
         },
         {
           "text": "L'hiver est rigoureux dans ce pays. 这个国家冬季寒冷。"
+        }
+      ]
+    },
+    {
+      "word": "rival",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "对手，竞争者:"
+        },
+        {
+          "text": "Il bat tous ses rivaux aux échecs. 象棋比赛中他击败所有的对手。"
+        },
+        {
+          "text": "竞争的，敌对的:"
+        },
+        {
+          "text": "Vous gagnerez le match contre l'équipe rivale.你们在与对方球队比赛中将会获胜。"
         }
       ]
     },
@@ -14709,7 +15016,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.红色的:"
+          "text": "红色的:"
         },
         {
           "text": "Sa voiture est rouge. 他的汽车是红色的。"
@@ -14718,7 +15025,7 @@
           "text": "Je bois du vin rouge.我喝红葡萄酒。"
         },
         {
-          "text": "n. m.红色:"
+          "text": "红色:"
         },
         {
           "text": "J'ai lu le Rouge et le Noir de Stendhal.我读了司汤达的《红与黑》。"
@@ -14890,19 +15197,19 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.俄国的，俄罗斯的:"
+          "text": "俄国的，俄罗斯的:"
         },
         {
           "text": "Nous avons vu des danses russes. 我们观看了俄罗斯舞蹈。"
         },
         {
-          "text": "n. m.俄语:"
+          "text": "俄语:"
         },
         {
           "text": "Il parle russe.他会讲俄语。"
         },
         {
-          "text": "n. Russe 俄国人，俄罗斯人:"
+          "text": "Russe 俄国人，俄罗斯人:"
         },
         {
           "text": "Il travaille avec des Russes.他同俄罗斯人一起工作。"
@@ -14996,10 +15303,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.注重现实的: Nous devons être réalistes.我们应该讲究实际。"
+          "text": "注重现实的: Nous devons être réalistes.我们应该讲究实际。"
         },
         {
-          "text": "n.现实主义者: M. Dupont est un réaliste.杜邦先生是个讲究实际的人。"
+          "text": "现实主义者: M. Dupont est un réaliste.杜邦先生是个讲究实际的人。"
         }
       ]
     },
@@ -15341,13 +15648,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.爱幻想的，好空想的:"
+          "text": "爱幻想的，好空想的:"
         },
         {
           "text": "Le travail d'Hervé n'avance pas, car il est trop rêveur.埃尔韦的工作没有进展，因为他太爱幻想。"
         },
         {
-          "text": "n.幻想者，空想者:"
+          "text": "幻想者，空想者:"
         },
         {
           "text": "Hervé est un rêveur.埃尔韦是个幻想者。"
@@ -15485,7 +15792,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.圣的，神圣的:"
+          "text": "圣的，神圣的:"
         },
         {
           "text": "La Bible et les Évangiles sont des livres saints. 圣经和福"
@@ -15696,10 +16003,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "prép.",
-          "full": "介词"
         }
       ],
       "gender": null,
@@ -15756,13 +16059,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.野的，野生的:"
+          "text": "野的，野生的:"
         },
         {
           "text": "Les tigres, les lions sont des animaux sauvages. 老虎、狮子是野生动物。"
         },
         {
-          "text": "n.野人:"
+          "text": "野人:"
         },
         {
           "text": "Est-ce qu'il existe des sauvages? 野人存在吗?"
@@ -15782,13 +16085,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.有学问的，博学的:"
+          "text": "有学问的，博学的:"
         },
         {
           "text": "Quand tu auras lu tous les livres de cette bibliothèque, tu seras très savant.当你读完这个书橱里的所有书时，你会很有学问的。"
         },
         {
-          "text": "n.学者，科学家:"
+          "text": "学者，科学家:"
         },
         {
           "text": "Les savants sont la gloire d'un pays. 科学家是一个国家的荣誉。"
@@ -15874,7 +16177,7 @@
           "text": "M. Durand lit des revues scientifiques.迪朗先生看科学杂志。"
         },
         {
-          "text": "n.科学家，科学工作者:"
+          "text": "科学家，科学工作者:"
         },
         {
           "text": "Mon voisin est un scientifique.我的邻居是一位科学工作者。"
@@ -16427,10 +16730,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.受灾的: Cette région est sinistrée.这个地区是灾区。"
+          "text": "受灾的: Cette région est sinistrée.这个地区是灾区。"
         },
         {
-          "text": "n.灾民: Nous avons prêté nos chambres pour loger les sinistrés. 我们让出了房间给灾民住。"
+          "text": "灾民: Nous avons prêté nos chambres pour loger les sinistrés. 我们让出了房间给灾民住。"
         }
       ]
     },
@@ -16566,7 +16869,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.社会主义的;社会党的: C'est un pays socialiste. 这是一个社会主义国"
+          "text": "社会主义的;社会党的: C'est un pays socialiste. 这是一个社会主义国"
         }
       ]
     },
@@ -16745,10 +17048,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.简短的，扼要的: Votre explication est sommaire.您的解释简短扼要。"
+          "text": "简短的，扼要的: Votre explication est sommaire.您的解释简短扼要。"
         },
         {
-          "text": "n. m.摘要，梗概，简介: J'ai lu le sommaire du livre.我看了书的内容提要。"
+          "text": "摘要，梗概，简介: J'ai lu le sommaire du livre.我看了书的内容提要。"
         }
       ]
     },
@@ -16819,10 +17122,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.愚蠢的，傻的: Cette fille est sotte. 这个女孩很傻。"
+          "text": "愚蠢的，傻的: Cette fille est sotte. 这个女孩很傻。"
         },
         {
-          "text": "n.傻子，蠢人: Ce garçon n'est qu'un sot en trois lettres. 这男孩是一个十足的傻瓜。"
+          "text": "傻子，蠢人: Ce garçon n'est qu'un sot en trois lettres. 这男孩是一个十足的傻瓜。"
         }
       ]
     },
@@ -16856,10 +17159,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.突然的，忽然的: Une pluie soudaine se met à tomber. 突然下起一场雨来。"
+          "text": "突然的，忽然的: Une pluie soudaine se met à tomber. 突然下起一场雨来。"
         },
         {
-          "text": "adv.突然，忽然: Je lisais tranquillement: soudain la lampe s'éteignit. 我正在安心看书，突然灯灭了。"
+          "text": "突然，忽然: Je lisais tranquillement: soudain la lampe s'éteignit. 我正在安心看书，突然灯灭了。"
         }
       ]
     },
@@ -16950,10 +17253,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.海底的: Connais-tu les plantes sous-marines?你认识海底植物吗?"
+          "text": "海底的: Connais-tu les plantes sous-marines?你认识海底植物吗?"
         },
         {
-          "text": "n. m.潜水艇: Nous avons vu à la télévision comment un sous-marin remonte à la surface. 我们在电视里看到潜水艇是如何浮出水面的。"
+          "text": "潜水艇: Nous avons vu à la télévision comment un sous-marin remonte à la surface. 我们在电视里看到潜水艇是如何浮出水面的。"
         }
       ]
     },
@@ -16970,10 +17273,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.地下的: On passe par le passage souterrain.我们从地下通道走。"
+          "text": "地下的: On passe par le passage souterrain.我们从地下通道走。"
         },
         {
-          "text": "n. m.地道: Le château a des souterrains.城堡有几条地下通道。"
+          "text": "地道: Le château a des souterrains.城堡有几条地下通道。"
         }
       ]
     },
@@ -17132,10 +17435,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.有关体育的: Je lis le journal sportif.我看体育报。"
+          "text": "有关体育的: Je lis le journal sportif.我看体育报。"
         },
         {
-          "text": "n.运动员: C'est une sportive. 这是一名女运动员。"
+          "text": "运动员: C'est une sportive. 这是一名女运动员。"
         }
       ]
     },
@@ -17226,10 +17529,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.使振奋的，使兴奋的: La réussite est stimulante.成功使人振奋。"
+          "text": "使振奋的，使兴奋的: La réussite est stimulante.成功使人振奋。"
         },
         {
-          "text": "n. m.兴奋剂;刺激物: Le café est un stimulant.咖啡是一种使人兴奋的饮料。"
+          "text": "兴奋剂;刺激物: Le café est un stimulant.咖啡是一种使人兴奋的饮料。"
         }
       ]
     },
@@ -17436,10 +17739,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.从属的，隶属的: En grammaire, une proposition subordonnée dépend d'une autre proposition. 在语法中，从句从属于另一个分句。"
+          "text": "从属的，隶属的: En grammaire, une proposition subordonnée dépend d'une autre proposition. 在语法中，从句从属于另一个分句。"
         },
         {
-          "text": "n.部下，下属: Le directeur réunit ses subordonnés.经理召集他的部下。"
+          "text": "部下，下属: Le directeur réunit ses subordonnés.经理召集他的部下。"
         }
       ]
     },
@@ -17512,6 +17815,29 @@
       ]
     },
     {
+      "word": "sud",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "南，南面: La salle donne au sud.厅朝南。 La radio annonce des or-ages au sud de la Loire.电台预报卢瓦河以南有暴风雨。"
+        },
+        {
+          "text": "Sud 南方，南部地区: Marseille est dans le Sud de la France.马赛在法国南方。"
+        },
+        {
+          "text": "南的，南方的，南部的: Je vous montre la côte sud de l'Italie. 我指给你们看意大利南海岸。"
+        }
+      ]
+    },
+    {
       "word": "suffisant",
       "pos": [
         {
@@ -17542,6 +17868,29 @@
       "definitions": [
         {
           "text": "令人窒息的: Ouvrez les fenêtres! il fait une chaleur suffocante. 把窗打开!闷热得透不过气来。"
+        }
+      ]
+    },
+    {
+      "word": "suivant",
+      "pos": [
+        {
+          "abbr": "a.",
+          "full": "形容词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "按照，根据: Choisissez-les suivant vos préférences. 按照您喜欢的挑选吧。 Suivant son habitude, il arrivera à temps.根据他的习惯，他将及时赶到。"
+        },
+        {
+          "text": "随后的，后面的: La solution du problème est à la page suivante.这道题的答案在下一页。"
+        },
+        {
+          "text": "下一个人: «Au suivant!» dit le coiffeur.“下一个!”理发师说道。"
         }
       ]
     },
@@ -17740,10 +18089,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.快速冷冻的: Voilà des aliments surgelés.这是一些速冻食品。"
+          "text": "快速冷冻的: Voilà des aliments surgelés.这是一些速冻食品。"
         },
         {
-          "text": "n. m.速冻食品: Je vais acheter des surgelés.我去买些速冻食品。"
+          "text": "速冻食品: Je vais acheter des surgelés.我去买些速冻食品。"
         }
       ]
     },
@@ -17865,10 +18214,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.可疑的，令人怀疑的: La police a arrêté un individu suspect.警方抓住了 一个可疑分子。 Le témoignage de cet homme est suspect.此人的证词令人怀疑。"
+          "text": "可疑的，令人怀疑的: La police a arrêté un individu suspect.警方抓住了 一个可疑分子。 Le témoignage de cet homme est suspect.此人的证词令人怀疑。"
         },
         {
-          "text": "n.嫌疑犯，可疑分子: Après le vol, la police a réuni dans une pièce tous les suspects.在抢劫发生后，警方将所有嫌疑犯集中在一个房间里。"
+          "text": "嫌疑犯，可疑分子: Après le vol, la police a réuni dans une pièce tous les suspects.在抢劫发生后，警方将所有嫌疑犯集中在一个房间里。"
         }
       ]
     },
@@ -18087,10 +18436,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.技术的，技术性的: Le menuisier emploie des mots techniques que je ne comprends pas.细木工匠使用一些我听不懂的技术词汇。"
+          "text": "技术的，技术性的: Le menuisier emploie des mots techniques que je ne comprends pas.细木工匠使用一些我听不懂的技术词汇。"
         },
         {
-          "text": "n.f.技术: Je connais un peu les techniques du cinéma.我对电影技术略知一二。"
+          "text": "技术: Je connais un peu les techniques du cinéma.我对电影技术略知一二。"
         }
       ]
     },
@@ -18113,7 +18462,7 @@
           "text": "tel que 像…这样的: Dans une affaire telle que celle-ci, il faut de l'habileté.像这样的一件事需要机灵。"
         },
         {
-          "text": "tel... que 那样…以至于: Tu as fait un tel bruit que tout le monde a été réveillé.你弄出那么大的响声，以至大家都被吵醒了。"
+          "text": ".. que 那样…以至于: Tu as fait un tel bruit que tout le monde a été réveillé.你弄出那么大的响声，以至大家都被吵醒了。"
         }
       ]
     },
@@ -18543,10 +18892,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -18574,10 +18919,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "sing.整个的，全部的: Toute la famille est réunie.全家人相聚了。"
+          "text": "整个的，全部的: Toute la famille est réunie.全家人相聚了。"
         },
         {
-          "text": "pl.所有的: Tous les enfants ont des jouets.所有孩子都有玩具。"
+          "text": "所有的: Tous les enfants ont des jouets.所有孩子都有玩具。"
         }
       ],
       "extra_info": "阳性复数 tous,阴性复数 toutes"
@@ -18723,10 +19068,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.勤劳的，勤快的: Le patron du garage dit que mon frère est travailleur.汽车修理厂老板说我的兄弟工作勤快。"
+          "text": "勤劳的，勤快的: Le patron du garage dit que mon frère est travailleur.汽车修理厂老板说我的兄弟工作勤快。"
         },
         {
-          "text": "n.劳动者，工作者: Les travailleurs de l'usine sont en grève.厂里的工人在闹罢工。"
+          "text": "劳动者，工作者: Les travailleurs de l'usine sont en grève.厂里的工人在闹罢工。"
         }
       ]
     },
@@ -18896,10 +19241,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.三倍的;三个的: Ma solution offre un triple avantage. 我的解决办法有三个好处。"
+          "text": "三倍的;三个的: Ma solution offre un triple avantage. 我的解决办法有三个好处。"
         },
         {
-          "text": "n. m.三倍: J'ai payé ces bonbons 1 € au supermarché et ils valent 3 € ici, c'est le triple.这些糖果我在超市里付了1欧元，在这里价值3欧元，是三倍。"
+          "text": "三倍: J'ai payé ces bonbons 1 € au supermarché et ils valent 3 € ici, c'est le triple.这些糖果我在超市里付了1欧元，在这里价值3欧元，是三倍。"
         }
       ]
     },
@@ -18970,10 +19315,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.骗人的，迷惑人的: Les apparences sont souvent trompeuses. 表面现象往往是迷惑人的。"
+          "text": "骗人的，迷惑人的: Les apparences sont souvent trompeuses. 表面现象往往是迷惑人的。"
         },
         {
-          "text": "n.骗子: Méfiez-vous des trompeurs!当心骗子!"
+          "text": "骗子: Méfiez-vous des trompeurs!当心骗子!"
         }
       ]
     },
@@ -19217,10 +19562,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.一样的，没有变化的: Les mêmes escaliers, les mêmes fenêtres: ces immeubles sont uniformes.同样的楼梯同样的窗，这些楼房一个式样。"
+          "text": "一样的，没有变化的: Les mêmes escaliers, les mêmes fenêtres: ces immeubles sont uniformes.同样的楼梯同样的窗，这些楼房一个式样。"
         },
         {
-          "text": "n. m.制服;军服: As-tu vu le nouvel uniforme des hôtesses? 你看见过空姐的新制服吗?"
+          "text": "制服;军服: As-tu vu le nouvel uniforme des hôtesses? 你看见过空姐的新制服吗?"
         }
       ]
     },
@@ -20026,10 +20371,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.相邻的，隔壁的: Mon collègue habite dans l'immeuble voisin.我的同事住在旁边的那幢大楼里。"
+          "text": "相邻的，隔壁的: Mon collègue habite dans l'immeuble voisin.我的同事住在旁边的那幢大楼里。"
         },
         {
-          "text": "n.邻居;邻座的人: M. Dupont s'entend bien avec ses voisins. 杜邦先生和邻居关系融洽。"
+          "text": "邻居;邻座的人: M. Dupont s'entend bien avec ses voisins. 杜邦先生和邻居关系融洽。"
         }
       ]
     },
@@ -20063,13 +20408,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.自愿的: Il est volontaire pour faire ce travail.他自愿做这项工作。"
+          "text": "自愿的: Il est volontaire pour faire ce travail.他自愿做这项工作。"
         },
         {
-          "text": "a.有意识的，故意的: Je ne l'ai pas fait exprès, ce n'était pas volontaire. 我不是有意做的，这不是故意的。"
+          "text": "有意识的，故意的: Je ne l'ai pas fait exprès, ce n'était pas volontaire. 我不是有意做的，这不是故意的。"
         },
         {
-          "text": "n.志愿者: Des volontaires aident les pompiers à combattre l'incendie.一些自愿者协助消防队员扑灭火灾。"
+          "text": "志愿者: Des volontaires aident les pompiers à combattre l'incendie.一些自愿者协助消防队员扑灭火灾。"
         }
       ]
     },
@@ -20308,10 +20653,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a. 自私自利的: Cet enfant est égoïste, il a gardé tous les bonbons pour lui au lieu d'en offrir.这孩子自私，他把所有的糖留着给自己而不给他人吃。"
+          "text": "自私自利的: Cet enfant est égoïste, il a gardé tous les bonbons pour lui au lieu d'en offrir.这孩子自私，他把所有的糖留着给自己而不给他人吃。"
         },
         {
-          "text": "n. 自私自利者: Tu ne laisses personne jouer avec ton ballon, tu es un égoïste.你不让任何人玩你的皮球，你是个自私自利的人。"
+          "text": "自私自利者: Tu ne laisses personne jouer avec ton ballon, tu es un égoïste.你不让任何人玩你的皮球，你是个自私自利的人。"
         }
       ]
     },
@@ -20555,10 +20900,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "a.相等的，等量的，等价的: Si le prix de vente est équivalent au prix de revi- ent, le bénéfice est nul.如果销售价相等于成本价，利润便为零。"
+          "text": "相等的，等量的，等价的: Si le prix de vente est équivalent au prix de revi- ent, le bénéfice est nul.如果销售价相等于成本价，利润便为零。"
         },
         {
-          "text": "n. m.相等，相等物，等同物: Voilà l'équivalent de l'expression. 这是相同的 表达方式。"
+          "text": "相等，相等物，等同物: Voilà l'équivalent de l'expression. 这是相同的 表达方式。"
         }
       ]
     },
@@ -20758,10 +21103,6 @@
         {
           "abbr": "a.",
           "full": "形容词"
-        },
-        {
-          "abbr": "n.",
-          "full": "名词"
         }
       ],
       "gender": null,
@@ -20775,7 +21116,7 @@
           "text": "外国人: Beaucoup d'étrangers viennent à Paris pour leurs vacances.许多外 国人来巴黎度假。"
         },
         {
-          "text": "m.外国: M. Dupont est parti à l'étranger.杜邦先生动身去了外国。"
+          "text": "外国: M. Dupont est parti à l'étranger.杜邦先生动身去了外国。"
         }
       ]
     },

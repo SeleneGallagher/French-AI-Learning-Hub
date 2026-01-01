@@ -138,6 +138,13 @@ export class APIService {
         return this.request(`/movies/cached?${params.join('&')}`);
     }
     
+    static async uploadMoviesToCache(movies) {
+        return this.request('/movies/cached', {
+            method: 'POST',
+            body: JSON.stringify({ movies })
+        });
+    }
+    
     // ========== 词典相关 ==========
     static async getDictHistory(limit = 50) {
         return this.request(`/dictionary/history?limit=${limit}`);

@@ -1,13 +1,36 @@
 {
   "name": "公共法语学习词典 - 连词",
   "pos": "conj",
-  "count": 16,
+  "count": 19,
   "source": "公共法语学习词典",
   "license": "Unknown",
   "copyright": "",
   "version": "1.0.0",
-  "generated_at": "2025-12-30T23:54:52.226156Z",
+  "generated_at": "2026-01-01T19:11:37.273739Z",
   "words": [
+    {
+      "word": "ainsi",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "这样，如此: Pourquoi me regardez-vous ainsi?您为什么这样看着我?"
+        },
+        {
+          "text": "由此，因此: Je prends l'express, ainsi j'arriverai plus tôt. 我乘快车，这样我就会更早到达。"
+        },
+        {
+          "text": "【ainsi que】 loc. conj.如同，正如;和，以及: Il est venu ainsi que je le lui avais demandé.正如我要求他的那样他来了。 Je t'invite, ainsi que ta sœur. 我邀请你以及你姐姐。"
+        }
+      ]
+    },
     {
       "word": "car¹",
       "pos": [
@@ -241,6 +264,52 @@
       ]
     },
     {
+      "word": "quand",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "什么时候: Quand viendra-t-il?他什么时候来?"
+        },
+        {
+          "text": "当…时: Je partirai quand mon vélo sera réparé.当我的自行车修好后我再动身。"
+        },
+        {
+          "text": "【quand même】loc.conj.仍然，还是: Marc a fait de la peine à sa mère, mais elle l'embrasse quand même.马克使他母亲感到不快，但他母亲还是拥吻了他。"
+        }
+      ]
+    },
+    {
+      "word": "que¹",
+      "pos": [
+        {
+          "abbr": "conj.",
+          "full": "连词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "什么，什么东西，什么事: Que ferons-nous cet après-midi? 今天下午我们将做什么?"
+        },
+        {
+          "text": "〔用作直接宾语，可以指人或物]: Voici le livre qu'il nous a apporté.这就是他给我们带来的书。 Les enfants que tu vois jouer dans la cour sont ceux du voisin.你看到在院子里玩的这些孩子是邻居家的孩子。"
+        },
+        {
+          "text": "[引出从句]: Il dit qu'il viendra.他说他将来。"
+        }
+      ]
+    },
+    {
       "word": "quoique",
       "pos": [
         {
@@ -313,7 +382,7 @@
           "text": "即，也就是: Il a payé le prix indiqué， soit 10€.他支付了标出的价格，即10欧元。"
         },
         {
-          "text": "soit... soit 或…或…: Nous irons en vacances soit à la campagne, soit à la mer.我们度假或去乡间，或去海边。"
+          "text": ".. soit 或…或…: Nous irons en vacances soit à la campagne, soit à la mer.我们度假或去乡间，或去海边。"
         }
       ]
     }

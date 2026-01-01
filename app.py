@@ -217,7 +217,7 @@ def movies_list():
         return '', 200
     return adapt_handler(movies_handler)()
 
-@app.route('/api/movies/cached', methods=['GET', 'OPTIONS'])
+@app.route('/api/movies/cached', methods=['GET', 'POST', 'OPTIONS'])
 def movies_cached():
     """电影缓存API"""
     if request.method == 'OPTIONS':

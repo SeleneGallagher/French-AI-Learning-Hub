@@ -1,30 +1,13 @@
 {
   "name": "公共法语学习词典 - 动词",
   "pos": "verb",
-  "count": 1243,
+  "count": 1242,
   "source": "公共法语学习词典",
   "license": "Unknown",
   "copyright": "",
   "version": "1.0.0",
-  "generated_at": "2025-12-30T23:54:52.058323Z",
+  "generated_at": "2026-01-01T19:11:36.913941Z",
   "words": [
-    {
-      "word": "4 【à peine",
-      "pos": [
-        {
-          "abbr": "v.",
-          "full": "动词"
-        }
-      ],
-      "gender": null,
-      "tags": [],
-      "raw_tags": "",
-      "definitions": [
-        {
-          "text": "动词"
-        }
-      ]
-    },
     {
       "word": "abandonner",
       "pos": [
@@ -221,7 +204,7 @@
           "text": "accorder (qqch à qqn)给予，允诺: Le patron de mon frère lui a accordé un jour de congé.我哥哥的老板给了他一天休假。"
         },
         {
-          "text": "v. pr. 【s'accorder】 意见一致，商妥: Les deux sœurs s'accordent merveilleusement.姐妹俩看法完全一致。"
+          "text": "【s'accorder】 意见一致，商妥: Les deux sœurs s'accordent merveilleusement.姐妹俩看法完全一致。"
         }
       ],
       "verb_type": "transitive"
@@ -278,7 +261,7 @@
           "text": "accumuler (qqch)堆积，积累: On accumule de la terre pour faire les parterres.人们把泥土堆积起来做花坛。"
         },
         {
-          "text": "v. pr. 【s'accumuler】 堆积，积累: En automne, les feuilles mortes s'accumulent dans les sous-bois.秋天，落叶在林下灌木丛中堆积起来。 Les livres s'accumulent sur mon bureau; je n'ai pas le temps de les lire.书在我桌上积成了堆，我没有时间看这些书。"
+          "text": "【s'accumuler】 堆积，积累: En automne, les feuilles mortes s'accumulent dans les sous-bois.秋天，落叶在林下灌木丛中堆积起来。 Les livres s'accumulent sur mon bureau; je n'ai pas le temps de les lire.书在我桌上积成了堆，我没有时间看这些书。"
         }
       ],
       "verb_type": "transitive"
@@ -509,7 +492,7 @@
           "text": "adresser (la parole à qqn)对…讲话: Pierre ne nous a pas adressé la parole depuis le début de la soirée.皮埃尔从晚会开始就没有对我们说过话。"
         },
         {
-          "text": "v. pr. 【s'adresser (à qqn)】询问: À qui faut-il s'adresser pour avoir des renseignements? 应该向谁去打听情况呢? Je ne sais pas où m'adresser pour louer des places.我不知道哪里定座。"
+          "text": "【s'adresser (à qqn)】询问: À qui faut-il s'adresser pour avoir des renseignements? 应该向谁去打听情况呢? Je ne sais pas où m'adresser pour louer des places.我不知道哪里定座。"
         }
       ],
       "verb_type": "transitive"
@@ -587,10 +570,10 @@
           "text": "起作用，产生功效: Ce médicament agit sur les nerfs.这种药对神经有功效。"
         },
         {
-          "text": "v. pr. impers. 【il s'agit (de qqch, de qqn)】有关于，关系到: De quoi s'agit-il? 有关于什么事? Il s'agit de vous au cours de la réunion. 会议期间内容涉及到您。"
+          "text": "【il s'agit (de qqch, de qqn)】有关于，关系到: De quoi s'agit-il? 有关于什么事? Il s'agit de vous au cours de la réunion. 会议期间内容涉及到您。"
         },
         {
-          "text": "v. pr. impers. 【il s'agit (de faire qqch)】重要的是: Maintenant, il s'agit de se dépêcher.现在，重要的是赶紧去。"
+          "text": "【il s'agit (de faire qqch)】重要的是: Maintenant, il s'agit de se dépêcher.现在，重要的是赶紧去。"
         }
       ],
       "verb_type": "intransitive"
@@ -804,7 +787,7 @@
           "text": "alourdir (qqch)加重，使沉重: Le manteau est alourdi par la pluie.雨水加重了大衣的分量。"
         },
         {
-          "text": "v. pr. 【s'alourdir】 变重，变沉重: Ce gros livre en plus? Mon cartable va encore s'alourdir.再放入这本厚书?我的书包又要重了。"
+          "text": "【s'alourdir】 变重，变沉重: Ce gros livre en plus? Mon cartable va encore s'alourdir.再放入这本厚书?我的书包又要重了。"
         }
       ],
       "verb_type": "transitive"
@@ -879,7 +862,7 @@
           "text": "amuser (qqn)逗乐，逗笑，使高兴: Si le bébé pleure, amuse-le avec ce jouet.如果婴儿哭了，就用这玩具逗他。 Cette histoire a amusé les enfants.这个故事把孩子们给逗乐了。"
         },
         {
-          "text": "v. pr. 【s'amuser】 自娱: Il s'amuse au lieu de faire ses devoirs.他没在做作业而在玩耍。 Le chat s'amuse avec la souris. 猫和老鼠在玩耍。"
+          "text": "【s'amuser】 自娱: Il s'amuse au lieu de faire ses devoirs.他没在做作业而在玩耍。 Le chat s'amuse avec la souris. 猫和老鼠在玩耍。"
         }
       ],
       "verb_type": "transitive"
@@ -900,7 +883,7 @@
           "text": "améliorer (qqch)改善，改进: Le directeur de l'usine a pris des mesures nécessaires pour améliorer les conditions de travail.工厂厂长采取了一些必要措施来改善工作条件。"
         },
         {
-          "text": "v. pr. 【s'améliorer】 好转，改善: Je suis content d'apprendre que sa santé s'améliore.我很高兴得知他的健康状况在好转。 Les conditions de vie se sont améliorées.生活条件得到了改善。"
+          "text": "【s'améliorer】 好转，改善: Je suis content d'apprendre que sa santé s'améliore.我很高兴得知他的健康状况在好转。 Les conditions de vie se sont améliorées.生活条件得到了改善。"
         }
       ],
       "verb_type": "transitive"
@@ -1093,7 +1076,7 @@
           "text": "appeler (qqn, un animal ...) 取名，命名: J'ai appelé mon chat Patapouf.我给我的猫取名为帕塔普弗。"
         },
         {
-          "text": "v. pr. 【s'appeler】 名叫，称为: Comment vous appelez-vous? Je m'appelle Catherine.你叫什么名字?—我叫卡特琳。 Comment ça s'appelle, ces légumes? - Des haricots. 这种蔬菜叫什么?一叫芸豆。"
+          "text": "【s'appeler】 名叫，称为: Comment vous appelez-vous? Je m'appelle Catherine.你叫什么名字?—我叫卡特琳。 Comment ça s'appelle, ces légumes? - Des haricots. 这种蔬菜叫什么?一叫芸豆。"
         }
       ],
       "verb_type": "transitive"
@@ -1111,10 +1094,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. applaudir (qqn, qqch)鼓掌欢迎: Les spectateurs ont applaudi les acteurs à la fin de la représentation. 演出结束时，观众们给演员报以掌声。 Son discours a été applaudi.他的演说受到鼓掌欢迎。"
+          "text": "applaudir (qqn, qqch)鼓掌欢迎: Les spectateurs ont applaudi les acteurs à la fin de la représentation. 演出结束时，观众们给演员报以掌声。 Son discours a été applaudi.他的演说受到鼓掌欢迎。"
         },
         {
-          "text": "v. i.鼓掌: À la fin de son discours, nous avons applaudi longtemps.演说结束时，我们鼓掌了很长时间。"
+          "text": "鼓掌: À la fin de son discours, nous avons applaudi longtemps.演说结束时，我们鼓掌了很长时间。"
         }
       ],
       "verb_type": "transitive"
@@ -1198,13 +1181,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. approcher (qqch de qqch)移近，挪近，使靠近: Approche ta chaise de la table.把你的椅子往桌前靠些。"
+          "text": "approcher (qqch de qqch)移近，挪近，使靠近: Approche ta chaise de la table.把你的椅子往桌前靠些。"
         },
         {
-          "text": "v. i.接近，靠近: La nuit approche, il faut rentrer.天快黑了，该回去了。 Approche, j'ai deux mots à te dire.你过来，我有两句话要对你讲。"
+          "text": "接近，靠近: La nuit approche, il faut rentrer.天快黑了，该回去了。 Approche, j'ai deux mots à te dire.你过来，我有两句话要对你讲。"
         },
         {
-          "text": "v. pr. 【s'approcher (de qqch, de qqn)】走近，靠近: Il s'approche de la"
+          "text": "【s'approcher (de qqch, de qqn)】走近，靠近: Il s'approche de la"
         }
       ],
       "verb_type": "transitive"
@@ -1388,13 +1371,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. arrêter (qqch,qqn)阻止，使中断，使停止: Il a arrêté sa voiture dans une petite rue. 他在一条小马路上停下了车子。 L'arbitre a arrêté le combat de boxe.裁判员停止了拳击赛。 Un passant m'a arrêté pour me demander l'heure.一个过路人叫住了我问我几点钟。"
+          "text": "arrêter (qqch,qqn)阻止，使中断，使停止: Il a arrêté sa voiture dans une petite rue. 他在一条小马路上停下了车子。 L'arbitre a arrêté le combat de boxe.裁判员停止了拳击赛。 Un passant m'a arrêté pour me demander l'heure.一个过路人叫住了我问我几点钟。"
         },
         {
-          "text": "v. t. arrêter (qqn)捉住，扣留: La police a arrêté les cambrioleurs.警方捉住了撬窃犯。"
+          "text": "arrêter (qqn)捉住，扣留: La police a arrêté les cambrioleurs.警方捉住了撬窃犯。"
         },
         {
-          "text": "v. i.停下，停住，停止说话等: Arrête près du carrefour. 在十字路口附近停下来。 Cet enfant n'arrête pas de tousser.这孩子不停地咳嗽。"
+          "text": "停下，停住，停止说话等: Arrête près du carrefour. 在十字路口附近停下来。 Cet enfant n'arrête pas de tousser.这孩子不停地咳嗽。"
         }
       ],
       "verb_type": "transitive"
@@ -1436,7 +1419,7 @@
           "text": "assembler (qqch)接合，连接; 装配: Nicolas assemble les pièces d'un puzzle.尼古拉在拼板。"
         },
         {
-          "text": "v. pr. 【s'assembler】 聚集: La foule s'est assemblée sur la place.人群在广场上聚集起来。"
+          "text": "【s'assembler】 聚集: La foule s'est assemblée sur la place.人群在广场上聚集起来。"
         }
       ],
       "verb_type": "transitive"
@@ -1457,7 +1440,7 @@
           "text": "asseoir (qqn)使坐下: L'infirmière a assis le malade dans son fauteuil. 护士使病人坐在扶手椅上。"
         },
         {
-          "text": "v. pr. 【s'asseoir】 坐，坐下: Asseyez-vous, je vous en prie!您请坐!"
+          "text": "【s'asseoir】 坐，坐下: Asseyez-vous, je vous en prie!您请坐!"
         }
       ],
       "verb_type": "transitive"
@@ -1727,13 +1710,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. augmenter(qqch)增加，增大，增长;涨价: Ce nouveau moteur augmente la vitesse de la voiture.这台新发动机加快了汽车速度。 Le salaire des mineurs a été augmenté.矿工的工资增加了。 On va augmenter le prix de l'électricité.电要涨价了。"
+          "text": "augmenter(qqch)增加，增大，增长;涨价: Ce nouveau moteur augmente la vitesse de la voiture.这台新发动机加快了汽车速度。 Le salaire des mineurs a été augmenté.矿工的工资增加了。 On va augmenter le prix de l'électricité.电要涨价了。"
         },
         {
-          "text": "v. t. augmenter (qqn)加薪: Il a été augmenté en raison de son ancienneté.他因资历而加了薪。"
+          "text": "augmenter (qqn)加薪: Il a été augmenté en raison de son ancienneté.他因资历而加了薪。"
         },
         {
-          "text": "v. i.增加，增大，增长;涨价: La production augmente chaque année.产量逐年增长。 La population parisienne a beaucoup augmenté depuis un siècle. 一个世纪以来，巴黎人口有了很大增长。 L'essence augmente.汽油在涨价。 Les prix ont augmenté de 10% depuis l'année dernière.去年以来，物价涨了10%。"
+          "text": "增加，增大，增长;涨价: La production augmente chaque année.产量逐年增长。 La population parisienne a beaucoup augmenté depuis un siècle. 一个世纪以来，巴黎人口有了很大增长。 L'essence augmente.汽油在涨价。 Les prix ont augmenté de 10% depuis l'année dernière.去年以来，物价涨了10%。"
         }
       ],
       "verb_type": "transitive"
@@ -1808,19 +1791,19 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. avancer (qqch)向前移: Avancez cette chaise!把这把椅子往前移些。"
+          "text": "avancer (qqch)向前移: Avancez cette chaise!把这把椅子往前移些。"
         },
         {
-          "text": "v. t. avancer (qqch)提早，提前: Ilaavancé la date de son retour. 他把回来的时间提前了。 Pour assister au mariage, nous avancerons nos vacances.为了参加婚礼，我们将提前度假。"
+          "text": "avancer (qqch)提早，提前: Ilaavancé la date de son retour. 他把回来的时间提前了。 Pour assister au mariage, nous avancerons nos vacances.为了参加婚礼，我们将提前度假。"
         },
         {
-          "text": "v. i. 或 s'avancer 前进: La troupe avance.部队在前进。 Regardez cet homme qui avance vers nous. 你们瞧这人，他朝我们走来。"
+          "text": "或 s'avancer 前进: La troupe avance.部队在前进。 Regardez cet homme qui avance vers nous. 你们瞧这人，他朝我们走来。"
         },
         {
-          "text": "v. i.进展，进步: Les travaux avancent rapidement.工程进展很快。"
+          "text": "进展，进步: Les travaux avancent rapidement.工程进展很快。"
         },
         {
-          "text": "v. i.(钟、表)走得快: Cette horloge avance de 10 minutes.这时钟快10分钟。"
+          "text": "(钟、表)走得快: Cette horloge avance de 10 minutes.这时钟快10分钟。"
         }
       ],
       "verb_type": "transitive"
@@ -1905,7 +1888,7 @@
           "text": "baigner (qqn)给…洗澡: C'est l'heure de baigner le petit.该给小孩洗澡了。"
         },
         {
-          "text": "v. pr. se baigner 洗澡: Il est interdit de se baigner sur cette plage. 禁止在这片海滩上洗海水浴。"
+          "text": "se baigner 洗澡: Il est interdit de se baigner sur cette plage. 禁止在这片海滩上洗海水浴。"
         }
       ],
       "verb_type": "transitive"
@@ -1941,19 +1924,19 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. baisser (qqch)放下，降下: Baisse le store, le soleil est trop chaud.把帘子放下来，阳光太热了。 Baisse la vitre de la voiture! 把车窗玻璃放下来!"
+          "text": "baisser (qqch)放下，降下: Baisse le store, le soleil est trop chaud.把帘子放下来，阳光太热了。 Baisse la vitre de la voiture! 把车窗玻璃放下来!"
         },
         {
-          "text": "v. t. baisser (la tête)低下，俯下(身体某部分): Il baisse la tête devant les reproches.他面对指责低下了头。"
+          "text": "baisser (la tête)低下，俯下(身体某部分): Il baisse la tête devant les reproches.他面对指责低下了头。"
         },
         {
-          "text": "v. t. baisser (le son)减低，减弱(声音等): Voulez-vous baisser le son du poste de radio? 请您把收音机的音量调低些。 La concierge baisse la voix de peur de déranger les autres.门房降低说话声，以免妨碍他人。"
+          "text": "baisser (le son)减低，减弱(声音等): Voulez-vous baisser le son du poste de radio? 请您把收音机的音量调低些。 La concierge baisse la voix de peur de déranger les autres.门房降低说话声，以免妨碍他人。"
         },
         {
-          "text": "v. t. baisser (les prix)降低(价格等): Les commerçants se sont engagés à baisser les prix.商人们保证降低商品价格。"
+          "text": "baisser (les prix)降低(价格等): Les commerçants se sont engagés à baisser les prix.商人们保证降低商品价格。"
         },
         {
-          "text": "v. i.下降，降低;减弱;(价格等)下降: Il n'a pas assez plu, les rivières bais-sent.雨下得不够大，河水降低了。 Sa fièvre a baissé.他的烧退了。 Sa vue baisse.他的视力在下降。 Le prix des légumes a baissé.蔬菜价格下降了。"
+          "text": "下降，降低;减弱;(价格等)下降: Il n'a pas assez plu, les rivières bais-sent.雨下得不够大，河水降低了。 Sa fièvre a baissé.他的烧退了。 Sa vue baisse.他的视力在下降。 Le prix des légumes a baissé.蔬菜价格下降了。"
         }
       ],
       "verb_type": "transitive"
@@ -2122,7 +2105,7 @@
           "text": "blesser (qqn)使受伤，打伤: D'un coup de patte, le lion a blessé le domp-teur.狮子用爪子抓了一下，抓伤了驯兽员。"
         },
         {
-          "text": "v. pr. se blesser 受伤: Il s'est blessé en tombant. 他跌倒时受伤了。"
+          "text": "se blesser 受伤: Il s'est blessé en tombant. 他跌倒时受伤了。"
         }
       ],
       "verb_type": "transitive"
@@ -2158,10 +2141,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. boire (qqch)喝，饮: Quand j'ai soif, je bois de l'eau.当我渴时，我就喝水。 Je bois une tasse de café le matin.早晨我喝一杯咖啡。 Tu bois du vin ou de la bière? 你喝葡萄酒还是喝啤酒?"
+          "text": "boire (qqch)喝，饮: Quand j'ai soif, je bois de l'eau.当我渴时，我就喝水。 Je bois une tasse de café le matin.早晨我喝一杯咖啡。 Tu bois du vin ou de la bière? 你喝葡萄酒还是喝啤酒?"
         },
         {
-          "text": "v. i.喝酒，酗酒: Depuis que sa femme est morte, il s'est mis à boire.自他妻子去世后，他开始喝酒了。 Mon voisin a trop bu.我的邻居酒喝得太多了。"
+          "text": "喝酒，酗酒: Depuis que sa femme est morte, il s'est mis à boire.自他妻子去世后，他开始喝酒了。 Mon voisin a trop bu.我的邻居酒喝得太多了。"
         }
       ],
       "verb_type": "transitive"
@@ -2299,7 +2282,7 @@
           "text": "bousculer (qqn)挤，撞: Il m'a bousculé pour passer devant moi.他把我挤到了一边，走在我前面。 Encourant, il a bousculé son petit frère. 在奔跑中他撞着了他的弟弟。"
         },
         {
-          "text": "v. pr. se bousculer 互相拥挤: Que de monde! On se bouscule! 人真多!简直是人挤人!"
+          "text": "se bousculer 互相拥挤: Que de monde! On se bouscule! 人真多!简直是人挤人!"
         }
       ],
       "verb_type": "transitive"
@@ -2407,19 +2390,19 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. brûler (qqch)烧，焚烧，烧毁: J'ai brûlé des lettres dans la cheminée.我在壁炉里烧了一些信。 Le feu a brûlé entièrement la maison.火把房子全烧毁了。"
+          "text": "brûler (qqch)烧，焚烧，烧毁: J'ai brûlé des lettres dans la cheminée.我在壁炉里烧了一些信。 Le feu a brûlé entièrement la maison.火把房子全烧毁了。"
         },
         {
-          "text": "v. t. brûler(qqch)烧焦，烧坏: Un invité a brûlé la nappe avec une cigarette.一位客人的香烟把桌布烧了一个洞。 En repassant, elle a brûlé le col du chemisier.在熨衣服时，她把衬衫领子烫焦了。"
+          "text": "brûler(qqch)烧焦，烧坏: Un invité a brûlé la nappe avec une cigarette.一位客人的香烟把桌布烧了一个洞。 En repassant, elle a brûlé le col du chemisier.在熨衣服时，她把衬衫领子烫焦了。"
         },
         {
-          "text": "v. t. brûler(qqn)烫伤，烧伤，灼伤: Deux personnes ont été gravement brûlées dans l'incendie de l'hôtel.在旅馆失火中，有两人严重烧伤。"
+          "text": "brûler(qqn)烫伤，烧伤，灼伤: Deux personnes ont été gravement brûlées dans l'incendie de l'hôtel.在旅馆失火中，有两人严重烧伤。"
         },
         {
-          "text": "v. i.燃烧，烧着，烧焦: La forêt brûle.森林在燃烧。 Viens vite, les pom-mes de terre brûlent.快来，土豆烧糊了。"
+          "text": "燃烧，烧着，烧焦: La forêt brûle.森林在燃烧。 Viens vite, les pom-mes de terre brûlent.快来，土豆烧糊了。"
         },
         {
-          "text": "v. pr. se brûler 烧痛自己，烫痛自己: Aïe! cette soupe est trop chaude! Je me suis brûlé la langue!哎唷!这汤太烫了!我把舌头给烫了! Ne touche pas cette casserole, tu vas te brûler.别碰这只锅子，你会烫痛自己的。"
+          "text": "se brûler 烧痛自己，烫痛自己: Aïe! cette soupe est trop chaude! Je me suis brûlé la langue!哎唷!这汤太烫了!我把舌头给烫了! Ne touche pas cette casserole, tu vas te brûler.别碰这只锅子，你会烫痛自己的。"
         }
       ],
       "verb_type": "transitive"
@@ -2644,10 +2627,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. cesser (qqch, de faire qqch)使停止，使中断: Les employés cessent le travail à cinq heures.雇员们5点停止工作。 L'usine a cessé la fabrication de ce modèle.工厂已停止生产这种式样的产品。 Il n'a pas cessé de travailler depuis ce matin.今天早晨起他没有停止过工作。"
+          "text": "cesser (qqch, de faire qqch)使停止，使中断: Les employés cessent le travail à cinq heures.雇员们5点停止工作。 L'usine a cessé la fabrication de ce modèle.工厂已停止生产这种式样的产品。 Il n'a pas cessé de travailler depuis ce matin.今天早晨起他没有停止过工作。"
         },
         {
-          "text": "v. i.停止，中止: Si la pluie cesse, on ira faire un tour. 如果雨停，我们就去走走。"
+          "text": "停止，中止: Si la pluie cesse, on ira faire un tour. 如果雨停，我们就去走走。"
         }
       ],
       "verb_type": "transitive"
@@ -2665,13 +2648,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. dir. changer (qqch)换，更换: Avant de partir pour l'étranger, mon père a changé son argent à la banque. 在动身去外国前，我爸爸去银行换了钱。"
+          "text": "changer (qqch)换，更换: Avant de partir pour l'étranger, mon père a changé son argent à la banque. 在动身去外国前，我爸爸去银行换了钱。"
         },
         {
-          "text": "v. t. ind. changer (de qqch)换: Pierre a changé d'adresse.皮埃尔换了地址。 J'ai changé d'avis.我改变了想法。"
+          "text": "changer (de qqch)换: Pierre a changé d'adresse.皮埃尔换了地址。 J'ai changé d'avis.我改变了想法。"
         },
         {
-          "text": "v. i. 变，变化: Bonjour, Jacques! tu as beaucoup changé.雅克，你好!你变化真大。 Le temps va changer.天气要变了。"
+          "text": "变，变化: Bonjour, Jacques! tu as beaucoup changé.雅克，你好!你变化真大。 Le temps va changer.天气要变了。"
         }
       ],
       "verb_type": "transitive"
@@ -2689,10 +2672,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. chanter (une chanson)唱: Tu ne reconnais pas cette chanson? On la chantait quand on était jeune. 你听不出这首歌了?我们年轻时唱的。"
+          "text": "chanter (une chanson)唱: Tu ne reconnais pas cette chanson? On la chantait quand on était jeune. 你听不出这首歌了?我们年轻时唱的。"
         },
         {
-          "text": "v. i.唱，歌唱: Des maçons travaillent en chantant.砌石工一边干活一边唱歌。"
+          "text": "唱，歌唱: Des maçons travaillent en chantant.砌石工一边干活一边唱歌。"
         }
       ],
       "verb_type": "transitive"
@@ -2719,7 +2702,7 @@
           "text": "charger (qqn de qqch, de faire qqch)委任，使承担: Le directeur a chargé Pierre de prévenir tout le monde pour la réunion.经理委托皮埃尔通知大家开会。"
         },
         {
-          "text": "v. pr. se charger (de qqch, de faire qqch)承担，负责: Ne vous inquiétez pas, je me charge de tout.您别担心，我负责这一切。 Marie se charge d'emmener votre fille à l'école.玛丽负责把您的女儿送到学校。"
+          "text": "se charger (de qqch, de faire qqch)承担，负责: Ne vous inquiétez pas, je me charge de tout.您别担心，我负责这一切。 Marie se charge d'emmener votre fille à l'école.玛丽负责把您的女儿送到学校。"
         }
       ],
       "verb_type": "transitive"
@@ -2776,13 +2759,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. chauffer (qqch)烧热，加热: Vous chaufferez l'eau pour le thé.您烧水来泡茶。 Le poêle chauffe l'appartement.火炉暖和了房间。"
+          "text": "chauffer (qqch)烧热，加热: Vous chaufferez l'eau pour le thé.您烧水来泡茶。 Le poêle chauffe l'appartement.火炉暖和了房间。"
         },
         {
-          "text": "v. i.变热，发热:L'eau chauffe sur le feu.水在炉灶上烧热了。 Les radiateurs ne chauffent pas assez.暖气片散热不足。"
+          "text": "变热，发热:L'eau chauffe sur le feu.水在炉灶上烧热了。 Les radiateurs ne chauffent pas assez.暖气片散热不足。"
         },
         {
-          "text": "v. pr. se chauffer 取暖: Le chat se chauffe au soleil.猫在晒太阳取暖。"
+          "text": "se chauffer 取暖: Le chat se chauffe au soleil.猫在晒太阳取暖。"
         }
       ],
       "verb_type": "transitive"
@@ -2860,10 +2843,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. chuchoter (qqch à qqn)低声说: Pierre m'a chuchoté quelques mots à l'oreille.皮埃尔凑近我耳朵低声说了几句话。"
+          "text": "chuchoter (qqch à qqn)低声说: Pierre m'a chuchoté quelques mots à l'oreille.皮埃尔凑近我耳朵低声说了几句话。"
         },
         {
-          "text": "v. i.低语，窃窃私语，交头接耳: Deux élèves chuchotent en classe.两个学生在课堂上交头接耳。"
+          "text": "低语，窃窃私语，交头接耳: Deux élèves chuchotent en classe.两个学生在课堂上交头接耳。"
         }
       ],
       "verb_type": "transitive"
@@ -2917,10 +2900,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. claquer (qqch)使砰砰作响: Levent a claqué la porte.风把门刮得砰砰作响。"
+          "text": "claquer (qqch)使砰砰作响: Levent a claqué la porte.风把门刮得砰砰作响。"
         },
         {
-          "text": "v. i.砰砰作响，发出喀嗒声: Il y a un volet qui claque. 有扇百叶窗在砰砰作响。"
+          "text": "砰砰作响，发出喀嗒声: Il y a un volet qui claque. 有扇百叶窗在砰砰作响。"
         }
       ],
       "verb_type": "transitive"
@@ -3067,13 +3050,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. commencer (qqch)开始，着手: J'ai commencé mon travail ce matin.今天早晨我开始了我的工作。"
+          "text": "commencer (qqch)开始，着手: J'ai commencé mon travail ce matin.今天早晨我开始了我的工作。"
         },
         {
-          "text": "v. t. commencer (à faire qqch)开始，着手: À quel âge a-t-il commencé à parler?他是几岁开始说话的?"
+          "text": "commencer (à faire qqch)开始，着手: À quel âge a-t-il commencé à parler?他是几岁开始说话的?"
         },
         {
-          "text": "v. i.开始: Notre travail commence à neuf heures. 我们的工作是九点开始的。"
+          "text": "开始: Notre travail commence à neuf heures. 我们的工作是九点开始的。"
         }
       ],
       "verb_type": "transitive"
@@ -3148,7 +3131,7 @@
           "text": "comporter (qqch) 包含，具有: Ce logement comporte quatre pièces. 这套住房有四个房间。 Son discours comporte trois parties. 他的演说包括三个部分。"
         },
         {
-          "text": "v. pr. se comporter 举止，表现: Cet enfant s'est mal comporté.这孩子表现得很差。"
+          "text": "se comporter 举止，表现: Cet enfant s'est mal comporté.这孩子表现得很差。"
         }
       ],
       "verb_type": "transitive"
@@ -3274,7 +3257,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. conclure (qqch)缔结，达成，商定: Ces deux pays ont conclu la paix.这两个国家缔结了和约。"
+          "text": "conclure (qqch)缔结，达成，商定: Ces deux pays ont conclu la paix.这两个国家缔结了和约。"
         }
       ],
       "verb_type": "transitive"
@@ -3676,13 +3659,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. continuer (qqch)继续: Elle continue ses recherches.她继续自己的研究。"
+          "text": "continuer (qqch)继续: Elle continue ses recherches.她继续自己的研究。"
         },
         {
-          "text": "v. t. continuer (à faire qqch)继续: Il continue à travailler malgré son âge.他不顾年龄继续工作。"
+          "text": "continuer (à faire qqch)继续: Il continue à travailler malgré son âge.他不顾年龄继续工作。"
         },
         {
-          "text": "v. i.继续: Si la pluie continue, je resterai à la maison. 如果雨继续下，我就待在家里。"
+          "text": "继续: Si la pluie continue, je resterai à la maison. 如果雨继续下，我就待在家里。"
         }
       ],
       "verb_type": "transitive"
@@ -3892,7 +3875,7 @@
           "text": "coucher (qqn)使躺下，使睡下: Couchez l'enfant sur la table, je vais le soigner.把孩子躺在桌上，我来治疗一下。 Bébé tombe de sommeil, il faut aller le coucher.婴儿困了，该去让他睡下了。"
         },
         {
-          "text": "v. pr. se coucher 躺在床上，睡觉: Tuas de la fièvre, tu ferais mieux d'aller te coucher.你在发烧，最好去躺着。 Il est tard, je vais me coucher.时间晚了，我去睡觉了。"
+          "text": "se coucher 躺在床上，睡觉: Tuas de la fièvre, tu ferais mieux d'aller te coucher.你在发烧，最好去躺着。 Il est tard, je vais me coucher.时间晚了，我去睡觉了。"
         }
       ],
       "verb_type": "transitive"
@@ -3997,10 +3980,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.值，值价: Combien coûte ta robe? - Elle coûte 20€.你的连衫裙多少钱?—价值20欧元。 Cette voiture coûte cher.这辆汽车昂贵。"
+          "text": "值，值价: Combien coûte ta robe? - Elle coûte 20€.你的连衫裙多少钱?—价值20欧元。 Cette voiture coûte cher.这辆汽车昂贵。"
         },
         {
-          "text": "v. t. coûter (qqch à qqn)使付出(代价): Ce travail m'a coûté beaucoup d'efforts.这项工作使我付出很多精力。"
+          "text": "coûter (qqch à qqn)使付出(代价): Ce travail m'a coûté beaucoup d'efforts.这项工作使我付出很多精力。"
         }
       ],
       "verb_type": "intransitive"
@@ -4018,10 +4001,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. cracher (qqch)吐: L'enfant a craché un morceau de viande.孩子吐出一块肉。"
+          "text": "cracher (qqch)吐: L'enfant a craché un morceau de viande.孩子吐出一块肉。"
         },
         {
-          "text": "v. i.吐痰: Il est défendu de cracher par terre.禁止随地吐痰。"
+          "text": "吐痰: Il est défendu de cracher par terre.禁止随地吐痰。"
         }
       ],
       "verb_type": "transitive"
@@ -4195,10 +4178,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. cuire (qqch)烧，煮: On cuit les nouilles en les jetant dans l'eau bouillante.将面条投入沸水中煮。"
+          "text": "cuire (qqch)烧，煮: On cuit les nouilles en les jetant dans l'eau bouillante.将面条投入沸水中煮。"
         },
         {
-          "text": "v. i.(食物)烧，煮: La soupe cuit sur le feu.汤在炉子上烧。 Faites cuire la viande à feu vif.您用旺火烧肉。"
+          "text": "(食物)烧，煮: La soupe cuit sur le feu.汤在炉子上烧。 Faites cuire la viande à feu vif.您用旺火烧肉。"
         }
       ],
       "verb_type": "transitive"
@@ -4237,13 +4220,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. dir. céder (qqch à qqn)让，让出: Il m'a cédé sa place. 他把位子让给了我。"
+          "text": "céder (qqch à qqn)让，让出: Il m'a cédé sa place. 他把位子让给了我。"
         },
         {
-          "text": "v. t. ind. céder (à qqn, à qqch)让步，屈服，顺从: Si tu lui cèdes toujours, cet enfant deviendra insupportable.如果你对这孩子百依百顺，他会变得令人难以容忍。 Il faut céder à la coutume.应该顺从习俗。"
+          "text": "céder (à qqn, à qqch)让步，屈服，顺从: Si tu lui cèdes toujours, cet enfant deviendra insupportable.如果你对这孩子百依百顺，他会变得令人难以容忍。 Il faut céder à la coutume.应该顺从习俗。"
         },
         {
-          "text": "v. i.让步，屈服: Après une longue discussion, ils ont enfin cédé.经过长时间讨论之后，他们终于让步了。"
+          "text": "让步，屈服: Après une longue discussion, ils ont enfin cédé.经过长时间讨论之后，他们终于让步了。"
         }
       ],
       "verb_type": "transitive"
@@ -4414,10 +4397,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i. 下来，下去[助动词用 être] : Les voyageurs sont descendus du train.旅客们下了火车。 Pour descendre, vous pouvez prendre l'ascenseur.您可以乘电梯下去。"
+          "text": "下来，下去[助动词用 être] : Les voyageurs sont descendus du train.旅客们下了火车。 Pour descendre, vous pouvez prendre l'ascenseur.您可以乘电梯下去。"
         },
         {
-          "text": "v. t. 【descendre (qqch)】 取下，拿下[助动词用 avoir] : Peux-tu descendre la poubelle?你能不能把垃圾筒拿下去?"
+          "text": "【descendre (qqch)】 取下，拿下[助动词用 avoir] : Peux-tu descendre la poubelle?你能不能把垃圾筒拿下去?"
         }
       ],
       "verb_type": "intransitive"
@@ -4556,10 +4539,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【diminuer (qqch)】 缩减，减少，降低: Il faut diminuer nos dépenses.应该削减我们的开支。 Cela ne diminue pas son mérite.这不降低他的功劳。"
+          "text": "【diminuer (qqch)】 缩减，减少，降低: Il faut diminuer nos dépenses.应该削减我们的开支。 Cela ne diminue pas son mérite.这不降低他的功劳。"
         },
         {
-          "text": "v. i. 减少，降低，减弱: La population a diminué.人口减少了。 La température a diminué.气温降低了。"
+          "text": "减少，降低，减弱: La population a diminué.人口减少了。 La température a diminué.气温降低了。"
         }
       ],
       "verb_type": "transitive"
@@ -4610,7 +4593,7 @@
           "text": "【diriger (qqn)】 指导: Il dirige deux étudiants. 他指导两名学生。"
         },
         {
-          "text": "v. pr. 【se diriger (vers qqn,qqch)】 走向: Les canards se dirigent vers l'étang.鸭子朝着池塘走去。"
+          "text": "【se diriger (vers qqn,qqch)】 走向: Les canards se dirigent vers l'étang.鸭子朝着池塘走去。"
         }
       ],
       "verb_type": "transitive"
@@ -4712,7 +4695,7 @@
           "text": "【distinguer (qqch)】 看出:♦ En regardant bien, on peut distinguer une maison à l'horizon.仔细看，可以看到地平线上有一幢房子。"
         },
         {
-          "text": "v. pr. 【se distinguer (de qqn, de qqch)】 不同于，区别于: L'âne se distingue du cheval par ses oreilles.毛驴和马的区别在于耳朵。"
+          "text": "【se distinguer (de qqn, de qqch)】 不同于，区别于: L'âne se distingue du cheval par ses oreilles.毛驴和马的区别在于耳朵。"
         }
       ],
       "verb_type": "transitive"
@@ -4733,7 +4716,7 @@
           "text": "【distraire (qqn)】 使得到娱乐，使得到消遣: La télévision distrait les enfants.电视使孩子们得到消遣。"
         },
         {
-          "text": "v. pr. 【se distraire】 消遣，娱乐: Si on allait au cinéma pour se distraire?我们去看电影消遣消遣怎么样?"
+          "text": "【se distraire】 消遣，娱乐: Si on allait au cinéma pour se distraire?我们去看电影消遣消遣怎么样?"
         }
       ],
       "verb_type": "transitive"
@@ -4880,10 +4863,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【doubler (qqch)】 使加倍，使增加一倍: Il a doublé sa fortune en deux ans.两年时间他将财富翻了一番。"
+          "text": "【doubler (qqch)】 使加倍，使增加一倍: Il a doublé sa fortune en deux ans.两年时间他将财富翻了一番。"
         },
         {
-          "text": "v. i. 增加一倍: Depuis cinq ans, les prix ont doublé.5年以来，物价翻了一番。"
+          "text": "增加一倍: Depuis cinq ans, les prix ont doublé.5年以来，物价翻了一番。"
         }
       ],
       "verb_type": "transitive"
@@ -4955,10 +4938,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【débarquer (qqch)】 卸(货): Le navire a débarqué sa cargaison. 船卸下了货物。"
+          "text": "【débarquer (qqch)】 卸(货): Le navire a débarqué sa cargaison. 船卸下了货物。"
         },
         {
-          "text": "v. i. 下船，上岸: Nous débarquerons à Marseille vers midi. 将近中午时我们"
+          "text": "下船，上岸: Nous débarquerons à Marseille vers midi. 将近中午时我们"
         }
       ],
       "verb_type": "transitive"
@@ -4979,7 +4962,7 @@
           "text": "【débarrasser (un lieu)】 清除: Nous débarrassons le grenier pour y aménager une salle de jeu.我们收拾一下阁楼来布置一间玩具室。 On peut débarrasser la table?可以收拾餐桌了吗?"
         },
         {
-          "text": "v. pr. 【se débarrasser (de qqch)】 清除，摆脱: Il s'est débarrassé de vieux livres sans valeur.他扔掉了一些没有价值的旧书。"
+          "text": "【se débarrasser (de qqch)】 清除，摆脱: Il s'est débarrassé de vieux livres sans valeur.他扔掉了一些没有价值的旧书。"
         }
       ],
       "verb_type": "transitive"
@@ -5111,7 +5094,7 @@
           "text": "【décider (de faire qqch)】 决定: Nous avons décidé de partir demain.我们决定明天动身。"
         },
         {
-          "text": "v. pr. 【se décider (à faire qqch)】 终于决定: Il est temps de te décider: tu pars ou non?你该作出决定了，走还是不走? Catherine s'est enfin décidée à revenir.卡特琳终于决定回来。"
+          "text": "【se décider (à faire qqch)】 终于决定: Il est temps de te décider: tu pars ou non?你该作出决定了，走还是不走? Catherine s'est enfin décidée à revenir.卡特琳终于决定回来。"
         }
       ],
       "verb_type": "transitive"
@@ -5513,7 +5496,7 @@
           "text": "【déplacer (qqch)】 移动，搬动: Ce meuble est trop lourd, je ne peux pas le déplacer tout seul.这件家具太重，我一个人难以搬动。"
         },
         {
-          "text": "v. pr. 【se déplacer】 出门，出差，走动: Mon voisin se déplace souvent. 我邻居常常出差。 Pierre a beaucoup de mal à se déplacer depuis qu'il s'est cassé la jambe.皮埃尔自从跌断大腿以后行走很困难。"
+          "text": "【se déplacer】 出门，出差，走动: Mon voisin se déplace souvent. 我邻居常常出差。 Pierre a beaucoup de mal à se déplacer depuis qu'il s'est cassé la jambe.皮埃尔自从跌断大腿以后行走很困难。"
         }
       ],
       "verb_type": "transitive"
@@ -5588,7 +5571,7 @@
           "text": "【déranger (qqn)】 打扰，麻烦，妨碍: Isabelle travaille, ne la dérangez pas.伊莎贝尔在工作，别打扰她。"
         },
         {
-          "text": "v. pr. 【se déranger】 撂下手边的活: Ne vous dérangez pas.您别忙。"
+          "text": "【se déranger】 撂下手边的活: Ne vous dérangez pas.您别忙。"
         }
       ],
       "verb_type": "transitive"
@@ -5648,7 +5631,7 @@
           "text": "【déshabiller (qqn)】 替…脫衣: La mère déshabille son enfant pour le mettre au lit.母亲替孩子脫下衣服将他放在床上。"
         },
         {
-          "text": "v. pr. 【se déshabiller】 脫掉衣服: Il se déshabille pour prendre un bain. 他脫下衣服洗澡。"
+          "text": "【se déshabiller】 脫掉衣服: Il se déshabille pour prendre un bain. 他脫下衣服洗澡。"
         }
       ],
       "verb_type": "transitive"
@@ -5834,7 +5817,7 @@
           "text": "【développer (qqch)】 发展: C'est un jeu qui développe l'intelligence.这是一项发展智力的游戏。 La Chine développe ses échanges économiques avec les pays voisins.中国发展同邻国的经济往来。"
         },
         {
-          "text": "v. pr. 【se développer】 发展: L'économie nationale se développe.国民经济在发展。"
+          "text": "【se développer】 发展: L'économie nationale se développe.国民经济在发展。"
         }
       ],
       "verb_type": "transitive"
@@ -5942,10 +5925,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【embarquer (qqch)】 装上船: Ona embarqué des marchandises.货物已装上船。"
+          "text": "【embarquer (qqch)】 装上船: Ona embarqué des marchandises.货物已装上船。"
         },
         {
-          "text": "v. i. 上船: Ce soir, nous embarquerons pour Alger.今晚我们乘船去阿尔及尔。"
+          "text": "上船: Ce soir, nous embarquerons pour Alger.今晚我们乘船去阿尔及尔。"
         }
       ],
       "verb_type": "transitive"
@@ -6263,7 +6246,7 @@
           "text": "enfoncer (qqch)插入，钉入: On enfonce les clous avec un marteau.人们用 锤子钉钉子。"
         },
         {
-          "text": "v. pr. s'enfoncer 深陷，进入深处: Ne va pas plus loin, tu t'enfoncerais dans la boue.不要走得更远，你会陷入烂泥里的。 L'explorateur s'enfonce dans la forêt.探险者进入森林深处。"
+          "text": "s'enfoncer 深陷，进入深处: Ne va pas plus loin, tu t'enfoncerais dans la boue.不要走得更远，你会陷入烂泥里的。 L'explorateur s'enfonce dans la forêt.探险者进入森林深处。"
         }
       ],
       "verb_type": "transitive"
@@ -6410,7 +6393,7 @@
           "text": "ennuyer (qqn)使厌倦，使感到无聊: Son discours ennuie le public.他的讲 话使听众感到厌倦。"
         },
         {
-          "text": "v. pr. s'ennuyer 感到烦恼，感到无聊: Si je ne travaille pas, je m'ennuierai. 我要是不工作，会感到无聊。"
+          "text": "s'ennuyer 感到烦恼，感到无聊: Si je ne travaille pas, je m'ennuierai. 我要是不工作，会感到无聊。"
         }
       ],
       "verb_type": "transitive"
@@ -6503,7 +6486,7 @@
           "text": "entendre (qqch,qqn)听见，听到: Nous entendons le sifflement d'un train. 我们听到火车的汽笛声。 Je vous entends mal, parlez plus fort. 我听不清楚， 您讲得大声些。 J'entends papa monter l'escalier.我听到爸爸在走楼梯。"
         },
         {
-          "text": "v. pr. s'entendre (avec qqn)融洽相处: Après deux ans de mariage, Paul et Marie ne s'entendent plus.结婚两年后，保尔和玛丽不能再融洽相处了。"
+          "text": "s'entendre (avec qqn)融洽相处: Après deux ans de mariage, Paul et Marie ne s'entendent plus.结婚两年后，保尔和玛丽不能再融洽相处了。"
         }
       ],
       "verb_type": "transitive"
@@ -6587,7 +6570,7 @@
           "text": "entraîner (qqn)训练，锻炼: Un moniteur entraîne des jeunes gens à la natation.一位教练在训练一些年轻人游泳。"
         },
         {
-          "text": "v. pr. s'entraîner 进行训练，锻炼: Le boxeur s'entraîne tous les jours. 拳击 运动员天天训练。"
+          "text": "s'entraîner 进行训练，锻炼: Le boxeur s'entraîne tous les jours. 拳击 运动员天天训练。"
         }
       ],
       "verb_type": "transitive"
@@ -6608,7 +6591,7 @@
           "text": "使互相碰撞: Ils ont entrechoqué leurs verres.他们碰了杯。"
         },
         {
-          "text": "v. pr. s'entrechoquer 互相碰撞，相撞: La voisine rentre du supermarché: j'entends les bouteilles s'entrechoquer dans son filet.邻居从超市回来了，因为我 听见网兜里的酒瓶在碰撞。"
+          "text": "s'entrechoquer 互相碰撞，相撞: La voisine rentre du supermarché: j'entends les bouteilles s'entrechoquer dans son filet.邻居从超市回来了，因为我 听见网兜里的酒瓶在碰撞。"
         }
       ],
       "verb_type": "transitive"
@@ -6669,7 +6652,7 @@
           "text": "entretenir (qqch)保养，维护: M. Dupont entretient bien sa voiture. 杜邦先 生把自己的汽车保养得很好。"
         },
         {
-          "text": "v. pr. s'entretenir (avec qqn)交谈，谈话: Le président s'est entretenu avec le Premier ministre.总统和总理进行了交谈。"
+          "text": "s'entretenir (avec qqn)交谈，谈话: Le président s'est entretenu avec le Premier ministre.总统和总理进行了交谈。"
         }
       ],
       "verb_type": "transitive"
@@ -7079,7 +7062,7 @@
           "text": "excuser (qqn)原谅，宽恕: M. Durand nous a demandé de l'excuser.迪朗先 生要我们原谅他。 Excusez-moi, vous me bouchez le passage. 对不起，您挡了 我的路。"
         },
         {
-          "text": "v. pr. s'excuser (de qqch) 请求原谅: Je m'excuse de mon retard.请原谅我 迟到。"
+          "text": "s'excuser (de qqch) 请求原谅: Je m'excuse de mon retard.请原谅我 迟到。"
         }
       ],
       "verb_type": "transitive"
@@ -7121,7 +7104,7 @@
           "text": "exercer (qqch) 从事，行使: Mon grand-père exerçait le métier de mineur. 我 祖父以前从事煤矿工作。 M. Martin exerce des fonctions importantes dans cette entreprise.马丁先生在这家企业行使重要职能。"
         },
         {
-          "text": "v. pr. s'exercer 练习，锻炼: Marie s'exerce tous les jours à jouer du piano. 玛丽每天练习弹钢琴。"
+          "text": "s'exercer 练习，锻炼: Marie s'exerce tous les jours à jouer du piano. 玛丽每天练习弹钢琴。"
         }
       ],
       "verb_type": "transitive"
@@ -7166,7 +7149,7 @@
           "text": "生存，生活: Il y a cent ans, nous n'existions pas. 一百年前，我们尚未生存 在世界上。"
         },
         {
-          "text": "v. impers. il existe (qqch, qqn) 存在着: Il n'existe qu'une route pour aller dans ce village.去这座村子只存在一条公路。"
+          "text": "il existe (qqch, qqn) 存在着: Il n'existe qu'une route pour aller dans ce village.去这座村子只存在一条公路。"
         }
       ],
       "verb_type": "intransitive"
@@ -7331,7 +7314,7 @@
           "text": "exprimer (qqch)显露，显示: Son visage exprime une grande joie.他的脸表 现出极大的喜悦。"
         },
         {
-          "text": "v. pr. s'exprimer 表达(思想、感情): John commence à s'exprimer en français.约翰开始用法语表达了。"
+          "text": "s'exprimer 表达(思想、感情): John commence à s'exprimer en français.约翰开始用法语表达了。"
         }
       ],
       "verb_type": "transitive"
@@ -7774,16 +7757,16 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. finir (qqch)完成，结束: Tu as fini ton travail? 你工作做完了吗?"
+          "text": "finir (qqch)完成，结束: Tu as fini ton travail? 你工作做完了吗?"
         },
         {
-          "text": "v. t. finir (de faire qqch)停止，结束: L'enfant a fini de pleurer.孩子停下不哭了。"
+          "text": "finir (de faire qqch)停止，结束: L'enfant a fini de pleurer.孩子停下不哭了。"
         },
         {
-          "text": "v. i.完成，结束: Le spectacle commence à 20 heures et finit à 22 heures. 演出20点开始22点结束。"
+          "text": "完成，结束: Le spectacle commence à 20 heures et finit à 22 heures. 演出20点开始22点结束。"
         },
         {
-          "text": "v. i. finir (par qqch, par faire qqch) 终于，以…结束: J'ai fini par trouver la solution.我终于找到了解决办法。"
+          "text": "finir (par qqch, par faire qqch) 终于，以…结束: J'ai fini par trouver la solution.我终于找到了解决办法。"
         }
       ],
       "verb_type": "transitive"
@@ -7933,10 +7916,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. fondre (qqch)使熔化，使溶解，使融化: Je fonds du beurre dans la poêle. 我把白脫油放在平底锅里溶化。"
+          "text": "fondre (qqch)使熔化，使溶解，使融化: Je fonds du beurre dans la poêle. 我把白脫油放在平底锅里溶化。"
         },
         {
-          "text": "v. i.熔化，溶解，融化: Mange vite ta glace, elle est en train de fondre.快吃冰淇淋，它正在融化。"
+          "text": "熔化，溶解，融化: Mange vite ta glace, elle est en train de fondre.快吃冰淇淋，它正在融化。"
         }
       ],
       "verb_type": "transitive"
@@ -8035,10 +8018,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. fouiller (un lieu)搜查，搜寻: Les douaniers ont fouillé ma valise. 海关人员搜查了我的手提箱。 La police a fouillé tous les immeubles du quartier. 警方搜查了这个街区的所有大楼。"
+          "text": "fouiller (un lieu)搜查，搜寻: Les douaniers ont fouillé ma valise. 海关人员搜查了我的手提箱。 La police a fouillé tous les immeubles du quartier. 警方搜查了这个街区的所有大楼。"
         },
         {
-          "text": "v. i.翻寻: Un chiffonnier fouille dans les poubelles. 一个拾荒者在垃圾箱里翻寻。 J'ai fouillé partout, impossible de trouver mes clés. 我到处找了，都没能找到我的钥匙。"
+          "text": "翻寻: Un chiffonnier fouille dans les poubelles. 一个拾荒者在垃圾箱里翻寻。 J'ai fouillé partout, impossible de trouver mes clés. 我到处找了，都没能找到我的钥匙。"
         }
       ],
       "verb_type": "transitive"
@@ -8281,10 +8264,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. fumer (du tabac)吸烟: Paul fume une cigarette.保尔在吸烟。"
+          "text": "fumer (du tabac)吸烟: Paul fume une cigarette.保尔在吸烟。"
         },
         {
-          "text": "v. i.冒烟: Les cheminées des usines fument.工厂里的烟囱在冒烟。 Le bois fume.木头在冒烟。"
+          "text": "冒烟: Les cheminées des usines fument.工厂里的烟囱在冒烟。 Le bois fume.木头在冒烟。"
         }
       ],
       "verb_type": "transitive"
@@ -8440,7 +8423,7 @@
           "text": "garer (une voiture) 停放(车辆): J'ai garé ma voiture sur le parking.我把车子停放在停车场。"
         },
         {
-          "text": "v. pr. se garer(车辆)停放: J'ai du mal à me garer.我难以停放车子。"
+          "text": "se garer(车辆)停放: J'ai du mal à me garer.我难以停放车子。"
         }
       ],
       "verb_type": "transitive"
@@ -8497,13 +8480,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. geler (qqch)使结冰，使冰冻: Le froid a gelé l'eau du seau.严寒使桶里的水结了冰。"
+          "text": "geler (qqch)使结冰，使冰冻: Le froid a gelé l'eau du seau.严寒使桶里的水结了冰。"
         },
         {
-          "text": "v. i.结冰: L'étang va bientôt geler.池塘马上要结冰了。"
+          "text": "结冰: L'étang va bientôt geler.池塘马上要结冰了。"
         },
         {
-          "text": "v. impers.结冰: Il a gelé.结冰了。"
+          "text": "结冰: Il a gelé.结冰了。"
         }
       ],
       "verb_type": "transitive"
@@ -8521,10 +8504,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. glisser (qqch)使滑动;悄悄地塞进: Le facteur a glissé une lettre sous la porte.邮递员把一封信塞入门底下。"
+          "text": "glisser (qqch)使滑动;悄悄地塞进: Le facteur a glissé une lettre sous la porte.邮递员把一封信塞入门底下。"
         },
         {
-          "text": "v. i.滑，滑动，滑行: Attention! ça glisse!当心滑! Le vase m'a glissé des mains.花瓶从我手中滑落了。 Les patineurs glissent sur la glace. 溜冰者在冰上滑行。"
+          "text": "滑，滑动，滑行: Attention! ça glisse!当心滑! Le vase m'a glissé des mains.花瓶从我手中滑落了。 Les patineurs glissent sur la glace. 溜冰者在冰上滑行。"
         }
       ],
       "verb_type": "transitive"
@@ -8578,10 +8561,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. goûter (qqch)尝，品尝:Goûte cette soupe.你尝一尝这汤。"
+          "text": "goûter (qqch)尝，品尝:Goûte cette soupe.你尝一尝这汤。"
         },
         {
-          "text": "v. i.(下午)吃点心: C'est l'heure de goûter.是吃点心的时间了。"
+          "text": "(下午)吃点心: C'est l'heure de goûter.是吃点心的时间了。"
         }
       ],
       "verb_type": "transitive"
@@ -8689,10 +8672,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.向上爬行;攀登; Regarde le chat qui grimpe sur le toit.你瞧这只猫在爬屋顶。 Ma plante grimpe le long de la fenêtre. 我种的花草沿着窗户向上爬。"
+          "text": "向上爬行;攀登; Regarde le chat qui grimpe sur le toit.你瞧这只猫在爬屋顶。 Ma plante grimpe le long de la fenêtre. 我种的花草沿着窗户向上爬。"
         },
         {
-          "text": "v. t. grimper (qqch)攀登，爬上: Les coureurs cyclistes grimpent la côte.自行车运动员在爬坡。"
+          "text": "grimper (qqch)攀登，爬上: Les coureurs cyclistes grimpent la côte.自行车运动员在爬坡。"
         }
       ],
       "verb_type": "intransitive"
@@ -8728,10 +8711,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. gronder (qqn)训斥，责骂: Mme Durand a grondé son fils. 迪朗太太骂了她的儿子。"
+          "text": "gronder (qqn)训斥，责骂: Mme Durand a grondé son fils. 迪朗太太骂了她的儿子。"
         },
         {
-          "text": "v. i.发出隆隆声，发出轰轰声: Le tonnerre gronde.雷声隆隆。 Le canon gronde.大炮在轰鸣。"
+          "text": "发出隆隆声，发出轰轰声: Le tonnerre gronde.雷声隆隆。 Le canon gronde.大炮在轰鸣。"
         }
       ],
       "verb_type": "transitive"
@@ -8785,10 +8768,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. guérir (qqn, une maladie) 治愈，使痊愈: Le médecin m'a guéri.医生治好了我的病。 Si seulement ce nouveau remède pouvait guérir les rhumatismes de ma grand-mère!但愿这种新药能治愈我祖母的风湿病!"
+          "text": "guérir (qqn, une maladie) 治愈，使痊愈: Le médecin m'a guéri.医生治好了我的病。 Si seulement ce nouveau remède pouvait guérir les rhumatismes de ma grand-mère!但愿这种新药能治愈我祖母的风湿病!"
         },
         {
-          "text": "v. i.痊愈，康复: Il guérira vite.他将很快痊愈。"
+          "text": "痊愈，康复: Il guérira vite.他将很快痊愈。"
         }
       ],
       "verb_type": "transitive"
@@ -8908,7 +8891,7 @@
           "text": "habiller (qqn) 给…穿衣，替…穿衣: J'habille une poupée. 我给玩具娃娃穿上衣服。"
         },
         {
-          "text": "v. pr. s'habiller 穿衣，穿着: Regarde la robe de cette jeune fille: elle ne sait vraiment pas s'habiller! 瞧这姑娘的连衫裙，她确实不会穿着!"
+          "text": "s'habiller 穿衣，穿着: Regarde la robe de cette jeune fille: elle ne sait vraiment pas s'habiller! 瞧这姑娘的连衫裙，她确实不会穿着!"
         }
       ],
       "verb_type": "transitive"
@@ -8947,7 +8930,7 @@
           "text": "habituer (qqn à qqch, à faire qqch)使习惯于，使养成…习惯: Mes parents m'ont habitué à prendre des douches froides. 我父母使我养成了洗冷水浴的习惯。"
         },
         {
-          "text": "v. pr. s'habituer (à qqch, à faire qqch)习惯于，养成…习惯: Il lui est impossible de s'habituer à son nouvel horaire de travail. 他习惯不了新的工作时间。"
+          "text": "s'habituer (à qqch, à faire qqch)习惯于，养成…习惯: Il lui est impossible de s'habituer à son nouvel horaire de travail. 他习惯不了新的工作时间。"
         }
       ],
       "verb_type": "transitive"
@@ -9277,7 +9260,7 @@
           "text": "implanter (qqch)建立，安置: On a implanté une entreprise automobile dans cette région.在这个地区兴建了一家汽车制造厂。"
         },
         {
-          "text": "v. pr. s'implanter 定居，被安置: Beaucoup d'Italiens se sont implantés aux États-Unis.许多意大利人在美国定居下来。"
+          "text": "s'implanter 定居，被安置: Beaucoup d'Italiens se sont implantés aux États-Unis.许多意大利人在美国定居下来。"
         }
       ],
       "verb_type": "transitive"
@@ -9459,7 +9442,7 @@
           "text": "incliner (qqch)使倾斜，使弯下: Le vent incline les arbres.风刮得树木倾斜了。"
         },
         {
-          "text": "v. pr. s'incliner 倾斜;弯腰，鞠躬: Avant de couler, le bateau s'est incliné lentement.船在沉没前是慢慢倾斜的。"
+          "text": "s'incliner 倾斜;弯腰，鞠躬: Avant de couler, le bateau s'est incliné lentement.船在沉没前是慢慢倾斜的。"
         }
       ],
       "verb_type": "transitive"
@@ -9555,7 +9538,7 @@
           "text": "infecter (qqch)使感染;污染: Ces ordures infectent le voisinage. 这些垃圾污染了周围的环境。"
         },
         {
-          "text": "v. pr. s'infecter 感染: Sa blessure s'est infectée.他的伤口感染了。"
+          "text": "s'infecter 感染: Sa blessure s'est infectée.他的伤口感染了。"
         }
       ],
       "verb_type": "transitive"
@@ -9666,7 +9649,7 @@
           "text": "inquiéter (qqn)使不安，使担心: Ta santé m'inquiète.你的身体令我不安。"
         },
         {
-          "text": "v. pr. s'inquiéter 担心，不安: Ne t'inquiète pas, je ne cours aucun danger.别担心，我没有任何危险。"
+          "text": "s'inquiéter 担心，不安: Ne t'inquiète pas, je ne cours aucun danger.别担心，我没有任何危险。"
         }
       ],
       "verb_type": "transitive"
@@ -9690,7 +9673,7 @@
           "text": "inscrire (qqn)登记，登入: Il a inscrit son enfant à une école du quartier.他给孩子在街区的一所学校注了册。"
         },
         {
-          "text": "v. pr. s'inscrire 报名参加，进行登记: Jacques s'est inscrit à l'association sportive.雅克已在体育协会注册。"
+          "text": "s'inscrire 报名参加，进行登记: Jacques s'est inscrit à l'association sportive.雅克已在体育协会注册。"
         }
       ],
       "verb_type": "transitive"
@@ -9774,7 +9757,7 @@
           "text": "installer (qqch)安装，装设: On nous a enfin installé le téléphone.人家终于给我们安装了电话。"
         },
         {
-          "text": "v. pr. s'installer 安家，定居;坐定: Les Dupont se sont installés à Marseille.杜邦家在马赛安了家。 Il s'installe à la terrasse d'un café.他在一家咖啡馆的露天座坐了下来。"
+          "text": "s'installer 安家，定居;坐定: Les Dupont se sont installés à Marseille.杜邦家在马赛安了家。 Il s'installe à la terrasse d'un café.他在一家咖啡馆的露天座坐了下来。"
         }
       ],
       "verb_type": "transitive"
@@ -9795,7 +9778,7 @@
           "text": "instruire (qqn)教育: Ce livre m'a beaucoup instruit.这本书使我受益匪浅。"
         },
         {
-          "text": "v. pr. s'instruire 学习: C'est un bon moyen de s'instruire. 这是一个学习的好方法。 On va à l'école pour s'instruire.上学读书是为了学习知识。"
+          "text": "s'instruire 学习: C'est un bon moyen de s'instruire. 这是一个学习的好方法。 On va à l'école pour s'instruire.上学读书是为了学习知识。"
         }
       ],
       "verb_type": "transitive"
@@ -9970,7 +9953,7 @@
           "text": "intituler (qqch)为…题名，为…加标题: Ce film est intitulé Héros. 这部影片起名为《英雄》。"
         },
         {
-          "text": "v. pr. s'intituler 题名为: Comment s'intitule ce livre? 这本书是什么书名?"
+          "text": "s'intituler 题名为: Comment s'intitule ce livre? 这本书是什么书名?"
         }
       ],
       "verb_type": "transitive"
@@ -10036,7 +10019,7 @@
           "text": "intéresser (qqn)使感兴趣: La danse l'intéresse.跳舞使她感兴趣。"
         },
         {
-          "text": "v. pr. s'intéresser (à qqch)感兴趣: Il s'intéresse surtout aux histoires d'explorateurs. 他尤其对探险者的故事感兴趣。"
+          "text": "s'intéresser (à qqch)感兴趣: Il s'intéresse surtout aux histoires d'explorateurs. 他尤其对探险者的故事感兴趣。"
         }
       ],
       "verb_type": "transitive"
@@ -10180,10 +10163,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. jaunir (qqch)使变黄色，使发黄: Le soleil a jauni les rideaux. 太阳光使窗帘发黄了。"
+          "text": "jaunir (qqch)使变黄色，使发黄: Le soleil a jauni les rideaux. 太阳光使窗帘发黄了。"
         },
         {
-          "text": "v. i.变黄，发黄: Voici le vieux livre trouvé au grenier: le papier a jauni.这是顶楼上找到的旧书，纸张已经发黄。"
+          "text": "变黄，发黄: Voici le vieux livre trouvé au grenier: le papier a jauni.这是顶楼上找到的旧书，纸张已经发黄。"
         }
       ],
       "verb_type": "transitive"
@@ -10207,7 +10190,7 @@
           "text": "jeter (qqch)扔掉，抛弃: J'ai jeté tous les vieux journaux.我扔掉了所有的旧报纸。"
         },
         {
-          "text": "v. pr. se jeter 冲向，投入: Sophie n'a pas eu peur quand le chien s'est jeté sur elle.当狗扑向她时，索菲没有害怕。 Pour sauver sa petite sœur, Lucien s'est jeté dans la rivière.为了救他妹妹，吕西安跳入河里。"
+          "text": "se jeter 冲向，投入: Sophie n'a pas eu peur quand le chien s'est jeté sur elle.当狗扑向她时，索菲没有害怕。 Pour sauver sa petite sœur, Lucien s'est jeté dans la rivière.为了救他妹妹，吕西安跳入河里。"
         }
       ],
       "verb_type": "transitive"
@@ -10249,10 +10232,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.游戏，玩耍: Les enfants, allez jouer dehors!孩子们，到外面去玩!"
+          "text": "游戏，玩耍: Les enfants, allez jouer dehors!孩子们，到外面去玩!"
         },
         {
-          "text": "v. t. ind. jouer (à qqch)踢、打(球类) : On joue au badminton cet après-midi?今天下午我们打羽毛球吗?"
+          "text": "jouer (à qqch)踢、打(球类) : On joue au badminton cet après-midi?今天下午我们打羽毛球吗?"
         }
       ],
       "verb_type": "intransitive"
@@ -10312,10 +10295,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. jurer (qqch, de faire qqch, que...)发誓做到，保证: Elle jure de garder le secret. 她发誓保守秘密。 Je te jure que c'est vrai.我向你保证这是真的。"
+          "text": "jurer (qqch, de faire qqch, que...)发誓做到，保证: Elle jure de garder le secret. 她发誓保守秘密。 Je te jure que c'est vrai.我向你保证这是真的。"
         },
         {
-          "text": "v. i.发誓，起誓: Il jure sur la Bible. 他把手放在《圣经》上发誓。"
+          "text": "发誓，起誓: Il jure sur la Bible. 他把手放在《圣经》上发誓。"
         }
       ],
       "verb_type": "transitive"
@@ -10456,7 +10439,7 @@
           "text": "laver (qqch)洗，洗涤: Cette chemise est sale, il faut la laver.这件衬衫脏了，该洗一洗了。"
         },
         {
-          "text": "v. pr. se laver 洗澡: Je me lave tous les jours.我每天洗澡。"
+          "text": "se laver 洗澡: Je me lave tous les jours.我每天洗澡。"
         }
       ],
       "verb_type": "transitive"
@@ -10477,7 +10460,7 @@
           "text": "lever (qqch)举起，抬起: Levez le bras droit! 举起右臂! Il fait froid dans la voiture, lève un peu la vitre.汽车里冷，把车窗玻璃往上升一些。"
         },
         {
-          "text": "v. pr. se lever 站起，起床;(太阳)升起: Voici Monsieur le Directeur, levez-vous!这是校长先生，请大家起立! À la colonie, les enfants se lèvent à 7 heures. 在夏令营里，孩子们7点起床。 En été， le soleil se lève tôt. 夏天，太阳升起得早。"
+          "text": "se lever 站起，起床;(太阳)升起: Voici Monsieur le Directeur, levez-vous!这是校长先生，请大家起立! À la colonie, les enfants se lèvent à 7 heures. 在夏令营里，孩子们7点起床。 En été， le soleil se lève tôt. 夏天，太阳升起得早。"
         }
       ],
       "verb_type": "transitive"
@@ -10657,13 +10640,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. loger (qqn)留宿，给…住宿: Un ami m'a logé chez lui lors de mon séjour à Paris. 在巴黎逗留期间，一位朋友留我在他家住宿。 Le lycée peut loger une centaine d'internes. 这所中学能供百来名寄宿生住宿。"
+          "text": "loger (qqn)留宿，给…住宿: Un ami m'a logé chez lui lors de mon séjour à Paris. 在巴黎逗留期间，一位朋友留我在他家住宿。 Le lycée peut loger une centaine d'internes. 这所中学能供百来名寄宿生住宿。"
         },
         {
-          "text": "v. i.住宿，居住: Pour l'instant, je loge à l'hôtel. 我暂时在旅馆住宿。"
+          "text": "住宿，居住: Pour l'instant, je loge à l'hôtel. 我暂时在旅馆住宿。"
         },
         {
-          "text": "v. t. 【être bien [mal] logé】住得舒服[不舒服]: L'appartement est trop petit, nous sommes mal logés.公寓太小，我们住得不舒服。"
+          "text": "【être bien [mal] logé】住得舒服[不舒服]: L'appartement est trop petit, nous sommes mal logés.公寓太小，我们住得不舒服。"
         }
       ],
       "verb_type": "transitive"
@@ -10747,7 +10730,7 @@
           "text": "【v. t. ouvrir (un magasin, un établissement)】 开创，开办: On a ouvert un supermarché dans la banlieue ouest.在西郊开了一家超市。"
         },
         {
-          "text": "v. i.开门营业: Les magasins ouvrent à neuf heures.商店九点开门。"
+          "text": "开门营业: Les magasins ouvrent à neuf heures.商店九点开门。"
         }
       ]
     },
@@ -10929,10 +10912,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. manifester(qqch)表示，显示: Dans la salle d'attente, les gens commencent à manifester leur impatience. 在候车室里，人们开始显出不耐烦的样子。"
+          "text": "manifester(qqch)表示，显示: Dans la salle d'attente, les gens commencent à manifester leur impatience. 在候车室里，人们开始显出不耐烦的样子。"
         },
         {
-          "text": "v. i.示威游行: Les ouvriers ont manifesté le 1er mai. 工人们在5月1日进行了示威游行。"
+          "text": "示威游行: Les ouvriers ont manifesté le 1er mai. 工人们在5月1日进行了示威游行。"
         }
       ],
       "verb_type": "transitive"
@@ -10968,16 +10951,16 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. dir. manquer(qqch)错过;未出席;未赶上: J'ai manqué une belle occasion.我错失一次良机。 Deux élèves ont manqué la classe. 两名学生缺课。 Nous avons manqué le train.我们误了火车。"
+          "text": "manquer(qqch)错过;未出席;未赶上: J'ai manqué une belle occasion.我错失一次良机。 Deux élèves ont manqué la classe. 两名学生缺课。 Nous avons manqué le train.我们误了火车。"
         },
         {
-          "text": "v. t. ind. manquer (de qqch)缺少，缺乏: Elle manque de patience avec ses enfants.她对她的孩子缺乏耐心。"
+          "text": "manquer (de qqch)缺少，缺乏: Elle manque de patience avec ses enfants.她对她的孩子缺乏耐心。"
         },
         {
-          "text": "v. i.缺少，缺乏: Rien ne manque.什么也不缺。 Aujourd'hui, deux élèves manquent.今天两名学生缺课。"
+          "text": "缺少，缺乏: Rien ne manque.什么也不缺。 Aujourd'hui, deux élèves manquent.今天两名学生缺课。"
         },
         {
-          "text": "v. impers. il manque (qqch,qqn)缺，缺少: Il manque deux élèves. 缺少两名学生。 Il lui manque un bouton. 他衣服上缺了一粒纽扣。"
+          "text": "il manque (qqch,qqn)缺，缺少: Il manque deux élèves. 缺少两名学生。 Il lui manque un bouton. 他衣服上缺了一粒纽扣。"
         }
       ],
       "verb_type": "transitive"
@@ -11016,7 +10999,7 @@
           "text": "maquiller (qqn)化妆: Son visage est bien maquillé. 她的脸部化妆得好。"
         },
         {
-          "text": "v. pr. se maquiller 化妆: Chaque matin, ma grande sœur passe dix minutes à se maquiller.每天早晨，我姐姐用 10 分钟时间化妆。"
+          "text": "se maquiller 化妆: Chaque matin, ma grande sœur passe dix minutes à se maquiller.每天早晨，我姐姐用 10 分钟时间化妆。"
         }
       ],
       "verb_type": "transitive"
@@ -11073,7 +11056,7 @@
           "text": "marier (qqn à qqn) 替…娶;嫁出: Il a marié sa fille à un ingénieur. 他把女儿嫁给了一个工程师。"
         },
         {
-          "text": "v. pr. se marier 结婚，与…结婚: Pierre et Jeanne se marient demain.皮埃尔和让娜明天结婚。 Elle s'est mariée avec un médecin.她和一位医生结了婚。"
+          "text": "se marier 结婚，与…结婚: Pierre et Jeanne se marient demain.皮埃尔和让娜明天结婚。 Elle s'est mariée avec un médecin.她和一位医生结了婚。"
         }
       ],
       "verb_type": "transitive"
@@ -11283,10 +11266,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. mesurer (qqch)测量: Il est possible de mesurer la distance de la Terre à la Lune.测量地球到月球的距离是可能的。"
+          "text": "mesurer (qqch)测量: Il est possible de mesurer la distance de la Terre à la Lune.测量地球到月球的距离是可能的。"
         },
         {
-          "text": "v. i.尺寸为，大小为: Cette pièce mesure trois mètres sur cinq.这间房间宽3米长5米。 Il mesure un mètre soixante-dix.他身高1.70米。"
+          "text": "尺寸为，大小为: Cette pièce mesure trois mètres sur cinq.这间房间宽3米长5米。 Il mesure un mètre soixante-dix.他身高1.70米。"
         }
       ],
       "verb_type": "transitive"
@@ -11313,10 +11296,10 @@
           "text": "mettre (un certain temps)花费(时间) : Je mets une demi-heure pour aller au travail. 我花半个小时去上班。"
         },
         {
-          "text": "v. pr. se mettre 置身于: Mettez-vous à table!你们坐下吃饭吧! Pierre s'est mis à côté de moi. 皮埃尔在我身旁坐了下来。"
+          "text": "se mettre 置身于: Mettez-vous à table!你们坐下吃饭吧! Pierre s'est mis à côté de moi. 皮埃尔在我身旁坐了下来。"
         },
         {
-          "text": "v. pr. se mettre (à qqch, à faire qqch)开始…: Tout le monde se met au travail aussitôt après le dîner. 大家一吃完晚饭就开始工作起来。 Tout à coup, il se met à pleuvoir.突然天开始下起雨来。"
+          "text": "se mettre (à qqch, à faire qqch)开始…: Tout le monde se met au travail aussitôt après le dîner. 大家一吃完晚饭就开始工作起来。 Tout à coup, il se met à pleuvoir.突然天开始下起雨来。"
         }
       ],
       "verb_type": "transitive"
@@ -11477,22 +11460,22 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i. 登上;乘上: J'habite au 8° étage, je monte par l'ascenseur.我住在九楼，我乘电梯上楼。 Les voyageurs sont montés dans l'avion.游客们登上了飞机。"
+          "text": "登上;乘上: J'habite au 8° étage, je monte par l'ascenseur.我住在九楼，我乘电梯上楼。 Les voyageurs sont montés dans l'avion.游客们登上了飞机。"
         },
         {
-          "text": "v. i.升，上升: Le cerf-volant monte de plus en plus haut.风筝越升越高。"
+          "text": "升，上升: Le cerf-volant monte de plus en plus haut.风筝越升越高。"
         },
         {
-          "text": "v. i.(物价)上涨: Les prix ne cessent de monter.物价不停地上涨。"
+          "text": "(物价)上涨: Les prix ne cessent de monter.物价不停地上涨。"
         },
         {
-          "text": "v. t. monter (qqch)攀登，爬上: Marie a monté l'escalier.玛丽上了楼梯。"
+          "text": "monter (qqch)攀登，爬上: Marie a monté l'escalier.玛丽上了楼梯。"
         },
         {
-          "text": "v. t. monter (qqch)往上搬: Peux-tu monter la valise au grenier? 你能不能把手提箱搬上顶楼?"
+          "text": "monter (qqch)往上搬: Peux-tu monter la valise au grenier? 你能不能把手提箱搬上顶楼?"
         },
         {
-          "text": "v. t. monter (qqch)装配，安装: Les campeurs montent leur tente.露营者们在支帐篷。"
+          "text": "monter (qqch)装配，安装: Les campeurs montent leur tente.露营者们在支帐篷。"
         }
       ],
       "verb_type": "intransitive"
@@ -11691,7 +11674,7 @@
           "text": "multiplier (qqch)增加，增多: Paul a multiplié les erreurs.保尔差错增加了。"
         },
         {
-          "text": "v. pr. se multiplier 增加，增多: Les accidents se sont multipliés au cours des dernières vingt-quatre heures.在刚过去的24小时中事故增加了。"
+          "text": "se multiplier 增加，增多: Les accidents se sont multipliés au cours des dernières vingt-quatre heures.在刚过去的24小时中事故增加了。"
         }
       ],
       "verb_type": "transitive"
@@ -11727,10 +11710,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. murmurer (qqch)低声地说，悄悄地说: Je n'ai pas compris ce que Stéphanie m'a murmuré à l'oreille.我没有明白斯泰法妮在我耳边低声地说了些什么。"
+          "text": "murmurer (qqch)低声地说，悄悄地说: Je n'ai pas compris ce que Stéphanie m'a murmuré à l'oreille.我没有明白斯泰法妮在我耳边低声地说了些什么。"
         },
         {
-          "text": "v. i.低声抱怨，低声埋怨: À l'annonce des sanctions, quelques élèves"
+          "text": "低声抱怨，低声埋怨: À l'annonce des sanctions, quelques élèves"
         }
       ],
       "verb_type": "transitive"
@@ -11834,10 +11817,6 @@
         {
           "abbr": "v. t.",
           "full": "及物动词"
-        },
-        {
-          "abbr": "a.",
-          "full": "形容词"
         }
       ],
       "gender": null,
@@ -12292,10 +12271,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. négocier(qqch)谈判，协商: Les deux pays ont négocié un traité de paix.两国商定了一个和平条约。"
+          "text": "négocier(qqch)谈判，协商: Les deux pays ont négocié un traité de paix.两国商定了一个和平条约。"
         },
         {
-          "text": "v. i. négocier (avec qqn)谈判，协商: L'Iran a négocié avec une puissance étrangère.伊朗同一大国进行了谈判。"
+          "text": "négocier (avec qqn)谈判，协商: L'Iran a négocié avec une puissance étrangère.伊朗同一大国进行了谈判。"
         }
       ],
       "verb_type": "transitive"
@@ -12981,7 +12960,7 @@
           "text": "【v. t. ind. parler (de qqch (à qqn))】 同…谈: Je veux vous parler de mes projets.我想同你们谈谈我的计划。"
         },
         {
-          "text": "v. i.讲话，说话: Jeannot a deux ans, il commence à parler.让诺2岁，他开始咿呀学语了。"
+          "text": "讲话，说话: Jeannot a deux ans, il commence à parler.让诺2岁，他开始咿呀学语了。"
         }
       ],
       "verb_type": "transitive"
@@ -13082,25 +13061,25 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.经过，通过: Pour aller de Paris à Marseille, il faut passer par Lyon.从巴黎到马赛，要经过里昂。 La barrière s'abaisse, on ne peut plus passer.栏木放了下来，不能再通过了。"
+          "text": "经过，通过: Pour aller de Paris à Marseille, il faut passer par Lyon.从巴黎到马赛，要经过里昂。 La barrière s'abaisse, on ne peut plus passer.栏木放了下来，不能再通过了。"
         },
         {
-          "text": "v. i.到…去: Passez à la caisse, s'il vous plaît.请到收款处去付款。 Je passerai chez toi ce soir. 我今晚来你家。"
+          "text": "到…去: Passez à la caisse, s'il vous plaît.请到收款处去付款。 Je passerai chez toi ce soir. 我今晚来你家。"
         },
         {
-          "text": "v. i.(时间)流逝: Le temps passe vite.时间过得很快。"
+          "text": "(时间)流逝: Le temps passe vite.时间过得很快。"
         },
         {
-          "text": "v. t. passer (un lieu)穿过，越过: Nous avons passé la frontière.我们过了边境。"
+          "text": "passer (un lieu)穿过，越过: Nous avons passé la frontière.我们过了边境。"
         },
         {
-          "text": "v. t. passer (un temps quelque part)度过: Où as-tu passé tes vacances?你是在哪里度假的?"
+          "text": "passer (un temps quelque part)度过: Où as-tu passé tes vacances?你是在哪里度假的?"
         },
         {
-          "text": "v. t. passer (qqch à qqn)传递，递: Passe-moi le sel. 把盐递给我。"
+          "text": "passer (qqch à qqn)传递，递: Passe-moi le sel. 把盐递给我。"
         },
         {
-          "text": "v. t. passer (un film)放映(电影): On passe un film d'amour dans ce petit cinéma.这家小电影院在上映一部爱情片。"
+          "text": "passer (un film)放映(电影): On passe un film d'amour dans ce petit cinéma.这家小电影院在上映一部爱情片。"
         },
         {
           "text": "【v. pr. se passer】 发生: Un accident s'est passé au coin de la rue.马路拐弯处发生了一起车祸。"
@@ -13277,10 +13256,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. pendre(qqch)挂，悬挂，吊起: Je vais pendre votre pardessus au portemanteau.我把您的大衣挂到衣帽架上。"
+          "text": "pendre(qqch)挂，悬挂，吊起: Je vais pendre votre pardessus au portemanteau.我把您的大衣挂到衣帽架上。"
         },
         {
-          "text": "v. i.挂着，悬挂着，吊着: Des fruits pendent aux branches de l'arbre. 树枝上挂着果实。"
+          "text": "挂着，悬挂着，吊着: Des fruits pendent aux branches de l'arbre. 树枝上挂着果实。"
         }
       ],
       "verb_type": "transitive"
@@ -13304,7 +13283,7 @@
           "text": "【v. t. ind. penser (à qqch, à qqn)】 想到，想着: Sophie est tout heureuse quand elle pense au voyage. 索菲想到旅游非常高兴。 Je pense souvent à toi.我时常想到你。"
         },
         {
-          "text": "v. i.想，思考，思维: On ne sait si les animaux pensent.人们不知道动物是否会思维。"
+          "text": "想，思考，思维: On ne sait si les animaux pensent.人们不知道动物是否会思维。"
         }
       ],
       "verb_type": "transitive"
@@ -13583,10 +13562,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【peser (qqch)】 称，过秤: Le boulanger a pesé la pâte sur sa balance.面包师在秤上称了称面团。"
+          "text": "【peser (qqch)】 称，过秤: Le boulanger a pesé la pâte sur sa balance.面包师在秤上称了称面团。"
         },
         {
-          "text": "v. i. 重(若干): Mireille pèse 46 kilos.米蕾伊体重46公斤。"
+          "text": "重(若干): Mireille pèse 46 kilos.米蕾伊体重46公斤。"
         }
       ],
       "verb_type": "transitive"
@@ -13775,7 +13754,7 @@
           "text": "【plaindre (qqn)】 同情，可怜，怜悯: Maxime a bon cœur, il plaint les enfants qui n'auront pas de cadeau pour Noël.马克西姆心地好，他同情那些将得不到圣诞礼物的孩子。"
         },
         {
-          "text": "v. pr. 【se plaindre (de qqch, de faire qqch)】 叫痛;抱怨，申诉: Depuis hier, Patrice se plaint de maux de tête.自昨天起，帕特里斯就叫头痛。 Elle se plaint d'être mal payée. 她抱怨工资低。"
+          "text": "【se plaindre (de qqch, de faire qqch)】 叫痛;抱怨，申诉: Depuis hier, Patrice se plaint de maux de tête.自昨天起，帕特里斯就叫头痛。 Elle se plaint d'être mal payée. 她抱怨工资低。"
         }
       ],
       "verb_type": "transitive"
@@ -14134,7 +14113,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【pousser (qqch, qqn)】 推，推动: Aidez-nous à pousser le traîneau!帮我们推一下雪橇!"
+          "text": "【pousser (qqch, qqn)】 推，推动: Aidez-nous à pousser le traîneau!帮我们推一下雪橇!"
         }
       ],
       "verb_type": "transitive"
@@ -14256,7 +14235,7 @@
           "text": "【presser (qqn de faire qqch)】 催促: Il me presse de terminer ce travail.他催我结束这项工作。"
         },
         {
-          "text": "v. pr. 【se presser (de faire qqch)】 赶紧，急忙: Presse-toi, nous allons être en retard.你赶紧些，我们要迟到了。 Il se presse de partir avant la pluie. 他急赶着在下雨以前动身。"
+          "text": "【se presser (de faire qqch)】 赶紧，急忙: Presse-toi, nous allons être en retard.你赶紧些，我们要迟到了。 Il se presse de partir avant la pluie. 他急赶着在下雨以前动身。"
         }
       ],
       "verb_type": "transitive"
@@ -14298,7 +14277,7 @@
           "text": "【priver (qqn de qqch)】 剥夺，不给予: Pour le punir, son père l'a privé de des-sert.作为处罚，他父亲不让他吃餐后甜点。"
         },
         {
-          "text": "v. pr. 【se priver (de qqch)】 放弃，省去: Noëlle s'est privée de friandises pour pouvoir acheter des fleurs à sa mère.为了能买花给母亲，诺埃尔不吃甜食了。"
+          "text": "【se priver (de qqch)】 放弃，省去: Noëlle s'est privée de friandises pour pouvoir acheter des fleurs à sa mère.为了能买花给母亲，诺埃尔不吃甜食了。"
         }
       ],
       "verb_type": "transitive"
@@ -14376,7 +14355,7 @@
           "text": "【produire (qqch)】 生产: Cette usine produit des aspirateurs. 这家工厂生产吸尘器。"
         },
         {
-          "text": "v. pr. 【se produire】 发生: Un accident s'est produit au carrefour.十字路口发生了一起事故。"
+          "text": "【se produire】 发生: Un accident s'est produit au carrefour.十字路口发生了一起事故。"
         }
       ],
       "verb_type": "transitive"
@@ -14481,7 +14460,7 @@
           "text": "promener (qqn)领着…散步，带着…溜达: Elle est allée promener ses enfants au Luxembourg.她带孩子去卢森堡公园散步了。"
         },
         {
-          "text": "v. pr. se promener 散步，溜达: En été， j'aime me promener après la pluie.夏天，我喜欢雨后散步。"
+          "text": "se promener 散步，溜达: En été， j'aime me promener après la pluie.夏天，我喜欢雨后散步。"
         }
       ],
       "verb_type": "transitive"
@@ -14871,7 +14850,7 @@
           "text": "【préparer (qqch, un repas)】 调制;做(饭): Je vais préparer le thé. 我去沏茶。 Ma tante nous a préparé un bon repas. 我婶婶给我们做了美味的饭菜。"
         },
         {
-          "text": "v. pr. 【se préparer (à faire qqch)】 准备: Marie se prépare à partir.玛丽准备出发。"
+          "text": "【se préparer (à faire qqch)】 准备: Marie se prépare à partir.玛丽准备出发。"
         }
       ],
       "verb_type": "transitive"
@@ -15510,7 +15489,7 @@
           "text": "rafraîchir (qqch)使凉爽，使清凉: Mets cette boisson dans le réfrigérateur pour la rafraîchir.把这饮料放到冰箱里冰一冰。 Je vais ouvrir la fenêtre pour rafraîchir la chambre.我去开窗让房间凉爽些。"
         },
         {
-          "text": "v. pr. se rafraîchir 使自己凉爽;喝冷饮: J'ai soif, je vais me rafraîchir.我渴了，我去喝些冷饮。"
+          "text": "se rafraîchir 使自己凉爽;喝冷饮: J'ai soif, je vais me rafraîchir.我渴了，我去喝些冷饮。"
         }
       ],
       "verb_type": "transitive"
@@ -15777,7 +15756,7 @@
           "text": "rappeler (qqn)再打电话: Il n'est pas là， vous pouvez rappeler plus tard.他不在，您可以过后再打电话。"
         },
         {
-          "text": "v. pr. se rappeler (qqch)回想起，记得: Je ne me rappelle plus votre nom.我想不起您的姓名了。"
+          "text": "se rappeler (qqch)回想起，记得: Je ne me rappelle plus votre nom.我想不起您的姓名了。"
         }
       ],
       "verb_type": "transitive"
@@ -15822,7 +15801,7 @@
           "text": "rapprocher (qqch de qqch)使更靠近: Rapproche la chaise de la table.你把椅子挪近桌子。"
         },
         {
-          "text": "v. pr. se rapprocher (de qqn, de qqch)靠近: Rapproche-toi, je t'entends mal.你靠近些，我听不清楚你说话。"
+          "text": "se rapprocher (de qqn, de qqch)靠近: Rapproche-toi, je t'entends mal.你靠近些，我听不清楚你说话。"
         }
       ],
       "verb_type": "transitive"
@@ -15864,7 +15843,7 @@
           "text": "rassembler (qqch)收集，归到一起: Pierre rassemble ses affaires.皮埃尔把自己的衣物收集起来。"
         },
         {
-          "text": "v. pr. se rassembler 集合，聚集: Les manifestants se rassemblent sur la place avant de défiler.游行前示威者聚集在广场上。"
+          "text": "se rassembler 集合，聚集: Les manifestants se rassemblent sur la place avant de défiler.游行前示威者聚集在广场上。"
         }
       ],
       "verb_type": "transitive"
@@ -16107,7 +16086,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. recommencer (qqch)重新开始: Comme plusieurs d'entre vous sont"
+          "text": "recommencer (qqch)重新开始: Comme plusieurs d'entre vous sont"
         }
       ],
       "verb_type": "transitive"
@@ -16203,13 +16182,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. reculer (qqch)使后退，往后移: Recule un peu ta chaise!把你的椅子往后移一点!"
+          "text": "reculer (qqch)使后退，往后移: Recule un peu ta chaise!把你的椅子往后移一点!"
         },
         {
-          "text": "v. t. reculer (qqch)推迟，延期: On a reculé la date du départ.我们推迟了动身的日期。"
+          "text": "reculer (qqch)推迟，延期: On a reculé la date du départ.我们推迟了动身的日期。"
         },
         {
-          "text": "v. i.后退;退却: Reculez d'un pas.你们后退一步。 Il recule devant les difficultés.他在困难面前退却了。"
+          "text": "后退;退却: Reculez d'un pas.你们后退一步。 Il recule devant les difficultés.他在困难面前退却了。"
         }
       ],
       "verb_type": "transitive"
@@ -16227,13 +16206,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. redoubler (qqch)加重，增加: Vous devriez redoubler vos efforts.你们应该加倍努力。"
+          "text": "redoubler (qqch)加重，增加: Vous devriez redoubler vos efforts.你们应该加倍努力。"
         },
         {
-          "text": "v. t. redoubler (une classe)留级: Pierre redouble sa classe.皮埃尔留级了。"
+          "text": "redoubler (une classe)留级: Pierre redouble sa classe.皮埃尔留级了。"
         },
         {
-          "text": "v. i. 大大增强: Quand Nicolas ouvre sa fenêtre, le bruit des pétards redouble.当尼古拉打开窗时，爆竹声更响了。"
+          "text": "大大增强: Quand Nicolas ouvre sa fenêtre, le bruit des pétards redouble.当尼古拉打开窗时，爆竹声更响了。"
         }
       ],
       "verb_type": "transitive"
@@ -16374,7 +16353,7 @@
           "text": "regarder (qqn) 涉及，和…有关: Mes affaires ne te regardent pas.我的事与你无关。"
         },
         {
-          "text": "v. pr. se regarder 看自己: Elle se regarde vite dans la glace. 她很快地照了照镜子。"
+          "text": "se regarder 看自己: Elle se regarde vite dans la glace. 她很快地照了照镜子。"
         }
       ],
       "verb_type": "transitive"
@@ -16437,7 +16416,7 @@
           "text": "rejoindre (qqn)和…重聚: Vous pouvez partir, je vous rejoindrai sur la plage.你们可以先走，我在海滨浴场和你们碰头。"
         },
         {
-          "text": "v. pr. se rejoindre 重聚: Nous nous rejoindrons à Paris.我们将在巴黎重聚。"
+          "text": "se rejoindre 重聚: Nous nous rejoindrons à Paris.我们将在巴黎重聚。"
         }
       ],
       "verb_type": "transitive"
@@ -16524,7 +16503,7 @@
           "text": "relâcher (qqn)释放: Le prisonnier a été relâché.囚犯被释放了。"
         },
         {
-          "text": "v. pr. se relâcher 松劲: Cet élève se relâche.这名学生学习松劲了。"
+          "text": "se relâcher 松劲: Cet élève se relâche.这名学生学习松劲了。"
         }
       ],
       "verb_type": "transitive"
@@ -16722,13 +16701,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. remuer (qqch)移动，搬动: Cette armoire est difficile à remuer.这个衣橱很难搬动。"
+          "text": "remuer (qqch)移动，搬动: Cette armoire est difficile à remuer.这个衣橱很难搬动。"
         },
         {
-          "text": "v. t. remuer (une partie du corps)摇动，摆动: Le chien remue la queue quand il voit son maître. 狗看到主人时摇摆着尾巴。"
+          "text": "remuer (une partie du corps)摇动，摆动: Le chien remue la queue quand il voit son maître. 狗看到主人时摇摆着尾巴。"
         },
         {
-          "text": "v. i.动，摇动: Cet enfant ne peut rester en place, il remue sans cesse. 这孩子呆不住，他不停地动。 J'ai une dent qui remue. 我有一颗牙齿在摇动。"
+          "text": "动，摇动: Cet enfant ne peut rester en place, il remue sans cesse. 这孩子呆不住，他不停地动。 J'ai une dent qui remue. 我有一颗牙齿在摇动。"
         }
       ],
       "verb_type": "transitive"
@@ -16854,7 +16833,7 @@
           "text": "renseigner (qqn)向…提供情况: Peux-tu me renseigner sur l'heure du train?你能给我提供火车的开车时间吗?"
         },
         {
-          "text": "v. pr. se renseigner 打听情况: Je vais me renseigner.我去打听一下情况。"
+          "text": "se renseigner 打听情况: Je vais me renseigner.我去打听一下情况。"
         }
       ],
       "verb_type": "transitive"
@@ -16872,10 +16851,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.回家[助动词用être]: Après l'école, Pierre rentre chez lui. 放学后，皮埃尔回家去。 Elle est rentrée tard hier.昨天她回家得晚。"
+          "text": "回家[助动词用être]: Après l'école, Pierre rentre chez lui. 放学后，皮埃尔回家去。 Elle est rentrée tard hier.昨天她回家得晚。"
         },
         {
-          "text": "v. t. rentrer (qqch)收进，使进入[助动词用 avoir]: Il te faut rentrer la voiture au garage.你应该把汽车开进车库。"
+          "text": "rentrer (qqch)收进，使进入[助动词用 avoir]: Il te faut rentrer la voiture au garage.你应该把汽车开进车库。"
         }
       ],
       "verb_type": "intransitive"
@@ -16938,19 +16917,19 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.重新经过，再来:"
+          "text": "重新经过，再来:"
         },
         {
           "text": "Je repasserai demain à la même heure.明天同一时间我再来。"
         },
         {
-          "text": "v. t. 【repasser】 (une leçon)复习:"
+          "text": "【repasser】 (une leçon)复习:"
         },
         {
           "text": "Pierre repasse ses leçons avant l'examen.考试前皮埃尔复习功课。"
         },
         {
-          "text": "v. t. 【repasser】 (du linge)烫:"
+          "text": "【repasser】 (du linge)烫:"
         },
         {
           "text": "Mme Dupont repasse le pantalon avec un fer à repasser.杜邦太太在用熨斗烫长裤。"
@@ -17028,7 +17007,7 @@
           "text": "On a reproduit cet article dans un jour-nal avec l'autorisation de l'auteur.这篇文章经作者同意转载在一份报纸上。"
         },
         {
-          "text": "v. pr. 【se reproduire】 生殖，繁殖:"
+          "text": "【se reproduire】 生殖，繁殖:"
         },
         {
           "text": "Le mulet ne se reproduit pas.骡子不会生殖。"
@@ -17163,7 +17142,7 @@
           "text": "Marie ressemble à sa mère.玛丽长得像她母亲。"
         },
         {
-          "text": "v. pr. 【se ressembler】 相像，相似:"
+          "text": "【se ressembler】 相像，相似:"
         },
         {
           "text": "Ces deux frères se ressemblent comme deux jumeaux.这兄弟俩长得像双胞胎。"
@@ -17281,7 +17260,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【retarder】 (qqn,qqch)耽搁;推迟:"
+          "text": "【retarder】 (qqn,qqch)耽搁;推迟:"
         },
         {
           "text": "Nous sommes retardés.我们被耽搁了。"
@@ -17290,7 +17269,7 @@
           "text": "M. Dupont a retardé son départ.杜邦先生推迟了他的动身。"
         },
         {
-          "text": "v. i.(钟表)走得慢:"
+          "text": "(钟表)走得慢:"
         },
         {
           "text": "Ma montre retarde de cinq minutes. 我的手表慢了5分钟。"
@@ -17383,7 +17362,7 @@
           "text": "La police lui a retiré son permis de conduire.警察吊销了他的驾驶执照。"
         },
         {
-          "text": "v. pr. 【se retirer】 离去;隐居:"
+          "text": "【se retirer】 离去;隐居:"
         },
         {
           "text": "La cérémonie est terminée, la foule se retire en silence.仪式结束了，人群悄声离去。"
@@ -17407,19 +17386,19 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【retourner】(qqch)翻转[助动词用 avoir]:"
+          "text": "【retourner】(qqch)翻转[助动词用 avoir]:"
         },
         {
           "text": "Marie retourne le bifteck dans la poêle.玛丽翻了一下锅里的牛排。"
         },
         {
-          "text": "v. i.返回，回去[助动词用 être]:"
+          "text": "返回，回去[助动词用 être]:"
         },
         {
           "text": "M. Dupuis est retourné à Paris.迪皮伊先生返回了巴黎。"
         },
         {
-          "text": "v. pr. 【se retourner】 翻身;转身:"
+          "text": "【se retourner】 翻身;转身:"
         },
         {
           "text": "Quand je l'ai appelé， il s'est retourné.我叫了他一声，他转过身来。"
@@ -17482,7 +17461,7 @@
           "text": "J'ai retrouvé le livre que j'avais perdu.我找回了我丢失的书。"
         },
         {
-          "text": "v. pr. 【se retrouver】 重逢，相见:"
+          "text": "【se retrouver】 重逢，相见:"
         },
         {
           "text": "Nous nous retrouverons à l'entrée du cinéma.我们将在电影院门口相见。"
@@ -17579,7 +17558,7 @@
           "text": "J'aimerais bien revoir ce film.我很想再看一遍这部影片。"
         },
         {
-          "text": "v. pr. 【se revoir】 相互再见面:"
+          "text": "【se revoir】 相互再见面:"
         },
         {
           "text": "J'espère que nous nous reverrons. 我希望我们将再次见面。"
@@ -17717,7 +17696,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. dir. 【risquer】 (qqch)冒…危险:"
+          "text": "【risquer】 (qqch)冒…危险:"
         },
         {
           "text": "Il a risqué sa vie pour me sauver. 他冒了生命危险来救我。"
@@ -17759,25 +17738,25 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【rompre】 (qqch)折断:"
+          "text": "【rompre】 (qqch)折断:"
         },
         {
           "text": "Le vent a rompu plusieurs branches.风刮断了好几根树枝。"
         },
         {
-          "text": "v. t. 【rompre】 (qqch)中止，中断:"
+          "text": "【rompre】 (qqch)中止，中断:"
         },
         {
           "text": "Ces deux pays ont rompu les relations diplomatiques.这两个国家中断了外交关系。"
         },
         {
-          "text": "v. i. 【rompre】 (avec qqn)绝交，关系破裂:"
+          "text": "【rompre】 (avec qqn)绝交，关系破裂:"
         },
         {
           "text": "Il a rompu avec son meilleur ami.他与最好的朋友关系破裂了。"
         },
         {
-          "text": "v. pr. 【se rompre】 折断，断裂:"
+          "text": "【se rompre】 折断，断裂:"
         },
         {
           "text": "La chaîne s'est rompue.链条断了。"
@@ -18167,7 +18146,7 @@
           "text": "réconcilier (qqn avec qqn)使和解，使和好: Il veut réconcilier sa femme avec sa mère. 他想使妻子和自己的母亲重新和好。"
         },
         {
-          "text": "v. pr. se réconcilier (avec qqn)言归于好，和解: Pierre et Paul se sont réconciliés.皮埃尔和保尔言归于好了。"
+          "text": "se réconcilier (avec qqn)言归于好，和解: Pierre et Paul se sont réconciliés.皮埃尔和保尔言归于好了。"
         }
       ],
       "verb_type": "transitive"
@@ -18263,10 +18242,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. ind. réfléchir (à qqch)思考，考虑: Laissez-moi le temps de réfléchir à cette question.您给我时间思考这个问题。"
+          "text": "réfléchir (à qqch)思考，考虑: Laissez-moi le temps de réfléchir à cette question.您给我时间思考这个问题。"
         },
         {
-          "text": "v. i.思考，考虑: Réfléchis bien avant de répondre! 回答以前好好思考思考!"
+          "text": "思考，考虑: Réfléchis bien avant de répondre! 回答以前好好思考思考!"
         }
       ],
       "verb_type": "transitive"
@@ -18407,7 +18386,7 @@
           "text": "réjouir (qqn) 使喜悦，使欢欣: Vos succès nous réjouissent.您的成绩使我们充满喜悦。"
         },
         {
-          "text": "v. pr. se réjouir (de qqch, de faire qqch)喜悦，欢欣: Je me réjouis de vos"
+          "text": "se réjouir (de qqch, de faire qqch)喜悦，欢欣: Je me réjouis de vos"
         }
       ],
       "verb_type": "transitive"
@@ -18473,7 +18452,7 @@
           "text": "Ce fromage répand une odeur forte. 这块奶酪散发出一股浓烈的气味。"
         },
         {
-          "text": "v. pr. 【se répandre】 流出;传播:"
+          "text": "【se répandre】 流出;传播:"
         },
         {
           "text": "L'eau s'est répandue sur le parquet.水在地板上流开了。"
@@ -18557,7 +18536,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. dir. 【répondre】 (qqch, que...)回答，答复:"
+          "text": "【répondre】 (qqch, que...)回答，答复:"
         },
         {
           "text": "Je ne sais pas quoi lui répondre.我不知道回答他什么。"
@@ -18566,7 +18545,7 @@
           "text": "Elle répond qu'elle fera un voyage à Paris.她回答说她将去巴黎旅游。"
         },
         {
-          "text": "v. t. ind. 【répondre】 (à qqch, à qqn)回答，回复:"
+          "text": "【répondre】 (à qqch, à qqn)回答，回复:"
         },
         {
           "text": "Peux-tu répondre à cette question?你能回答这个问题吗?"
@@ -18869,7 +18848,7 @@
           "text": "Ce médicament l'a vite rétabli. 这药使他很快恢复了健康。"
         },
         {
-          "text": "v. pr. 【se rétablir】 恢复健康，痊愈:"
+          "text": "【se rétablir】 恢复健康，痊愈:"
         },
         {
           "text": "Ila besoin d'aller à la montagne pour se rétablir.他需要到山里去康复。"
@@ -18899,7 +18878,7 @@
           "text": "Le directeur a réuni les maîtres dans son bureau.校长将教师们召集到他的办公室。"
         },
         {
-          "text": "v. pr. 【se réunir】 聚集，聚会:"
+          "text": "【se réunir】 聚集，聚会:"
         },
         {
           "text": "Ils ont l'habitude de se réunir au café.他们习惯在咖啡馆聚会。"
@@ -18920,13 +18899,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. dir. 【réussir】 (qqch)做成功:"
+          "text": "【réussir】 (qqch)做成功:"
         },
         {
           "text": "J'ai réussi la mayonnaise. 我做成功了蛋黄酱。"
         },
         {
-          "text": "v. t. ind. 【réussir】 (à qqch, à faire qqch)在…取得成功:"
+          "text": "【réussir】 (à qqch, à faire qqch)在…取得成功:"
         },
         {
           "text": "J'espère que tu réussiras à ton examen. 我希望你考试能考好。"
@@ -18935,7 +18914,7 @@
           "text": "Elle a réussi du premier coup à passer son permis de conduire. 她一下子考取了驾驶执照。"
         },
         {
-          "text": "v. i.获得成功，取得成绩:"
+          "text": "获得成功，取得成绩:"
         },
         {
           "text": "Notre projet a réussi.我们的计划获得了成功。"
@@ -18965,7 +18944,7 @@
           "text": "Un bruit m'a réveillé en pleine nuit.深更半夜一个声音把我吵醒了。"
         },
         {
-          "text": "v. pr. 【se réveiller】 醒来:"
+          "text": "【se réveiller】 醒来:"
         },
         {
           "text": "Il se réveille tous les matins de bonne heure.每天早晨他一大清早就醒了。"
@@ -19091,7 +19070,7 @@
           "text": "Il sacrifie ses loisirs à son travail.他把休闲时间用于工作。"
         },
         {
-          "text": "v. pr. 【se sacrifier】 献身，牺牲一切:"
+          "text": "【se sacrifier】 献身，牺牲一切:"
         },
         {
           "text": "Il s'est sacrifié pour sauver un enfant qui se noyait.他为救一名落水儿童献出了生命。"
@@ -19217,7 +19196,7 @@
           "text": "Tu vas salir tes gants.你要把手套弄脏了。"
         },
         {
-          "text": "v. pr. 【se salir】 弄脏自己;变脏:"
+          "text": "【se salir】 弄脏自己;变脏:"
         },
         {
           "text": "Il s'est sali en tombant. 他在跌倒时把身上弄脏了。"
@@ -19361,7 +19340,7 @@
           "text": "Le bateau a fait naufrage, mais on a pu sauver tous les passagers.船沉了，但人们救起了所有乘客。"
         },
         {
-          "text": "v. pr. 【se sauver】 逃，逃走;赶紧走掉:"
+          "text": "【se sauver】 逃，逃走;赶紧走掉:"
         },
         {
           "text": "Le chien se sauve, il faut le rattraper.狗逃了，应该抓住它。"
@@ -19547,7 +19526,7 @@
           "text": "Chaque minute lui semblait durer une heure.当时他感到一分钟就像过了一个小时。"
         },
         {
-          "text": "v. impers. 【il semble】 (à qqn +a. )某人认为，觉得:"
+          "text": "【il semble】 (à qqn +a. )某人认为，觉得:"
         },
         {
           "text": "Il me semble inutile de vous en dire plus.我觉得没有必要对您多说。"
@@ -19619,7 +19598,7 @@
           "text": "Cette cave sent le moisi.这个地窖有股霉味。"
         },
         {
-          "text": "v. pr. 【se sentir】 (+a.， bien, mal)觉得，感到:"
+          "text": "【se sentir】 (+a.， bien, mal)觉得，感到:"
         },
         {
           "text": "Je me sens fatigué.我感到累了。"
@@ -19682,7 +19661,7 @@
           "text": "Ces souliers me serrent.这双皮鞋夹我脚。"
         },
         {
-          "text": "v. pr. 【se serrer】 紧靠，互相靠紧:"
+          "text": "【se serrer】 紧靠，互相靠紧:"
         },
         {
           "text": "L'enfant apeuré se serre contre sa mère. 受惊的孩子紧紧地靠在母亲身旁。"
@@ -19733,7 +19712,7 @@
           "text": "À quoi sert ce bateau? -Il sert à passer la rivière.这艘船作什么用?—用作渡河。"
         },
         {
-          "text": "v. pr. 【se servir】 自己盛菜;购买食品:"
+          "text": "【se servir】 自己盛菜;购买食品:"
         },
         {
           "text": "Servez-vous.请随便吃。"
@@ -19742,7 +19721,7 @@
           "text": "Je me sers dans un magasin libre service. 我在一家自选商店购买食品。"
         },
         {
-          "text": "v. pr. 【se servir】 (de qqch)使用:"
+          "text": "【se servir】 (de qqch)使用:"
         },
         {
           "text": "Nadine apprend à se servir de l'ouvre-boîtes.纳迪恩在学如何使用开听刀。"
@@ -19874,7 +19853,7 @@
           "text": "situer (qqch)确定位置: Pourrais-tu situer ta ville sur cette carte? 你能在这张地图上确定你居住的城市的位置吗?"
         },
         {
-          "text": "v. pr. se situer 位于，坐落于: Cette ville se situe en Normandie.这座城市坐落在诺曼底。"
+          "text": "se situer 位于，坐落于: Cette ville se situe en Normandie.这座城市坐落在诺曼底。"
         }
       ],
       "verb_type": "transitive"
@@ -19916,7 +19895,7 @@
           "text": "soigner (un malade)治疗: Le médecin soigne ses malades.医生在治疗病人。"
         },
         {
-          "text": "v. pr. se soigner 保养身体，养好身体: Cet homme vivra vieux, car il se soigne bien.这人会长寿，因为他身体保养得很好。"
+          "text": "se soigner 保养身体，养好身体: Cet homme vivra vieux, car il se soigne bien.这人会长寿，因为他身体保养得很好。"
         }
       ],
       "verb_type": "transitive"
@@ -19952,10 +19931,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.(钟、铃等)响，鸣: On sonne à la porte.有人按门铃。 Le téléphone sonne.电话铃响了。"
+          "text": "(钟、铃等)响，鸣: On sonne à la porte.有人按门铃。 Le téléphone sonne.电话铃响了。"
         },
         {
-          "text": "v. t. sonner (qqch)敲响，打…铃;报时: On sonne la fin de la récréation. 课间休息结束的铃声响了。 La pendule vient de sonner sept heures. 挂钟刚敲过7点。"
+          "text": "sonner (qqch)敲响，打…铃;报时: On sonne la fin de la récréation. 课间休息结束的铃声响了。 La pendule vient de sonner sept heures. 挂钟刚敲过7点。"
         }
       ],
       "verb_type": "intransitive"
@@ -19973,10 +19952,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.出去，出来，外出[助动词用 être]: M. Durand est sorti de sa maison.迪朗先生走出了家门。 Nous sortons ce soir.今晚我们外出。"
+          "text": "出去，出来，外出[助动词用 être]: M. Durand est sorti de sa maison.迪朗先生走出了家门。 Nous sortons ce soir.今晚我们外出。"
         },
         {
-          "text": "v. t. sortir (qqch)掏出，拿出[助动词用 avoir]: Il sort son mouchoir et se mouche. 他掏出手拍擤鼻涕。 Tout le monde a sorti sa voiture du garage. 大家都将汽车开出了车库。"
+          "text": "sortir (qqch)掏出，拿出[助动词用 avoir]: Il sort son mouchoir et se mouche. 他掏出手拍擤鼻涕。 Tout le monde a sorti sa voiture du garage. 大家都将汽车开出了车库。"
         }
       ],
       "verb_type": "intransitive"
@@ -20054,13 +20033,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. souffrir (qqch)忍受，遭受: Je souffre la faim.我忍受着饥饿。"
+          "text": "souffrir (qqch)忍受，遭受: Je souffre la faim.我忍受着饥饿。"
         },
         {
-          "text": "v. i. souffrir (de qqch)患…病，受…痛苦: Il souffre de sa blessure.他伤口痛。"
+          "text": "souffrir (de qqch)患…病，受…痛苦: Il souffre de sa blessure.他伤口痛。"
         },
         {
-          "text": "v. i.受痛苦: Il est malade depuis quelque temps et souffre beaucoup.他近来生病，身体很不舒服。"
+          "text": "受痛苦: Il est malade depuis quelque temps et souffre beaucoup.他近来生病，身体很不舒服。"
         }
       ],
       "verb_type": "transitive"
@@ -20486,10 +20465,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. stopper (qqch)停止，停住: Le mécanicien stoppe la machine.机修工停住了机器。"
+          "text": "stopper (qqch)停止，停住: Le mécanicien stoppe la machine.机修工停住了机器。"
         },
         {
-          "text": "v. i.停止，停下来: La voiture stoppe au feu rouge.汽车在红灯前停了下来。"
+          "text": "停止，停下来: La voiture stoppe au feu rouge.汽车在红灯前停了下来。"
         }
       ],
       "verb_type": "transitive"
@@ -20606,7 +20585,7 @@
           "text": "substituer (qqch à qqch)用…代替: On a substitué une copie à l'original.人们用复制品代替了原作。"
         },
         {
-          "text": "v. pr. se substituer (à qqn)代替，取代: Le sous-directeur s'est substitué au directeur en son absence.副经理在经理不在时代替了他工作。"
+          "text": "se substituer (à qqn)代替，取代: Le sous-directeur s'est substitué au directeur en son absence.副经理在经理不在时代替了他工作。"
         }
       ],
       "verb_type": "transitive"
@@ -20642,10 +20621,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i.死亡: Le blessé a succombé.受伤者死了。"
+          "text": "死亡: Le blessé a succombé.受伤者死了。"
         },
         {
-          "text": "v. t. ind.抵挡不住: Je succombe à la fatigue.我疲惫不堪。"
+          "text": "抵挡不住: Je succombe à la fatigue.我疲惫不堪。"
         }
       ],
       "verb_type": "intransitive"
@@ -20669,7 +20648,7 @@
           "text": "succéder (à qqch)继…而来: Le soleil succède à la pluie.雨后出太阳。"
         },
         {
-          "text": "v. pr. se succéder 接连而来，相继而来: Ils se succéderont de père en fils dans ce commerce. 这家商号儿子将接替父亲。 Les beaux jours se sont succédé pendant un mois. 晴朗天气一天接一天，持续了一个月。"
+          "text": "se succéder 接连而来，相继而来: Ils se succéderont de père en fils dans ce commerce. 这家商号儿子将接替父亲。 Les beaux jours se sont succédé pendant un mois. 晴朗天气一天接一天，持续了一个月。"
         }
       ],
       "verb_type": "transitive"
@@ -20729,7 +20708,7 @@
           "text": "suffire (à， pour faire qqch)足够……，足以……: Un rien suffit pour contrarier Mireille.一点鸡毛蒜皮的事就足以使米蕾伊不快。"
         },
         {
-          "text": "v. impers. il suffit (de qqch, de faire qqch) 只需…就够了: Il ne suffit pas d'avoir de l'argent pour être heureux.仅有钱不足以幸福。"
+          "text": "il suffit (de qqch, de faire qqch) 只需…就够了: Il ne suffit pas d'avoir de l'argent pour être heureux.仅有钱不足以幸福。"
         }
       ],
       "verb_type": "transitive"
@@ -20747,10 +20726,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. suffoquer (qqn)使窒息，使透不过气: La fumée me suffoque. 烟雾令我窒息。"
+          "text": "suffoquer (qqn)使窒息，使透不过气: La fumée me suffoque. 烟雾令我窒息。"
         },
         {
-          "text": "v. i.窒息，透不过气: On suffoque dans cette pièce.在这个房间人感到窒息。"
+          "text": "窒息，透不过气: On suffoque dans cette pièce.在这个房间人感到窒息。"
         }
       ],
       "verb_type": "transitive"
@@ -20863,10 +20842,6 @@
         {
           "abbr": "v. t.",
           "full": "及物动词"
-        },
-        {
-          "abbr": "n. m.",
-          "full": "阳性名词"
         }
       ],
       "gender": null,
@@ -21027,7 +21002,7 @@
           "text": "surmener (qqn)使劳累过度，使工作过度: Le patron surmène ses employés.老板使雇员过度工作。"
         },
         {
-          "text": "v. pr. se surmener 劳累过度，工作过度: Il se surmène.他劳累过度。"
+          "text": "se surmener 劳累过度，工作过度: Il se surmène.他劳累过度。"
         }
       ],
       "verb_type": "transitive"
@@ -21313,7 +21288,7 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【sécher】 (qqch)使干，使干燥;使干涸:"
+          "text": "【sécher】 (qqch)使干，使干燥;使干涸:"
         },
         {
           "text": "Je sèche mes cheveux avec un séchoir.我用电吹风吹干头发。"
@@ -21322,7 +21297,7 @@
           "text": "Le soleil a séché le ruisseau.太阳把小溪晒得干涸了。"
         },
         {
-          "text": "v. i.干，变干;干涸:"
+          "text": "干，变干;干涸:"
         },
         {
           "text": "Le sol a séché.地面干了。"
@@ -21415,7 +21390,7 @@
           "text": "Un mur sépare les deux jardins.一堵墙隔开了两个园子。"
         },
         {
-          "text": "v. pr. 【se séparer】 分开，分离:"
+          "text": "【se séparer】 分开，分离:"
         },
         {
           "text": "Il est tard, il faut nous séparer.时间晚了，我们该相互告别了。"
@@ -21610,7 +21585,7 @@
           "text": "teindre (qqch)(用染料)染: J'ai fait teindre mon manteau en noir. 我把大衣染成了黑色。"
         },
         {
-          "text": "v. pr. se teindre 染头发: Ma grand-mère se teint pour cacher ses cheveux blancs.我祖母染发是为了掩盖白发。"
+          "text": "se teindre 染头发: Ma grand-mère se teint pour cacher ses cheveux blancs.我祖母染发是为了掩盖白发。"
         }
       ],
       "verb_type": "transitive"
@@ -21709,7 +21684,7 @@
           "text": "terminer (qqch)结束，做完: Je termine mon chapitre et je viens.我写完这一章就来。 L'enfant a terminé son exercice.孩子做完了练习。"
         },
         {
-          "text": "v. pr. se terminer 终止，结束: Son travail se termine tard.他的工作结束得晚。 Le mot «œuf» se termine par un «f». “œuf”一词以“f”结尾。"
+          "text": "se terminer 终止，结束: Son travail se termine tard.他的工作结束得晚。 Le mot «œuf» se termine par un «f». “œuf”一词以“f”结尾。"
         }
       ],
       "verb_type": "transitive"
@@ -22007,13 +21982,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. dir. toucher (qqch)摸，碰，触;碰到，触及: Il touche le radiateur et dit que le chauffage s'est arrêté.他摸一下散热器说暖气停了。 Ta bille n'a pas touché la mienne.你的弹子没有碰到我的弹子。"
+          "text": "toucher (qqch)摸，碰，触;碰到，触及: Il touche le radiateur et dit que le chauffage s'est arrêté.他摸一下散热器说暖气停了。 Ta bille n'a pas touché la mienne.你的弹子没有碰到我的弹子。"
         },
         {
-          "text": "v. t. dir. toucher (qqn)触动，感动: Ta lettre nous a beaucoup touchés.你的来信使我们深受感动。"
+          "text": "toucher (qqn)触动，感动: Ta lettre nous a beaucoup touchés.你的来信使我们深受感动。"
         },
         {
-          "text": "v. t. ind. toucher (à qqch)碰，动，接触: Ne touche pas à la prise électrique!别碰电源插座!"
+          "text": "toucher (à qqch)碰，动，接触: Ne touche pas à la prise électrique!别碰电源插座!"
         }
       ],
       "verb_type": "transitive"
@@ -22262,7 +22237,7 @@
           "text": "tranquilliser (qqn)使安心，使放心: Le docteur a tranquillisé le malade. 大夫使病人放了心。"
         },
         {
-          "text": "v. pr. se tranquilliser 安心，放心: Tranquillisez-vous, votre fils n'est pas malade.请放心，您的儿子没有生病。"
+          "text": "se tranquilliser 安心，放心: Tranquillisez-vous, votre fils n'est pas malade.请放心，您的儿子没有生病。"
         }
       ],
       "verb_type": "transitive"
@@ -22469,13 +22444,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. traîner (qqch)拖，拉: Pascal traîne son camion derrière lui avec une ficelle.帕斯卡尔用根细绳拖着他那辆卡车。 Si je ne peux pas porter le sac, je le traînerai.我要是提不动包就拖着走。"
+          "text": "traîner (qqch)拖，拉: Pascal traîne son camion derrière lui avec une ficelle.帕斯卡尔用根细绳拖着他那辆卡车。 Si je ne peux pas porter le sac, je le traînerai.我要是提不动包就拖着走。"
         },
         {
-          "text": "v. i.拖在地上，拖着: Attention, ton manteau traîne par terre.当心，你的大衣拖在地上了。"
+          "text": "拖在地上，拖着: Attention, ton manteau traîne par terre.当心，你的大衣拖在地上了。"
         },
         {
-          "text": "v. i.落在后面，拖拖拉拉: Les enfants, ne traînez pas en rentrant. 小朋友们，回家别拖拉。"
+          "text": "落在后面，拖拖拉拉: Les enfants, ne traînez pas en rentrant. 小朋友们，回家别拖拉。"
         }
       ],
       "verb_type": "transitive"
@@ -22664,7 +22639,7 @@
           "text": "tromper (qqn) 欺骗，使上当: Il ne faut pas tromper les clients. 不应该欺骗顾客。"
         },
         {
-          "text": "v. pr. se tromper (de qqch)弄错，搞错: Oh! pardon! je me suis trompé de porte.噢，对不起!我走错了门。"
+          "text": "se tromper (de qqch)弄错，搞错: Oh! pardon! je me suis trompé de porte.噢，对不起!我走错了门。"
         }
       ],
       "verb_type": "transitive"
@@ -22691,7 +22666,7 @@
           "text": "troubler (qqn)使思想混乱: Ce détail a troublé la police. 这一细节使警察的思想产生了混乱。"
         },
         {
-          "text": "v. pr. se troubler 发慌，变得局促不安: Le candidat s'est troublé quand l'examinateur lui a posé cette question.当主考人提该问题时，考生慌了。"
+          "text": "se troubler 发慌，变得局促不安: Le candidat s'est troublé quand l'examinateur lui a posé cette question.当主考人提该问题时，考生慌了。"
         }
       ],
       "verb_type": "transitive"
@@ -22754,7 +22729,7 @@
           "text": "感到，觉得[后接表语或 que 引导的从句]: J'ai trouvé le dessert bon. 我觉得甜点好吃。 Tu trouves que j'ai raison?你觉得我有理吗?"
         },
         {
-          "text": "v. pr. se trouver 在，处于: Où se trouve le boulevard Voltaire? 伏尔泰大街位于何处?"
+          "text": "se trouver 在，处于: Où se trouve le boulevard Voltaire? 伏尔泰大街位于何处?"
         }
       ],
       "verb_type": "transitive"
@@ -22775,7 +22750,7 @@
           "text": "tuer (un animal, qqn)杀死，弄死: Le chasseur n'a pas tué le lièvre, il l'a seulement blessé.猎人没有打死野兔，只打伤了它。"
         },
         {
-          "text": "v. pr. se tuer 自杀;(因事故)死去: Il y a trop de gens qui se tuent en voiture.有太多的人死于车祸。 Il s'est tué en se tirant une balle dans la tête.他朝自己脑袋上开了一枪自杀身亡。"
+          "text": "se tuer 自杀;(因事故)死去: Il y a trop de gens qui se tuent en voiture.有太多的人死于车祸。 Il s'est tué en se tirant une balle dans la tête.他朝自己脑袋上开了一枪自杀身亡。"
         }
       ],
       "verb_type": "transitive"
@@ -23015,7 +22990,7 @@
           "text": "unir (qqn)团结，联合: C'est l'amitié qui les unit.是友谊使他们团结起来。"
         },
         {
-          "text": "v. pr. s'unir 团结，联合: Les opprimés doivent s'unir contre leurs maîtres.被压迫者应该团结起来对付他们的老板。"
+          "text": "s'unir 团结，联合: Les opprimés doivent s'unir contre leurs maîtres.被压迫者应该团结起来对付他们的老板。"
         }
       ],
       "verb_type": "transitive"
@@ -23213,7 +23188,7 @@
           "text": "vanter (qqn, qqch) 夸奖;吹嘘: On nous a vanté le vin de cette région. 有人向我们大大夸奖了这个地区的葡萄酒。"
         },
         {
-          "text": "v. pr. se vanter 自吹自擂: Elle se vante tout le temps. 她老是自吹自擂。"
+          "text": "se vanter 自吹自擂: Elle se vante tout le temps. 她老是自吹自擂。"
         }
       ],
       "verb_type": "transitive"
@@ -23249,13 +23224,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i. 熬夜: M. Durand a veillé pendant deux nuits.迪朗先生熬了两昼夜。"
+          "text": "熬夜: M. Durand a veillé pendant deux nuits.迪朗先生熬了两昼夜。"
         },
         {
-          "text": "v. t. dir. veiller (qqn)夜间看护: L'infirmière veille ces blessés. 夜间，护士看护这些受伤者。"
+          "text": "veiller (qqn)夜间看护: L'infirmière veille ces blessés. 夜间，护士看护这些受伤者。"
         },
         {
-          "text": "v. t. ind. veiller (sur qqn)照看: Maman est sortie, je dois veiller sur ma petite sœur.妈妈出去了，我得照看妹妹。"
+          "text": "veiller (sur qqn)照看: Maman est sortie, je dois veiller sur ma petite sœur.妈妈出去了，我得照看妹妹。"
         }
       ],
       "verb_type": "intransitive"
@@ -23294,7 +23269,7 @@
           "text": "vendre (qqch) 卖，出售: Nous avons vendu notre vieille maison. 我们卖掉了我们的老房子。"
         },
         {
-          "text": "v. pr. se vendre 被销售: Cet article se vend bien.这件商品销路好。"
+          "text": "se vendre 被销售: Cet article se vend bien.这件商品销路好。"
         }
       ],
       "verb_type": "transitive"
@@ -23432,7 +23407,7 @@
           "text": "【vexer (qqn)】使恼火，使不快: Elle m'a vexé. 她使我不快。"
         },
         {
-          "text": "v. pr. 【se vexer】生气，发火: Ne vous vexez pas.您别生气。"
+          "text": "【se vexer】生气，发火: Ne vous vexez pas.您别生气。"
         }
       ],
       "verb_type": "transitive"
@@ -23510,10 +23485,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. 【viser (qqch, un animal)】瞄准，对准: Il vise un moineau.他瞄准一只麻雀。"
+          "text": "【viser (qqch, un animal)】瞄准，对准: Il vise un moineau.他瞄准一只麻雀。"
         },
         {
-          "text": "v. i.瞄准，对准: Le chasseur a visé longtemps avant de tirer.猎人在射击以前瞄了很长时间。"
+          "text": "瞄准，对准: Le chasseur a visé longtemps avant de tirer.猎人在射击以前瞄了很长时间。"
         }
       ],
       "verb_type": "transitive"
@@ -23612,7 +23587,7 @@
           "text": "【voir】[后接间接问句]理解，明白: Je ne vois pas de quoi il veut parler. 我不知道他想讲什么。"
         },
         {
-          "text": "v. pr. 【se voir】相互看见，见面;被看到;被遇到: Nous nous voyons souvent.我们常见面。 L'église se voit d'ici.这里能看到教堂。 Une aventure comme celle-là， ça ne se voit pas souvent.像这种意外事件是不常见的。"
+          "text": "【se voir】相互看见，见面;被看到;被遇到: Nous nous voyons souvent.我们常见面。 L'église se voit d'ici.这里能看到教堂。 Une aventure comme celle-là， ça ne se voit pas souvent.像这种意外事件是不常见的。"
         }
       ],
       "verb_type": "transitive"
@@ -23684,10 +23659,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. i. 投票，表决: M. Durand a voté pour le candidat socialiste. 迪朗先生投了社会党候选人的票。"
+          "text": "投票，表决: M. Durand a voté pour le candidat socialiste. 迪朗先生投了社会党候选人的票。"
         },
         {
-          "text": "v. t. 【voter (qqch)】投票通过，表决通过: L'Assemblée a voté une loi. 议会投票通过了一项法律。"
+          "text": "【voter (qqch)】投票通过，表决通过: L'Assemblée a voté une loi. 议会投票通过了一项法律。"
         }
       ],
       "verb_type": "intransitive"
@@ -23825,7 +23800,7 @@
           "text": "【vêtir (qqn)】给…穿衣服: Marie est vêtue d'une jupe rouge et d'un pull bleu.玛丽穿了一条红裙子和一件蓝色毛衣。"
         },
         {
-          "text": "v. pr. 【se vêtir】穿衣: Il va faire froid, il faudra nous vêtir plus chaudement.天气要冷了，我们应该穿得更暖和些。"
+          "text": "【se vêtir】穿衣: Il va faire froid, il faudra nous vêtir plus chaudement.天气要冷了，我们应该穿得更暖和些。"
         }
       ],
       "verb_type": "transitive"
@@ -23916,7 +23891,7 @@
           "text": "【échauffer (qqch,qqn)】 加热，使变热: Le soleil échauffe la terre. 太阳暖和了大地。 Cette course m'a échauffé.这次跑步使我身体热了起来。"
         },
         {
-          "text": "v. pr. 【s'échauffer】 变热;激烈起来: La dispute s'échauffe.争论激烈起来。"
+          "text": "【s'échauffer】 变热;激烈起来: La dispute s'échauffe.争论激烈起来。"
         }
       ],
       "verb_type": "transitive"
@@ -23955,7 +23930,7 @@
           "text": "【éclairer (qqch)】 照，照亮: Quatre lampes éclairent la salle.四盏灯给大厅照明。 Notre classe est bien éclairée. 我们的教室灯光很亮。"
         },
         {
-          "text": "v. pr. 【s'éclairer】 被照亮: La rue s'éclaire dès la tombée de la nuit. 夜幕降临后马路便被灯照亮了。"
+          "text": "【s'éclairer】 被照亮: La rue s'éclaire dès la tombée de la nuit. 夜幕降临后马路便被灯照亮了。"
         }
       ],
       "verb_type": "transitive"
@@ -24291,7 +24266,7 @@
           "text": "【éloigner (qqch)】 挪开，移开，使远离: Éloigne cette lampe, elle te fera mal aux yeux.你把这盏灯移开些，它会照得你眼睛疼。"
         },
         {
-          "text": "v. pr. 【s'éloigner (d'un lieu)】 离开，远离: Le bateau s'éloigne peu à peu de la côte.船渐渐地驶离海岸。 Les enfants, ne vous éloignez pas trop.孩子们，你们不要走得太远。"
+          "text": "【s'éloigner (d'un lieu)】 离开，远离: Le bateau s'éloigne peu à peu de la côte.船渐渐地驶离海岸。 Les enfants, ne vous éloignez pas trop.孩子们，你们不要走得太远。"
         }
       ],
       "verb_type": "transitive"
@@ -24641,7 +24616,7 @@
           "text": "éteindre (qqch) 熄灭;关(灯、收音机、电视机等): Les pompiers ont éteint l'incendie.消防队员扑灭了火灾。 Il a oublié d'éteindre la lampe de l'escalier. 他忘了关楼梯的灯。"
         },
         {
-          "text": "v. pr. s'éteindre 熄灭: Le feu s'est éteint.火熄灭了。"
+          "text": "s'éteindre 熄灭: Le feu s'est éteint.火熄灭了。"
         }
       ],
       "verb_type": "transitive"
@@ -24665,7 +24640,7 @@
           "text": "étendre (une partie du corps)伸开，伸直: Étendez bien vos bras.您把双臂 伸直。"
         },
         {
-          "text": "v. pr. s'étendre 延伸;直躺着: Le grand jardin s'étend jusqu'à la rivière. 大 花园一直延伸到河边。 Claude s'étend sur la plage.克洛德直挺挺地躺在沙滩 上。"
+          "text": "s'étendre 延伸;直躺着: Le grand jardin s'étend jusqu'à la rivière. 大 花园一直延伸到河边。 Claude s'étend sur la plage.克洛德直挺挺地躺在沙滩 上。"
         }
       ],
       "verb_type": "transitive"
@@ -24704,7 +24679,7 @@
           "text": "étonner (qqn)使惊讶，使惊奇，使吃惊: Cette nouvelle nous a étonnés. 这条 消息使我们感到吃惊。"
         },
         {
-          "text": "v. pr. s'étonner (de qqch, que ...)惊讶，惊奇，吃惊[从句用虚拟式]: Cet enfant s'étonne de tout.这孩子对一切感到新奇。 Je m'étonne qu'il n'ait pas répondu, car il est très ponctuel.我对他没有回复感到吃惊，因为他是很守 时的。"
+          "text": "s'étonner (de qqch, que ...)惊讶，惊奇，吃惊[从句用虚拟式]: Cet enfant s'étonne de tout.这孩子对一切感到新奇。 Je m'étonne qu'il n'ait pas répondu, car il est très ponctuel.我对他没有回复感到吃惊，因为他是很守 时的。"
         }
       ],
       "verb_type": "transitive"
@@ -24722,10 +24697,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "v. t. étouffer (qqn)使窒息，闷死;使气闷: Le malfaiteur a presque étouffé sa victime.坏蛋几乎将被害人闷死。 La chaleur nous étouffe.气候炎热使我 们感到气闷。"
+          "text": "étouffer (qqn)使窒息，闷死;使气闷: Le malfaiteur a presque étouffé sa victime.坏蛋几乎将被害人闷死。 La chaleur nous étouffe.气候炎热使我 们感到气闷。"
         },
         {
-          "text": "v. i.窒息，气闷;感到闷热: On étouffe dans cette pièce: ouvrez les fenêtres! 这间屋子太闷，把窗户打开!"
+          "text": "窒息，气闷;感到闷热: On étouffe dans cette pièce: ouvrez les fenêtres! 这间屋子太闷，把窗户打开!"
         }
       ],
       "verb_type": "transitive"
@@ -24845,7 +24820,7 @@
           "text": "éveiller (qqn)使醒: Il marche sur la pointe des pieds pour éviter d'éveiller les malades. 他踮着脚走路以免吵醒病人。"
         },
         {
-          "text": "v. pr. s'éveiller 睡醒，苏醒: Paul s'est éveillé brusquement.保尔突然苏醒 了。"
+          "text": "s'éveiller 睡醒，苏醒: Paul s'est éveillé brusquement.保尔突然苏醒 了。"
         }
       ],
       "verb_type": "transitive"

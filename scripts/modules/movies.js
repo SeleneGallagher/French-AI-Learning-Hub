@@ -463,9 +463,14 @@ async function loadFromCache(forceRefresh = false) {
             }
         }
         
-        if (uniqueCached.length < targetCount) {
-            console.log(`缓存数据不足 (${uniqueCached.length} < ${targetCount})，将使用直接API调用`);
+        // 即使数据不足，也返回已有数据（至少比没有好）
+        if (uniqueCached.length === 0) {
+            console.log('缓存中没有可用数据');
             return null;
+        }
+        
+        if (uniqueCached.length < targetCount) {
+            console.log(`缓存数据不足 (${uniqueCached.length} < ${targetCount})，但将使用已有缓存数据`);
         }
         
         // 筛选和排序
@@ -531,8 +536,9 @@ async function loadFromCache(forceRefresh = false) {
         return final;
         
     } catch (error) {
-        console.warn('从缓存API加载失败，将使用直接API调用:', error);
-        return null;
+        console.error('从缓存API加载失败:', error);
+        // 抛出错误，让调用者知道缓存API失败了
+        throw error;
     }
 }
 
@@ -543,19 +549,40 @@ async function loadContent(forceRefresh = false) {
     console.log('开始加载影视内容，已显示数量:', shownIds.length);
     
     // 优先尝试从缓存加载
+    let useCacheOnly = false;
     if (!forceRefresh) {
-        const cachedData = await loadFromCache(forceRefresh);
-        if (cachedData && cachedData.length >= 25) {
-            allMovies = cachedData;
-            saveCache(allMovies);
-            saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
-            renderItems(allMovies);
-            translateAllPlots();
-            return;
+        try {
+            const cachedData = await loadFromCache(forceRefresh);
+            if (cachedData && cachedData.length >= 25) {
+                // 缓存数据充足，直接使用
+                allMovies = cachedData;
+                saveCache(allMovies);
+                saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
+                renderItems(allMovies);
+                translateAllPlots();
+                return;
+            } else if (cachedData && cachedData.length > 0) {
+                // 缓存数据不足，先显示已有数据，然后继续获取更多并上传到缓存
+                allMovies = cachedData;
+                saveCache(allMovies);
+                saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
+                renderItems(allMovies);
+                translateAllPlots();
+                
+                console.log(`缓存数据不足25条（仅${cachedData.length}条），正在获取更多数据并上传到缓存...`);
+                // 继续执行下面的代码，获取更多数据
+            } else {
+                // 缓存为空，继续获取数据
+                console.log('缓存为空，正在获取数据...');
+            }
+        } catch (error) {
+            console.error('缓存API调用失败:', error);
+            // 如果缓存API失败，尝试直接获取数据
+            console.log('缓存API失败，尝试直接获取数据...');
         }
     }
     
-    // 如果缓存不可用，使用直接API调用（fallback）
+    // 如果强制刷新或缓存不可用/不足，使用直接API调用获取数据并上传到缓存
     console.log('使用直接API调用获取数据...');
     
     // 获取各类型内容（多页获取，每类获取20页，确保有足够数据）
@@ -760,8 +787,52 @@ async function loadContent(forceRefresh = false) {
     saveCache(allMovies);
     saveShownItems([...shownIds, ...allMovies.map(m => `${m.type}_${m.id}`)]);
     
+    // 上传到缓存数据库（后台异步，不阻塞渲染）
+    uploadToCache(allMovies).catch(err => {
+        console.warn('上传到缓存失败:', err);
+    });
+    
     renderItems(allMovies);
     translateAllPlots();
+}
+
+// 上传电影数据到缓存
+async function uploadToCache(movies) {
+    try {
+        if (!movies || movies.length === 0) return;
+        
+        // 准备上传数据（确保包含所有必要字段）
+        const uploadData = movies.map(m => ({
+            id: m.id || m.tmdb_id,
+            tmdb_id: m.tmdb_id || m.id,
+            type: m.type,
+            title: m.title,
+            originalTitle: m.originalTitle || m.original_title,
+            year: m.year,
+            rating: m.rating,
+            voteCount: m.voteCount || m.vote_count || 0,
+            poster: m.poster || m.poster_path,
+            poster_path: m.poster_path || (m.poster ? m.poster.split('/').pop() : ''),
+            plot: m.plot,
+            fullPlot: m.fullPlot || m.plot,
+            tagline: m.tagline,
+            director: m.director,
+            genres: m.genres || [],
+            runtime: m.runtime || 0,
+            seasons: m.seasons || 0,
+            episodes: m.episodes || 0,
+            mediaInfo: m.mediaInfo || m.media_info || ''
+        }));
+        
+        const result = await APIService.uploadMoviesToCache(uploadData);
+        if (result && result.success) {
+            console.log(`✓ 成功上传 ${result.count || uploadData.length} 部电影到缓存`);
+        } else {
+            console.warn('上传到缓存失败:', result);
+        }
+    } catch (error) {
+        console.warn('上传到缓存出错:', error);
+    }
 }
 
 // 串行翻译所有简介（避免API限流）

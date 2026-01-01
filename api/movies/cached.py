@@ -26,6 +26,10 @@ def handler(request):
         if method == 'OPTIONS':
             return json_response({}, 200)
         
+        # 处理POST请求（上传电影到缓存）
+        if method == 'POST':
+            return handle_upload(request)
+        
         if method != 'GET':
             return json_response({'success': False, 'message': 'Method not allowed'}, 405)
         

@@ -1,12 +1,12 @@
 {
   "name": "公共法语学习词典 - 介词",
   "pos": "prep",
-  "count": 46,
+  "count": 48,
   "source": "公共法语学习词典",
   "license": "Unknown",
   "copyright": "",
   "version": "1.0.0",
-  "generated_at": "2025-12-30T23:54:52.054324Z",
+  "generated_at": "2026-01-01T19:11:36.905945Z",
   "words": [
     {
       "word": "afin de",
@@ -38,16 +38,16 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "prép.在…以后[表示时间]: On se reposera après le travail.我们将在工作后休息。 Un an après sa mort, elle est partie en France.他去世后一年，她动身去了法国。"
+          "text": "在…以后[表示时间]: On se reposera après le travail.我们将在工作后休息。 Un an après sa mort, elle est partie en France.他去世后一年，她动身去了法国。"
         },
         {
-          "text": "prép.在…后面[表示空间]: La gare est après le carrefour.火车站在十字路口后面。"
+          "text": "在…后面[表示空间]: La gare est après le carrefour.火车站在十字路口后面。"
         },
         {
-          "text": "adv.以后，之后[表示时间]: Vingt ans après, la guerre recommença. 20年后，战争重新打响了。 Avant son accident, il était très gentil, mais après, il est devenu bizarre.在事故发生前，他对人很好，可是之后，他变得古怪了。"
+          "text": "以后，之后[表示时间]: Vingt ans après, la guerre recommença. 20年后，战争重新打响了。 Avant son accident, il était très gentil, mais après, il est devenu bizarre.在事故发生前，他对人很好，可是之后，他变得古怪了。"
         },
         {
-          "text": "adv.后面，在后面[表示空间]: Voici la poste, l'épicerie est après. 这是邮局，食品杂货店就在后面。"
+          "text": "后面，在后面[表示空间]: Voici la poste, l'épicerie est après. 这是邮局，食品杂货店就在后面。"
         },
         {
           "text": "【après】 在…以后[后接不定式过去时]: Après avoir mangé， il est parti sans nous dire au revoir.他吃完饭后，没有向我们说声再见就走了。"
@@ -90,10 +90,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "loc. prép.在…下面，在…以下: Le grenier est au-dessous du toit. 顶楼在屋顶下面。 Ce film est interdit aux jeunes au-dessous de dix-huit ans. 这部影片禁止十八岁以下青少年观看。"
+          "text": "prép.在…下面，在…以下: Le grenier est au-dessous du toit. 顶楼在屋顶下面。 Ce film est interdit aux jeunes au-dessous de dix-huit ans. 这部影片禁止十八岁以下青少年观看。"
         },
         {
-          "text": "loc. adv.在下面: En ce moment, notre appartement est très calme, il n'y a personne au-dessous. 这一会儿，我们的房间很清静，下面没有人。"
+          "text": "在下面: En ce moment, notre appartement est très calme, il n'y a personne au-dessous. 这一会儿，我们的房间很清静，下面没有人。"
         }
       ]
     },
@@ -110,10 +110,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "loc. prép.在…上面，在…以上: Nous habitons au-dessus de la pharmacie.我们住在药房楼上。 Les enfants au-dessus de sept ans payent place entière. 七岁以上儿童买全票。"
+          "text": "prép.在…上面，在…以上: Nous habitons au-dessus de la pharmacie.我们住在药房楼上。 Les enfants au-dessus de sept ans payent place entière. 七岁以上儿童买全票。"
         },
         {
-          "text": "loc. adv.在上面: Mavalise est solide, mettez la vôtre au-dessus.我的手提箱结实，把您的那只放在上面吧。 Voilà la boulangerie, M. Dupont habite au-dessus.这是面包房，杜邦先生住在这楼上。"
+          "text": "在上面: Mavalise est solide, mettez la vôtre au-dessus.我的手提箱结实，把您的那只放在上面吧。 Voilà la boulangerie, M. Dupont habite au-dessus.这是面包房，杜邦先生住在这楼上。"
         }
       ]
     },
@@ -147,10 +147,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "loc. prép.在…周围，在…四周: La circulation autour de Paris est difficile.巴黎周围的交通很困难。 Nous sommes allés ramasser des champignons dans les forêts qui sont autour du village. 我们到村子周围的树林里去采了蘑菇。"
+          "text": "prép.在…周围，在…四周: La circulation autour de Paris est difficile.巴黎周围的交通很困难。 Nous sommes allés ramasser des champignons dans les forêts qui sont autour du village. 我们到村子周围的树林里去采了蘑菇。"
         },
         {
-          "text": "adv.在周围: Impossible d'entrer dans ce parc, il y a un mur tout autour.不可能进入这座公园，四周有围墙。"
+          "text": "在周围: Impossible d'entrer dans ce parc, il y a un mur tout autour.不可能进入这座公园，四周有围墙。"
         }
       ]
     },
@@ -167,16 +167,16 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "prép.在…以前[表示时间]: Elle est arrivée avant nous.她比我们先到。 Pour être en forme, reposez-vous avant l'examen.为了精力充沛，考试前你们要休息休息。"
+          "text": "在…以前[表示时间]: Elle est arrivée avant nous.她比我们先到。 Pour être en forme, reposez-vous avant l'examen.为了精力充沛，考试前你们要休息休息。"
         },
         {
-          "text": "prép.在…前面[表示空间]: Le bureau de poste est juste avant le pont. 邮局就在桥前面。"
+          "text": "在…前面[表示空间]: Le bureau de poste est juste avant le pont. 邮局就在桥前面。"
         },
         {
-          "text": "adv.以前，之前[表示时间】: On a construit une nouvelle route; avant, il fallait faire un long détour.人们修建了一条新公路;以前，必须绕很大一圈。 Ne vous décidez pas tout de suite; réfléchissez avant. 不要立即作出决定，先思考一下。 Quelques jours avant, il était parti pour Paris.(当时)几天以前，他动身去了巴黎。"
+          "text": "以前，之前[表示时间】: On a construit une nouvelle route; avant, il fallait faire un long détour.人们修建了一条新公路;以前，必须绕很大一圈。 Ne vous décidez pas tout de suite; réfléchissez avant. 不要立即作出决定，先思考一下。 Quelques jours avant, il était parti pour Paris.(当时)几天以前，他动身去了巴黎。"
         },
         {
-          "text": "adv.前面，在前面[表示空间]: N'allez pas jusqu'à la place, arrêtez-vous avant.不要一直走到广场，在前面停下来。"
+          "text": "前面，在前面[表示空间]: N'allez pas jusqu'à la place, arrêtez-vous avant.不要一直走到广场，在前面停下来。"
         },
         {
           "text": "【avant de】 loc. prép. 在…前[后接不定式]: Mets ton manteau avant de sortir, il fait froid dehors.出去以前穿好大衣，外面寒冷。"
@@ -681,6 +681,26 @@
       ]
     },
     {
+      "word": "plein",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "满的，盛满的，充满的: Ferme le robinet, la baignoire va être pleine.关上水龙头，浴缸的水要满了。 Cette bouteille est pleine de vin. 这酒瓶里盛满了葡萄酒。"
+        },
+        {
+          "text": "装满，盛满: Pierre a des billes plein les poches. 皮埃尔口袋里装满了弹子。"
+        }
+      ]
+    },
+    {
       "word": "pour",
       "pos": [
         {
@@ -765,6 +785,35 @@
       ]
     },
     {
+      "word": "sauf",
+      "pos": [
+        {
+          "abbr": "prép.",
+          "full": "介词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "安然脱险的:"
+        },
+        {
+          "text": "Les otages ont eu la vie sauve.人质安全脱险。"
+        },
+        {
+          "text": "Il est sorti sain et sauf de l'accident.事故中他安然无恙。"
+        },
+        {
+          "text": "除了…以外:"
+        },
+        {
+          "text": "Tout le monde a rangé ses affaires sauf toi.除了你大家都整理好了自己的衣物。"
+        }
+      ]
+    },
+    {
       "word": "selon",
       "pos": [
         {
@@ -813,10 +862,6 @@
         {
           "abbr": "prép.",
           "full": "介词"
-        },
-        {
-          "abbr": "a.",
-          "full": "形容词"
         }
       ],
       "gender": null,
@@ -827,10 +872,10 @@
           "text": "按照，根据: Choisissez-les suivant vos préférences. 按照您喜欢的挑选吧。 Suivant son habitude, il arrivera à temps.根据他的习惯，他将及时赶到。"
         },
         {
-          "text": "a.随后的，后面的: La solution du problème est à la page suivante.这道题的答案在下一页。"
+          "text": "随后的，后面的: La solution du problème est à la page suivante.这道题的答案在下一页。"
         },
         {
-          "text": "n.下一个人: «Au suivant!» dit le coiffeur.“下一个!”理发师说道。"
+          "text": "下一个人: «Au suivant!» dit le coiffeur.“下一个!”理发师说道。"
         }
       ]
     },
@@ -969,7 +1014,7 @@
           "category": "地点"
         },
         {
-          "text": "de... à... 从…到…: Le supermarché est ouvert de 9 heures du matin à 10 heures du soir.超市从上午九点开到晚上十点。 Ça fait un quart d'heure d'ici à la gare.从这里到火车站有一刻钟路程。",
+          "text": ".. à... 从…到…: Le supermarché est ouvert de 9 heures du matin à 10 heures du soir.超市从上午九点开到晚上十点。 Ça fait un quart d'heure d'ici à la gare.从这里到火车站有一刻钟路程。",
           "category": "范围"
         },
         {

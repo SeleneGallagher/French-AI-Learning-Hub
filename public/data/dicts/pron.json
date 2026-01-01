@@ -1,13 +1,53 @@
 {
   "name": "公共法语学习词典 - 代词",
   "pos": "pron",
-  "count": 22,
+  "count": 26,
   "source": "公共法语学习词典",
   "license": "Unknown",
   "copyright": "",
   "version": "1.0.0",
-  "generated_at": "2025-12-30T23:54:52.225156Z",
+  "generated_at": "2026-01-01T19:11:37.275733Z",
   "words": [
+    {
+      "word": "aucun",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "indéf.没有一个的，没有任何的[和 ne 或 sans 连用，表示否定]: Je n'ai aucune idée de cela.我对此没有任何概念。 Aucune nouvelle ne lui est arrivée.他没有任何消息。 Elle viendra sans aucun doute. 她肯定会来。"
+        },
+        {
+          "text": "indéf.没有一个人，没有任何人[和 ne 连用，表示否定]: Aucun de ses amis n'est venu le voir à l'hôpital.没有一个朋友来医院看望过他。 Aucun d'entre eux n'est au courant.他们中间没有任何人知道。 Sophie attendait plusieurs lettres, mais elle n'en a reçu aucune. 索菲在等好几封信，可她没有收到任何一封。"
+        }
+      ]
+    },
+    {
+      "word": "autre",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "indéf.另外的，其它的，别的: Donnez-moi un autre verre.给我一只别的玻璃杯。 Nous nous verrons un autre jour.我们改天再见面吧。 Mets ton autre robe.穿上你的另外一条连衫裙。 J'ai encore deux autres dictionnaires français.我还有另外两本法语词典。 Quelques autres personnes m'ont mal compris.另外几个人没有理解我的意思。 Je ne prendrai que des fruits, je ne veux rien d'autre.我只吃水果，别的什么也不要。 Quelqu'un d'autre a-t-il téléphoné?别人打来过电话吗?"
+        },
+        {
+          "text": "indéf. 另一个人，另一个事物，其他人: Je le prends pour un autre.我把他当作另一个人了。 Ce gâteau était délicieux, donne-m'en un autre. 这块蛋糕真好吃，再给我来一块。 Cette cravate ne me plaît pas; prends plutôt cette autre.这条领带我不喜欢，还是拿那条吧。 Ne t'occupe pas de ce que disent les autres.不要管别人说什么。 Il a deux enfants: l'un travaille à l'hôpital, l'autre est avocat.他有两个孩子，一个在医院工作，另一个当律师。 Les fruits sont tous gâtés: les uns sont pourris, les autres ont été piqués par les oiseaux.这些水果都坏了，一些烂掉了，另一些被鸟啄过了。"
+        }
+      ]
+    },
     {
       "word": "ceci",
       "pos": [
@@ -213,6 +253,26 @@
       ]
     },
     {
+      "word": "où",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "【adv. interr.】 在哪儿，去哪儿: Où travaille-t-il? 他在哪儿工作?"
+        },
+        {
+          "text": "【pron. rel.】 …地方，…时候: Voilà la maison où habite mon ami.这就是我朋友住的房子。 J'attends l'heure où il sortira.我在等什么时候他出去。"
+        }
+      ]
+    },
+    {
       "word": "personne²",
       "pos": [
         {
@@ -226,6 +286,26 @@
       "definitions": [
         {
           "text": "无人，没有人[和ne连用]: La rue est vide, on ne voit personne.大街空空如也，看不到任何人。 Personne ne parle russe dans notre classe.我们班里没有人会讲俄语。"
+        }
+      ]
+    },
+    {
+      "word": "plusieurs",
+      "pos": [
+        {
+          "abbr": "pron.",
+          "full": "代词"
+        }
+      ],
+      "gender": null,
+      "tags": [],
+      "raw_tags": "",
+      "definitions": [
+        {
+          "text": "indéf. pl. 好几个: M. Duval a invité plusieurs amis. 杜瓦尔先生邀请了好几位朋友。"
+        },
+        {
+          "text": "indéf. pl. 好几个: J'en ai vu plusieurs qui copiaient sur leur voisin.我看到好几个在抄袭邻座的作业。 Plusieurs de ses collègues parlent italien.他的"
         }
       ]
     },
@@ -245,7 +325,7 @@
           "text": "某人，有人: Quelqu'un frappe à la porte. 有人敲门。"
         },
         {
-          "text": "pl. quelques-uns 某些人，一些人: Quelques-uns des élèves ont été punis.学生中有些人受到了处罚。"
+          "text": "quelques-uns 某些人，一些人: Quelques-uns des élèves ont été punis.学生中有些人受到了处罚。"
         }
       ]
     },
@@ -279,13 +359,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "pron. interr.什么，什么东西，什么事: Que ferons-nous cet après-midi? 今天下午我们将做什么?"
+          "text": "什么，什么东西，什么事: Que ferons-nous cet après-midi? 今天下午我们将做什么?"
         },
         {
-          "text": "pron.rel.〔用作直接宾语，可以指人或物]: Voici le livre qu'il nous a apporté.这就是他给我们带来的书。 Les enfants que tu vois jouer dans la cour sont ceux du voisin.你看到在院子里玩的这些孩子是邻居家的孩子。"
+          "text": "〔用作直接宾语，可以指人或物]: Voici le livre qu'il nous a apporté.这就是他给我们带来的书。 Les enfants que tu vois jouer dans la cour sont ceux du voisin.你看到在院子里玩的这些孩子是邻居家的孩子。"
         },
         {
-          "text": "conj.[引出从句]: Il dit qu'il viendra.他说他将来。"
+          "text": "[引出从句]: Il dit qu'il viendra.他说他将来。"
         }
       ]
     },
@@ -302,13 +382,13 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "pron.rel.[用作主语，可以指人或物]: J'ai un ami qui aime le cyclisme.我有一个喜欢自行车运动的朋友。 J'ai remonté la pendule qui était arrêtée. 我给停走的挂钟上了发条。"
+          "text": "[用作主语，可以指人或物]: J'ai un ami qui aime le cyclisme.我有一个喜欢自行车运动的朋友。 J'ai remonté la pendule qui était arrêtée. 我给停走的挂钟上了发条。"
         },
         {
-          "text": "pron.rel.〔用作间接宾语或状语，指人]: Voilà le passant à qui j'ai demandé l'heure.那就是我询问时间的过路人。 Je connais l'homme avec qui elle parlait.我认识她一起说话的那个人。"
+          "text": "〔用作间接宾语或状语，指人]: Voilà le passant à qui j'ai demandé l'heure.那就是我询问时间的过路人。 Je connais l'homme avec qui elle parlait.我认识她一起说话的那个人。"
         },
         {
-          "text": "pron. interr.谁: Qui est là? 谁在那里? Qui cherchez-vous? 您在找谁?"
+          "text": "谁: Qui est là? 谁在那里? Qui cherchez-vous? 您在找谁?"
         }
       ]
     },
@@ -430,10 +510,10 @@
       "raw_tags": "",
       "definitions": [
         {
-          "text": "m. sing.一切，所有的东西: Tout va bien chez nous.我们家里一切都好。 Marie sait tout faire.玛丽什么都会做。"
+          "text": "一切，所有的东西: Tout va bien chez nous.我们家里一切都好。 Marie sait tout faire.玛丽什么都会做。"
         },
         {
-          "text": "pl.大家，所有的人: Tous savent nager. 大家都会游泳。 Ils sont tous là en ce moment.这时候他们都在那儿。"
+          "text": "大家，所有的人: Tous savent nager. 大家都会游泳。 Ils sont tous là en ce moment.这时候他们都在那儿。"
         }
       ],
       "extra_info": "阳性复数 tous [tus"
