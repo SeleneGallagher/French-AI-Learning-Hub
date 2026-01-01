@@ -325,51 +325,7 @@ def serve_static(path):
 def health():
     return jsonify({'status': 'ok', 'message': 'French AI Learning Hub Backend'})
 
-# 后台任务：定期更新影视数据缓存
-def start_background_tasks():
-    """启动后台任务，定期更新影视数据"""
-    import threading
-    import time
-    
-    def update_movies_cache():
-        """更新影视数据缓存"""
-        while True:
-            try:
-                # 每6小时更新一次
-                time.sleep(6 * 60 * 60)
-                print("开始后台更新影视数据缓存...")
-                from scripts.server.update_data import fetch_movies
-                import json
-                from pathlib import Path
-                from datetime import datetime
-                
-                movies = fetch_movies()
-                if movies:
-                    data_dir = Path('public/data')
-                    data_dir.mkdir(parents=True, exist_ok=True)
-                    movies_file = data_dir / 'movies.json'
-                    with open(movies_file, 'w', encoding='utf-8') as f:
-                        json.dump({
-                            'updated_at': datetime.now().isoformat(),
-                            'count': len(movies),
-                            'movies': movies
-                        }, f, ensure_ascii=False, indent=2)
-                    print(f"✓ 后台更新完成：{len(movies)} 部影视")
-            except Exception as e:
-                print(f"后台更新影视数据失败: {e}")
-                import traceback
-                traceback.print_exc()
-    
-    # 启动后台线程
-    background_thread = threading.Thread(target=update_movies_cache, daemon=True)
-    background_thread.start()
-    print("后台任务已启动：每6小时自动更新影视数据缓存")
-
 if __name__ == '__main__':
     # 开发环境
-    start_background_tasks()
     app.run(host='127.0.0.1', port=5000, debug=True)
-else:
-    # 生产环境使用gunicorn，启动后台任务
-    start_background_tasks()
 

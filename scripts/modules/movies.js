@@ -429,23 +429,52 @@ async function loadContent(forceRefresh = false) {
     
     console.log('开始加载影视内容，已显示数量:', shownIds.length);
     
-    // 获取各类型内容
-    const [recentMovies, classicMovies, otherMovies, recentTV, classicTV, otherTV] = await Promise.all([
-        fetchMovies(true),
-        fetchMovies(false),
-        fetchOtherMovies(),
-        fetchTVShows(true),
-        fetchTVShows(false),
-        fetchOtherTV()
+    // 获取各类型内容（多页获取，每类获取20页，确保有足够数据）
+    const MAX_PAGES = 20; // 增加到20页
+    const allRecentMovies = [];
+    const allClassicMovies = [];
+    const allOtherMovies = [];
+    const allRecentTV = [];
+    const allClassicTV = [];
+    const allOtherTV = [];
+    
+    // 串行获取多页数据，避免API限流
+    const fetchWithErrorHandling = async (fetchFn, targetArray, type) => {
+        for (let page = 1; page <= MAX_PAGES; page++) {
+            try {
+                const data = await fetchFn(page);
+                if (data && Array.isArray(data) && data.length > 0) {
+                    targetArray.push(...data);
+                } else {
+                    // 如果某页没有数据，提前结束
+                    break;
+                }
+                // 每页之间延迟，避免API限流
+                await new Promise(r => setTimeout(r, 300));
+            } catch (error) {
+                console.warn(`${type} 第${page}页获取失败:`, error);
+                // 继续获取下一页，不中断
+            }
+        }
+    };
+    
+    // 并行获取不同类型，但每类内部串行
+    await Promise.all([
+        fetchWithErrorHandling((p) => fetchMovies(true, p), allRecentMovies, '近两年电影'),
+        fetchWithErrorHandling((p) => fetchMovies(false, p), allClassicMovies, '经典电影'),
+        fetchWithErrorHandling((p) => fetchOtherMovies(p), allOtherMovies, '其它电影'),
+        fetchWithErrorHandling((p) => fetchTVShows(true, p), allRecentTV, '近两年剧集'),
+        fetchWithErrorHandling((p) => fetchTVShows(false, p), allClassicTV, '经典剧集'),
+        fetchWithErrorHandling((p) => fetchOtherTV(p), allOtherTV, '其它剧集')
     ]);
     
     console.log('获取到的数据:', {
-        recentMovies: recentMovies.length,
-        classicMovies: classicMovies.length,
-        otherMovies: otherMovies.length,
-        recentTV: recentTV.length,
-        classicTV: classicTV.length,
-        otherTV: otherTV.length
+        recentMovies: allRecentMovies.length,
+        classicMovies: allClassicMovies.length,
+        otherMovies: allOtherMovies.length,
+        recentTV: allRecentTV.length,
+        classicTV: allClassicTV.length,
+        otherTV: allOtherTV.length
     });
     
     const filterShown = (items, type) => items.filter(i => !shownIds.includes(`${type}_${i.id}`));
@@ -455,81 +484,123 @@ async function loadContent(forceRefresh = false) {
     const targetCount = 25; // 目标25部
     const recentTarget = 8; // 近两年至少8部
     const classicTarget = 8; // 经典至少8部
+    const MAX_PROCESS = 200; // 最多处理200个，确保有足够数据
+    
+    // 去重
+    const seenIds = new Set();
+    const uniqueItems = [];
+    
+    const addUnique = (items, type) => {
+        for (const item of items) {
+            const itemId = `${type}_${item.id}`;
+            if (!seenIds.has(itemId) && !shownIds.includes(itemId)) {
+                seenIds.add(itemId);
+                uniqueItems.push({...item, _type: type});
+            }
+        }
+    };
+    
+    addUnique(allRecentMovies, 'movie');
+    addUnique(allClassicMovies, 'movie');
+    addUnique(allOtherMovies, 'movie');
+    addUnique(allRecentTV, 'tv');
+    addUnique(allClassicTV, 'tv');
+    addUnique(allOtherTV, 'tv');
+    
+    console.log(`去重后共有 ${uniqueItems.length} 个唯一项目，开始处理详细信息...`);
     
     // 处理近两年（至少8部，确保超过一半）
-    const recentItems = [...filterShown(recentMovies, 'movie'), ...filterShown(recentTV, 'tv')];
+    const recentItems = uniqueItems.filter(i => {
+        const year = i.release_date || i.first_air_date;
+        if (!year) return false;
+        const itemYear = new Date(year).getFullYear();
+        return itemYear >= currentYear - 2;
+    });
+    
+    let processedCount = 0;
     for (const item of recentItems) {
+        if (processedCount >= MAX_PROCESS) break;
         if (processed.filter(p => p.year >= currentYear - 2).length >= recentTarget && processed.length >= targetCount) break;
-        // 正确判断是电影还是剧集：电影有title，剧集有name
-        const result = item.title ? await processMovie(item) : await processTVShow(item);
-        if (result) {
-            processed.push(result);
-            // 如果已经达到目标数量，继续处理以确保有足够的近两年和经典影视
-            if (processed.length >= targetCount && 
-                processed.filter(p => p.year >= currentYear - 2).length >= recentTarget &&
-                processed.filter(p => p.year < currentYear - 5).length >= classicTarget) {
-                break;
+        
+        try {
+            const result = item.title ? await processMovie(item) : await processTVShow(item);
+            if (result) {
+                processed.push(result);
+                processedCount++;
+                // 如果已经达到目标数量，继续处理以确保有足够的近两年和经典影视
+                if (processed.length >= targetCount && 
+                    processed.filter(p => p.year >= currentYear - 2).length >= recentTarget &&
+                    processed.filter(p => p.year < currentYear - 5).length >= classicTarget) {
+                    break;
+                }
             }
+        } catch (error) {
+            console.warn('处理项目失败:', item.id, error);
+            // 继续处理下一个，不中断
         }
         await new Promise(r => setTimeout(r, 100));
     }
     
     // 处理经典（至少8部，确保超过一半）
-    const classicItems = [...filterShown(classicMovies, 'movie'), ...filterShown(classicTV, 'tv')];
+    const classicItems = uniqueItems.filter(i => {
+        const year = i.release_date || i.first_air_date;
+        if (!year) return false;
+        const itemYear = new Date(year).getFullYear();
+        return itemYear < currentYear - 5;
+    });
+    
     for (const item of classicItems) {
+        if (processedCount >= MAX_PROCESS) break;
         if (processed.filter(p => p.year < currentYear - 5).length >= classicTarget && processed.length >= targetCount) break;
-        // 正确判断是电影还是剧集：电影有title，剧集有name
-        const result = item.title ? await processMovie(item) : await processTVShow(item);
-        if (result) {
-            processed.push(result);
-            // 如果已经达到目标数量，继续处理以确保有足够的近两年和经典影视
-            if (processed.length >= targetCount && 
-                processed.filter(p => p.year >= currentYear - 2).length >= recentTarget &&
-                processed.filter(p => p.year < currentYear - 5).length >= classicTarget) {
-                break;
+        
+        const itemId = `${item.title ? 'movie' : 'tv'}_${item.id}`;
+        if (processed.find(p => `${p.type}_${p.id}` === itemId)) continue;
+        
+        try {
+            const result = item.title ? await processMovie(item) : await processTVShow(item);
+            if (result) {
+                processed.push(result);
+                processedCount++;
+                // 如果已经达到目标数量，继续处理以确保有足够的近两年和经典影视
+                if (processed.length >= targetCount && 
+                    processed.filter(p => p.year >= currentYear - 2).length >= recentTarget &&
+                    processed.filter(p => p.year < currentYear - 5).length >= classicTarget) {
+                    break;
+                }
             }
+        } catch (error) {
+            console.warn('处理项目失败:', item.id, error);
+            // 继续处理下一个，不中断
         }
         await new Promise(r => setTimeout(r, 100));
     }
     
     // 其它（补充到25部）
-    const otherItems = [...filterShown(otherMovies, 'movie'), ...filterShown(otherTV, 'tv')];
-    for (const item of otherItems) {
-        if (processed.length >= targetCount) break;
-        // 正确判断是电影还是剧集：电影有title，剧集有name
-        const result = item.title ? await processMovie(item) : await processTVShow(item);
-        if (result) processed.push(result);
-        await new Promise(r => setTimeout(r, 100));
-    }
+    const otherItems = uniqueItems.filter(i => {
+        const year = i.release_date || i.first_air_date;
+        if (!year) return true;
+        const itemYear = new Date(year).getFullYear();
+        return itemYear >= currentYear - 5 && itemYear < currentYear - 2;
+    });
     
-    // 如果还是不够25部，继续从所有类型中补充（增加更多页面）
-    if (processed.length < targetCount) {
-        // 尝试获取更多页面的数据
-        const moreRecentMovies = await fetchMovies(true, 2); // 第2页
-        const moreClassicMovies = await fetchMovies(false, 2); // 第2页
-        const moreRecentTV = await fetchTVShows(true, 2); // 第2页
-        const moreClassicTV = await fetchTVShows(false, 2); // 第2页
-        const moreOtherMovies = await fetchOtherMovies(2); // 第2页
-        const moreOtherTV = await fetchOtherTV(2); // 第2页
+    for (const item of otherItems) {
+        if (processedCount >= MAX_PROCESS) break;
+        if (processed.length >= targetCount) break;
         
-        const allMoreItems = [
-            ...filterShown(moreRecentMovies, 'movie'),
-            ...filterShown(moreClassicMovies, 'movie'),
-            ...filterShown(moreOtherMovies, 'movie'),
-            ...filterShown(moreRecentTV, 'tv'),
-            ...filterShown(moreClassicTV, 'tv'),
-            ...filterShown(moreOtherTV, 'tv')
-        ];
+        const itemId = `${item.title ? 'movie' : 'tv'}_${item.id}`;
+        if (processed.find(p => `${p.type}_${p.id}` === itemId)) continue;
         
-        for (const item of allMoreItems) {
-            if (processed.length >= targetCount) break;
-            const itemId = `${item.title ? 'movie' : 'tv'}_${item.id}`;
-            if (!shownIds.includes(itemId) && !processed.find(p => `${p.type}_${p.id}` === itemId)) {
-                const result = item.title ? await processMovie(item) : await processTVShow(item);
-                if (result) processed.push(result);
-                await new Promise(r => setTimeout(r, 100));
+        try {
+            const result = item.title ? await processMovie(item) : await processTVShow(item);
+            if (result) {
+                processed.push(result);
+                processedCount++;
             }
+        } catch (error) {
+            console.warn('处理项目失败:', item.id, error);
+            // 继续处理下一个，不中断
         }
+        await new Promise(r => setTimeout(r, 100));
     }
     
     // 打乱顺序
@@ -541,11 +612,20 @@ async function loadContent(forceRefresh = false) {
         movies: allMovies.filter(m => m.type === 'movie').length,
         tv: allMovies.filter(m => m.type === 'tv').length,
         recent: allMovies.filter(m => m.year >= currentYear - 2).length,
-        classic: allMovies.filter(m => m.year < currentYear - 5).length
+        classic: allMovies.filter(m => m.year < currentYear - 5).length,
+        uniqueItemsCount: uniqueItems.length,
+        processedCount: processed.length
     });
     
     if (allMovies.length === 0) {
-        throw new Error('未获取到符合条件的影视数据（需要8.0+评分且有评语）');
+        if (uniqueItems.length === 0) {
+            throw new Error('未获取到影视数据，请检查网络连接或稍后重试');
+        } else if (processed.length === 0) {
+            throw new Error('获取到的影视数据不符合条件（需要7.0+评分且有评语）');
+        } else {
+            // 如果处理了一些但被过滤掉了，至少显示处理过的
+            allMovies = processed;
+        }
     }
     
     saveCache(allMovies);
