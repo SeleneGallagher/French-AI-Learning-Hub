@@ -331,6 +331,7 @@ def health():
     return jsonify({'status': 'ok', 'message': 'French AI Learning Hub Backend'})
 
 if __name__ == '__main__':
-    # 开发环境
-    app.run(host='127.0.0.1', port=8000, debug=True)
+    # 开发环境：从环境变量读取端口，如果没有则使用8000（本地开发）
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='127.0.0.1', port=port, debug=True)
 
