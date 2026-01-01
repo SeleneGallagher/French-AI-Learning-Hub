@@ -528,6 +528,19 @@ button[style*="border: 1px solid var(--gray-300)"][style*="color: var(--gray-700
         grid-template-columns: 1fr !important;
     }
     
+    /* 电影卡片简介行距优化 - 更紧凑，能显示更多行 */
+    .plot-container {
+        line-height: 1.35 !important;
+    }
+    
+    /* 移动端简介显示更多行，行距更紧凑 */
+    @media (max-width: 768px) {
+        .plot-container {
+            line-height: 1.3 !important;
+            /* line-clamp-6 配合更小的行距，可以显示更多内容 */
+        }
+    }
+    
     /* 底部操作区在移动端调整 */
     .mt-auto {
         padding: 1rem !important;

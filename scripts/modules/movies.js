@@ -998,7 +998,7 @@ function renderCard(item, container, isWatchlist) {
     card.className = 'movie-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:flex-row cursor-pointer';
     card.setAttribute('data-item-id', `${item.type}_${item.id}`);
     // 桌面端固定高度200px，移动端自适应（增加高度以显示更多内容）
-    card.style.minHeight = '200px';
+    card.style.minHeight = window.innerWidth < 768 ? 'auto' : '200px';
     
     const inList = isInWatchlist(item.id, item.type);
     const tmdbUrl = item.type === 'movie' 
@@ -1032,7 +1032,7 @@ function renderCard(item, container, isWatchlist) {
                 <div class="flex flex-wrap gap-1 mb-2">
                     ${(item.genres || []).map(genre => `<span class="px-1.5 py-0.5 bg-blue-100 text-blue-700 text-xs rounded">${genre}</span>`).join('')}
                 </div>
-                <div class="text-xs text-gray-600 mb-2 relative plot-container md:line-clamp-4 line-clamp-8" data-original="${item.plot}" data-translated="${item.translatedPlot || ''}">
+                <div class="text-xs text-gray-600 mb-2 relative plot-container md:line-clamp-4 line-clamp-6" style="line-height: 1.35;" data-original="${item.plot}" data-translated="${item.translatedPlot || ''}">
                     ${item.plot}
                 </div>
                 ${item.tagline ? `<p class="text-xs text-gray-500 italic line-clamp-2 mb-2">"${item.tagline}"</p>` : ''}
